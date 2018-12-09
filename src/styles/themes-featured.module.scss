@@ -1,0 +1,12 @@
+.featuredSection {
+    display: flex;
+    .topBar {
+        display: block;
+        .header {
+            display: inline;
+        }
+    }
+    .container {
+        display: block;
+    }
+}

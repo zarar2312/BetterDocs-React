@@ -15,6 +15,7 @@
         bottom: unset;
         left: unset;
         padding-top: unset;
+        flex-direction: column;
     }
     .contentSection {
         order: 1;
@@ -231,7 +232,7 @@
             }
         }
     }
-    
+
 
     .content {
         display: flex;
@@ -551,10 +552,10 @@
         overflow: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        max-height: calc(((((100vh - 3.7rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem); //28.2em
+        max-height: calc(100vh - 13.7rem); //28.2em
         background: rgb(251, 250, 252);
         @media (min-width: 850px) {
-            max-height: 32.3em;
+            max-height: calc(100vh - 11.6rem);
             background: transparent;
         }
         &::-webkit-scrollbar-button {

@@ -22,7 +22,6 @@ const Themes = (props) => {
 
     <section className={theme.contentSection}
     >
-
     <div className={theme.titleBar}>
       <div className={theme.count}>Themes <span>({listCount})</span></div>
       <input className={theme.input} placeholder="Search Themes library"></input>
