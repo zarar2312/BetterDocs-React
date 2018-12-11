@@ -5,7 +5,7 @@ description: Get notifications when certain words are said.
 download: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/WordNotifications.plugin.js
 github: https://github.com/qwerasd205/
 support: https://github.com/qwerasd205/qwerasd205.github.io/issues
-software: [BandagedBD,EnhancedDiscord,DiscordInjections,BeautifulDiscord,BetterDiscord]
+software: [BandagedBD,,BetterDiscord]
 images:
 - name: Word Notifications Preview
   image: https://imgur.com/upload # Direct image link should only be used here. Imgur isn't required but if it isn't used then further inspection will happen
