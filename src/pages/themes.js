@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
-import theme from '../styles/theme.module.scss'
+import theme from '../styles/themes.module.scss'
 import featured from '../styles/themes-featured.module.scss'
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet";
@@ -117,6 +117,7 @@ export const allThemesQuery = graphql`
             layout
             description
             date
+            tags
           }
           fields {
             slug

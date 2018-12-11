@@ -208,6 +208,7 @@ export const pluginsQuery = graphql`
                 support
                 status
                 auto
+                tags
                 ghcommentid
                 date(formatString: "DD/MM/YYYY")
                 }

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Layout from '../components/layout-mobile-footer'
 import Info from '../components/theme-info'
-import style from '../styles/theme.module.scss'
+import style from '../styles/theme-tags.module.scss'
 import hero from '../styles/hero.module.scss'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { graphql } from "gatsby"

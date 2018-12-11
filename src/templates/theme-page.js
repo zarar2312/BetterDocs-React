@@ -214,6 +214,7 @@ export const themesQuery = graphql`
             support
             thumbnail
             auto
+            tags
             demo
             style
             status
@@ -235,6 +236,7 @@ export const themesQuery = graphql`
       github
       download
       support
+      tags
       layout
       ghcommentid
       date
