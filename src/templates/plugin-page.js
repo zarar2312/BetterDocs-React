@@ -8,6 +8,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import kebabCase from "lodash/kebabCase"
 import Helmet from 'react-helmet'
 import AdSense from 'react-adsense';
+import ad from '../styles/ad.module.scss'
 
 const Plugins = (props) => {
   const pluginList = props.data.listPlugins;
@@ -108,15 +109,15 @@ const Plugins = (props) => {
         }
         </div>
         ))}
-
-        <AdSense.Google
-            client='ca-pub-1998206533560539'
-            slot='6545618600'
-            style={{ display: 'block' }}
-            format='auto'
-            responsive='true'
-          />
-
+        <div className={ad.ad}>
+          <AdSense.Google
+              client='ca-pub-1998206533560539'
+              slot='6545618600'
+              style={{ display: 'block' }}
+              format='auto'
+              responsive='true'
+            />
+        </div>
         <div className={style.content}
           >
           {pluginList.edges.map(({ node }, i) => (

@@ -20,15 +20,7 @@ const Themes = (props) => {
     </Helmet>
     <div className={theme.themesContainer}
     >
-    <section className={featured.featuredSection}>
-      <div className={featured.topBar}>
-        <div className={featured.header}>Featured</div>
-      </div>
-      
-      <div className={featured.container}>
-
-      </div>
-    </section>
+    
     <section className={theme.contentSection}
     >
     <div className={theme.titleBar}>

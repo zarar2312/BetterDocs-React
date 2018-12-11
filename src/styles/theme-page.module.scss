@@ -9,6 +9,7 @@
         order: 1;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         @media (min-width: 850px) {
             flex: 3;
         }
@@ -133,9 +134,9 @@
 [alt="Upload a Theme"] {
     /*display: none !important;*/
     ~.content {
-        max-height: calc(((((100vh - 2.9rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+        max-height: calc(((((100vh - 2.9rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
         @media (min-width: 850px) {
-            max-height: calc(((((100vh - 2.5rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+            max-height: calc(((((100vh - 2.5rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
         }
         /*.edit {
             margin-bottom: unset;
