@@ -540,10 +540,10 @@
         overflow: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        max-height: calc(100vh - 13.7rem); //28.2em
+        max-height: calc(100vh - 10.9rem); //28.2em
         background: rgb(251, 250, 252);
         @media (min-width: 850px) {
-            max-height: calc(100vh - 11.6rem);
+            max-height: calc(100vh - 10.4em);
             background: transparent;
         }
         &::-webkit-scrollbar-button {
