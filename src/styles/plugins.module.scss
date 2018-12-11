@@ -1,27 +1,27 @@
-.pluginsPageContainer {
+.pluginsContainer {
     display: block;
     flex-direction: row;
     @media (min-width: 850px) {
         display: flex;
+        position: initial;
+        top: unset;
+        right: unset;
+        bottom: unset;
+        left: unset;
+        padding-top: unset;
     }
     .contentWrapper {
         order: 1;
-        display: flex;
-        flex: 3;
-        flex-direction: column;
+        display: none;
         overflow: hidden;
-        .heroPlugins {
-            order: 0;
-        }
-        &~ section {
-            display: none;
-            @media (min-width: 850px) {
-                display: block;
-            }
+        @media (min-width: 850px) {
+            display: flex;
+            flex: 3;
+            flex-direction: column;
         }
         .content {
             display: flex;
-            order: 3;
+            order: 1;
             flex-direction: column;
             max-height: 100%;
             overflow: auto;
@@ -73,23 +73,6 @@
                     width: calc(100% - 300px);
                     display: flex;
                 }
-                .childWrapper {
-                    display: block;
-                    word-break: break-word;
-                }
-                .imgContainer {
-                    border: unset !important;
-                    box-shadow: unset !important;
-                    margin-bottom: 20px;
-                    &:hover {
-                        background-color: transparent;
-                    }
-                    .img {
-                        margin: 0 auto;
-                        width: calc(100% - 80px);
-                        display: block;
-                    }
-                }
                 .footer {
                     display: flex;
                     border-top: 1px solid #f5f3f7;
@@ -113,6 +96,23 @@
                             margin-right: 8px;
                         }
                     }
+                }
+                .imgContainer {
+                    border: unset !important;
+                    box-shadow: unset !important;
+                    margin-bottom: 20px;
+                    &:hover {
+                        background-color: transparent;
+                    }
+                    .img {
+                        margin: 0 auto;
+                        width: calc(100% - 80px);
+                        display: block;
+                    }
+                }
+                .childWrapper {
+                    display: block;
+                    word-break: break-word;
                 }
             }
         }

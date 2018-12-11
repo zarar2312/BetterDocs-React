@@ -20,25 +20,6 @@
             flex-direction: column;
         }
     }
-    .openContentWrapper {
-        order: 1;
-        display: flex;
-        flex: 3;
-        flex-direction: column;
-        overflow: hidden;
-        .heroPlugins {
-            order: 0;
-        }
-        & ~ .sidebarSearch {
-            display: none;
-        }
-        @media (min-width: 850px) {
-            & ~ .sidebarSearch {
-                display: initial;
-            }
-        }
-    }
-    
     .sidebarSearch {
         background: rgb(251, 250, 252);
         border-right: 1px solid rgb(245, 243, 247);
@@ -183,9 +164,6 @@
             }
         }
     }
-
-
-
     .content {
         display: flex;
         order: 1;

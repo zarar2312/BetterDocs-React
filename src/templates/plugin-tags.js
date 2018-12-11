@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Layout from '../components/layout-mobile-footer'
 import Info from '../components/plugin-info'
-import plugin from '../styles/plugin.module.scss'
+import plugin from '../styles/plugin-tags.module.scss'
 import hero from '../styles/hero.module.scss'
 import Tags from '../components/pluginTags'
 import AniLink from "gatsby-plugin-transition-link/AniLink"

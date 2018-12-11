@@ -31,7 +31,7 @@ const Plugins = (props) => {
     ))}
     <div className={style.pluginsPageContainer}
     >
-      <section className={style.openContentWrapper}
+      <section className={style.contentWrapper}
       >
       {pluginList.edges.map(({ node }, i) => (
         <div className={hero.heroPlugins}

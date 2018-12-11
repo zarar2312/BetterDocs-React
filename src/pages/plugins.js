@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
 import hero from '../styles/hero.module.scss'
-import plugin from '../styles/plugin.module.scss'
+import plugin from '../styles/plugins.module.scss'
 import { Helmet } from "react-helmet";
 import Sidebar from '../components/plugin-sidebar'
 import Info from '../components/plugin-info'
