@@ -34,7 +34,7 @@
     .Results { 
         display: flex;
         flex-direction: column;
-        max-height: calc(((((100vh - 7.8rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem); //28.2em
+        max-height: calc(((((100vh - 7.7rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem); //28.2em
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         @media (min-width: 850px) {

@@ -8,7 +8,7 @@ description:
 download: https://github.com/Mega-Mewthree/BetterDiscordPlugins/tree/master/Plugins/AlwaysMentionEveryone
 github: https://github.com/Mega-Mewthree
 support: https://discordapp.com/invite/ZYND2Xd
-tags: [Tag1, Tag2]
+tags:
 software: [BandagedBD, BetterDiscord]
 auto: true
 status: Updated

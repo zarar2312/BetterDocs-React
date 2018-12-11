@@ -227,7 +227,7 @@
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         max-height: 100%; //28.2em
-        padding-bottom: 2.1rem;
+        padding-bottom: 3.1rem;
         @media (min-width: 850px) {
             max-height: calc(((((100vh - 9.5rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
             padding-bottom: unset;

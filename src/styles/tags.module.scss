@@ -28,7 +28,6 @@
         height: 7px;
     }
     .tag {
-        background-color: #fff;
         border-radius: 25px;
         border: 1px solid #DFE1E5;
         padding: 4px 10px;
@@ -38,6 +37,20 @@
         color: #6f6f6f;
         margin-top: 0.3em;
         margin-bottom: 0.8em;
+        display: -webkit-inline-box;
+        line-height: 20px;
+        span {
+            background-color: #eeeeee;
+            color: #5f6368;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            margin-left: 6px;
+            display: block;
+        }
         &.active {
             color: #339b78;
             border: 1px solid rgba(51, 155, 120, 0.15);

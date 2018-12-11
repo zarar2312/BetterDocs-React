@@ -36,7 +36,8 @@ const pluginTags = ({ siteTitle }) => (
                 activeClassName={style.active}
                 to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`}
                 key={software.fieldValue}
-                >{software.fieldValue}</Link>
+                >{software.fieldValue} <span>{software.totalCount}</span>
+                </Link>
             ))}
         </div>
         )}

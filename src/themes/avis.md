@@ -6,7 +6,7 @@ download: 'https://github.com/YuraBrm/BetterDiscordThemes/blob/master/Avis/Avis.
 github: 'https://github.com/YuraBrm/'
 support: 'https://github.com/YuraBrm/BetterDiscordThemes/issues'
 demo: 'https://cdn.rawgit.com/YuraBrm/BetterDiscordThemes/master/Avis/Avis.theme.css'
-tags: [Tag1, Tag2]
+tags:
 thumbnail: https://i.imgur.com/Hp4Uqrp.jpg
 images:
   - image: static/media/Avis_Preview.jpg
