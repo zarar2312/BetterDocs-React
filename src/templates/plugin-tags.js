@@ -13,7 +13,7 @@ const Tagss = ({ pageContext, data }) => {
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} plugin${
     totalCount === 1 ? "" : "s"
-  } compatible with "${tag}"`
+  } with the tag "${tag}"`
 
   return (
     <Layout>

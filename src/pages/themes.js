@@ -20,7 +20,32 @@ const Themes = (props) => {
     </Helmet>
     <div className={theme.themesContainer}
     >
-    
+    <section className={featured.featuredSection}>
+      <div className={featured.topBar}>
+        <div className={featured.firstSection}>
+          <div className={featured.headerContainer}>
+            <div className={featured.header}>Featured Themes</div>
+          </div>
+          <div className={featured.linkContainer}>
+            <Link 
+            to="/themes/"
+            className={featured.link}>View All -></Link>
+          </div>
+        </div>
+        <div className={featured.secondSection}>
+        <div className={featured.paragraph}>
+          <p>Want to get featured?</p>
+        </div>
+        <div className={featured.btnContainer}>
+          <div className={featured.mainBtn}>Submit your theme</div>
+        </div>
+        </div>
+      </div>
+      
+      <div className={featured.container}>
+
+      </div>
+    </section>
     
     <section className={theme.contentSection}
     >
