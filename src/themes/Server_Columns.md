@@ -7,7 +7,6 @@ github: https://github.com/mwittrien/
 support: https://discordapp.com/invite/Z7PBux5
 demo: https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/0fe60032a18094193b6e9a6e90e9744293c57f3f/Themes/ServerColumns/ServerColumns.theme.css
 style: dark
-tags: []
 thumbnail: https://my.mixtape.moe/czmltd.png
 images:
 - name: Server Columns Preview

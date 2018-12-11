@@ -7,6 +7,7 @@ github: https://github.com/Metalloriff/
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/DoubleClickVoiceChannels.plugin.js
 support: https://discord.gg/yNqzuJa
 software: [BandagedBD, BetterDiscord]
+tags: [voice]
 ghcommentid: 43
 layout: product
 ---

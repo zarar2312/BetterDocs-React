@@ -6,6 +6,7 @@ description:
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/VoiceChatNotifications.plugin.js
 github: https://github.com/Metalloriff
 software: [BandagedBD, BetterDiscord]
+tags: [voice]
 images:
   - name: Voice Chat Notifications Preview
     image: https://i.imgur.com/XOVoeyY.png

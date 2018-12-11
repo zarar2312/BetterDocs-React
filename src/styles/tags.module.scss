@@ -39,6 +39,7 @@
         margin-bottom: 0.8em;
         display: -webkit-inline-box;
         line-height: 20px;
+        transition-duration: 800ms;
         span {
             background-color: #eeeeee;
             color: #5f6368;
@@ -50,6 +51,11 @@
             font-size: 0.8em;
             margin-left: 6px;
             display: block;
+        }
+        &:hover {
+            border-bottom-left-radius: 0px;
+            -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
         }
         &.active {
             color: #339b78;
