@@ -1,11 +1,11 @@
-.themesContainer {
+.themesPageContainer {
     display: block;
-    flex-direction: row;
+    flex-direction: column;
     @media (min-width: 850px) {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
-    .contentSection {
+    .contentWrapper {
         order: 1;
         display: flex;
         flex-direction: column;
@@ -45,26 +45,6 @@
             }
         }
     }
-    .openContentSection {
-        order: 1;
-        display: flex;
-        flex: 3;
-        flex-direction: column;
-        overflow: hidden;
-        .heroThemes {
-            order: 0;
-        }
-        &~.sidebarSearch {
-            display: none;
-        }
-        @media (min-width: 850px) {
-            &~.sidebarSearch {
-                display: initial;
-            }
-        }
-    }
-
-
     .sidebarSearch {
         background: #fff;
         border-right: 1px solid rgb(245, 243, 247);

@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
 import theme from '../styles/theme.module.scss'
+import featured from '../styles/themes-featured.module.scss'
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet";
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -19,7 +20,9 @@ const Themes = (props) => {
     </Helmet>
     <div className={theme.themesContainer}
     >
-
+    <section className={featured.featuredSection}>
+      
+    </section>
     <section className={theme.contentSection}
     >
     <div className={theme.titleBar}>

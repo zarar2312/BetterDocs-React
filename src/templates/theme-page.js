@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
 import hero from '../styles/altHero.module.scss'
-import style from '../styles/theme.module.scss'
+import style from '../styles/theme-page.module.scss'
 import { graphql, Link } from "gatsby"
 import Sidebar from '../components/theme-sidebar'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -28,9 +28,9 @@ const Themes = (props) => {
       <html lang="en" />
     </Helmet>
     ))}
-    <div className={style.themesContainer}
+    <div className={style.themesPageContainer}
     >
-      <section className={style.openContentSection}
+      <section className={style.contentWrapper}
       >
       {themeList.edges.map(({ node }, i) => ( 
         <div className={hero.heroThemes}
