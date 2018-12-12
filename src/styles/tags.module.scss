@@ -40,6 +40,9 @@
         display: -webkit-inline-box;
         line-height: 20px;
         transition-duration: 800ms;
+        &[href="/plugins/softwares/null/"] {
+            display: none;
+        }
         span {
             background-color: #eeeeee;
             color: #5f6368;
