@@ -7,7 +7,7 @@ const Sidebar = () => (
   <StaticQuery
     query={ graphql`
     query themeSidebarQuery {
-      listThemes:allMarkdownRemark(filter: { collection: { eq: "themes" } }) {
+      listThemes:allMarkdownRemark(filter: { collection: { eq: "themes" } } sort: { fields: [frontmatter___title], order: ASC}) {
         group(field: collection) {
           fieldValue
           totalCount

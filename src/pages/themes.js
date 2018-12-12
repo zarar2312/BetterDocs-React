@@ -135,7 +135,7 @@ export default Themes;
 
 export const allThemesQuery = graphql`
 query allThemesQuery {
-  allMarkdownRemark(filter: {collection: {eq: "themes"}}) {
+  allMarkdownRemark(filter: {collection: {eq: "themes"}} sort: { fields: [frontmatter___title], order: ASC}) {
     group(field: collection) {
       fieldValue
       totalCount

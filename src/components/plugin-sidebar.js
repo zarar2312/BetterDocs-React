@@ -8,7 +8,7 @@ const Sidebar = () => (
   <StaticQuery
     query={ graphql`
     query pluginsSidebarQuery {
-      listPlugins:allMarkdownRemark(filter: { collection: { eq: "plugins" } }) {
+      listPlugins:allMarkdownRemark(filter: { collection: { eq: "plugins" } } sort: { fields: [frontmatter___title], order: ASC}) {
         group(field: collection) {
           fieldValue
           totalCount

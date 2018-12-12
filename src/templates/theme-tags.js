@@ -138,7 +138,7 @@ export default Tagss
 
 export const pageQuery = graphql`
   query($tag: String) {
-    allMarkdownRemark( filter: { frontmatter: { tags: { in: [$tag] } } collection: { eq: "themes" } } ) {
+    allMarkdownRemark( filter: { frontmatter: { tags: { in: [$tag] } } collection: { eq: "themes" } } sort: { fields: [frontmatter___title], order: ASC} ) {
       totalCount
       edges {
         node {

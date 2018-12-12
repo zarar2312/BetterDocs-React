@@ -130,7 +130,7 @@ export default Software
 
 export const pageQuery = graphql`
   query($softwares: String) {
-    allMarkdownRemark( filter: { frontmatter: { software: { in: [$softwares] } } collection: { eq: "plugins" } } ) {
+    allMarkdownRemark( filter: { frontmatter: { software: { in: [$softwares] } } collection: { eq: "plugins" } } sort: { fields: [frontmatter___title], order: ASC}) {
       totalCount
       edges {
         node {
