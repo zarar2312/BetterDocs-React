@@ -13,6 +13,8 @@ images:
   - image: /images/themes/Colorize_Preview.gif
     name: Colorize Preview
 auto: true
+status: Updated
+featured: true
 style: dark
 ghcommentid: 12
 layout: product

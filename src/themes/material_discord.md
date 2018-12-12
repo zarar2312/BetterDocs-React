@@ -15,6 +15,8 @@ images:
   - image: /images/themes/Material_Discord_Preview_-_User_Status_Picker.gif
     name: Material Discord Preview - User Status Picker
 auto: true
+status: Updated
+featured: true
 style: dark
 ghcommentid: 16
 layout: product

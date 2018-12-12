@@ -72,6 +72,7 @@ return graphql(`{
               ghcommentid
               date
               tags
+              featured
               software
             }
           }

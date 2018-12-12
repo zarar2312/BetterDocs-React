@@ -18,6 +18,8 @@ images:
   - image: /images/user_uploads/material_design_theme_preview_-_animations.png
     name: Material Design Theme Preview - Animations
 auto: true
+status: Updated
+featured: true
 style: dark
 ghcommentid: 179
 layout: product
