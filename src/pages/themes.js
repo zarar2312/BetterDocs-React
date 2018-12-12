@@ -39,7 +39,9 @@ const Themes = (props) => {
           <p>Want to get featured?</p>
         </div>
         <div className={featured.btnContainer}>
-          <div className={featured.mainBtn}>Submit your theme</div>
+          <Link 
+          className={featured.mainBtn}
+          to="/themes/upload_a_theme/">Submit your theme</Link>
         </div>
         </div>
       </div>
@@ -58,7 +60,7 @@ const Themes = (props) => {
         ))}
         <Link 
         className={featured.cardWrapper}
-        to="/themes/upload_a_theme/">
+        to="/themes/">
           <div className={featured.imgWrapper}>
             <img src={Star} alt="View All Featured Themes"></img>
             <div className={featured.title}>View all featured themes</div>
