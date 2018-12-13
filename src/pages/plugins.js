@@ -15,6 +15,10 @@ const Plugins = (props) => {
     <Helmet>
       <meta charSet="utf-8" />
       <title>BetterDocs | #1 Discord Plugins</title>
+      <meta property="og:site_name" content="BetterDocs"/>
+        <meta property="og:title" content="BetterDocs | #1 Discord Plugins"/>
+        <meta property="og:description" content="List of free high quality Discord plugins by our community! Modify your Discord to your own liking with advanced plugins!"/>
+        <meta property="og:url" content="https://betterdocs.us/plugins/" />
     </Helmet>
     <div className={plugin.pluginsContainer}
     >

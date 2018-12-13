@@ -26,6 +26,7 @@ const Plugins = (props) => {
       <meta property="og:title" content={node.frontmatter.title + ' by ' + node.frontmatter.author}/>
       <meta property="og:description" content={node.frontmatter.description}/>
       <meta property="og:image" content={node.frontmatter.thumbnail}/>
+      <meta property="og:url" content={"https://betterdocs.us/plugins" + node.fields.slug} />
       <html lang="en" />
     </Helmet>
     ))}
