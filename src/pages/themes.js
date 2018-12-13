@@ -53,7 +53,7 @@ const Themes = (props) => {
         key={node.id}
         to={"/themes" + node.fields.slug}>
           <div className={featured.imgWrapper}>
-            <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "Preview by " + node.frontmatter.author}></img>
+            <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author}></img>
           </div>
         <div className={featured.title}>{node.frontmatter.title}</div>
         </Link>
