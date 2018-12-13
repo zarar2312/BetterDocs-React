@@ -16,8 +16,8 @@ Allows you to copy images (png/jpg) directly to your system clipboard. You can d
 
 ## Modals
 
-![Modals](http://discord.zackrauen.com/ImageToClipboard/modal_arrow.png)
+![Modals](https://i.imgur.com/AawuUOV.png)
 
 ## Context Menu
 
-![Context](http://discord.zackrauen.com/ImageToClipboard/context_arrow.png)
+![Context](https://i.imgur.com/JA3aKSJ.png)
