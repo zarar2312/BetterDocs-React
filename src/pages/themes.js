@@ -127,6 +127,11 @@ const Themes = (props) => {
     </section>
 
     </div>
+    <div className={theme.uploadContainer}>
+        <Link to="/themes/upload_a_theme/" className={theme.uploadBtn}>
+        +
+        </Link>
+    </div>
   </Layout>
 )
 }
