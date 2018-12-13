@@ -59,9 +59,6 @@ const Sidebar = () => (
           activeClassName={style.active}
           to={'plugins' + node.fields.slug}
           key={node.id}
-          cover
-          bg="#262626"
-          duration={0.65}
           >
             <div className={style.header}
             >

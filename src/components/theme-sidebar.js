@@ -52,9 +52,6 @@ const Sidebar = () => (
           <Link 
           to="/themes/upload_a_theme/"
           className={style.submitBtn}
-          cover
-          bg="#262626"
-          duration={0.65}
           >
           Submit a Theme
           </Link>
@@ -67,9 +64,6 @@ const Sidebar = () => (
           activeClassName={style.active}
           to={'themes' + node.fields.slug}
           key={node.id}
-          cover
-          bg="#262626"
-          duration={0.65}
           >
             <div className={style.header}
             >
