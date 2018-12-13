@@ -1,11 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Layout from '../components/layout-mobile-footer'
-import Info from '../components/theme-info'
 import style from '../styles/theme-tags.module.scss'
-import hero from '../styles/hero.module.scss'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Missing from "../images/missing_image_2.png"
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -18,94 +17,70 @@ const Tagss = ({ pageContext, data }) => {
     <Layout>
     <div className={style.themesContainer}
     >
-
-    <section className={style.openContentSection}
+    <section className={style.contentSection}
     >
+    <div className={style.titleBar}>
+      <div className={style.count}>Themes <span>{tagHeader}</span></div>
+      <input className={style.input} placeholder="Search Themes library" ></input>
+    </div>
 
-      <div className={hero.heroThemes}
-      >
-        <div className={hero.container}
+      <div className={style.mainContent}
         >
-          <h2 className={hero.h2}
+          <div className={style.wrapper}
           >
-          #1 Source for Discord Themes!
-          </h2> 
-          <p className={hero.p}
-          >
-          Custom CSS themes made by our commuity!
-          </p> 
-        </div>
-      </div>
-
-      <div className={style.content}
-        >
-        <div className={style.mdWrapper}
-        >
-        <Info />
+          {edges.map(({ node }) => {
+          return (
+            <div 
+            className={style.cardWrapper}
+            key={node.id}
+            >
+              { node.frontmatter.thumbnail ?
+              <div className={style.imgContainer}
+              >
+                <img className={style.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+              </div>
+              :
+              <div className={style.imgContainer}
+              >
+                <img className={style.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+              </div>
+              }
+                <div>
+                  <a 
+                  className={style.author}
+                  href={node.frontmatter.github}
+                  target="blank"
+                  >{node.frontmatter.author} /</a>
+                </div>
+                <div className={style.title}
+                >
+                <AniLink 
+                to={"themes" + node.fields.slug}
+                className={style.titleLink}
+                cover
+                bg="#262626"
+                duration={0.65}>
+                {node.frontmatter.title}
+                </AniLink>
+                </div>
+              <div className={style.description}
+              >
+                <p className={style.p}
+                >{node.excerpt}</p>
+              </div>
+            </div>
+          )
+        })}
         </div>
       </div>
 
     </section>
 
-      <section className={style.sidebarSearch}>
-        <div className={style.searchContainer}>
-          <input 
-          className={style.input}
-          placeholder="Search Themes library"
-          >
-          </input>
-          <div className={style.submitDescription}>
-            Want your theme featured?
-          </div>
-          <AniLink 
-          to="/themes/upload_a_theme/"
-          className={style.submitBtn}
-          cover
-          bg="#262626"
-          >
-          Submit a Theme
-          </AniLink>
-          <div className={style.searchOutput}>
-            {tagHeader}
-          </div>
-        </div>
-
-            <div className={style.Results}>
-            {edges.map(({ node }) => {
-          return (
-              <AniLink 
-              className={style.resultCard}
-              activeClassName={style.active}
-              to={'themes' + node.fields.slug}
-              key={node.id}
-              cover
-              bg="#262626"
-              >
-                <div className={style.header}
-                >
-                  <span className={style.title}
-                  >
-                  {node.frontmatter.title}
-                  </span>
-                  <span className={style.author}
-                  >
-                  {node.frontmatter.author}
-                  </span>
-                </div>
-                <div className={style.description}
-                >
-                  <p className={style.p}
-                  >
-                    {node.excerpt}
-                  </p>
-                </div>
-              </AniLink>
-              )
-            })}
-            </div>
-
-      </section>
-
+    </div>
+    <div className={style.uploadContainer}>
+        <Link to="/themes/upload_a_theme/" className={style.uploadBtn}>
+        +
+        </Link>
     </div>
     </Layout>
   )
@@ -154,6 +129,7 @@ export const pageQuery = graphql`
             github
             download
             support
+            thumbnail
             layout
             tags
           }

@@ -5,7 +5,7 @@ import plugin from '../styles/plugins.module.scss'
 import { Helmet } from "react-helmet";
 import Sidebar from '../components/plugin-sidebar'
 import Info from '../components/plugin-info'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 const Plugins = (props) => {
   const pluginList = props.data.allMarkdownRemark;
@@ -72,6 +72,11 @@ const Plugins = (props) => {
 
       <Sidebar />
 
+    </div>
+    <div className={plugin.uploadContainer}>
+        <Link to="/plugins/upload_a_plugin/" className={plugin.uploadBtn}>
+        +
+        </Link>
     </div>
   </Layout>
 )

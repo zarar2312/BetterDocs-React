@@ -118,6 +118,7 @@
         }
     }
 }
+
 .backButton {
     position: fixed;
     top: 22px;
@@ -132,6 +133,37 @@
         width: 20px;
     }
 }
+
+.uploadContainer {
+    display: inline;
+    position: fixed;
+    bottom: 52px;
+    z-index: 100;
+    color: #fff;
+    font-size: 10px;
+    width: 100%;
+    pointer-events: none;
+    @media (min-width: 850px) {
+        display: none;
+    }
+    .uploadBtn {
+        background-color: #339b78;
+        color: #ffffff;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        line-height: 1.75em;
+        text-align: center;
+        font-size: 2.8em;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 25px;
+        border: 3.5px solid #262626;
+        pointer-events: all;
+    }
+}
+
 [alt="Upload a Plugin"] {
     /*display: none !important;*/
     ~ .content {
