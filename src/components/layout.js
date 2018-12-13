@@ -8,6 +8,7 @@ import Header from './header'
 import Footer from './footer'
 import './layout.css'
 import ad from '../styles/ad.module.scss'
+import Logo from "../images/mobile.png"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,6 +30,8 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
           ]}
         >
+        <meta property="og:site_name" content="BetterDocs"/>
+        <meta property="og:image" content={Logo}/>
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
