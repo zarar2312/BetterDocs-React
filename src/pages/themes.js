@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet";
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Missing from "../images/missing_image_2.png"
 import Star from "../images/star.svg"
+import Stars from "../images/stars.svg"
 
 const Themes = (props) => {
   const themeList = props.data.allMarkdownRemark;
@@ -89,6 +90,11 @@ const Themes = (props) => {
               <div className={theme.imgContainer}
               >
                 <img className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                { node.frontmatter.featured &&
+                  <div className={theme.icon}>
+                    <img src={Stars} alt="Featured Theme icon"></img>
+                  </div>
+                }
               </div>
               :
               <div className={theme.imgContainer}
@@ -140,7 +146,7 @@ export default Themes;
 
 export const allThemesQuery = graphql`
 query allThemesQuery {
-  allMarkdownRemark(filter: {collection: {eq: "themes"}} sort: { fields: [frontmatter___title], order: ASC}) {
+  allMarkdownRemark(filter: {collection: {eq: "themes"} } sort: { fields: [frontmatter___title], order: ASC}) {
     group(field: collection) {
       fieldValue
       totalCount
@@ -162,6 +168,7 @@ query allThemesQuery {
           layout
           description
           date
+          featured
           tags
         }
         fields {
@@ -170,7 +177,7 @@ query allThemesQuery {
       }
     }
   }
-  featured: allMarkdownRemark(filter: {collection: {eq: "themes"} frontmatter: { featured: { eq: true } } } ) {
+  featured: allMarkdownRemark(filter: {collection: {eq: "themes"} frontmatter: { featured: { eq: true } } } sort: { fields: [frontmatter___title], order: ASC} limit: 8 ) {
     group(field: collection) {
       fieldValue
       totalCount

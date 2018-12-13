@@ -367,6 +367,46 @@
                         display: -webkit-box;
                         background-size: cover;
                     }
+                    .icon {
+                        display: block;
+                        position: absolute;
+                        top: 0px;
+                        background-color: #ffb100;
+                        z-index: 1;
+                        width: 1.6em;
+                        right: 0;
+                        height: 1.6em;
+                        padding: 4px;
+                        border-bottom-left-radius: 2px;
+                        &::after {
+                            content: "Featured";
+                            display: block;
+                            background-color: #262626;
+                            color: #fff;
+                            width: 5em;
+                            position: relative;
+                            top: -55px;
+                            right: 33px;
+                            padding: 5px;
+                            border-radius: 2px;
+                            text-align: center;
+                            box-shadow: 0 2px 25px rgba(0,0,0,.4)!important;
+                            transition: .2s linear all;
+                            opacity: 0;
+                        }
+                        &:hover {
+                            background-color: #d89700;
+                            &::after {
+                                opacity: 1; 
+                            }
+                        }
+                        img {
+                            display: -webkit-box;
+                            width: 100%;
+                            height: 100%;
+                            margin: unset;
+                        }
+                    }
                 }
                 .title {
                     a.titleLink {

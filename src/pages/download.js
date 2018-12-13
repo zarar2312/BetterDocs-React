@@ -37,7 +37,7 @@ const DownloadPage = () => (
     
     </div>
     </a>
-    <a className={style.card} target="blank" alt="BeautifulDiscord" href="https://github.com/leovoel/BeautifulDiscord"
+    <a className={style.card} target="blank" alt="BeautifulDiscord" href="https://sites.google.com/view/thatawesomeguy173web/beautifuldiscord"
     >
     <div className={style.header}
     >
