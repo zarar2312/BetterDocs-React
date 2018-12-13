@@ -4,7 +4,6 @@ import theme from '../styles/themes.module.scss'
 import featured from '../styles/themes-featured.module.scss'
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet";
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Missing from "../images/missing_image_2.png"
 import Star from "../images/star.svg"
 import Stars from "../images/stars.svg"
@@ -78,7 +77,7 @@ const Themes = (props) => {
     >
     <div className={theme.titleBar}>
       <div className={theme.count}>Themes <span>({listCount})</span></div>
-      <input className={theme.input} placeholder="Search Themes library" ></input>
+      <input className={theme.input} placeholder="Search Themes library (WIP)" ></input>
     </div>
 
       <div className={theme.mainContent}
@@ -115,14 +114,14 @@ const Themes = (props) => {
                 </div>
                 <div className={theme.title}
                 >
-                <AniLink 
+                <Link 
                 to={"themes" + node.fields.slug}
                 className={theme.titleLink}
                 cover
                 bg="#262626"
                 duration={0.65}>
                 {node.frontmatter.title}
-                </AniLink>
+                </Link>
                 </div>
               <div className={theme.description}
               >

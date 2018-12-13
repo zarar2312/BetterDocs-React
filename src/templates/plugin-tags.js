@@ -52,7 +52,7 @@ const Tagss = ({ pageContext, data }) => {
         <div className={plugin.searchContainer}>
           <input 
           className={plugin.input}
-          placeholder='Search Plugins library'
+          placeholder='Search Plugins library (WIP)'
           >
           </input>
           <div className={plugin.searchOutput}>

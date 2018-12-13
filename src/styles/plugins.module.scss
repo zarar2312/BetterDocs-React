@@ -28,7 +28,7 @@
             -webkit-overflow-scrolling: touch;
             padding-bottom: 3.1rem;
             @media (min-width: 850px) {
-                 max-height: calc(((((100vh - 6.46rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+                 max-height: calc(((((100vh - 6.1rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
                  padding-bottom: unset;
              }
             &::-webkit-scrollbar-button { 
@@ -161,21 +161,5 @@
         top: 25px;
         border: 3.5px solid #262626;
         pointer-events: all;
-    }
-}
-
-[alt="Upload a Plugin"] {
-    /*display: none !important;*/
-    ~ .content {
-        max-height: calc(((((100vh - 2.8rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
-        @media (min-width: 850px) {
-            max-height: calc(((((100vh - 1.85rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
-        }
-        /*.edit {
-            margin-bottom: unset;
-            @media (min-width: 850px) {
-                margin-bottom: -25px;
-            }
-        }*/
     }
 }

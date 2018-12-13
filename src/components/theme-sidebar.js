@@ -1,7 +1,6 @@
 import React from 'react'
 import style from '../styles/theme-sidebar.module.scss'
-import { StaticQuery, graphql } from 'gatsby'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { StaticQuery, graphql, Link } from 'gatsby'
 import Stars from "../images/stars.svg"
 
 const Sidebar = () => (
@@ -50,7 +49,7 @@ const Sidebar = () => (
           <div className={style.submitDescription}>
             Want your theme featured?
           </div>
-          <AniLink 
+          <Link 
           to="/themes/upload_a_theme/"
           className={style.submitBtn}
           cover
@@ -58,12 +57,12 @@ const Sidebar = () => (
           duration={0.65}
           >
           Submit a Theme
-          </AniLink>
+          </Link>
         </div>
         <div className={style.Results}
         >
         {data.listThemes.edges.map(({ node }, i) => (
-          <AniLink 
+          <Link 
           className={style.resultCard}
           activeClassName={style.active}
           to={'themes' + node.fields.slug}
@@ -95,7 +94,7 @@ const Sidebar = () => (
                 <img src={Stars} alt="Featured Theme icon"></img>
               </div>
             }
-          </AniLink>
+          </Link>
           ))}
         </div>
       </section>

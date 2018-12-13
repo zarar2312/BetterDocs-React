@@ -22,7 +22,7 @@ const Tagss = ({ pageContext, data }) => {
     >
     <div className={style.titleBar}>
       <div className={style.count}>Themes <span>{tagHeader}</span></div>
-      <input className={style.input} placeholder="Search Themes library" ></input>
+      <input className={style.input} placeholder="Search Themes library (WIP)" ></input>
     </div>
 
       <div className={style.mainContent}

@@ -1,7 +1,6 @@
 import React from 'react'
 import style from '../styles/plugin-sidebar.module.scss'
-import { StaticQuery, graphql } from 'gatsby'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { StaticQuery, graphql, Link } from 'gatsby'
 import Tags from '../components/pluginTags'
 
 const Sidebar = () => (
@@ -44,7 +43,7 @@ const Sidebar = () => (
         >
           <input 
           className={style.input}
-          placeholder='Search Plugins library'
+          placeholder='Search Plugins library (WIP)'
           >
           </input>
           <div className={style.searchOutput}>
@@ -55,7 +54,7 @@ const Sidebar = () => (
         <div className={style.Results}
         >
         {data.listPlugins.edges.map(({ node }, i) => (
-          <AniLink 
+          <Link 
           className={style.resultCard}
           activeClassName={style.active}
           to={'plugins' + node.fields.slug}
@@ -82,7 +81,7 @@ const Sidebar = () => (
                 {node.excerpt}
               </p>
             </div>
-          </AniLink>
+          </Link>
           ))}
         </div>
       </section>

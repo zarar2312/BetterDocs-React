@@ -151,17 +151,11 @@
 }
 
 [alt="Upload a Plugin"] {
-    /*display: none !important;*/
     ~ .content {
-        max-height: calc(((((100vh - 2.8rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+        max-height: calc(((((100vh - 2.8rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
+        padding-bottom: unset !important;
         @media (min-width: 850px) {
-            max-height: calc(((((100vh - 1.85rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+            max-height: calc(((((100vh - 1.5rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
         }
-        /*.edit {
-            margin-bottom: unset;
-            @media (min-width: 850px) {
-                margin-bottom: -25px;
-            }
-        }*/
     }
 }
