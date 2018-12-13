@@ -118,11 +118,12 @@
         }
     }
 }
+
 .backButton {
     position: fixed;
     top: 22px;
     left: 17px;
-    z-index: 100;
+    z-index: 101;
     display: block;
     @media (min-width: 850px) {
         display: none;
@@ -132,6 +133,22 @@
         width: 20px;
     }
 }
+
+.mHeader {
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    display: block;
+    color: #fff;
+    background-color: #262626;
+    width: 100%;
+    padding: 24px 60px;
+    text-align: center;
+    @media (min-width: 850px) {
+        display: none;
+    }
+}
+
 [alt="Upload a Plugin"] {
     /*display: none !important;*/
     ~ .content {
