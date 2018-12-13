@@ -59,7 +59,7 @@
         display: flex;
         flex-direction: column;
         max-height: calc(((((100vh - 7.3rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem); //28.2em
-        overflow-x: auto;
+        overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         @media (min-width: 850px) {
             max-height: calc(((((100vh - 8.5rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
@@ -74,6 +74,7 @@
             margin-top: 10px;
             border-radius: 8px;
             border-bottom-left-radius: 0px;
+            position: relative;
             &:hover {
                 background-color: rgba(#339b78, 0.3);
             }
@@ -130,6 +131,46 @@
                     font-size: 0.75em;
                     line-height: 1.5;
                     margin-bottom: unset;
+                }
+            }
+            .icon {
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                right: 0;
+                background-color: #ffb100;
+                z-index: 1;
+                width: 1.3em;
+                height: 1.3em;
+                padding: 4px;
+                border-top-left-radius: 2px;
+                &::after {
+                    content: "Featured";
+                    display: block;
+                    background-color: #262626;
+                    color: #fff;
+                    width: 5em;
+                    position: relative;
+                    top: -55px;
+                    right: 70px;
+                    padding: 5px;
+                    border-radius: 2px;
+                    text-align: center;
+                    box-shadow: 0 2px 25px rgba(0,0,0,.4)!important;
+                    transition: .2s linear all;
+                    opacity: 0;
+                }
+                &:hover {
+                    background-color: #d89700;
+                    &::after {
+                        opacity: 1; 
+                    }
+                }
+                img {
+                    display: -webkit-box;
+                    width: 100%;
+                    height: 100%;
+                    margin: unset;
                 }
             }
         }

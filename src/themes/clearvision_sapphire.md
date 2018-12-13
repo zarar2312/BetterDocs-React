@@ -15,6 +15,8 @@ images:
   - image: /images/themes/ClearVision_-_Sapphire_Preview_-_Appearance_Settings.jpg
     name: ClearVision Sapphire Preview - Appearance Settings
 auto: true
+status: Updated
+featured: true
 style: dark
 ghcommentid: 32
 layout: product

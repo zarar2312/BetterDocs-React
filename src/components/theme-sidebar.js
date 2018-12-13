@@ -2,6 +2,7 @@ import React from 'react'
 import style from '../styles/theme-sidebar.module.scss'
 import { StaticQuery, graphql } from 'gatsby'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Stars from "../images/stars.svg"
 
 const Sidebar = () => (
   <StaticQuery
@@ -27,6 +28,7 @@ const Sidebar = () => (
                   github
                   download
                   support
+                  featured
                   layout
                   }
               }
@@ -88,6 +90,11 @@ const Sidebar = () => (
                 {node.excerpt}
               </p>
             </div>
+            { node.frontmatter.featured &&
+              <div className={style.icon}>
+                <img src={Stars} alt="Featured Theme icon"></img>
+              </div>
+            }
           </AniLink>
           ))}
         </div>

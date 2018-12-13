@@ -15,6 +15,8 @@ images:
   - image: /images/themes/ClearVision_-_Ruby_Preview_-_Appearance_Settings.jpg
     name: ClearVision Ruby Preview - Appearance Settings
 auto: true
+status: Updated
+featured: true
 style: dark
 ghcommentid: 31
 layout: product
