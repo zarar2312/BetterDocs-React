@@ -1,0 +1,70 @@
+.wrapper {
+    display: block;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 35px;
+    @media (min-width: 850px) {
+        display: flex;
+        padding: 20px 0px;
+    }
+    .card {
+        flex-basis: 17%;
+        border: 1px solid #eff2f6;
+        border-radius: 15px;
+        margin-top: 15px;
+        display: block;
+        transition-duration: 800ms;
+        @media (min-width: 850px) {
+            margin-top: unset;
+            display: unset;
+        }
+        &:hover {
+            border-bottom-left-radius: 0px;
+            -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+            transform: translateY(-0.5em);
+        }
+        .header {
+            font-size: 1.3em;
+            line-height: 1.4;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: 200;
+            transition: ease-in-out 400ms;
+            padding: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            @media (min-width: 850px) {
+                font-size: 1em;
+            }
+        }
+        .body {
+            padding: 20px;
+        }
+    }
+    [alt="BandagedBD"] {
+        .header {
+            background: #339b78;
+        }
+    }
+    [alt="EnhancedDiscord"] {
+        .header {
+            background: #9b3333;
+        }
+    }
+    [alt="BeautifulDiscord"] {
+        .header {
+            background: #7289DA;
+        }
+    }
+    [alt="DiscordInjections"] {
+        .header {
+            background: #339b78;
+        }
+    }
+    [alt="BetterDiscord"] {
+        .header {
+            background: #005eac;
+        }
+    }
+}

@@ -1,45 +1,60 @@
 import React from 'react'
 
-import style from '../styles/index.module.scss'
+import style from '../styles/download.module.scss'
 import Layout from '../components/layout'
 
 const DownloadPage = () => (
   <Layout>
-    <div className={style.downloadWrapper}
+    <div className={style.wrapper}
     >
-    <a className={style.sectionQuote} target="blank" alt="BandagedBD" href="https://github.com/rauenzi/BetterDiscordApp/releases"
+    <a className={style.card} target="blank" alt="BandagedBD" href="https://github.com/rauenzi/BetterDiscordApp/releases"
     >
-    <div className={style.quote}
+    <div className={style.header}
     >
-    BandagedBD (recommended, page is a wip)
+    BandagedBD
+    </div>
+    <div className={style.body}>
+    Most Recommended (Page WIP)
     </div>
     </a>
-    <a className={style.sectionQuote} target="blank" alt="EnhancedDiscord" href="https://enhanceddiscord.com/"
+    <a className={style.card} target="blank" alt="EnhancedDiscord" href="https://enhanceddiscord.com/"
     >
-    <div className={style.quote}
+    <div className={style.header}
     >
     EnhancedDiscord
     </div>
+    <div className={style.body}>
+    
+    </div>
     </a>
-    <a className={style.sectionQuote} target="blank" alt="DiscordInjections" href="https://github.com/DiscordInjections/DiscordInjections"
+    <a className={style.card} target="blank" alt="DiscordInjections" href="https://github.com/DiscordInjections/DiscordInjections"
     >
-    <div className={style.quote}
+    <div className={style.header}
     >
     DiscordInjections
     </div>
+    <div className={style.body}>
+    
+    </div>
     </a>
-    <a className={style.sectionQuote} target="blank" alt="BeautifulDiscord" href="https://github.com/leovoel/BeautifulDiscord"
+    <a className={style.card} target="blank" alt="BeautifulDiscord" href="https://github.com/leovoel/BeautifulDiscord"
     >
-    <div className={style.quote}
+    <div className={style.header}
     >
     BeautifulDiscord
     </div>
+    <div className={style.body}>
+    
+    </div>
     </a>
-    <a className={style.sectionQuote} target="blank" alt="BetterDiscord" href="https://github.com/Jiiks/BetterDiscordApp/releases"
+    <a className={style.card} target="blank" alt="BetterDiscord" href="https://github.com/Jiiks/BetterDiscordApp/releases"
     >
-    <div className={style.quote}
+    <div className={style.header}
     >
     BetterDiscord
+    </div>
+    <div className={style.body}>
+    
     </div>
     </a>
     </div>
