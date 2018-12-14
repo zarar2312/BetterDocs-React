@@ -12,7 +12,7 @@ I promise it doesn't take long :)
 
 1. [Create a new file](https://github.com/MrRobotjs/BetterDocs-React/new/master/src/themes)
 2. Name has to **match** your theme name. 
-    > Make sure it's a markdown file ".md"
+    > Make sure it's a markdown file ".md" and that it's [Kebab Case style](http://wiki.c2.com/?KebabCase). `[REQUIRED]`
 3. Follow the following format for the file
 ```md
 ---
