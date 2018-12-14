@@ -35,7 +35,7 @@ const Themes = (props) => {
     <div className={style.themesPageContainer}
     >
     {themeList.edges.map(({ node }, i) => ( 
-      <section className={style.contentWrapper}
+      <section className={style.contentWrapper} key={node.id}
       >
       {node.frontmatter.status === "Outdated" &&
         <div className={alert.warning}>
@@ -44,10 +44,8 @@ const Themes = (props) => {
       }
         <div className={hero.heroThemes}
         alt={node.frontmatter.title}
-        key={node.id}
         >
           <div className={hero.container}
-          key={node.id}
           >
             {node.frontmatter.title && <h2 className={hero.h2}>{node.frontmatter.title}</h2>}
             {node.frontmatter.author &&
@@ -96,7 +94,7 @@ const Themes = (props) => {
             }
           </div>
         {node.frontmatter.download &&
-          <div className={hero.options} key={node.id}>
+          <div className={hero.options}>
             {node.frontmatter.auto ?
               <a href={'https://minhaskamal.github.io/DownGit/#/home?url=' + node.frontmatter.download} className={hero.downloadBtn} target="blank">
                 {node.frontmatter.download && 
@@ -131,7 +129,6 @@ const Themes = (props) => {
         <div className={style.content}
           >
             <div className={style.mdWrapper}
-            key={node.id}
             >
             {node.frontmatter.thumbnail &&
             <a href={node.frontmatter.thumbnail} target="blank" className={style.imgContainer}>

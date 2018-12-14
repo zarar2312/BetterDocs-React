@@ -85,6 +85,99 @@
         padding: 100px 0;
     }
 }
+
+.heroThemes, .heroPlugins {
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    padding: 20px 0px 20px 0px;
+    background: linear-gradient(135deg, #339b78 0%, #1868df 100%);
+    &::before {
+        content: "";
+        background-image: url("../images/header-bg.svg");
+        background-size: 38%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        border-radius: unset;
+        transform: unset;
+        box-shadow: unset;
+        top: unset;
+        bottom: unset;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
+    .container {
+        max-width: calc(100% - 25px);
+        margin: 0 auto;
+        position: relative;
+        padding: 0;
+        @media (min-width: 450px) {
+            max-width: calc(100% - 75px);
+            padding: 0 10px;
+        }
+        @media (min-width: 850px) {
+            max-width: calc(100% - 125px);
+            padding: 0 20px;
+        }
+        .h2 {
+            font-size: 1.3rem;
+            line-height: 1.3;
+            font-weight: bold;
+            word-break: break-word;
+            margin: 0;
+            @media (min-width: 450px) {
+                font-size: 3rem;
+            }
+            @media (min-width: 850px) {
+                font-size: 3.5rem;
+            }
+        }
+        .p {
+            color: #fff;
+            margin: 0;
+            margin-top: 10px;
+            font-size: 0.6em;
+            @media (min-width: 450px) {
+                font-size: 1rem;
+            }
+            @media (min-width: 850px) {
+                font-size: 1.1rem;
+            }
+        }
+        .input {
+            width: calc(100% - 150px);
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: unset;
+            height: 45px;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: -20px;
+            text-indent: 10px;
+            opacity: 0.45;
+            transition: .2s linear opacity;
+            color: #fff;
+            @media (min-width: 850px) {
+                width: calc(100% - 900px);
+            }
+        }
+    }
+}
+.heroPlugins {
+    order: 1;
+    .container {
+        .input {
+            @media (min-width: 850px) {
+                width: calc(100% - 500px);
+            }
+        }
+    }
+}
+
+
 @keyframes float {
     0% {
         transform: translate(0,0);
