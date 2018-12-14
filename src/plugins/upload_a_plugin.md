@@ -1,7 +1,7 @@
 ---
 title: Upload a Plugin
 sub: Uploading a plugin is as easy as 1, 2, 3...uhh and maybe more.
-software: [BandagedBD,EnhancedDiscord,DiscordInjections,BeautifulDiscord,BetterDiscord]
+software: [BandagedBD,EnhancedDiscord,DiscordInjections,BetterDiscord]
 ---
 # Submit your work
 Want to submit your plugin to our [Showcase](https://betterdocs.us/plugins/)? Follow these instructions slow & carefully.
@@ -22,7 +22,7 @@ I promise it doesn't take long :)
   github: https://github.com/{Author Name}/
   support:
   tags: []
-  software: [BandagedBD,EnhancedDiscord,DiscordInjections,BeautifulDiscord,BetterDiscord]
+  software: [BandagedBD,EnhancedDiscord,DiscordInjections,BetterDiscord]
   images:
     - name: {Plugin Name} Preview
       image: https://imgur.com/upload # Direct image link should only be used here. Imgur isn't required but if it isn't used then further inspection will happen

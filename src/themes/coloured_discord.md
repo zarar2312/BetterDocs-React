@@ -2,10 +2,10 @@
 title: Coloured Discord
 author: Waterin
 description: A theme that lets you choose the color that most suits you.
-download: https://github.com/Waterin/Coloured-Discord-Themes/blob/1.0/Simple-Version/Coloured-Discord-Themes-RGB.theme.css
+download: https://github.com/Waterin/Coloured-Discord-Theme/
 github: 'https://github.com/Waterin'
 support: 'https://discord.gg/ADn3Mqd'
-demo: https://cdn.rawgit.com/Waterin/Coloured-Discord-Themes/1.0/Simple-Version/Coloured-Discord-Themes-RGB.theme.css
+demo: https://rawcdn.githack.com/Waterin/Coloured-Discord-Theme/bd13cbc4c279fe3ddfeef402d780d0883e3b4fea/Source/Coloured-Discord-Theme-RGB.theme.css
 thumbnail: https://i.imgur.com/5RnBGIG.png
 images:
   - image: /images/themes/Coloured_Discord_Preview.png
@@ -19,6 +19,7 @@ images:
   - image: /images/themes/Coloured_Discord_Preview_-_Red.png
     name: Coloured Discord Preview - Red
 auto: true
+status: Updated
 style: dark
 ghcommentid: 13
 layout: product

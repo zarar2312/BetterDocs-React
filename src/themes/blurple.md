@@ -11,6 +11,7 @@ images:
   - image: /images/themes/Blurple_Preview.png
     name: Blurple Preview
 auto: true
+status: Outdated
 style: dark
 ghcommentid: 8
 layout: product

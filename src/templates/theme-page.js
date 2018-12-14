@@ -9,6 +9,7 @@ import kebabCase from "lodash/kebabCase"
 import Helmet from 'react-helmet'
 import AdSense from 'react-adsense';
 import ad from '../styles/ad.module.scss'
+import alert from '../styles/alerts.module.scss'
 
 const Themes = (props) => {
   const themeList = props.data.listThemes;
@@ -33,14 +34,18 @@ const Themes = (props) => {
     ))}
     <div className={style.themesPageContainer}
     >
+    {themeList.edges.map(({ node }, i) => ( 
       <section className={style.contentWrapper}
       >
-      {themeList.edges.map(({ node }, i) => ( 
+      {node.frontmatter.status === "Outdated" &&
+        <div className={alert.warning}>
+          <p><b>Warning:</b> This theme is currently outdated. Only use for development purposes. If this is a mistake please make a PR <a href={ 'https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins' + node.fields.slug + '.md'}>here</a>.</p>
+        </div>
+      }
         <div className={hero.heroThemes}
         alt={node.frontmatter.title}
         key={node.id}
         >
-        {themeList.edges.map(({ node }, i) => (
           <div className={hero.container}
           key={node.id}
           >
@@ -79,7 +84,7 @@ const Themes = (props) => {
             {node.frontmatter.author &&
             <div className={hero.statusContainer}>
               {node.frontmatter.status ?
-                  <div className={hero.status}>
+                  <div className={hero.status} alt={node.frontmatter.status}>
                     <span>Status:</span> <div className={node.frontmatter.status}>{node.frontmatter.status}</div>
                   </div>
                 :
@@ -90,7 +95,6 @@ const Themes = (props) => {
               </div>
             }
           </div>
-        ))}
         {node.frontmatter.download &&
           <div className={hero.options} key={node.id}>
             {node.frontmatter.auto ?
@@ -115,7 +119,6 @@ const Themes = (props) => {
           </div>
         }
         </div>
-        ))}
         <div className={ad.ad}>
           <AdSense.Google
               client='ca-pub-1998206533560539'
@@ -127,7 +130,6 @@ const Themes = (props) => {
         </div>
         <div className={style.content}
           >
-            {themeList.edges.map(({ node }, i) => (
             <div className={style.mdWrapper}
             key={node.id}
             >
@@ -160,9 +162,9 @@ const Themes = (props) => {
                 </a>
               </div>
             </div>
-            ))}
         </div>
       </section>
+      ))}
       <Sidebar />
 
     </div>

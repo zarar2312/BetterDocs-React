@@ -2,13 +2,13 @@
 title: Discord Prism
 author: taciturasa
 description: A transparent glass-like theme for Discord with support for your own background.
-download: https://github.com/
+download: https://github.com/taciturasa/Discord-Prism
 github: https://github.com/taciturasa/
 support: https://github.com/taciturasa/Discord-Prism/issues
-demo: https://raw.githack.com
+demo: https://rawcdn.githack.com/taciturasa/Discord-Prism/32331e840e5abb9b81f00ce8aaedcfb0f3ec87aa/prism.css
 thumbnail: https://i.imgur.com/WBneQQ0.jpg
-status: Outdated
 auto: true
+status: Outdated
 style: dark
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE

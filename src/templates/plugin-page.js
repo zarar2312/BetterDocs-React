@@ -9,12 +9,13 @@ import kebabCase from "lodash/kebabCase"
 import Helmet from 'react-helmet'
 import AdSense from 'react-adsense';
 import ad from '../styles/ad.module.scss'
+import alert from '../styles/alerts.module.scss'
 
 const Plugins = (props) => {
   const pluginList = props.data.listPlugins;
   return (
   <Layout>
-    {pluginList.edges.map(({ node }, i) => ( 
+    {pluginList.edges.map(({ node }, i) => (
     <Helmet
       key={node.id}
       title={ node.frontmatter.title + ' by ' + node.frontmatter.author + ' | BetterDocs' }
@@ -32,16 +33,19 @@ const Plugins = (props) => {
     ))}
     <div className={style.pluginsPageContainer}
     >
+    {pluginList.edges.map(({ node }, i) => (
       <section className={style.contentWrapper}
+      key={node.id}
       >
-      {pluginList.edges.map(({ node }, i) => (
+      {node.frontmatter.status === "Outdated" &&
+        <div className={alert.warning}>
+          <p><b>Warning:</b> This plugin is currently outdated. Only use for development purposes. If this is a mistake please make a PR <a href={ 'https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins' + node.fields.slug + '.md'}>here</a>.</p>
+        </div>
+      }
         <div className={hero.heroPlugins}
-        key={node.id}
         alt={node.frontmatter.title}
         >
-        {pluginList.edges.map(({ node }, i) => (
           <div className={hero.container}
-          key={node.id}
           >
             {node.frontmatter.title && <h2 className={hero.h2}>{node.frontmatter.title}</h2>}
             {node.frontmatter.author &&
@@ -76,20 +80,19 @@ const Plugins = (props) => {
               }
             </div>
             {node.frontmatter.author &&
-            <div className={hero.statusContainer}>
-              {node.frontmatter.status ?
-                  <div className={hero.status}>
+              <div className={hero.statusContainer}>
+                {node.frontmatter.status ?
+                  <div className={hero.status} alt={node.frontmatter.status}>
                     <span>Status:</span> <div className={node.frontmatter.status}>{node.frontmatter.status}</div>
                   </div>
                 :
                   <div className={hero.status}>
                     <span>Status:</span> <div className={hero.unknown}>Unknown</div>
                   </div>
-              }
+                }
               </div>
             }
           </div>
-        ))}
         {node.frontmatter.download &&
           <div className={hero.options} key={node.id}>
             {node.frontmatter.auto ?
@@ -109,7 +112,6 @@ const Plugins = (props) => {
           </div>
         }
         </div>
-        ))}
         <div className={ad.ad}>
           <AdSense.Google
               client='ca-pub-1998206533560539'
@@ -121,9 +123,7 @@ const Plugins = (props) => {
         </div>
         <div className={style.content}
           >
-          {pluginList.edges.map(({ node }, i) => (
             <div className={style.wrapper}
-            key={node.id}
             >
             {node.frontmatter.thumbnail &&
             <a href={node.frontmatter.thumbnail} target="blank" className={style.imgContainer}>
@@ -154,9 +154,9 @@ const Plugins = (props) => {
                 </a>
               </div>
             </div>
-          ))}
         </div>
       </section>
+      ))}
       <Sidebar />
 
     </div>

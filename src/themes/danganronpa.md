@@ -13,6 +13,7 @@ images:
   - image: /images/user_uploads/danganronpa_preview_-_friends_list.png
     name: Danganronpa Preview - Friends List
 auto: true
+status: Updated
 style: dark
 ghcommentid: 181
 layout: product

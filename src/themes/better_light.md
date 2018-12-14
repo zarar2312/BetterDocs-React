@@ -11,6 +11,7 @@ images:
   - image: /images/themes/Better_Light_Preview.png
     name: Better Light
 auto: true
+status: Updated
 style: light
 ghcommentid: 7
 layout: product

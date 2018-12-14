@@ -11,6 +11,7 @@ images:
   - image: /images/user_uploads/blue_space_preview.jpg
     name: Blue Space Preview
 auto: true
+status: Updated
 style: dark
 ghcommentid: 102
 layout: product

@@ -266,6 +266,9 @@
             .status {
                 color: #4e4e4e;
                 display: -webkit-box;
+                &[alt="Outdated"] {
+                    display: none;
+                }
                 div[class="Updated"] {
                     background: #00804b;
                     margin-left: 5px;
