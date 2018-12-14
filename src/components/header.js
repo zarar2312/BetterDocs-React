@@ -102,12 +102,12 @@ const Header = () => (
             <span className={mystyles.link}>Download</span>
           </Link>
 
-          <a href="https://discord.gg/D4cAkXX"
+          <Link to="/server/"
           className={mystyles.linkWrapper}
           target="blank"
           >
             <span className={mystyles.link}>Server</span>
-          </a> 
+          </Link> 
       </nav>
 
       <nav className={mystyles.mobileNav}>

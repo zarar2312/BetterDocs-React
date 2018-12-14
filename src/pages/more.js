@@ -32,9 +32,9 @@ const IndexPage = () => (
                 <div className={more.linkName}
                 >Download</div>
             </Link>
-            <a 
+            <Link 
             className={more.link}
-            href="https://discord.gg/D4cAkXX"
+            to="/server/"
             target="blank"
             >
                 <svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' height="30" viewBox="0 0 250 240" width="30">
@@ -45,7 +45,7 @@ const IndexPage = () => (
                 </svg>
                 <div className={more.linkName}
                 >Server</div>
-            </a>
+            </Link>
         </div>
     </div>
   </Layout>

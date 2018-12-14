@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import style from '../styles/reasons.module.scss'
 import discord from '../images/discordcog.svg'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -45,7 +45,7 @@ const Reasons = () => (
                 <div className={style.firstContainer} >
                     <div className={style.header}>BENEFITS</div>
                     <div className={style.title}>Ever wanted to see Discord's secret settings?</div>
-                    <div className={style.description}>With the help of our talented developers from our <a href="https://discord.gg/D4cAkXX">community</a> you can install plugins to modify Discord to your knees. Look at hidden channels, hidden voice channels, server roles and more. Today is the day you can make your Discord on steroids!</div>
+                    <div className={style.description}>With the help of our talented developers from our <Link to="/server/">community</Link> you can install plugins to modify Discord to your knees. Look at hidden channels, hidden voice channels, server roles and more. Today is the day you can make your Discord on steroids!</div>
                     <AniLink 
                     to="/plugins/"
                     className={style.unimportantBtn}
