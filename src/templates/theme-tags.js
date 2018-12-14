@@ -84,7 +84,7 @@ const Tagss = ({ pageContext, data }) => {
 
     </div>
     <div className={style.uploadContainer}>
-        <Link to="/themes/upload_a_theme/" className={style.uploadBtn}>
+        <Link to="/themes/upload-a-theme/" className={style.uploadBtn}>
         +
         </Link>
     </div>

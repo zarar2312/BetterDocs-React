@@ -45,7 +45,7 @@ const Themes = (props) => {
         <div className={featured.btnContainer}>
           <Link 
           className={featured.mainBtn}
-          to="/themes/upload_a_theme/">Submit your theme</Link>
+          to="/themes/upload-a-theme/">Submit your theme</Link>
         </div>
         </div>
       </div>
@@ -137,7 +137,7 @@ const Themes = (props) => {
 
     </div>
     <div className={theme.uploadContainer}>
-        <Link to="/themes/upload_a_theme/" className={theme.uploadBtn}>
+        <Link to="/themes/upload-a-theme/" className={theme.uploadBtn}>
         +
         </Link>
     </div>

@@ -78,7 +78,7 @@ const Plugins = (props) => {
 
     </div>
     <div className={plugin.uploadContainer}>
-        <Link to="/plugins/upload_a_plugin/" className={plugin.uploadBtn}>
+        <Link to="/plugins/upload-a-plugin/" className={plugin.uploadBtn}>
         +
         </Link>
     </div>
