@@ -9,7 +9,7 @@ Want to submit your plugin to our [Showcase](https://betterdocs.us/plugins/)? Fo
 ## Steps
 I promise it doesn't take long :)
 
-1. [Create a new file](https://github.com/MrRobotjs/BetterDocs/new/gh-pages/_Plugins)
+1. [Create a new file](https://github.com/MrRobotjs/BetterDocs-React/new/master/src/plugins)
 2. The name of the file is **required** to match your plugin name.
     > Make sure it's a markdown file `.md` and use kebab case stlye for the name.
 3. Use the following template to ensure required fields are filled:

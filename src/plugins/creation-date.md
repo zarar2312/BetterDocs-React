@@ -6,6 +6,7 @@ download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/C
 github: 'https://github.com/mwittrien/'
 support: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
+auto: true
 ghcommentid: 122
 layout: product
 date: 2018-10-23T21:19:29.328Z

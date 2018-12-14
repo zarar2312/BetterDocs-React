@@ -8,7 +8,7 @@ Want to submit your theme to our [Showcase](https://betterdocs.us/themes/)? Foll
 ### Steps
 I promise it doesn't take long :)
 
-1. [Create a new file](https://github.com/MrRobotjs/BetterDocs/new/gh-pages/_themes)
+1. [Create a new file](https://github.com/MrRobotjs/BetterDocs-React/new/master/src/themes)
 2. Name has to **match** your theme name. 
     > Make sure it's a markdown file ".md"
 3. Follow the following format for the file
