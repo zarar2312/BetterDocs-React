@@ -46,9 +46,9 @@ const Themes = (props) => {
       <section className={style.contentWrapper} key={node.id}
       >
       {node.frontmatter.status === "Outdated" &&
-        <div className={alert.warning}>
-          <p><b>Warning:</b> This theme is currently outdated. Only use for development purposes. If this is a mistake please make a PR <a href={ 'https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins' + node.fields.slug + '.md'}>here</a>.</p>
-        </div>
+        <a href={ 'https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins' + node.fields.slug + '.md'} className={alert.alert} alt="Warning" >
+          <p><b>Warning:</b> This theme is currently outdated. Only use for development purposes. If this is a mistake please make a PR by clicking me.</p>
+        </a>
       }
         <div className={hero.heroThemes}
         alt={node.frontmatter.title}
