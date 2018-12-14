@@ -2,16 +2,18 @@
     font-size: 0.9em;
     display: flex;
     animation: opacity 1s forwards;
-    animation-delay: 8s; 
+    animation-delay: 7s; 
     z-index: 1;
     -webkit-font-smoothing:antialiased;
     -webkit-backface-visibility:hidden;
+    display: none;
     &[alt="Warning"] {
         height: unset;
         width: unset;
         position: fixed;
         bottom: 60px;
         right: unset;
+        display: initial;
         @media (min-width: 850px) {
             height: 12%;
             width: calc(100% - 58em);
@@ -31,6 +33,19 @@
         }
     }
     &[alt="Info"] {
+        height: unset;
+        width: unset;
+        position: fixed;
+        bottom: 60px;
+        right: unset;
+        display: initial;
+        @media (min-width: 850px) {
+            height: 15%;
+            width: calc(100% - 58em);
+            position: fixed;
+            bottom: 25px;
+            right: 0px;
+        }
         p {
             border-left: 2px #0a68a7 solid;
             b {
@@ -62,9 +77,9 @@
         border: 1px solid #eaeaea;
         line-height: 1.5em;
         position: relative;
-        box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-        animation: shadow 2s forwards;
-        animation-delay: 7.5s;
+        box-shadow: 0 10px 90px rgba(0, 0, 0, 0.1);
+        animation: shadow 1.5s forwards;
+        animation-delay: 6.5s;
         @media (min-width: 450px) {
             max-width: calc(100% - 75px);
         }
@@ -97,7 +112,7 @@
             width: 100%;
             height: 100%;
             left: 0px;
-            animation: wcollapse 8s forwards linear; 
+            animation: wcollapse 7s forwards linear; 
         }
     }
 }

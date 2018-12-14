@@ -50,6 +50,11 @@ const Plugins = (props) => {
           <p><b>Warning:</b> This plugin is currently outdated. Only use for development purposes. If this is a mistake please make a PR by clicking me.</p>
         </a>
       }
+      {node.frontmatter.status === null &&
+        <a href={ 'https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins' + node.fields.slug + '.md'} className={alert.alert} alt="Info">
+          <p><b>Info:</b> The plugin "{node.frontmatter.title}" status is currently <b>Unknown</b>. Please be careful, this may or may not break your discord client. If this is a mistake please make a PR by clicking me.</p>
+        </a>
+      }
         <div className={hero.heroPlugins}
         alt={node.frontmatter.title}
         >
@@ -88,15 +93,13 @@ const Plugins = (props) => {
               }
             </div>
             {node.frontmatter.author &&
-              <div className={hero.statusContainer}>
+              <div className={hero.statusContainer} alt={node.frontmatter.status}>
                 {node.frontmatter.status ?
-                  <div className={hero.status} alt={node.frontmatter.status}>
+                  <div className={hero.status}>
                     <span>Status:</span> <div className={node.frontmatter.status}>{node.frontmatter.status}</div>
                   </div>
                 :
-                  <div className={hero.status}>
-                    <span>Status:</span> <div className={hero.unknown}>Unknown</div>
-                  </div>
+                  null
                 }
               </div>
             }

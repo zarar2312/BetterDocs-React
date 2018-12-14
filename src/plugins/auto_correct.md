@@ -10,7 +10,7 @@ github: 'https://github.com/Metalloriff'
 support: 'https://discord.gg/yNqzuJa'
 auto: true
 software: [BandagedBD, BetterDiscord]
-thumbnail: https://i.imgur.com/OvDTo6r.gi
+thumbnail: https://i.imgur.com/OvDTo6r.gif
 images:
   - image: 'https://i.imgur.com/OvDTo6r.gif'
     name: Auto Correct Preview

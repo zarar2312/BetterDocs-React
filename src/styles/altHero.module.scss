@@ -263,12 +263,22 @@
         }
         .statusContainer {
             margin-top: 14px;
+            display: none;
+            &[alt="Outdated"] {
+                display: none;
+            }
+            &[alt="Undefined"] {
+                display: none;
+            }
+            &[alt="null"] {
+                display: none;
+            }
+            &[alt="Updated"] {
+                display: initial;
+            }
             .status {
                 color: #4e4e4e;
                 display: -webkit-box;
-                &[alt="Outdated"] {
-                    display: none;
-                }
                 div[class="Updated"] {
                     background: #00804b;
                     margin-left: 5px;
