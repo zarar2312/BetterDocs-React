@@ -116,10 +116,7 @@ const Themes = (props) => {
                 >
                 <Link 
                 to={"themes" + node.fields.slug}
-                className={theme.titleLink}
-                cover
-                bg="#262626"
-                duration={0.65}>
+                className={theme.titleLink}>
                 {node.frontmatter.title}
                 </Link>
                 </div>

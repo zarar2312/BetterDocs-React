@@ -10,10 +10,10 @@ style: dark
 tags: [pony ,mlp ,bmt]
 auto: true
 status: Updated
-thumbnail: https://my.mixtape.moe/arzmth.png
+thumbnail: https://i.imgur.com/1jdFXZ0.jpg
 images:
   - name: BMT Preview
-    image: https://my.mixtape.moe/arzmth.png
+    image: https://i.imgur.com/1jdFXZ0.jpg
 ghcommentid: #0
 layout: product
 ---
