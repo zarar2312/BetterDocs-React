@@ -230,7 +230,8 @@
         max-height: calc(100vh - 10.9rem); //28.2em
         background: rgb(251, 250, 252);
         @media (min-width: 850px) {
-            max-height: calc(100vh - 10.4em);
+            //max-height: calc(100vh - 10.4em);
+            max-height: unset;
             background: transparent;
         }
         &::-webkit-scrollbar-button {

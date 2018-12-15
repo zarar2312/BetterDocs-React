@@ -4,8 +4,14 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { Link } from 'gatsby'
 import './fix.css'
 
+class Header extends React.Component {
 
-const Header = () => (
+  componentDidMount () {
+    
+  }
+
+  render () {
+    return (
   <div
     className={mystyles.headercontainer}
   >
@@ -192,6 +198,6 @@ const Header = () => (
     </div>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </div>
-)
+)}}
 
 export default Header

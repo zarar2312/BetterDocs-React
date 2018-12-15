@@ -1,7 +1,7 @@
 ---
 title: Dunes
 author: codedotspectra
-description: "Dunes is a minimalist and rounded discord theme\r."
+description: Rounded, minimalist, smooth & clean
 download: https://github.com/codedotspectra/dunes
 github: https://github.com/codedotspectra/
 support: http://discord.gg/nfggDZz
@@ -16,4 +16,4 @@ style: dark
 layout: product
 date: 2018-12-08T19:15:56.647Z
 ---
-
+Rounded, minimalist, smooth & clean
