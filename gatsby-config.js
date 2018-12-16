@@ -1,9 +1,17 @@
 const path = require('path')
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://betterdocs-react.netlify.com',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
   siteMetadata: {
     title: `BetterDocs | #1 Discord Themes & Plugins`,
-    siteUrl: `https://betterdocs-react.netlify.com`,
+    siteUrl: `https://betterdocs.us`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +23,29 @@ module.exports = {
       options: {
         src: path.join(__dirname, 'src'),
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: "https://betterdocs.us",
+        sitemap: "https://betterdocs.us/sitemap.xml",
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }]
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-nprogress`,

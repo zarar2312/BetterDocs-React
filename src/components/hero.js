@@ -9,15 +9,15 @@ const Hero = ({ siteTitle }) => (
     <div
       className={mystyles.textContainer}
     >
-        <h2 
-        className={mystyles.header2}
+        <h1 
+        className={mystyles.header1}
         >The Discord Enhancement Project.
-        </h2>
+        </h1>
         <div className={mystyles.paragraph}
         >
-        <p className={mystyles.p}
+        <h2 className={mystyles.p}
         >
-        Custom CSS themes + JS plugins, BTTV & FFZ twitch emotes and lots of extra tools.</p>
+        Custom CSS themes + JS plugins, BTTV & FFZ twitch emotes and lots of extra tools.</h2>
         </div>
         <div className={mystyles.button}
         > 

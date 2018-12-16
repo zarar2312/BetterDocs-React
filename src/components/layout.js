@@ -26,14 +26,15 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'A Discord enhancement project. Free quality Themes and Plugins for Discord and easy installation instructions for BetterDiscord and more!' },
+            { name: 'description', content: 'A Discord enhancement project. Free quality Themes, Plugins and Hacks for Discord and easy installation instructions for BetterDiscord and more!' },
             { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
           ]}
         >
+        <meta name="description" content="A Discord enhancement project. Free quality Themes, Plugins and Hacks for Discord and easy installation instructions for BetterDiscord and more!" />
         <meta property="og:site_name" content="BetterDocs"/>
         <meta property="og:image" content="https://i.imgur.com/B0vcfRw.png"/>
         <meta property="og:title" content={data.site.siteMetadata.title}/>
-        <meta property="og:description" content="A Discord enhancement project. Free quality Themes and Plugins for Discord and easy installation instructions for BetterDiscord and more!"/>
+        <meta property="og:description" content="A Discord enhancement project. Free quality Themes, Plugins and Hacks for Discord and easy installation instructions for BetterDiscord and more!"/>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://betterdocs.us" />
           <html lang="en" />
