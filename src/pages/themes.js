@@ -8,6 +8,7 @@ import Missing from "../images/missing_image_2.png"
 import Star from "../images/star.svg"
 import Stars from "../images/stars.svg"
 import kebabCase from "lodash/kebabCase"
+import { LazyImage } from "react-lazy-images";
 
 const Themes = (props) => {
   const themeList = props.data.allMarkdownRemark;
@@ -59,7 +60,15 @@ const Themes = (props) => {
         key={node.id}
         to={"/themes" + node.fields.slug}>
           <div className={featured.imgWrapper}>
-            <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author}></img>
+            <LazyImage
+              className={theme.img}
+              src={node.frontmatter.thumbnail}
+              alt={`The featured theme "` + node.frontmatter.title + `"` + " Preview by " + node.frontmatter.author }
+              placeholder={({ imageProps, ref }) => (
+                <img className={theme.img} ref={ref} src={Missing} alt={imageProps.alt} />
+              )}
+              actual={({ imageProps }) => <img alt={node.frontmatter.title} {...imageProps} />}
+            />
           </div>
         <div className={featured.title}>{node.frontmatter.title}</div>
         </Link>
@@ -94,7 +103,15 @@ const Themes = (props) => {
               { node.frontmatter.thumbnail ?
               <div className={theme.imgContainer}
               >
-                <img className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <LazyImage
+                  className={theme.img}
+                  src={node.frontmatter.thumbnail}
+                  alt={node.frontmatter.title + " Preview by " + node.frontmatter.author}
+                  placeholder={({ imageProps, ref }) => (
+                    <img className={theme.img} ref={ref} src={Missing} alt={imageProps.alt} />
+                  )}
+                  actual={({ imageProps }) => <img alt={node.frontmatter.title} {...imageProps} />}
+                />
                 { node.frontmatter.featured &&
                   <Link 
                   to="/themes/featured/"
@@ -121,7 +138,7 @@ const Themes = (props) => {
               :
               <div className={theme.imgContainer}
               >
-                <img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
               </div>
               }
                 <div>

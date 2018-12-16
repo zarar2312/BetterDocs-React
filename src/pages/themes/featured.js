@@ -7,6 +7,7 @@ import Missing from 'src/images/missing_image_2.png'
 import Stars from 'src/images/stars.svg'
 import kebabCase from "lodash/kebabCase"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { LazyImage } from "react-lazy-images";
 
 const FeaturedThemes = (props) => {
   const tags = props.data.tags;
@@ -45,7 +46,15 @@ const FeaturedThemes = (props) => {
               { node.frontmatter.thumbnail ?
               <div className={theme.imgContainer}
               >
-                <img className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <LazyImage
+                  className={theme.img}
+                  src={node.frontmatter.thumbnail}
+                  alt={`The featured theme "` + node.frontmatter.title + `"`}
+                  placeholder={({ imageProps, ref }) => (
+                    <img className={theme.img} ref={ref} src={Missing} alt={imageProps.alt} />
+                  )}
+                  actual={({ imageProps }) => <img alt={node.frontmatter.title} {...imageProps} />}
+                />
                 { node.frontmatter.featured &&
                   <Link 
                     to="/themes/featured/"
@@ -72,7 +81,7 @@ const FeaturedThemes = (props) => {
               :
               <div className={theme.imgContainer}
               >
-                <img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
               </div>
               }
                 <div>
