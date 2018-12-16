@@ -7,7 +7,6 @@ import { graphql, Link } from "gatsby"
 import Missing from "../images/missing_image_2.png"
 import Stars from "../images/stars.svg"
 import kebabCase from "lodash/kebabCase"
-import { LazyImage } from "react-lazy-images";
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -41,15 +40,7 @@ const Tagss = ({ pageContext, data }) => {
               { node.frontmatter.thumbnail ?
               <div className={style.imgContainer}
               >
-                <LazyImage
-                  className={style.img}
-                  src={node.frontmatter.thumbnail}
-                  alt={node.frontmatter.title + " Preview by " + node.frontmatter.author}
-                  placeholder={({ imageProps, ref }) => (
-                    <img className={style.img} ref={ref} src={Missing} alt={imageProps.alt} />
-                  )}
-                  actual={({ imageProps }) => <img alt={node.frontmatter.title} {...imageProps} />}
-                />
+                <img className={style.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
                 { node.frontmatter.featured &&
                   <div className={style.icon}>
                     <img src={Stars} alt="Featured Theme icon"></img>
@@ -74,7 +65,7 @@ const Tagss = ({ pageContext, data }) => {
               :
               <div className={style.imgContainer}
               >
-                <img className={style.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
+                <img className={style.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
               </div>
               }
                 <div>
