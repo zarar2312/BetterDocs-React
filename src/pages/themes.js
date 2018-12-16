@@ -8,6 +8,7 @@ import Missing from "../images/missing_image_2.png"
 import Star from "../images/star.svg"
 import Stars from "../images/stars.svg"
 import kebabCase from "lodash/kebabCase"
+import LazyLoad from "react-lazyload"
 
 const Themes = (props) => {
   const themeList = props.data.allMarkdownRemark;
@@ -59,7 +60,10 @@ const Themes = (props) => {
         key={node.id}
         to={"/themes" + node.fields.slug}>
           <div className={featured.imgWrapper}>
-            <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author}></img>
+            <LazyLoad once="true" height="100%"
+              placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
+            <img once="true" className={theme.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+            </LazyLoad>
           </div>
         <div className={featured.title}>{node.frontmatter.title}</div>
         </Link>
@@ -94,7 +98,10 @@ const Themes = (props) => {
               { node.frontmatter.thumbnail ?
               <div className={theme.imgContainer}
               >
-                <img className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <LazyLoad once="true" height="100%"
+                  placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                <img once="true" className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                </LazyLoad>
                 { node.frontmatter.featured &&
                   <Link 
                   to="/themes/featured/"
@@ -121,7 +128,7 @@ const Themes = (props) => {
               :
               <div className={theme.imgContainer}
               >
-                <img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
               </div>
               }
                 <div>

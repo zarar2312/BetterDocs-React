@@ -7,6 +7,7 @@ import Missing from 'src/images/missing_image_2.png'
 import Stars from 'src/images/stars.svg'
 import kebabCase from "lodash/kebabCase"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import LazyLoad from "react-lazyload"
 
 const FeaturedThemes = (props) => {
   const tags = props.data.tags;
@@ -45,7 +46,10 @@ const FeaturedThemes = (props) => {
               { node.frontmatter.thumbnail ?
               <div className={theme.imgContainer}
               >
-                <img className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <LazyLoad once="true" height="100%"
+                  placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                <img once="true" className={theme.img} alt={`The featured theme "` + node.frontmatter.title + `"`} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                </LazyLoad>
                 { node.frontmatter.featured &&
                   <Link 
                     to="/themes/featured/"
