@@ -44,6 +44,21 @@ const Tagss = ({ pageContext, data }) => {
                     <img src={Stars} alt="Featured Theme icon"></img>
                   </div>
                 }
+                <div className={style.options}>
+                  <div className={style.optionsWrapper}>
+                    <a 
+                    className={style.btn}
+                    href={node.frontmatter.thumbnail}
+                    target="blank"
+                    >Full Thumbnail</a>
+                    {node.frontmatter.demo &&
+                    <a 
+                    href={'http://betterdocs.netlify.com/demo/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo}
+                    className={style.btn}
+                    target="blank">Quick Demo</a>
+                    }
+                  </div>
+                </div>
               </div>
               :
               <div className={style.imgContainer}
@@ -133,6 +148,8 @@ export const pageQuery = graphql`
             title
             author
             github
+            style
+            demo
             download
             support
             thumbnail

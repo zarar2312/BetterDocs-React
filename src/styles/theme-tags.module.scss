@@ -351,6 +351,9 @@
                 }
                 .imgContainer {
                     height: 11em;
+                    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+                    position: relative;
+                    box-shadow: rgba(102, 51, 153, 0.2) 0px 4px 10px;
                     @media (min-width: 450px) {
                         height: 15em;
                     }
@@ -360,38 +363,102 @@
                     @media (min-width: 850px) {
                         height: 14em;
                     }
+                    &:hover {
+                        box-shadow: rgba(#339b78, 0.5) 0px 8px 20px;
+                        transform: translateY(-3px);
+                        &::before {
+                            content: "";
+                            pointer-events: all;
+                            opacity: 1;
+                        }
+                        .options {
+                            opacity: 1;
+                            pointer-events: all;
+                        }
+                        .icon {
+                            //opacity: 0;
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: rgba(0, 0, 0, 0.6);
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+                    }
                     .img {
                         background-color: #000;
                         width: 100%;
                         height: 100%;
                         margin: unset;
                         display: -webkit-box;
+                        border-radius: 2px;
                         background-size: cover;
                     }
+                    .options {
+                        position: absolute;
+                        top: 0px;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        flex-direction: column;
+                        justify-content: center;
+                        transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+                        display: flex;
+                        opacity: 0;
+                        pointer-events: none;
+                        .optionsWrapper {
+                            display: flex;
+                            flex-direction: column;
+                            .btn {
+                                margin: 0 auto;
+                                text-align: center;
+                                display: -webkit-inline-box;
+                                flex: 1;
+                                background-color: #339b78;
+                                border-radius: 25px;
+                                padding: 7px 17px;
+                                font-weight: normal;
+                                color: #fff;
+                                &:hover {
+                                    background-color: rgba(#339b78, 0.8);
+                                }
+                                &:first-child {
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                    }
                     .icon {
-                        display: block;
+                        display: -webkit-box;
                         position: absolute;
                         top: 0px;
                         background-color: #ffb100;
-                        z-index: 1;
+                        z-index: 2;
                         width: 1.6em;
                         right: 0;
                         height: 1.6em;
                         padding: 4px;
                         border-bottom-left-radius: 2px;
+                        transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
                         &::after {
                             content: "Featured";
                             display: block;
                             background-color: #262626;
                             color: #fff;
-                            width: 5em;
+                            width: 5.5em;
+                            line-height: 1.7em;
+                            height: 1.7em;
                             position: relative;
-                            top: -55px;
-                            right: 33px;
-                            padding: 5px;
+                            top: -37px;
+                            right: 55px;
                             border-radius: 2px;
                             text-align: center;
-                            box-shadow: 0 2px 25px rgba(0,0,0,.4)!important;
+                            box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4) !important;
                             transition: .2s linear all;
                             opacity: 0;
                         }
