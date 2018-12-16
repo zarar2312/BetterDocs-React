@@ -84,9 +84,11 @@ const Sidebar = () => (
               </p>
             </div>
             { node.frontmatter.featured &&
-              <div className={style.icon}>
+              <Link 
+                to="/themes/featured/"
+                className={style.icon}>
                 <img src={Stars} alt="Featured Theme icon"></img>
-              </div>
+              </Link>
             }
           </Link>
           ))}

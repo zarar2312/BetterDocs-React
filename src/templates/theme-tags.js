@@ -86,18 +86,26 @@ const Tagss = ({ pageContext, data }) => {
                 {node.frontmatter.title}
                 </AniLink>
                 </div>
+              {node.frontmatter.tags ?
+              <div>
               <div className={style.description}
               >
                 <p className={style.p}
                 >{node.excerpt}</p>
               </div>
-              {node.frontmatter.tags &&
               <div className={style.tagContainer}>
                 {tags.group.map(tag => (
                   <Link to={`/themes/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} className={style.tag}>
                     #{tag.fieldValue}
                   </Link>
                 ))}
+              </div>
+              </div>
+              :
+              <div className={style.descriptionAlt}
+              >
+                <p className={style.p}
+                >{node.excerpt}</p>
               </div>
               }
             </div>

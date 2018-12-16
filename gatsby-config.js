@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: `BetterDocs | #1 Discord Themes & Plugins`,
@@ -8,6 +10,12 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-netlify-cache`,
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+      },
+    },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {

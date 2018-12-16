@@ -445,6 +445,8 @@
                         padding: 4px;
                         border-bottom-left-radius: 2px;
                         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+                        border-bottom: unset;
+                        box-shadow: unset;
                         &::after {
                             content: "Featured";
                             display: block;
@@ -497,8 +499,16 @@
                 .description {
                     color: rgba(0, 0, 0, 0.6);
                     font-size: 0.9em;
-                    margin-bottom: 5px;
-                    p {
+                    margin-bottom: 8px;
+                    .p {
+                        margin-bottom: unset;
+                    }
+                }
+                .descriptionAlt {
+                    color: rgba(0, 0, 0, 0.6);
+                    font-size: 0.9em;
+                    margin-bottom: 25px;
+                    .p {
                         margin-bottom: unset;
                     }
                 }

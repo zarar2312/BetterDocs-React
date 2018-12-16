@@ -1,26 +1,24 @@
 import React from 'react'
-import Layout from '../components/layout-mobile-footer'
-import theme from '../styles/themes.module.scss'
-import featured from '../styles/themes-featured.module.scss'
+import Layout from 'src/components/layout-mobile-footer'
+import theme from 'src/styles/themes.module.scss'
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet";
-import Missing from "../images/missing_image_2.png"
-import Star from "../images/star.svg"
-import Stars from "../images/stars.svg"
+import Missing from 'src/images/missing_image_2.png'
+import Stars from 'src/images/stars.svg'
 import kebabCase from "lodash/kebabCase"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-const Themes = (props) => {
-  const themeList = props.data.allMarkdownRemark;
+const FeaturedThemes = (props) => {
   const tags = props.data.tags;
   const featuredList = props.data.featured;
-  const { totalCount } = props.data.allMarkdownRemark;
+  const { totalCount } = featuredList;
   const listCount = `${totalCount}`
   
   return (
   <Layout>
     <Helmet>
         <meta charSet="utf-8" />
-        <title>BetterDocs | #1 Discord Themes</title>
+        <title>BetterDocs | #1 Featured Discord Themes</title>
         <meta property="og:site_name" content="BetterDocs"/>
         <meta property="og:title" content="BetterDocs | #1 Discord Themes"/>
         <meta property="og:description" content="List of free high quality Discord themes by our community! Customize Discord to your own liking with transparent themes and modern themes!"/>
@@ -28,57 +26,10 @@ const Themes = (props) => {
     </Helmet>
     <div className={theme.themesContainer}
     >
-    <section className={featured.featuredSection}>
-      <div className={featured.topBar}>
-        <div className={featured.firstSection}>
-          <div className={featured.headerContainer}>
-            <div className={featured.header}>Featured Themes</div>
-          </div>
-          <div className={featured.linkContainer}>
-            <Link 
-            to="/themes/featured/"
-            className={featured.link}>View All -></Link>
-          </div>
-        </div>
-        <div className={featured.secondSection}>
-        <div className={featured.paragraph}>
-          <p>Want to get featured?</p>
-        </div>
-        <div className={featured.btnContainer}>
-          <Link 
-          className={featured.mainBtn}
-          to="/themes/upload-a-theme/">Submit your theme</Link>
-        </div>
-        </div>
-      </div>
-      
-      <div className={featured.container}>
-      {featuredList.edges.map(({ node }, i) => (
-        <Link 
-        className={featured.cardWrapper}
-        key={node.id}
-        to={"/themes" + node.fields.slug}>
-          <div className={featured.imgWrapper}>
-            <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author}></img>
-          </div>
-        <div className={featured.title}>{node.frontmatter.title}</div>
-        </Link>
-        ))}
-        <Link 
-        className={featured.cardWrapper}
-        to="/themes/featured/">
-          <div className={featured.imgWrapper}>
-            <img src={Star} alt="View All Featured Themes"></img>
-            <div className={featured.title}>View all featured themes</div>
-          </div>
-        </Link>
-      </div>
-    </section>
-    
     <section className={theme.contentSection}
     >
     <div className={theme.titleBar}>
-      <div className={theme.count}>Themes <span>({listCount})</span></div>
+      <div className={theme.count}>Themes <span>{listCount} featured themes</span></div>
       <input className={theme.input} placeholder="Search Themes library (WIP)" ></input>
     </div>
 
@@ -86,7 +37,7 @@ const Themes = (props) => {
         >
           <div className={theme.wrapper}
           >
-          {themeList.edges.map(({ node }, i) => (
+          {featuredList.edges.map(({ node }, i) => (
             <div 
             className={theme.cardWrapper}
             key={node.id}
@@ -97,8 +48,8 @@ const Themes = (props) => {
                 <img className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
                 { node.frontmatter.featured &&
                   <Link 
-                  to="/themes/featured/"
-                  className={theme.icon}>
+                    to="/themes/featured/"
+                   className={theme.icon}>
                     <img src={Stars} alt="Featured Theme icon"></img>
                   </Link>
                 }
@@ -139,7 +90,7 @@ const Themes = (props) => {
                 {node.frontmatter.title}
                 </Link>
                 </div>
-                {node.frontmatter.tags ?
+              {node.frontmatter.tags ?
                 <div>
                 <div className={theme.description}
                 >
@@ -174,14 +125,24 @@ const Themes = (props) => {
         +
         </Link>
     </div>
+    <AniLink 
+    className={theme.backButton}
+    to="/themes/"
+    cover
+    bg="#262626"
+    >
+      <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' viewBox='0 0 240.823 240.823' width='512' height='512'>
+        <path id='Chevron_Right' d='M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179 l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816 C52.942,116.507,52.942,124.327,57.633,129.007z' fill='#FFF' />
+      </svg>
+    </AniLink>
   </Layout>
 )
 }
 
-export default Themes;
+export default FeaturedThemes;
 
-export const allThemesQuery = graphql`
-query allThemesQuery {
+export const allFeaturedThemesQuery = graphql`
+query allFeaturedThemesQuery {
   allMarkdownRemark(filter: {collection: {eq: "themes"} } sort: { fields: [frontmatter___title], order: ASC}) {
     group(field: collection) {
       fieldValue
