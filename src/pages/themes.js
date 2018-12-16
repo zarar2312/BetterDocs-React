@@ -98,6 +98,21 @@ const Themes = (props) => {
                     <img src={Stars} alt="Featured Theme icon"></img>
                   </div>
                 }
+                <div className={theme.options}>
+                  <div className={theme.optionsWrapper}>
+                    <a 
+                    className={theme.btn}
+                    href={node.frontmatter.thumbnail}
+                    target="blank"
+                    >Full Thumbnail</a>
+                    {node.frontmatter.demo &&
+                    <a 
+                    href={'http://betterdocs.netlify.com/demo/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo}
+                    className={theme.btn}
+                    target="blank">Quick Demo</a>
+                    }
+                  </div>
+                </div>
               </div>
               :
               <div className={theme.imgContainer}
@@ -165,6 +180,8 @@ query allThemesQuery {
           github
           download
           support
+          style
+          demo
           layout
           description
           date
