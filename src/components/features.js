@@ -42,7 +42,7 @@ const Features = () => (
             <div className={style.header}>Why it is Special</div>
             <div className={style.cardsContainer}>
                     <Link className={style.card}
-                    to="/plugins/discordCrypt/">
+                    to="/plugins/discord-crypt/">
                         <div className={style.image}>
                         
                         <svg height="512px" id="Capa_1" style={{"enableBackground":"new 0 0 512.001 512.001"}} width="512px" version="1.1" viewBox="0 0 512.001 512.001" x="0px" y="0px" xmlSpace="preserve">
@@ -86,7 +86,7 @@ const Features = () => (
                         </div>
                     </Link>
                     <Link className={style.card}
-                    to="/plugins/voice_chat_notifications/">
+                    to="/plugins/voice-chat-notifications/">
                         <div className={style.image}>
                         
                         <svg height="512px" id="Layer_1" style={{"enableBackground":"new 0 0 512.001 512.001"}} width="512px" version="1.1" viewBox="0 0 512.001 512.001" x="0px" y="0px" xmlSpace="preserve">
@@ -138,7 +138,7 @@ const Features = () => (
                         </div>
                     </Link>
                     <Link className={style.card}
-                    to="/plugins/DoNotTrack/">
+                    to="/plugins/do-not-track/">
                         <div className={style.image}>
                         
                             <svg height="512px" width="512px" viewBox="0 -46 512 512">
