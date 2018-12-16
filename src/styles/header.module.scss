@@ -15,7 +15,7 @@
         transition: .2s linear background-color, .2s linear box-shadow;
         background-color: #262626;
         height: 68px;
-        box-shadow: 0 0 8px 0 rgba(0,0,0,1);
+        box-shadow: -4px 0px 8px 0px black;
         @media (min-width: 850px)  {
             padding: 0px 0px 0px 15px;
             height: unset;

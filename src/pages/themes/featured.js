@@ -46,9 +46,9 @@ const FeaturedThemes = (props) => {
               { node.frontmatter.thumbnail ?
               <div className={theme.imgContainer}
               >
-                <LazyLoad once="true" height="100%"
+                <LazyLoad once={true} height="100%"
                   placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
-                <img once="true" className={theme.img} alt={`The featured theme "` + node.frontmatter.title + `"`} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <img className={theme.img} alt={`The featured theme "` + node.frontmatter.title + `"`} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
                 </LazyLoad>
                 { node.frontmatter.featured &&
                   <Link 

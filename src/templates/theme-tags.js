@@ -41,9 +41,9 @@ const Tagss = ({ pageContext, data }) => {
               { node.frontmatter.thumbnail ?
               <div className={style.imgContainer}
               >
-                <LazyLoad once="true" height="100%"
+                <LazyLoad once={true} height="100%"
                   placeholder={<img className={style.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
-                <img once="true" className={style.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <img className={style.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
                 </LazyLoad>
                 { node.frontmatter.featured &&
                   <div className={style.icon}>
