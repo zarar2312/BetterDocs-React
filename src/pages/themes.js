@@ -8,6 +8,7 @@ import Missing from "../images/missing_image_2.png"
 import Star from "../images/star.svg"
 import Stars from "../images/stars.svg"
 import kebabCase from "lodash/kebabCase"
+import Image from "react-lazy-image"
 
 const Themes = (props) => {
   const themeList = props.data.allMarkdownRemark;
@@ -59,7 +60,7 @@ const Themes = (props) => {
         key={node.id}
         to={"/themes" + node.fields.slug}>
           <div className={featured.imgWrapper}>
-            <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author}></img>
+            <Image source={node.frontmatter.thumbnail} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author}/>
           </div>
         <div className={featured.title}>{node.frontmatter.title}</div>
         </Link>
@@ -94,7 +95,7 @@ const Themes = (props) => {
               { node.frontmatter.thumbnail ?
               <div className={theme.imgContainer}
               >
-                <img className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <Image className={theme.img} alt={node.frontmatter.title} source={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
                 { node.frontmatter.featured &&
                   <Link 
                   to="/themes/featured/"
