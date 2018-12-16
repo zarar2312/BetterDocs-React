@@ -491,8 +491,29 @@
                     }
                 }
                 .description {
-                    color: rgba(0, 0, 0, 0.4);
+                    color: rgba(0, 0, 0, 0.6);
                     font-size: 0.9em;
+                    margin-bottom: 5px;
+                    p {
+                        margin-bottom: unset;
+                    }
+                }
+                .tagContainer {
+                    margin-bottom: 25px;
+                    .tag {
+                        font-weight: normal;
+                        color: rgba(0, 0, 0, 0.4);
+                        box-shadow: unset;
+                        border: unset;
+                        margin-left: 5px;
+                        font-size: 0.8em;
+                        &:first-child {
+                            margin-left: unset;
+                        }
+                        &:hover {
+                            color: #000;
+                        }
+                    }
                 }
                 .author {
                     color: rgba(0, 0, 0, 0.8);

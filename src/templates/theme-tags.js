@@ -6,10 +6,12 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { graphql, Link } from "gatsby"
 import Missing from "../images/missing_image_2.png"
 import Stars from "../images/stars.svg"
+import kebabCase from "lodash/kebabCase"
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
+  const tags = data.tags;
   const tagHeader = `${totalCount} theme${
     totalCount === 1 ? "" : "s"
   } with the tag "${tag}"`
@@ -89,6 +91,15 @@ const Tagss = ({ pageContext, data }) => {
                 <p className={style.p}
                 >{node.excerpt}</p>
               </div>
+              {node.frontmatter.tags &&
+              <div className={style.tagContainer}>
+                {tags.group.map(tag => (
+                  <Link to={`/themes/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} className={style.tag}>
+                    #{tag.fieldValue}
+                  </Link>
+                ))}
+              </div>
+              }
             </div>
           )
         })}
@@ -155,6 +166,26 @@ export const pageQuery = graphql`
             thumbnail
             featured
             layout
+            tags
+          }
+        }
+      }
+    },
+    tags: allMarkdownRemark( filter: { frontmatter: { tags: { in: [$tag] } } collection: { eq: "themes" } } sort: { fields: [frontmatter___title], order: ASC} ) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
+      totalCount
+      edges {
+        node {
+          excerpt
+          html
+          id
+          fields {
+            slug
+          }
+          frontmatter {
             tags
           }
         }
