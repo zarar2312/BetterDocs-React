@@ -18,6 +18,13 @@
             display: flex;
             flex-direction: row;
             padding: 15px 20px;
+            position: sticky;
+            top: 3.9em;
+            z-index: 1;
+            @media (min-width: 850px) {
+                flex: 3;
+                top: 6.9em;
+            }
             .count {
                 flex: 1;
                 font-weight: bold;
@@ -224,11 +231,12 @@
         display: flex;
         order: 1;
         flex-direction: column; //max-height: 26em;
-        overflow: hidden;
-        overflow-y: auto;
+        overflow-x: hidden;
+        //overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        max-height: calc(100vh - 10.9rem); //28.2em
-        background: rgb(251, 250, 252);
+        //max-height: calc(100vh - 10.9rem); //28.2em
+        max-height: unset;
+        background: #fbfafc;
         @media (min-width: 850px) {
             //max-height: calc(100vh - 10.4em);
             max-height: unset;
