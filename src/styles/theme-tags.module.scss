@@ -322,6 +322,22 @@
                     background-color: rgba(51, 155, 120, 0.3);
                     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.28), 0px 0px 1px 0px #d6d6d6;
                     border: 1px solid transparent;
+                    .imgContainer {
+                        box-shadow: rgba(#339b78, 0.5) 0px 8px 20px;
+                        transform: translateY(-3px);
+                        &::before {
+                            content: "";
+                            pointer-events: all;
+                            opacity: 1;
+                        }
+                        .options {
+                            opacity: 1;
+                            pointer-events: all;
+                        }
+                        .icon {
+                            //opacity: 0;
+                        }
+                    }
                 }
                 &:focus, &:active {
                     outline: unset;
@@ -343,6 +359,22 @@
                         background-color: transparent;
                         box-shadow: unset;
                         border: unset;
+                        .imgContainer {
+                            box-shadow: unset;
+                            transform: unset;
+                            &::before {
+                                content: "";
+                                pointer-events: none;
+                                opacity: 0;
+                            }
+                            .options {
+                                opacity: 0;
+                                pointer-events: none;
+                            }
+                            .icon {
+                                //opacity: 0;
+                            }
+                        }
                     }
                     &:focus, &:active {
                         outline: unset;
