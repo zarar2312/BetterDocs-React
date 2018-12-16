@@ -192,6 +192,7 @@ query allFeaturedThemesQuery {
           sub
           author
           thumbnail
+          demo
           github
           download
           support
