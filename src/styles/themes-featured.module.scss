@@ -134,11 +134,15 @@
                     flex-direction: column;
                     justify-content: center;
                     margin-right: 25px;
+                    height: 15em;
+                    padding-bottom: unset;
                     img {
                         width: 3em;
                         height: 3em;
                         margin: 0 auto;
                         display: block;
+                        position: initial;
+                        
                     }
                     .title {
                         color: #339b78;

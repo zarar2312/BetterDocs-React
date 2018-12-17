@@ -28,6 +28,7 @@ collections:
       - label: "Description"
         name: "description"
         widget: "markdown"
+        default: "A small excerpt."
 
       - label: "Download URL"
         name: "download"
@@ -46,7 +47,7 @@ collections:
       - label: "Demo URL"
         name: "demo"
         widget: "string"
-        default: "https://rawcdn.githack.com/USER/REPO/master/"
+        default: "https://rawcdn.githack.com/{Author}/{Repo}/master/"
 
       - label: "Tags (Seperated by comma ',')" 
         name: "tags"
