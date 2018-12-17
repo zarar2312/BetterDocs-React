@@ -10,6 +10,10 @@
         flex: 3;
         flex-direction: column;
         overflow: hidden;
+        padding-left: unset;
+        @media (min-width: 850px) {
+            padding-left: 22.4rem;
+        }
         .heroPlugins {
             order: 0;
         }
@@ -28,8 +32,8 @@
             -webkit-overflow-scrolling: touch;
             padding-bottom: 3.1rem;
             @media (min-width: 850px) {
-                 max-height: calc(((((100vh - 6.46rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
-                 padding-bottom: unset;
+                //max-height: calc(((((100vh - 6.46rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+                padding-bottom: unset;
              }
             &::-webkit-scrollbar-button { 
                 display: none; 
@@ -152,10 +156,10 @@
 
 [alt="Upload a Plugin"] {
     ~ .content {
-        max-height: calc(((((100vh - 2.8rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
+        //max-height: calc(((((100vh - 2.8rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
         padding-bottom: unset !important;
         @media (min-width: 850px) {
-            max-height: calc(((((100vh - 1.5rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
+            //max-height: calc(((((100vh - 1.5rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
         }
     }
 }

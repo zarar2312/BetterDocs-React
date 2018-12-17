@@ -659,3 +659,6 @@ body::-webkit-scrollbar {
     display: none;
   }
 }
+.mobile-version > footer {
+  display: none;
+}

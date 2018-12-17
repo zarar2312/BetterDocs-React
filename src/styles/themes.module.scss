@@ -386,16 +386,10 @@
                     }
                 }
                 .imgContainer {
-                    height: 11em;
+                    height: unset;
                     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
                     position: relative;
                     box-shadow: rgba(102, 51, 153, 0.2) 0px 4px 10px;
-                    @media (min-width: 450px) {
-                        height: 15em;
-                    }
-                    @media (min-width: 550px) {
-                        height: 18em;
-                    }
                     @media (min-width: 850px) {
                         height: 14em;
                     }

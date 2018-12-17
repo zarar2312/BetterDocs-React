@@ -6,6 +6,8 @@
     display: none;
     @media (min-width: 850px) {
         display: block;
+        position: fixed;
+        width: 22.4rem;
     }
     .searchContainer {
         display: flex;

@@ -4,6 +4,10 @@
     order: 0;
     display: block;
     flex: 1;
+    @media (min-width: 850px) {
+        position: fixed;
+        width: 22.4rem;
+    }
     .searchContainer {
         display: flex;
         flex-direction: column;

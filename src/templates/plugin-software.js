@@ -5,8 +5,7 @@ import Info from '../components/plugin-info'
 import plugin from '../styles/plugin-software.module.scss'
 import hero from '../styles/hero.module.scss'
 import Tags from '../components/pluginTags'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 const Software = ({ pageContext, data }) => {
   const { softwares } = pageContext
@@ -64,14 +63,11 @@ const Software = ({ pageContext, data }) => {
             <div className={plugin.Results}>
             {edges.map(({ node }) => {
           return (
-              <AniLink 
+              <Link 
               className={plugin.resultCard}
               activeClassName={plugin.active}
               to={'plugins' + node.fields.slug}
               key={node.id}
-              cover
-              bg="#262626"
-              duration={0.65}
               >
                 <div className={plugin.header}
                 >
@@ -91,7 +87,7 @@ const Software = ({ pageContext, data }) => {
                     {node.excerpt}
                   </p>
                 </div>
-              </AniLink>
+              </Link>
               )
             })}
             </div>
