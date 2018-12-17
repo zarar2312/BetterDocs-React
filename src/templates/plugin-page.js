@@ -96,10 +96,12 @@ const Plugins = (props) => {
               <div className={hero.statusContainer} alt={node.frontmatter.status}>
                 {node.frontmatter.status ?
                   <div className={hero.status}>
-                    <span>Status:</span> <div className={node.frontmatter.status}>{node.frontmatter.status}</div>
+                    <div className={node.frontmatter.status}>{node.frontmatter.status}</div>
                   </div>
                 :
-                  null
+                <div className={hero.status}>
+                  <div className={hero.unknown}>Unknown</div>
+                </div>
                 }
               </div>
             }

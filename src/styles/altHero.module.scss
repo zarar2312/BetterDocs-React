@@ -263,9 +263,9 @@
         }
         .statusContainer {
             margin-top: 14px;
-            display: none;
+            //display: none;
             &[alt="Outdated"] {
-                display: none;
+                display: initial;
             }
             &[alt="Undefined"] {
                 display: none;
@@ -279,38 +279,30 @@
             .status {
                 color: #4e4e4e;
                 display: -webkit-box;
-                div[class="Updated"] {
-                    background: #00804b;
-                    margin-left: 5px;
-                    border-radius: 2px;
+                div {
+                    background: #fff;
+                    //margin-left: 5px;
+                    border-radius: 25px;
                     color: #fff;
                     padding: 5px 10px;
                     position: relative;
                     top: 0px;
-                    font-size: 0.8em;
+                    font-size: 0.7em;
                     display: -webkit-inline-box;
+                    font-weight: bold;
+                    border: 1.5px solid;
+                }
+                div[class="Updated"] {
+                    border-color: #00804b;
+                    color: #00804b;
                 }
                 div[class="Outdated"] {
-                    background: #a70a0a;
-                    margin-left: 5px;
-                    border-radius: 2px;
-                    color: #fff;
-                    padding: 5px 10px;
-                    position: relative;
-                    top: 0px;
-                    font-size: 0.8em;
-                    display: -webkit-inline-box;
+                    border-color: #a70a0a;
+                    color: #a70a0a;
                 }
                 .unknown {
-                    background: #005180;
-                    margin-left: 5px;
-                    border-radius: 2px;
-                    color: #fff;
-                    padding: 5px 10px;
-                    position: relative;
-                    top: 0px;
-                    font-size: 0.8em;
-                    display: -webkit-inline-box;
+                    border-color: #005180;
+                    color: #005180;
                 }
             }
         }
