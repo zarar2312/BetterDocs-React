@@ -82,6 +82,11 @@ const Themes = (props) => {
                 </svg>
               </a>
               }
+              {node.frontmatter.discord_server &&
+              <div className={hero.discordContainer} >
+                <a href={node.frontmatter.discord_server} target="blank">Discord</a>
+              </div>
+              }
               {node.frontmatter.tags &&
               <div className={hero.tagContainer}>
               {themeList.group.map(tag => (
@@ -236,6 +241,7 @@ export const themesQuery = graphql`
             thumbnail
             auto
             tags
+            discord_server
             demo
             style
             status

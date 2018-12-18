@@ -5,7 +5,8 @@ description:
   lets leave '#earth and go to '#space 
 download: https://github.com/gco360/space-theme
 github: https://github.com/gco360/
-support: https://discord.gg/6fXRKyx
+support: https://github.com/gco360/space-theme/issues/
+discord_server: https://discord.gg/6fXRKyx
 demo: https://cdn.jsdelivr.net/gh/gco360/space-theme@master/space.theme.css
 thumbnail: https://i.imgur.com/pL9hw0S.jpg
 images:

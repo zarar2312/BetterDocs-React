@@ -67,6 +67,7 @@ return graphql(`{
               github
               status
               download
+              discord_server
               support
               layout
               ghcommentid
