@@ -3,12 +3,12 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 20px 35px;
-    width: calc(100% - 9em);
     margin: 0 auto;
     flex-wrap: wrap;
     @media (min-width: 850px) {
         display: flex;
         padding: 20px 0px;
+        width: calc(100% - 9em);
     }
     .card {
         flex-basis: 17%;
