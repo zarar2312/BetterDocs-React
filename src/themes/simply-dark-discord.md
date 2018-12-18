@@ -1,5 +1,5 @@
 ---
-title: Simply Dark Discord
+title: Simply Dark Discord - Dark
 author: Gibbu
 description: Makes Discord sharp and simple. A very dark theme.
 download: >-
