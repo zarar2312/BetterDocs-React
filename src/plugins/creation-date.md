@@ -4,7 +4,8 @@ description: Displays the Creation Date of an Account in the UserPopout and User
 author: mwittrien
 download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/CreationDate
 github: 'https://github.com/mwittrien/'
-support: 'https://discord.gg/Z7PBux5'
+support: https://github.com/mwittrien/BetterDiscordAddons/issues/
+discord_server: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
 auto: true
 ghcommentid: 122

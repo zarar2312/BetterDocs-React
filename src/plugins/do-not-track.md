@@ -4,7 +4,8 @@ description: Stops Discord from tracking everything you do like Sentry and Analy
 author: rauenzi
 download: 'https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/DoNotTrack'
 github: 'https://github.com/rauenzi'
-support: 'https://discordapp.com/invite/cdzD9wF'
+support: https://github.com/rauenzi/BetterDiscordAddons/issues/
+discord_server: 'https://discordapp.com/invite/cdzD9wF'
 software: [BandagedBD, BetterDiscord]
 auto: true
 ghcommentid: 42

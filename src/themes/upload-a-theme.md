@@ -22,7 +22,7 @@ I promise it doesn't take long :)
   download: https://github.com/
   github: https://github.com/{Author Name}/
   support:
-  discord_server: https://discord.gg/INVITE
+  discord_server:
   demo: https://raw.githack.com
   thumbnail:
   images:

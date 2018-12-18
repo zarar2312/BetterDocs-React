@@ -4,7 +4,8 @@ description: Allows you to switch channels using mouse 4 & 5 or the added GUI bu
 author: Inve1951
 download: https://github.com/Inve1951/BetterDiscordStuff/blob/master/plugins/channelHistory.plugin.js
 github: 'https://github.com/Inve1951/'
-support: 'https://discordapp.com/invite/Z7PBux5'
+support: https://github.com/Inve1951/BetterDiscordStuff/issues/
+discord_server: 'https://discordapp.com/invite/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 132
 layout: product

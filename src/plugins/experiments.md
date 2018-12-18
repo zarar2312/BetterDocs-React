@@ -6,7 +6,8 @@ description:
   features before they're released on Discord Canary.
 download: 'https://github.com/joe27g/EnhancedDiscord/blob/master/plugins/experiments.js'
 github: 'https://github.com/joe27g/'
-support: 'https://discord.gg/XAvh9tq'
+support: https://github.com/joe27g/EnhancedDiscord/issues/
+discord_server: 'https://discord.gg/XAvh9tq'
 software: [EnhancedDiscord]
 auto: true
 ghcommentid: 163

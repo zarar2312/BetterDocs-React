@@ -7,6 +7,7 @@ description:
 download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/NotificationSounds
 github: 'https://github.com/mwittrien/'
 support: 'https://discord.gg/Z7PBux5'
+discord_server: https://github.com/mwittrien/BetterDiscordAddons/issues/
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 49
 layout: product

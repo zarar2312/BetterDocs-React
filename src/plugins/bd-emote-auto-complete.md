@@ -4,7 +4,8 @@ author: Metalloriff
 description: Adds an auto-complete menu for BetterDiscord emotes.
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/BDEmoteAutocomplete.plugin.js
 github: 'https://github.com/Metalloriff/'
-support: 'https://discord.gg/yNqzuJa'
+support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+discord_server: https://discord.gg/yNqzuJa
 auto: true
 images:
   - image: 'https://i.imgur.com/zzZAd5s.png'

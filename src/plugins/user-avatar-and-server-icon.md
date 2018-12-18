@@ -1,11 +1,11 @@
 ---
 title: User Avatar And Server Icon Viewer
 author: Metalloriff
-description:
-  Allows you to view server icons, user avatars, and emotes in fullscreen via the context menu. You may also directly copy the image URL or open the URL externally.
+description: Allows you to view server icons, user avatars, and emotes in fullscreen via the context menu. You may also directly copy the image URL or open the URL externally.
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AvatarIconViewer.plugin.js
 github: https://github.com/Metalloriff/
-support: https://discord.gg/yNqzuJa
+support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+discord_server: https://discord.gg/yNqzuJa
 software: [BandagedBD, BetterDiscord]
 images:
   - name: User Avatar And Server Icon Viewer Preview

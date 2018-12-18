@@ -1,13 +1,7 @@
 ---
 title: Zalgo
 author: planetarian
-description:
-  Lets you apply a sort of visual 'corruption' to your text, like a messy
-  strikethrough.
-
-
-  Also great for depicting loss of sanity or giving a 'horror' flair to your
-  text.
+description: Lets you apply a sort of visual 'corruption' to your text, like a messy strikethrough.
 download: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Zalgo.plugin.js
 github: 'https://github.com/planetarian/'
 support: 'https://github.com/planetarian/BetterDiscordPlugins/issues'

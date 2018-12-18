@@ -5,7 +5,8 @@ description:
   Allows you to auto start Rich Presence when you start Discord, with configurable text and images.
 download: https://github.com/Mega-Mewthree/BetterDiscordPlugins/blob/master/Plugins/AutoStartRichPresence/AutoStartRichPresence.plugin.js
 github: https://github.com/Mega-Mewthree
-support: https://discordapp.com/invite/ZYND2Xd
+support: https://github.com/Mega-Mewthree/BetterDiscordPlugins/issues/
+discord_server: https://discordapp.com/invite/ZYND2Xd
 software: [BandagedBD, BetterDiscord]
 auto: true
 images:

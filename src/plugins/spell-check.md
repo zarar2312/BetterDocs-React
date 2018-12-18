@@ -6,7 +6,8 @@ description:
   rightclick it to add it to your dictionary.
 download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/SpellCheck
 github: 'https://github.com/mwittrien/'
-support: 'https://discordapp.com/invite/Z7PBux5'
+support: https://github.com/mwittrien/BetterDiscordAddons/issues/
+discord_server: 'https://discordapp.com/invite/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 130
 layout: product

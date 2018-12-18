@@ -5,7 +5,8 @@ description:
   Allows you to pin plugins and themes via the context menu.
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/PinPluginsAndThemes.plugin.js
 github: https://github.com/Metalloriff
-support: https://discordapp.com/invite/yNqzuJa
+support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+discord_server: https://discordapp.com/invite/yNqzuJa
 software: [BandagedBD, BetterDiscord]
 images:
   - name: Pin Plugins And Themes Preview

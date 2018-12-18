@@ -5,6 +5,8 @@ description:
   Displays notifications when users connect to/disconnect from, mute/unmute themselves, and deafen/undeafen themselves in the voice channel you're in.
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/VoiceChatNotifications.plugin.js
 github: https://github.com/Metalloriff
+support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+discord_server: https://discord.gg/yNqzuJa
 software: [BandagedBD, BetterDiscord]
 tags: [voice]
 images:

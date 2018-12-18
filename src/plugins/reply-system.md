@@ -7,7 +7,8 @@ description:
   features to be added)
 download: 'https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/ReplySystem'
 github: 'https://github.com/rauenzi'
-support: 'https://discordapp.com/invite/cdzD9wF'
+support: https://github.com/rauenzi/BetterDiscordAddons/issues/
+discord_server: 'https://discordapp.com/invite/cdzD9wF'
 software: [BandagedBD, BetterDiscord]
 images:
   - image: 'https://i.imgur.com/UhURhqK.gif'

@@ -4,7 +4,8 @@ author: mwittrien
 description: Adds two options on your channel context menu.
 download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/EditChannels
 github: https://github.com/mwittrien/
-support: https://discordapp.com/invite/Z7PBux5
+support: https://github.com/mwittrien/BetterDiscordAddons/issues/
+discord_server: https://discordapp.com/invite/Z7PBux5
 software: [BandagedBD,BetterDiscord]
 status: Updated
 auto: true

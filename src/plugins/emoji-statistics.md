@@ -8,7 +8,8 @@ description:
 author: mwittrien
 download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/EmojiStatistics
 github: 'https://github.com/mwittrien/'
-support: 'https://discord.gg/Z7PBux5'
+support: https://github.com/mwittrien/BetterDiscordAddons/issues/
+discord_server: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 45
 layout: product

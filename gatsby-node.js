@@ -35,6 +35,7 @@ return graphql(`{
               download
               status
               support
+              discord_server
               layout
               ghcommentid
               date

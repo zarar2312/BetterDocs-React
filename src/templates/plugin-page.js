@@ -82,6 +82,11 @@ const Plugins = (props) => {
                 </svg>
               </a>
               }
+              {node.frontmatter.discord_server &&
+              <div className={hero.discordContainer} >
+                <a href={node.frontmatter.discord_server} target="blank">Discord</a>
+              </div>
+              }
               {node.frontmatter.tags &&
               <div className={hero.tagContainer}>
               {pluginList.group.map(tag => (
@@ -226,6 +231,7 @@ export const pluginsQuery = graphql`
                 github
                 download
                 thumbnail
+                discord_server
                 support
                 status
                 auto

@@ -5,7 +5,8 @@ description:
   Allows you to set reaction image folders and send reaction images with 'Folder Name/reaction image name'.
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/ReactionImages.plugin.js
 github: https://github.com/Metalloriff
-support: https://discordapp.com/invite/yNqzuJa
+support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+discord_server: https://discordapp.com/invite/yNqzuJa 
 software: [BandagedBD, BetterDiscord]
 images:
   - name: Reaction Images Preview

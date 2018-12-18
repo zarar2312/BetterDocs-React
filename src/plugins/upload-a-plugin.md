@@ -23,6 +23,7 @@ I promise it doesn't take long :)
   download: https://github.com/
   github: https://github.com/{Author Name}/
   support:
+  discord_server: https://discord.gg/INVITE
   tags: []
   software: [BandagedBD,EnhancedDiscord,DiscordInjections,BetterDiscord]
   images:
@@ -46,7 +47,8 @@ Here's is some helpful information to inform you what each field does.
   - **description** - Short paragraph describing the content and/or purpose of the plugin that will appear in the permalink of your page and other places on the site. `[REQUIRED]`
   - **download** - The direct link to the file to be downloaded. `[REQUIRED]`
   - **github** - The link to your [Github](https://github.com/) profile. This will link your name right under the title of your plugin. `[OPTIONAL]`
-  - **support** - A link to allow people to get support or give feedback for the Plugin. `[OPTIONAL]`
+  - **support** - A link to allow people to get support. (In most cases it should be the [Github issue](https://guides.github.com/features/issues/) url) `[OPTIONAL]`
+  - **discord_server** - A Discord server invite to allow people to get support or give feedback for the theme. `[OPTIONAL]`
   - **tags** - Tags are in an array and can be seperated with commas "," like so `[tag1,tag2]`. `[OPTIONAL]`
   - **software** - The list of softwares your plugin supports. They are sorted in an array and seperated by commas "," like so `[BandagedBD,BeautifulDiscord,DiscordInjections,EnhancedDiscord,BetterDiscord]`. `[REQUIRED]`
   - **images** - A list of images that show a preview of your plugin. [Imgur](https://imgur.com) is highly recommended for compressed images and reliability. `[OPTIONAL]`

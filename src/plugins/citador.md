@@ -4,7 +4,8 @@ description: "# Citador\n\nA plugin to facilitate quoting for a better conversat
 author: nirewen
 download: 'https://github.com/nirewen/Citador'
 github: 'https://github.com/nirewen/'
-support: 'https://discord.gg/tQrdqKG'
+support: https://github.com/nirewen/Citador/issues/
+discord_server: 'https://discord.gg/tQrdqKG'
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 86
 layout: product
