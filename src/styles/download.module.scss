@@ -3,6 +3,9 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 20px 35px;
+    width: calc(100% - 9em);
+    margin: 0 auto;
+    flex-wrap: wrap;
     @media (min-width: 850px) {
         display: flex;
         padding: 20px 0px;
@@ -14,6 +17,7 @@
         margin-top: 15px;
         display: block;
         transition-duration: 800ms;
+        margin-bottom: 15px;
         @media (min-width: 850px) {
             margin-top: unset;
             display: unset;
@@ -60,6 +64,11 @@
     [alt="DiscordInjections"] {
         .header {
             background: #339b78;
+        }
+    }
+    [alt="PowerCord"] {
+        .header {
+            background: #d18118;
         }
     }
     [alt="BetterDiscord"] {

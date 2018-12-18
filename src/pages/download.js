@@ -47,6 +47,16 @@ const DownloadPage = () => (
     
     </div>
     </a>
+    <a className={style.card} target="blank" alt="PowerCord" href="https://github.com/aetheryx/powercord"
+    >
+    <div className={style.header}
+    >
+    PowerCord
+    </div>
+    <div className={style.body}>
+    
+    </div>
+    </a>
     <a className={style.card} target="blank" alt="BetterDiscord" href="https://github.com/Jiiks/BetterDiscordApp/releases"
     >
     <div className={style.header}
