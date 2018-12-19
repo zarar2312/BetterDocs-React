@@ -10,6 +10,7 @@ const pluginTagTemplate = path.resolve("src/templates/plugin-tags.js");
 const pluginsSoftwareTemplate = path.resolve("src/templates/plugin-software.js");
 const themeTagTemplate = path.resolve("src/templates/theme-tags.js");
 const themeTemplate = path.resolve('src/templates/theme-page.js');
+const authorTemplate = path.resolve('src/templates/author-page.js');
 
 return graphql(`{
     plugins:allMarkdownRemark(filter: { collection: { eq: "plugins" } }) {
@@ -115,6 +116,7 @@ return graphql(`{
 
     const themes = res.data.themes.edges
     const plugins = res.data.plugins.edges
+    const all = res.data.allMarkdownRemark.edges
 
     // plugins/tags/software pages:
     let software = []
@@ -184,6 +186,29 @@ return graphql(`{
       })
     })
 
+    //Next set
+    // Author pages:
+    let authors = []
+    // Iterate through each post, putting all found tags into `tags`
+    _.each(all, edge => {
+      if (_.get(edge, "node.frontmatter.author")) {
+        authors = authors.concat(edge.node.frontmatter.author)
+      }
+    })
+    // Eliminate duplicate tags
+    authors = _.uniq(authors)
+
+    // Make tag pages
+    authors.forEach(authors => {
+      createPage({
+        path: `/author/${authors}/`,
+        component: authorTemplate,
+        context: {
+          authors,
+        },
+      })
+    })
+
     res.data.plugins.edges.forEach(({ node }) => {
             createPage({
             path: '/plugins' + node.fields.slug,
@@ -215,11 +240,9 @@ exports.onCreateNode =({ node, getNode, actions }) => {
     if (node.internal.type === `MarkdownRemark`) {
         node.collection = getNode(node.parent).sourceInstanceName;
 
-        const relativeFilePath = createFilePath({
-          node,
-          getNode,
-          basePath: "pages",
+        const relativeFilePath = createFilePath({ node, getNode, basePath: "pages",
         })
+
         const slug = createFilePath({ node, getNode, basePath: `pages` })
         // Creates new query'able field with name of 'slug'
         createNodeField({

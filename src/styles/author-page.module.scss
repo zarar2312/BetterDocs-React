@@ -1,0 +1,126 @@
+.wrapper {
+    display: block;
+    height: 100%;
+    background-color: #f4f4f4;
+    @media (min-width: 850px) {
+        display: flex;
+    }
+    .profile {
+        display: flex;
+        //background-color: #fff;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        .profileColumn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .profileRow {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0px;
+                .profileSection {
+                    border-bottom: 1px solid #eee;
+                    background: #fff;
+                    padding: 20px 30px;
+                    .details {
+                        display: flex;
+                        flex-direction: column;
+                        .name {
+                            margin: unset;
+                            font-size: 20px;
+                            font-weight: bold;
+                            letter-spacing: -.01em;
+                            color: #444;
+                            text-align: center;
+                        }
+                        .follow {
+                            display: -webkit-inline-box;
+                            .btn {
+                                color: #fff;
+                                background-color: #1abb35;
+                                padding: 6px 15px;
+                                font-size: 0.8em;
+                                text-align: center;
+                                margin: 0 auto;
+                                display: block;
+                                margin-top: 10px;
+                                border-radius: 2px;
+                            }
+                        }
+                        .tagsWrapper {
+                            display: flex;
+                            .themeDeveloper {
+                                background-color: #08aa81;
+                                padding: 5px 10px;
+                                color: #fff;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                    .linksWrapper {
+                        display: flex;
+                        flex-direction: column;
+                        .header {
+                            color: #747474;
+                            font-weight: bold;
+                        }
+                        .links {
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 10px;
+                            .link {
+                                display: -webkit-box;
+                                margin: 5px 0;
+                                font-size: 14px;
+                                svg {
+                                    height: 1.4em;
+                                    width: 1.4em;
+                                    fill: #747474;
+                                    margin-right: 5px;
+                                }
+                                p {
+                                    color: #747474;
+                                    margin: unset;
+                                    line-height: 1.5rem;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mainContainer {
+        display: flex;
+        flex: 2;
+        flex-direction: column;
+        padding: 20px 40px 0px 0px;
+        .titleBar {
+            background-color: #fff;
+            display: block;
+            padding: 10px 15px;
+            p {
+                margin: unset;
+            }
+        }
+        .showcaseContainer {
+            padding: 20px 0px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .cardContainer {
+                flex-basis: 31%;
+                margin-bottom: 20px;
+                .card {
+                    background-color: #fff;
+                    text-align: center;
+                    padding: 10px;
+                    border-radius: 2px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
