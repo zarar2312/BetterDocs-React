@@ -8,7 +8,7 @@ support: 'https://github.com/megamit/repository/issues'
 software:
   - BetterDiscord
 images: []
-status: Updated
+status: Outdated
 auto: true
 layout: product
 date: 2018-12-20T21:12:19.259Z
