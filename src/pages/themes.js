@@ -132,11 +132,10 @@ const Themes = (props) => {
               </div>
               }
                 <div>
-                  <a 
+                  <Link 
                   className={theme.author}
-                  href={node.frontmatter.github}
-                  target="blank"
-                  >{node.frontmatter.author} /</a>
+                  to={"/profile/" + node.frontmatter.author}
+                  >{node.frontmatter.author} /</Link>
                 </div>
                 <div className={theme.title}
                 >

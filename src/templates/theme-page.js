@@ -64,14 +64,10 @@ const Themes = (props) => {
             {node.frontmatter.author &&
               <div className={hero.paragraph}
               >
-                {node.frontmatter.github ? 
                 <p className={hero.p}>
-                made by <a href={node.frontmatter.github} target="blank">
-                {node.frontmatter.author}</a>
-                </p> :
-                <p className={hero.p}>
-                made by <b>{node.frontmatter.author}</b>
-                </p>}
+                made by <Link to={"/profile/" + node.frontmatter.author} target="blank">
+                {node.frontmatter.author}</Link>
+                </p>
               </div>
             }
             <div className={hero.detailsContainer}>

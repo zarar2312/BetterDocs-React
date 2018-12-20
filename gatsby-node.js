@@ -201,7 +201,7 @@ return graphql(`{
     // Make tag pages
     authors.forEach(authors => {
       createPage({
-        path: `/author/${authors}/`,
+        path: `/profile/${authors}/`,
         component: authorTemplate,
         context: {
           authors,

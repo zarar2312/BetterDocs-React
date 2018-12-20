@@ -298,6 +298,56 @@
                 }
             }
         }
+        .softwareContainer {
+            margin-top: 10px;
+            display: flex;
+            .software {
+                color: #000;
+                margin-left: 5px;
+                background-color: #fbfafc;
+                border: 1px solid #dddddd;
+                border-radius: 25px;
+                padding: 0.4rem 0.6rem;
+                font-size: 0.7rem;
+                transition: 250ms linear;
+                position: relative;
+                &:hover {
+                    background-color: #dddddd;
+                    border-bottom-left-radius: 0px;
+                    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+                &:active, &:focus {
+                    background-color: rgba(#339b78, 0.1);
+                    box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px, rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
+                    border-bottom-left-radius: 0px;
+                    color: #339b78;
+                    outline: unset;
+                    border-color: transparent;
+                }
+                &:first-child {
+                    margin-left: unset;
+                }
+                &::after {
+                    content: "Supported";
+                    display: block;
+                    background-color: #262626;
+                    color: #fff;
+                    position: absolute;
+                    top: -28px;
+                    margin: 0 auto;
+                    padding: 3px 8px;
+                    border-radius: 2px;
+                    text-align: center;
+                    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4) !important;
+                    transition: .2s linear all;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+        }
         .statusContainer {
             margin-top: 14px;
             //display: none;

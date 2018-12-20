@@ -64,14 +64,10 @@ const Plugins = (props) => {
             {node.frontmatter.author &&
               <div className={hero.paragraph}
               >
-                {node.frontmatter.github ? 
                 <p className={hero.p}>
-                made by <a href={node.frontmatter.github} target="blank">
-                {node.frontmatter.author}</a>
-                </p> :
-                <p className={hero.p}>
-                made by <b>{node.frontmatter.author}</b>
-                </p>}
+                made by <Link to={"/profile/" + node.frontmatter.author} target="blank">
+                {node.frontmatter.author}</Link>
+                </p>
               </div>
             }
             <div className={hero.detailsContainer}>
@@ -96,6 +92,13 @@ const Plugins = (props) => {
               ))}
               </div>
               }
+            </div>
+            <div className={hero.softwareContainer}>
+              {props.data.softwareList.group.map(software => (
+                <Link to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`} key={software.fieldValue} className={hero.software}>
+                  {software.fieldValue}
+                </Link>
+              ))}
             </div>
             {node.frontmatter.author &&
               <div className={hero.statusContainer} alt={node.frontmatter.status}>
@@ -235,6 +238,7 @@ export const pluginsQuery = graphql`
                 support
                 status
                 auto
+                software
                 tags
                 ghcommentid
                 date(formatString: "DD/MM/YYYY")
@@ -243,6 +247,33 @@ export const pluginsQuery = graphql`
                 slug
               }
             }
+        }
+    },
+    softwareList:allMarkdownRemark(
+      filter: {
+        collection: { 
+          eq: "plugins" 
+        }
+        fields: {
+          slug: {
+            eq: $slug
+          }
+        }
+      }) {
+      group(field: frontmatter___software) {
+        fieldValue
+        totalCount
+      }
+      totalCount
+      edges {
+        node {
+            excerpt
+            html
+            id
+            frontmatter {
+              software
+            }
+          }
         }
     }
   }
