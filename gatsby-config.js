@@ -90,13 +90,13 @@ module.exports = {
         path: `${__dirname}/src/plugins/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `profiles`,
-        path: `${__dirname}/src/profiles/`,
-      },
-    },
+    //{
+    //  resolve: `gatsby-source-filesystem`,
+    //  options: {
+    //    name: `profiles`,
+    //    path: `${__dirname}/src/profiles/`,
+    //  },
+    //},
     {
       resolve: `gatsby-transformer-remark`,
       options: {
