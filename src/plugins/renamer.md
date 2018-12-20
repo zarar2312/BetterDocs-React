@@ -5,12 +5,11 @@ description: Give anyone a nickname that only you can see simply by right clicki
 download: 'https://github.com/megamit/repository/tree/gh-pages/renamer'
 github: 'https://github.com/megamit/'
 support: 'https://github.com/megamit/repository/issues'
-software:
-  - BetterDiscord
+software: [BetterDiscord]
 images: []
 status: Outdated
 auto: true
 layout: product
 date: 2018-12-20T21:12:19.259Z
 ---
-
+Give anyone a nickname that only you can see simply by right clicking on them.
