@@ -42,7 +42,12 @@ collections:
       - label: "Support URL"
         name: "support"
         widget: "string"
-        default: "https://discord.gg/invite"
+
+      - label: "Discord Server Invite URL"
+        name: "discord_server"
+        widget: "string"
+        default: "https://discordapp.com/invite/CODE"
+        required: false
 
       - label: "Demo URL"
         name: "demo"
@@ -135,7 +140,12 @@ collections:
       - label: "Support URL"
         name: "support"
         widget: "string"
-        default: "https://discord.gg/invite"
+
+      - label: "Discord Server Invite URL"
+        name: "discord_server"
+        widget: "string"
+        default: "https://discordapp.com/invite/CODE"
+        required: false
 
       - label: "Tags (Seperated by comma ',')" 
         name: "tags"
