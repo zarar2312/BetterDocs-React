@@ -6,7 +6,7 @@ download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/Acc
 github: https://github.com/rauenzi/
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: 'https://discordapp.com/invite/cdzD9wF'
-thumbnail: https://i.imgur.com/xZskhi4.gif
+thumbnail:
 tags:
 software: [BandagedBD,BetterDiscord]
 status: Updated
@@ -14,4 +14,23 @@ auto: true
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---
-Lets you view popout, nickname and more from your account panel at the bottom.
+Lets you view popout, nickname and more from your account panel at the bottom. For support and update announcements you can visit [Zere's server](https://bit.ly/ZeresServer).
+
+## Demo
+
+![Demo](https://i.zackrauen.com/0LeMdr.gif)
+
+## Instructions
+
+ - Left click avatar or username for popout
+ - Right click avatar or username for status picker
+ - Hover to change from nickname to username
+ 
+## Settings
+
+ - Enable/Disable popout for avatar/username
+ - Enable/Disable status picker on right click
+ - Swap between displaying nickname or username
+ - Enable/Disable swapping username and nickname on hover
+
+
