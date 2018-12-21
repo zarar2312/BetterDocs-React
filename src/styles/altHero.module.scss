@@ -194,25 +194,44 @@
         }
         .detailsContainer {
             display: flex;
-            .linkContainer {
+            .gitContainer {
                 margin-top: 13px;
                 margin-right: 10px;
+                line-height: 1.8em;
                 &:hover {
                     svg {
-                        opacity: 1;
+                        fill: #262626;
                     }
                 }
                 svg {
-                    height: 1.5em;
-                    width: 1.5em;
-                    opacity: 0.6;
+                    height: 1.2em;
+                    width: 1.2em;
+                    opacity: 1;
                     transition: 800ms ease-in-out;
+                    position: relative;
+                    left: -4.5px;
+                    top: 3.5px;
+                    fill: #fff;
+                }
+                a {
+                    background-color: #262626;
+                    color: #fff;
+                    font-size: 0.9em;
+                    padding: 3px 9px;
+                    border-radius: 2px;
+                    border: 1px solid #262626;
+                    transition: all 300ms linear;
+                    &:hover {
+                        color: #262626;
+                        background-color: #fff;
+                        border: 1px solid #262626;
+                    }
                 }
                 &::after {
                     content: "|";
                     color: #d2d2d2;
                     position: relative;
-                    top: -5px;
+                    top: 0px;
                     left: 5px;
                 }
             }
@@ -222,14 +241,18 @@
                 line-height: 1.8em;
                 &:hover {
                     svg {
-                        opacity: 1;
+                        fill: #7289DA;
                     }
                 }
                 svg {
-                    height: 1.5em;
-                    width: 1.5em;
-                    opacity: 0.6;
+                    height: 1.3em;
+                    width: 1.3em;
+                    opacity: 1;
                     transition: 800ms ease-in-out;
+                    position: relative;
+                    left: -4px;
+                    top: 5px;
+                    fill: #fff;
                 }
                 a {
                     background-color: #7289DA;
