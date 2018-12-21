@@ -23,7 +23,7 @@ Adds the ability to do some basic sorting of your servers.
 ### Sort Button
 Sorter adds a button with context menu to quickly sort the servers.
 
-![Sorter Demo](http://discord.zackrauen.com/ServerSorter/menu.png)
+![Sorter Demo](https://i.imgur.com/zVUWQEK.png)
 
 ### Sorting
 

@@ -30,27 +30,27 @@ You can also optionally have your account status at the bottom match your role i
 
 Colors the typing notification to match the user's role in that server.
 
-![Typing](http://discord.zackrauen.com/BetterRoleColors/typing.png)
+![Typing](https://i.imgur.com/qdCex0u.png)
 
 ### Colored Voice
 
 Colors the names in voice chat to match their roles.
 
-![Voice](http://discord.zackrauen.com/BetterRoleColors/voice.png)
+![Voice](https://i.imgur.com/QpVN8K1.png)
 
 ### Colored Popouts & Modals
 
 Colors the username/nickname and discriminator of the user in the popouts and modals. (This can be customized in settings.)
 
-![Popouts](http://discord.zackrauen.com/BetterRoleColors/popout.png)
+![Popouts](https://i.imgur.com/ivEBNkp.png)
 
-![Modals](http://discord.zackrauen.com/BetterRoleColors/modal.png)
+![Modals](https://i.imgur.com/IoDTzAu.png)
 
 ### Colored Audit Log
 
 Changes the colors of all users in the audit log to show with their role color. Allows at a quick glance to see if a specific group has been doing a lot.
 
-![Audit](http://discord.zackrauen.com/BetterRoleColors/auditlog.png)
+![Audit](https://i.imgur.com/dMdQc14.png)
 
 ## Plugin Settings
 
@@ -58,22 +58,22 @@ Changes the colors of all users in the audit log to show with their role color. 
 
 Ability to turn on/off individual modules of the plugin.
 
-![Module Options](http://discord.zackrauen.com/BetterRoleColors/module_settings.png)
+![Module Options](https://i.imgur.com/h67TKFD.png)
 
 ### Popout Options
 
 Able to change which portions get colored.
 
-![Popout Options](http://discord.zackrauen.com/BetterRoleColors/popout_settings.png)
+![Popout Options](https://i.imgur.com/b0eRP78.png)
 
 ### Modal Options
 
 Able to change which portions of the modal gets colored.
 
-![Modal Options](http://discord.zackrauen.com/BetterRoleColors/modal_settings.png)
+![Modal Options](https://i.imgur.com/v50Lnn1.png)
 
 ### Audit Log Options
 
 Able to change which portions of the modal gets colored.
 
-![Audit Log Options](http://discord.zackrauen.com/BetterRoleColors/auditlog_settings.png)
+![Audit Log Options](https://i.imgur.com/aafYa8m.png)
