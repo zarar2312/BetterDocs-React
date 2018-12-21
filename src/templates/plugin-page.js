@@ -239,7 +239,6 @@ export const pluginsQuery = graphql`
             frontmatter {
                 title
                 description
-                sub
                 author
                 github
                 download

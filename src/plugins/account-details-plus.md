@@ -7,7 +7,7 @@ github: https://github.com/rauenzi/
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: 'https://discordapp.com/invite/cdzD9wF'
 thumbnail: https://i.imgur.com/xZskhi4.gif
-tags: []
+tags:
 software: [BandagedBD,BetterDiscord]
 status: Updated
 auto: true
