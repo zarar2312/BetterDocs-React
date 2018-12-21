@@ -356,60 +356,14 @@
                         }
                     }
                 }
-                @media (min-width: 850px) {
-                    padding: unset;
-                    margin-bottom: unset;
-                    border-radius: unset;
-                    background-color: unset;
-                    box-shadow: unset;
-                    border: unset;
-                    &:hover, &:focus, &:active {
-                        background-color: transparent;
-                        box-shadow: unset;
-                        border: unset;
-                        .imgContainer {
-                            box-shadow: unset;
-                            transform: unset;
-                            &::before {
-                                content: "";
-                                pointer-events: none;
-                                opacity: 0;
-                            }
-                            .options {
-                                opacity: 0;
-                                pointer-events: none;
-                            }
-                            .icon {
-                                //opacity: 0;
-                            }
-                        }
-                    }
-                    &:focus, &:active {
-                        outline: unset;
-                        border: unset;
-                    }
-                }
                 .imgContainer {
-                    //height: 11em;
+                    height: unset;
                     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
                     position: relative;
                     box-shadow: rgba(102, 51, 153, 0.2) 0px 4px 10px;
                     padding-bottom: 56.25%;
-                    &:hover {
-                        box-shadow: rgba(#339b78, 0.5) 0px 8px 20px;
-                        transform: translateY(-3px);
-                        &::before {
-                            content: "";
-                            pointer-events: all;
-                            opacity: 1;
-                        }
-                        .options {
-                            opacity: 1;
-                            pointer-events: all;
-                        }
-                        .icon {
-                            //opacity: 0;
-                        }
+                    @media (min-width: 850px) {
+                        //height: 14em;
                     }
                     &::before {
                         content: "";
@@ -581,6 +535,37 @@
                         color: #339b78;
                         font-weight: bold;
                         background-color: transparent;
+                    }
+                }
+                @media (min-width: 850px) {
+                    padding: unset;
+                    margin-bottom: unset;
+                    border-radius: unset;
+                    background-color: unset;
+                    box-shadow: unset;
+                    border: unset;
+                    &:hover, &:focus, &:active {
+                        background-color: transparent;
+                        box-shadow: unset;
+                        border: unset;
+                        .imgContainer {
+                            &::before {
+                                content: "";
+                                pointer-events: all;
+                                opacity: 1;
+                            }
+                            .options {
+                                opacity: 1;
+                                pointer-events: all;
+                            }
+                            .icon {
+                                //opacity: 0;
+                            }
+                        }
+                    }
+                    &:focus, &:active {
+                        outline: unset;
+                        border: unset;
                     }
                 }
             }
