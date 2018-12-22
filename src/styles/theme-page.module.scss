@@ -201,8 +201,17 @@
     color: #fff;
     background-color: #262626;
     width: 100%;
-    padding: 24px 60px;
+    padding: 1rem 0;
     text-align: center;
+    div {
+        width: calc(100% - 4rem);
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.7rem;
+    }
     @media (min-width: 850px) {
         display: none;
     }

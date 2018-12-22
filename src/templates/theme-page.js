@@ -203,7 +203,7 @@ const Themes = (props) => {
 
     {themeList.edges.map(({ node }, i) => (
     <div className={style.mHeader} key={node.id}>
-    {node.frontmatter.title}
+    <div className={style.p}>{node.frontmatter.title}</div>
     </div>
     ))}
   </Layout>
