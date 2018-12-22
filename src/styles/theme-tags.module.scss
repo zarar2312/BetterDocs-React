@@ -19,17 +19,33 @@
             flex-direction: row;
             padding: 15px 20px;
             position: sticky;
-            top: 4.3em;
+            top: 3.65rem;
             z-index: 3;
+            @media (min-width: 400px) {
+                flex: 3;
+                top: 3.2rem;
+            }
+            @media (min-width: 500px) {
+                flex: 3;
+                top: 3.2rem;
+            }
+            @media (min-width: 600px) {
+                flex: 3;
+                top: 3rem;
+            }
+            @media (min-width: 700px) {
+                flex: 3;
+                top: 3rem;
+            }
             @media (min-width: 850px) {
                 flex: 3;
-                top: 6.9em;
+                top: 4.4rem;
             }
             .count {
-                flex: 1;
+                flex: 10;
                 font-weight: bold;
                 color: #339b78;
-                font-size: 1.3em;
+                font-size: 0.85rem;
                 span {
                     font-weight: 500;
                     font-size: 0.6em;
@@ -41,6 +57,8 @@
                 transition: .2s ease-in-out opacity;
                 border-radius: 0px;
                 opacity: 0.4;
+                flex: 2;
+                font-size: 0.7rem;
                 &:hover {
                     opacity: 0.65;
                 }
@@ -305,10 +323,6 @@
                     }
                 }
             }
-            .childWrapper {
-                display: block;
-                word-break: break-word;
-            }
             .md {
                 visibility: visible;
             }
@@ -413,9 +427,10 @@
                                 flex: 1;
                                 background-color: #339b78;
                                 border-radius: 25px;
-                                padding: 7px 17px;
+                                padding: 0.1rem 0.7rem;
                                 font-weight: normal;
                                 color: #fff;
+                                font-size: 0.6rem;
                                 &:hover {
                                     background-color: rgba(#339b78, 0.8);
                                 }
@@ -471,11 +486,17 @@
                     }
                 }
                 .title {
+                    margin-top: -0.4rem;
+                    margin-bottom: -0.2rem;
+                    @media (min-width: 850px) {
+                        margin-top: -0.2rem;
+                        margin-bottom: 0.3rem;
+                    }
                     a.titleLink {
                         font-weight: bold;
                         color: rgba(0, 0, 0, 0.88);
-                        font-size: 1.1em;
-                        margin-bottom: 6px;
+                        font-size: 0.8rem;
+                        //margin-bottom: 6px;
                         display: -webkit-inline-box;
                         border-bottom: 1px solid transparent;
                         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
@@ -490,29 +511,36 @@
                 }
                 .description {
                     color: rgba(0, 0, 0, 0.6);
-                    font-size: 0.9em;
-                    margin-bottom: 8px;
+                    //margin-bottom: 8px;
                     .p {
                         margin-bottom: unset;
+                        font-size: 0.6rem;
                     }
                 }
                 .descriptionAlt {
                     color: rgba(0, 0, 0, 0.6);
-                    font-size: 0.9em;
-                    margin-bottom: 25px;
+                    //margin-bottom: 0.7rem;
                     .p {
                         margin-bottom: unset;
+                        line-height: 1rem;
+                        font-size: 0.6rem;
+                        @media (min-width: 850px) {
+                            margin-bottom: 1.3rem;
+                        }
                     }
                 }
                 .tagContainer {
-                    margin-bottom: 25px;
+                    margin-bottom: unset;
+                    @media (min-width: 850px) {
+                        margin-bottom: 25px;
+                    }
                     .tag {
                         font-weight: normal;
                         color: rgba(0, 0, 0, 0.4);
                         box-shadow: unset;
                         border: unset;
                         margin-left: 5px;
-                        font-size: 0.8em;
+                        font-size: 0.5rem;
                         &:first-child {
                             margin-left: unset;
                         }
@@ -523,12 +551,14 @@
                 }
                 .author {
                     color: rgba(0, 0, 0, 0.8);
-                    font-size: 0.78em;
-                    margin-top: 4px;
-                    margin-bottom: 4px;
+                    font-size: 0.45rem;
+                    position: relative;
+                    top: -3px;
                     border-bottom: 1px solid transparent;
                     display: -webkit-inline-box;
                     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+                    //line-height: 1rem;
+                    line-height: unset;
                     &:hover {
                         border-bottom: 1px solid transparent;
                         box-shadow: inset 0 -2px 0px 0px transparent;

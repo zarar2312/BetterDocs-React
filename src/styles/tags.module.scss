@@ -30,30 +30,38 @@
     .tag {
         border-radius: 25px;
         border: 1px solid #DFE1E5;
-        padding: 4px 10px;
-        font-size: 0.8em;
+        padding: 0.1rem 0.6rem;
+        font-size: 0.5rem;
         margin-left: 5px;
         background-color: #fff;
         color: #6f6f6f;
         margin-top: 0.3em;
         margin-bottom: 0.8em;
         display: -webkit-inline-box;
-        line-height: 20px;
+        line-height: 1rem;
         transition-duration: 800ms;
+        display: -webkit-inline-box;
+        @media (min-width: 850px) {
+            padding: 0.16rem 0.6rem;
+        }
         &[href="/plugins/softwares/null/"] {
             display: none;
         }
-        span {
+        div {
             background-color: #eeeeee;
             color: #5f6368;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
+            /* width: 20px; */
+            /* height: 20px; */
+            width: 0.9rem;
+            height: 0.9rem;
+            /* line-height: 0.77rem; */
             text-align: center;
-            font-size: 0.8em;
-            margin-left: 6px;
+            font-size: 0.4rem;
+            margin-left: 0.28rem;
             display: block;
+            /* margin-top: 0.05rem; */
+            /* text-align: center; */
         }
         &:hover {
             border-bottom-left-radius: 0px;

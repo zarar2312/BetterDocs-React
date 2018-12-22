@@ -55,7 +55,7 @@
         .p {
             color: #fff;
             margin: 0;
-            margin-top: 10px;
+            //margin-top: 10px;
             font-size: 0.6em;
             @media (min-width: 450px) {
                 font-size: 1rem;
@@ -103,12 +103,13 @@
         }
         .downloadBtn {
             background-color: #339b78;
-            padding: 10px 20px;
+            padding: 0.3rem 0.8rem;
             border-radius: 2px;
             color: #fff;
             margin-bottom: 5px;
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
+            font-size: 0.7rem;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: unset;
@@ -124,12 +125,13 @@
             background-color: #fff;
             margin-bottom: 5px;
             margin-left: 10px;
-            padding: 10px 20px;
+            padding: 0.2rem 0.7rem;
             border-radius: 2px;
             color: #339b78;
             border: 1px solid;
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
+            font-size: 0.7rem;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: 10px;
@@ -146,11 +148,12 @@
             background-color: #fff;
             margin-bottom: 5px;
             margin-left: 10px;
-            padding: 10px 20px;
+            padding: 0.2rem 0.7rem;
             border-radius: 2px;
             color: #339b78;
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
+            font-size: 0.7rem;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: 10px;
@@ -171,13 +174,13 @@
         flex-direction: column;
         .h2 {
             color: #282828;
-            font-size: 1.3em;
+            font-size: 0.85em;
             font-weight: normal;
         }
         .paragraph {
             .p {
                 color: #999;
-                font-size: 0.8em;
+                font-size: 0.5em;
                 a {
                     border-bottom: 1px solid rgba(51, 155, 120, 0.3);
                     box-shadow: inset 0 -2px 0px 0px rgba(51, 155, 120, 0.4);
@@ -194,30 +197,31 @@
         }
         .detailsContainer {
             display: flex;
+            margin-top: 0.3rem;
             .gitContainer {
-                margin-top: 13px;
+                //margin-top: 13px;
                 margin-right: 10px;
-                line-height: 1.8em;
+                //line-height: 1.8em;
                 &:hover {
                     svg {
                         fill: #262626;
                     }
                 }
                 svg {
-                    height: 1.2em;
-                    width: 1.2em;
+                    height: 0.7rem;
+                    width: 0.7rem;
                     opacity: 1;
                     transition: 800ms ease-in-out;
                     position: relative;
                     left: -4.5px;
-                    top: 3.5px;
+                    top: 3px;
                     fill: #fff;
                 }
                 a {
                     background-color: #262626;
                     color: #fff;
-                    font-size: 0.9em;
-                    padding: 3px 9px;
+                    font-size: 0.55rem;
+                    padding: 0.15rem 0.35rem;
                     border-radius: 2px;
                     border: 1px solid #262626;
                     transition: all 300ms linear;
@@ -231,22 +235,22 @@
                     content: "|";
                     color: #d2d2d2;
                     position: relative;
-                    top: 0px;
+                    top: 2px;
                     left: 5px;
                 }
             }
             .discordContainer {
-                margin-top: 13px;
+                //margin-top: 13px;
                 margin-right: 10px;
-                line-height: 1.8em;
+                //line-height: 1.8em;
                 &:hover {
                     svg {
                         fill: #7289DA;
                     }
                 }
                 svg {
-                    height: 1.3em;
-                    width: 1.3em;
+                    height: 0.8rem;
+                    width: 0.8rem;
                     opacity: 1;
                     transition: 800ms ease-in-out;
                     position: relative;
@@ -257,8 +261,8 @@
                 a {
                     background-color: #7289DA;
                     color: #fff;
-                    font-size: 0.9em;
-                    padding: 3px 9px;
+                    font-size: 0.55rem;
+                    padding: 0.15rem 0.35rem;
                     border-radius: 2px;
                     border: 1px solid #7289DA;
                     transition: all 300ms linear;
@@ -272,24 +276,24 @@
                     content: "|";
                     color: #d2d2d2;
                     position: relative;
-                    top: 0px;
+                    top: 2px;
                     left: 5px;
                 }
             }
             .tagContainer {
-                margin-top: 14px;
+                //margin-top: 4px;
                 display: -webkit-box;
                 .tag {
                     margin-left: 7px;
                     background-color: #fff;
-                    padding: 5px 13px;
+                    padding: 0.2rem 0.5rem;
                     border-radius: 25px;
                     color: #5f6368;
-                    font-size: 0.7em;
+                    font-size: 0.45em;
                     transition-duration: 800ms;
                     border: 1px solid #eff2f6;
-                    display: -webkit-box;
-                    line-height: 15px;
+                    /* display: -webkit-inline-box; */
+                    //line-height: 15px;
                     &:first-child {
                         margin-left: unset;
                     }
@@ -303,7 +307,8 @@
                         text-align: center;
                         font-size: 0.8em;
                         margin-left: 6px;
-                        display: block;
+                        //display: block;
+                        display: none;
                     }
                     &:hover {
                         border-bottom-left-radius: 0px;
@@ -322,17 +327,20 @@
             }
         }
         .softwareContainer {
-            margin-top: 10px;
-            display: flex;
+            //margin-top: 4px;
+            margin-top: 0.3rem;
+            display: -webkit-box;
             .software {
-                color: #000;
-                margin-left: 5px;
-                background-color: #fbfafc;
-                border: 1px solid #dddddd;
+                margin-left: 7px;
+                background-color: #fff;
+                padding: 0.2rem 0.5rem;
                 border-radius: 25px;
-                padding: 0.4rem 0.6rem;
-                font-size: 0.7rem;
-                transition: 250ms linear;
+                color: #5f6368;
+                font-size: 0.45em;
+                transition-duration: 800ms;
+                border: 1px solid #eff2f6;
+                /* display: -webkit-inline-box; */
+                //line-height: 15px;
                 position: relative;
                 &:hover {
                     background-color: #dddddd;
@@ -359,9 +367,10 @@
                     background-color: #262626;
                     color: #fff;
                     position: absolute;
-                    top: -28px;
+                    top: -37px;
+                    left: 9px;
                     margin: 0 auto;
-                    padding: 3px 8px;
+                    padding: 0 0.4rem;
                     border-radius: 2px;
                     text-align: center;
                     box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4) !important;
@@ -372,8 +381,9 @@
             }
         }
         .statusContainer {
-            margin-top: 14px;
+            //margin-top: 14px;
             //display: none;
+            margin-top: 0.3rem;
             &[alt="Outdated"] {
                 display: initial;
             }
@@ -394,10 +404,10 @@
                     //margin-left: 5px;
                     border-radius: 25px;
                     color: #fff;
-                    padding: 5px 10px;
+                    padding: 0.08rem 0.4rem;
                     position: relative;
                     top: 0px;
-                    font-size: 0.7em;
+                    font-size: 0.45em;
                     display: -webkit-inline-box;
                     font-weight: bold;
                     border: 1.5px solid;

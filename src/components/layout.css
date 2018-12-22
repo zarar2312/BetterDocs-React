@@ -2,6 +2,20 @@ html {
   font-family: Roboto, sans-serif !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+  /*font-size: calc(16px + (53 - 16) * ((100vw - 300px) / (5000 - 300)));*/
+  line-height: calc(1.3rem + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  backface-visibility: hidden;
+}
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: calc(26px + (53 - 26) * ((100vw - 1600px) / (2900 - 1600)));
+  }
+}
+@media only screen and (min-width: 2900px) {
+  html {
+    font-size: calc(46px + (66 - 46) * ((100vw - 2900) / (4200 - 2900)));
+  }
 }
 body {
   margin: 0;
@@ -627,12 +641,12 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
-}
+}/*
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
-}
+}*/
 body::-webkit-scrollbar-button { 
   display: none; 
   height: 13px; 

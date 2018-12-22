@@ -12,7 +12,7 @@
         overflow: hidden;
         padding-left: unset;
         @media (min-width: 850px) {
-            padding-left: 22.4rem;
+            padding-left: 14.8rem;
         }
         .heroPlugins {
             order: 0;
@@ -73,6 +73,7 @@
                 /*padding-bottom: 2.1rem;*/
                 word-break: break-all;
                 flex-direction: column;
+                font-size: 0.67rem;
                 @media (min-width: 850px) {
                     width: calc(100% - 300px);
                     display: flex;
@@ -80,6 +81,49 @@
                 .childWrapper {
                     display: block;
                     word-break: break-word;
+                    h1 {
+                        margin-bottom: 1.1rem;
+                        font-size: 1.6rem;
+                    }
+                    h2 {
+                        margin-bottom: 1.1rem;
+                        font-size: 1.06rem;
+                    }
+                    p {
+                        margin-bottom: 1rem;
+                        line-height: 1rem;
+                    }
+                    ol {
+                        margin-left: 0.8rem;
+                        margin-bottom: 0.5rem;
+                        li {
+                            margin-bottom: calc(0.25rem / 2);
+                            //margin-bottom: unset;
+                        }
+                    }
+                    li {
+                        margin-bottom: unset;
+                        line-height: 0.9rem;
+                        &>p {
+                            margin-bottom: 0.1rem;
+                        }
+                    }
+                    blockquote {
+                        margin-top: unset;
+                        p {
+                            margin-bottom: unset;
+                        }
+                    }
+                    code {
+                        font-size: 0.57rem;
+                    }
+                    pre {
+                        padding: 1rem;
+                        line-height: 0.8rem;
+                        code {
+                            line-height: 0.8rem;
+                        }
+                    }
                 }
                 .imgContainer {
                     border: unset !important;

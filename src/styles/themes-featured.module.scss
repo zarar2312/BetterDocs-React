@@ -1,10 +1,13 @@
 .featuredSection {
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: 1rem;
     display: none;
     overflow: hidden;
     @media (min-width: 850px) {
         display: flex;
+    }
+    @media (min-width: 2050px) {
+        margin-top: 2rem;
     }
     .topBar {
         display: block;
@@ -21,7 +24,7 @@
                 display: flex;
                 .header {
                     margin-left: 15px;
-                    font-size: 1.3em;
+                    font-size: 0.85rem;
                     color: #339b78;
                     font-weight: bold;
                 }
@@ -32,7 +35,7 @@
                 display: flex;
                 .link {
                     margin-left: 25px;
-                    font-size: 0.9em;
+                    font-size: 0.55rem;
                     position: relative;
                     top: 2px;
                     color: rgba(#339b78, 0.6);
@@ -55,18 +58,19 @@
                 display: flex;
                 p {
                     margin: unset;
-                    font-size: 0.9em;
+                    font-size: 0.55rem;
                     color: #7c7c7c;
                 }
             }
             .btnContainer {
                 margin-right: 15px;
                 .mainBtn {
-                    padding:12px 18px;
+                    padding: 0.4rem 0.6rem;
                     background-color: #339b78;
                     color: #fff;
                     border-radius: 3px;
                     display: -webkit-inline-box;
+                    font-size: 0.69rem;
                 }
             }
         }
@@ -134,7 +138,7 @@
                     flex-direction: column;
                     justify-content: center;
                     margin-right: 25px;
-                    height: 15em;
+                    height: 10rem;
                     padding-bottom: unset;
                     img {
                         width: 3em;
@@ -146,8 +150,7 @@
                     }
                     .title {
                         color: #339b78;
-                        margin: 0 auto;
-                        margin-top: 15px;
+                        margin: 1rem auto;
                     }
                 }
                 &:hover {
@@ -162,10 +165,10 @@
             }
             .imgWrapper {
                 display: block;
-                width: 26em;
+                width: 16.7rem;
                 box-shadow: rgba(102, 51, 153, 0.1) 0px 4px 10px;
                 //height: 15em;
-                margin-bottom: 0.525rem;
+                //margin-bottom: 0.525rem;
                 border-radius: 2px;
                 transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
                 padding-bottom: 56.25%;
@@ -188,6 +191,7 @@
                 border-bottom: 3px solid transparent;
                 transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
                 display: -webkit-inline-box;
+                font-size: 0.65rem;
             }
         }
     }

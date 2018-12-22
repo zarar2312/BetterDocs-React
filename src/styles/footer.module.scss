@@ -16,7 +16,7 @@
         }
     }
     .container {
-        max-width: 1140px;
+        width: calc(100% - 3rem);
         margin: 0 auto;
         position: relative;
         padding: 0 20px;
@@ -43,7 +43,7 @@
                     }
                 }
                 .p {
-                    font-size: 1.1rem;
+                    font-size: 0.66rem;
                     color: #999;
                     margin-bottom: 20px;
                     line-height: 1.4em;
@@ -54,7 +54,7 @@
                     margin-inline-end: 0px;
                 }
                 .h4 {
-                    margin: 0 0 1.1rem 0;
+                    margin: 0 0 0.5rem 0;
                     font-size: 1.1em;
                     color: #666;
                 }
@@ -85,8 +85,8 @@
                     padding: 0 60px;
                 }
                 .h4 {
-                    margin: 0 0 1.1rem 0;
-                    font-size: 1.1em;
+                    margin: 0 0 0.5rem 0;
+                    font-size: 0.8rem;
                     color: #666;
                 }
                 .subList {
@@ -94,8 +94,8 @@
                     list-style: none;
                     margin: 0;
                     > .subItem {
-                        font-size: 1.1rem;
-                        margin: 11px 0;
+                        font-size: 0.7rem;
+                        margin: 0.6rem 0;
                         .link {
                             white-space: nowrap;
                             color: #999;

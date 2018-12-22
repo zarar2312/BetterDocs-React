@@ -1,5 +1,5 @@
 .alert {
-    font-size: 0.9em;
+    font-size: 0.6em;
     display: flex;
     animation: opacity 1s forwards;
     animation-delay: 7s; 
@@ -15,7 +15,7 @@
         right: unset;
         display: initial;
         @media (min-width: 850px) {
-            width: calc(100% - 58em);
+            width: calc(100% - 36rem);
             position: fixed;
             bottom: 25px;
             right: 0px;
@@ -39,7 +39,7 @@
         right: unset;
         display: initial;
         @media (min-width: 850px) {
-            width: calc(100% - 58em);
+            width: calc(100% - 36rem);
             position: fixed;
             bottom: 25px;
             right: 0px;
