@@ -103,13 +103,13 @@
         }
         .downloadBtn {
             background-color: #339b78;
-            padding: 0.3rem 0.8rem;
+            padding: 0.6em 0.7rem;
             border-radius: 2px;
             color: #fff;
             margin-bottom: 5px;
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
-            font-size: 0.7rem;
+            font-size: 0.67rem;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: unset;
@@ -125,13 +125,13 @@
             background-color: #fff;
             margin-bottom: 5px;
             margin-left: 10px;
-            padding: 0.2rem 0.7rem;
+            padding: 0.3rem 0.7rem;
             border-radius: 2px;
             color: #339b78;
             border: 1px solid;
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
-            font-size: 0.7rem;
+            font-size: 0.67rem;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: 10px;
@@ -148,12 +148,12 @@
             background-color: #fff;
             margin-bottom: 5px;
             margin-left: 10px;
-            padding: 0.2rem 0.7rem;
+            padding: 0.3rem 0.7rem;
             border-radius: 2px;
             color: #339b78;
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
-            font-size: 0.7rem;
+            font-size: 0.67rem;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: 10px;
@@ -174,10 +174,11 @@
         flex-direction: column;
         .h2 {
             color: #282828;
-            font-size: 0.85em;
+            font-size: 0.9em;
             font-weight: normal;
         }
         .paragraph {
+            margin-top: 0.2rem;
             .p {
                 color: #999;
                 font-size: 0.5em;
@@ -208,13 +209,13 @@
                     }
                 }
                 svg {
-                    height: 0.7rem;
-                    width: 0.7rem;
+                    height: 0.6rem;
+                    width: 0.6rem;
                     opacity: 1;
                     transition: 800ms ease-in-out;
                     position: relative;
-                    left: -4.5px;
-                    top: 3px;
+                    left: -4px;
+                    top: 2px;
                     fill: #fff;
                 }
                 a {
@@ -401,20 +402,21 @@
                 display: -webkit-box;
                 div {
                     background: #fff;
-                    //margin-left: 5px;
+                    //margin-left: -5px;
                     border-radius: 25px;
                     color: #fff;
-                    padding: 0.08rem 0.4rem;
-                    position: relative;
-                    top: 0px;
+                    padding: 0.2rem 0.45rem;
+                    /* position: relative; */
+                    /* top: 0px; */
                     font-size: 0.45em;
                     display: -webkit-inline-box;
                     font-weight: bold;
-                    border: 1.5px solid;
+                    border: 1px solid;
                 }
                 div[class="Updated"] {
                     border-color: #00804b;
                     color: #00804b;
+                    background-color: rgba(#00804b,0.04);
                 }
                 div[class="Outdated"] {
                     border-color: #a70a0a;
