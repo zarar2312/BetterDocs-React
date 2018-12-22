@@ -80,11 +80,11 @@ const FeaturedThemes = (props) => {
               </div>
               }
                 <div>
-                  <a 
+                  <Link 
                   className={theme.author}
-                  href={node.frontmatter.github}
+                  to={"/profile/" + node.frontmatter.author}
                   target="blank"
-                  >{node.frontmatter.author} /</a>
+                  >{node.frontmatter.author} /</Link>
                 </div>
                 <div className={theme.title}
                 >
