@@ -19,23 +19,23 @@
             flex-direction: row;
             padding: 15px 20px;
             position: sticky;
-            top: 3.65rem;
+            top: 2.4rem;
             z-index: 3;
-            @media (min-width: 400px) {
+            /*@media (min-width: 400px) {
                 flex: 3;
-                top: 3.2rem;
+                top: 2.4rem;
             }
             @media (min-width: 500px) {
                 flex: 3;
-                top: 3.2rem;
+                top: 2.4rem;
             }
             @media (min-width: 600px) {
                 flex: 3;
-                top: 3rem;
-            }
+                top: 2.4rem;
+            }*/
             @media (min-width: 700px) {
                 flex: 3;
-                top: 3rem;
+                top: 2.4rem;
             }
             @media (min-width: 850px) {
                 flex: 3;
@@ -485,12 +485,8 @@
                     }
                 }
                 .title {
-                    margin-top: -0.4rem;
-                    margin-bottom: -0.2rem;
-                    @media (min-width: 850px) {
-                        margin-top: -0.2rem;
-                        margin-bottom: 0.3rem;
-                    }
+                    margin-top: -0.2rem;
+                    margin-bottom: 0.1rem;
                     a.titleLink {
                         font-weight: bold;
                         color: rgba(0, 0, 0, 0.88);
