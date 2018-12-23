@@ -14,10 +14,12 @@
         order: 1;
         display: none;
         overflow: hidden;
+        padding-left: unset;
         @media (min-width: 850px) {
             display: flex;
             flex: 3;
             flex-direction: column;
+            padding-left: 14.8rem;
         }
         .content {
             display: flex;
@@ -28,8 +30,8 @@
             -webkit-overflow-scrolling: touch;
             padding-bottom: 3.1rem;
             @media (min-width: 850px) {
-                 max-height: calc(((((100vh - 6.1rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
-                 padding-bottom: unset;
+                //max-height: calc(((((100vh - 6.1rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+                padding-bottom: unset;
              }
             &::-webkit-scrollbar-button { 
                 display: none; 
@@ -65,13 +67,57 @@
                 display: block;
                 width: calc(100% - 75px);
                 margin: 0 auto;
-                padding-top: 2.1rem;
+                padding-top: 1.1rem;
                 /*padding-bottom: 2.1rem;*/
                 word-break: break-all;
                 flex-direction: column;
+                font-size: 0.67rem;
                 @media (min-width: 850px) {
-                    width: calc(100% - 300px);
+                    width: calc(100% - 11rem);
                     display: flex;
+                }
+                h1 {
+                    margin-bottom: 1.1rem;
+                    font-size: 1.6rem;
+                }
+                h2 {
+                    margin-bottom: 1.1rem;
+                    font-size: 1.06rem;
+                }
+                p {
+                    margin-bottom: 1rem;
+                    line-height: 0.5rem;
+                }
+                ol {
+                    margin-left: 0.8rem;
+                    margin-bottom: 0.5rem;
+                    li {
+                        margin-bottom: calc(0.25rem / 2);
+                        //margin-bottom: unset;
+                    }
+                }
+                li {
+                    margin-bottom: unset;
+                    line-height: 0.9rem;
+                    &>p {
+                        margin-bottom: 0.1rem;
+                    }
+                }
+                blockquote {
+                    margin-top: unset;
+                    p {
+                        margin-bottom: unset;
+                    }
+                }
+                code {
+                    font-size: 0.57rem;
+                }
+                pre {
+                    padding: 1rem;
+                    line-height: 0.8rem;
+                    code {
+                        line-height: 0.8rem;
+                    }
                 }
                 .footer {
                     display: flex;

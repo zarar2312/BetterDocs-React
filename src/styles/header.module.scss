@@ -1,36 +1,43 @@
 .headercontainer {
     display: block;
-    height: 68px;
+    //height: 68px;
     width: 100%;
+    /*new*/
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    /*end-new*/
     @media (min-width: 850px) {
-        height: 111px;
+        //height: 4.5rem;
     }
     .nextcontainer {
-        position: fixed;
+        //position: sticky;
         width: 100%;
-        top: 0px;
+        //top: 0px;
         z-index: 100;
         max-width: 100%;
-        padding: 0px 0px 0px 10px;
+        //padding: 0px 0px 0px 10px;
         transition: .2s linear background-color, .2s linear box-shadow;
         background-color: #262626;
-        height: 68px;
-        box-shadow: 0 0 8px 0 rgba(0,0,0,1);
+        //height: 4.3rem;
+        box-shadow: -4px 0px 8px 0px black;
         @media (min-width: 850px)  {
-            padding: 0px 0px 0px 15px;
+            //padding: 0px 0px 0px 15px;
             height: unset;
             background-color: #262626;
             box-shadow: unset;
         }
 
         .logo {
-            top: 9px;
+            //top: 9px;
             display: flex;
             position: relative;
             justify-content: center;
+            padding: 0.4rem 0.7rem 0.4rem 0.7rem;
             @media (min-width: 850px) {
-                top: 13px;
+                //top: 13px;
                 justify-content: flex-start;
+                padding: 0.4rem 0.7rem 0.1rem 0.7rem;
             }
         }
         .nav {
@@ -45,12 +52,13 @@
             vertical-align: top;
             width: auto;
             padding: 0;
-            margin-left: -18px;
-            margin-top: 9px;
+            //margin-left: -18px;
+            //margin-top: 9px;
             position: initial;
             bottom: unset;
             @media (min-width: 850px) {
                 display: -webkit-box;
+                height: unset;
             }
             .linkWrapper {
                 display: flex;
@@ -58,7 +66,7 @@
                 align-items: center;
                 flex-direction: column;
                 &.active {
-                    border-bottom: 0px solid transparent;
+                    //border-bottom: 2px solid #262626;
                     .linkIcon {
                         opacity: 1;
                     }
@@ -66,7 +74,9 @@
                         color: #fff;
                     }
                     @media (min-width: 850px) {
-                        border-bottom: 2px solid #fff;
+                        .link {
+                            border-bottom: 2px solid #fff;
+                        }
                     }
                 }
                 &:hover, &:active, &:focus {
@@ -120,12 +130,12 @@
                 }
                 @media (min-width: 850px) {
                     display: inline-block;
-                    padding: 15px 15px 15px 15px;
+                    padding: 0.5rem 0.7rem;
                     font-family: Roboto, sans-serif;
-                    font-size: 16px;
+                    font-size: 0.7rem;
                     font-weight: 300;
-                    border-bottom: 2px solid transparent;
-                    line-height: unset !important;
+                    border-bottom: 2px solid #262626;
+                    line-height: 0.8rem !important;
                     height: unset !important;
                     top: unset !important;
                     &.active {
@@ -197,7 +207,7 @@
                     opacity: 0.6;
                     transition: .2s linear ease-in-out;
                     & ~ .link {
-                        line-height: 3em;
+                        line-height: 2.5em;
                         top: 6px;
                     }
                 }
@@ -215,7 +225,7 @@
                 line-height: 6em;
                 flex: 1;
                 text-align: center;
-                font-size: 0.70711rem;
+                font-size: 0.54rem;
                 &:nth-child(4), &:nth-child(5) {
                     display: none;
                 }

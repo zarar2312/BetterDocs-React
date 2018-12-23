@@ -5,8 +5,7 @@ import Info from '../components/plugin-info'
 import plugin from '../styles/plugin-tags.module.scss'
 import hero from '../styles/hero.module.scss'
 import Tags from '../components/pluginTags'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -64,13 +63,11 @@ const Tagss = ({ pageContext, data }) => {
             <div className={plugin.Results}>
             {edges.map(({ node }) => {
           return (
-              <AniLink 
+              <Link 
               className={plugin.resultCard}
               activeClassName={plugin.active}
               to={'plugins' + node.fields.slug}
               key={node.id}
-              cover
-              bg="#262626"
               >
                 <div className={plugin.header}
                 >
@@ -90,7 +87,7 @@ const Tagss = ({ pageContext, data }) => {
                     {node.excerpt}
                   </p>
                 </div>
-              </AniLink>
+              </Link>
               )
             })}
             </div>
@@ -142,7 +139,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             author
-            github
+            github_profile_url
             download
             support
             layout

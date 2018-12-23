@@ -3,9 +3,11 @@ title: User Birthday
 author: Metalloriff
 description:
   Allows you to set birthdays for users and get notified when it's a user's birthday.
-github: https://github.com/Metalloriff/
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/UserBirthdays.plugin.js
-support: https://discord.gg/yNqzuJa
+github_profile_url: https://github.com/Metalloriff/
+github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/UserBirthdays.plugin.js
+support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+discord_server: https://discord.gg/yNqzuJa
 software: [BandagedBD, BetterDiscord]
 images:
   - name: User Birthday Preview

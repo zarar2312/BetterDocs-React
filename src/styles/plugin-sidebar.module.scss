@@ -4,6 +4,10 @@
     order: 0;
     display: block;
     flex: 1;
+    @media (min-width: 850px) {
+        position: fixed;
+        width: 14.8rem;
+    }
     .searchContainer {
         display: flex;
         flex-direction: column;
@@ -14,34 +18,35 @@
             border-radius: 4px;
             color: #339b78;
             display: inline-block;
-            font-size: 18px;
-            height: 2.45rem;
+            font-size: 0.75rem;
+            height: 1.85rem;
             padding: 0;
-            padding-right: 2.45rem;
-            padding-left: 2.45rem;
-            margin: 0.9em 1.05rem;
+            padding-right: 1.25rem;
+            padding-left: 1.25rem;
+            margin: 0.55rem 1rem;
+            margin-bottom: 0.3rem;
             vertical-align: middle;
             white-space: normal;
             width: calc(100% - 2.1rem);
         }
         .searchOutput {
             color: rgba(0, 0, 0, 0.54);
-            font-size: 0.8409rem;
+            font-size: 0.55rem;
             margin: 0 1.05rem;
-            margin-bottom: 0.9em;
+            //margin-bottom: 0.9em;
         }
     }
     .Results { 
         display: flex;
         flex-direction: column;
-        max-height: calc(((((100vh - 7.7rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem); //28.2em
+        max-height: calc(((((100vh - 1.4rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem); //28.2
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         @media (min-width: 850px) {
-            max-height: calc(((((100vh - 6.7rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+            max-height: calc(((((100vh - 1.42rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
         }
         .resultCard {
-            padding: 1.05rem;
+            padding: 0.6rem;
             transition: .2s ease-in-out background-color, .2s ease-in-out border-left;
             width: calc(100% - 50px);
             margin: 0 auto;
@@ -50,6 +55,7 @@
             margin-top: 10px;
             border-radius: 8px;
             border-bottom-left-radius: 0px;
+            font-size: 0.67rem;
             &:hover {
                 background-color: rgba(#339b78, 0.3);
             }
@@ -102,7 +108,7 @@
                 }
                 .author {
                     color: rgba(0, 0, 0, 0.54);
-                    font-size: 0.8rem;
+                    font-size: 0.52rem;
                 }
             }
             .description {

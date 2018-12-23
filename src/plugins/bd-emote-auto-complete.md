@@ -3,8 +3,10 @@ title: BD Emote Auto Complete
 author: Metalloriff
 description: Adds an auto-complete menu for BetterDiscord emotes.
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/BDEmoteAutocomplete.plugin.js
-github: 'https://github.com/Metalloriff/'
-support: 'https://discord.gg/yNqzuJa'
+github_profile_url: 'https://github.com/Metalloriff/'
+github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/BDEmoteAutocomplete.plugin.js
+support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+discord_server: https://discord.gg/yNqzuJa
 auto: true
 images:
   - image: 'https://i.imgur.com/zzZAd5s.png'

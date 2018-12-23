@@ -4,8 +4,9 @@ author: gco360
 description:
    A windows 10 theme
 download: https://github.com/gco360/windows-10-theme
-github: https://github.com/gco360/
-support: https://discord.gg/6fXRKyx
+github_profile_url: https://github.com/gco360/
+support: https://github.com/gco360/windows-10-theme/issues/
+discord_server: https://discord.gg/6fXRKyx
 demo: https://cdn.jsdelivr.net/gh/gco360/windows-10-theme@master/windows10.theme.css
 thumbnail: https://i.imgur.com/91ysujk.png
 images:

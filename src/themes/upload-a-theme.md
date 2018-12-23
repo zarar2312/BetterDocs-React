@@ -19,9 +19,11 @@ I promise it doesn't take long :)
   title: {Theme Name}
   author: {Author Name}
   description: A SHORT Description
-  download: https://github.com/
-  github: https://github.com/{Author Name}/
+  download:
+  github_profile_url: https://github.com/{Author Name}/
+  github_source_url:
   support:
+  discord_server:
   demo: https://raw.githack.com
   thumbnail:
   images:
@@ -46,11 +48,13 @@ Here's is some helpful information to inform you what each field does.
   - **title** - The name of your theme. `[REQUIRED]`
   - **author** - The name of the author of the theme. `[REQUIRED]`
   - **description** - Short paragraph describing the content and/or purpose of the theme that will appear in the permalink of your page and other places on the site. `[REQUIRED]`
-  - **download** - The direct link to the file to be downloaded. `[REQUIRED]`
-  - **github** - The link to your [Github](https://github.com/) profile. This will link your name right under the title of your theme. `[OPTIONAL]`
-  - **support** - A link to allow people to get support or give feedback for the theme. `[OPTIONAL]`
+  - **download** - The direct link to the file to be downloaded. This can be the direct link to the file on a open-source website like [Github](https://github.com/). `[REQUIRED]`
+  - **github_profile_url** - The link to your [Github](https://github.com/) profile.`[OPTIONAL]`
+  - **github_source_url** - For open-source themes, this URL points to the repo that powers the theme `[OPTIONAL]`
+  - **support** - A link to allow people to get support. (In most cases it should be the [Github issue](https://guides.github.com/features/issues/) url) `[OPTIONAL]`
+  - **discord_server** - A Discord server invite to allow people to get support or give feedback for the theme. `[OPTIONAL]`
   - **demo** - This is a direct url to the file so the [demo](https://betterdocs.us/demo/dark.html?theme=INSERT-URL-HERE) can work. For Github it need's to be the **raw** url but to fix the MIME type issue you will need to use [githack](https://raw.githack.com) for the url instead (or https://www.jsdelivr.com/?docs=gh). `[OPTIONAL]`
-  - **thumbnail** - A direct link to an image that will be the thumbnail and shown on the [themes page](https://betterdocs.us/themes/). (20:11 or 1632x896) `[REQUIRED]`
+  - **thumbnail** - A direct link to an image that will be the thumbnail and shown on the [themes page](https://betterdocs.us/themes/). (16:9) `[REQUIRED]`
   - **images** - A list of images that show a preview of your theme. [Imgur](https://imgur.com) is highly recommended for compressed images and reliability. `[OPTIONAL]`
   - **status** - Values: `Updated/Oudated`. The current status of your theme.
   - **featured** - Values `True/False`. Remove entirely or leave as false. Only used for featured themes that are chosen.

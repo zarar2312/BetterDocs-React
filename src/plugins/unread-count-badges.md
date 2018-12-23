@@ -4,8 +4,10 @@ author: Metalloriff
 description:
   Adds an unread count badge on unread servers and channels.
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/UnreadCountBadges.plugin.js
-github: https://github.com/Metalloriff
-support: https://discordapp.com/invite/yNqzuJa
+github_profile_url: https://github.com/Metalloriff
+github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/UnreadCountBadges.plugin.js
+support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+discord_server: https://discordapp.com/invite/yNqzuJa
 software: [BandagedBD, BetterDiscord]
 images:
   - name: Unread Count Badges Preview

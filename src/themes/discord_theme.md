@@ -3,8 +3,9 @@ title: Discord Theme
 author: AlexFlipnote
 description: A custom CSS made to change your discord style.
 download: https://github.com/AlexFlipnote/Discord_Theme
-github: https://github.com/AlexFlipnote/
-support: https://discord.gg/DpxkY3x
+github_profile_url: https://github.com/AlexFlipnote/
+support: https://github.com/AlexFlipnote/Discord_Theme/issues/
+discord_server: https://discord.gg/DpxkY3x
 demo: https://rawcdn.githack.com/AlexFlipnote/Discord_Theme/5a99ab9d0ee7820280153bb99bd8063dbac8117d/autotheme.css
 thumbnail: https://i.imgur.com/cdj3hnI.png
 status: Updated

@@ -60,9 +60,9 @@ const Themes = (props) => {
         key={node.id}
         to={"/themes" + node.fields.slug}>
           <div className={featured.imgWrapper}>
-            <LazyLoad once="true" height="100%"
+            <LazyLoad once={true} height="100%"
               placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
-            <img once="true" className={theme.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+            <img className={theme.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
             </LazyLoad>
           </div>
         <div className={featured.title}>{node.frontmatter.title}</div>
@@ -98,9 +98,9 @@ const Themes = (props) => {
               { node.frontmatter.thumbnail ?
               <div className={theme.imgContainer}
               >
-                <LazyLoad once="true" height="100%"
+                <LazyLoad once={true} height="100%"
                   placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
-                <img once="true" className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <img className={theme.img} alt={node.frontmatter.title} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
                 </LazyLoad>
                 { node.frontmatter.featured &&
                   <Link 
@@ -132,11 +132,10 @@ const Themes = (props) => {
               </div>
               }
                 <div>
-                  <a 
+                  <Link 
                   className={theme.author}
-                  href={node.frontmatter.github}
-                  target="blank"
-                  >{node.frontmatter.author} /</a>
+                  to={"/profile/" + node.frontmatter.author}
+                  >{node.frontmatter.author} /</Link>
                 </div>
                 <div className={theme.title}
                 >
@@ -205,7 +204,7 @@ query allThemesQuery {
           sub
           author
           thumbnail
-          github
+          github_profile_url
           download
           support
           style
@@ -238,7 +237,7 @@ query allThemesQuery {
           sub
           author
           thumbnail
-          github
+          github_profile_url
           download
           support
           layout

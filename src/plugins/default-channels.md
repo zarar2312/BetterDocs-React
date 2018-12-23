@@ -6,7 +6,8 @@ description:
   for e.g. checking announcement channels before moving elsewhere.
 author: planetarian
 download: https://github.com/planetarian/BetterDiscordPlugins/blob/master/DefaultChannels.plugin.js
-github: 'https://github.com/planetarian/'
+github_profile_url: 'https://github.com/planetarian/'
+github_souce_url: https://github.com/planetarian/BetterDiscordPlugins/blob/master/DefaultChannels.plugin.js
 support: 'https://github.com/planetarian/BetterDiscordPlugins/issues'
 software: [BandagedBD, BetterDiscord]
 images:

@@ -3,7 +3,7 @@ title: Material Discord
 author: CapnKitten
 description: A theme based on Google's Material Design
 download: https://github.com/CapnKitten/Material-Discord/blob/master/Material-Discord.theme.css
-github: 'https://github.com/CapnKitten/'
+github_profile_url: 'https://github.com/CapnKitten/'
 support: 'https://github.com/CapnKitten/Material-Discord/issues'
 demo: https://cdn.jsdelivr.net/gh/CapnKitten/Material-Discord@master/Material-Discord.theme.css
 thumbnail: https://i.imgur.com/bJt9VlN.png

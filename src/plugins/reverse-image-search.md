@@ -7,8 +7,10 @@ description:
     - You can open a popout, where you can change the local name and color for the selected channel.
     - You can set the selected channel back to its original state.
 download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ReverseImageSearch
-github: 'https://github.com/mwittrien/'
-support: 'https://discord.gg/Z7PBux5'
+github_profile_url: 'https://github.com/mwittrien/'
+github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ReverseImageSearch
+support: https://github.com/mwittrien/BetterDiscordAddons/
+discord_server: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 57
 layout: product

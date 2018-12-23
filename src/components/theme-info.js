@@ -12,7 +12,7 @@ const themePageInfo = () => (
               frontmatter {
                 title
                 author
-                github
+                github_profile_url
                 download
                 support
                 layout

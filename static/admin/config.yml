@@ -28,25 +28,36 @@ collections:
       - label: "Description"
         name: "description"
         widget: "markdown"
+        default: "A small excerpt."
 
       - label: "Download URL"
         name: "download"
         widget: "string"
 
-      - label: "Github" 
-        name: "github"
+      - label: "Github Profile Url" 
+        name: "github_profile_url"
         widget: "string"
         default: "https://github.com/{Author}/"
+
+      - label: "Github Source Url" 
+        name: "github_source_url"
+        widget: "string"
+        default: "https://github.com/..."
 
       - label: "Support URL"
         name: "support"
         widget: "string"
-        default: "https://discord.gg/invite"
+
+      - label: "Discord Server Invite URL"
+        name: "discord_server"
+        widget: "string"
+        default: "https://discordapp.com/invite/CODE"
+        required: false
 
       - label: "Demo URL"
         name: "demo"
         widget: "string"
-        default: "https://rawcdn.githack.com/USER/REPO/master/"
+        default: "https://rawcdn.githack.com/{Author}/{Repo}/master/"
 
       - label: "Tags (Seperated by comma ',')" 
         name: "tags"
@@ -126,15 +137,25 @@ collections:
         name: "download"
         widget: "string"
 
-      - label: "Github" 
-        name: "github"
+      - label: "Github Profile Url" 
+        name: "github_profile_url"
         widget: "string"
         default: "https://github.com/{Author}/"
+
+      - label: "Github Source Url" 
+        name: "github_source_url"
+        widget: "string"
+        default: "https://github.com/..."
 
       - label: "Support URL"
         name: "support"
         widget: "string"
-        default: "https://discord.gg/invite"
+
+      - label: "Discord Server Invite URL"
+        name: "discord_server"
+        widget: "string"
+        default: "https://discordapp.com/invite/CODE"
+        required: false
 
       - label: "Tags (Seperated by comma ',')" 
         name: "tags"
@@ -144,6 +165,7 @@ collections:
       - label: "Supported Software (Seperated by comma ',')" 
         name: "software"
         widget: "list"
+        default: ['BandagedBD','BetterDiscord']
 
       - label: "Thumbnail"
         name: "Thumbnail"

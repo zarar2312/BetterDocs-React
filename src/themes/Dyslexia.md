@@ -3,7 +3,7 @@ title: Dyslexia
 author: qwerasd205
 description: Makes changes to the font and layout to help dyslexics use Discord.
 download: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/Dyslexia.css
-github: https://github.com/qwerasd205/
+github_profile_url: https://github.com/qwerasd205/
 support: https://github.com/qwerasd205/qwerasd205.github.io/issues
 demo: https://rawcdn.githack.com/qwerasd205/qwerasd205.github.io/11db6e908886440e53cca2f4815d9c23c152f8fa/Dyslexia.css
 thumbnail: https://i.imgur.com/rsSC0pz.png

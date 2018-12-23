@@ -3,7 +3,7 @@ title: Avis
 author: YuraBrm
 description: 'A clean, vivid and transparent theme with lots of small tweaks'
 download: 'https://github.com/YuraBrm/BetterDiscordThemes/blob/master/Avis/Avis.theme.css'
-github: 'https://github.com/YuraBrm/'
+github_profile_url: 'https://github.com/YuraBrm/'
 support: 'https://github.com/YuraBrm/BetterDiscordThemes/issues'
 demo: 'https://cdn.rawgit.com/YuraBrm/BetterDiscordThemes/master/Avis/Avis.theme.css'
 thumbnail: https://i.imgur.com/Hp4Uqrp.jpg

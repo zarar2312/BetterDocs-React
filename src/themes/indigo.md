@@ -5,7 +5,7 @@ description:
   A dark purple theme that you can customize! Not compatible with compact mode
   and light mode.
 download: 'https://github.com/Vaxuuu/Indigo-Theme/blob/master/Indigo.theme.css'
-github: 'https://github.com/Vaxuuu/'
+github_profile_url: 'https://github.com/Vaxuuu/'
 support: 'https://github.com/Vaxuuu/Indigo-Theme/issues'
 demo: 'https://cdn.rawgit.com/Vaxuuu/Indigo-Theme/master/Indigo.theme.css'
 thumbnail: https://i.imgur.com/tWhLb11.png

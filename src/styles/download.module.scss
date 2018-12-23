@@ -3,20 +3,26 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 20px 35px;
+    margin: 0 auto;
+    flex-wrap: wrap;
     @media (min-width: 850px) {
         display: flex;
         padding: 20px 0px;
+        width: calc(100% - 9em);
     }
     .card {
-        flex-basis: 17%;
+        flex-basis: 27%;
         border: 1px solid #eff2f6;
-        border-radius: 15px;
+        border-radius: 0.6rem;
         margin-top: 15px;
         display: block;
         transition-duration: 800ms;
+        margin-bottom: 15px;
         @media (min-width: 850px) {
             margin-top: unset;
-            display: unset;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
         }
         &:hover {
             border-bottom-left-radius: 0px;
@@ -24,47 +30,197 @@
             box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
             transform: translateY(-0.5em);
         }
+        &:nth-child(odd):hover {
+            .wave {
+                .waveLayer1 {
+                    -webkit-transform: translate3d(-15px,0,0);
+                    transform: translate3d(-15px,0,0);
+                }
+                .waveLayer2 {
+                    -webkit-transform: translate3d(15px,0,0);
+                    transform: translate3d(15px,0,0);
+                }
+                /*.waveLayer3 {
+                    -webkit-transform: translate3d(15px,0,0);
+                    transform: translate3d(15px,0,0);
+                }
+                .waveLayer4 {
+                    -webkit-transform: translate3d(-15px,0,0);
+                    transform: translate3d(-15px,0,0);
+                }*/
+            }
+        }
+        &:nth-child(even):hover {
+            .wave {
+                .waveLayer1 {
+                    -webkit-transform: translate3d(15px,0,0);
+                    transform: translate3d(15px,0,0);
+                }
+                .waveLayer2 {
+                    -webkit-transform: translate3d(-15px,0,0);
+                    transform: translate3d(-15px,0,0);
+                }
+                /*.waveLayer3 {
+                    -webkit-transform: translate3d(15px,0,0);
+                    transform: translate3d(15px,0,0);
+                }
+                .waveLayer4 {
+                    -webkit-transform: translate3d(-15px,0,0);
+                    transform: translate3d(-15px,0,0);
+                }*/
+            }
+        }
         .header {
-            font-size: 1.3em;
-            line-height: 1.4;
-            color: #fff;
-            font-family: sans-serif;
-            font-weight: 200;
+            /*font-family: sans-serif; */
+            /* font-weight: 200; */
             transition: ease-in-out 400ms;
-            padding: 15px;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+            /* padding: 0.6rem 0.8rem 1.23rem 0.8rem; */
+            border-top-left-radius: 0.55rem;
+            border-top-right-radius: 0.55rem;
+            position: relative;
+            overflow: hidden;
+            /* text-align: center; */
+            flex: 1 1;
+            display: flex;
+            padding: 0.5rem 0rem 1.6rem 0rem;
+            justify-content: center;
+            flex-basis: 10%;
+            .h1 {
+                font-size: 1rem;
+                color: #fff;
+                /* display: flex; */
+                /* padding: 0.6rem 0.8rem 1.23rem 0.8rem; */
+                /* margin: 0.6rem 0.8rem 1.23rem 0.8rem; */
+                text-align: center;
+                margin: unset;
+            }
+            .wave {
+                position: absolute;
+                height: 3rem;
+                left: 0px;
+                bottom: -25px;
+                width: 100%;
+                @media (min-width: 850px) {
+                    bottom: -40px;
+                }
+                .waveLayer1 {
+                    transition: 300ms linear;
+                }
+                .waveLayer2 {
+                    transition: 300ms linear;
+                }
+                .waveLayer3 {
+                    transition: 300ms linear;
+                }
+                .waveLayer4 {
+                    transition: 300ms linear;
+                }
+            }
             @media (min-width: 850px) {
-                font-size: 1em;
+                font-size: 1rem;
+            }
+        }
+        &[alt="BandagedBD"] {
+            border: 1px solid #339b78;
+            order: 1;
+            .header {
+                background: #339b78;
+            }
+        }
+        &[alt="EnhancedDiscord"] {
+            order: 2;
+            .header {
+                background: #9b3333;
+            }
+        }
+        &[alt="BeautifulDiscord"] {
+            order: 4;
+            .header {
+                background: #7289DA;
+            }
+        }
+        &[alt="DiscordInjections"] {
+            order: 5;
+            .header {
+                background: #339b78;
+            }
+        }
+        &[alt="PowerCord"] {
+            order: 3;
+            .header {
+                background: #d18118;
+            }
+        }
+        &[alt="BetterDiscord"] {
+            order: 6;
+            position: relative;
+            overflow: hidden;
+            cursor: not-allowed;
+            //pointer-events: none;
+            &:hover {
+                .info {
+                    opacity: 1;
+                }
+            }
+            .info {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                transition: 300ms linear;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                opacity: 0;
+                z-index: 1;
+                background-color: rgba(255, 255, 255, 0.92);
+                text-align: center;
+                /* line-height: 2rem; */
+                font-size: 0.9rem;
+                word-wrap: break-word;
+                word-break: keep-all;
+                justify-content: center;
+                flex-direction: column;
+                b {
+                    color: #339b78;
+                }
+            }
+            .header {
+                background: #005eac;
             }
         }
         .body {
-            padding: 20px;
+            padding: 0.2rem 0;
+            flex: 2;
+            .features {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                //align-items: center;
+                .feature {
+                    color: #339b78;
+                    font-weight: bold;
+                    letter-spacing: 0.03rem;
+                    //border-bottom: 1px solid #333;
+                    text-align: center;
+                    line-height: 1.65rem;
+                    font-size: 0.74rem;
+                    &[alt="null"] {
+                        color: rgba(#000,0.3);
+                    }
+                    &:last-child {
+                        border-bottom: unset;
+                    }
+                }
+            }
         }
-    }
-    [alt="BandagedBD"] {
-        .header {
-            background: #339b78;
-        }
-    }
-    [alt="EnhancedDiscord"] {
-        .header {
-            background: #9b3333;
-        }
-    }
-    [alt="BeautifulDiscord"] {
-        .header {
-            background: #7289DA;
-        }
-    }
-    [alt="DiscordInjections"] {
-        .header {
-            background: #339b78;
-        }
-    }
-    [alt="BetterDiscord"] {
-        .header {
-            background: #005eac;
+        .footer {
+            flex: 1;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            flex-direction: row;
         }
     }
 }

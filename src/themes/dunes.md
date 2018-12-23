@@ -3,8 +3,9 @@ title: Dunes
 author: codedotspectra
 description: Rounded, minimalist, smooth & clean
 download: https://github.com/codedotspectra/dunes
-github: https://github.com/codedotspectra/
-support: http://discord.gg/nfggDZz
+github_profile_url: https://github.com/codedotspectra/
+support: https://github.com/codedotspectra/dunes/issues/
+discord_server: http://discord.gg/nfggDZz
 demo: https://rawcdn.githack.com/codedotspectra/dunes/593dc664c03784d8f50565c976ff8206154ad8c0/dunes.theme.css
 thumbnail: https://i.imgur.com/VJCxWIJ.jpg
 images:
