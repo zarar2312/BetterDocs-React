@@ -11,6 +11,11 @@
     @media (min-width: 850px) {
         display: flex;
     }
+    &[alt="Upload a Plugin"], &[alt="Upload a Theme"] {
+        .softwareContainer, .detailsContainer {
+            display: none !important;
+        }
+    }
     &::before {
         content: "";
         //background-image: url("../images/header-bg.svg");
