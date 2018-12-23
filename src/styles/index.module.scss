@@ -5,18 +5,18 @@
         padding: 30px 10px;
         background: #339b78;
         .quote {
-            font-size: 1.65rem;
+            font-size: 0.9rem;
             line-height: 1.4;
             color: #fff;
             font-family: sans-serif;
             font-weight: 200;
-            width: 74%;
-            padding-left: 45px;
+            width: 100%;
+            padding: 0 1rem;
             transition: ease-in-out 400ms;
             @media (min-width: 850px) {
-                padding-left: 75px;
+                padding-left: 3rem;
                 width: 48%;
-                //font-size: 1.5em;
+                font-size: 1.65em;
             }
         }
         @media (min-width: 850px) {
