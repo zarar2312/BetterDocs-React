@@ -17,7 +17,6 @@ images:
     name: ClearVision Ruby Preview - Appearance Settings
 auto: true
 status: Updated
-featured: true
 style: dark
 ghcommentid: 31
 layout: product

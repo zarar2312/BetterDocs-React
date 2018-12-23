@@ -17,7 +17,6 @@ images:
     name: ClearVision Amethyst Preview - Appearance Settings
 auto: true
 status: Updated
-featured: true
 style: dark
 ghcommentid: 29
 layout: product

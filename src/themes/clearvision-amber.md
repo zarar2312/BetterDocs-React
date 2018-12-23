@@ -17,7 +17,6 @@ images:
     name: ClearVision Amber Preview - Appearance Settings
 auto: true
 status: Updated
-featured: true
 style: dark
 ghcommentid: 28
 layout: product

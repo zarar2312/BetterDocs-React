@@ -17,7 +17,6 @@ images:
     name: ClearVision Emerald Preview - Appearance Settings
 auto: true
 status: Updated
-featured: true
 style: dark
 ghcommentid: 30
 layout: product
