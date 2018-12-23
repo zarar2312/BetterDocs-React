@@ -3,7 +3,8 @@ title: Expose X
 author: Korbs
 description: Brings a sexy translucent look to Discord with customizable options!
 download: 'https://cdn.discordapp.com/attachments/478040940649644033/525873419649286144/ExposeX.theme.css'
-github: 'https://github.com/CorbsEditor'
+github_profile_url: 'https://github.com/CorbsEditor'
+github_source_url: https://github.com/CorbsEditor/Themes-for-BetterDiscord/blob/master/ExposeX.theme.css
 support: 'https://discord.gg/Sr4RzS8'
 demo: https://cdn.jsdelivr.net/gh/CorbsEditor/Themes-for-BetterDiscord@master/Expose%20X/ExposeXRaw.theme.css
 thumbnail: https://i.imgur.com/wxA2YcQ.jpg
