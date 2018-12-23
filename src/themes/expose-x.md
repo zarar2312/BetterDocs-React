@@ -4,7 +4,7 @@ author: Korbs
 description: Brings a sexy translucent look to Discord with customizable options!
 download: 'https://cdn.discordapp.com/attachments/478040940649644033/525873419649286144/ExposeX.theme.css'
 github: 'https://github.com/CorbsEditor'
-support: 'https://discord.gg/Pdz7jAH'
+support: 'https://discord.gg/Sr4RzS8'
 demo: https://cdn.jsdelivr.net/gh/CorbsEditor/Themes-for-BetterDiscord@master/Expose%20X/ExposeXRaw.theme.css
 thumbnail: https://i.imgur.com/wxA2YcQ.jpg
 images:
