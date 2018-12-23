@@ -20,8 +20,9 @@ I promise it doesn't take long :)
   title: {Plugin Name}
   author: {Author Name}
   description: A SHORT Description
-  download: https://github.com/
+  download:
   github_profile_url: https://github.com/{Author Name}/
+  github_source_url:
   support:
   discord_server: https://discord.gg/INVITE
   tags: []
@@ -45,8 +46,9 @@ Here's is some helpful information to inform you what each field does.
   - **title** - The name of your plugin. `[REQUIRED]`
   - **author** - The name of the author of the plugin. `[REQUIRED]`
   - **description** - Short paragraph describing the content and/or purpose of the plugin that will appear in the permalink of your page and other places on the site. `[REQUIRED]`
-  - **download** - The direct link to the file to be downloaded. `[REQUIRED]`
-  - **github** - The link to your [Github](https://github.com/) profile. This will link your name right under the title of your plugin. `[OPTIONAL]`
+  - **download** - The direct link to the file to be downloaded. This can be the direct link to the file on a open-source website like [Github](https://github.com/). `[REQUIRED]`
+  - **github_profile_url** - The link to your [Github](https://github.com/) profile.`[OPTIONAL]`
+  - **github_source_url** - For open-source plugins, this URL points to the repo that powers the plugin `[OPTIONAL]`
   - **support** - A link to allow people to get support. (In most cases it should be the [Github issue](https://guides.github.com/features/issues/) url) `[OPTIONAL]`
   - **discord_server** - A Discord server invite to allow people to get support or give feedback for the theme. `[OPTIONAL]`
   - **tags** - Tags are in an array and can be seperated with commas "," like so `[tag1,tag2]`. `[OPTIONAL]`
