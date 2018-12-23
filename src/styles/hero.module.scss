@@ -18,6 +18,12 @@
         padding: unset;
         margin: 0 auto;
         position: relative;
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        visibility: visible;
+        transition: 300ms linear;
         @media (min-width: 850px) {
             max-width: calc(100% - 125px);
         }
@@ -189,3 +195,13 @@
         transform: translate(0,0);
     }
 }
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
