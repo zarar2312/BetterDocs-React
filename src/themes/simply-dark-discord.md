@@ -4,7 +4,7 @@ author: Gibbu
 description: Makes Discord sharp and simple. A very dark theme.
 download: >-
   https://github.com/Gibbu/BetterDiscord-Themes/blob/master/SimplyDarkDiscord/SimplyDarkDiscord-Dark.theme.css
-github: 'https://github.com/Gibbu/'
+github_profile_url: 'https://github.com/Gibbu/'
 support: 'https://github.com/Gibbu/BetterDiscord-Themes/issues'
 demo: >-
   https://rawcdn.githack.com/Gibbu/BetterDiscord-Themes/b456d2ed9ca9ecf14d3ddcad2e629e20165e4b1b/SimplyDarkDiscord/SimplyDarkDiscord-Dark.theme.css

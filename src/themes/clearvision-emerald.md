@@ -3,7 +3,7 @@ title: ClearVision - Emerald
 author: Zerthox
 description: 'A peaceful, green theme with customizable colors & background!'
 download: https://github.com/Zerthox/ClearVision/blob/master/themes/ClearVision_Emerald.theme.css
-github: 'https://github.com/Zerthox/'
+github_profile_url: 'https://github.com/Zerthox/'
 support: https://github.com/Zerthox/ClearVision/issues/
 discord_server: https://discordapp.com/invite/bfH2kC
 demo: https://cdn.jsdelivr.net/gh/Zerthox/ClearVision@master/themes/ClearVision_Emerald.theme.css

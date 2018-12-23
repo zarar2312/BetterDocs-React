@@ -169,7 +169,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             author
-            github
             style
             demo
             download

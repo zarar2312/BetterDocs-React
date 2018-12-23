@@ -4,7 +4,7 @@ author: satoru8
 description:
   A simple yet complex theme.
 download: https://github.com/satoru8/Nyx/blob/master/Nyx.theme.css
-github: https://github.com/satoru8/
+github_profile_url: https://github.com/satoru8/
 support: https://github.com/satoru8/Nyx/issues/
 discord_server: http://discord.gg/fjvwb95
 demo: https://cdn.jsdelivr.net/gh/satoru8/Nyx@master/Nyx.theme.css

@@ -24,7 +24,7 @@ const Sidebar = () => (
               frontmatter {
                   title
                   author
-                  github
+                  github_profile_url
                   download
                   support
                   featured

@@ -2,8 +2,9 @@
 title: Account Details Plus
 author: rauenzi
 description: Lets you view popout, nickname and more from your account panel at the bottom.
-download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/AccountDetailsPlus
-github: https://github.com/rauenzi/
+download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/AccountDetailsPlus/
+github_profile_url: https://github.com/rauenzi/
+github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/AccountDetailsPlus/
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: 'https://discordapp.com/invite/cdzD9wF'
 thumbnail:
@@ -14,7 +15,7 @@ auto: true
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---
-Lets you view popout, nickname and more from your account panel at the bottom. For support and update announcements you can visit [Zere's server](https://bit.ly/ZeresServer).
+Lets you view popout, nickname and more from your account panel at the bottom.
 
 ## Demo
 

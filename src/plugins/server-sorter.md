@@ -3,7 +3,8 @@ title: Server Sorter
 author: rauenzi
 description: Adds the ability to do some basic sorting of your servers.
 download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/ServerSorter
-github: https://github.com/rauenzi/
+github_profile_url: https://github.com/rauenzi/
+github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/ServerSorter
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: https://discordapp.com/invite/cdzD9wF
 thumbnail:

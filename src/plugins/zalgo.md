@@ -3,7 +3,8 @@ title: Zalgo
 author: planetarian
 description: Lets you apply a sort of visual 'corruption' to your text, like a messy strikethrough.
 download: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Zalgo.plugin.js
-github: 'https://github.com/planetarian/'
+github_profile_url: 'https://github.com/planetarian/'
+github_source_url: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Zalgo.plugin.js
 support: 'https://github.com/planetarian/BetterDiscordPlugins/issues'
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 90

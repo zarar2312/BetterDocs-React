@@ -3,7 +3,8 @@ title: Channel Popouts
 author: Curtis-D
 description: Allows you to popout DMs/Servers into a new window to view more than one DM/Server at a time.
 download: 'https://github.com/Curtis-D/ChannelPopouts'
-github: 'https://github.com/Curtis-D/'
+github_profile_url: 'https://github.com/Curtis-D/'
+github_source_url: https://github.com/Curtis-D/ChannelPopouts
 support: 'https://github.com/Curtis-D/ChannelPopouts/issues'
 software: [BandagedBD, BetterDiscord]
 Thumbnail: 'https://i.imgur.com/UlPwOJl.png'

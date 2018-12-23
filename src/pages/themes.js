@@ -204,7 +204,7 @@ query allThemesQuery {
           sub
           author
           thumbnail
-          github
+          github_profile_url
           download
           support
           style
@@ -237,7 +237,7 @@ query allThemesQuery {
           sub
           author
           thumbnail
-          github
+          github_profile_url
           download
           support
           layout

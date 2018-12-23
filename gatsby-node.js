@@ -32,7 +32,7 @@ return graphql(`{
               sub
               description
               author
-              github
+              github_profile_url
               download
               status
               support
@@ -66,7 +66,7 @@ return graphql(`{
               description
               author
               thumbnail
-              github
+              github_profile_url
               status
               download
               discord_server
@@ -96,7 +96,7 @@ return graphql(`{
               description
               author
               thumbnail
-              github
+              github_profile_url
               download
               support
               layout

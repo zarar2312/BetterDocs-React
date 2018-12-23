@@ -3,7 +3,8 @@ title: Edit Servers
 description: Adds two options to your server context menu.
 author: mwittrien
 download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/EditServers
-github: 'https://github.com/mwittrien/'
+github_profile_url: 'https://github.com/mwittrien/'
+github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/EditServers
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]

@@ -3,7 +3,8 @@ title: Better Role Colors
 author: rauenzi
 description: Adds server-based role colors to typing, voice, popouts, modals and more!
 download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/BetterRoleColors
-github: https://github.com/rauenzi/
+github_profile_url: https://github.com/rauenzi/
+github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/BetterRoleColors
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: https://discordapp.com/invite/cdzD9wF
 thumbnail:

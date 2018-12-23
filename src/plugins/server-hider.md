@@ -3,7 +3,8 @@ title: Server Hider
 author: mwittrien
 description: Adds two options on your server context menu. (Right click a servericon or the servercreation button)
 download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ServerHider
-github: 'https://github.com/mwittrien/'
+github_profile_url: 'https://github.com/mwittrien/'
+github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ServerHider
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]

@@ -163,7 +163,7 @@ query allFeaturedThemesQuery {
           sub
           author
           thumbnail
-          github
+          github_profile_url
           download
           support
           style
@@ -197,7 +197,7 @@ query allFeaturedThemesQuery {
           author
           thumbnail
           demo
-          github
+          github_profile_url
           download
           support
           layout

@@ -34,10 +34,15 @@ collections:
         name: "download"
         widget: "string"
 
-      - label: "Github" 
-        name: "github"
+      - label: "Github Profile Url" 
+        name: "github_profile_url"
         widget: "string"
         default: "https://github.com/{Author}/"
+
+      - label: "Github Source Url" 
+        name: "github_source_url"
+        widget: "string"
+        default: "https://github.com/..."
 
       - label: "Support URL"
         name: "support"
@@ -132,10 +137,15 @@ collections:
         name: "download"
         widget: "string"
 
-      - label: "Github" 
-        name: "github"
+      - label: "Github Profile Url" 
+        name: "github_profile_url"
         widget: "string"
         default: "https://github.com/{Author}/"
+
+      - label: "Github Source Url" 
+        name: "github_source_url"
+        widget: "string"
+        default: "https://github.com/..."
 
       - label: "Support URL"
         name: "support"
@@ -155,6 +165,7 @@ collections:
       - label: "Supported Software (Seperated by comma ',')" 
         name: "software"
         widget: "list"
+        default: ['BandagedBD','BetterDiscord']
 
       - label: "Thumbnail"
         name: "Thumbnail"

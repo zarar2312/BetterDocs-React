@@ -139,7 +139,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             author
-            github
+            github_profile_url
             download
             support
             layout

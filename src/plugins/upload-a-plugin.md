@@ -21,7 +21,7 @@ I promise it doesn't take long :)
   author: {Author Name}
   description: A SHORT Description
   download: https://github.com/
-  github: https://github.com/{Author Name}/
+  github_profile_url: https://github.com/{Author Name}/
   support:
   discord_server: https://discord.gg/INVITE
   tags: []

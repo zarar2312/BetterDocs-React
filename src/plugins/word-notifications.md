@@ -3,7 +3,8 @@ title: Word Notifications
 author: qwerasd205
 description: Get notifications when certain words are said.
 download: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/WordNotifications.plugin.js
-github: https://github.com/qwerasd205/
+github_profile_url: https://github.com/qwerasd205/
+github_source_url: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/WordNotifications.plugin.js
 support: https://github.com/qwerasd205/qwerasd205.github.io/issues
 software: [BandagedBD,,BetterDiscord]
 images:

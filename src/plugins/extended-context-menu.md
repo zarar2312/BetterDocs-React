@@ -3,7 +3,8 @@ title: Extended Context Menu
 author: qwerasd205
 description: Add useful stuff to the context menu
 download: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/ExtendedContextMenu.plugin.js
-github: https://github.com/qwerasd205/
+github_profile_url: https://github.com/qwerasd205/
+github_Source_url: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/ExtendedContextMenu.plugin.js
 support: https://github.com/qwerasd205/qwerasd205.github.io/issues
 software: [BandagedBD,BetterDiscord]
 images:

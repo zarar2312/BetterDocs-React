@@ -3,7 +3,8 @@ title: renamer
 author: megamit
 description: Give anyone a nickname that only you can see simply by right clicking on them.
 download: 'https://github.com/megamit/repository/tree/gh-pages/renamer'
-github: 'https://github.com/megamit/'
+github_profile_url: 'https://github.com/megamit/'
+github_source_url: 'https://github.com/megamit/repository/tree/gh-pages/renamer'
 support: 'https://github.com/megamit/repository/issues'
 software: [BetterDiscord]
 images: []

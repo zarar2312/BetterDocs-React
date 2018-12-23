@@ -1,10 +1,10 @@
 ---
 title: Auto Correct
 author: Metalloriff
-description:
-  Automatically replaces misspelled words with the first correction, with optional automatic capitalization and punctuation. Requires either Windows 8 or above, Mac, or DevilBro's SpellCheck plugin.
+description: Automatically replaces misspelled words with the first correction, with optional automatic capitalization and punctuation. Requires either Windows 8 or above, Mac, or DevilBro's SpellCheck plugin.
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AutoCorrect.plugin.js
-github: 'https://github.com/Metalloriff'
+github_profile_url: 'https://github.com/Metalloriff'
+github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AutoCorrect.plugin.js
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: 'https://discord.gg/yNqzuJa'
 auto: true
