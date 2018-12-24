@@ -23,8 +23,8 @@ const Author = ({ pageContext, data }) => {
         ]}>
         <meta property="og:site_name" content="BetterDocs"/>
         <meta property="og:title" content={node.frontmatter.author + `'s Profile`}/>
-        <meta property="og:description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. ` + `${node.frontmatter.github_profile_url && "Follow him on Github!"}` `${node.frontmatter.discord_server && "Join the Discord Server too!"}`}/>
-        <meta property="description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. ` + `${node.frontmatter.github_profile_url && "Follow him on Github!"}` `${node.frontmatter.discord_server && "Join the Discord Server too!"}`}/>
+        <meta property="og:description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
+        <meta property="description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
         <meta property="og:url" content={"https://betterdocs.us/profile/" + node.frontmatter.author} />
         <html lang="en" />
       </Helmet>
