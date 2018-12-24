@@ -30,6 +30,7 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
           ]}
         >
+        <meta name="google-site-verification" content="M7sj3VxxFwXYhavVMDLr4XxYPje4GEAFcx9Au42ImSM" />
         <meta name="description" content="A Discord enhancement project. Free quality Themes, Plugins and Hacks for Discord and easy installation instructions for BetterDiscord and more!" />
         <meta property="og:site_name" content="BetterDocs"/>
         <meta property="og:image" content="https://i.imgur.com/B0vcfRw.png"/>
