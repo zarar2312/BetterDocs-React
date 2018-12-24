@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import Layout from '../components/layout'
 import style from '../styles/author-page.module.scss'
 import { graphql, Link } from "gatsby"
+import Helmet from 'react-helmet'
 
 const Author = ({ pageContext, data }) => {
   const { authors } = pageContext
@@ -13,6 +14,21 @@ const Author = ({ pageContext, data }) => {
 
   return (
     <Layout>
+      {data.limit.edges.map(({ node }) => (
+      <Helmet
+        key={node.id}
+        title={ node.frontmatter.author + `'s Profile | BetterDocs` }
+        meta={[
+          { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
+        ]}>
+        <meta property="og:site_name" content="BetterDocs"/>
+        <meta property="og:title" content={node.frontmatter.author + `'s Profile`}/>
+        <meta property="og:description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. ` + `${node.frontmatter.github_profile_url && "Follow him on Github!"}` `${node.frontmatter.discord_server && "Join the Discord Server too!"}`}/>
+        <meta property="description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. ` + `${node.frontmatter.github_profile_url && "Follow him on Github!"}` `${node.frontmatter.discord_server && "Join the Discord Server too!"}`}/>
+        <meta property="og:url" content={"https://betterdocs.us/profile/" + node.frontmatter.author} />
+        <html lang="en" />
+      </Helmet>
+      ))}
     <div className={style.wrapper}>
       <div className={style.titleBar}>
         {data.all &&
