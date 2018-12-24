@@ -18,6 +18,11 @@
         display: block;
         transition-duration: 800ms;
         margin-bottom: 15px;
+        //transform: translateY(0em);
+        animation-name: slideTop;
+        animation-duration: 1s;
+        transform: 300ms linear;
+        //animation-fill-mode: forwards;
         @media (min-width: 850px) {
             margin-top: unset;
             display: flex;
@@ -28,7 +33,7 @@
             border-bottom-left-radius: 0px;
             -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
             box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-            transform: translateY(-0.5em);
+            transform: translateY(-0.5em) !important;
         }
         &:nth-child(odd):hover {
             .wave {
@@ -85,6 +90,10 @@
             padding: 0.5rem 0rem 1.6rem 0rem;
             justify-content: center;
             flex-basis: 10%;
+            //border-bottom: 1px solid #fff;
+            @media (min-width: 850px) {
+                padding: 0.5rem 0rem 0.85rem 0rem;
+            }
             .h1 {
                 font-size: 1rem;
                 color: #fff;
@@ -116,9 +125,6 @@
                     transition: 300ms linear;
                 }
             }
-            @media (min-width: 850px) {
-                font-size: 1rem;
-            }
         }
         &[alt="BandagedBD"] {
             border: 1px solid #339b78;
@@ -126,11 +132,17 @@
             .header {
                 background: #339b78;
             }
+            .feature {
+                color: #339b78;
+            }
         }
         &[alt="EnhancedDiscord"] {
             order: 2;
             .header {
                 background: #9b3333;
+            }
+            .feature {
+                color: #9b3333;
             }
         }
         &[alt="BeautifulDiscord"] {
@@ -138,17 +150,26 @@
             .header {
                 background: #7289DA;
             }
+            .feature {
+                color: #7289DA;
+            }
         }
         &[alt="DiscordInjections"] {
             order: 5;
             .header {
                 background: #339b78;
             }
+            .feature {
+                color: #339b78;
+            }
         }
         &[alt="PowerCord"] {
             order: 3;
             .header {
                 background: #d18118;
+            }
+            .feature {
+                color: #d18118;
             }
         }
         &[alt="BetterDiscord"] {
@@ -161,6 +182,12 @@
                 .info {
                     opacity: 1;
                 }
+            }
+            .header {
+                background-color: #005eac;
+            }
+            .feature {
+                color: #005eac;
             }
             .info {
                 display: flex;
@@ -186,9 +213,6 @@
                     color: #339b78;
                 }
             }
-            .header {
-                background: #005eac;
-            }
         }
         .body {
             padding: 0.2rem 0;
@@ -199,7 +223,6 @@
                 justify-content: center;
                 //align-items: center;
                 .feature {
-                    color: #339b78;
                     font-weight: bold;
                     letter-spacing: 0.03rem;
                     //border-bottom: 1px solid #333;
@@ -217,10 +240,38 @@
         }
         .footer {
             flex: 1;
-            padding: 1rem;
+            padding: 0.5rem 1rem;
             border-top: 1px solid #eee;
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            .download {
+                font-size: 0.8rem;
+                background-color: #339b78;
+                color: #fff;
+                line-height: unset;
+                align-self: center;
+                padding: 0.3rem 0.7rem;
+                border-radius: 2px;
+                transition: 300ms;
+                &:hover, &:focus {
+                    background-color: darken($color: #339b78, $amount: 6);
+                    outline: unset;
+                }
+                &:active {
+                    background-color: darken($color: #339b78, $amount: 10);
+                }
+            }
         }
+    }
+}
+@keyframes slideTop {
+    from {
+        transform: translateY(-0.5em);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0em);
+        opacity: 1;
     }
 }

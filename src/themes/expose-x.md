@@ -17,6 +17,7 @@ images:
     name: ExposeX Preview - Custom Colors
 auto: true
 status: Updated
+featured: true
 style: dark
 ghcommentid: 6
 layout: product

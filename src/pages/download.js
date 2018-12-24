@@ -7,7 +7,7 @@ const DownloadPage = () => (
   <Layout>
     <div className={style.wrapper}
     >
-    <a className={style.card} target="blank" alt="BandagedBD" href="https://github.com/rauenzi/BetterDiscordApp/releases"
+    <div className={style.card} target="blank" alt="BandagedBD"
     >
     <div className={style.header}
     >
@@ -28,13 +28,21 @@ const DownloadPage = () => (
         <div className={style.feature}>Themes</div>
         <div className={style.feature}>Plugins</div>
         <div className={style.feature}>CSS Hot-Reload</div>
+        <div className={style.feature}>Twitch.tv Emotes</div>
+        <div className={style.feature}>BetterTTV Emotes</div>
+        <div className={style.feature}>FrankerFaceZ Emotes</div>
+        <div className={style.feature} alt="null">Telemetry Blocking</div>
       </div>
     </div>
     <div className={style.footer}>
-    
+      <a 
+      className={style.download}
+      href="https://github.com/rauenzi/BetterDiscordApp/releases"
+      target="blank"
+      >Download</a>
     </div>
-    </a>
-    <a className={style.card} target="blank" alt="EnhancedDiscord" href="https://enhanceddiscord.com/"
+    </div>
+    <div className={style.card} target="blank" alt="EnhancedDiscord"
     >
     <div className={style.header}
     >
@@ -55,13 +63,21 @@ const DownloadPage = () => (
         <div className={style.feature}>Themes</div>
         <div className={style.feature}>Plugins</div>
         <div className={style.feature}>CSS Hot-Reload</div>
+        <div className={style.feature} alt="null">Twitch.tv Emotes</div>
+        <div className={style.feature} alt="null">BetterTTV Emotes</div>
+        <div className={style.feature} alt="null">FrankerFaceZ Emotes</div>
+        <div className={style.feature}>Telemetry Blocking</div>
       </div>
     </div>
     <div className={style.footer}>
-    
+      <a 
+      className={style.download}
+      href="https://enhanceddiscord.com/"
+      target="blank"
+      >Download</a>
     </div>
-    </a>
-    <a className={style.card} target="blank" alt="DiscordInjections" href="https://github.com/DiscordInjections/DiscordInjections"
+    </div>
+    <div className={style.card} target="blank" alt="DiscordInjections"
     >
     <div className={style.header}
     >
@@ -82,13 +98,21 @@ const DownloadPage = () => (
         <div className={style.feature}>Themes</div>
         <div className={style.feature}>Plugins</div>
         <div className={style.feature}>CSS Hot-Reload</div>
+        <div className={style.feature} alt="null">Twitch.tv Emotes</div>
+        <div className={style.feature} alt="null">BetterTTV Emotes</div>
+        <div className={style.feature} alt="null">FrankerFaceZ Emotes</div>
+        <div className={style.feature} alt="null">Telemetry Blocking</div>
       </div>
     </div>
     <div className={style.footer}>
-    
+      <a 
+      className={style.download}
+      href="https://github.com/DiscordInjections/DiscordInjections"
+      target="blank"
+      >Download</a>
     </div>
-    </a>
-    <a className={style.card} target="blank" alt="BeautifulDiscord" href="https://sites.google.com/view/thatawesomeguy173web/beautifuldiscord"
+    </div>
+    <div className={style.card} target="blank" alt="BeautifulDiscord"
     >
     <div className={style.header}
     >
@@ -109,13 +133,21 @@ const DownloadPage = () => (
         <div className={style.feature}>Themes</div>
         <div className={style.feature} alt="null">Plugins</div>
         <div className={style.feature}>CSS Hot-Reload</div>
+        <div className={style.feature} alt="null">Twitch.tv Emotes</div>
+        <div className={style.feature} alt="null">BetterTTV Emotes</div>
+        <div className={style.feature} alt="null">FrankerFaceZ Emotes</div>
+        <div className={style.feature} alt="null">Telemetry Blocking</div>
       </div>
     </div>
     <div className={style.footer}>
-    
+      <a 
+      className={style.download}
+      href="https://sites.google.com/view/thatawesomeguy173web/beautifuldiscord"
+      target="blank"
+      >Download</a>
     </div>
-    </a>
-    <a className={style.card} target="blank" alt="PowerCord" href="https://github.com/aetheryx/powercord"
+    </div>
+    <div className={style.card} target="blank" alt="PowerCord"
     >
     <div className={style.header}
     >
@@ -136,13 +168,21 @@ const DownloadPage = () => (
         <div className={style.feature}>Themes</div>
         <div className={style.feature}>Plugins</div>
         <div className={style.feature}>CSS Hot-Reload</div>
+        <div className={style.feature} alt="null">Twitch.tv Emotes</div>
+        <div className={style.feature} alt="null">BetterTTV Emotes</div>
+        <div className={style.feature} alt="null">FrankerFaceZ Emotes</div>
+        <div className={style.feature} alt="null">Telemetry Blocking</div>
       </div>
     </div>
     <div className={style.footer}>
-    
+      <a 
+      className={style.download}
+      href="https://github.com/aetheryx/powercord"
+      target="blank"
+      >Download</a>
     </div>
-    </a>
-    <div className={style.card} target="blank" alt="BetterDiscord" href="https://github.com/Jiiks/BetterDiscordApp/releases"
+    </div>
+    <div className={style.card} target="blank" alt="BetterDiscord"
     >
     <div className={style.header}
     >
@@ -163,10 +203,18 @@ const DownloadPage = () => (
         <div className={style.feature}>Themes</div>
         <div className={style.feature}>Plugins</div>
         <div className={style.feature}>CSS Hot-Reload</div>
+        <div className={style.feature}>Twitch.tv Emotes</div>
+        <div className={style.feature}>BetterTTV Emotes</div>
+        <div className={style.feature}>FrankerFaceZ Emotes</div>
+        <div className={style.feature} alt="null">Telemetry Blocking</div>
       </div>
     </div>
     <div className={style.footer}>
-    
+      <a 
+      className={style.download}
+      href="https://betterdiscord.net"
+      target="blank"
+      >Download</a>
     </div>
       <div className={style.info}><p><b>Info: </b>This mod has been deprecated please use it's successor instead, BandagedBD.</p></div>
     </div>
