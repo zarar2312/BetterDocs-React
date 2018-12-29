@@ -2,18 +2,19 @@
 title: Chemical
 author: codedotspectra
 description: A compact and highly customizable theme.
-download: https://github.com/codedotspectra/chemical
-github_profile_url: https://github.com/codedotspectra/
-github_source_url: https://github.com/codedotspectra/chemical
-support: https://github.com/codedotspectra/chemical/issues
-discord_server: http://discord.gg/nfggDZz
-demo: https://rawcdn.githack.com/codedotspectra/chemical/9f0b396adcda78f4e76809bae573f70d5d06c9e5/chemical.theme.css
-thumbnail: https://i.imgur.com/ndUkajR.jpg
-status: Updated
+download: >-
+  https://github.com/codedotspectra/themes/blob/master/chemical/chemical.theme.css
+github_profile_url: 'https://github.com/codedotspectra/'
+github_source_url: 'https://github.com/codedotspectra/themes/tree/master/chemical'
+support: 'https://github.com/codedotspectra/chemical/issues'
+discord_server: 'http://discord.gg/nfggDZz'
+demo: >-
+  https://rawcdn.githack.com/codedotspectra/themes/93a610f5a7969cd33c286a68816ab428f2e2b1a3/chemical/chemical.theme.css
+Thumbnail: 'https://i.imgur.com/ndUkajR.jpg'
 auto: true
-featured: true
+status: Updated
 style: dark
-ghcommentid: # DON'T CHANGE
-layout: product # DON'T CHANGE
+layout: product
+date: 2018-12-29T20:12:29.293Z
 ---
-A compact and highly customizable theme.
+
