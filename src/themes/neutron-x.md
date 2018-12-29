@@ -2,17 +2,19 @@
 title: Neutron X
 author: codedotspectra
 description: A compact and highly customizable theme.
-download: https://github.com/codedotspectra/discordneutron
-github_profile_url: https://github.com/codedotspectra/
-support: https://github.com/codedotspectra/discordneutron/issues/
-discord_server: http://discord.gg/nfggDZz
-demo: https://rawcdn.githack.com/codedotspectra/discordneutron/eee4296ef31a52c6584bdabe4694671171207f74/neutronX.theme.css
-thumbnail: https://i.imgur.com/LNtTeZi.jpg
-status: Updated
+download: >-
+  https://github.com/codedotspectra/themes/blob/master/neutron/neutronX.theme.css
+github_profile_url: 'https://github.com/codedotspectra/'
+github_source_url: 'https://github.com/codedotspectra/themes/tree/master/neutron'
+support: 'https://github.com/codedotspectra/discordneutron/issues/'
+discord_server: 'http://discord.gg/nfggDZz'
+demo: >-
+  https://rawcdn.githack.com/codedotspectra/themes/93a610f5a7969cd33c286a68816ab428f2e2b1a3/neutron/neutronX.theme.css
+Thumbnail: 'https://i.imgur.com/LNtTeZi.jpg'
 auto: true
-featured: true
+status: Updated
 style: dark
-ghcommentid: # DON'T CHANGE
-layout: product # DON'T CHANGE
+layout: product
+date: 2018-12-29T20:21:15.736Z
 ---
-A compact and highly customizable theme.
+
