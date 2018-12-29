@@ -1,9 +1,7 @@
 ---
 title: Colorize Reborn
 author: codedotspectra
-description: >-
-  A highly customizable theme that let's you change it's background or if you
-  want a solid color instead of your choice then this is the theme for you!
+description: A highly customizable theme that let's you change it's background or if you want a solid color instead of your choice then this is the theme for you!
 download: >-
   https://github.com/codedotspectra/themes/blob/master/colorize/colorize_reborn.theme.css
 github_profile_url: 'https://github.com/codedotspectra/'
@@ -12,11 +10,12 @@ support: 'https://github.com/codedotspectra/themes/issues'
 discord_server: 'http://discord.gg/nfggDZz'
 demo: >-
   https://rawcdn.githack.com/codedotspectra/themes/93a610f5a7969cd33c286a68816ab428f2e2b1a3/colorize/colorize_reborn.theme.css
-Thumbnail: 'https://i.imgur.com/wIjnxPA.jpg'
+thumbnail: 'https://i.imgur.com/wIjnxPA.jpg'
 auto: true
 status: Updated
+featured: true
 style: dark
 layout: product
 date: 2018-12-29T20:13:19.640Z
 ---
-
+A highly customizable theme that let's you change it's background or if you want a solid color instead of your choice then this is the theme for you!

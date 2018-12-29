@@ -65,7 +65,7 @@ collections:
         required: false
 
       - label: "Thumbnail"
-        name: "Thumbnail"
+        name: "thumbnail"
         widget: "string"
 
       - label: "Images"
@@ -80,6 +80,11 @@ collections:
           - label: "Image"
             name: "image"
             widget: "image"
+      
+      - label: "Featured?"
+          name: "featured"
+          default: ""
+          widget: "boolean"
 
       - label: "Auto Download?"
         name: "auto"
@@ -168,7 +173,7 @@ collections:
         default: ['BandagedBD','BetterDiscord']
 
       - label: "Thumbnail"
-        name: "Thumbnail"
+        name: "thumbnail"
         widget: "string"
         required: false
 

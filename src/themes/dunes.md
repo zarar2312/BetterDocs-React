@@ -9,12 +9,12 @@ support: 'https://github.com/codedotspectra/themes/issues'
 discord_server: 'http://discord.gg/nfggDZz'
 demo: >-
   https://rawcdn.githack.com/codedotspectra/themes/93a610f5a7969cd33c286a68816ab428f2e2b1a3/dunes/dunes.theme.css
-Thumbnail: 'https://i.imgur.com/VJCxWIJ.jpg'
-images: []
+thumbnail: 'https://i.imgur.com/VJCxWIJ.jpg'
 auto: true
 status: Updated
+featured: true
 style: dark
 layout: product
 date: 2018-12-29T19:15:56.647Z
 ---
-
+Rounded, minimalist, smooth & clean
