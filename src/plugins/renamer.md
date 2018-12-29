@@ -6,7 +6,7 @@ download: 'https://github.com/megamit/repository/tree/gh-pages/renamer'
 github_profile_url: 'https://github.com/megamit/'
 github_source_url: 'https://github.com/megamit/repository/tree/gh-pages/renamer'
 support: 'https://github.com/megamit/repository/issues'
-software: [BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 images: []
 status: Outdated
 auto: true
