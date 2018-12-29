@@ -8,7 +8,7 @@ download: >-
   https://github.com/codedotspectra/themes/blob/master/discordelectro/discordelectro.theme.css
 github_profile_url: 'https://github.com/codedotspectra/'
 github_source_url: 'https://github.com/codedotspectra/themes/tree/master/discordelectro'
-support: 'https://github.com/codedotspectra/discordelectro/issues'
+support: 'https://github.com/codedotspectra/themes/issues'
 discord_server: 'http://discord.gg/nfggDZz'
 demo: >-
   https://rawcdn.githack.com/codedotspectra/themes/93a610f5a7969cd33c286a68816ab428f2e2b1a3/discordelectro/discordelectro.theme.css
