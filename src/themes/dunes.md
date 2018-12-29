@@ -8,7 +8,7 @@ github_source_url: 'https://github.com/codedotspectra/themes/tree/master/dunes'
 support: 'https://github.com/codedotspectra/dunes/issues/'
 discord_server: 'http://discord.gg/nfggDZz'
 demo: >-
-  https://rawcdn.githack.com/codedotspectra/dunes/593dc664c03784d8f50565c976ff8206154ad8c0/dunes.theme.css
+  https://rawcdn.githack.com/codedotspectra/themes/93a610f5a7969cd33c286a68816ab428f2e2b1a3/dunes/dunes.theme.css
 Thumbnail: 'https://i.imgur.com/VJCxWIJ.jpg'
 images: []
 auto: true
