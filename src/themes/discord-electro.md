@@ -1,20 +1,23 @@
 ---
 title: Discord Electro
 author: codedotspectra
-description: Discord Electro is compact, squared & minimalist. It adds new icons & animations
-download: https://github.com/codedotspectra/discordelectro
-github_profile_url: https://github.com/codedotspectra/
-github_source_url: https://github.com/codedotspectra/discordelectro
-support: https://github.com/codedotspectra/discordelectro/issues
-discord_server: http://discord.gg/nfggDZz
-demo: https://rawcdn.githack.com/codedotspectra/discordelectro/a3cdf4b218d0a580fe0cc571a6f1ab71ce358e0b/discordelectro.theme.css
-thumbnail: https://i.imgur.com/MYNpWl8.png
-status: Updated
-auto: true
-featured:  true
-style: dark
+description: >-
+  Discord Electro is compact, squared & minimalist. It adds new icons &
+  animations
+download: >-
+  https://github.com/codedotspectra/themes/blob/master/discordelectro/discordelectro.theme.css
+github_profile_url: 'https://github.com/codedotspectra/'
+github_source_url: 'https://github.com/codedotspectra/themes/tree/master/discordelectro'
+support: 'https://github.com/codedotspectra/themes/issues'
+discord_server: 'http://discord.gg/nfggDZz'
+demo: >-
+  https://rawcdn.githack.com/codedotspectra/themes/93a610f5a7969cd33c286a68816ab428f2e2b1a3/discordelectro/discordelectro.theme.css
 tags: []
-ghcommentid: # DON'T CHANGE
-layout: product # DON'T CHANGE
+Thumbnail: 'https://i.imgur.com/MYNpWl8.png'
+auto: true
+status: Updated
+style: dark
+layout: product
+date: 2018-12-29T20:15:35.454Z
 ---
-Discord Electro is compact, squared & minimalist. It adds new icons & animations
+
