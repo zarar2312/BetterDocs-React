@@ -245,6 +245,47 @@
                     left: 5px;
                 }
             }
+            .gitlabContainer {
+                //margin-top: 13px;
+                margin-right: 10px;
+                //line-height: 1.8em;
+                &:hover {
+                    svg {
+                        fill: #262626;
+                    }
+                }
+                svg {
+                    height: 0.9rem;
+                    width: 1rem;
+                    opacity: 1;
+                    transition: 800ms ease-in-out;
+                    position: relative;
+                    left: 0px;
+                    top: 7px;
+                    fill: #fff;
+                }
+                a {
+                    background-color: #262626;
+                    color: #fff;
+                    font-size: 0.55rem;
+                    padding: 0.15rem 0.4rem 0.2rem 0rem;
+                    border-radius: 2px;
+                    border: 1px solid #262626;
+                    transition: all 300ms linear;
+                    &:hover {
+                        color: #262626;
+                        background-color: #fff;
+                        border: 1px solid #262626;
+                    }
+                }
+                &::after {
+                    content: "|";
+                    color: #d2d2d2;
+                    position: relative;
+                    top: 2px;
+                    left: 5px;
+                }
+            }
             .discordContainer {
                 //margin-top: 13px;
                 margin-right: 10px;
