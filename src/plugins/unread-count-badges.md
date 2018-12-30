@@ -8,7 +8,7 @@ github_profile_url: https://github.com/Metalloriff
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/UnreadCountBadges.plugin.js
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/yNqzuJa
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 images:
   - name: Unread Count Badges Preview
     image: https://i.imgur.com/oqvn83W.png

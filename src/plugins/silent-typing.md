@@ -6,7 +6,7 @@ description:
 download: https://github.com/noodlebox/betterdiscord-plugins/blob/master/SilentTyping.plugin.js
 github_profile_url: https://github.com/noodlebox/
 github_source_url: https://github.com/noodlebox/betterdiscord-plugins/blob/master/SilentTyping.plugin.js
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 status: Outdated
 auto: true
 ghcommentid: 62

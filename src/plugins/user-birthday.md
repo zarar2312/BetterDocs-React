@@ -8,7 +8,7 @@ github_profile_url: https://github.com/Metalloriff/
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/UserBirthdays.plugin.js
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discord.gg/yNqzuJa
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 images:
   - name: User Birthday Preview
     image: https://i.imgur.com/9pDhYlm.png

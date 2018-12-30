@@ -8,7 +8,7 @@ github_soruce_url:
 support: https://github.com/Mega-Mewthree/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/ZYND2Xd
 tags:
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 auto: true
 status: Updated
 ghcommentid: 34

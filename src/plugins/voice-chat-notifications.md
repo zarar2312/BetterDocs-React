@@ -8,7 +8,7 @@ github_profile_url: https://github.com/Metalloriff
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/VoiceChatNotifications.plugin.js
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discord.gg/yNqzuJa
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 tags: [voice]
 images:
   - name: Voice Chat Notifications Preview

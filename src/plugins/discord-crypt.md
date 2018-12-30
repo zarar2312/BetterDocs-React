@@ -6,7 +6,7 @@ download: https://gitlab.com/leogx9r/DiscordCrypt/blob/master/src/discordCrypt.p
 gitlab_profile_url: https://gitlab.com/leogx9r/
 gitlab_source_url: https://gitlab.com/leogx9r/DiscordCrypt/blob/master/src/discordCrypt.plugin.js
 support: https://gitlab.com/leogx9r/DiscordCrypt/issues
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 ghcommentid: 52
 layout: product
 ---

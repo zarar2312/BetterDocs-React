@@ -9,7 +9,7 @@ github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/NotificationSounds
 support: 'https://discord.gg/Z7PBux5'
 discord_server: https://github.com/mwittrien/BetterDiscordAddons/issues/
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 ghcommentid: 49
 layout: product
 date: 2018-10-22T23:26:41.466Z

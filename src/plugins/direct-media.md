@@ -6,7 +6,7 @@ download: https://github.com/samfun123/script-storage/blob/master/betterdiscord/
 github_profile_url: 'https://github.com/samfun123/'
 github_source_url: https://github.com/samfun123/script-storage/blob/master/betterdiscord/plugins/directMedia.plugin.js
 support: 'https://github.com/samfun123/script-storage/issues'
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 status: Outdated
 auto: true
 layout: product

@@ -7,7 +7,7 @@ github_profile_url: 'https://github.com/nirewen/'
 github_source_url: 'https://github.com/nirewen/Citador'
 support: https://github.com/nirewen/Citador/issues/
 discord_server: 'https://discord.gg/tQrdqKG'
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 ghcommentid: 86
 layout: product
 date: 2018-10-20T05:25:17.890Z

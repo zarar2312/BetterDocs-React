@@ -9,7 +9,7 @@ support: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: 'https://discordapp.com/invite/cdzD9wF'
 thumbnail:
 tags:
-software: [BandagedBD,BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 status: Updated
 auto: true
 ghcommentid: # DON'T CHANGE

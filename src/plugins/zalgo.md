@@ -6,7 +6,7 @@ download: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Zalgo.
 github_profile_url: 'https://github.com/planetarian/'
 github_source_url: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Zalgo.plugin.js
 support: 'https://github.com/planetarian/BetterDiscordPlugins/issues'
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 ghcommentid: 90
 layout: product
 date: 2018-10-20T05:32:43.000Z

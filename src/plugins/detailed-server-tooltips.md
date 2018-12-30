@@ -8,7 +8,7 @@ github_profile_url: https://github.com/Metalloriff
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/DetailedServerTooltips.plugin.js
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/yNqzuJa
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 images:
   - name: Detailed Server Tooltips Preview
     image: https://i.imgur.com/ASfjHaw.png

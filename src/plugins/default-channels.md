@@ -9,7 +9,7 @@ download: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Defaul
 github_profile_url: 'https://github.com/planetarian/'
 github_souce_url: https://github.com/planetarian/BetterDiscordPlugins/blob/master/DefaultChannels.plugin.js
 support: 'https://github.com/planetarian/BetterDiscordPlugins/issues'
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 images:
   - image: /images/user_uploads/c9fef44e-8d8d-478b-9889-3f8a18852815.gif
     name: Default Channels Preview

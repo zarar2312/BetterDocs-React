@@ -6,7 +6,7 @@ download: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/Extende
 github_profile_url: https://github.com/qwerasd205/
 github_Source_url: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/ExtendedContextMenu.plugin.js
 support: https://github.com/qwerasd205/qwerasd205.github.io/issues
-software: [BandagedBD,BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 images:
 - name: Extended Context Menu Preview
   image: https://imgur.com/upload # Direct image link should only be used here. Imgur isn't required but if it isn't used then further inspection will happen

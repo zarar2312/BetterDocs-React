@@ -7,7 +7,7 @@ github_profile_url: https://github.com/Metalloriff
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/PinPluginsAndThemes.plugin.js
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/yNqzuJa
-software: [BandagedBD, BetterDiscord]
+software: [BandagedBD, EnhancedDiscord, BetterDiscord]
 images:
   - name: Pin Plugins And Themes Preview
     image: https://i.imgur.com/5OiSRAn.png
