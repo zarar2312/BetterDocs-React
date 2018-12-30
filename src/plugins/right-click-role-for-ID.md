@@ -7,7 +7,7 @@ github_profile_url: https://github.com/Mega-Mewthree
 github_source_url: https://github.com/Mega-Mewthree/BetterDiscordPlugins/tree/master/Plugins/RightClickRoleForID
 support: https://github.com/Mega-Mewthree/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/ZYND2Xd
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 ghcommentid: 58
 layout: product
 ---

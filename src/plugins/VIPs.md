@@ -6,7 +6,7 @@ download: https://github.com/Curtis-D/VIPs
 github_profile_url: https://github.com/Curtis-D
 github_source_url: https://github.com/Curtis-D/VIPs
 support: https://github.com/Curtis-D/VIPs/issues
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 images:
   - name: VIPs Preview
     image: https://i.imgur.com/g1ytdK3.png

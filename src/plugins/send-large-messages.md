@@ -7,7 +7,7 @@ github_profile_url: https://github.com/mwittrien
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/SendLargeMessages
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: https://discordapp.com/invite/Z7PBux5
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 ghcommentid: 37
 layout: product
 ---

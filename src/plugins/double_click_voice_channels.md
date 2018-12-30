@@ -8,7 +8,7 @@ github_profile_url: https://github.com/Metalloriff/
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/DoubleClickVoiceChannels.plugin.js
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discord.gg/yNqzuJa
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 tags: [voice]
 ghcommentid: 43
 layout: product

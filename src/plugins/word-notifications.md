@@ -6,7 +6,7 @@ download: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/WordNot
 github_profile_url: https://github.com/qwerasd205/
 github_source_url: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/WordNotifications.plugin.js
 support: https://github.com/qwerasd205/qwerasd205.github.io/issues
-software: [BandagedBD, EnhancedDiscord,BetterDiscord]
+software: [BandagedBD,,BetterDiscord]
 images:
 - name: Word Notifications Preview
   image: https://imgur.com/upload # Direct image link should only be used here. Imgur isn't required but if it isn't used then further inspection will happen

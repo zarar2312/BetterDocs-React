@@ -7,7 +7,7 @@ download: https://github.com/Arashiryuu/crap/blob/master/doesNotEqualsInsertion.
 github_profile_url: https://github.com/Arashiryuu/
 github_source_url: https://github.com/Arashiryuu/crap/blob/master/doesNotEqualsInsertion.plugin.js
 support: https://github.com/Arashiryuu/crap/issues
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 ghcommentid: 51
 layout: product
 ---

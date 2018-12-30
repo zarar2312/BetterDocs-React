@@ -7,7 +7,7 @@ download: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/BDBGone
 github_profile_url: https://github.com/qwerasd205/
 github_source_url: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/BDBGone.plugin.js
 support: https://github.com/qwerasd205/qwerasd205.github.io/issues
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 images:
   - name: BD B Gone Preview
     image: https://i.imgur.com/hYAsqSl.png

@@ -6,7 +6,7 @@ download: https://github.com/Arashiryuu/crap/blob/master/ToastIntegrated/KillXD/
 github_profile_url: https://github.com/Arashiryuu/
 github_source_url: https://github.com/Arashiryuu/crap/blob/master/ToastIntegrated/KillXD/KillXD.plugin.js
 support: https://github.com/Arashiryuu/crap/issues
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 ghcommentid: 48
 layout: product
 ---

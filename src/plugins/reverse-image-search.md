@@ -11,7 +11,7 @@ github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ReverseImageSearch
 support: https://github.com/mwittrien/BetterDiscordAddons/
 discord_server: 'https://discord.gg/Z7PBux5'
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 ghcommentid: 57
 layout: product
 date: 2018-10-22T23:26:07.733Z

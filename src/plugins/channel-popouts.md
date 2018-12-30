@@ -6,7 +6,7 @@ download: 'https://github.com/Curtis-D/ChannelPopouts'
 github_profile_url: 'https://github.com/Curtis-D/'
 github_source_url: https://github.com/Curtis-D/ChannelPopouts
 support: 'https://github.com/Curtis-D/ChannelPopouts/issues'
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 thumbnail: 'https://i.imgur.com/UlPwOJl.png'
 images: []
 status: Updated

@@ -7,7 +7,7 @@ download: https://github.com/Arashiryuu/crap/tree/master/ToastIntegrated/HashTag
 github_profile_url: https://github.com/Arashiryuu/
 github_source_url: https://github.com/Arashiryuu/crap/tree/master/ToastIntegrated/HashTagsReborn
 support: https://github.com/Arashiryuu/crap/issues
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 ghcommentid: 47
 layout: product
 ---

@@ -8,7 +8,7 @@ github_profile_url: https://github.com/Metalloriff
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/ReactionImages.plugin.js
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/yNqzuJa 
-software: [BandagedBD, EnhancedDiscord, BetterDiscord]
+software: [BandagedBD, BetterDiscord]
 images:
   - name: Reaction Images Preview
     image: https://i.imgur.com/ZOb6wCF.png
