@@ -1,7 +1,7 @@
 ---
 title: Upload a Plugin
 sub: Uploading a plugin is as easy as 1, 2, 3...uhh and maybe more.
-software: [BandagedBD,EnhancedDiscord,DiscordInjections,BetterDiscord]
+software: [BandagedBD,EnhancedDiscord,PowerCord,DiscordInjections,BetterDiscord]
 description: Want to submit your plugin to our Showcase? Follow these instructions slow & carefully to get your plugin featured for free!
 status: none
 ---
