@@ -9,6 +9,8 @@ import Stars from "../images/stars.svg"
 import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
 
+// Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
+
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
@@ -43,7 +45,7 @@ const Tagss = ({ pageContext, data }) => {
               >
                 <LazyLoad once={true} height="100%"
                   placeholder={<img className={style.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
-                <img className={style.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
+                <img className={style.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail}/>
                 </LazyLoad>
                 { node.frontmatter.featured &&
                   <div className={style.icon}>
