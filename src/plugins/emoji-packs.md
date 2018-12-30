@@ -2,10 +2,10 @@
 title: Emoji Packs
 description: Allows you to replace Discord's emojis with a new set.
 author: joe27g
-download: 'https://github.com/joe27g/EnhancedDiscord/blob/master/plugins/emoji_packs.js'
+download: 'https://github.com/joe27g/EnhancedDiscord-Plugins/blob/master/plugins/emoji_packs.js'
 github_profile_url: 'https://github.com/joe27g/'
-github_source_url: 'https://github.com/joe27g/EnhancedDiscord/blob/master/plugins/emoji_packs.js'
-support: https://github.com/joe27g/EnhancedDiscord/issues/
+github_source_url: 'https://github.com/joe27g/EnhancedDiscord-Plugins/blob/master/plugins/emoji_packs.js'
+support: https://github.com/joe27g/EnhancedDiscord-Plugins/issues
 discord_server: 'https://discord.gg/XAvh9tq'
 software: [EnhancedDiscord]
 auto: true

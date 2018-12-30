@@ -5,7 +5,7 @@ author: joe27g
 download: https://github.com/joe27g/EnhancedDiscord/blob/master/plugins/double_click_edit.js
 github_profile_url: 'https://github.com/joe27g/'
 github_source_url: https://github.com/joe27g/EnhancedDiscord/blob/master/plugins/double_click_edit.js
-support: https://github.com/joe27g/EnhancedDiscord/issues/
+support: https://github.com/joe27g/EnhancedDiscord-Plugins/issues
 discord_server: 'https://discord.gg/XAvh9tq'
 software: [EnhancedDiscord]
 auto: true
