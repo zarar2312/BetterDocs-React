@@ -113,9 +113,9 @@ collections:
             widget: "image"
       
       - label: "Featured?"
-          name: "featured"
-          default: ""
-          widget: "boolean"
+        name: "featured"
+        default: ""
+        widget: "boolean"
 
       - label: "Auto Download?"
         name: "auto"
