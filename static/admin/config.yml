@@ -71,9 +71,9 @@ collections:
         required: false
 
       - label: "NPM Installation name"
-          name: "npm_i"
-          widget: "string"
-          required: false
+        name: "npm_i"
+        widget: "string"
+        required: false
 
       - label: "Support URL"
         name: "support"
@@ -210,9 +210,9 @@ collections:
         required: false
 
       - label: "NPM Installation name"
-          name: "npm_i"
-          widget: "string"
-          required: false
+        name: "npm_i"
+        widget: "string"
+        required: false
 
       - label: "Support URL"
         name: "support"
