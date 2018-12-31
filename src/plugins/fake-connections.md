@@ -2,9 +2,12 @@
 title: Fake Connections
 author: SnazzahDI
 description: This plugin gives you the ability to add custom connections to your profile
-download: https://github.com/SnazzahDI/FakeConnections
+download:
 github_profile_url: https://github.com/SnazzahDI/
 github_source_url: https://github.com/SnazzahDI/FakeConnections
+npm_profile_url: https://www.npmjs.com/~snazzah
+npm_source_url: https://www.npmjs.com/package/fakeconnections
+npm_i: fakeconnections
 support: https://github.com/SnazzahDI/FakeConnections/issues
 discord_server:
 software: [DiscordInjections]
@@ -13,8 +16,6 @@ auto: True
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---
-You should place this file in the `Plugins` folder of the DiscordInjections project.
-
 This plugin gives you the ability to add custom connections to your profile
 
 ![preview](https://i-need.discord.cards/fed74a.png)

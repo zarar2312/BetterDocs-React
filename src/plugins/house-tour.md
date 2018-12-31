@@ -2,9 +2,12 @@
 title: House Tour
 author: SnazzahDI
 description: Change Discord hypesquad houses with one button
-download: https://github.com/SnazzahDI/EmojiMegatip
+download:
 github_profile_url: https://github.com/SnazzahDI/
 github_source_url: https://github.com/SnazzahDI/EmojiMegatip
+npm_profile_url: https://www.npmjs.com/~snazzah
+npm_source_url: https://www.npmjs.com/package/housetour
+npm_i: housetour
 support: https://github.com/SnazzahDI/EmojiMegatip/issues
 discord_server:
 software: [DiscordInjections]

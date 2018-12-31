@@ -38,11 +38,42 @@ collections:
         name: "github_profile_url"
         widget: "string"
         default: "https://github.com/{Author}/"
+        required: false
 
       - label: "Github Source Url" 
         name: "github_source_url"
         widget: "string"
         default: "https://github.com/..."
+        required: false
+
+      - label: "Gitlab Profile Url" 
+        name: "gitlab_profile_url"
+        widget: "string"
+        default: "https://gitlab.com/{Author}/"
+        required: false
+
+      - label: "Gitlab Source Url" 
+        name: "gitlab_source_url"
+        widget: "string"
+        default: "https://gitlab.com/..."
+        required: false
+
+      - label: "NPM Profile Url" 
+        name: "npm_profile_url"
+        widget: "string"
+        default: "https://npmjs.com/..."
+        required: false
+
+      - label: "NPM Source Url" 
+        name: "npm_source_url"
+        widget: "string"
+        default: "https://npmjs.com/..."
+        required: false
+
+      - label: "NPM Installation name"
+          name: "npm_i"
+          widget: "string"
+          required: false
 
       - label: "Support URL"
         name: "support"
@@ -146,11 +177,42 @@ collections:
         name: "github_profile_url"
         widget: "string"
         default: "https://github.com/{Author}/"
+        required: false
 
       - label: "Github Source Url" 
         name: "github_source_url"
         widget: "string"
         default: "https://github.com/..."
+        required: false
+
+      - label: "Gitlab Profile Url" 
+        name: "gitlab_profile_url"
+        widget: "string"
+        default: "https://gitlab.com/{Author}/"
+        required: false
+
+      - label: "Gitlab Source Url" 
+        name: "gitlab_source_url"
+        widget: "string"
+        default: "https://gitlab.com/..."
+        required: false
+
+      - label: "NPM Profile Url" 
+        name: "npm_profile_url"
+        widget: "string"
+        default: "https://npmjs.com/..."
+        required: false
+
+      - label: "NPM Source Url" 
+        name: "npm_source_url"
+        widget: "string"
+        default: "https://npmjs.com/..."
+        required: false
+
+      - label: "NPM Installation name"
+          name: "npm_i"
+          widget: "string"
+          required: false
 
       - label: "Support URL"
         name: "support"

@@ -2,9 +2,12 @@
 title: Interceptor
 author: SnazzahDI
 description: Intercepts outgoing requests. (WebSocket & HTTP Requests)
-download: https://github.com/SnazzahDI/Interceptor
+download:
 github_profile_url: https://github.com/SnazzahDI/
 github_source_url: https://github.com/SnazzahDI/Interceptor
+npm_profile_url: https://www.npmjs.com/~snazzah
+npm_source_url: https://www.npmjs.com/package/di-interceptor
+npm_i: di-interceptor
 support: https://github.com/SnazzahDI/Interceptor/issues
 discord_server:
 thumbnail: https://i.imgur.com/yADpMpg.png

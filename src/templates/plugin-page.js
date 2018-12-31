@@ -92,6 +92,23 @@ const Plugins = (props) => {
                 </a>
               </div>
               }
+              {node.frontmatter.npm_source_url &&
+              <div className={hero.npmContainer} >
+                <a href={node.frontmatter.npm_source_url} target="blank">
+                <svg xmlns='http://www.w3.org/2000/svg'>
+                    <g>
+                        <polygon id='svg_2' points='1,5 3,5 3,2 4,2 4,5 5,5 5,1 1,1' fill='#FFF'
+                        />
+                        <path id='svg_3' d='m6,1l0,5l2,0l0,-1l2,0l0,-4l-4,0zm3,3l-1,0l0,-2l1,0l0,2z'
+                        fill='#FFF' />
+                        <polygon id='svg_4' points='11,1 11,5 13,5 13,2 14,2 14,5 15,5 15,2 16,2 16,5 17,5 17,1'
+                        fill='#FFF' />
+                    </g>
+                </svg>
+                  Source
+                </a>
+              </div>
+              }
               {node.frontmatter.discord_server &&
               <div className={hero.discordContainer} >
                 <a href={node.frontmatter.discord_server} target="blank">
@@ -135,26 +152,34 @@ const Plugins = (props) => {
               </div>
             }
           </div>
-        {node.frontmatter.download &&
           <div className={hero.options} key={node.id}>
-            {node.frontmatter.auto ?
-              <a href={'https://minhaskamal.github.io/DownGit/#/home?url=' + node.frontmatter.download} className={hero.downloadBtn} target="blank">
-                {node.frontmatter.download && 
-                  <span>Download</span>
-                }
-              </a>
-              :
-              <a href={node.frontmatter.download} className={hero.downloadBtn} target="blank">
-                {node.frontmatter.download && 
-                  <span>Download</span>
-                }
-              </a>
+          {node.frontmatter.download &&
+            <div>
+              {node.frontmatter.auto ?
+                <a href={'https://minhaskamal.github.io/DownGit/#/home?url=' + node.frontmatter.download} className={hero.downloadBtn} target="blank">
+                  {node.frontmatter.download && 
+                    <span>Download</span>
+                  }
+                </a>
+                :
+                <a href={node.frontmatter.download} className={hero.downloadBtn} target="blank">
+                  {node.frontmatter.download && 
+                    <span>Download</span>
+                  }
+                </a>
+              }
+            </div>
+            }
+            {node.frontmatter.npm_i &&
+              <div className={hero.npmBtn}>
+                <span><svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='451.846' height='451.847' viewBox='0 0 451.846 451.847'> <path d='M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z'/></svg> 
+                npm i {node.frontmatter.npm_i}</span>
+              </div>
             }
             {node.frontmatter.support && 
             <a href={node.frontmatter.support} className={hero.supportBtn} target="blank">Doesn't Work?</a>
             }
           </div>
-        }
         </div>
         <div className={ad.ad}>
           <AdSense.Google
@@ -257,6 +282,9 @@ export const pluginsQuery = graphql`
                 github_source_url
                 gitlab_profile_url
                 gitlab_source_url
+                npm_source_url
+                npm_profile_url
+                npm_i
                 download
                 thumbnail
                 discord_server
