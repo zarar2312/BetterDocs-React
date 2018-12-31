@@ -54,17 +54,14 @@
             padding: 0;
             //margin-left: -18px;
             //margin-top: 9px;
-            position: initial;
+            position: relative;
             bottom: unset;
             @media (min-width: 850px) {
-                display: -webkit-box;
+                display: flex;
                 height: unset;
             }
             .linkWrapper {
-                display: flex;
-                flex: 1 1;
-                align-items: center;
-                flex-direction: column;
+                display: block;
                 &.active {
                     //border-bottom: 2px solid #262626;
                     .linkIcon {
@@ -101,6 +98,40 @@
                     }
                     @media (min-width: 850px) {
                         display: none;
+                    }
+                }
+            }
+            .gitWrapper {
+                display: flex;
+                position: absolute;
+                right: 2rem;
+                top: 0.4rem;
+                svg {
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    fill: #fff;
+                    transition: all 250ms;
+                }
+                &:hover {
+                    svg {
+                        opacity: 0.8;
+                    }
+                }
+            }
+            .discordWrapper {
+                display: flex;
+                position: absolute;
+                right: 0.65rem;
+                top: 0.4rem;
+                svg {
+                    width: 0.9rem;
+                    height: 0.9rem;
+                    fill: #fff;
+                    transition: all 250ms;
+                }
+                &:hover {
+                    svg {
+                        opacity: 0.8;
                     }
                 }
             }
