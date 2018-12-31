@@ -132,7 +132,7 @@
                                 flex-direction: column;
                                 margin-top: 10px;
                                 .link {
-                                    display: -webkit-box;
+                                    display: flex;
                                     margin: 5px 0;
                                     font-size: 0.57rem;
                                     svg {
@@ -146,6 +146,7 @@
                                         margin: unset;
                                         //line-height: 1.5rem;
                                         display: block;
+                                        align-self: center;
                                     }
                                 }
                             }
