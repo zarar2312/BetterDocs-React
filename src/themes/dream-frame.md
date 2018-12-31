@@ -15,7 +15,6 @@ images:
     name: ExposeX Preview - Custom Background
   - image: /images/themes/Expose_X_Preview_-_Custom_Colors.png
     name: ExposeX Preview - Custom Colors
-auto: true
 status: Updated
 featured: true
 style: dark
