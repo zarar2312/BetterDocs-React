@@ -125,7 +125,8 @@ collections:
         name: "status"
         widget: "select"
         options: ["Updated","Outdated"]
-        default: "Updated"
+        default: ""
+        required: false
 
       - label: "Style" 
         name: "style"
@@ -172,6 +173,7 @@ collections:
       - label: "Download URL"
         name: "download"
         widget: "string"
+        required: false
 
       - label: "Github Profile Url" 
         name: "github_profile_url"
@@ -255,7 +257,8 @@ collections:
         name: "status"
         widget: "select"
         options: ["Updated","Outdated"]
-        default: "Updated"
+        default: ""
+        required: false
 
       - label: "Auto Download?"
         name: "auto"
