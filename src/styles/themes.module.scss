@@ -46,6 +46,7 @@
                 font-weight: bold;
                 color: #339b78;
                 font-size: 0.85rem;
+                align-self: center;
                 span {
                     font-weight: 500;
                     font-size: 0.6em;
@@ -59,6 +60,7 @@
                 opacity: 0.4;
                 flex: 2;
                 font-size: 0.7rem;
+                align-self: center;
                 &:hover {
                     opacity: 0.65;
                 }
@@ -66,6 +68,19 @@
                 &:focus {
                     opacity: 1;
                     outline: unset;
+                }
+            }
+            .submitBtn {
+                margin-left: 15px;
+                font-size: 0.7rem;
+                color: #fff;
+                background: #339b78;
+                align-self: center;
+                padding: 0.4rem 0.55rem;
+                border-radius: 2px;
+                display: none;
+                @media (min-width: 850px) {
+                    display: block;
                 }
             }
         }
