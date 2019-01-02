@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('path');
+const manifestConfig = require('./manifest-config');
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://betterdocs-react.netlify.com',
@@ -137,16 +138,8 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-image`,
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `BetterDocs Discord #1 Plugins & Themes`,
-        short_name: `BetterDocs`,
-        start_url: `/`,
-        background_color: `#262626`,
-        theme_color: `#262626`,
-        display: `standalone`,
-        icon: `src/images/mobile.png`, // This path is relative to the root of the site.
-      },
+      resolve: 'gatsby-plugin-manifest',
+      options: manifestConfig,
     },
     {
       resolve: `gatsby-plugin-sass`,
