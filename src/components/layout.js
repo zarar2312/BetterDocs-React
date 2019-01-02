@@ -38,7 +38,14 @@ const Layout = ({ children }) => (
         <meta property="og:description" content="A Discord enhancement project. Free quality Themes, Plugins and Hacks for Discord and easy installation instructions for BetterDiscord and more!"/>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://betterdocs.us" />
-          <html lang="en" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/logos/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/logos/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/logos/favicon-16x16.png"/>
+        <link rel="manifest" href="../images/logos/site.webmanifest"/>
+        <meta name="msapplication-TileColor" content="#262626"/>
+        <meta name="msapplication-TileImage" content="../images/logos/mstile-144x144.png"/>
+        <meta name="theme-color" content="#262626" />
+        <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className={ad.ad}>
