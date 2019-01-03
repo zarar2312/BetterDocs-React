@@ -104,10 +104,10 @@ const Footer = () => (
             </li>
             <li className={mystyles.subItem}
             >
-                <Link to="/about/" className={mystyles.link}
+                <a href="https://christopher-portfolio.netlify.com" target="blank" className={mystyles.link}
                 >
                     About
-                </Link>
+                </a>
             </li>
             </ul>
         </li>
