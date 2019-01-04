@@ -54,7 +54,7 @@ Here's is some helpful information to inform you what each field does.
   - **github\_source\_url** - For open-source themes, this URL points to the repo that powers the theme `[OPTIONAL]`
   - **support** - A link to allow people to get support. (In most cases it should be the [Github issue](https://guides.github.com/features/issues/) url) `[OPTIONAL]`
   - **discord\_server** - A Discord server invite to allow people to get support or give feedback for the theme. `[OPTIONAL]`
-  - **demo** - This is a direct url to the file so the [demo](https://betterdocs.us/demo/dark.html?theme=INSERT-URL-HERE) can work. For Github it need's to be the **raw** url but to fix the MIME type issue you will need to use [githack](https://raw.githack.com) for the url instead (or https://www.jsdelivr.com/?docs=gh). `[OPTIONAL]`
+  - **demo** - This is a direct url to the file so the [demo](https://betterdocs.netlify.com/demo/dark.html?theme=INSERT-URL-HERE) can work. For Github it need's to be the **raw** url but to fix the MIME type issue you will need to use [githack](https://raw.githack.com) for the url instead (or https://www.jsdelivr.com/?docs=gh). `[OPTIONAL]`
   - **thumbnail** - A direct link to an image that will be the thumbnail and shown on the [themes page](https://betterdocs.us/themes/). (16:9) `[REQUIRED]`
   - **images** - A list of images that show a preview of your theme. [Imgur](https://imgur.com) is highly recommended for compressed images and reliability. `[OPTIONAL]`
   - **status** - Values: `Updated/Oudated`. The current status of your theme.
