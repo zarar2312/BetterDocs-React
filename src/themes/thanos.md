@@ -5,6 +5,7 @@ description:
    infinity war set one theme
 download: https://github.com/gco360/thanos-theme
 github_profile_url: https://github.com/gco360/
+github_source_url: https://github.com/gco360/thanos-theme
 support: https://github.com/gco360/thanos-theme/issues/
 discord_server: https://discord.gg/6fXRKyx
 demo: https://cdn.jsdelivr.net/gh/gco360/thanos-theme@master/thanos.theme.css

@@ -4,6 +4,7 @@ author: xNightWulf
 description: A Pink Blue Wave theme
 download: https://github.com/xNightWulf/ThemesForBetterDiscord/blob/master/NeonWaves.theme.css
 github_profile_url: 'https://github.com/xNightWulf/'
+github_source_url: https://github.com/xNightWulf/ThemesForBetterDiscord/blob/master/NeonWaves.theme.css
 support: https://github.com/xNightWulf/ThemesForBetterDiscord/issues/
 discord_server: https://discord.gg/5BtB3Tc
 demo: https://rawcdn.githack.com/xNightWulf/ThemesForBetterDiscord/master/NeonWaves.theme.css

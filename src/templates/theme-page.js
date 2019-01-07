@@ -136,7 +136,7 @@ const Themes = (props) => {
             <a href={'http://betterdocs.netlify.com/demo/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo} className={hero.demoBtn} target="blank">Demo</a>
             }
             {node.frontmatter.support && 
-            <a href={node.frontmatter.support} className={hero.supportBtn} target="blank">Support</a>
+            <a href={node.frontmatter.support} className={hero.supportBtn} target="blank">Doesn't Work?</a>
             }
           </div>
         }

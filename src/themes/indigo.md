@@ -6,6 +6,7 @@ description:
   and light mode.
 download: 'https://github.com/Vaxuuu/Indigo-Theme/blob/master/Indigo.theme.css'
 github_profile_url: 'https://github.com/Vaxuuu/'
+github_source_url: 'https://github.com/Vaxuuu/Indigo-Theme/blob/master/Indigo.theme.css'
 support: 'https://github.com/Vaxuuu/Indigo-Theme/issues'
 demo: 'https://cdn.rawgit.com/Vaxuuu/Indigo-Theme/master/Indigo.theme.css'
 thumbnail: https://i.imgur.com/tWhLb11.png
