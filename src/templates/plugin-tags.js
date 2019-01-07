@@ -32,7 +32,7 @@ const Tagss = ({ pageContext, data }) => {
           </h2> 
           <p className={hero.p}
           >
-          Custom JS plugins made by our commuity!
+          Custom JS plugins made by the commuity!
           </p> 
         </div>
       </div>

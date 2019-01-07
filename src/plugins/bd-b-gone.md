@@ -1,12 +1,12 @@
 ---
 title: BD B Gone
 author: qwerasd205
-description:
-  Completely (or partially) remove BD from your system.
+description: Completely (or partially) remove BD from your system.
 download: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/BDBGone.plugin.js
 github_profile_url: https://github.com/qwerasd205/
 github_source_url: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/BDBGone.plugin.js
 support: https://github.com/qwerasd205/qwerasd205.github.io/issues
+status: Updated
 software: [BandagedBD, BetterDiscord]
 images:
   - name: BD B Gone Preview

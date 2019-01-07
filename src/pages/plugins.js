@@ -17,7 +17,7 @@ const Plugins = (props) => {
       <title>BetterDocs | #1 Discord Plugins</title>
       <meta property="og:site_name" content="BetterDocs"/>
         <meta property="og:title" content="BetterDocs | #1 Discord Plugins"/>
-        <meta property="og:description" content="List of free high quality Discord plugins by our community! Modify your Discord to your own liking with advanced plugins!"/>
+        <meta property="og:description" content="List of free high quality Discord plugins by the community! Modify your Discord to your own liking with advanced plugins!"/>
         <meta property="og:url" content="https://betterdocs.us/plugins/" />
     </Helmet>
     <div className={plugin.pluginsContainer}
@@ -36,7 +36,7 @@ const Plugins = (props) => {
           </h2> 
           <p className={hero.p}
           >
-          Custom JS plugins made by our commuity!
+          Custom JS plugins made by the commuity!
           </p> 
         </div>
       </div>
