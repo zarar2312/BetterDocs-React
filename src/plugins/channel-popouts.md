@@ -8,7 +8,6 @@ github_source_url: https://github.com/Curtis-D/ChannelPopouts
 support: 'https://github.com/Curtis-D/ChannelPopouts/issues'
 software: [BandagedBD, BetterDiscord]
 thumbnail: 'https://i.imgur.com/UlPwOJl.png'
-images: []
 status: Updated
 auto: true
 layout: product

@@ -8,6 +8,7 @@ github_source_url: https://github.com/jakuski/ed_plugins/tree/master/CustomRPC
 support: 'https://github.com/jakuski/ed_plugins/issues'
 discord_server: 'https://discord.gg/na4WZpY'
 auto: true
+status: Updated
 software: [EnhancedDiscord]
 ghcommentid: #
 layout: product

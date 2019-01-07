@@ -7,6 +7,7 @@ github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/CreationDate
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: 'https://discord.gg/Z7PBux5'
+status: Updated
 software: [BandagedBD, BetterDiscord]
 auto: true
 ghcommentid: 122
