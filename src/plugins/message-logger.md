@@ -7,6 +7,7 @@ github_profile_url: https://github.com/Metalloriff/
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/MessageLogger.plugin.js
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discord.gg/yNqzuJa
+status: Updated
 software: [BandagedBD,BetterDiscord]
 auto: true
 ghcommentid: # DON'T CHANGE

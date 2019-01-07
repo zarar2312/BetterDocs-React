@@ -1,12 +1,13 @@
 ---
 title: Emoji Statistics
-description: Adds several options to get more information about emojis and emojiservers.
 author: mwittrien
+description: Adds several options to get more information about emojis and emojiservers.
 download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/EmojiStatistics
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/EmojiStatistics
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: 'https://discord.gg/Z7PBux5'
+status: Updated
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 45
 layout: product

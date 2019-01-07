@@ -3,9 +3,6 @@ title: Exposition
 author: ratismal
 description: Exposes the DI object to global.DI
 github_profile_url: 'https://github.com/ratismal'
-github_source_url:
-gitlab_profile_url:
-gitlab_source_url:
 npm_profile_url: 'https://www.npmjs.com/~ratismal'
 npm_source_url: 'https://www.npmjs.com/package/di-exposition'
 npm_i: di-exposition

@@ -1,8 +1,7 @@
 ---
 title: Double Click Voice Channels
 author: Metalloriff
-description:
-  Requires you to double click voice channels to connect to them.
+description: Requires you to double click voice channels to connect to them.
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/DoubleClickVoiceChannels.plugin.js
 github_profile_url: https://github.com/Metalloriff/
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/DoubleClickVoiceChannels.plugin.js
