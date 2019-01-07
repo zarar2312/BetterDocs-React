@@ -10,6 +10,7 @@ support: https://github.com/Mega-Mewthree/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/ZYND2Xd
 software: [BandagedBD, BetterDiscord]
 auto: true
+status: Updated
 images:
   - name: Auto Start Rich Presence Preview
     image: https://i.imgur.com/zwUwJuD.png

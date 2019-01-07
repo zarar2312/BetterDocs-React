@@ -8,7 +8,6 @@ github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Pl
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: 'https://discordapp.com/invite/cdzD9wF'
 software: [BandagedBD, BetterDiscord]
-images: []
 status: Updated
 auto: true
 layout: product

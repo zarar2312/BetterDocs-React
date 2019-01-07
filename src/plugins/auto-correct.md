@@ -8,6 +8,7 @@ github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/mast
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: 'https://discord.gg/yNqzuJa'
 auto: true
+status: Outdated
 software: [BandagedBD, BetterDiscord]
 thumbnail: https://i.imgur.com/OvDTo6r.gif
 images:

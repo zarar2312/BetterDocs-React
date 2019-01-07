@@ -8,6 +8,7 @@ github_source_url: https://github.com/joe27g/EnhancedDiscord-Plugins/blob/master
 support: 'https://github.com/joe27g/EnhancedDiscord-Plugins/issues'
 discord_server: 'https://discord.gg/XAvh9tq'
 auto: true
+status: Updated
 software: [EnhancedDiscord]
 ghcommentid: 161
 layout: product
