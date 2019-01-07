@@ -27,6 +27,7 @@ const Sidebar = () => (
                   github_profile_url
                   download
                   support
+                  status
                   layout
                   tags
                   }
@@ -78,6 +79,11 @@ const Sidebar = () => (
                 {node.excerpt}
               </p>
             </div>
+            {node.frontmatter.status ?
+              <div className={style.status} alt={node.frontmatter.status}>{node.frontmatter.status}</div>
+            :
+              <div className={style.status} alt="Unknown">Unknown</div>
+            }
           </Link>
           ))}
         </div>
