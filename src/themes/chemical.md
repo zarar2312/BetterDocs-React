@@ -2,8 +2,7 @@
 title: Chemical
 author: codedotspectra
 description: A compact and highly customizable theme.
-download: >-
-  https://github.com/codedotspectra/themes/blob/master/chemical/chemical.theme.css
+download: https://github.com/codedotspectra/themes/blob/master/chemical/chemical.theme.css
 github_profile_url: 'https://github.com/codedotspectra/'
 github_source_url: 'https://github.com/codedotspectra/themes/tree/master/chemical'
 support: 'https://github.com/codedotspectra/themes/issues'

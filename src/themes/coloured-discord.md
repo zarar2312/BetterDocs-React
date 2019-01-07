@@ -4,6 +4,7 @@ author: Waterin
 description: A theme that lets you choose the color that most suits you.
 download: https://github.com/Waterin/Coloured-Discord-Theme/
 github_profile_url: 'https://github.com/Waterin'
+github_source_url: https://github.com/Waterin/Coloured-Discord-Theme/
 support: https://github.com/Waterin/Coloured-Discord-Theme/issues/
 discord_server: https://discord.gg/ADn3Mqd
 demo: https://rawcdn.githack.com/Waterin/Coloured-Discord-Theme/bd13cbc4c279fe3ddfeef402d780d0883e3b4fea/Source/Coloured-Discord-Theme-RGB.theme.css

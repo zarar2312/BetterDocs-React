@@ -4,6 +4,7 @@ author: Ruben7173
 description: Theme with stars as a background and a pretty combo of green and blue.
 download: https://github.com/Ruben7173/Ruben7173.github.io/blob/master/BetterDiscord-Themes/blue-space/blue-space.theme.css
 github_profile_url: 'https://github.com/Ruben7173/'
+github_source_url: https://github.com/Ruben7173/Ruben7173.github.io/blob/master/BetterDiscord-Themes/blue-space/blue-space.theme.css
 support: 'https://github.com/Ruben7173/Ruben7173.github.io/issues'
 demo: https://rawcdn.githack.com/Ruben7173/Ruben7173.github.io/master/BetterDiscord-Themes/blue-space/code.css
 thumbnail: https://i.imgur.com/d2Qzerv.jpg

@@ -4,6 +4,7 @@ author: JimmyHere
 description: This theme is for the third year anniversery of Discord!
 download: 'https://github.com/JimmyHere/Blurple/blob/master/Blurple.theme.css'
 github_profile_url: 'https://github.com/AltenGD/'
+github_source_url: 'https://github.com/JimmyHere/Blurple/blob/master/Blurple.theme.css'
 support: 'https://github.com/JimmyHere/Blurple/issues'
 demo: 'https://cdn.rawgit.com/JimmyHere/Blurple/master/Blurple.theme.css'
 thumbnail: https://i.imgur.com/j7mr9lr.png

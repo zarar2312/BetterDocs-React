@@ -4,6 +4,7 @@ author: satoru8
 description: 'A light theme that is easy to read, with basic user settings.'
 download: https://github.com/satoru8/BetterLightTheme
 github_profile_url: 'https://github.com/satoru8/'
+github_source_url: https://github.com/satoru8/BetterLightTheme
 support: https://github.com/satoru8/BetterLightTheme/issues
 discord_server: http://discord.gg/fjvwb95
 demo: https://raw.githubusercontent.com/satoru8/BetterLightTheme/master/BetterLightTheme.theme.css
