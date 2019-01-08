@@ -1,16 +1,17 @@
 .featuredSection {
     flex-direction: column;
-    margin-top: 1rem;
+    //margin-top: 1rem;
     display: none;
     overflow: hidden;
     @media (min-width: 850px) {
         display: flex;
     }
-    @media (min-width: 2050px) {
+    /*@media (min-width: 2050px) {
         margin-top: 2rem;
-    }
+    }*/
     .topBar {
         display: block;
+        padding: 0.62rem 0.82rem;
         @media (min-width: 850px) {
             display: flex;
         }
