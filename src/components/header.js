@@ -26,7 +26,7 @@ class Header extends React.Component {
         cover
         bg="#262626"
         >
-          <svg xmlns='http://www.w3.org/2000/svg' id='Calque_1' viewBox='0 0 1100.2603 578.46808' width='3.75rem' height='100%'>
+          <svg className="siteLogo" xmlns='http://www.w3.org/2000/svg' id='Calque_1' viewBox='0 0 1100.2603 578.46808' width='3.75rem' height='100%'>
             <g id='g3' transform='translate(-28.6 -43.2)' fill='#fff'>
                 <path d='m 156.1,273.9 -127.1,0 0,142.7 84.6,76.2 0,-138.6 45.2,0 c 28.7,0 42.9,13.8 42.9,36 l 0,106 c 0,22.2 -13.4,37.1 -42.9,37.1 l -130.2,0 0,80.7 127,0 c 68.1,0.4 132,-33.7 132,-111.7 l 0,-114 C 288.1,308.7 224.2,273.9 156.1,273.9 l 0,0 z'
                 id='path5' />

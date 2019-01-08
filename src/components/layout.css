@@ -677,3 +677,6 @@ body::-webkit-scrollbar {
 .mobile-version > footer {
   display: none;
 }
+.siteLogo {
+  width: 3.75rem;
+}
