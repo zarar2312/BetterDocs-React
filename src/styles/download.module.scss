@@ -108,9 +108,11 @@
                 height: 3rem;
                 left: 0px;
                 bottom: -25px;
+                bottom: -1rem;
                 width: 100%;
                 @media (min-width: 850px) {
                     bottom: -40px;
+                    bottom: -1.5rem;
                 }
                 .waveLayer1 {
                     transition: 300ms linear;
