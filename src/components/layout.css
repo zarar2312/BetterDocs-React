@@ -210,7 +210,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: Roboto, serif;
+  font-family: Roboto, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
