@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../styles/theme-sidebar.module.scss'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import Stars from "../images/stars.svg"
+//import Stars from "../images/stars.svg"
 
 const Sidebar = () => (
   <StaticQuery
@@ -78,16 +78,23 @@ const Sidebar = () => (
             </div>
             <div className={style.description}
             >
+            {node.frontmatter.featured ?
+              <p className={style.pMargin}
+              >
+                {node.excerpt}
+              </p>
+              :
               <p className={style.p}
               >
                 {node.excerpt}
               </p>
+            }
             </div>
-            { node.frontmatter.featured &&
+            {node.frontmatter.featured &&
               <Link 
                 to="/themes/featured/"
-                className={style.icon}>
-                <img src={Stars} alt="Featured Theme icon"></img>
+                className={style.featured}>
+                Featured
               </Link>
             }
           </Link>
@@ -100,3 +107,12 @@ const Sidebar = () => (
 )
 
 export default Sidebar
+/* Featured Icon
+{ node.frontmatter.featured &&
+  <Link 
+    to="/themes/featured/"
+    className={style.icon}>
+    <img src={Stars} alt="Featured Theme icon"></img>
+  </Link>
+}
+*/

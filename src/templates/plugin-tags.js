@@ -87,6 +87,11 @@ const Tagss = ({ pageContext, data }) => {
                     {node.excerpt}
                   </p>
                 </div>
+                {node.frontmatter.status ?
+                  <div className={plugin.status} alt={node.frontmatter.status}>{node.frontmatter.status}</div>
+                :
+                  <div className={plugin.status} alt="Unknown">Unknown</div>
+                }
               </Link>
               )
             })}
@@ -141,6 +146,7 @@ export const pageQuery = graphql`
             author
             github_profile_url
             download
+            status
             support
             layout
             tags
