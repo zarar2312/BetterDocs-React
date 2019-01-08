@@ -95,7 +95,7 @@ const Sidebar = () => (
             {node.frontmatter.thumbnail &&
             <div className={style.imgWrapper}>
               <LazyLoad once={true} height="100%" overflow={true}
-              placeholder={<img src={Missing} alt="Image is missing"/>}>
+              placeholder={<img src={Missing} alt="Missing"/>}>
               <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + " Preview"}/>
               </LazyLoad>
             </div>

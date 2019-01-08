@@ -129,6 +129,12 @@
                     flex-direction: row;
                     justify-content: flex-start;
                     margin-bottom: 0.525rem;
+                    @media (max-width: 330px) {
+                        flex-direction: column;
+                        .title {
+                            margin-top: 2px;
+                        }
+                    }
                     .title {
                         flex: 1;
                         font-weight: bold;

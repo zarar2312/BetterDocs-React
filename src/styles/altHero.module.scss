@@ -89,7 +89,7 @@
     }
     .options {
         flex: 1 1;
-        display: block;
+        display: flex;
         text-align: left;
         max-width: calc(100% - 25px);
         margin: 0 auto;
@@ -106,6 +106,10 @@
             max-width: unset;
             margin: unset;
             display: flex;
+        }
+        @media (max-width: 250px) {
+            flex-direction: column;
+            display: block;
         }
         .downloadBtn {
             background-color: #339b78;
@@ -198,9 +202,9 @@
                 margin: 0 auto;
                 margin-top: 10px;
             }
-            @media (max-width: 450px) {
+            /*@media (max-width: 450px) {
                 margin-left: unset;
-            }
+            }*/
             &:hover {
                 background-color: #339b78;
                 color: #fff;
@@ -223,7 +227,7 @@
                 margin: 0 auto;
                 margin-top: 10px;
             }
-            @media (max-width: 450px) {
+            @media (max-width: 250px) {
                 margin-left: unset;
             }
             &:hover {
