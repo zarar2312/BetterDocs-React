@@ -198,6 +198,9 @@
                 margin: 0 auto;
                 margin-top: 10px;
             }
+            @media (max-width: 450px) {
+                margin-left: unset;
+            }
             &:hover {
                 background-color: #339b78;
                 color: #fff;
@@ -219,6 +222,9 @@
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: 10px;
+            }
+            @media (max-width: 450px) {
+                margin-left: unset;
             }
             &:hover {
                 background-color: #ebebeb;
