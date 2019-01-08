@@ -2,6 +2,8 @@ import React from 'react'
 import style from '../styles/theme-sidebar.module.scss'
 import { StaticQuery, graphql, Link } from 'gatsby'
 //import Stars from "../images/stars.svg"
+import LazyLoad from "react-lazyload"
+import Missing from "../images/missing_image_2.png"
 
 const Sidebar = () => (
   <StaticQuery
@@ -92,7 +94,10 @@ const Sidebar = () => (
             }
             {node.frontmatter.thumbnail &&
             <div className={style.imgWrapper}>
-              <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title}/>
+              <LazyLoad once={true} height="100%" overflow={true}
+              placeholder={<img src={Missing} alt="Image is missing"/>}>
+              <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + " Preview"}/>
+              </LazyLoad>
             </div>
             }
             </div>
