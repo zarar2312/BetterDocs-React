@@ -15,7 +15,7 @@ const Sidebar = () => (
         totalCount
         edges {
           node {
-              excerpt
+              excerpt(pruneLength: 70)
               html
               id
               fields {
@@ -26,6 +26,7 @@ const Sidebar = () => (
                   author
                   github_profile_url
                   download
+                  thumbnail
                   support
                   featured
                   layout
@@ -88,6 +89,11 @@ const Sidebar = () => (
               >
                 {node.excerpt}
               </p>
+            }
+            {node.frontmatter.thumbnail &&
+            <div className={style.imgWrapper}>
+              <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title}/>
+            </div>
             }
             </div>
             {node.frontmatter.featured &&
