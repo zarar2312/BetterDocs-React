@@ -1,6 +1,7 @@
 import React from 'react'
 import mystyles from '../styles/hero.module.scss'
 import preview from '../images/discord-comparison.png'
+import '../styles/hero.css'
 
 const Hero = ({ siteTitle }) => (
   <section

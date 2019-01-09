@@ -1,0 +1,3 @@
+section[class^="hero-module--hero"] {
+    z-index: 3;
+}
