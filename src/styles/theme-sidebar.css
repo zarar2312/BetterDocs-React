@@ -1,0 +1,18 @@
+@media (min-width: 850px) {
+    [class^="theme-page-module"] >.headroom-wrapper>.headroom--unfixed {
+        position: fixed !important;
+        top: unset !important;
+    }
+    [class^="theme-page-module"] >.headroom-wrapper>.headroom--unpinned>[class^="theme-sidebar-module--sidebarSearch"]>[class^="theme-sidebar-module--Results"] {
+        max-height: calc(((((100vh - -3.3rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
+    }
+    [class^="theme-page-module"] >.headroom-wrapper>.headroom--pinned>[class^="theme-sidebar-module--sidebarSearch"]>[class^="theme-sidebar-module--Results"] {
+        max-height: calc(((((100vh - -1.58rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
+    }
+    [class^="theme-page-module"] >.headroom-wrapper>.headroom--pinned {
+        top: 1.8rem !important;
+    }
+    [class^="theme-page-module"] >.headroom-wrapper>.headroom--unpinned {
+        top: 0 !important;
+    }
+}

@@ -2,7 +2,8 @@ import React from 'react'
 import mystyles from '../styles/header.module.scss'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { Link } from 'gatsby'
-import './fix.css'
+import '../styles/header.css'
+import Headroom from 'react-headroom';
 
 class Header extends React.Component {
 
@@ -18,6 +19,7 @@ class Header extends React.Component {
     <div
       className={mystyles.nextcontainer}
     >
+    <Headroom>
       <div
       className={mystyles.logo}
       >
@@ -52,6 +54,7 @@ class Header extends React.Component {
           </svg>
         </AniLink>
       </div>
+      
       <nav className={mystyles.nav}>
           <Link 
           to="/"
@@ -104,7 +107,7 @@ class Header extends React.Component {
             </svg>
           </a>
       </nav>
-
+      </Headroom>
       <nav className={mystyles.mobileNav}>
 
       <AniLink 

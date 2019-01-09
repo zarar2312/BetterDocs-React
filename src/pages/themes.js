@@ -9,6 +9,8 @@ import Star from "../images/star.svg"
 import Stars from "../images/stars.svg"
 import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
+import Headroom from 'react-headroom';
+import '../styles/theme.css'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -83,11 +85,12 @@ const Themes = (props) => {
     
     <section className={theme.contentSection}
     >
-    <div className={theme.titleBar}>
-      <div className={theme.count}>Themes <span>({listCount})</span></div>
-      <input className={theme.input} placeholder="Search Themes library (WIP)" ></input>
-    </div>
-
+    <Headroom>
+      <div className={theme.titleBar}>
+        <div className={theme.count}>Themes <span>({listCount})</span></div>
+        <input className={theme.input} placeholder="Search Themes library (WIP)" ></input>
+      </div>
+    </Headroom>
       <div className={theme.mainContent}
         >
           <div className={theme.wrapper}

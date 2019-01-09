@@ -8,6 +8,8 @@ import Missing from "../images/missing_image_2.png"
 import Stars from "../images/stars.svg"
 import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
+import '../styles/theme-tags.css'
+import Headroom from 'react-headroom';
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -25,10 +27,12 @@ const Tagss = ({ pageContext, data }) => {
     >
     <section className={style.contentSection}
     >
-    <div className={style.titleBar}>
-      <div className={style.count}>Themes <span>{tagHeader}</span></div>
-      <input className={style.input} placeholder="Search Themes library (WIP)" ></input>
-    </div>
+    <Headroom>
+      <div className={style.titleBar}>
+        <div className={style.count}>Themes <span>{tagHeader}</span></div>
+        <input className={style.input} placeholder="Search Themes library (WIP)" ></input>
+      </div>
+    </Headroom>
 
       <div className={style.mainContent}
         >

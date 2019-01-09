@@ -6,6 +6,8 @@ import plugin from '../styles/plugin-tags.module.scss'
 import hero from '../styles/hero.module.scss'
 import Tags from '../components/pluginTags'
 import { graphql, Link } from "gatsby"
+import '../styles/plugin-sidebar.css'
+import Headroom from 'react-headroom';
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -46,7 +48,7 @@ const Tagss = ({ pageContext, data }) => {
       </div>
 
     </section>
-
+    <Headroom downTolerance={5}>
       <section className={plugin.sidebarSearch}>
         <div className={plugin.searchContainer}>
           <input 
@@ -98,7 +100,7 @@ const Tagss = ({ pageContext, data }) => {
             </div>
 
       </section>
-
+    </Headroom>
     </div>
     </Layout>
   )

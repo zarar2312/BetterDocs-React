@@ -2,6 +2,8 @@ import React from 'react'
 import style from '../styles/plugin-sidebar.module.scss'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import Tags from '../components/pluginTags'
+import Headroom from 'react-headroom';
+import '../styles/plugin-sidebar.css'
 
 const Sidebar = () => (
   <StaticQuery
@@ -38,6 +40,7 @@ const Sidebar = () => (
   `}
     render={data => (
       <>
+      <Headroom downTolerance={5}>
         <section className={style.sidebarSearch}
       >
         <div className={style.searchContainer}
@@ -88,6 +91,7 @@ const Sidebar = () => (
           ))}
         </div>
       </section>
+    </Headroom>
       </>
     )}
   />

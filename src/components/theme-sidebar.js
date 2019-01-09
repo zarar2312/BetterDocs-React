@@ -4,6 +4,8 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 //import Stars from "../images/stars.svg"
 import LazyLoad from "react-lazyload"
 import Missing from "../images/missing_image_2.png"
+import Headroom from 'react-headroom';
+import '../styles/theme-sidebar.css'
 
 const Sidebar = () => (
   <StaticQuery
@@ -40,7 +42,8 @@ const Sidebar = () => (
   `}
     render={data => (
       <>
-        <section className={style.sidebarSearch}
+    <Headroom downTolerance={5}>
+      <section className={style.sidebarSearch}
       >
         <div className={style.searchContainer}
         >
@@ -112,6 +115,7 @@ const Sidebar = () => (
           ))}
         </div>
       </section>
+    </Headroom>
       </>
     )}
   />

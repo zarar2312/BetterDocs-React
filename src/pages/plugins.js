@@ -74,7 +74,7 @@ const Plugins = (props) => {
     </section>
 
 
-      <Sidebar />
+    <Sidebar />
 
     </div>
     <div className={plugin.uploadContainer}>

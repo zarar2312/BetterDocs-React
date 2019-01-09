@@ -8,6 +8,8 @@ import Stars from 'src/images/stars.svg'
 import kebabCase from "lodash/kebabCase"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import LazyLoad from "react-lazyload"
+import 'src/styles/theme-featured.css'
+import Headroom from 'react-headroom';
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -31,11 +33,13 @@ const FeaturedThemes = (props) => {
     >
     <section className={theme.contentSection}
     >
-    <div className={theme.titleBar}>
-      <div className={theme.count}>Themes <span>{listCount} featured themes</span></div>
-      <input className={theme.input} placeholder="Search Themes library (WIP)" ></input>
-      <Link to="/themes/upload-a-theme" className={theme.submitBtn}>Submit your theme</Link>
-    </div>
+    <Headroom>
+      <div className={theme.titleBar}>
+        <div className={theme.count}>Themes <span>{listCount} featured themes</span></div>
+        <input className={theme.input} placeholder="Search Themes library (WIP)" ></input>
+        <Link to="/themes/upload-a-theme" className={theme.submitBtn}>Submit your theme</Link>
+      </div>
+    </Headroom>
 
       <div className={theme.mainContent}
         >

@@ -3,8 +3,8 @@
     //height: 68px;
     width: 100%;
     /*new*/
-    position: sticky;
-    top: 0px;
+    //position: sticky;
+    //top: 0px;
     z-index: 100;
     /*end-new*/
     @media (min-width: 850px) {
@@ -18,13 +18,13 @@
         max-width: 100%;
         //padding: 0px 0px 0px 10px;
         transition: .2s linear background-color, .2s linear box-shadow;
-        background-color: #262626;
+        //background-color: #262626;
         //height: 4.3rem;
-        box-shadow: -4px 0px 8px 0px black;
+        //@at-rootbox-shadow: -4px 0px 8px 0px black;
         @media (min-width: 850px)  {
             //padding: 0px 0px 0px 15px;
             height: unset;
-            background-color: #262626;
+            //background-color: #262626;
             box-shadow: unset;
         }
 
@@ -34,15 +34,19 @@
             position: relative;
             justify-content: center;
             padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+            background-color: #262626;
+            box-shadow: -4px 0px 8px 0px black;
             @media (min-width: 850px) {
                 //top: 13px;
                 justify-content: flex-start;
                 padding: 0.4rem 0.7rem 0.1rem 0.7rem;
+                box-shadow: unset;
             }
         }
         .nav {
             display: none;
-            top: unset;
+            //top: unset;
+            top: -1px;
             z-index: 100;
             max-width: 100%;
             transition: .2s linear background-color, .2s linear box-shadow;

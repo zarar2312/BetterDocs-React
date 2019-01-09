@@ -1,3 +1,0 @@
-.tl-wrapper, [style*="transform: matrix(1, 0, 0, 1, 0, 0)"], .tl-wrapper[style*="transform: matrix(1, 0, 0, 1, 0, 0)"] {
-    transform: unset !important;
-}
