@@ -14,7 +14,7 @@
         position: fixed;
         bottom: 60px;
         right: unset;
-        display: initial;
+        display: block;
         @media (min-width: 850px) {
             width: calc(100% - 36rem);
             position: fixed;
@@ -38,7 +38,7 @@
         position: fixed;
         bottom: 60px;
         right: unset;
-        display: initial;
+        display: block;
         @media (min-width: 850px) {
             width: calc(100% - 36rem);
             position: fixed;
