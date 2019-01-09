@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import Missing from 'src/images/missing_image_2.png'
 import Stars from 'src/images/stars.svg'
 import kebabCase from "lodash/kebabCase"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+//import AniLink from "gatsby-plugin-transition-link/AniLink"
 import LazyLoad from "react-lazyload"
 import 'src/styles/theme-featured.css'
 import Headroom from 'react-headroom';
@@ -136,16 +136,6 @@ const FeaturedThemes = (props) => {
         +
         </Link>
     </div>
-    <AniLink 
-    className={theme.backButton}
-    to="/themes/"
-    cover
-    bg="#262626"
-    >
-      <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' viewBox='0 0 240.823 240.823' width='512' height='512'>
-        <path id='Chevron_Right' d='M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179 l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816 C52.942,116.507,52.942,124.327,57.633,129.007z' fill='#FFF' />
-      </svg>
-    </AniLink>
   </Layout>
 )
 }

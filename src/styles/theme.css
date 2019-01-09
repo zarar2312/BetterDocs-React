@@ -1,6 +1,9 @@
 [class^="themes-module"] >.headroom-wrapper>.headroom--pinned {
     top: 3rem !important;
 }
+[class^="themes-module"] >.headroom-wrapper>.headroom {
+    z-index: 3 !important;
+}
 @media (min-width: 850px) {
     [class^="themes-module"] >.headroom-wrapper {
         display: contents;
