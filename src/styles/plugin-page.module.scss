@@ -1,3 +1,5 @@
+@import "variables";
+
 .pluginsPageContainer {
     display: block;
     flex-direction: row;
@@ -41,27 +43,27 @@
                 border-radius: 0px; 
             } 
             &::-webkit-scrollbar-thumb { 
-                background-color: rgba(#339b78, 0.3);
+                background-color: rgba($siteColor, 0.3);
                 transition: background-color .2s ease-in-out;
             } 
             &::-webkit-scrollbar-thumb:hover { 
-                background-color: #339b78; 
+                background-color: $siteColor; 
             } 
             &::-webkit-scrollbar-track { 
-                background-color: rgba(#339b78, 0.06);
+                background-color: rgba($siteColor, 0.06);
             }
             &::-webkit-scrollbar { 
                 width: 8px; 
             }
             a:not([class="anchor"]) {
-                border-bottom: 1px solid rgba(51, 155, 120, 0.3);
-                box-shadow: inset 0 -2px 0px 0px rgba(51, 155, 120, 0.4);
+                border-bottom: 1px solid rgba($siteColor, 0.3);
+                box-shadow: inset 0 -2px 0px 0px rgba($siteColor, 0.4);
                 color: rgba(0, 0, 0, 0.88);
                 font-weight: bold;
                 transition: .1s linear background-color, .1s linear box-shadow, .1s linear border-bottom;
             }
             a:hover:not([class="anchor"]) {
-                background-color: rgba(51, 155, 120, 0.3);
+                background-color: rgba($siteColor, 0.3);
                 border-bottom: 1px solid transparent;
                 box-shadow: inset 0 -2px 0px 0px transparent;
             }

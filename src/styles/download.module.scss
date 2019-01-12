@@ -131,13 +131,13 @@
             }
         }
         &[alt="BandagedBD"] {
-            border: 1px solid #339b78;
+            border: 1px solid $bandagedbd;
             order: 1;
             .header {
-                background: #339b78;
+                background: $bandagedbd;
             }
             .feature {
-                color: #339b78;
+                color: $bandagedbd;
             }
         }
         &[alt="EnhancedDiscord"] {
@@ -161,10 +161,10 @@
         &[alt="DiscordInjections"] {
             order: 5;
             .header {
-                background: #339b78;
+                background: #6e6e6e;
             }
             .feature {
-                color: #339b78;
+                color: #6e6e6e;
             }
         }
         &[alt="PowerCord"] {
@@ -214,7 +214,7 @@
                 justify-content: center;
                 flex-direction: column;
                 b {
-                    color: #339b78;
+                    color: $siteColor;
                 }
             }
         }
@@ -251,7 +251,7 @@
             justify-content: center;
             .download {
                 font-size: 0.8rem;
-                background-color: #339b78;
+                background-color: $siteColor;
                 color: #fff;
                 line-height: unset;
                 align-self: center;
@@ -259,11 +259,11 @@
                 border-radius: 2px;
                 transition: 300ms;
                 &:hover, &:focus {
-                    background-color: darken($color: #339b78, $amount: 6);
+                    background-color: darken($color: $siteColor, $amount: 6);
                     outline: unset;
                 }
                 &:active {
-                    background-color: darken($color: #339b78, $amount: 10);
+                    background-color: darken($color: $siteColor, $amount: 10);
                 }
             }
         }

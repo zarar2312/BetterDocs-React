@@ -1,3 +1,5 @@
+@import "variables";
+
 .wrapper {
     display: block;
     height: 100%;
@@ -92,7 +94,7 @@
                             .follow {
                                 display: -webkit-inline-box;
                                 .btn {
-                                    color: #339b78;
+                                    color: $siteColor;
                                     background-color: #fff;
                                     padding: 0.17rem 0.7rem;
                                     font-size: 0.5em;
@@ -100,11 +102,11 @@
                                     margin: 0 auto;
                                     display: block;
                                     border-radius: 2px;
-                                    border: 1px solid #339b78;
+                                    border: 1px solid $siteColor;
                                     transition: 250ms linear;
                                     &:hover, &:focus, &:active {
                                         outline: unset;
-                                        background-color: #339b78;
+                                        background-color: $siteColor;
                                         color: #fff;
                                     }
                                 }

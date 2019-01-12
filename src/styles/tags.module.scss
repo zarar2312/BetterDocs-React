@@ -1,3 +1,5 @@
+@import "variables";
+
 .tagsContainer {
     display: flex;
     overflow-x: auto;
@@ -12,15 +14,15 @@
         border-radius: 0px; 
     } 
     &::-webkit-scrollbar-thumb { 
-        background-color: rgba(#339b78, 0.3);
+        background-color: rgba($siteColor, 0.3);
         transition: background-color .2s ease-in-out;
         height: 7px;
     } 
     &::-webkit-scrollbar-thumb:hover { 
-        background-color: #339b78;
+        background-color: $siteColor;
     } 
     &::-webkit-scrollbar-track { 
-        background-color: rgba(#339b78, 0.06);
+        background-color: rgba($siteColor, 0.06);
         height: 7px;
     }
     &::-webkit-scrollbar { 
@@ -71,18 +73,18 @@
             box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
         }
         &.active {
-            color: #339b78;
-            border: 1px solid rgba(51, 155, 120, 0.15);
+            color: $siteColor;
+            border: 1px solid rgba($siteColor, 0.15);
             outline: unset;
-            background-color: rgba(51, 155, 120, 0.1);
+            background-color: rgba($siteColor, 0.1);
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 1px 0 0px rgba(0, 0, 0, 0.08);
         }
         &:first-child {
             margin-left: 18px;
         }
         &:active, &:focus {
-            box-shadow: 0 1px 2px 0 rgba(#339b78, 0.45), 0 2px 6px 2px rgba(#339b78, 0.3);
-            color: #339b78;
+            box-shadow: 0 1px 2px 0 rgba($siteColor, 0.45), 0 2px 6px 2px rgba($siteColor, 0.3);
+            color: $siteColor;
         }
     }
 }
