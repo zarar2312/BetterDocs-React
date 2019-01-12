@@ -8,7 +8,7 @@ import Headroom from 'react-headroom';
 class Header extends React.Component {
 
   componentDidMount () {
-    
+
   }
 
   render () {

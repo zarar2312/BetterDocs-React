@@ -13,6 +13,7 @@ images:
     name: Avis Preview
   - image: static/media/Avis_Preview_-_Keybind_Settings_Page.png
     name: Avis Preview - Keybind Settings Page
+previews: [https://i.imgur.com/Hp4Uqrp.jpg, https://i.imgur.com/hXOTjcS.png]
 auto: true
 status: Outdated
 style: dark

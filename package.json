@@ -36,6 +36,7 @@
     "react-headroom": "^2.2.4",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.3.0",
+    "react-tabs": "^3.0.0",
     "redux": "^2.0.0",
     "slate": "^0.33.3",
     "uglifyjs-webpack-plugin": "^2.0.1"

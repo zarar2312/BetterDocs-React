@@ -10,13 +10,17 @@ import Helmet from 'react-helmet'
 import AdSense from 'react-adsense';
 import ad from '../styles/ad.module.scss'
 import alert from '../styles/alerts.module.scss'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import "react-tabs/style/react-tabs.css";
+import "../styles/theme-page.css"
 
 const Themes = (props) => {
   const themeList = props.data.listThemes;
+  const previewList = props.data.previewsList;
   
   return (
   <Layout>
-    {themeList.edges.map(({ node }, i) => ( 
+    {themeList.edges.map(({ node }, i) => (
     <Helmet
       key={node.id}
       title={ node.frontmatter.title + ' by ' + node.frontmatter.author + ' | BetterDocs '}
@@ -42,7 +46,7 @@ const Themes = (props) => {
     ))}
     <div className={style.themesPageContainer}
     >
-    {themeList.edges.map(({ node }, i) => ( 
+    {themeList.edges.map(({ node }) => (
       <section className={style.contentWrapper} key={node.id}
       >
       {node.frontmatter.status === "Outdated" &&
@@ -150,7 +154,21 @@ const Themes = (props) => {
               responsive='true'
             />
         </div>
-        <div className={style.content}
+        {previewList.edges.map(({ node }, i) => (
+        <Tabs style={{order: "3"}}>
+          <TabList style={{display: "flex", justifyContent: "center", borderBottom: "unset", marginBottom: "unset"}}>
+            {node.frontmatter.previews ?
+            <Tab style={{ transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
+            :
+            <Tab style={{ display: "none", transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
+            }
+            {node.frontmatter.previews &&
+              <Tab style={{ transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Screenshots</Tab>
+            }
+            </TabList>
+
+          <TabPanel>
+          <div className={style.content}
           >
             <div className={style.mdWrapper}
             >
@@ -184,7 +202,18 @@ const Themes = (props) => {
                 </a>
               </div>
             </div>
-        </div>
+          </div>
+          </TabPanel>
+          {node.frontmatter.previews &&
+          <TabPanel style={{width: "calc(100% - 300px)", margin: "0 auto"}}>
+            <h2>Previews (wip)</h2>
+            {previewList.group.map(image => (
+              <img src={image.fieldValue} alt={image.fieldValue}/>
+            ))}
+          </TabPanel>
+          }
+        </Tabs>
+        ))}
       </section>
       ))}
       <Sidebar />
@@ -247,12 +276,47 @@ export const themesQuery = graphql`
             support
             thumbnail
             auto
+            previews
             tags
             discord_server
             demo
             style
             status
             date(formatString: "DD/MM/YYYY")
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    },
+    previewsList:allMarkdownRemark(
+      filter: { 
+        collection: { 
+          eq: "themes" 
+        } 
+        fields: {
+          slug: {
+            eq: $slug
+          }
+        }
+      }
+      ) {
+      group(field: frontmatter___previews) {
+        fieldValue
+        totalCount
+      }
+      totalCount
+      edges {
+        node {
+          excerpt
+          html
+          id
+          frontmatter {
+            previews
+            thumbnail
+            title
+            date
           }
           fields {
             slug
@@ -270,6 +334,7 @@ export const themesQuery = graphql`
       github_profile_url
       download
       support
+      previews
       tags
       layout
       ghcommentid

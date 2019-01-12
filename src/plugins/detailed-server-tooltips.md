@@ -9,11 +9,8 @@ github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/mast
 support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/yNqzuJa
 software: [BandagedBD, BetterDiscord]
-images:
-  - name: Detailed Server Tooltips Preview
-    image: https://i.imgur.com/ASfjHaw.png
-  - name: Detailed Server Tooltips Preview - Plugin Settings
-    image: https://i.imgur.com/UhcM8Ik.png
+thumbnail: https://i.imgur.com/ASfjHaw.png
+previews: [https://i.imgur.com/ASfjHaw.png, https://i.imgur.com/UhcM8Ik.png]
 ghcommentid: 40
 layout: product
 ---

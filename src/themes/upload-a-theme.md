@@ -26,11 +26,7 @@ I promise it doesn't take long :)
   discord_server:
   demo: https://raw.githack.com
   thumbnail:
-  images:
-    - name: {Theme Name} Preview
-      image: https://imgur.com/upload # Direct image link should only be used here. Imgur isn't required but if it isn't used then further inspection will happen
-    - name: {Theme Name} Preview - {Image Name}
-      image: https://imgur.com/upload # Direct image link should only be used here. Imgur isn't required but if it isn't used then further inspection will happen
+  previews: [Direct link to image, Direct link to image]
   status:
   auto:
   featured: 
@@ -56,7 +52,7 @@ Here's is some helpful information to inform you what each field does.
   - **discord\_server** - A Discord server invite to allow people to get support or give feedback for the theme. `[OPTIONAL]`
   - **demo** - This is a direct url to the file so the [demo](https://betterdocs.netlify.com/demo/dark.html?theme=INSERT-URL-HERE) can work. For Github it need's to be the **raw** url but to fix the MIME type issue you will need to use [githack](https://raw.githack.com) for the url instead (or https://www.jsdelivr.com/?docs=gh). `[OPTIONAL]`
   - **thumbnail** - A direct link to an image that will be the thumbnail and shown on the [themes page](https://betterdocs.us/themes/). (16:9) `[REQUIRED]`
-  - **images** - A list of images that show a preview of your theme. [Imgur](https://imgur.com) is highly recommended for compressed images and reliability. `[OPTIONAL]`
+  - **previews** - A list of images that show a preview of your theme. [Imgur](https://imgur.com) is highly recommended for compressed images and reliability. Multiple images can be added and seperated by commas ',' `[OPTIONAL]`
   - **status** - Values: `Updated/Oudated`. The current status of your theme.
   - **featured** - Values `True/False`. Remove entirely or leave as false. Only used for featured themes that are chosen.
   - **auto** - If your theme is hosted on [Github](https://github.com) then add `true` to allow users to automatically down the file (or even the entire repo) instead of just' visiting the site, if hosted elsewhere leave blank or remove it entirely. `[REQUIRED]`

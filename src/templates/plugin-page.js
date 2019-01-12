@@ -10,9 +10,14 @@ import Helmet from 'react-helmet'
 import AdSense from 'react-adsense';
 import ad from '../styles/ad.module.scss'
 import alert from '../styles/alerts.module.scss'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import "react-tabs/style/react-tabs.css";
+import "../styles/plugin-page.css"
 
 const Plugins = (props) => {
   const pluginList = props.data.listPlugins;
+  const previewList = props.data.previewsList;
+
   return (
   <Layout>
     {pluginList.edges.map(({ node }, i) => (
@@ -190,6 +195,19 @@ const Plugins = (props) => {
               responsive='true'
             />
         </div>
+        {previewList.edges.map(({ node }, i) => (
+        <Tabs style={{order: "3"}}>
+          <TabList style={{display: "flex", justifyContent: "center", borderBottom: "unset", marginBottom: "unset"}}>
+            {node.frontmatter.previews ?
+              <Tab style={{ transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
+            :
+              <Tab style={{ display: "none", transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
+            }            {node.frontmatter.previews &&
+              <Tab style={{ transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Screenshots</Tab>
+            }
+            </TabList>
+
+          <TabPanel>
         <div className={style.content}
           >
             <div className={style.wrapper}
@@ -225,6 +243,17 @@ const Plugins = (props) => {
               </div>
             </div>
         </div>
+        </TabPanel>
+        {node.frontmatter.previews &&
+          <TabPanel style={{width: "calc(100% - 300px)", margin: "0 auto"}}>
+            <h2>Previews (wip)</h2>
+            {previewList.group.map(image => (
+              <img src={image.fieldValue} alt={image.fieldValue}/>
+            ))}
+          </TabPanel>
+        }
+        </Tabs>
+        ))}
       </section>
       ))}
       <Sidebar />
@@ -301,6 +330,41 @@ export const pluginsQuery = graphql`
               }
             }
         }
+    },
+    
+    previewsList:allMarkdownRemark(
+      filter: { 
+        collection: { 
+          eq: "plugins" 
+        } 
+        fields: {
+          slug: {
+            eq: $slug
+          }
+        }
+      }
+      ) {
+      group(field: frontmatter___previews) {
+        fieldValue
+        totalCount
+      }
+      totalCount
+      edges {
+        node {
+          excerpt
+          html
+          id
+          frontmatter {
+            previews
+            thumbnail
+            title
+            date
+          }
+          fields {
+            slug
+          }
+        }
+      }
     },
     softwareList:allMarkdownRemark(
       filter: {
