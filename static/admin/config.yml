@@ -103,7 +103,7 @@ collections:
         name: "previews"
         required: false
         widget: "list"
-        default: "https://imgur.com/upload/"
+        default: ['https://imgur.com/upload/','https://imgur.com/upload/']
       
       - label: "Featured?"
         name: "featured"
@@ -238,7 +238,7 @@ collections:
         name: "previews"
         required: false
         widget: "list"
-        default: "https://imgur.com/upload/"
+        default: ['https://imgur.com/upload/','https://imgur.com/upload/']
 
       - label: "Status of your plugin"
         name: "status"
