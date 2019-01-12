@@ -158,12 +158,12 @@ const Themes = (props) => {
         <Tabs style={{order: "3"}}>
           <TabList style={{display: "flex", justifyContent: "center", borderBottom: "unset", marginBottom: "unset"}}>
             {node.frontmatter.previews ?
-            <Tab style={{ transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
+            <Tab style={{ transition: "all 250ms linear", marginBottom: "0.25rem", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
             :
-            <Tab style={{ display: "none", transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
+            <Tab style={{ display: "none", transition: "all 250ms linear", marginBottom: "0.25rem", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
             }
             {node.frontmatter.previews &&
-              <Tab style={{ transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Screenshots</Tab>
+              <Tab style={{ transition: "all 250ms linear", marginBottom: "0.25rem", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Screenshots</Tab>
             }
             </TabList>
 
@@ -205,7 +205,7 @@ const Themes = (props) => {
           </div>
           </TabPanel>
           {node.frontmatter.previews &&
-          <TabPanel style={{width: "calc(100% - 300px)", margin: "0 auto"}}>
+          <TabPanel className="previewPanel" style={{margin: "0 auto"}}>
             <h2>Previews (wip)</h2>
             {previewList.group.map(image => (
               <img src={image.fieldValue} alt={image.fieldValue}/>

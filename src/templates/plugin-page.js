@@ -201,51 +201,51 @@ const Plugins = (props) => {
             {node.frontmatter.previews ?
               <Tab style={{ transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
             :
-              <Tab style={{ display: "none", transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
+              <Tab style={{ display: "none", transition: "all 250ms linear", marginBottom: "0.25rem", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
             }            {node.frontmatter.previews &&
-              <Tab style={{ transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Screenshots</Tab>
+              <Tab style={{ transition: "all 250ms linear", marginBottom: "0.25rem", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Screenshots</Tab>
             }
             </TabList>
 
-          <TabPanel>
-        <div className={style.content}
-          >
-            <div className={style.wrapper}
+        <TabPanel>
+          <div className={style.content}
             >
-            {node.frontmatter.thumbnail &&
-            <a href={node.frontmatter.thumbnail} target="blank" className={style.imgContainer}>
-              <img className={style.img} src={node.frontmatter.thumbnail} alt={node.frontmatter.title} />
-            </a>
-            }
-              <div
-              className={style.childWrapper}
-              dangerouslySetInnerHTML={{ __html: node.html }}>
-              </div>
-              <div
-              className={style.footer}
+              <div className={style.wrapper}
               >
-                {node.frontmatter.date && 
+              {node.frontmatter.thumbnail &&
+              <a href={node.frontmatter.thumbnail} target="blank" className={style.imgContainer}>
+                <img className={style.img} src={node.frontmatter.thumbnail} alt={node.frontmatter.title} />
+              </a>
+              }
                 <div
-                className={style.date}
-                >
-                Last edit: {node.frontmatter.date}
+                className={style.childWrapper}
+                dangerouslySetInnerHTML={{ __html: node.html }}>
                 </div>
-                }
-                <a
-                className={style.edit}
-                target="blank" 
-                href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins/${kebabCase(node.fields.slug)}.md`}
+                <div
+                className={style.footer}
                 >
-                <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='459' height='459' viewBox='0 0 459 459'>
-                    <path d='M0,362.1V459h96.9l280.5-283.05l-96.9-96.9L0,362.1z M451.35,102c10.2-10.2,10.2-25.5,0-35.7L392.7,7.649 c-10.2-10.2-25.5-10.2-35.7,0l-45.9,45.9l96.9,96.9L451.35,102z' id='create' />
-                </svg> Edit this page
-                </a>
+                  {node.frontmatter.date && 
+                  <div
+                  className={style.date}
+                  >
+                  Last edit: {node.frontmatter.date}
+                  </div>
+                  }
+                  <a
+                  className={style.edit}
+                  target="blank" 
+                  href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins/${kebabCase(node.fields.slug)}.md`}
+                  >
+                  <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='459' height='459' viewBox='0 0 459 459'>
+                      <path d='M0,362.1V459h96.9l280.5-283.05l-96.9-96.9L0,362.1z M451.35,102c10.2-10.2,10.2-25.5,0-35.7L392.7,7.649 c-10.2-10.2-25.5-10.2-35.7,0l-45.9,45.9l96.9,96.9L451.35,102z' id='create' />
+                  </svg> Edit this page
+                  </a>
+                </div>
               </div>
-            </div>
-        </div>
+          </div>
         </TabPanel>
         {node.frontmatter.previews &&
-          <TabPanel style={{width: "calc(100% - 300px)", margin: "0 auto"}}>
+          <TabPanel className="previewPanel" style={{margin: "0 auto"}}>
             <h2>Previews (wip)</h2>
             {previewList.group.map(image => (
               <img src={image.fieldValue} alt={image.fieldValue}/>
