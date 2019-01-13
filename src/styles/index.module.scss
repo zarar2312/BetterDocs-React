@@ -6,14 +6,17 @@
     .sectionQuote {
         //padding: 30px 10px;
         padding: 1rem;
-        padding-top: 5rem;
+        padding-top: 6rem;
         background: $siteColor;
         position: relative;
+        @media (max-width: 500px) {
+            padding-top: 4rem;
+        }
         @media (min-width: 850px) {
-            padding: 7rem 3rem 3rem 3rem;
+            padding: 8rem 3rem 3rem 3rem;
         }
         .quote {
-            font-size: 0.9rem;
+            font-size: 1.3rem;
             line-height: 1.4;
             color: #fff;
             font-family: sans-serif;
@@ -26,7 +29,7 @@
             @media (min-width: 850px) {
                 padding-left: 3rem;
                 width: 48%;
-                font-size: 1.65em;
+                font-size: 1.65rem;
             }
         }
     }
