@@ -20,7 +20,7 @@
         margin-left: 1rem;
         @media (min-width: 850px) {
             font-size: 1.4rem;
-            margin-top: unset;
+            margin-top: -2rem;
         }
     }
     .subHeader {
@@ -96,6 +96,9 @@
                     padding-bottom: 56.25%;
                     position: relative;
                     background-color: transparent;
+                    @media (min-width: 500px) {
+                        width: 10.7rem;
+                    }
                     @media (min-width: 850px) {
                         width: 18.7rem;
                     }
