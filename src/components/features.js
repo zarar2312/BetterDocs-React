@@ -1,45 +1,10 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import style from '../styles/featured.module.scss'
 
 const Features = () => (
-  <StaticQuery
-    query={ graphql`
-    query featuredThemesQuery {
-        allMarkdownRemark(filter: { collection: { eq: "themes" } } limit: 5) {
-          group(field: collection) {
-            fieldValue
-            totalCount
-          }
-          totalCount
-          edges {
-            node {
-              excerpt
-              html
-              id
-              frontmatter {
-                title
-                sub
-                author
-                thumbnail
-                github_profile_url
-                download
-                support
-                layout
-                description
-                date
-              }
-              fields {
-                slug
-              }
-            }
-          }
-        }
-      }
-  `}
-    render={data => (
         <section className={style.featured}>
-            <div className={style.header}>Why it is Special</div>
+            
             <div className={style.cardsContainer}>
                     <Link className={style.card}
                     to="/plugins/discord-crypt/">
@@ -177,10 +142,8 @@ const Features = () => (
                             </p>
                         </div>
                     </Link>
-            </div>
-        </section>      
-    )}
-  />
+                </div>
+            </section>      
 )
 
 export default Features

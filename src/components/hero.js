@@ -1,35 +1,35 @@
 import React from 'react'
-import mystyles from '../styles/hero.module.scss'
+import style from '../styles/hero.module.scss'
 import preview from '../images/discord-comparison.png'
 import '../styles/hero.css'
 
 const Hero = ({ siteTitle }) => (
   <section
-    className={mystyles.hero}
+    className={style.hero}
   >
     <div
-      className={mystyles.textContainer}
+      className={style.textContainer}
     >
         <h1 
-        className={mystyles.header1}
+        className={style.header1}
         >The Discord Enhancement Project.
         </h1>
-        <div className={mystyles.paragraph}
+        <div className={style.paragraph}
         >
-        <h2 className={mystyles.p}
+        <h2 className={style.p}
         >
         Custom CSS themes + JS plugins, BTTV & FFZ twitch emotes and lots of extra tools.</h2>
         </div>
-        <div className={mystyles.button}
+        <div className={style.button}
         > 
-            <a className={mystyles.btn} href="https://github.com/rauenzi/BetterDiscordApp/releases" target="blank"
+            <a className={style.btn} href="https://github.com/rauenzi/BetterDiscordApp/releases" target="blank"
             >Download
             </a> 
         </div>
     </div>
-    <div className={mystyles.heroImage}
+    <div className={style.heroImage}
     >
-    <img className={mystyles.heroImg} src={preview} alt="Discord Themes Preview"
+    <img className={style.heroImg} src={preview} alt="Discord Themes Preview"
     ></img>
     </div>
   </section>

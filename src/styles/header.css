@@ -2,7 +2,7 @@
     transform: unset !important;
 }
 [class^="header-module"] >.headroom-wrapper>.headroom {
-    z-index: 4 !important;
+    z-index: 5 !important;
 }
 @media (min-width: 850px) {
     [class^="header-module"] >.headroom-wrapper[style="height: 110px;"] {

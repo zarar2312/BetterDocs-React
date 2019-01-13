@@ -4,8 +4,11 @@
     display: flex;
     flex-direction: column;
     .sectionQuote {
-        padding: 30px 10px;
+        //padding: 30px 10px;
+        padding: 1rem;
+        padding-top: 3rem;
         background: $siteColor;
+        position: relative;
         .quote {
             font-size: 0.9rem;
             line-height: 1.4;
@@ -15,6 +18,8 @@
             width: 100%;
             padding: 0 1rem;
             transition: ease-in-out 400ms;
+            z-index: 1;
+            position: relative;
             @media (min-width: 850px) {
                 padding-left: 3rem;
                 width: 48%;
@@ -22,7 +27,17 @@
             }
         }
         @media (min-width: 850px) {
-            padding: 80px;
+            padding: 7rem 3rem 3rem 3rem;
+        }
+    }
+    .topWave {
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 4;
         }
     }
 }
