@@ -175,7 +175,7 @@ For Windows and Linux operating systems, we recommend you use
     [`Kleopatra`](https://www.openpgp.org/software/kleopatra/) for verifying signatures and for
     MacOS, we recommend [`GnuPG for OS X`](https://gnupg.org/download/index.html).
 
-The signature for each release is located [here](build/discordCrypt.plugin.js.asc).
+The signature for each release is located [here](https://gitlab.com/leogx9r/DiscordCrypt/blob/master/build/discordCrypt.plugin.js.asc).
     Please read the manual for your specific client to determine how to verify signatures.
 
 If everything goes well, you'll notice output similar to below:
@@ -190,7 +190,7 @@ gpg: Good signature from "DiscordCrypt (DiscordCrypt Signing Key)"
 The above depends on the client you use but you must always look for a
     "*Good*", "*OK*" or "*Valid*" signature.
 
-Please note, you will need to import the PGP signing key located [here](build/pgp_signing_key.asc)
+Please note, you will need to import the PGP signing key located [here](https://gitlab.com/leogx9r/DiscordCrypt/blob/master/build/pgp_signing_key.asc)
     and **NOT** the binary Ed25519 signature `discordCrypt.plugin.sig.bin` to verify signatures.
 
 Finally, you should manually verify that the signing key you imported above matches the
@@ -645,7 +645,7 @@ We recently added bigger libraries to the plugin ( Such as OpenPGP.js ), and as 
 
 Having such a large source would increase development complexity. If you wish to have a look at
     the uncompressed, original source, look at the source file:
-    [src/discordCrypt.plugin.js](src/discordCrypt.plugin.js).
+    [src/discordCrypt.plugin.js](https://gitlab.com/leogx9r/DiscordCrypt/blob/master/src/discordCrypt.plugin.js).
 
 
 
