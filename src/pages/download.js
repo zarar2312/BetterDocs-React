@@ -177,7 +177,7 @@ const DownloadPage = () => (
     <div className={style.footer}>
       <a 
       className={style.download}
-      href="https://github.com/aetheryx/powercord"
+      href="https://powercord.xyz/"
       target="blank"
       >Download</a>
     </div>
