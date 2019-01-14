@@ -196,7 +196,7 @@ const Plugins = (props) => {
             />
         </div>
         {previewList.edges.map(({ node }, i) => (
-        <Tabs style={{order: "3"}}>
+        <Tabs style={{order: "3"}} key={node.id}>
           <TabList style={{display: "flex", justifyContent: "center", borderBottom: "unset", marginBottom: "unset"}}>
             {node.frontmatter.previews ?
               <Tab style={{ transition: "all 250ms linear", marginBottom: "unset", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
@@ -248,7 +248,7 @@ const Plugins = (props) => {
           <TabPanel className="previewPanel" style={{margin: "0 auto"}}>
             <h2>Previews (wip)</h2>
             {previewList.group.map(image => (
-              <img src={image.fieldValue} alt={image.fieldValue}/>
+              <img src={image.fieldValue} alt={image.fieldValue} key={node.id}/>
             ))}
           </TabPanel>
         }
@@ -263,7 +263,7 @@ const Plugins = (props) => {
     className={style.backButton}
     to="/plugins/"
     cover
-    bg="#262626"
+    bg="#0a0a0a"
     >
       <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' viewBox='0 0 240.823 240.823' width='512' height='512'>
         <path id='Chevron_Right' d='M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179 l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816 C52.942,116.507,52.942,124.327,57.633,129.007z' fill='#FFF' />

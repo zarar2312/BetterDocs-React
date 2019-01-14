@@ -90,7 +90,7 @@ const Tagss = ({ pageContext, data }) => {
                 to={"themes" + node.fields.slug}
                 className={style.titleLink}
                 cover
-                bg="#262626"
+                bg="#0a0a0a"
                 duration={0.65}>
                 {node.frontmatter.title}
                 </AniLink>

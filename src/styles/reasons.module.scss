@@ -3,7 +3,7 @@
 .reasons {
     display: flex;
     flex-direction: column;
-    background-color: #36393f;
+    background-color: #18191c;
     padding: 1.875rem 1.56rem;
     position: relative;
     @media (min-width: 850px) {
@@ -28,7 +28,7 @@
                     width: 5%;
                     height: 2px;
                     background-color: $siteColor;
-                    opacity: 0.8;
+                    opacity: 1;
                     position: relative;
                     top: -2px;
                 }
@@ -104,7 +104,7 @@
                 width: 3%;
                 height: 2px;
                 background-color: $siteColor;
-                opacity: 0.8;
+                opacity: 1;
                 position: relative;
                 top: -2px;
             }
@@ -118,7 +118,7 @@
                 justify-content: space-between;
             }
             .card {
-                border: 1px solid #262626;
+                border: 1px solid #242529;
                 border-radius: 10px;
                 border-bottom-left-radius: 0px;
                 margin-bottom: 17px;
@@ -132,7 +132,7 @@
                 .title {
                     color: #ffffff;
                     font-weight: bold;
-                    background-color: #262626;
+                    background-color: #242529;
                     border-radius: 10px;
                     border-bottom-left-radius: 0px;
                     border-bottom-right-radius: 0px;
@@ -151,11 +151,11 @@
                     line-height: 0.9rem;
                 }
                 &:hover {
-                    -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-                    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+                    -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.3);
                 }
                 &:active, &:focus {
-                    background-color: #ebebeb;
+                    background-color: #171718;
                     outline: unset;
                     .title { 
                         opacity: 0.8;

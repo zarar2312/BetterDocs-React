@@ -37,11 +37,11 @@ const Layout = ({ children }) => (
           <meta property="og:url" content="https://betterdocs.us" />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#262626"/>
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0a0a0a"/>
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-          <meta name="msapplication-TileColor" content="#262626"/>
+          <meta name="msapplication-TileColor" content="#0a0a0a"/>
           <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
-          <meta name="theme-color" content="#262626"/>
+          <meta name="theme-color" content="#0a0a0a"/>
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />

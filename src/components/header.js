@@ -26,7 +26,7 @@ class Header extends React.Component {
         <AniLink  
         to="/"
         cover
-        bg="#262626"
+        bg="#0a0a0a"
         >
           <svg className="siteLogo" xmlns='http://www.w3.org/2000/svg' id='Calque_1' viewBox='0 0 1100.2603 578.46808' width='3.75rem' height='100%'>
             <g id='g3' transform='translate(-28.6 -43.2)' fill='#fff'>
@@ -115,7 +115,7 @@ class Header extends React.Component {
       className={mystyles.linkWrapper}
       activeClassName={mystyles.active}
       cover
-      bg="#262626"
+      bg="#0a0a0a"
       duration={0.65}
       >
         <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' height='60' viewBox='0 0 512 512' width='22' className={mystyles.linkIcon}>
@@ -133,7 +133,7 @@ class Header extends React.Component {
       className={mystyles.linkWrapper}
       activeClassName={mystyles.active}
       cover
-      bg="#262626"
+      bg="#0a0a0a"
       duration={0.65}
       >
         <svg xmlns='http://www.w3.org/2000/svg' height='60' viewBox='0 0 512 512' width='22' className={mystyles.linkIcon}>
@@ -150,7 +150,7 @@ class Header extends React.Component {
       className={mystyles.linkWrapper}
       activeClassName={mystyles.active}
       cover
-      bg="#262626"
+      bg="#0a0a0a"
       duration={0.65}
       >
       <svg xmlns='http://www.w3.org/2000/svg' height='60' viewBox='0 0 512 512' width='22' className={mystyles.linkIcon}>
@@ -171,7 +171,7 @@ class Header extends React.Component {
       className={mystyles.linkWrapper}
       activeClassName={mystyles.active}
       cover
-      bg="#262626"
+      bg="#0a0a0a"
       duration={0.65}
       >
         <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' height='60' viewBox='0 0 512 512' width='22' className={mystyles.linkIcon}>

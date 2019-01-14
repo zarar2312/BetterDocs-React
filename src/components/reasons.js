@@ -50,7 +50,7 @@ const Reasons = () => (
                     to="/plugins/"
                     className={style.unimportantBtn}
                     cover
-                    bg="#262626"
+                    bg="#0a0a0a"
                     duration={0.65}
                     >SEE ALL PLUGINS</AniLink>
                 </div>
@@ -68,7 +68,7 @@ const Reasons = () => (
                         to={'/plugins' + node.fields.slug} 
                         key={node.id}
                         cover
-                        bg="#262626"
+                        bg="#0a0a0a"
                         duration={0.65}>
                             <div className={style.title}>{node.frontmatter.title}</div>
                             <div className={style.excerpt}>{node.excerpt}</div>

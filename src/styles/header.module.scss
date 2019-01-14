@@ -19,13 +19,13 @@
         max-width: 100%;
         //padding: 0px 0px 0px 10px;
         transition: .2s linear background-color, .2s linear box-shadow;
-        //background-color: #262626;
+        //background-color: #0a0a0a;
         //height: 4.3rem;
         //@at-rootbox-shadow: -4px 0px 8px 0px black;
         @media (min-width: 850px)  {
             //padding: 0px 0px 0px 15px;
             height: unset;
-            //background-color: #262626;
+            //background-color: #0a0a0a;
             box-shadow: unset;
         }
 
@@ -35,7 +35,7 @@
             position: relative;
             justify-content: center;
             padding: 0.4rem 0.7rem 0.4rem 0.7rem;
-            background-color: #262626;
+            background-color: #0a0a0a;
             box-shadow: -4px 0px 8px 0px black;
             @media (min-width: 850px) {
                 //top: 13px;
@@ -51,7 +51,7 @@
             z-index: 100;
             max-width: 100%;
             transition: .2s linear background-color, .2s linear box-shadow;
-            background-color: #262626;
+            background-color: #0a0a0a;
             height: 51px;
             left: 0px;
             vertical-align: top;
@@ -68,7 +68,7 @@
             .linkWrapper {
                 display: block;
                 &.active {
-                    //border-bottom: 2px solid #262626;
+                    //border-bottom: 2px solid #0a0a0a;
                     .linkIcon {
                         opacity: 1;
                     }
@@ -170,7 +170,7 @@
                     font-family: Roboto, sans-serif;
                     font-size: 0.7rem;
                     font-weight: 300;
-                    border-bottom: 2px solid #262626;
+                    border-bottom: 2px solid #0a0a0a;
                     line-height: 0.8rem !important;
                     height: unset !important;
                     top: unset !important;
@@ -194,7 +194,7 @@
             z-index: 100;
             max-width: 100%;
             transition: .2s linear background-color, .2s linear box-shadow;
-            background-color: #262626;
+            background-color: #0a0a0a;
             height: 51px;
             margin-left: unset;
             left: 0px;
