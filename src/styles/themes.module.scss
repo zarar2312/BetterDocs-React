@@ -16,9 +16,7 @@
         }
         .titleBar {
             background-color: #fff;
-            //border-bottom: 1px solid #f5f3f7;
-            box-shadow: 0 1px 0 rgba(0,0,0,.2), 0 2px 0 rgba(0,0,0,.06);
-            background-color: #36393f;
+            border-bottom: 1px solid #f5f3f7;
             display: flex;
             flex-direction: row;
             padding: 0.42rem 0.62rem;
@@ -64,20 +62,21 @@
                 flex: 2;
                 font-size: 0.7rem;
                 align-self: center;
-                background: rgba(255, 255, 255, 0.1);
+                background-color: rgba(0, 0, 0, 0.1);
                 padding: 0.3rem 0.6rem;
-                color: #eee;
+                color: #262626;
+                transition: 250ms linear background-color;
                 &::placeholder {
-                    color: rgba(255, 255, 255, 0.6);
-                    font-size: 0.6;
+                    color: rgba(0, 0, 0, 0.6);
                 }
                 &:hover {
-                    opacity: 0.65;
+                    background-color: rgba(0, 0, 0, 0.07);
                 }
                 &:active,
                 &:focus {
                     opacity: 1;
                     outline: unset;
+                    background-color: rgba(0, 0, 0, 0.05);
                 }
             }
             .submitBtn {
@@ -95,6 +94,7 @@
             }
         }
     }
+
     .openContentSection {
         order: 1;
         display: flex;
@@ -113,7 +113,6 @@
             }
         }
     }
-
 
     .sidebarSearch {
         background: #fff;
@@ -279,11 +278,11 @@
         -webkit-overflow-scrolling: touch;
         //max-height: calc(100vh - 10.9rem); //28.2em
         max-height: unset;
-        background: #36393f;
+        background-color: #fff;
         @media (min-width: 850px) {
             //max-height: calc(100vh - 10.4em);
             max-height: unset;
-            background: #36393f;
+            background: #fff;
         }
         &::-webkit-scrollbar-button {
             display: none;
@@ -518,7 +517,6 @@
                     a.titleLink {
                         font-weight: bold;
                         color: rgba(0, 0, 0, 0.88);
-                        color: rgba(255, 255, 255, 0.9);
                         font-size: 0.8rem;
                         //margin-bottom: 6px;
                         display: -webkit-inline-box;
@@ -535,7 +533,6 @@
                 }
                 .description {
                     color: rgba(0, 0, 0, 0.6);
-                    color: #b9bbbe;
                     //margin-bottom: 8px;
                     .p {
                         margin-bottom: unset;
@@ -577,7 +574,6 @@
                 }
                 .author {
                     color: rgba(0, 0, 0, 0.8);
-                    color: rgba(255, 255, 255, 0.4);
                     font-size: 0.45rem;
                     position: relative;
                     top: -3px;
@@ -710,6 +706,58 @@
         max-height: calc(((((100vh - 2.9rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
         @media (min-width: 850px) {
             max-height: calc(((((100vh - 2.5rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+        }
+    }
+}
+
+[class*="dark"] {
+    .themesContainer {
+        .contentSection {
+            .titleBar {
+                background-color: #36393f;
+                box-shadow: 0 1px 0 rgba(0,0,0,.2), 0 2px 0 rgba(0,0,0,.06);
+                border-bottom: unset;
+            }
+            .input {
+                background: rgba(255, 255, 255, 0.1);
+                color: #eee;
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 0.6;
+                }
+                &:hover {
+                    background: rgba(255, 255, 255, 0.07);
+                }
+                &:active, &:focus {
+                    background: rgba(255, 255, 255, 0.05);
+                }
+            }
+        }
+        .mainContent {
+            background-color: #36393f;
+            @media (min-width: 850px) {
+                background-color: #36393f;
+            }
+            .wrapper {
+                .cardWrapper {
+                    .author {
+                        color: rgba(255, 255, 255, 0.4);
+                    }
+                    .title {
+                        .titleLink {
+                            color: rgba(255, 255, 255, 0.9);
+                        }
+                    }
+                    .description {
+                        color: #b9bbbe;
+                    }
+                    .tagContainer {
+                        .tag {
+                            color: rgba(255,255, 255, 0.4);
+                        }
+                    }
+                }
+            }
         }
     }
 }
