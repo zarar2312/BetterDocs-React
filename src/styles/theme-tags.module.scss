@@ -3,6 +3,7 @@
 .themesContainer {
     display: block;
     flex-direction: row;
+    background-color: transparent;
     @media (min-width: 850px) {
         display: flex;
         flex-direction: column;
@@ -705,6 +706,7 @@
 
 [class*="dark"] {
     .themesContainer {
+        background-color: #36393f;
         .contentSection {
             .titleBar {
                 background-color: #36393f;

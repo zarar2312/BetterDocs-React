@@ -2,6 +2,7 @@
 
 .themesContainer {
     display: block;
+    background-color: transparent;
     flex-direction: row;
     @media (min-width: 850px) {
         display: flex;
@@ -712,6 +713,7 @@
 
 [class*="dark"] {
     .themesContainer {
+        background-color: #36393f;
         .contentSection {
             .titleBar {
                 background-color: #36393f;
