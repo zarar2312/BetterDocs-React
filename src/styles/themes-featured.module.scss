@@ -90,7 +90,7 @@
         &::after {
             content: "";
             display: block;
-            height: 18.5em;
+            height: 11.5em;
             width: 50px;
             pointer-events: none;
             background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(255, 255, 255) 100%);
@@ -197,5 +197,11 @@
                 font-size: 0.65rem;
             }
         }
+    }
+}
+
+[class*="dark"] {
+    .featuredSection {
+
     }
 }

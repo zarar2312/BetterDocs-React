@@ -8,6 +8,8 @@ import Footer from './footer'
 import './layout.css'
 //import Logo from "../images/mobile.png"
 //<link rel="manifest" href="/site.webmanifest"/>
+
+var time = new Date().getHours();
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -20,7 +22,18 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="mobile-version">
+      <div className=
+      {0 <= time&&time < 6 ? // between Midnight and 6 A.M the site will be dark
+        "mobile-version dark"
+        :
+        "mobile-version"
+      } id="time">
+      <div className=
+      {17 <= time&&time < 24 ? // between 5 P.M and Midnight the site will be dark
+        "mobile-version dark"
+        :
+        "mobile-version"
+      }>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -54,6 +67,7 @@ const Layout = ({ children }) => (
           {children}
         </div>
         <Footer />
+      </div>
       </div>
     )}
   />

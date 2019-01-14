@@ -15,11 +15,13 @@
             flex: 3;
         }
         .titleBar {
-            background: #fff;
-            border-bottom: 1px solid #f5f3f7;
+            background-color: #fff;
+            //border-bottom: 1px solid #f5f3f7;
+            box-shadow: 0 1px 0 rgba(0,0,0,.2), 0 2px 0 rgba(0,0,0,.06);
+            background-color: #36393f;
             display: flex;
             flex-direction: row;
-            padding: 0.62rem 0.82rem;
+            padding: 0.42rem 0.62rem;
             position: sticky;
             top: 3.04rem;
             z-index: 3;
@@ -56,13 +58,19 @@
             }
             .input {
                 border: unset;
-                border-bottom: 2px solid $siteColor;
+                //border-bottom: 2px solid $siteColor;
                 transition: .2s ease-in-out opacity;
-                border-radius: 0px;
-                opacity: 0.4;
+                border-radius: 2px;
                 flex: 2;
                 font-size: 0.7rem;
                 align-self: center;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 0.3rem 0.6rem;
+                color: #eee;
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 0.6;
+                }
                 &:hover {
                     opacity: 0.65;
                 }
@@ -271,11 +279,11 @@
         -webkit-overflow-scrolling: touch;
         //max-height: calc(100vh - 10.9rem); //28.2em
         max-height: unset;
-        background: #fbfafc;
+        background: #36393f;
         @media (min-width: 850px) {
             //max-height: calc(100vh - 10.4em);
             max-height: unset;
-            background: transparent;
+            background: #36393f;
         }
         &::-webkit-scrollbar-button {
             display: none;
@@ -510,6 +518,7 @@
                     a.titleLink {
                         font-weight: bold;
                         color: rgba(0, 0, 0, 0.88);
+                        color: rgba(255, 255, 255, 0.9);
                         font-size: 0.8rem;
                         //margin-bottom: 6px;
                         display: -webkit-inline-box;
@@ -526,6 +535,7 @@
                 }
                 .description {
                     color: rgba(0, 0, 0, 0.6);
+                    color: #b9bbbe;
                     //margin-bottom: 8px;
                     .p {
                         margin-bottom: unset;
@@ -534,6 +544,7 @@
                 }
                 .descriptionAlt {
                     color: rgba(0, 0, 0, 0.6);
+                    color: #b9bbbe;
                     //margin-bottom: 0.7rem;
                     .p {
                         margin-bottom: unset;
@@ -566,6 +577,7 @@
                 }
                 .author {
                     color: rgba(0, 0, 0, 0.8);
+                    color: rgba(255, 255, 255, 0.4);
                     font-size: 0.45rem;
                     position: relative;
                     top: -3px;

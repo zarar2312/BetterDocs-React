@@ -3,7 +3,7 @@
 .reasons {
     display: flex;
     flex-direction: column;
-    background-color: #18191c;
+    background-color: #fff;
     padding: 1.875rem 1.56rem;
     position: relative;
     @media (min-width: 850px) {
@@ -34,19 +34,19 @@
                 }
             }
             .title {
-                color: #f1f1f1;
+                color: #3f3f3f;
                 font-size: 1.3rem;
                 line-height: 1.35em;
             }
             .description {
-                color: #b9bbbe;
+                color: #929292;
                 margin-top: 10px;
                 line-height: 1.45em;
                 font-size: 0.67rem;
                 a {
                     border-bottom: 1px solid rgba($siteColor, 0.3);
                     box-shadow: inset 0 -2px 0px 0px rgba($siteColor, 0.4);
-                    color: rgba(255, 255, 255, 0.88);
+                    color: rgba(0,0,0,.88);
                     font-weight: bold;
                     transition: .1s linear background-color, .1s linear box-shadow, .1s linear border-bottom;
                     &:hover {
@@ -59,7 +59,7 @@
             .unimportantBtn {
                 border-bottom: 1px solid rgba($siteColor, 0.3);
                 box-shadow: inset 0 -2px 0px 0px rgba($siteColor, 0.4);
-                color: rgba(255, 255, 255, 0.88);
+                color: rgba(0,0,0,.88);
                 font-weight: bold;
                 margin-top: 15px;
                 font-size: 0.77rem;
@@ -118,7 +118,7 @@
                 justify-content: space-between;
             }
             .card {
-                border: 1px solid #242529;
+                border: 1px solid #eee;
                 border-radius: 10px;
                 border-bottom-left-radius: 0px;
                 margin-bottom: 17px;
@@ -144,18 +144,17 @@
                     transition-duration: 800ms;
                 }
                 .excerpt {
-                    color: #b9bbbe;
+                    color: #262626;
                     padding: 0.7rem;
                     /* padding: 19px; */
                     font-size: 0.67rem;
                     line-height: 0.9rem;
                 }
                 &:hover {
-                    -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.3);
-                    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0 10px 90px rgba(0,0,0,.08);
                 }
                 &:active, &:focus {
-                    background-color: #171718;
+                    background-color: #ebebeb;
                     outline: unset;
                     .title { 
                         opacity: 0.8;
@@ -196,6 +195,53 @@
     }
 }
 
+[class*="dark"] {
+    .reasons {
+        background-color: #18191c;
+        .firstWrapper {
+            .firstContainer {
+                .header {
+                    color: #c0c0c0;
+                }
+                .title {
+                    color: #f1f1f1;
+                }
+                .description {
+                    color: #b9bbbe;
+                    a {
+                        color: rgba(255, 255, 255, 0.88);
+                    }
+                }
+                .unimportantBtn {
+                    color: rgba(255, 255, 255, 0.88);
+                }
+            }
+        }
+        .secondWrapper {
+            .header {
+                color: #c0c0c0;
+            }
+            .cardContainer {
+                .card {
+                    border: 1px solid #242529;
+                    .title {
+                        color: #ffffff;
+                        background-color: #262626;
+                    }
+                    .excerpt {
+                        color: #b9bbbe;
+                    }
+                    &:hover {
+                        box-shadow: 0 10px 90px rgba(0, 0, 0, 0.3);
+                    }
+                    &:active, &:focus {
+                        background-color: #171718;
+                    }
+                }
+            }
+        }
+    }
+}
 @keyframes blobAnimation {
 0% {
   d: path("M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z"); }

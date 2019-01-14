@@ -3,7 +3,8 @@
 .contentWrapper {
     display: flex;
     flex-direction: column;
-    background-color: #18191c;
+    background-color: #fff;
+    //background-color: #18191c;
     .sectionQuote {
         //padding: 30px 10px;
         padding: 1rem;
@@ -52,6 +53,12 @@
                 animation: blobAnimation 75s linear infinite alternate;
             }
         }
+    }
+}
+
+[class*="dark"] {
+    .contentWrapper {
+        background-color: #18191c;
     }
 }
 
