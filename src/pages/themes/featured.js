@@ -136,6 +136,9 @@ const FeaturedThemes = (props) => {
         +
         </Link>
     </div>
+    <div className={theme.helpContainer}>
+        <a href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" className={theme.btn} target="blank">?</a>
+    </div>
   </Layout>
 )
 }

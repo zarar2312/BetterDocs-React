@@ -131,6 +131,9 @@ const Tagss = ({ pageContext, data }) => {
         +
         </Link>
     </div>
+    <div className={style.helpContainer}>
+        <a href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" className={style.btn} target="blank">?</a>
+    </div>
     </Layout>
   )
 }
