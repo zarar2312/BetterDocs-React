@@ -24,13 +24,13 @@ const Layout = ({ children }) => (
     render={data => (
       <div className=
       {0 <= time&&time < 6 ? // between Midnight and 6 A.M the site will be dark
-        "mobile-version dakr"
+        "mobile-version dark"
         :
         "mobile-version"
       } id="time">
       <div className=
       {17 <= time&&time < 24 ? // between 5 P.M and Midnight the site will be dark
-        "mobile-version dakr"
+        "mobile-version dark"
         :
         "mobile-version"
       }>

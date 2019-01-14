@@ -7,7 +7,7 @@
         width: 100%;
     }
     [class^="themes-module"] >.headroom-wrapper>.headroom {
-        z-index: 10 !important;
+        z-index: 100 !important;
     }
     [class^="themes-module"] >.headroom-wrapper>.headroom--pinned {
         top: 1.8rem !important;

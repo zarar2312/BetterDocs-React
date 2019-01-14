@@ -740,8 +740,16 @@
             }
             .wrapper {
                 .cardWrapper {
+                    background-color: #202225;
+                    border-color: #202225;
+                    &:hover {
+                        box-shadow: unset;
+                    }
                     .author {
                         color: rgba(255, 255, 255, 0.4);
+                        &:hover {
+                            color: $siteColor;
+                        }
                     }
                     .title {
                         .titleLink {
@@ -754,7 +762,13 @@
                     .tagContainer {
                         .tag {
                             color: rgba(255,255, 255, 0.4);
+                            &:hover {
+                                color: #fff;
+                            }
                         }
+                    }
+                    @media (min-width: 850px) {
+                        background-color: transparent;
                     }
                 }
             }

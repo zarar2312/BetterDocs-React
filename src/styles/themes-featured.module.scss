@@ -93,7 +93,7 @@
             height: 11.5em;
             width: 50px;
             pointer-events: none;
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(255, 255, 255) 100%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #fff 100%);
             position: absolute;
             right: 0px;
         }
@@ -202,6 +202,30 @@
 
 [class*="dark"] {
     .featuredSection {
-
+        background-color: #36393f;
+        .container {
+            &::after {
+                content: "";
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #36393f 100%);
+            }
+            .cardWrapper {
+                background-color: #202225;
+                border-color: #202225;
+                &:hover {
+                    box-shadow: unset;
+                }
+                .title {
+                    color: #eee;
+                }
+                &:hover {
+                    .title {
+                        color: $siteColor;
+                    }
+                }
+                @media (min-width: 850px) {
+                    background-color: transparent;
+                }
+            }
+        }
     }
 }
