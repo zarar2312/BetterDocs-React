@@ -114,7 +114,7 @@
     }
 }
 
-[class*="dark"] {
+html[class*="dark"], html[id*="dark"] {
     .featured {
         background-color: #18191c;
         .card {

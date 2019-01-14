@@ -88,3 +88,17 @@
         }
     }
 }
+
+html[class*="dark"], html[id*="dark"] {
+    .tagsContainer {
+        .tag {
+            background-color: #36393f;
+            border-color: #36393f;
+            color: rgba(255, 255, 255, 0.85);
+            div {
+                background-color: $siteColor;
+                color: #fff;
+            }
+        }
+    }
+}

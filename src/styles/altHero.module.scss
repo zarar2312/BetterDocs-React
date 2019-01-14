@@ -599,6 +599,129 @@
         }
     }
 }
+
+html[class*="dark"], html[id*="dark"] {
+    .heroPlugins, .heroThemes {
+        border-color: #222327;
+        .container {
+            .h2 {
+                color: #eee;
+            }
+            .paragraph {
+                .p {
+                    a {
+                        color: rgba(255, 255, 255, 0.7);
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .detailsContainer {
+                .gitContainer {
+                    &::after {
+                        content: "|";
+                        color: #222327;
+                        position: relative;
+                        top: 2px;
+                        left: 5px;
+                    }
+                }
+                .gitlabContainer {
+                    &::after {
+                        content: "|";
+                        color: #222327;
+                        position: relative;
+                        top: 2px;
+                        left: 5px;
+                    }
+                }
+                .npmContainer {
+                    &::after {
+                        content: "|";
+                        color: #222327;
+                        position: relative;
+                        top: 2px;
+                        left: 5px;
+                    }
+                }
+                .discordContainer {
+                    &::after {
+                        content: "|";
+                        color: #222327;
+                        position: relative;
+                        top: 2px;
+                        left: 5px;
+                    }
+                }
+                .tagContainer {
+                    .tag {
+                        background-color: #2f3136;
+                        border-color: #2f3136;
+                        color: rgba(255, 255, 255, 0.85);
+                    }
+                }
+            }
+            .softwareContainer {
+                .software {
+                    background-color: #2f3136;
+                    border-color: #2f3136;
+                    color: rgba(255, 255, 255, 0.85);
+                }
+            }
+            .statusContainer {
+                .status {
+                    div {
+                        background-color: #36393f;
+                        &.unknown {
+                            border-color: #00a2ff;
+                            color: #fff;
+                            background-color: #00a2ff;
+                        }
+                        &[class*="Updated"] {
+                            border-color: #00b167;
+                            color: #fff;
+                            background-color: #00b167;
+                        }
+                        &[class*="Outdated"] {
+                            border-color: #eb0505;
+                            color: #fff;
+                            background-color: #eb0505;
+                        }
+                    }
+                }
+            }
+        }
+        .options {
+            .supportBtn {
+                background-color: #36393f;
+                &:hover {
+                    color: darken($siteColor, 7%);
+                }
+                &:active, &:focus {
+                    background-color: $siteColor;
+                    border-color: $siteColor;
+                    color: #fff;
+                    opacity: 1;
+                }
+            }
+            .demoBtn {
+                background-color: #36393f;
+                &:hover {
+                    color: darken($siteColor, 7%);
+                    border: 1px solid $siteColor;
+                }
+                &:active, &:focus {
+                    background-color: $siteColor;
+                    border: 1px solid $siteColor;
+                    color: #fff;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
 @keyframes float {
     0% {
         transform: translate(0,0);

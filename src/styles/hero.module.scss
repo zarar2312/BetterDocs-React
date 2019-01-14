@@ -12,6 +12,22 @@
     z-index: 99;
     background: linear-gradient(15deg, $siteColor 50%, #1868df 100%);
     //background: $siteColor;
+    &::before {
+        content: "";
+        background-image: url("../images/header-bg.svg");
+        background-size: 38%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: unset;
+        transform: unset;
+        box-shadow: inset 0px -35px 55px -16px $siteColor;
+        top: unset;
+        bottom: unset;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
     @media (min-width: 850px) {
         display: flex;
         padding: 4.25rem 0;
@@ -110,7 +126,7 @@
         content: "";
         background-image: url("../images/header-bg.svg");
         background-size: 38%;
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100%;
         border-radius: unset;

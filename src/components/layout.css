@@ -11,6 +11,10 @@ html {
   font-size: 24px;
   /*line-height: calc(1.3rem + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));*/
   backface-visibility: hidden;
+  /*background-color: #222327;*/
+}
+html[class*="dark"], html[id*="dark"] {
+  background-color: #222327;
 }
 @media only screen and (min-width: 1600px) {
   html {

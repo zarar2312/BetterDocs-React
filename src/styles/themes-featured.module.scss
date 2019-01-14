@@ -5,6 +5,7 @@
     //margin-top: 1rem;
     display: none;
     overflow: hidden;
+    background-color: #fff;
     @media (min-width: 850px) {
         display: flex;
     }
@@ -200,12 +201,13 @@
     }
 }
 
-[class*="dark"] {
+html[class*="dark"], html[id*="dark"] {
     .featuredSection {
+        background-color: #222327;
         .container {
             &::after {
                 content: "";
-                background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #36393f 100%);
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #222327 100%);
             }
             .cardWrapper {
                 background-color: #202225;

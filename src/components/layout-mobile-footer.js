@@ -21,19 +21,8 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <div className=
-      {0 <= time&&time < 6 ? // between Midnight and 6 A.M the site will be dark
-        "mobile-version dark"
-        :
-        "mobile-version"
-      } id="time">
-      <div className=
-      {17 <= time&&time < 24 ? // between 5 P.M and Midnight the site will be dark
-        "mobile-version dark"
-        :
-        "mobile-version"
-      }>
+    render={(data) => (
+      <div className="mobile-version">
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -55,7 +44,7 @@ const Layout = ({ children }) => (
           <meta name="msapplication-TileColor" content="#0a0a0a"/>
           <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
           <meta name="theme-color" content="#0a0a0a"/>
-          <html lang="en" />
+          <html lang="en" class={0 <= time&&time < 7 && "dark"} id={17 <= time&&time < 24 && "dark"} /> 
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
@@ -67,7 +56,6 @@ const Layout = ({ children }) => (
           {children}
         </div>
         <Footer />
-      </div>
       </div>
     )}
   />

@@ -211,3 +211,25 @@
         pointer-events: all;
     }
 }
+
+html[class*="dark"], html[id*="dark"] {
+    .pluginsContainer {
+        background-color: #36393f;
+        .contentWrapper {
+            .content {
+                color: #fff;
+                .footer {
+                    border-color: #222327;
+                    .edit {
+                        svg {
+                            fill: #fff;
+                        }
+                    }
+                }
+                a:not(.icon):not(.author):not(.titleLink):not(.anchor):not(.btn):not(.tag):not(.imgContainer) {
+                    color: rgba(255, 255, 255, 0.88);
+                }
+            }
+        }
+    }
+}

@@ -195,7 +195,7 @@
     }
 }
 
-[class*="dark"] {
+html[class*="dark"], html[id*="dark"] {
     .reasons {
         background-color: #18191c;
         .firstWrapper {
@@ -224,9 +224,10 @@
             .cardContainer {
                 .card {
                     border: 1px solid #242529;
+                    background-color: #2b2c2f;
                     .title {
                         color: #ffffff;
-                        background-color: #262626;
+                        background-color: $siteColor;
                     }
                     .excerpt {
                         color: #b9bbbe;

@@ -68,7 +68,7 @@
             &.active {
                 border-left: 4px solid $siteColor;
                 background-color: #fff;
-                border-radius: 4px !important;
+                //border-radius: 4px !important;
                 .header {
                     .title {
                         color: $siteColor;
@@ -177,6 +177,82 @@
         }
         &::-webkit-scrollbar { 
             width: 8px; 
+        }
+    }
+}
+
+html[class*="dark"], html[id*="dark"] {
+    .sidebarSearch {
+        background-color: #2f3136;
+        border-color: #2f3136;
+        .searchContainer {
+            border-color: #222327;
+            .searchOutput {
+                color: #eee;
+            }
+            .submitDescription {
+                color: #eee;
+            }
+            .input {
+                background: rgba(255, 255, 255, 0.1);
+                color: #eee;
+                border-color: transparent;
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 0.6;
+                }
+                &:hover {
+                    background: rgba(255, 255, 255, 0.07);
+                }
+                &:active, &:focus {
+                    background: rgba(255, 255, 255, 0.05);
+                    outline: unset;
+                }
+            }
+        }
+        .Results {
+            .resultCard {
+                background-color: #2f3136;
+                border-color: #222327;
+                &:hover {
+                    background-color: rgba($siteColor, 0.3);
+                }
+                &.active {
+                    border-left: 4px solid $siteColor;
+                    background-color: #27292e;
+                    //border-radius: 4px !important;
+                    .header {
+                        .title {
+                            color: $siteColor;
+                        }
+                        .author {
+                            color: $siteColor;
+                        }
+                    }
+                    .description {
+                        .p {
+                            color: rgba(255, 255, 255, 0.92);
+                        }
+                    }
+                }
+                .header {
+                    .title {
+                        color: rgba(255, 255, 255, 0.92);
+                    }
+                    .author {
+                        color: rgba(255, 255, 255, 0.54);
+                    }
+                }
+                .description {
+                    display: flex;
+                    .p {
+                        color: rgba(255, 255, 255, 0.54);
+                    }
+                    .pMargin {
+                        color: rgba(255, 255, 255, 0.54);
+                    }
+                }
+            }
         }
     }
 }
