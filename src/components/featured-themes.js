@@ -17,6 +17,9 @@ const Features = () => (
               }
             }
           }, 
+          sort: { 
+            fields: [frontmatter___title], order: ASC
+          }
           limit: 4) {
           group(field: collection) {
             fieldValue
