@@ -250,3 +250,61 @@ html[class*="dark"], html[id*="dark"] {
         }
     }
 }
+
+li[class*="react-tabs__tab"] {
+    text-shadow: unset !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    border: unset !important;
+    &[class*="react-tabs__tab--selected"] {
+        color: #fff !important;
+        box-shadow: unset !important;
+        text-shadow: unset !important;
+        background-color: $siteColor;
+    }
+    &:hover {
+        color: #fff !important;
+    }
+    &:focus {
+        outline: unset !important;
+        border: unset !important;
+        background-color: darken($siteColor, 7%) !important;
+        box-shadow: unset !important;
+    }
+    &:focus::after {
+        display: none !important;
+    }
+}
+
+[class*="dark"], [id*="dark"] {
+    li[class*="react-tabs__tab"] {
+        text-shadow: unset !important;
+        color: rgba(255, 255, 255, 0.4) !important;
+        border: unset !important;
+        &[class*="react-tabs__tab--selected"] {
+            color: #fff !important;
+            box-shadow: unset !important;
+            text-shadow: unset !important;
+            background-color: $siteColor;
+        }
+        &:hover {
+            color: #fff !important;
+        }
+        &:focus {
+            outline: unset !important;
+            border: unset !important;
+            background-color: darken($siteColor, 7%) !important;
+            box-shadow: unset !important;
+        }
+        &:focus::after {
+            display: none !important;
+        }
+    }
+}
+[class*="previewPanel"] {
+    width: calc(100% - 75px);
+}
+@media (min-width: 850px) {
+    .previewPanel {
+        width: calc(100% - 300px);
+    }
+}

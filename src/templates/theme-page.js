@@ -12,7 +12,6 @@ import ad from '../styles/ad.module.scss'
 import alert from '../styles/alerts.module.scss'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
-import "../styles/theme-page.css"
 
 const Themes = (props) => {
   const themeList = props.data.listThemes;

@@ -10,7 +10,7 @@
     }
     .titleBar {
         border-bottom: 1px solid #e5e5e5;
-        background: rgba(255,255,255,0.6);
+        background-color: rgba(255,255,255,0.6);
         display: flex;
         justify-content: center;
         padding: 0.62rem 0.82rem;
@@ -276,6 +276,98 @@
                             padding: 0.5rem;
                             color: rgba(0, 0, 0, 0.6);
                             font-size: 0.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+[class*="dark"], [id="dark"] {
+    .wrapper {
+        background-color: #36393f;
+        .titleBar {
+            background-color: #222327;
+            border-color: #1c1d20;
+            .counter {
+                color: #eee;
+                span {
+                    background-color: $siteColor;
+                    color: #fff;
+                }
+            }
+        }
+        .flexRow {
+            .mainContainer {
+                .showcaseContainer {
+                    .cardContainer {
+                        .themeCard {
+                            background-color: #2b2c2f;
+                            border-color: #2b2c2f;
+                            .imgContainer {
+                                .description {
+                                    background-color: rgba(0,0,0,.8);
+                                    color: #eee;
+                                }
+                            }
+                            .header {
+                                p {
+                                    color: #b9bbbe;
+                                }
+                            }
+                        }
+                        .pluginCard {
+                            background-color: #2b2c2f;
+                            border-color: #2b2c2f;
+                            .header {
+                                background-color: $siteColor;
+                            }
+                            .description {
+                                color: #b9bbbe;
+                            }
+                        }
+                    }
+                }
+            }
+            .profile {
+                .profileColumn {
+                    .profileRow {
+                        .profileSection {
+                            background-color: #222327;
+                            border-color: #36393f;
+                            .details {
+                                .name {
+                                    color: #fff;
+                                }
+                                .roles {
+                                    .role {
+                                        background-color: $siteColor;
+                                        color: #fff;
+                                        border-color: $siteColor;
+                                    }
+                                }
+                                .follow {
+                                    .btn {
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                            .linksWrapper {
+                                .header {
+                                    color: rgba(255, 255, 255, 0.7);
+                                }
+                                .links {
+                                    .link {
+                                        svg {
+                                            fill: #cccccc;
+                                        }
+                                        p {
+                                            color: #cccccc;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
