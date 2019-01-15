@@ -253,16 +253,19 @@ html[class*="dark"], html[id*="dark"] {
 
 li[class*="react-tabs__tab"] {
     text-shadow: unset !important;
-    color: rgba(255, 255, 255, 0.4) !important;
+    color: rgba(0, 0, 0, 0.4) !important;
     border: unset !important;
     &[class*="react-tabs__tab--selected"] {
         color: #fff !important;
         box-shadow: unset !important;
         text-shadow: unset !important;
         background-color: $siteColor;
+        &:hover {
+            color: rgba( #fff, 0.7) !important;
+        }
     }
     &:hover {
-        color: #fff !important;
+        color: #000 !important;
     }
     &:focus {
         outline: unset !important;
