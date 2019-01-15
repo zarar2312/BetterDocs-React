@@ -180,7 +180,7 @@ query allFeaturedThemesQuery {
       }
     }
   }
-  featured: allMarkdownRemark(filter: {collection: {eq: "themes"} frontmatter: { featured: { eq: true } } } sort: { fields: [frontmatter___title], order: ASC} limit: 8 ) {
+  featured: allMarkdownRemark(filter: {collection: {eq: "themes"} frontmatter: { featured: { eq: true } } } sort: { fields: [frontmatter___title], order: ASC} ) {
     group(field: collection) {
       fieldValue
       totalCount
