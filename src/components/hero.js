@@ -2,6 +2,7 @@ import React from 'react'
 import style from '../styles/hero.module.scss'
 import preview from '../images/discord-comparison.png'
 import '../styles/hero.css'
+import { Link } from 'gatsby'
 
 const Hero = ({ siteTitle }) => (
   <section
@@ -22,9 +23,9 @@ const Hero = ({ siteTitle }) => (
         </div>
         <div className={style.button}
         > 
-            <a className={style.btn} href="https://github.com/rauenzi/BetterDiscordApp/releases" target="blank"
+            <Link className={style.btn} to="/download/" target="blank"
             >Download
-            </a> 
+            </Link> 
         </div>
     </div>
     <div className={style.heroImage}
