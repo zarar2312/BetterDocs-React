@@ -17,6 +17,7 @@ import "../styles/plugin-page.css"
 const Plugins = (props) => {
   const pluginList = props.data.listPlugins;
   const previewList = props.data.previewsList;
+  const librariesList = props.data.libraryList;
 
   return (
   <Layout>
@@ -186,6 +187,18 @@ const Plugins = (props) => {
             }
           </div>
         </div>
+        {node.frontmatter.library &&
+        <div className={style.library}>
+        <div className={style.Lh2}>Additional <b>required</b> plugin(s)/library(ies)</div>
+          <div className={style.libraryWrapper}>
+            {librariesList.group.map(library => (
+              <a className={style.libraryBtn} href={library.fieldValue} target="blank" key={library.fieldValue}>
+                <div className={style.libraryContent}>Download</div>
+              </a>
+            ))}
+          </div>
+        </div>
+        }
         <div className={ad.ad}>
           <AdSense.Google
               client='ca-pub-1998206533560539'
@@ -316,6 +329,7 @@ export const pluginsQuery = graphql`
                 npm_i
                 download
                 thumbnail
+                library
                 discord_server
                 support
                 status
@@ -331,7 +345,6 @@ export const pluginsQuery = graphql`
             }
         }
     },
-    
     previewsList:allMarkdownRemark(
       filter: { 
         collection: { 
@@ -389,6 +402,67 @@ export const pluginsQuery = graphql`
             id
             frontmatter {
               software
+            }
+          }
+        }
+    },
+    previewsList:allMarkdownRemark(
+      filter: { 
+        collection: { 
+          eq: "plugins" 
+        } 
+        fields: {
+          slug: {
+            eq: $slug
+          }
+        }
+      }
+      ) {
+      group(field: frontmatter___previews) {
+        fieldValue
+        totalCount
+      }
+      totalCount
+      edges {
+        node {
+          excerpt
+          html
+          id
+          frontmatter {
+            previews
+            thumbnail
+            title
+            date
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    },
+    libraryList:allMarkdownRemark(
+      filter: {
+        collection: { 
+          eq: "plugins" 
+        }
+        fields: {
+          slug: {
+            eq: $slug
+          }
+        }
+      }) {
+      group(field: frontmatter___library) {
+        fieldValue
+        totalCount
+      }
+      totalCount
+      edges {
+        node {
+            excerpt
+            html
+            id
+            frontmatter {
+              library
             }
           }
         }

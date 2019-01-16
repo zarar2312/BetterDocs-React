@@ -14,12 +14,12 @@
         overflow: hidden;
         padding-left: unset;
         @media (min-width: 850px) {
-            flex: 3;
+            flex: 4;
             padding-left: 14.8rem;
         }
         .content {
             display: flex;
-            order: 4;
+            order: 5;
             flex-direction: column;
             overflow: hidden;
             overflow-y: auto;

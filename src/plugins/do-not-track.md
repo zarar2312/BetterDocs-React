@@ -9,6 +9,7 @@ support: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: 'https://discordapp.com/invite/cdzD9wF'
 status: Updated
 software: [BandagedBD, BetterDiscord]
+library: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 auto: true
 ghcommentid: 42
 layout: product

@@ -25,9 +25,57 @@
                 display: block;
             }
         }
+        .library {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            order: 2;
+            background-color: #eee;
+            .Lh2 {
+                margin-bottom: 17px;
+                margin-top: -10px;
+                font-size: 0.7rem;
+            }
+            .libraryWrapper {
+                display: flex;
+                counter-reset: library;  
+                .libraryBtn {
+                    margin-left: 10px;
+                    &:first-child {
+                        margin-left: unset;
+                    }
+                    .libraryContent {
+                        display: block;
+                        background-color: $siteColor;
+                        color: #fff;
+                        border-radius: 2px;
+                        padding: 0.3rem 0.6rem;
+                        font-size: 0.6rem;
+                        border: 1px solid darken($siteColor, 7%);
+                        transition: 250ms all linear;
+                        position: relative;
+                        &:hover {
+                            background: darken($siteColor, 7%);
+                        }
+                        &::before {
+                            counter-increment: library;
+                            position: absolute;
+                            top: -8px;
+                            left: -8px;
+                            background-color: darken($siteColor, 8%);
+                            padding: 4px 7px;
+                            font-size: 0.5rem;
+                            border-radius: 50%;
+                            content: counter(library);
+                            margin-right: 4px;
+                        }
+                    }
+                }
+            }
+        }
         .content {
             display: flex;
-            order: 3;
+            order: 4;
             flex-direction: column;
             max-height: 100%;
             overflow: auto;
@@ -239,6 +287,13 @@ html[class*="dark"], html[id*="dark"] {
     .pluginsPageContainer {
         background-color: #36393f;
         .contentWrapper {
+            .library {
+                background-color: #2f3136;
+                border-bottom: 2px solid #222327;
+                .Lh2 {
+                    color: #fff;
+                }
+            }
             .content {
                 color: #fff;
                 .footer {
@@ -256,6 +311,59 @@ html[class*="dark"], html[id*="dark"] {
                     fill: #fff;
                 }
             }
+        }
+    }
+}
+
+li[class*="react-tabs__tab"] {
+    text-shadow: unset !important;
+    color: rgba(0, 0, 0, 0.4) !important;
+    border: unset !important;
+    &[class*="react-tabs__tab--selected"] {
+        color: #fff !important;
+        box-shadow: unset !important;
+        text-shadow: unset !important;
+        background-color: $siteColor;
+        &:hover {
+            color: rgba( #fff, 0.7) !important;
+        }
+    }
+    &:hover {
+        color: #000 !important;
+    }
+    &:focus {
+        outline: unset !important;
+        border: unset !important;
+        background-color: darken($siteColor, 7%) !important;
+        box-shadow: unset !important;
+    }
+    &:focus::after {
+        display: none !important;
+    }
+}
+
+[class*="dark"], [id*="dark"] {
+    li[class*="react-tabs__tab"] {
+        text-shadow: unset !important;
+        color: rgba(255, 255, 255, 0.4) !important;
+        border: unset !important;
+        &[class*="react-tabs__tab--selected"] {
+            color: #fff !important;
+            box-shadow: unset !important;
+            text-shadow: unset !important;
+            background-color: $siteColor;
+        }
+        &:hover {
+            color: #fff !important;
+        }
+        &:focus {
+            outline: unset !important;
+            border: unset !important;
+            background-color: darken($siteColor, 7%) !important;
+            box-shadow: unset !important;
+        }
+        &:focus::after {
+            display: none !important;
         }
     }
 }
