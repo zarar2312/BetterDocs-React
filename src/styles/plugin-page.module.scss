@@ -69,6 +69,11 @@
                             content: counter(library);
                             margin-right: 4px;
                         }
+                        &:only-child {
+                            &::before {
+                                content: unset;
+                            }
+                        }
                     }
                 }
             }
