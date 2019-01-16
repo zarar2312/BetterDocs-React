@@ -233,6 +233,21 @@
                     text-align: center;
                     line-height: 1.65rem;
                     font-size: 0.74rem;
+                    display: flex;
+                    margin: 0 auto;
+                    .help {
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: #fff;
+                        border-radius: 50%;
+                        font-size: 0.4rem;
+                        line-height: 0.8rem;
+                        height: 0.8rem;
+                        width: 0.8rem;
+                        transition: 250ms linear;
+                        &:hover {
+                            background-color: $siteColor;
+                        }
+                    }
                     &[alt="null"] {
                         color: rgba(#000,0.3);
                     }

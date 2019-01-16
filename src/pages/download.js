@@ -2,6 +2,7 @@ import React from 'react'
 
 import style from '../styles/download.module.scss'
 import Layout from '../components/layout'
+import '../styles/tooltips.css'
 
 const DownloadPage = () => (
   <Layout>
@@ -31,7 +32,7 @@ const DownloadPage = () => (
         <div className={style.feature}>Twitch.tv Emotes</div>
         <div className={style.feature}>BetterTTV Emotes</div>
         <div className={style.feature}>FrankerFaceZ Emotes</div>
-        <div className={style.feature} alt="null">Telemetry Blocking</div>
+        <div className={style.feature} alt="null">Telemetry Blocking <div className={style.help} data-balloon="This can be added with a plugin." data-balloon-pos="left">?</div></div>
       </div>
     </div>
     <div className={style.footer}>
@@ -206,7 +207,7 @@ const DownloadPage = () => (
         <div className={style.feature}>Twitch.tv Emotes</div>
         <div className={style.feature}>BetterTTV Emotes</div>
         <div className={style.feature}>FrankerFaceZ Emotes</div>
-        <div className={style.feature} alt="null">Telemetry Blocking</div>
+        <div className={style.feature} alt="null">Telemetry Blocking <div className={style.help} data-balloon="This can be added with a plugin." data-balloon-pos="right">?</div></div>
       </div>
     </div>
     <div className={style.footer}>
