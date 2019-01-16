@@ -171,7 +171,7 @@ const DownloadPage = () => (
         <div className={style.feature} alt="null">Twitch.tv Emotes</div>
         <div className={style.feature} alt="null">BetterTTV Emotes</div>
         <div className={style.feature} alt="null">FrankerFaceZ Emotes</div>
-        <div className={style.feature} alt="null">Telemetry Blocking</div>
+        <div className={style.feature}>Telemetry Blocking</div>
       </div>
     </div>
     <div className={style.footer}>

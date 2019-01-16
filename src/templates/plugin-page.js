@@ -189,7 +189,7 @@ const Plugins = (props) => {
         </div>
         {node.frontmatter.library &&
         <div className={style.library}>
-        <div className={style.Lh2}>Additional <b>required</b> plugin(s)/library(ies)</div>
+        <div className={style.Lh2}><b>Required</b> dependency(ies)</div>
           <div className={style.libraryWrapper}>
             {librariesList.group.map(library => (
               <a className={style.libraryBtn} href={library.fieldValue} target="blank" key={library.fieldValue}>
