@@ -89,7 +89,6 @@ const Tagss = ({ pageContext, data }) => {
                 <Link 
                 to={"themes" + node.fields.slug}
                 className={style.titleLink}
-                cover
                 bg="#0a0a0a"
                 duration={0.65}>
                 {node.frontmatter.title}
