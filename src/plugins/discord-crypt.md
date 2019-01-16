@@ -369,16 +369,16 @@ To start a secure session with another person, they need to have this plugin ins
 After which, you can start a secure session with them using the following steps:
 
 * Generate a key and send a new public key using the Auto-Key-Exchange button.
-    ( ![s1](https://i.imgur.com/9Xxgo03.png) )
+    ( ![s1](https://i.imgur.com/yvcaiMQ.png) )
 * If your partner has the `Automatically Accept Key Exchanges` option switched on, they will
     immediately attempt to establish a session with you..
 * If they do not have `Automatically Accept Key Exchanges` enabled, you will need to wait
     for them to manually accept the exchange.
 
-![session-establishment](https://i.imgur.com/yDMKfNZ.png)
+![session-establishment](https://i.imgur.com/9qj0Wq5.png)
 
 
-![session-prompt](images/session-prompt.png)
+![session-prompt](https://i.imgur.com/Hpanry7.png)
 
 
 ###### Channels And Group DMs

@@ -206,10 +206,24 @@ const Themes = (props) => {
           </TabPanel>
           {node.frontmatter.previews &&
           <TabPanel className="previewPanel" style={{margin: "0 auto"}}>
-            <h2>Previews (wip)</h2>
-            {previewList.group.map(image => (
-              <img src={image.fieldValue} alt={node.frontmatter.title + " made by " + node.frontmatter.author} key={image.id}/>
-            ))}
+            <div className={style.tabContentWrapper}>
+              {previewList.group.map(image => (
+                <div className={style.screenshotWrapper} key={image.id}>
+                  <div className={style.imgWrapper}>
+                    <img src={image.fieldValue} alt={node.frontmatter.title + " made by " + node.frontmatter.author}/>
+                    <div className={style.options}>
+                      <div className={style.optionsWrapper}>
+                        <a 
+                        className={style.btn}
+                        href={image.fieldValue}
+                        target="blank"
+                        >Full Image</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </TabPanel>
           }
         </Tabs>

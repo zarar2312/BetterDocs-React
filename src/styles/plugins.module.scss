@@ -229,6 +229,13 @@ html[class*="dark"], html[id*="dark"] {
                 a:not(.icon):not(.author):not(.titleLink):not(.anchor):not(.btn):not(.tag):not(.imgContainer) {
                     color: rgba(255, 255, 255, 0.88);
                 }
+                a:not([class="anchor"]) {
+                    color: rgba(255, 255, 255, 0.88);
+                    border-color: $siteColor;
+                    &:hover {
+                        background-color: $siteColor;
+                    }
+                }
             }
         }
     }

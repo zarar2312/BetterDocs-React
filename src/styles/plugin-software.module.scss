@@ -394,14 +394,19 @@
 
 html[class*="dark"], html[id*="dark"] {
     .pluginsContainer {
+        background-color: #36393f;
         .contentWrapper {
         }
         .content {
             .wrapper {
-                color: rgba(255, 255, 255, 0.7);
+                color: #fff;
             }
             a:not([class="anchor"]) {
                 color: rgba(255, 255, 255, 0.88);
+                border-color: $siteColor;
+                &:hover {
+                    background-color: $siteColor;
+                }
             }
         }
         .sidebarSearch {
