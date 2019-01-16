@@ -48,14 +48,14 @@
             &::-webkit-scrollbar {
                 width: 8px;
             }
-            a:not(.icon):not(.author):not(.titleLink):not(.anchor):not(.btn):not(.tag):not(.imgContainer) {
+            a:not([class="anchor"]):not(.icon):not(.author):not(.titleLink):not(.anchor):not(.btn):not(.tag):not(.imgContainer) {
                 border-bottom: 1px solid rgba($siteColor, 0.3);
                 box-shadow: inset 0 -2px 0px 0px rgba($siteColor, 0.4);
                 color: rgba(0, 0, 0, 0.88);
                 font-weight: bold;
                 transition: .1s linear background-color, .1s linear box-shadow, .1s linear border-bottom;
             }
-            a:not(.icon):not(.author):not(.titleLink):not(.anchor):not(.btn):not(.tag):not(.imgContainer):hover {
+            a:hover:not(.icon):not(.author):not(.titleLink):not(.anchor):not(.btn):not(.tag):not(.imgContainer):not([class="anchor"]) {
                 background-color: rgba($siteColor, 0.3);
                 border-bottom: 1px solid transparent;
                 box-shadow: inset 0 -2px 0px 0px transparent;

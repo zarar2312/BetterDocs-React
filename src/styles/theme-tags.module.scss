@@ -451,6 +451,11 @@
                                 &:first-child {
                                     margin-bottom: 15px;
                                 }
+                                &:nth-child(2) {
+                                    background-color: grey;
+                                    cursor: not-allowed;
+                                    //pointer-events: none;
+                                }
                             }
                         }
                     }

@@ -73,10 +73,10 @@ const FeaturedThemes = (props) => {
                     target="blank"
                     >Full Thumbnail</a>
                     {node.frontmatter.demo &&
-                    <a 
+                    <div
                     href={'http://betterdocs.netlify.com/demo/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo}
                     className={theme.btn}
-                    target="blank">Quick Demo</a>
+                    target="blank">Quick Demo</div>
                     }
                   </div>
                 </div>

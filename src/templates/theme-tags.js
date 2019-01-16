@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import Layout from '../components/layout-mobile-footer'
 import style from '../styles/theme-tags.module.scss'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { graphql, Link } from "gatsby"
 import Missing from "../images/missing_image_2.png"
 import Stars from "../images/stars.svg"
@@ -65,10 +64,10 @@ const Tagss = ({ pageContext, data }) => {
                     target="blank"
                     >Full Thumbnail</a>
                     {node.frontmatter.demo &&
-                    <a 
+                    <div 
                     href={'http://betterdocs.netlify.com/demo/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo}
                     className={style.btn}
-                    target="blank">Quick Demo</a>
+                    target="blank">Quick Demo</div>
                     }
                   </div>
                 </div>
@@ -87,14 +86,14 @@ const Tagss = ({ pageContext, data }) => {
                 </div>
                 <div className={style.title}
                 >
-                <AniLink 
+                <Link 
                 to={"themes" + node.fields.slug}
                 className={style.titleLink}
                 cover
                 bg="#0a0a0a"
                 duration={0.65}>
                 {node.frontmatter.title}
-                </AniLink>
+                </Link>
                 </div>
               {node.frontmatter.tags ?
               <div>
