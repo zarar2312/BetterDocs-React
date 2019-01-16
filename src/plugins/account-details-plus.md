@@ -10,7 +10,7 @@ discord_server: 'https://discordapp.com/invite/cdzD9wF'
 thumbnail:
 tags:
 software: [BandagedBD,BetterDiscord]
-library: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
+dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 status: Updated
 auto: true
 ghcommentid: # DON'T CHANGE

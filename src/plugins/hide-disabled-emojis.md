@@ -8,7 +8,7 @@ github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Pl
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: 'http://discord.zackrauen.com/'
 software: [BandagedBD, BetterDiscord]
-library: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
+dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 ghcommentid: 124
 layout: product
 date: 2018-10-23T21:29:26.770Z

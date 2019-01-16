@@ -17,7 +17,7 @@ import "../styles/plugin-page.css"
 const Plugins = (props) => {
   const pluginList = props.data.listPlugins;
   const previewList = props.data.previewsList;
-  const librariesList = props.data.libraryList;
+  const dependenciesList = props.data.dependencyList;
 
   return (
   <Layout>
@@ -187,13 +187,13 @@ const Plugins = (props) => {
             }
           </div>
         </div>
-        {node.frontmatter.library &&
-        <div className={style.library}>
-        <div className={style.Lh2}><b>Required</b> dependency(ies)</div>
-          <div className={style.libraryWrapper}>
-            {librariesList.group.map(library => (
-              <a className={style.libraryBtn} href={library.fieldValue} target="blank" key={library.fieldValue}>
-                <div className={style.libraryContent}>Download</div>
+        {node.frontmatter.dependency &&
+        <div className={style.dependency}>
+        <div className={style.Lh2}><b>Required</b> Dependency(ies)</div>
+          <div className={style.dependencyWrapper}>
+            {dependenciesList.group.map(dependency => (
+              <a className={style.dependencyBtn} href={dependency.fieldValue} target="blank" key={dependency.fieldValue}>
+                <div className={style.dependencyContent}>Download</div>
               </a>
             ))}
           </div>
@@ -329,7 +329,7 @@ export const pluginsQuery = graphql`
                 npm_i
                 download
                 thumbnail
-                library
+                dependency
                 discord_server
                 support
                 status
@@ -406,41 +406,7 @@ export const pluginsQuery = graphql`
           }
         }
     },
-    previewsList:allMarkdownRemark(
-      filter: { 
-        collection: { 
-          eq: "plugins" 
-        } 
-        fields: {
-          slug: {
-            eq: $slug
-          }
-        }
-      }
-      ) {
-      group(field: frontmatter___previews) {
-        fieldValue
-        totalCount
-      }
-      totalCount
-      edges {
-        node {
-          excerpt
-          html
-          id
-          frontmatter {
-            previews
-            thumbnail
-            title
-            date
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    },
-    libraryList:allMarkdownRemark(
+    dependencyList:allMarkdownRemark(
       filter: {
         collection: { 
           eq: "plugins" 
@@ -451,7 +417,7 @@ export const pluginsQuery = graphql`
           }
         }
       }) {
-      group(field: frontmatter___library) {
+      group(field: frontmatter___dependency) {
         fieldValue
         totalCount
       }
@@ -462,7 +428,7 @@ export const pluginsQuery = graphql`
             html
             id
             frontmatter {
-              library
+              dependency
             }
           }
         }

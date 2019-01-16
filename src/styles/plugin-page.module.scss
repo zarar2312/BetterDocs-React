@@ -25,7 +25,7 @@
                 display: block;
             }
         }
-        .library {
+        .dependency {
             display: flex;
             flex-direction: column;
             padding: 1rem;
@@ -36,15 +36,15 @@
                 margin-top: -10px;
                 font-size: 0.7rem;
             }
-            .libraryWrapper {
+            .dependencyWrapper {
                 display: flex;
-                counter-reset: library;  
-                .libraryBtn {
+                counter-reset: dependency;  
+                .dependencyBtn {
                     margin-left: 10px;
                     &:first-child {
                         margin-left: unset;
                     }
-                    .libraryContent {
+                    .dependencyContent {
                         display: block;
                         background-color: $siteColor;
                         color: #fff;
@@ -58,7 +58,7 @@
                             background: darken($siteColor, 7%);
                         }
                         &::before {
-                            counter-increment: library;
+                            counter-increment: dependency;
                             position: absolute;
                             top: -8px;
                             left: -8px;
@@ -66,7 +66,7 @@
                             padding: 4px 7px;
                             font-size: 0.5rem;
                             border-radius: 50%;
-                            content: counter(library);
+                            content: counter(dependency);
                             margin-right: 4px;
                         }
                         &:only-child {

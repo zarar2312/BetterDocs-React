@@ -28,7 +28,7 @@ I promise it doesn't take long :)
   tags: []
   software: [BandagedBD,EnhancedDiscord,DiscordInjections,BetterDiscord]
   previews: [Direct link to image, Direct link to image]
-  library: [URL, URL]
+  dependency: [URL, URL]
   status:
   auto:
   ghcommentid: # DON'T CHANGE
@@ -53,7 +53,7 @@ Here's is some helpful information to inform you what each field does.
   - **tags** - Tags are in an array and can be seperated with commas "," like so `[tag1,tag2]`. `[OPTIONAL]`
   - **software** - The list of softwares your plugin supports. They are sorted in an array and seperated by commas "," like so `[BandagedBD,BeautifulDiscord,DiscordInjections,EnhancedDiscord,BetterDiscord]`. `[REQUIRED]`
   - **previews** - A list of images that show a preview of your plugn. [Imgur](https://imgur.com) is highly recommended for compressed images and reliability. Multiple images can be added and seperated by commas ',' `[OPTIONAL]`
-  - **library** - A list (or just one) of required libraries/plugins for this plugin to work.
+  - **dependency** - Direct link(s) to the required dependencies for the plugin to function properly.
   - **status** - Values: `Updated/Oudated`. The current status of your plugin.
   - **auto** - If your plugin is hosted on [Github](https://github.com) then add `true` to allow users to automatically down the file (or even the entire repo) instead of just' visiting the site, if hosted elsewhere leave blank or remove it entirely. `[REQUIRED]`
   - **ghcommentid** - ~~The ID of the issue related to your plugin so it can be used in our comments system~~. `[REQUIRED]` 
