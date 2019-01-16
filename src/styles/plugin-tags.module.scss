@@ -403,6 +403,9 @@ html[class*="dark"], html[id*="dark"] {
             a:not([class="anchor"]) {
                 color: rgba(255, 255, 255, 0.88);
             }
+            [class="anchor"] {
+                fill: #fff;
+            }
         }
         .sidebarSearch {
             background-color: #2f3136;

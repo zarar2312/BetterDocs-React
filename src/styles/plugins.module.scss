@@ -236,6 +236,9 @@ html[class*="dark"], html[id*="dark"] {
                         background-color: $siteColor;
                     }
                 }
+                [class="anchor"] {
+                    fill: #fff;
+                }
             }
         }
     }

@@ -408,6 +408,9 @@ html[class*="dark"], html[id*="dark"] {
                     background-color: $siteColor;
                 }
             }
+            [class="anchor"] {
+                fill: #fff;
+            }
         }
         .sidebarSearch {
             background-color: #2f3136;
