@@ -2,7 +2,14 @@ import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import style from '../styles/featured-themes.module.scss'
 
-const Features = () => (
+class Features extends React.Component {
+
+  componentDidMount () {
+
+  }
+
+  render () {
+    return (
   <StaticQuery
     query={ graphql`
     query featuredThemesQuery {
@@ -145,6 +152,6 @@ const Features = () => (
         </section>      
     )}
   />
-)
+)}}
 
 export default Features

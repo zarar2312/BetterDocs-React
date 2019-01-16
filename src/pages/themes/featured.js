@@ -10,6 +10,7 @@ import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
 import 'src/styles/theme-featured.css'
 import Headroom from 'react-headroom';
+import 'src/styles/tooltips.css'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -137,7 +138,7 @@ const FeaturedThemes = (props) => {
         </Link>
     </div>
     <div className={theme.helpContainer}>
-        <a href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" className={theme.btn} target="blank">?</a>
+        <a data-balloon="Need help with theme installation?" data-balloon-pos="left" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" className={theme.btn} target="blank">?</a>
     </div>
   </Layout>
 )

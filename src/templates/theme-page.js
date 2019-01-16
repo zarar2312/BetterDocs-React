@@ -12,6 +12,7 @@ import ad from '../styles/ad.module.scss'
 import alert from '../styles/alerts.module.scss'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
+import "../styles/tooltips.css"
 
 const Themes = (props) => {
   const themeList = props.data.listThemes;
@@ -153,8 +154,8 @@ const Themes = (props) => {
               responsive='true'
             />
         </div>
-        {previewList.edges.map(({ node }, i) => (
-        <Tabs style={{order: "3"}}>
+        {previewList.edges.map(({ node }) => (
+        <Tabs style={{order: "3"}} key={node.id}>
           <TabList style={{display: "flex", justifyContent: "center", borderBottom: "unset", marginBottom: "unset"}}>
             {node.frontmatter.previews ?
             <Tab style={{ transition: "all 250ms linear", marginBottom: "0.25rem", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
@@ -207,7 +208,7 @@ const Themes = (props) => {
           <TabPanel className="previewPanel" style={{margin: "0 auto"}}>
             <h2>Previews (wip)</h2>
             {previewList.group.map(image => (
-              <img src={image.fieldValue} alt={image.fieldValue}/>
+              <img src={image.fieldValue} alt={node.frontmatter.title + " made by " + node.frontmatter.author} key={image.id}/>
             ))}
           </TabPanel>
           }
@@ -337,7 +338,7 @@ export const themesQuery = graphql`
       tags
       layout
       ghcommentid
-      date
+      date(formatString: "DD/MM/YYYY")
     }
     fields {
       slug

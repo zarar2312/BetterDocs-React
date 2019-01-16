@@ -10,6 +10,7 @@ import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
 import '../styles/theme-tags.css'
 import Headroom from 'react-headroom';
+import '../styles/tooltips.css'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -132,7 +133,7 @@ const Tagss = ({ pageContext, data }) => {
         </Link>
     </div>
     <div className={style.helpContainer}>
-        <a href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" className={style.btn} target="blank">?</a>
+        <a data-balloon="Need help with theme installation?" data-balloon-pos="left"href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" className={style.btn} target="blank">?</a>
     </div>
     </Layout>
   )
