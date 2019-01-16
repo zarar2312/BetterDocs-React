@@ -214,6 +214,14 @@
             &:active, &:focus {
                 opacity: 0.7;
             }
+            &[alt="disabled"] {
+                border-color: grey;
+                color: grey;
+                &:hover {
+                    background-color: grey;
+                    color: #fff;
+                }
+            }
         }
         .supportBtn {
             background-color: #fff;
