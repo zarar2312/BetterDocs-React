@@ -15,7 +15,7 @@ import '../styles/tooltips.css'
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { edges, totalCount } = data.list
   const tags = data.tags;
   const tagHeader = `${totalCount} theme${
     totalCount === 1 ? "" : "s"
@@ -45,7 +45,7 @@ const Tagss = ({ pageContext, data }) => {
             key={node.id}
             >
               { node.frontmatter.thumbnail ?
-              <div className={style.imgContainer}
+              <div className={style.imgContainer} alt={node.frontmatter.featured && "featured"}
               >
                 <LazyLoad once={true} height="100%"
                   placeholder={<img className={style.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
@@ -142,7 +142,7 @@ Tagss.propTypes = {
     tag: PropTypes.string.isRequired,
   }),
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    list: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
       edges: PropTypes.arrayOf(
         PropTypes.shape({
@@ -164,7 +164,7 @@ export default Tagss
 
 export const pageQuery = graphql`
   query($tag: String) {
-    allMarkdownRemark( filter: { frontmatter: { tags: { in: [$tag] } } collection: { eq: "themes" } } sort: { fields: [frontmatter___title], order: ASC} ) {
+    list: allMarkdownRemark( filter: { frontmatter: { tags: { in: [$tag] } } collection: { eq: "themes" } } sort: { fields: [frontmatter___title], order: ASC} ) {
       totalCount
       edges {
         node {

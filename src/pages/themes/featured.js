@@ -52,7 +52,7 @@ const FeaturedThemes = (props) => {
             key={node.id}
             >
               { node.frontmatter.thumbnail ?
-              <div className={theme.imgContainer}
+              <div className={theme.imgContainer} alt={node.frontmatter.featured && "featured"}
               >
                 <LazyLoad once={true} height="100%"
                   placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>

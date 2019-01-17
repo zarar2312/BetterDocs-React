@@ -223,6 +223,12 @@ html[class*="dark"], html[id*="dark"] {
                         color: $siteColor;
                     }
                 }
+                &:last-child {
+                    .imgWrapper {
+                        border-color: #131318;
+                        background-color: #131318;
+                    }
+                }
                 @media (min-width: 850px) {
                     background-color: transparent;
                 }

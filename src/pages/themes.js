@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
 import theme from '../styles/themes.module.scss'
-import featured from '../styles/themes-featured.module.scss'
+import featured from '../styles/theme-featured-section.module.scss'
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet";
 import Missing from "../images/missing_image_2.png"
@@ -88,7 +88,7 @@ const Themes = (props) => {
     >
     <Headroom>
       <div className={theme.titleBar}>
-        <div className={theme.count}>Themes <span>({listCount})</span></div>
+        <div className={theme.count}>#Themes <span>({listCount})</span></div>
         <input className={theme.input} placeholder="Search Themes library (WIP)" ></input>
       </div>
     </Headroom>
@@ -102,7 +102,7 @@ const Themes = (props) => {
             key={node.id}
             >
               { node.frontmatter.thumbnail ?
-              <div className={theme.imgContainer}
+              <div className={theme.imgContainer} alt={node.frontmatter.featured && "featured"}
               >
                 <LazyLoad once={true} height="100%"
                   placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>

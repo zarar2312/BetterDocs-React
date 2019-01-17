@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Features from '../components/features'
 import Reasons from '../components/reasons'
-import FeaturedThemes from '../components/featured-themes'
+import FeaturedThemes from '../components/index-featured-themes'
 
 const IndexPage = () => (
   <Layout>

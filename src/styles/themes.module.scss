@@ -415,6 +415,11 @@
                         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
                         z-index: 1;
                     }
+                    &[alt="featured"] {
+                        .img {
+                            border: 1px solid #ffb100;
+                        }
+                    }
                     .img {
                         background-color: #000;
                         height: 100%;

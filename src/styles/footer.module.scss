@@ -1,10 +1,11 @@
 @import "variables";
 
 .footer {
-    padding: 0 0 50px 0;
+    //padding: 0 0 50px 0;
     position: relative;
     border-top: 1px solid #eee;
     font-size: 0.7rem;
+    box-shadow: 0px 0px 40px 15px #fff;
     .background {
         bottom: 0;
         left: 0;
@@ -113,6 +114,7 @@
 html[class*="dark"], html[id*="dark"] {
     .footer {
         border-color: #222327;
+        box-shadow: 0px 0px 40px 15px #222327;
         .background {
             .blob {
                 fill: #fff;
