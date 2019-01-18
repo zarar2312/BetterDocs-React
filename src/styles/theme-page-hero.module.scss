@@ -22,8 +22,8 @@
         width: 100%;
         overflow: hidden;
         height: 100%;
-        background-color: rgba(0, 0, 0,0.5);
-        box-shadow: inset 40px 40px 190px 120px #0a0a0a;
+        background-color: rgba(0, 0, 0,0.75);
+        box-shadow: inset 20px 0px 180px 85px #0a0a0a;
         //box-shadow: inset 11rem 6rem 7rem 0rem #0a0a0a, inset -14rem -10rem 8rem -6rem rgba(10, 10, 10, 0.88);
         border-bottom-right-radius: 10rem;
         /*&::after {
@@ -35,6 +35,7 @@
             height: 100%;
         }*/
         @media (min-width: 850px) {
+            background-color: rgba(0, 0, 0,0.5);
             box-shadow: inset 66px 0px 220px 169px rgb(10, 10, 10);
         }
     }
