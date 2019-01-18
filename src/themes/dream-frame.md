@@ -7,14 +7,8 @@ github_profile_url: 'https://github.com/CorbsEditor'
 github_source_url: https://github.com/CorbsEditor/Dream-Frame/blob/master/DreamFrame.theme.css
 discord_server: 'https://discord.gg/Sr4RzS8'
 demo: https://cdn.jsdelivr.net/gh/CorbsEditor/Dream-Frame@master/RAW/DreamFrameRaw.theme.css
-thumbnail: https://i.imgur.com/yyNcMpp.png
-images:
-  - image: /images/themes/Expose_X_Preview.png
-    name: ExposeX Preview
-  - image: /images/themes/Expose_X_Preview_-_Custom_Background.jpg
-    name: ExposeX Preview - Custom Background
-  - image: /images/themes/Expose_X_Preview_-_Custom_Colors.png
-    name: ExposeX Preview - Custom Colors
+thumbnail: https://media.discordapp.net/attachments/501144124880322570/535639025671733266/Dream_Frame_Cover.png?width=400&height=225
+previews: [https://i.imgur.com/yyNcMpp.png]
 status: Updated
 featured: true
 style: dark
@@ -22,4 +16,23 @@ ghcommentid: 6
 layout: product
 date: 2018-10-25T16:39:40.887Z
 ---
-Brings a sexy translucent look to Discord with customizable options!
+## Why Dream Frame?
+Dream Frame offers many options like changing colors, icons, sizes, and so on. There are more options are come, more advanced options to come as well if you're into that. This theme is the best translucent look to Discord, nothing can beat it!
+## All of the Options Offered by Dream Frame
+The creator tries to add as many options as possible and without failing thanks to the fallback system from v2.2
+The following is offered as of now:
+* Background
+* Background blur
+* Background opacity
+* Background scaling
+* Emoji menu height
+* Emoji size
+* Avatar in chat size
+* Status color changing
+* Accent text, accent color
+* Font, font size
+* Server indicator colors
+* Titlebar icons(Windows)
+* Titlebar button colors(macOS)
+
+More is to come! 
