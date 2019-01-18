@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import style from '../styles/author-page.module.scss'
 import { graphql, Link } from "gatsby"
 import Helmet from 'react-helmet'
+import Missing from '../images/mobile.png'
 
 const Author = ({ pageContext, data }) => {
   const { authors } = pageContext
@@ -49,6 +50,15 @@ const Author = ({ pageContext, data }) => {
           <div className={style.profileRow}>
             <div className={style.profileSection}>
               <div className={style.details}>
+                {node.frontmatter.profile_picture ?
+                  <div className={style.profileWrapper}>
+                   <img src={node.frontmatter.profile_picture} alt={node.frontmatter.author + "'s Profile Picture"} />
+                  </div>
+                :
+                  <div className={style.profileWrapper} alt="missing">
+                    <img src={Missing} alt="Missing Profile Avatar"/>
+                  </div>
+                }
                 <p className={style.name}>
                 {authors}
                 </p>
@@ -207,6 +217,7 @@ export const authorQuery = graphql`
         frontmatter {
           title
           author
+          profile_picture
           github_profile_url
           gitlab_profile_url
           npm_profile_url

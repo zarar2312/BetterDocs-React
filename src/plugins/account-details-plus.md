@@ -2,6 +2,7 @@
 title: Account Details Plus
 author: rauenzi
 description: Lets you view popout, nickname and more from your account panel at the bottom.
+profile_picture: https://i.imgur.com/qG9zwoH.png
 download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/AccountDetailsPlus/
 github_profile_url: https://github.com/rauenzi/
 github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/AccountDetailsPlus/

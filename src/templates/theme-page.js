@@ -92,9 +92,9 @@ const Themes = (props) => {
             }
               <div className={hero.detailsWrapper}
               >
-                {node.frontmatter.profile ?
+                {node.frontmatter.profile_picture ?
                   <div className={hero.profileWrapper}>
-                   <img src={Missing} alt={node.frontmatter.author + "'s Profile Picture"} />
+                   <img src={node.frontmatter.profile_picture} alt={node.frontmatter.author + "'s Profile Picture"} />
                   </div>
                 :
                   <div className={hero.profileWrapper} alt="missing">
@@ -321,6 +321,7 @@ export const themesQuery = graphql`
             sub
             author
             description
+            profile_picture
             github_profile_url
             github_source_url
             gitlab_source_url
@@ -383,6 +384,7 @@ export const themesQuery = graphql`
     frontmatter {
       title
       author
+      profile_picture
       github_profile_url
       gitlab_source_url
       download
