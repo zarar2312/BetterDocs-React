@@ -54,16 +54,53 @@
                 width: 8px; 
             }
             a:not([class="anchor"]) {
-                border-bottom: 1px solid rgba($siteColor, 0.3);
-                box-shadow: inset 0 -2px 0px 0px rgba($siteColor, 0.4);
-                color: rgba(0, 0, 0, 0.88);
-                font-weight: bold;
-                transition: .1s linear background-color, .1s linear box-shadow, .1s linear border-bottom;
+                display: inline-block;
+                transition: color 250ms, text-shadow 250ms;
+                color: #fff;
+                text-decoration: none;
+                cursor: pointer;
+                position: relative;
+                z-index: 0;
+                line-height: 1rem;
+
+                &:after {
+                position: absolute;
+                z-index: -1;
+                bottom: -1px;
+                left: 50%;
+                transform: translateX(-50%);
+                content: '';
+                width: 100%;
+                height: 3px;
+                background-color: $siteColor;
+                transition: all 250ms;
+                }
+
+                &:hover {
+                    color: #fff;
+                    opacity: 1;
+                    background-color: transparent;
+                    &::after {
+                        height: 110%;
+                        width: 110%;
+                    }
+                }
             }
-            a:hover:not([class="anchor"]) {
-                background-color: rgba($siteColor, 0.3);
-                border-bottom: 1px solid transparent;
-                box-shadow: inset 0 -2px 0px 0px transparent;
+            a[class="anchor"] {
+                padding-left: 4px;
+                margin-right: 4px;
+                &::after {
+                    height: 0 !important;
+                }
+                &:hover {
+                    color: #fff;
+                    opacity: 1;
+                    background-color: transparent;
+                    &::after {
+                        height: 100% !important;
+                        width: 110% !important;
+                    }
+                }
             }
             .wrapper {
                 display: block;
@@ -224,16 +261,6 @@ html[class*="dark"], html[id*="dark"] {
                         svg {
                             fill: #fff;
                         }
-                    }
-                }
-                a:not(.icon):not(.author):not(.titleLink):not(.anchor):not(.btn):not(.tag):not(.imgContainer) {
-                    color: rgba(255, 255, 255, 0.88);
-                }
-                a:not([class="anchor"]) {
-                    color: rgba(255, 255, 255, 0.88);
-                    border-color: $siteColor;
-                    &:hover {
-                        background-color: $siteColor;
                     }
                 }
                 [class="anchor"] {
