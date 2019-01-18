@@ -68,12 +68,28 @@ const Themes = (props) => {
         <div className={hero.breadcrumbContainer}>
           <Link to="/" className={hero.breadcrumb}>Home</Link> 
           <span className={hero.breadcrumbSeperator}>/</span>
-          <Link to="/themes/" className={hero.breadcrumb}>Themes</Link> 
+          <Link to="/themes/" className={hero.breadcrumb}>Themes</Link>
+          <span className={hero.breadcrumbSeperator}>/</span>
         </div>
         <div className={hero.heroParent}>
           <div className={hero.container}
           >
-            {node.frontmatter.title && <h2 className={hero.h2}>{node.frontmatter.title}</h2>}
+            {node.frontmatter.title && 
+              <h2 className={hero.h2}>{node.frontmatter.title}</h2>
+            }
+            {node.frontmatter.author &&
+              <div className={hero.statusContainer} alt={node.frontmatter.status}>
+                {node.frontmatter.status ?
+                    <div className={hero.status}>
+                      <div className={node.frontmatter.status}>{node.frontmatter.status}</div>
+                    </div>
+                  :
+                  <div className={hero.status}>
+                    <div className={hero.unknown}>Unknown</div>
+                  </div>
+                }
+              </div>
+            }
               <div className={hero.detailsWrapper}
               >
                 {node.frontmatter.profile ?
@@ -134,30 +150,17 @@ const Themes = (props) => {
                   }
                 </div>
               </div>
-            <div className={hero.detailsContainer}>
               {node.frontmatter.tags &&
-              <div className={hero.tagContainer}>
-              {themeList.group.map(tag => (
-              <Link to={`/themes/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} className={hero.tag}>
-                {tag.fieldValue}
-              </Link>
-              ))}
-              </div>
-              }
-            </div>
-            {node.frontmatter.author &&
-            <div className={hero.statusContainer} alt={node.frontmatter.status}>
-              {node.frontmatter.status ?
-                  <div className={hero.status}>
-                    <div className={node.frontmatter.status}>{node.frontmatter.status}</div>
-                  </div>
-                :
-                <div className={hero.status}>
-                  <div className={hero.unknown}>Unknown</div>
+              <div className={hero.detailsContainer}>
+                <div className={hero.tagContainer}>
+                {themeList.group.map(tag => (
+                <Link to={`/themes/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} className={hero.tag}>
+                  {tag.fieldValue}
+                </Link>
+                ))}
                 </div>
-              }
               </div>
-            }
+              }
           </div>
         {node.frontmatter.download &&
           <div className={hero.options}>
