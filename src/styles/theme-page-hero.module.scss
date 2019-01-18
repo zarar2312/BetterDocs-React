@@ -23,7 +23,7 @@
         overflow: hidden;
         height: 100%;
         background-color: rgba(0, 0, 0,0.5);
-        box-shadow: inset 66px 0px 220px 169px rgb(10, 10, 10);
+        box-shadow: inset 40px 40px 190px 120px #0a0a0a;
         //box-shadow: inset 11rem 6rem 7rem 0rem #0a0a0a, inset -14rem -10rem 8rem -6rem rgba(10, 10, 10, 0.88);
         border-bottom-right-radius: 10rem;
         /*&::after {
@@ -34,12 +34,15 @@
             width: 100%;
             height: 100%;
         }*/
+        @media (min-width: 850px) {
+            box-shadow: inset 66px 0px 220px 169px rgb(10, 10, 10);
+        }
     }
     .breadcrumbContainer {
         display: flex;
         z-index: 5;
         flex: 0;
-        padding: 0 0 0 2rem;
+        padding: 0 1rem 0 2rem;
         .breadcrumb {
             color: #656e86;
             font-size: 0.7rem;
@@ -110,10 +113,10 @@
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
             font-size: 0.67rem;
+            margin: 5px;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: unset;
-                margin-bottom: 5px;
             }
             &:hover {
                 background-color: rgba($siteColor,0.85);
@@ -180,7 +183,6 @@
         .demoBtn {
             background-color: #fff;
             margin-bottom: 5px;
-            margin-left: 10px;
             padding: 0.3rem 0.6rem;
             border-radius: 2px;
             color: $siteColor;
@@ -188,6 +190,7 @@
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
             font-size: 0.67rem;
+            margin: 5px;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: 10px;
@@ -215,13 +218,14 @@
         .supportBtn {
             background-color: transparent;
             margin-bottom: 5px;
-            margin-left: 10px;
+            //margin-left: 10px;
             padding: 0.4rem 0.6rem;
             border-radius: 2px;
             color: $siteColor;
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
             font-size: 0.67rem;
+            margin: 5px;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: 10px;
@@ -243,7 +247,7 @@
         flex-direction: column;
         z-index: 1;
         flex: 1;
-        padding: 0 0 0 2rem;
+        padding: 0 1rem 0 2rem;
         @media (min-width: 850px) {
             flex-direction: row; 
         }
@@ -511,10 +515,12 @@
                 }
                 .tagContainer {
                     //margin-top: 4px;
-                    display: -webkit-box;
+                    display: flex;
+                    flex-wrap: wrap;
                     .tag {
                         padding: 0.1rem 0.7rem;
-                        margin-left: 10px;
+                        margin: 0 3px;
+                        margin-bottom: 10px;
                         border-radius: 25px;
                         color: #5f6368;
                         transition: 400ms border-bottom-left-radius linear, 400ms background-color linear, 600ms box-shadow linear;
@@ -524,9 +530,9 @@
                         font-size: .66rem;
                         white-space: nowrap;
                         border: 3px solid #28242f;
-                        &:first-child {
+                        /*&:first-child {
                             margin-left: unset;
-                        }
+                        }*/
                         span {
                             background-color: #eeeeee;
                             color: #5f6368;
