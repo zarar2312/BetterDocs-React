@@ -45,14 +45,15 @@ const Tagss = ({ pageContext, data }) => {
             key={node.id}
             >
               { node.frontmatter.thumbnail ?
-              <div className={style.imgContainer} alt={node.frontmatter.featured && "featured"}
+              <Link to={"themes" + node.fields.slug} className={style.imgContainer} alt={node.frontmatter.featured && "featured"}
               >
                 <LazyLoad once={true} height="100%"
                   placeholder={<img className={style.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
                 <img className={style.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail}/>
                 </LazyLoad>
                 { node.frontmatter.featured &&
-                  <div className={style.icon}>
+                  <div className={style.icon}
+                  data-balloon="Featured" data-balloon-pos="left">
                     <img src={Stars} alt="Featured Theme icon"></img>
                   </div>
                 }
@@ -71,7 +72,7 @@ const Tagss = ({ pageContext, data }) => {
                     }
                   </div>
                 </div>
-              </div>
+              </Link>
               :
               <div className={style.imgContainer}
               >

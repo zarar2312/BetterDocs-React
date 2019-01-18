@@ -303,7 +303,7 @@
         &::-webkit-scrollbar {
             width: 8px;
         }
-        a:not(.icon):not(.anchor):not(.btn) {
+        a:not(.icon):not(.anchor):not(.btn):not(.imgContainer) {
             display: inline-block;
             transition: color 250ms, text-shadow 250ms;
             color: #fff;
@@ -527,7 +527,7 @@
                         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
                         border-bottom: unset;
                         box-shadow: unset;
-                        &::after {
+                        /*&::after {
                             content: "Featured";
                             background-color: #0a0a0a;
                             color: #fff;
@@ -543,7 +543,7 @@
                             opacity: 0;
                             display: -webkit-inline-box;
                             padding: 0.3rem 0.4rem;
-                        }
+                        }*/
                         &:hover {
                             background-color: #d89700;
                             &::after {

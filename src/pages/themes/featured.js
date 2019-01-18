@@ -52,7 +52,7 @@ const FeaturedThemes = (props) => {
             key={node.id}
             >
               { node.frontmatter.thumbnail ?
-              <div className={theme.imgContainer} alt={node.frontmatter.featured && "featured"}
+              <Link to={"themes" + node.fields.slug} className={theme.imgContainer} alt={node.frontmatter.featured && "featured"}
               >
                 <LazyLoad once={true} height="100%"
                   placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
@@ -61,7 +61,8 @@ const FeaturedThemes = (props) => {
                 { node.frontmatter.featured &&
                   <Link 
                     to="/themes/featured/"
-                   className={theme.icon}>
+                   className={theme.icon}
+                   data-balloon="Featured" data-balloon-pos="left">
                     <img src={Stars} alt="Featured Theme icon"></img>
                   </Link>
                 }
@@ -80,9 +81,10 @@ const FeaturedThemes = (props) => {
                     }
                   </div>
                 </div>
-              </div>
+              </Link>
               :
-              <div className={theme.imgContainer}
+              <div 
+              className={theme.imgContainer}
               >
                 <img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
               </div>
