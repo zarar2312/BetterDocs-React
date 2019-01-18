@@ -9,15 +9,7 @@ support: https://github.com/gco360/windows-10-theme/issues/
 discord_server: https://discord.gg/6fXRKyx
 demo: https://cdn.jsdelivr.net/gh/gco360/windows-10-theme@master/windows10.theme.css
 thumbnail: https://i.imgur.com/91ysujk.png
-images:
-  - name: Windows 10 Preview
-    image: /images/themes/Windows_10_Preview.png
-  - name: Windows 10 Preview - Notifications Setting Page
-    image: /images/themes/Windows_10_Preview_-_Notifications_Setting_Page.png
-  - name: Windows 10 Preview - Delete Message
-    image: /images/themes/Windows_10_Preview_-_Delete_Message.png
-  - name: Windows 10 Preview - Friends Modal
-    image: /images/themes/Windows_10_Preview_-_Friends_Modal.png
+previews: [https://i.imgur.com/91ysujk.png]
 style: dark
 ghcommentid: 27
 layout: product

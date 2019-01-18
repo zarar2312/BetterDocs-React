@@ -9,9 +9,7 @@ github_source_url: https://github.com/CapnKitten/Spotify-Discord
 support: https://github.com/CapnKitten/Spotify-Discord/issues
 demo: https://cdn.jsdelivr.net/gh/CapnKitten/Spotify-Discord@master/Spotify-Discord.theme.css
 thumbnail: https://i.imgur.com/rGmmodi.png
-images:
-  - name: Spotify Discord Preview
-    image: /images/themes/Spotify_Discord_Preview.png
+previews: [https://i.imgur.com/rGmmodi.png]
 style: dark
 ghcommentid: 25
 layout: product

@@ -10,9 +10,7 @@ discord_server: 'http://discord.gg/fjvwb95'
 demo: 'https://rawcdn.githack.com/IpyZ/discord-theme-space-eye-/d81fb4be122def770a4e8fbfc3975055e0686088/space-eye.theme.css'
 style: dark
 thumbnail: https://i.imgur.com/GxXKfQK.png
-images:
-  - name: space-eye Preview
-    image: https://i.imgur.com/GxXKfQK.png
+previews: [https://i.imgur.com/GxXKfQK.png]
 auto: true
 status:
 ghcommentid: 0

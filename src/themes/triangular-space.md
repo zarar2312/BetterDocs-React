@@ -9,9 +9,7 @@ support: https://github.com/xNightWulf/ThemesForBetterDiscord/issues/
 discord_server: 'https://discord.gg/5BtB3Tc'
 demo: https://rawcdn.githack.com/xNightWulf/ThemesForBetterDiscord/master/TriangularSpace.theme.css
 thumbnail: https://i.imgur.com/LA1spXs.png
-images:
-  - image: /images/user_uploads/triangular_space_preview.png
-    name: Triangular Space Preview
+previews: [https://i.imgur.com/LA1spXs.png]
 style: dark
 ghcommentid: 98
 layout: product

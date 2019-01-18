@@ -9,6 +9,7 @@ support: https://github.com/Ruben7173/Ruben7173.github.io/issues
 demo: https://rawcdn.githack.com/Ruben7173/Ruben7173.github.io/9f2d7049cb331802eba43f9d3dca6418cd8cd93b/BetterDiscord-Themes/wishful-blue/wishful-blue.theme.css
 style: dark
 thumbnail: https://i.postimg.cc/k5XWTYQq/image.png
+previews: [https://i.postimg.cc/k5XWTYQq/image.png]
 status: Updated
 auto: true
 ghcommentid: # DON'T CHANGE

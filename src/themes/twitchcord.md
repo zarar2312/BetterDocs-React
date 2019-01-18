@@ -9,13 +9,7 @@ support: https://github.com/twitchcord/twitchcord/issues/
 discord_server: 'https://discordapp.com/invite/XtA2pv'
 demo: https://rawcdn.githack.com/twitchcord/twitchcord/71e23438e9c89b6d1818e047ee2c2dcb7f768922/theme/Twitchcord.theme.css
 thumbnail: https://i.imgur.com/ZcrO1IJ.jpg
-images:
-  - image: /images/user_uploads/twitchcord_preview.jpg
-    name: TwitchCord Preview
-  - image: /images/user_uploads/twitchcord_preview_-_bot_service.jpg
-    name: TwitchCord Preview - Bot Service
-  - image: /images/user_uploads/twitchcord_preview_-_user_popouts.jpg
-    name: TwitchCord Preview - User Popouts
+previews: [https://i.imgur.com/ZcrO1IJ.jpg]
 auto: true
 status: Outdated
 style: dark
