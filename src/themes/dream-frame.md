@@ -7,7 +7,7 @@ github_profile_url: 'https://github.com/CorbsEditor'
 github_source_url: https://github.com/CorbsEditor/Dream-Frame/blob/master/DreamFrame.theme.css
 discord_server: 'https://discord.gg/Sr4RzS8'
 demo: https://cdn.jsdelivr.net/gh/CorbsEditor/Dream-Frame@master/RAW/DreamFrameRaw.theme.css
-thumbnail: https://media.discordapp.net/attachments/501144124880322570/535639025671733266/Dream_Frame_Cover.png?width=400&height=225
+thumbnail: https://imgur.com/LUAY68E
 previews: [https://i.imgur.com/yyNcMpp.png]
 status: Updated
 featured: true
