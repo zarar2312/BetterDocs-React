@@ -9,9 +9,7 @@ support: https://github.com/satoru8/CleanDark/issues/
 discord_server: http://discord.gg/fjvwb95
 demo: 'https://cdn.rawgit.com/satoru8/CleanDark/master/CleanDark.theme.css'
 thumbnail: https://i.imgur.com/nzwGICE.png
-images:
-  - image: /images/themes/Clean_Dark_Preview.png
-    name: Clean Dark Preview
+previews: [https://i.imgur.com/nzwGICE.png]
 auto: true
 status: Updated
 style: dark

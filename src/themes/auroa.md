@@ -9,7 +9,7 @@ support: https://github.com/Tropix126/BetterDiscordStuff/issues
 discord_server:
 demo: https://rawcdn.githack.com/Tropix126/BetterDiscordStuff/abb32123b00063de87192f02450a500d9e6eef82/aurora/Aurora.theme.css
 thumbnail: https://i.imgur.com/dRaGV4u.jpg
-previews:
+previews: [https://i.imgur.com/dRaGV4u.jpg]
 status: Updated
 auto: true
 featured: true

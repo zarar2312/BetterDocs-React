@@ -8,9 +8,9 @@ support: https://discord.gg/WvUvtau
 discord_server: https://discord.gg/WvUvtau
 demo: http://beta.brains-world.eu/download/510/
 thumbnail: https://i.imgur.com/hHbpYyj.jpg
+previews: [https://i.imgur.com/hHbpYyj.jpg]
 status:
 style: dark
-
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---

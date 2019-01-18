@@ -9,6 +9,7 @@ support: https://github.com/DevilsLynAvenged/DevilsLynAvenged/issues/
 discord_server: 'https://discord.gg/CZCbtRq'
 demo: https://rawcdn.githack.com/DevilsLynAvenged/DevilsLynAvenged/da3e1523740e240801ad45bb80bb726759d3b0a9/Theme_Group_4/Clear_Sunset.theme.css
 thumbnail: https://i.imgur.com/TpGn8Ya.jpg
+previews: [https://i.imgur.com/TpGn8Ya.jpg]
 auto: true
 status: Updated
 style: dark

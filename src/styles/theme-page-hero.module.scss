@@ -274,7 +274,7 @@
                     margin-bottom: 3rem;
                 }
                 .profileWrapper {
-                    overflow: hidden;
+                    //overflow: hidden;
                     border-radius: 50%;
                     height: 2.5rem;
                     width: 2.5rem;
@@ -282,6 +282,7 @@
                         height: 100%;
                         width: 100%;
                         margin: unset;
+                        border-radius: 50%;
                     }
                     &[alt="missing"] {
                         background-color: #212121;
@@ -294,6 +295,13 @@
                     display: flex;
                     flex-wrap: wrap;
                     flex: 1;
+                    margin-left: -35px;
+                    @media (min-width: 850px) {
+                        margin-left: unset;
+                        .p:first-child {
+                            margin-left: unset;
+                        }
+                    }
                     .p {
                         color: #999;
                         font-size: 0.6em;
@@ -646,7 +654,7 @@
                 }
             }
             .statusContainer {
-                //margin-top: 14px;
+                margin-top: 5px;
                 //display: none;
                 margin-bottom: 1rem;
                 @media (min-width: 850px) {

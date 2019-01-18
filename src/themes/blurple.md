@@ -8,9 +8,7 @@ github_source_url: 'https://github.com/JimmyHere/Blurple/blob/master/Blurple.the
 support: 'https://github.com/JimmyHere/Blurple/issues'
 demo: 'https://cdn.rawgit.com/JimmyHere/Blurple/master/Blurple.theme.css'
 thumbnail: https://i.imgur.com/j7mr9lr.png
-images:
-  - image: /images/themes/Blurple_Preview.png
-    name: Blurple Preview
+previews: [https://i.imgur.com/j7mr9lr.png]
 auto: true
 status: Outdated
 style: dark

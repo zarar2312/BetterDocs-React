@@ -8,9 +8,7 @@ github_source_url: https://github.com/Ruben7173/Ruben7173.github.io/blob/master/
 support: 'https://github.com/Ruben7173/Ruben7173.github.io/issues'
 demo: https://rawcdn.githack.com/Ruben7173/Ruben7173.github.io/master/BetterDiscord-Themes/blue-space/code.css
 thumbnail: https://i.imgur.com/d2Qzerv.jpg
-images:
-  - image: /images/user_uploads/blue_space_preview.jpg
-    name: Blue Space Preview
+preview: [https://i.imgur.com/d2Qzerv.jpg]
 auto: true
 status: Updated
 style: dark

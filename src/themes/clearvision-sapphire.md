@@ -9,13 +9,7 @@ support: https://github.com/Zerthox/ClearVision/issues/
 discord_server: https://discordapp.com/invite/bfH2kC
 demo: https://cdn.jsdelivr.net/gh/Zerthox/ClearVision@master/themes/ClearVision_Sapphire.theme.css
 thumbnail: https://i.imgur.com/dwEfRts.jpg
-images:
-  - image: /images/themes/ClearVision_-_Sapphire_Preview.jpg
-    name: ClearVision Sapphire Preview
-  - image: /images/themes/ClearVision_-_Sapphire_Preview_-_Light_Appearance.jpg
-    name: ClearVision Sapphire Preview - Light Appearance
-  - image: /images/themes/ClearVision_-_Sapphire_Preview_-_Appearance_Settings.jpg
-    name: ClearVision Sapphire Preview - Appearance Settings
+previews: [https://i.imgur.com/dwEfRts.jpg]
 auto: true
 status: Updated
 style: dark

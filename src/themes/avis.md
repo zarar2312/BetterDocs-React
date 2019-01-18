@@ -8,11 +8,6 @@ github_source_url: https://github.com/YuraBrm/BetterDiscordThemes/blob/master/Av
 support: 'https://github.com/YuraBrm/BetterDiscordThemes/issues'
 demo: 'https://cdn.rawgit.com/YuraBrm/BetterDiscordThemes/master/Avis/Avis.theme.css'
 thumbnail: https://i.imgur.com/Hp4Uqrp.jpg
-images:
-  - image: static/media/Avis_Preview.jpg
-    name: Avis Preview
-  - image: static/media/Avis_Preview_-_Keybind_Settings_Page.png
-    name: Avis Preview - Keybind Settings Page
 previews: [https://i.imgur.com/Hp4Uqrp.jpg, https://i.imgur.com/hXOTjcS.png]
 auto: true
 status: Outdated

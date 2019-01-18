@@ -9,9 +9,7 @@ support: https://github.com/satoru8/CleanDark/issues/
 discord_server: http://discord.gg/fjvwb95
 demo: 'https://cdn.rawgit.com/satoru8/CleanDark/master/CleanDarkBG.theme.css'
 thumbnail: https://i.imgur.com/ZEiqNoh.png
-images:
-  - image: /images/themes/Clean_Dark_BG_Preview.png
-    name: Clean Dark BG Preview
+previews: [https://i.imgur.com/ZEiqNoh.png]
 auto: true
 style: dark
 ghcommentid: 10

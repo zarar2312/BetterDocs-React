@@ -9,13 +9,7 @@ support: https://github.com/Zerthox/ClearVision/issues/
 discord_server: https://discordapp.com/invite/bfH2kC
 demo: https://cdn.jsdelivr.net/gh/Zerthox/ClearVision@master/themes/ClearVision_Ruby.theme.css
 thumbnail: https://i.imgur.com/rn2VDYs.png
-images:
-  - image: /images/themes/ClearVision_-_Ruby_Preview.png
-    name: ClearVision Ruby Preview
-  - image: /images/themes/ClearVision_-_Ruby_Preview_-_Light_Appearance.jpg
-    name: ClearVision Ruby Preview - Light Appearance
-  - image: /images/themes/ClearVision_-_Ruby_Preview_-_Appearance_Settings.jpg
-    name: ClearVision Ruby Preview - Appearance Settings
+previews: [https://i.imgur.com/rn2VDYs.png]
 auto: true
 status: Updated
 style: dark

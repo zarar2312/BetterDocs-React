@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import style from '../styles/author-page.module.scss'
 import { graphql, Link } from "gatsby"
 import Helmet from 'react-helmet'
-import Missing from '../images/mobile.png'
+//import Missing from '../images/mobile.png'
 
 const Author = ({ pageContext, data }) => {
   const { authors } = pageContext
@@ -50,15 +50,6 @@ const Author = ({ pageContext, data }) => {
           <div className={style.profileRow}>
             <div className={style.profileSection}>
               <div className={style.details}>
-                {node.frontmatter.profile_picture ?
-                  <div className={style.profileWrapper}>
-                   <img src={node.frontmatter.profile_picture} alt={node.frontmatter.author + "'s Profile Picture"} />
-                  </div>
-                :
-                  <div className={style.profileWrapper} alt="missing">
-                    <img src={Missing} alt="Missing Profile Avatar"/>
-                  </div>
-                }
                 <p className={style.name}>
                 {authors}
                 </p>
@@ -70,9 +61,21 @@ const Author = ({ pageContext, data }) => {
                   <p className={style.role}>Plugin Developer</p>
                   }
                 </div>
+                {node.frontmatter.github_profile_url &&
                 <div className={style.follow}>
-                  <a className={style.btn} href={node.frontmatter.github_profile_url}>Follow</a>
+                  <a className={style.btn} target="blank" href={node.frontmatter.github_profile_url}>Follow</a>
                 </div>
+                }
+                {node.frontmatter.gitlab_profile_url &&
+                <div className={style.follow}>
+                  <a className={style.btn} target="blank" href={node.frontmatter.gitlab_profile_url}>Follow</a>
+                </div>
+                }
+                {node.frontmatter.npm_profile_url &&
+                <div className={style.follow}>
+                  <a className={style.btn} target="blank" href={node.frontmatter.npm_profile_url}>Follow</a>
+                </div>
+                }
               </div>
             </div>
             <div className={style.profileSection}>
@@ -217,7 +220,6 @@ export const authorQuery = graphql`
         frontmatter {
           title
           author
-          profile_picture
           github_profile_url
           gitlab_profile_url
           npm_profile_url

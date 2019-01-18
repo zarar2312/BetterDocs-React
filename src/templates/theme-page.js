@@ -13,7 +13,19 @@ import alert from '../styles/alerts.module.scss'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 import "../styles/tooltips.css"
-import Missing from '../images/mobile.png'
+//import Missing from '../images/mobile.png'
+
+/*
+{node.frontmatter.profile_picture ?
+  <div data-balloon={node.frontmatter.author + "'s Avatar"} data-balloon-pos="right" className={hero.profileWrapper}>
+    <img src={node.frontmatter.profile_picture} alt={node.frontmatter.author + "'s Profile Picture"} />
+  </div>
+:
+  <div data-balloon="Missing Avatar" data-balloon-pos="right" className={hero.profileWrapper} alt="missing">
+    <img src={Missing} alt="Missing Profile Avatar"/>
+  </div>
+}
+*/
 
 const Themes = (props) => {
   const themeList = props.data.listThemes;
@@ -95,15 +107,6 @@ const Themes = (props) => {
             :
               <div className={hero.detailsWrapper}
               >
-                {node.frontmatter.profile_picture ?
-                  <div className={hero.profileWrapper}>
-                   <img src={node.frontmatter.profile_picture} alt={node.frontmatter.author + "'s Profile Picture"} />
-                  </div>
-                :
-                  <div className={hero.profileWrapper} alt="missing">
-                    <img src={Missing} alt="Missing Profile Avatar"/>
-                  </div>
-                }
                 <div className={hero.flexDetails}>
                   {node.frontmatter.author &&
                     <div className={hero.p}>
@@ -325,7 +328,6 @@ export const themesQuery = graphql`
             sub
             author
             description
-            profile_picture
             github_profile_url
             github_source_url
             gitlab_source_url
@@ -388,7 +390,6 @@ export const themesQuery = graphql`
     frontmatter {
       title
       author
-      profile_picture
       github_profile_url
       gitlab_source_url
       download

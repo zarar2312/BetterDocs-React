@@ -21,7 +21,6 @@ I promise it doesn't take long :)
   author: {Author Name}
   description: A SHORT Description
   download:
-  profile_picture:
   github_profile_url: https://github.com/{Author Name}/
   github_source_url:
   support:
@@ -45,7 +44,6 @@ Here's is some helpful information to inform you what each field does.
   - **author** - The name of the author of the plugin. `[REQUIRED]`
   - **description** - Short paragraph describing the content and/or purpose of the plugin that will appear in the permalink of your page and other places on the site. `[REQUIRED]`
   - **download** - The direct link to the file to be downloaded. This can be the direct link to the file on a open-source website like [Github](https://github.com/). `[REQUIRED]`
-  - **profile_picture** - A direct link to your profile avatar image. Only needs to be included in one of your plugin(s). `[OPTIONA]`
   - **github\_profile\_url** - The link to your [Github](https://github.com/) profile.`[OPTIONAL]`
   >You can use **gitlab\_profile\_url** or **npm\_profile\_url** instead (or all) and same goes for the source url.
   - **github\_source\_url** - For open-source plugins, this URL points to the repo that powers the plugin `[OPTIONAL]`

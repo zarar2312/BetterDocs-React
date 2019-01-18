@@ -3,7 +3,6 @@ title: Nox
 author: rauenzi
 description: A cozy dark theme with blurred elements and gradients.
 download: https://github.com/rauenzi/Nox/blob/master/release/Nox.theme.css
-profile_picture: https://i.imgur.com/qG9zwoH.png
 github_profile_url: https://github.com/rauenzi/
 github_source_url: https://github.com/rauenzi/Nox
 support: https://github.com/rauenzi/Nox/issues

@@ -9,13 +9,7 @@ support: https://github.com/Zerthox/ClearVision/issues/
 discord_server: https://discordapp.com/invite/bfH2kC
 demo: https://cdn.jsdelivr.net/gh/Zerthox/ClearVision@master/themes/ClearVision_Amber.theme.css
 thumbnail: https://i.imgur.com/J82lmZU.jpg
-images:
-  - image: /images/themes/ClearVision_-_Amber_Preview.jpg
-    name: ClearVision Amber Preview
-  - image: /images/themes/ClearVision_-_Amber_Preview_-_Light_Appearance.jpg
-    name: ClearVision Amber Preview - Light Appearance
-  - image: /images/themes/ClearVision_-_Amber_Preview_-_Appearance_Settings.jpg
-    name: ClearVision Amber Preview - Appearance Settings
+previews: [https://i.imgur.com/J82lmZU.jpg]
 auto: true
 status: Updated
 style: dark

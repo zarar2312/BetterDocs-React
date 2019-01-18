@@ -3,7 +3,6 @@ title: BMT
 author: PONYMODZ
 description: A Customizable Discord Theme most likely for MLP fans.
 download: https://github.com/PONYMODZ/Discord-stuff/blob/master/themes/bmt/BMT.theme.css
-profile_picture: https://i.imgur.com/w2MlUjS.png
 github_profile_url: https://github.com/PONYMODZ
 github_source_url: https://github.com/PONYMODZ/Discord-stuff/blob/master/themes/css/bmt.css
 support: https://github.com/PONYMODZ/Discord-stuff/issues
