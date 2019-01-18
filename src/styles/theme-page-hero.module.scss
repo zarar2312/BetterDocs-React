@@ -763,15 +763,17 @@ html[class*="dark"], html[id*="dark"] {
         }
         .options {
             .supportBtn {
-                background-color: #36393f;
+                background-color: transparent;
                 &:hover {
-                    color: darken($siteColor, 7%);
+                    color: #fff;
+                    background: $siteColor;
+                    border-color: $siteColor;
                 }
                 &:active, &:focus {
                     background-color: $siteColor;
                     border-color: $siteColor;
                     color: #fff;
-                    opacity: 1;
+                    opacity: 0.8;
                 }
             }
             .demoBtn {
@@ -788,10 +790,11 @@ html[class*="dark"], html[id*="dark"] {
                 }
                 &[alt="disabled"] {
                     border-color: grey;
-                    color: grey;
+                    color: #fff;
+                    background-color: grey;
                     &:hover {
                         background-color: grey;
-                        color: #fff;
+                        color: #eee;
                     }
                     &:active, &:focus {
                         opacity: 0.8;
