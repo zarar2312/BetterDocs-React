@@ -53,7 +53,7 @@
             a:not(.icon):not(.author):not(.titleLink):not(.anchor):not(.btn):not(.tag):not(.imgContainer) {
                 display: inline-block;
                 transition: color 250ms, text-shadow 250ms;
-                color: #fff;
+                color: #000;
                 text-decoration: none;
                 cursor: pointer;
                 position: relative;
@@ -274,7 +274,10 @@ html[class*="dark"], html[id*="dark"] {
         background-color: #36393f;
         .contentWrapper {
             .content {
-                color: #fff;
+                color: #cfcfcf;
+                a {
+                    color: #fff !important;
+                }
                 .footer {
                     border-color: #222327;
                     .edit {
