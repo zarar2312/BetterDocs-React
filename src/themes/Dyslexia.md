@@ -8,6 +8,7 @@ github_source_url: https://github.com/qwerasd205/qwerasd205.github.io/blob/maste
 support: https://github.com/qwerasd205/qwerasd205.github.io/issues
 demo: https://rawcdn.githack.com/qwerasd205/qwerasd205.github.io/11db6e908886440e53cca2f4815d9c23c152f8fa/Dyslexia.css
 thumbnail: https://i.imgur.com/rsSC0pz.png
+previews: [https://i.imgur.com/rsSC0pz.png]
 status: Updated
 auto: True
 featured: 

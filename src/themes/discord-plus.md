@@ -9,6 +9,7 @@ support: https://github.com/PlusInsta/discord-plus/issues
 discord_server:
 demo: https://raw.githubusercontent.com/PlusInsta/discord-plus/master/DiscordPlus-master.theme.css
 thumbnail: https://i.imgur.com/wq5KOaM.jpg
+previews: [https://i.imgur.com/wq5KOaM.jpg]
 status: Updated
 auto: true
 featured: true

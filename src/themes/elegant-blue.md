@@ -9,15 +9,7 @@ github_source_url: https://github.com/archnemeziz/Discord
 support: https://github.com/archnemeziz/Discord/issues
 demo: https://cdn.jsdelivr.net/gh/archnemeziz/Discord@master/ElegantBlue.theme.css
 thumbnail: https://i.imgur.com/IAdfuzb.png
-images:
-  - name: Elegant Blue Preview
-    image: /images/themes/Elegant_Blue_Preview.png
-  - name: Elegant Blue Preview - Server Notifications
-    image: /images/themes/Elegant_Blue_Preview_-_Server_Notifications.png
-  - name: Elegant Blue Preview - Search
-    image: /images/themes/Elegant_Blue_Preview_-_Search.png
-  - name: Elegant Blue Preview - Settings Page
-    image: /images/themes/Elegant_Blue_Preview_-_Settings_Page.png
+previews: [https://i.imgur.com/IAdfuzb.png]
 style: dark   
 ghcommentid: 33
 layout: product

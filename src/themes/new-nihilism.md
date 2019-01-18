@@ -8,9 +8,7 @@ github_source_url: https://github.com/ObserverOfTime/DiscordThemes/tree/master/N
 support: https://github.com/ObserverOfTime/DiscordThemes/issues
 demo: https://cdn.jsdelivr.net/gh/ObserverOfTime/DiscordThemes@master/NewNihilism/dist/NewNihilism.theme.css
 thumbnail: https://i.imgur.com/fWoXCXm.png
-images:
-  - name: New Nihilism Preview
-    image: /images/themes/New_Nihilism_Preview.png
+previews: [https://i.imgur.com/fWoXCXm.png]
 style: dark   
 ghcommentid: 18
 layout: product

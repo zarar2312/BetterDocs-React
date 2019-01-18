@@ -8,9 +8,7 @@ github_source_url: https://github.com/cosmicsalad/Discord-Themes-and-Plugins/tre
 support: 'https://github.com/cosmicsalad/Discord-Themes-and-Plugins/issues'
 demo: https://cdn.jsdelivr.net/gh/cosmicsalad/Discord-Themes-and-Plugins@master/themes/DarkMatter/DarkMatter.theme.css
 thumbnail: https://i.imgur.com/nknPlVt.jpg
-images:
-  - image: /images/themes/Dark_Matter_Preview.jpg
-    name: Dark Matter Preview
+previews: [https://i.imgur.com/nknPlVt.jpg]
 auto: true
 status: Outdated
 style: dark

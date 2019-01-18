@@ -9,9 +9,7 @@ support: https://github.com/xNightWulf/ThemesForBetterDiscord/issues/
 discord_server: https://discord.gg/5BtB3Tc
 demo: https://rawcdn.githack.com/xNightWulf/ThemesForBetterDiscord/master/NeonWaves.theme.css
 thumbnail: https://i.imgur.com/ZsAx70J.png
-images:
-  - image: /images/user_uploads/neon_waves_preview.png
-    name: Neon Waves Preview
+previews: [https://i.imgur.com/ZsAx70J.png]
 auto: true
 style: dark
 layout: product

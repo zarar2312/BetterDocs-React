@@ -8,13 +8,7 @@ github_source_url: https://github.com/CapnKitten/Material-Discord/blob/master/Ma
 support: 'https://github.com/CapnKitten/Material-Discord/issues'
 demo: https://cdn.jsdelivr.net/gh/CapnKitten/Material-Discord@master/Material-Discord.theme.css
 thumbnail: https://i.imgur.com/bJt9VlN.png
-images:
-  - image: /images/themes/Material_Discord_Preview.png
-    name: Material Discord Preview
-  - image: /images/themes/Material_Discord_Preview_-_User_Popout.png
-    name: Material Discord Preview - User Popout
-  - image: /images/themes/Material_Discord_Preview_-_User_Status_Picker.gif
-    name: Material Discord Preview - User Status Picker
+previews: [https://i.imgur.com/bJt9VlN.png]
 auto: true
 status: Updated
 featured: true

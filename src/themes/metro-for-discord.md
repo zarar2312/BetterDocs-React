@@ -9,9 +9,7 @@ github_source_url: https://github.com/TakosThings/Metro-for-Discord
 support: https://github.com/TakosThings/Metro-for-Discord/issues
 demo: https://raw.githubusercontent.com/TakosThings/Metro-for-Discord/master/dist/Metro_for_Discord.theme.css
 thumbnail: https://i.imgur.com/SgNp0TU.png
-images:
-  - name: Metro For Discord Preview
-    image: /images/themes/Metro_For_Discord_Preview.png
+previews: [https://i.imgur.com/SgNp0TU.png]
 style: dark
 ghcommentid: 17
 layout: product

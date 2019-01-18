@@ -10,9 +10,7 @@ github_source_url: 'https://github.com/Vaxuuu/Indigo-Theme/blob/master/Indigo.th
 support: 'https://github.com/Vaxuuu/Indigo-Theme/issues'
 demo: 'https://cdn.rawgit.com/Vaxuuu/Indigo-Theme/master/Indigo.theme.css'
 thumbnail: https://i.imgur.com/tWhLb11.png
-images:
-  - image: /images/themes/Indigo_Preview.png
-    name: Indigo Preview
+previews: [https://i.imgur.com/tWhLb11.png]
 auto: true
 style: dark
 ghcommentid: 15

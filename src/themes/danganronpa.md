@@ -9,11 +9,7 @@ support: https://github.com/DevilsLynAvenged/DevilsLynAvenged/issues/
 discord_server: 'https://discord.gg/CZCbtRq'
 demo: https://rawcdn.githack.com/DevilsLynAvenged/DevilsLynAvenged/6040d3e4b48bdc886155cc960124e225d3f681ea/Theme_Group_2/Danganronpa.theme.css
 thumbnail: https://i.imgur.com/p7oFks7.jpg
-images:
-  - image: /images/user_uploads/danganronpa_preview.png
-    name: Danganronpa Preview
-  - image: /images/user_uploads/danganronpa_preview_-_friends_list.png
-    name: Danganronpa Preview - Friends List
+previews: [https://i.imgur.com/p7oFks7.jpg]
 auto: true
 status: Updated
 style: dark

@@ -8,9 +8,7 @@ github_source_url: 'https://github.com/mrmaple240/colorize/blob/master/Colorize.
 support: 'https://github.com/mrmaple240/colorize/issues'
 demo: 'https://cdn.rawgit.com/mrmaple240/colorize/master/Colorize.theme.css'
 thumbnail: https://i.imgur.com/CNfb9AH.gif
-images:
-  - image: /images/themes/Colorize_Preview.gif
-    name: Colorize Preview
+previews: [https://i.imgur.com/CNfb9AH.gif]
 auto: true
 status: Outdated
 style: dark

@@ -9,16 +9,7 @@ support: 'https://github.com/BeardDesign1/Material-design-theme/issues/'
 discord_server: 'http://bit.ly/BMTserver'
 demo: https://rawcdn.githack.com/BeardDesign1/Material-design-theme/968226753d5c86cad8673294a50fb9099046eddc/Beard's-Material-theme-for-Discord.theme.css
 thumbnail: https://i.imgur.com/T976uiR.png
-images:
-  - image: /images/user_uploads/material_design_theme_preview.png
-    name: Material Design Theme Preview
-  - image: /images/user_uploads/material_design_theme_preview_-_server_settings.png
-    name: Material Design Theme Preview - Server Settings
-  - image: >-
-      /images/user_uploads/material_design_theme_preview_-_pinned_mesaages_popup.png
-    name: Material Design Theme Preview - Pinned Messages
-  - image: /images/user_uploads/material_design_theme_preview_-_animations.png
-    name: Material Design Theme Preview - Animations
+previews: [https://i.imgur.com/T976uiR.png]
 auto: true
 status: Updated
 featured: true

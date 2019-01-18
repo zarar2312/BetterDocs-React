@@ -8,11 +8,7 @@ github_source_url: https://github.com/Azagwen/Rainbow_kittens_theme
 support: https://github.com/Azagwen/Rainbow_kittens_theme/issues
 demo: https://rawcdn.githack.com/Azagwen/Rainbow_kittens_theme/b15006f9a359cf9141e9d63e7905b0ff9f759023/Rainbow_kittens_V0.1.3.theme.css
 thumbnail: https://i.imgur.com/Cm3fIYB.png
-images:
-  - name: Rainbows Kittens Theme Preview
-    image: /images/themes/Rainbows_Kittens_Theme_Preview.png
-  - name: Rainbows Kittens Theme Preview - Channels Preview
-    image: /images/themes/Rainbows_Kittens_Theme_Preview_-_Channels_Preview.png
+previews: [https://i.imgur.com/Cm3fIYB.png]
 style: dark
 auto: true
 ghcommentid: 20

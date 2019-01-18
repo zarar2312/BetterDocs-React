@@ -29,7 +29,7 @@ const Tagss = ({ pageContext, data }) => {
     >
     <Headroom>
       <div className={style.titleBar}>
-        <div className={style.count}>Themes <span>{tagHeader}</span></div>
+        <div className={style.count}>#Themes <span>{tagHeader}</span></div>
         <input className={style.input} placeholder="Search Themes library (WIP)" ></input>
       </div>
     </Headroom>

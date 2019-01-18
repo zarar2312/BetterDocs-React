@@ -36,7 +36,7 @@ const FeaturedThemes = (props) => {
     >
     <Headroom>
       <div className={theme.titleBar}>
-        <div className={theme.count}>Themes <span>{listCount} featured themes</span></div>
+        <div className={theme.count}>#Themes <span>{listCount} featured themes</span></div>
         <input className={theme.input} placeholder="Search Themes library (WIP)" ></input>
         <Link to="/themes/upload-a-theme" className={theme.submitBtn}>Submit your theme</Link>
       </div>

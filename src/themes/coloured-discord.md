@@ -9,17 +9,7 @@ support: https://github.com/Waterin/Coloured-Discord-Theme/issues/
 discord_server: https://discord.gg/ADn3Mqd
 demo: https://rawcdn.githack.com/Waterin/Coloured-Discord-Theme/bd13cbc4c279fe3ddfeef402d780d0883e3b4fea/Source/Coloured-Discord-Theme-RGB.theme.css
 thumbnail: https://i.imgur.com/5RnBGIG.png
-images:
-  - image: /images/themes/Coloured_Discord_Preview.png
-    name: Coloured Discord Preview
-  - image: /images/themes/Coloured_Discord_Preview_-_Pink.png
-    name: Coloured Discord Preview - Pink
-  - image: /images/themes/Coloured_Discord_Preview_-_Cyan.png
-    name: Coloured Discord Preview - Blue
-  - image: /images/themes/Coloured_Discord_Preview_-_Yellow.png
-    name: Coloured Discord Preview - Yellow
-  - image: /images/themes/Coloured_Discord_Preview_-_Red.png
-    name: Coloured Discord Preview - Red
+previews: [https://i.imgur.com/5RnBGIG.png]
 auto: true
 status: Updated
 style: dark

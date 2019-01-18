@@ -9,9 +9,7 @@ support: https://github.com/satoru8/Nyx/issues/
 discord_server: http://discord.gg/fjvwb95
 demo: https://cdn.jsdelivr.net/gh/satoru8/Nyx@master/Nyx.theme.css
 thumbnail: https://i.imgur.com/HZNTSDv.png
-images:
-  - name: Nyx Preview
-    image: /images/themes/Nyx_Preview.png
+previews: [https://i.imgur.com/HZNTSDv.png]
 style: dark
 ghcommentid: 19
 layout: product

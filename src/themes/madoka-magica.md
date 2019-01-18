@@ -9,6 +9,7 @@ support: https://github.com/satoru8/Collection/issues
 discord_server: http://discord.gg/fjvwb95
 demo: https://rawcdn.githack.com/satoru8/Collection/c896c5b7eee5c76d835310ac748f2deb751e52af/Anime/Madoka.theme.css
 thumbnail: https://i.imgur.com/ZdSzg6Z.jpg
+previews: [https://i.imgur.com/ZdSzg6Z.jpg]
 status: Updated
 auto: true
 featured: 
