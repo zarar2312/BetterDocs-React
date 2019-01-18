@@ -275,15 +275,36 @@
                 color: #999;
                 font-size: 0.5em;
                 a {
-                    border-bottom: 1px solid rgba($siteColor, 0.3);
-                    box-shadow: inset 0 -2px 0px 0px rgba($siteColor, 0.4);
-                    color: rgba(0, 0, 0, 0.88);
-                    font-weight: bold;
-                    transition: .1s linear background-color, .1s linear box-shadow, .1s linear border-bottom;
+                    display: inline-block;
+                    transition: color 250ms, text-shadow 250ms;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+                    position: relative;
+                    z-index: 0;
+                    line-height: 1rem;
+
+                    &:after {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -1px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    background-color: $siteColor;
+                    transition: all 250ms;
+                    }
+
                     &:hover {
-                        background-color: rgba($siteColor, 0.3);
-                        border-bottom: 1px solid transparent;
-                        box-shadow: inset 0 -2px 0px 0px transparent;
+                        color: #fff;
+                        opacity: 1;
+                        background-color: transparent;
+                        &::after {
+                            height: 110%;
+                            width: 110%;
+                        }
                     }
                 }
             }
@@ -646,12 +667,6 @@ html[class*="dark"], html[id*="dark"] {
             }
             .paragraph {
                 .p {
-                    a {
-                        color: rgba(255, 255, 255, 0.7);
-                        &:hover {
-                            color: #fff;
-                        }
-                    }
                 }
             }
             .detailsContainer {

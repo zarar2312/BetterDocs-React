@@ -90,6 +90,9 @@ const Themes = (props) => {
                 }
               </div>
             }
+            {node.frontmatter.sub ?
+              null
+            :
               <div className={hero.detailsWrapper}
               >
                 {node.frontmatter.profile_picture ?
@@ -150,6 +153,7 @@ const Themes = (props) => {
                   }
                 </div>
               </div>
+              }
               {node.frontmatter.tags &&
               <div className={hero.detailsContainer}>
                 <div className={hero.tagContainer}>
@@ -388,6 +392,7 @@ export const themesQuery = graphql`
       github_profile_url
       gitlab_source_url
       download
+      sub
       support
       previews
       tags
