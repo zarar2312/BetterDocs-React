@@ -234,15 +234,16 @@
             }
         }
         .supportBtn {
-            background-color: #fff;
+            background-color: transparent;
             margin-bottom: 5px;
-            margin-left: 10px;
+            //margin-left: 10px;
             padding: 0.4rem 0.6rem;
             border-radius: 2px;
-            color: $siteColor;
+            color: #da002f;
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
             font-size: 0.67rem;
+            margin: 5px;
             @media (min-width: 850px) {
                 margin: 0 auto;
                 margin-top: 10px;
@@ -251,11 +252,11 @@
                 margin-left: unset;
             }
             &:hover {
-                background-color: #ebebeb;
+                background-color: #ad0026;
+                color: #fff;
             }
             &:active, &:focus {
-                background-color: $siteColor;
-                color: #fff;
+                opacity: 0.8;
             }
         }
     }

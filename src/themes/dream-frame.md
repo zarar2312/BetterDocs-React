@@ -5,9 +5,10 @@ description: Brings a sexy translucent look to Discord with customizable options
 download: 'https://cdn.discordapp.com/attachments/528696134118539267/528696159821234179/DreamFrame.theme.css'
 github_profile_url: 'https://github.com/CorbsEditor'
 github_source_url: https://github.com/CorbsEditor/Dream-Frame/blob/master/DreamFrame.theme.css
+support: https://github.com/CorbsEditor/Dream-Frame/issues
 discord_server: 'https://discord.gg/Sr4RzS8'
 demo: https://cdn.jsdelivr.net/gh/CorbsEditor/Dream-Frame@master/RAW/DreamFrameRaw.theme.css
-thumbnail: https://imgur.com/LUAY68E
+thumbnail: https://i.imgur.com/LUAY68E.jpg
 previews: [https://i.imgur.com/yyNcMpp.png]
 status: Updated
 featured: true

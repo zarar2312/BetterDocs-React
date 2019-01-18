@@ -30,7 +30,7 @@ import "../styles/tooltips.css"
 const Themes = (props) => {
   const themeList = props.data.listThemes;
   const previewList = props.data.previewsList;
-  
+
   return (
   <Layout>
     {themeList.edges.map(({ node }, i) => (
@@ -188,7 +188,7 @@ const Themes = (props) => {
             <div alt="disabled" href={'http://betterdocs.netlify.com/demo/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo} className={hero.demoBtn} target="blank" data-balloon="Disabled" data-balloon-pos="left">Demo</div>
             }
             {node.frontmatter.support && 
-            <a href={node.frontmatter.support} className={hero.supportBtn} target="blank">Doesn't Work?</a>
+            <a href={node.frontmatter.support} className={hero.supportBtn} target="blank">Report an issue</a>
             }
           </div>
         }

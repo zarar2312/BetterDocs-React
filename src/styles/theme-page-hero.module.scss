@@ -24,7 +24,7 @@
         width: 100%;
         overflow: hidden;
         height: 100%;
-        background-color: rgba(0, 0, 0,0.75);
+        background-color: rgba(0, 0, 0,0.65);
         box-shadow: inset 20px 0px 180px 85px rgba(10, 10, 10, 0.85);
         //box-shadow: inset 11rem 6rem 7rem 0rem #0a0a0a, inset -14rem -10rem 8rem -6rem rgba(10, 10, 10, 0.88);
         border-bottom-right-radius: 10rem;
@@ -37,8 +37,8 @@
             height: 100%;
         }*/
         @media (min-width: 850px) {
-            background-color: rgba(0, 0, 0,0.65);
-            box-shadow: inset 66px 0px 220px 169px rgba(10, 10, 10, 0.98);
+            background-color: rgba(0, 0, 0,0.55);
+            box-shadow: inset 66px 0px 220px 169px rgba(10, 10, 10, 0.9);
         }
     }
     .breadcrumbContainer {
@@ -219,12 +219,12 @@
             }
         }
         .supportBtn {
-            background-color: transparent;
+            background-color: #da002f;
             margin-bottom: 5px;
             //margin-left: 10px;
             padding: 0.4rem 0.6rem;
             border-radius: 2px;
-            color: $siteColor;
+            color: #fff;
             transition: 300ms ease-in-out;
             display: -webkit-inline-box;
             font-size: 0.67rem;
@@ -237,7 +237,7 @@
                 margin-left: unset;
             }
             &:hover {
-                background-color: $siteColor;
+                background-color: #ad0026;
                 color: #fff;
             }
             &:active, &:focus {
