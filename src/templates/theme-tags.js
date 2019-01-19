@@ -16,7 +16,7 @@ import '../styles/tooltips.css'
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.list
-  const tags = data.tags;
+  //const tags = data.tags;
   const tagHeader = `${totalCount} theme${
     totalCount === 1 ? "" : "s"
   } with the tag "${tag}"`
@@ -103,9 +103,9 @@ const Tagss = ({ pageContext, data }) => {
                 >{node.excerpt}</p>
               </div>
               <div className={style.tagContainer}>
-                {tags.group.map(tag => (
-                  <Link to={`/themes/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} className={style.tag}>
-                    #{tag.fieldValue}
+                {node.frontmatter.tags.map(tag => (
+                  <Link to={`/themes/tags/${kebabCase(tag)}/`} key={tag} className={style.tag}>
+                    #{tag}
                   </Link>
                 ))}
               </div>
@@ -185,26 +185,6 @@ export const pageQuery = graphql`
             thumbnail
             featured
             layout
-            tags
-          }
-        }
-      }
-    },
-    tags: allMarkdownRemark( filter: { frontmatter: { tags: { in: [$tag] } } collection: { eq: "themes" } } sort: { fields: [frontmatter___title], order: ASC} ) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-      totalCount
-      edges {
-        node {
-          excerpt
-          html
-          id
-          fields {
-            slug
-          }
-          frontmatter {
             tags
           }
         }

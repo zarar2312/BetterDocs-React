@@ -15,7 +15,7 @@ import 'src/styles/tooltips.css'
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
 const FeaturedThemes = (props) => {
-  const tags = props.data.tags;
+  //const tags = props.data.tags;
   const featuredList = props.data.featured;
   const { totalCount } = featuredList;
   const listCount = `${totalCount}`
@@ -112,9 +112,9 @@ const FeaturedThemes = (props) => {
                   >{node.excerpt}</p>
                 </div>
                 <div className={theme.tagContainer}>
-                  {tags.group.map(tag => (
-                    <Link to={`/themes/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} className={theme.tag}>
-                      #{tag.fieldValue}
+                  {node.frontmatter.tags.map(tag => (
+                    <Link to={`/themes/tags/${kebabCase(tag)}/`} key={tag} className={theme.tag}>
+                      #{tag}
                     </Link>
                   ))}
                 </div>
@@ -207,26 +207,6 @@ query allFeaturedThemesQuery {
           description
           date
           featured
-          tags
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  },
-  tags: allMarkdownRemark(filter: {collection: {eq: "themes"} } sort: { fields: [frontmatter___title], order: ASC} limit: 8 ) {
-    group(field: frontmatter___tags) {
-      fieldValue
-      totalCount
-    }
-    totalCount
-    edges {
-      node {
-        excerpt
-        html
-        id
-        frontmatter {
           tags
         }
         fields {

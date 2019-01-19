@@ -820,7 +820,7 @@ html[class*="dark"], html[id*="dark"] {
                         box-shadow: unset;
                     }
                     .author {
-                        color: rgba(255, 255, 255, 0.4);
+                        color: rgba(255, 255, 255, 0.4) !important;
                     }
                     .title {
                         .titleLink {

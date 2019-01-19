@@ -17,7 +17,7 @@ import '../styles/tooltips.css'
 
 const Themes = (props) => {
   const themeList = props.data.allMarkdownRemark;
-  const tags = props.data.tags;
+  //const tags = props.data.tags;
   const featuredList = props.data.featured;
   const { totalCount } = props.data.allMarkdownRemark;
   const listCount = `${totalCount}`
@@ -162,9 +162,9 @@ const Themes = (props) => {
                   >{node.excerpt}</p>
                 </div>
                 <div className={theme.tagContainer}>
-                  {tags.group.map(tag => (
-                    <Link to={`/themes/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} className={theme.tag}>
-                      #{tag.fieldValue}
+                  {node.frontmatter.tags.map(tag => (
+                    <Link to={`/themes/tags/${kebabCase(tag)}/`} key={tag} className={theme.tag}>
+                      #{tag}
                     </Link>
                   ))}
                 </div>
@@ -256,26 +256,6 @@ query allThemesQuery {
           description
           date
           featured
-          tags
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  },
-  tags: allMarkdownRemark(filter: {collection: {eq: "themes"} } sort: { fields: [frontmatter___title], order: ASC} limit: 8 ) {
-    group(field: frontmatter___tags) {
-      fieldValue
-      totalCount
-    }
-    totalCount
-    edges {
-      node {
-        excerpt
-        html
-        id
-        frontmatter {
           tags
         }
         fields {
