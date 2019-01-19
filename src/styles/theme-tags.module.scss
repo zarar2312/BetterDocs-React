@@ -293,7 +293,7 @@
         a:not(.icon):not(.anchor):not(.btn):not(.imgContainer) {
             display: inline-block;
             transition: color 250ms, text-shadow 250ms;
-            color: #fff;
+            color: #000;
             text-decoration: none;
             cursor: pointer;
             position: relative;
@@ -596,7 +596,7 @@
                     }
                     .tag {
                         font-weight: normal;
-                        color: rgba(0, 0, 0, 0.4);
+                        color: rgba(0, 0, 0, 0.4) !important;
                         box-shadow: unset;
                         border: unset;
                         margin-left: 5px;

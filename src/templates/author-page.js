@@ -161,7 +161,7 @@ const Author = ({ pageContext, data }) => {
                   {node.frontmatter.status ?
                     <div class={ node.frontmatter.status + "-pluginStatus"}>{node.frontmatter.status}</div>
                   :
-                    <div class={style.unknown}>Unknown</div>
+                    <div class={style.unknown + "-pluginStatus" }>Unknown</div>
                   }
                 </Link>
                 }

@@ -320,7 +320,7 @@
                             color: rgba(0, 0, 0, 0.6);
                             font-size: 0.6rem;
                         }
-                        [class$="-themeStatus"] {
+                        [class$="-themeStatus"], [class$="-pluginStatus"] {
                             font-size: 0.4rem;
                             padding: 5px 5px;
                             color: #fff;
@@ -335,7 +335,7 @@
                                 background-color: #eb0505;
                             }
                         }
-                        .unknown {
+                        [class*="unknown-"] {
                             font-size: 0.4rem;
                             padding: 5px 5px;
                             color: #fff;
@@ -344,6 +344,11 @@
                             top: 0;
                             right: 0;
                             background-color: #00a2ff;
+                        }
+                        [class$="-pluginStatus"] {
+                            top: 1px;
+                            right: 1px;
+                            border-radius: 0px 5px 0px 3px;
                         }
                     }
                 }
