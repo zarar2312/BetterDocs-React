@@ -782,20 +782,6 @@ html[class*="dark"], html[id*="dark"] {
             }
         }
         .options {
-            .supportBtn {
-                background-color: transparent;
-                &:hover {
-                    color: #fff;
-                    background: $siteColor;
-                    border-color: $siteColor;
-                }
-                &:active, &:focus {
-                    background-color: $siteColor;
-                    border-color: $siteColor;
-                    color: #fff;
-                    opacity: 0.8;
-                }
-            }
             .demoBtn {
                 background-color: #36393f;
                 &:hover {
