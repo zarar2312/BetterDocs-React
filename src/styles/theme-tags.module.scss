@@ -829,9 +829,9 @@ html[class*="dark"], html[id*="dark"] {
                     }
                     .tagContainer {
                         .tag {
-                            color: rgba(255,255, 255, 0.4);
+                            color: rgba(255,255, 255, 0.4) !important;
                             &:hover {
-                                color: #fff;
+                                color: #fff !important;
                             }
                         }
                     }
