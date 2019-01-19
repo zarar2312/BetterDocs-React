@@ -30,6 +30,10 @@ html[class*="dark"], html[id*="dark"] {
   background: rgba(114, 137, 218, 0.99); /* WebKit/Blink Browsers */
   color: #fff !important;
 }
+img::selection {
+  background: var(--siteColor); /* WebKit/Blink Browsers */
+  color: #fff !important;
+}
 ::-moz-selection {
   background: var(--siteColor); /* Gecko Browsers */
   color: #fff !important;
