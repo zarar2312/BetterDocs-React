@@ -11,11 +11,7 @@ auto: true
 status: Outdated
 software: [BandagedBD, BetterDiscord]
 thumbnail: https://i.imgur.com/OvDTo6r.gif
-images:
-  - image: 'https://i.imgur.com/OvDTo6r.gif'
-    name: Auto Correct Preview
-  - image: 'https://i.imgur.com/9pEw8uj.png'
-    name: Auto Correct Preview - Plugin Settings Page
+previews: [https://i.imgur.com/OvDTo6r.gif, https://i.imgur.com/9pEw8uj.png]
 ghcommentid: 68
 layout: product
 date: 2018-10-26T03:35:45.373Z
