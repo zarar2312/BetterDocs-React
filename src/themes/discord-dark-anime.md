@@ -1,7 +1,7 @@
 ---
 title: Discord Dark Anime
 author: Venipa
-description: A SHORT Description
+description: A dark theme with a transparent background featuring a hot anime girl
 download: https://github.com/Venipa/discord-dark-anime/tree/0.1.1-pre
 github_profile_url: https://github.com/Venipa/
 github_source_url: https://github.com/Venipa/discord-dark-anime/tree/0.1.1-pre
@@ -18,4 +18,4 @@ tags: [anime, dark, discord, material]
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---
-# A full description of your theme. All Markdown is allowed.
+A dark theme with a transparent background featuring a hot anime girl
