@@ -750,15 +750,11 @@ html[class*="dark"], html[id*="dark"] {
         }
         .options {
             .supportBtn {
-                background-color: #36393f;
+                background-color: #da002f;
+                color: #fff;
                 &:hover {
-                    color: darken($siteColor, 7%);
-                }
-                &:active, &:focus {
-                    background-color: $siteColor;
-                    border-color: $siteColor;
+                    background-color: #ad0026;
                     color: #fff;
-                    opacity: 1;
                 }
             }
             .demoBtn {
