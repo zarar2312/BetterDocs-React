@@ -30,6 +30,7 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
           ]}
         >
+          <meta name="msvalidate.01" content="2907AD22A611E606FD26FA8AA6CA2DB4" />
           <meta property="og:site_name" content="BetterDocs"/>
           <meta property="og:image" content="https://i.imgur.com/B0vcfRw.png"/>
           <meta property="og:title" content={data.site.siteMetadata.title}/>
