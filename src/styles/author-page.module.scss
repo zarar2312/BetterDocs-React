@@ -188,6 +188,7 @@
                 .cardContainer {
                     flex-basis: 12rem;
                     margin-bottom: 20px;
+                    position: relative;
                     &:hover {
                         .themeCard {
                             .header {
@@ -258,6 +259,31 @@
                                 transition: 300ms linear;
                             }
                         }
+                        [class$="-themeStatus"] {
+                            font-size: 0.4rem;
+                            padding: 5px 5px;
+                            color: #fff;
+                            border-radius: 0px 0px 0px 3px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            &[class^="Updated-"] {
+                                background-color: #00b167;
+                            }
+                            &[class^="Outdated-"] {
+                                background-color: #eb0505;
+                            }
+                        }
+                        .unknown {
+                            font-size: 0.4rem;
+                            padding: 5px 5px;
+                            color: #fff;
+                            border-radius: 0px 0px 0px 3px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            background-color: #00a2ff;
+                        }
                     }
                     .pluginCard {
                         background-color: #fff;
@@ -293,6 +319,31 @@
                             padding: 0.5rem;
                             color: rgba(0, 0, 0, 0.6);
                             font-size: 0.6rem;
+                        }
+                        [class$="-themeStatus"] {
+                            font-size: 0.4rem;
+                            padding: 5px 5px;
+                            color: #fff;
+                            border-radius: 0px 0px 0px 3px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            &[class^="Updated-"] {
+                                background-color: #00b167;
+                            }
+                            &[class^="Outdated-"] {
+                                background-color: #eb0505;
+                            }
+                        }
+                        .unknown {
+                            font-size: 0.4rem;
+                            padding: 5px 5px;
+                            color: #fff;
+                            border-radius: 0px 0px 0px 3px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            background-color: #00a2ff;
                         }
                     }
                 }

@@ -145,6 +145,11 @@ const Author = ({ pageContext, data }) => {
                   <div className={style.header}>
                     <p>{node.frontmatter.title}</p>
                   </div>
+                  {node.frontmatter.status ?
+                    <div class={ node.frontmatter.status + "-themeStatus"}>{node.frontmatter.status}</div>
+                  :
+                    <div class={style.unknown}>Unknown</div>
+                  }
                 </Link>
                 :
                 <Link 
@@ -153,6 +158,11 @@ const Author = ({ pageContext, data }) => {
                 >
                   <div className={style.header}>{node.frontmatter.title}</div>
                   <div className={style.description}>{node.frontmatter.description}</div>
+                  {node.frontmatter.status ?
+                    <div class={ node.frontmatter.status + "-pluginStatus"}>{node.frontmatter.status}</div>
+                  :
+                    <div class={style.unknown}>Unknown</div>
+                  }
                 </Link>
                 }
               </div>
@@ -228,6 +238,7 @@ export const authorQuery = graphql`
           download
           support
           layout
+          status
           demo
           discord_server
           tags
