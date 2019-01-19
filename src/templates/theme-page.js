@@ -174,13 +174,25 @@ const Themes = (props) => {
             {node.frontmatter.auto ?
               <a href={'https://minhaskamal.github.io/DownGit/#/home?url=' + node.frontmatter.download} className={hero.downloadBtn} target="blank">
                 {node.frontmatter.download && 
-                  <span>Download</span>
+                  <span>
+                     <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' width='512' height='512'
+                        viewBox='0 0 433.5 433.5'>
+                        <path d='M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z'
+                        fill='#FFF' id='file-download' />
+                      </svg>
+                      Download</span>
                 }
               </a>
               :
               <a href={node.frontmatter.download} className={hero.downloadBtn} target="blank">
                 {node.frontmatter.download && 
-                  <span>Download</span>
+                  <span>
+                     <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' width='512' height='512'
+                        viewBox='0 0 433.5 433.5'>
+                        <path d='M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z'
+                        fill='#FFF' id='file-download' />
+                      </svg>
+                      Download</span>
                 }
               </a>
             }
