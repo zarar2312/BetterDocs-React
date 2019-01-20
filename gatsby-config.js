@@ -13,6 +13,7 @@ module.exports = {
   siteMetadata: {
     title: `BetterDocs | #1 Discord Themes & Plugins`,
     siteUrl: `https://betterdocs.us`,
+    announcement: `Keep in mind if any client mod breaks then just reinstall to repair!`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

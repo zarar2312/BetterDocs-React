@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 import './layout.css'
+import Announcement from './announcement';
 //import Logo from "../images/mobile.png"
 //<link rel="manifest" href="/site.webmanifest"/>
 
@@ -48,6 +49,7 @@ const Layout = ({ children }) => (
           <html lang="en" class={0 <= time&&time < 7 && "dark"} id={17 <= time&&time < 24 && "dark"} /> 
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <Announcement />
         <div
           style={{
             margin: '0 auto',
