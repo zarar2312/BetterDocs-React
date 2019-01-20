@@ -5,7 +5,14 @@
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    height: 45px;
+    //height: 45px;
+    flex-direction: column;
+    padding: 15px 55px;
+    padding-top: 20px;
+    @media (min-width: 850px) {
+        flex-direction: row;
+        padding: 15px 30px;
+    }
     span {
         font-size: 0.6rem;
         color: rgba( #000, 0.9);
@@ -17,16 +24,17 @@
         border-radius: 3px;
         line-height: unset;
         padding: 2px 9px;
-        margin-top: unset;
-        top: unset;
-        position: unset;
+        margin-top: 7px;
         justify-self: center;
         transition: 250ms ease-in-out;
         height: 1.2rem;
         margin-left: 10px;
-        box-shadow: unset;
         border: unset;
         font-size: 0.6rem;
+        align-self: flex-end;
+        @media (min-width: 850px) {
+            margin-top: unset;
+        }
         &:hover {
             background-color: darken($siteColor, 7%);
             color: #fff;
