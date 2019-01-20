@@ -4,22 +4,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: $siteColor;
     //height: 45px;
     flex-direction: column;
     padding: 15px 55px;
     padding-top: 20px;
     @media (min-width: 850px) {
         flex-direction: row;
-        padding: 15px 30px;
+        padding: 10px 30px;
     }
     span {
         font-size: 0.6rem;
-        color: rgba( #000, 0.9);
+        color: rgba( #fff, 0.9);
         justify-self: center;
     }
     button {
-        color: $siteColor;
+        color: #fff;
         background-color: transparent;
         border-radius: 3px;
         line-height: unset;
@@ -31,6 +31,7 @@
         margin-left: 10px;
         border: unset;
         font-size: 0.6rem;
+        font-weight: bold;
         align-self: flex-end;
         @media (min-width: 850px) {
             margin-top: unset;
@@ -43,14 +44,6 @@
         &:focus, &:active {
             opacity: 0.8;
             outline: 0;
-        }
-    }
-}
-[class*="dark"], [id*="dark"] {
-    .announcement {
-        background-color: transparent;
-        span {
-            color: #fff;
         }
     }
 }
