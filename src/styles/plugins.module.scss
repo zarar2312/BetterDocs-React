@@ -135,6 +135,8 @@
                     overflow: hidden;
                     &:hover {
                         box-shadow: 2px 2px 5px rgba(0,0,0,.25);
+                        background-color: #eee;
+                        border-color: #eee;
                         .imgContainer, .missingImgContainer {
                             img {
                                 //box-shadow: rgba($siteColor, 0.5) 0px 8px 20px;
@@ -146,6 +148,12 @@
                     }
                     &:focus, &:active {
                         border-color: $siteColor;
+                    }
+                    @media (min-width: 850px) {
+                        &:hover {
+                            background-color: #fff;
+                            border-color: #fff;
+                        }
                     }
                     .topStatus {
                         display: flex;
