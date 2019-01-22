@@ -55,6 +55,40 @@
                     font-size: 0.6em;
                 }
             }
+            .help {
+                margin-left: 13px;
+                color: rgba( #000, 0.5);
+                align-self: center;
+                transition: 200ms ease-in-out;
+                display: none;
+                font-weight: bold;
+                &:hover {
+                    color: #000;
+                }
+                @media (min-width: 850px) {
+                    display: initial;
+                }
+            }
+            .upload {
+                margin-left: 13px;
+                //opacity: 0.5;
+                align-self: center;
+                display: none;
+                svg {
+                    height: 0.6rem;
+                    width: 0.6rem;
+                    opacity: 0.5;
+                    transition: 250ms ease-in-out;
+                }
+                &:hover {
+                    svg {
+                        opacity: 1;
+                    }
+                }
+                @media (min-width: 850px) {
+                    display: initial;
+                }
+            }
             .input {
                 border: unset;
                 //border-bottom: 2px solid $siteColor;
@@ -724,6 +758,7 @@
     @media (min-width: 850px) {
         right: 1.5rem;
         bottom: 1rem;
+        display: none;
     }
     .btn {
         display: block;

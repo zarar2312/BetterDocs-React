@@ -11,6 +11,7 @@
     }
     [class^="themes-module"] >.headroom-wrapper>.headroom--pinned {
         top: 1.8rem !important;
+        position: sticky !important;
     }
     [class^="themes-module"] >.headroom-wrapper>.headroom--unpinned {
         position: sticky !important;

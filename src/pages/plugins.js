@@ -17,7 +17,7 @@ import Software from '../components/plugins-software-bar'
 const Plugins = (props) => {
   const pluginList = props.data.all;
   //const featuredList = props.data.featured
-  const { totalCount } = props.data.all;
+  //const { totalCount } = props.data.all;
   //const listCount = `${totalCount}`
 
   return (

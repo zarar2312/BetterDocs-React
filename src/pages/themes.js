@@ -94,6 +94,18 @@ const Themes = (props) => {
       <div className={theme.titleBar}>
         <div className={theme.count}>#Themes <span>({listCount})</span></div>
         <input className={theme.input} placeholder="Search Themes library (WIP)" ></input>
+        <a target="blank" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" data-balloon="Need help with theme installation?" data-balloon-pos="left" className={theme.help}>?</a>
+        <Link className={theme.upload}
+        data-balloon="Want to publish your theme?" data-balloon-pos="left">
+          <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='433.5' height='433.5'
+          viewBox='0 0 433.5 433.5'>
+              <g id='file-upload'>
+                  <polygon points='140.25,331.5 293.25,331.5 293.25,178.5 395.25,178.5 216.75,0 38.25,178.5 140.25,178.5'
+                  />
+                  <rect x='38.25' y='382.5' width='357' height='51' />
+              </g>
+          </svg>
+        </Link>
       </div>
     </Headroom>
       <div className={theme.mainContent}
