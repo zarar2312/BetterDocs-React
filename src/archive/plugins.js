@@ -1,0 +1,122 @@
+/*import React from 'react'
+import Layout from '../components/layout-mobile-footer'
+import hero from '../styles/hero.module.scss'
+import plugin from '../styles/plugins.module.scss'
+import { Helmet } from "react-helmet";*/
+//import Sidebar from '../components/plugin-sidebar'
+/*import Info from '../components/plugin-info'
+import { graphql, Link } from 'gatsby'*/
+/*
+const Plugins = (props) => {
+  const pluginList = props.data.allMarkdownRemark;
+
+  return (
+  <Layout>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>BetterDocs | #1 Discord Plugins</title>
+      <meta property="og:site_name" content="BetterDocs"/>
+        <meta property="og:title" content="BetterDocs | #1 Discord Plugins"/>
+        <meta property="og:description" content="List of free high quality Discord plugins by the community! Modify your Discord to your own liking with advanced plugins!"/>
+        <meta property="og:url" content="https://betterdocs.us/plugins/" />
+    </Helmet>
+    <div className={plugin.pluginsContainer}
+    >
+
+    <section className={plugin.contentWrapper}
+    >
+
+      <div className={hero.heroPlugins}
+      >
+        <div className={hero.container}
+        >
+          <h2 className={hero.h2}
+          >
+          #1 Source for Discord Plugins!
+          </h2> 
+          <p className={hero.p}
+          >
+          Custom JS plugins made by the commuity!
+          </p> 
+        </div>
+      </div>
+
+      <div className={plugin.content}
+        >
+        <div className={plugin.wrapper}
+        >
+        <Info />
+        {pluginList.edges.map(({ node }, i) => (
+        <div
+        className={plugin.footer}
+        key={node.id}
+        >
+          {node.frontmatter.date && 
+          <div
+          className={plugin.date}
+          >
+          Last edit: {node.frontmatter.date}
+          </div>
+          }
+          <a
+          className={plugin.edit}
+          href={ 'https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins' + node.fields.slug + '.md'}
+          >
+          <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='459' height='459' viewBox='0 0 459 459'>
+              <path d='M0,362.1V459h96.9l280.5-283.05l-96.9-96.9L0,362.1z M451.35,102c10.2-10.2,10.2-25.5,0-35.7L392.7,7.649 c-10.2-10.2-25.5-10.2-35.7,0l-45.9,45.9l96.9,96.9L451.35,102z' id='create' />
+          </svg> Edit this page
+          </a>
+        </div>
+        ))}
+        </div>
+      </div>
+
+    </section>
+
+    </div>
+    <div className={plugin.uploadContainer}>
+        <Link to="/plugins/upload-a-plugin/" className={plugin.uploadBtn}>
+        +
+        </Link>
+    </div>
+  </Layout>
+)
+}
+
+export default Plugins;
+
+export const allPluginsQuery = graphql`
+  query allPluginsQuery {
+    allMarkdownRemark(filter: { frontmatter: { title: { eq: "Upload a Plugin"} } }) {
+      group(field: collection) {
+        fieldValue
+        totalCount
+      }
+      totalCount
+      edges {
+        node {
+          excerpt
+          html
+          id
+          frontmatter {
+            title
+            sub
+            author
+            thumbnail
+            github_profile_url
+            download
+            support
+            layout
+            description
+            date
+            tags
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
+*/

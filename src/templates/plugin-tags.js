@@ -6,7 +6,6 @@ import plugin from '../styles/plugin-tags.module.scss'
 import hero from '../styles/hero.module.scss'
 import Tags from '../components/pluginTags'
 import { graphql, Link } from "gatsby"
-import '../styles/plugin-sidebar.css'
 import Headroom from 'react-headroom';
 
 const Tagss = ({ pageContext, data }) => {

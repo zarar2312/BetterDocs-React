@@ -3,7 +3,6 @@ import style from '../styles/plugin-sidebar.module.scss'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import Tags from '../components/pluginTags'
 import Headroom from 'react-headroom';
-import '../styles/plugin-sidebar.css'
 
 const Sidebar = () => (
   <StaticQuery

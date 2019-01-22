@@ -1,0 +1,78 @@
+@import "variables";
+
+.tagsContainer {
+    display: flex;
+    padding: 0 60px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar-button { 
+        display: none; 
+        height: 10px; 
+        border-radius: 0px; 
+    } 
+    &::-webkit-scrollbar-thumb { 
+        background-color: rgba($siteColor, 0.3);
+        transition: background-color .2s ease-in-out;
+    } 
+    &::-webkit-scrollbar-thumb:hover { 
+        background-color: $siteColor; 
+    } 
+    &::-webkit-scrollbar-track { 
+        background-color: rgba($siteColor, 0.06);
+    }
+    &::-webkit-scrollbar { 
+        width: 8px; 
+        height: 5px;
+    }
+    .tag {
+        display: flex;
+        padding: 13px 37px;
+        transition: 250ms ease-in-out;
+        font-size: 0.7rem;
+        color: #000;
+        &:hover {
+            background-color: #eee;
+        }
+        &.active {
+            background-color: $siteColor;
+            color: #fff;
+            &:hover {
+                background-color: $siteColor; 
+            }
+        }
+        &:active, &:focus {
+            background-color: darken($siteColor, 7%);
+            color: #fff;
+        }
+        p {
+            margin: unset;
+        }
+        div {
+            max-height: 100%;
+            border-radius: 50%;
+            background-color: $siteColor;
+            max-width: 100%;
+            font-size: 0.5rem;
+            padding: 5px;
+            margin-left: 8px;
+            color: #fff;
+        }
+    }
+}
+
+[class*="dark"], [id*="dark"] {
+    .tagsContainer {
+        .tag {
+            &:hover {
+                background-color: #262626;
+            }
+            &.active {
+                background-color: $siteColor;
+                color: #fff;
+                &:hover {
+                    background-color: $siteColor; 
+                }
+            }
+        }
+    }
+}

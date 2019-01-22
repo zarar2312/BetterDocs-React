@@ -8,6 +8,7 @@ gitlab_source_url: https://gitlab.com/leogx9r/DiscordCrypt/blob/master/src/disco
 discord_server: https://discord.gg/3uakNmM
 support: https://gitlab.com/leogx9r/DiscordCrypt/issues
 software: [BandagedBD, BetterDiscord]
+featured: true
 ghcommentid: 52
 layout: product
 ---

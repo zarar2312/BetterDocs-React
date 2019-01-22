@@ -65,10 +65,14 @@ const Themes = (props) => {
         key={node.id}
         to={"/themes" + node.fields.slug}>
           <div className={featured.imgWrapper}>
+            {node.frontmatter.thumbnail ?
             <LazyLoad once={true} height="100%"
-              placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
+              placeholder={<img className={theme.img} alt={node.frontmatter.title} title="Missing Thumbnail" src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
             <img className={theme.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail}/>
             </LazyLoad>
+            :
+            <img className={theme.img} alt={node.frontmatter.title} title="Missing Thumbnail" src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
+            }
           </div>
         <div className={featured.title}>{node.frontmatter.title}</div>
         </Link>
