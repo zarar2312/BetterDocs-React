@@ -10,15 +10,15 @@ import LazyLoad from "react-lazyload"
 import Missing from "../images/missing_image_2.png"
 import Mobile from "../images/mobile_missing.png"
 import '../styles/tooltips.css'
-import Headroom from 'react-headroom';
+//import Headroom from 'react-headroom';
 import kebabCase from "lodash/kebabCase"
 import Software from '../components/plugins-software-bar'
 
 const Plugins = (props) => {
   const pluginList = props.data.all;
-  const featuredList = props.data.featured
+  //const featuredList = props.data.featured
   const { totalCount } = props.data.all;
-  const listCount = `${totalCount}`
+  //const listCount = `${totalCount}`
 
   return (
   <Layout>
@@ -229,9 +229,12 @@ const Plugins = (props) => {
 
     </div>
     <div className={plugin.uploadContainer}>
-        <Link to="/plugins/upload-a-plugin/" className={plugin.uploadBtn}>
+        <Link title="Want to publish your plugin?" to="/plugins/upload-a-plugin/" className={plugin.uploadBtn}>
         +
         </Link>
+    </div>
+    <div className={plugin.helpContainer}>
+        <Link data-balloon="Want to publish your plugin?" data-balloon-pos="left" to="/plugins/upload-a-plugin" className={plugin.btn} target="blank">?</Link>
     </div>
   </Layout>
 )
