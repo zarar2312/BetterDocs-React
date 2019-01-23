@@ -17,10 +17,10 @@ import { Helmet } from "react-helmet";
 const Software = ({ pageContext, data }) => {
   const { softwares } = pageContext
   const { edges, totalCount } = data.all
-  const tagHeader = `${totalCount} Plugin${
+  /*const tagHeader = `${totalCount} Plugin${
     totalCount === 1 ? "" : "s"
   } compatible with "${softwares}"`
-
+  */
   return (
     <Layout>
       <Helmet>

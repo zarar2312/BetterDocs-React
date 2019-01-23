@@ -33,7 +33,8 @@ const Tagss = ({ pageContext, data }) => {
         <input className={style.input} placeholder="Search Themes library (WIP)" ></input>
         <a target="blank" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" data-balloon="Need help with theme installation?" data-balloon-pos="left" className={style.help}>?</a>
         <Link className={style.upload}
-        data-balloon="Want to publish your theme?" data-balloon-pos="left">
+        data-balloon="Want to publish your theme?" data-balloon-pos="left"
+        to="/themes/upload-a-theme/">
           <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='433.5' height='433.5'
           viewBox='0 0 433.5 433.5'>
               <g id='file-upload'>
