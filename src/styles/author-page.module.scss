@@ -306,6 +306,21 @@
                             box-shadow: 0 10px 70px rgba(0, 0, 0, 0.08);
                             border-color: #eff2f6;
                         }
+                        &[alt="Updated"] {
+                            .header {
+                                background-color: darken(#00b167, 7%);
+                            }
+                        }
+                        &[alt="Outdated"] {
+                            .header {
+                                background-color: darken(#eb0505, 7%);
+                            }
+                        }
+                        &[alt="Unknown"] {
+                            .header {
+                                background-color: darken(#00a2ff, 8%);
+                            }
+                        }
                         .header {
                             background-color: #0a0a0a;
                             color: #fff;

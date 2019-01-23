@@ -154,15 +154,15 @@ const Author = ({ pageContext, data }) => {
                 :
                 <Link 
                 to={"/plugins" + node.fields.slug}
-                className={style.pluginCard} 
+                className={style.pluginCard}
+                alt={node.frontmatter.status ?
+                  `${node.frontmatter.status}`
+                :
+                  `Unknown`
+                }
                 >
                   <div className={style.header}>{node.frontmatter.title}</div>
                   <div className={style.description}>{node.frontmatter.description}</div>
-                  {node.frontmatter.status ?
-                    <div class={ node.frontmatter.status + "-pluginStatus"}>{node.frontmatter.status}</div>
-                  :
-                    <div class={style.unknown + "-pluginStatus" }>Unknown</div>
-                  }
                 </Link>
                 }
               </div>
