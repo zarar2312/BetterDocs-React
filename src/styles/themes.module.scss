@@ -827,6 +827,19 @@ html[class*="dark"], html[id*="dark"] {
                 box-shadow: 0 1px 0 rgba(0,0,0,.2), 0 2px 0 rgba(0,0,0,.06);
                 border-color: #36393f;
             }
+            .help {
+                color: #fff;
+                opacity: 0.5;
+                &:hover {
+                    opacity: 1;
+                    color: #fff;
+                }
+            }
+            .upload {
+                svg {
+                    fill: #fff;
+                }
+            }
             .input {
                 background: rgba(255, 255, 255, 0.1);
                 color: #eee;

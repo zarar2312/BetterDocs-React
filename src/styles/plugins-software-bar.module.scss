@@ -76,6 +76,7 @@
 [class*="dark"], [id*="dark"] {
     .tagsContainer {
         .tag {
+            border-color: #303030;
             &:hover {
                 background-color: #262626;
             }
