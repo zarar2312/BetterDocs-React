@@ -1,5 +1,5 @@
 ---
-title: VIPs 
+title: VIP
 author: Curtis-D
 description: Adds an extra section to the friends list where you can add your most important contacts on Discord (Bots included). Add users by right clicking their name, opening their profile and then clicking on the star. 
 download: https://github.com/Curtis-D/VIPs
