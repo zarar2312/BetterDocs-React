@@ -27,7 +27,7 @@ class Features extends React.Component {
           sort: { 
             fields: [frontmatter___title], order: ASC
           }
-          limit: 4) {
+          limit: 5) {
           group(field: collection) {
             fieldValue
             totalCount
@@ -68,8 +68,8 @@ class Features extends React.Component {
                 }
               }
             }, 
-            limit: 4
-            skip: 4) {
+            limit: 5
+            skip: 5) {
             group(field: collection) {
               fieldValue
               totalCount

@@ -106,6 +106,10 @@
         animation-iteration-count: infinite;
         display: flex;
         z-index: 1;
+        /*@media (min-width: 850px) {
+            padding-bottom: unset;
+            height: 19.25rem;
+        }*/
         .heroImg {
             height: 100%;
             width: 100%;

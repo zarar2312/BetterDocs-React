@@ -19,6 +19,15 @@
             padding: 8rem 3rem 3rem 3rem;
             border-bottom-right-radius: 7rem;
         }
+        @media (min-width: 1600px) {
+            padding-top: 10rem;
+        }
+        @media (min-width: 2000px) {
+            padding-top: 14rem;
+        }
+        @media (min-width: 2600px) {
+            padding-top: 19rem;
+        }
         .quote {
             font-size: 1.3rem;
             line-height: 1.4;
