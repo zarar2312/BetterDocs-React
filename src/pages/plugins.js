@@ -244,7 +244,7 @@ export default Plugins;
 
 export const allPluginsQuery = graphql`
   query allPluginsQuery {
-    all:allMarkdownRemark(filter: { collection: { eq: "plugins" } }) {
+    all:allMarkdownRemark(filter: { collection: { eq: "plugins" } } sort: { fields: [frontmatter___title], order: ASC}) {
       group(field: collection) {
         fieldValue
         totalCount

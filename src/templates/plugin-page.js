@@ -239,11 +239,6 @@ const Plugins = (props) => {
             >
               <div className={style.wrapper}
               >
-              {node.frontmatter.thumbnail &&
-              <a href={node.frontmatter.thumbnail} target="blank" className={style.imgContainer}>
-                <img className={style.img} src={node.frontmatter.thumbnail} alt={node.frontmatter.title} />
-              </a>
-              }
                 <div
                 className={style.childWrapper}
                 dangerouslySetInnerHTML={{ __html: node.html }}>
@@ -306,6 +301,14 @@ const Plugins = (props) => {
 }
 
 export default Plugins;
+
+/*
+{node.frontmatter.thumbnail &&
+  <a href={node.frontmatter.thumbnail} target="blank" className={style.imgContainer}>
+    <img className={style.img} src={node.frontmatter.thumbnail} alt={node.frontmatter.title} />
+  </a>
+} 
+*/
 
 export const pluginsQuery = graphql`
   query pluginsQuery($slug: String!) {

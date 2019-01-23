@@ -108,7 +108,7 @@
             &::-webkit-scrollbar { 
                 width: 8px; 
             }
-            a:not([class="anchor"]) {
+            a:not([class="anchor"]):not(.imgContainer) {
                 display: inline-block;
                 transition: color 250ms, text-shadow 250ms;
                 color: #000;
@@ -361,6 +361,7 @@ li[class*="react-tabs__tab"] {
     text-shadow: unset !important;
     color: rgba(0, 0, 0, 0.4) !important;
     border: unset !important;
+    margin-bottom: calc(1.45rem / 2);
     &[class*="react-tabs__tab--selected"] {
         color: #fff !important;
         box-shadow: unset !important;
