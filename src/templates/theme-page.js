@@ -237,26 +237,6 @@ const Themes = (props) => {
               className={style.childWrapper}
               dangerouslySetInnerHTML={{ __html: node.html }}>
               </div>
-              <div
-              className={style.footer}
-              >
-                {node.frontmatter.date && 
-                <div
-                className={style.date}
-                >
-                Last edit: {node.frontmatter.date}
-                </div>
-                }
-                <a
-                className={style.edit}
-                target="blank" 
-                href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/themes/${kebabCase(node.fields.slug)}.md`}
-                >
-                <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='459' height='459' viewBox='0 0 459 459'>
-                    <path d='M0,362.1V459h96.9l280.5-283.05l-96.9-96.9L0,362.1z M451.35,102c10.2-10.2,10.2-25.5,0-35.7L392.7,7.649 c-10.2-10.2-25.5-10.2-35.7,0l-45.9,45.9l96.9,96.9L451.35,102z' id='create' />
-                </svg> Edit this page
-                </a>
-              </div>
             </div>
           </div>
           </TabPanel>
@@ -298,10 +278,18 @@ const Themes = (props) => {
         <path id='Chevron_Right' d='M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179 l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816 C52.942,116.507,52.942,124.327,57.633,129.007z' fill='#FFF' />
       </svg>
     </AniLink>
-
+    {themeList.edges.map(({ node }, i) => (
+    <div className={style.helpContainer} key={node.id}>
+        <a data-balloon="Edit this page" data-balloon-pos="left" href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/themes/${kebabCase(node.fields.slug)}.md`} className={style.btn} target="blank">
+          <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='459' height='459' viewBox='0 0 459 459'>
+              <path d='M0,362.1V459h96.9l280.5-283.05l-96.9-96.9L0,362.1z M451.35,102c10.2-10.2,10.2-25.5,0-35.7L392.7,7.649 c-10.2-10.2-25.5-10.2-35.7,0l-45.9,45.9l96.9,96.9L451.35,102z' id='create' />
+          </svg>
+        </a>
+    </div>
+    ))}
     {themeList.edges.map(({ node }, i) => (
     <div className={style.mHeader} key={node.id}>
-    <div className={style.p}>{node.frontmatter.title}</div>
+      <div className={style.p}>{node.frontmatter.title}</div>
     </div>
     ))}
   </Layout>

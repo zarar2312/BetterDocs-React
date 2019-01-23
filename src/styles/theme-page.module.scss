@@ -259,7 +259,42 @@
         display: none;
     }
 }
-
+.helpContainer {
+    position: fixed;
+    right: 1rem;
+    bottom: 2.5rem;
+    z-index: 100;
+    @media (min-width: 850px) {
+        right: 1.5rem;
+        bottom: 1rem;
+        //display: none;
+    }
+    .btn {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $siteColor;
+        color: #fff;
+        text-align: center;
+        line-height: 2.5rem;
+        border-radius: 50%;
+        transition: all linear 250ms;
+        box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 3px -2px #ffffff;
+        font-size: 1.3rem;
+        &:hover {
+            box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 3px -2px #ffffff;
+            background-color: darken($siteColor, 7%);
+        }
+        svg {
+            height: 17px;
+            width: 17px;
+            fill: #fff;
+            margin: 0 auto;
+            top: -3px;
+            position: relative;
+        }
+    }
+}
 [alt="Upload a Theme"] {
     ~.content {
         //max-height: calc(((((100vh - 2.9rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
