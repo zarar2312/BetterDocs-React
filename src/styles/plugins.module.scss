@@ -28,10 +28,15 @@
             border-bottom: 1px solid #f5f3f7;
             display: flex;
             flex-direction: row;
+            //padding: 0 60px;
             //padding: 0.42rem 0.62rem;
             position: sticky;
             //top: 3.04rem;
             z-index: 3;
+            box-shadow: 2px 2px 5px rgba(0,0,0,.25);
+            @media (min-width: 850px) {
+                box-shadow: 2px 2px 5px rgba(0,0,0,.15);
+            }
             .count {
                 flex: 10;
                 font-weight: bold;

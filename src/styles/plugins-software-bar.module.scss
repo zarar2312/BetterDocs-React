@@ -2,13 +2,15 @@
 
 .tagsContainer {
     display: flex;
-    padding: 0 60px;
+    padding: 0;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    box-shadow: 2px 2px 5px rgba(0,0,0,.25);
     width: 100%;
+    //margin: 0 60px;
+    //justify-content: center;
     @media (min-width: 850px) {
-        box-shadow: 2px 2px 5px rgba(0,0,0,.15);
+        //margin: 0 60px;
+        //justify-content: center;
     }
     &::-webkit-scrollbar-button { 
         display: none; 
@@ -50,6 +52,36 @@
             }
             &:hover {
                 background-color: $siteColor; 
+            }
+            &[alt*="BetterDiscord"] {
+                background-color: $betterdiscord;
+                div {
+                    background-color: darken($betterdiscord, 7%);
+                }
+            }
+            &[alt*="PowerCord"] {
+                background-color: $powercord;
+                div {
+                    background-color: darken($powercord, 7%);
+                }
+            }
+            &[alt*="BandagedBD"] {
+                background-color: $bandagedbd;
+                div {
+                    background-color: darken($bandagedbd, 7%);
+                }
+            }
+            &[alt*="EnhancedDiscord"] {
+                background-color: $enhanceddiscord;
+                div {
+                    background-color: darken($enhanceddiscord, 7%);
+                }
+            }
+            &[alt*="DiscordInjections"] {
+                background-color: $discordinjections;
+                div {
+                    background-color: darken($discordinjections, 7%);
+                }
             }
         }
         &:active, &:focus {

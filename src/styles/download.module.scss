@@ -143,37 +143,37 @@
         &[alt="EnhancedDiscord"] {
             order: 2;
             .header {
-                background: #9b3333;
+                background: $enhanceddiscord;
             }
             .feature {
-                color: #9b3333;
+                color: $enhanceddiscord;
             }
         }
         &[alt="BeautifulDiscord"] {
             order: 4;
             .header {
-                background: #7289DA;
+                background: $beautifuldiscord;
             }
             .feature {
-                color: #7289DA;
+                color: $beautifuldiscord;
             }
         }
         &[alt="DiscordInjections"] {
             order: 5;
             .header {
-                background: #6e6e6e;
+                background: $discordinjections;
             }
             .feature {
-                color: #6e6e6e;
+                color: $discordinjections;
             }
         }
         &[alt="PowerCord"] {
             order: 3;
             .header {
-                background: #d18118;
+                background: $powercord;
             }
             .feature {
-                color: #d18118;
+                color: $powercord;
             }
         }
         &[alt="BetterDiscord"] {
@@ -188,10 +188,10 @@
                 }
             }
             .header {
-                background-color: #005eac;
+                background-color: $betterdiscord;
             }
             .feature {
-                color: #005eac;
+                color: $betterdiscord;
             }
             .info {
                 display: flex;
