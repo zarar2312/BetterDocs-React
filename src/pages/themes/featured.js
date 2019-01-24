@@ -3,14 +3,11 @@ import Layout from 'src/components/layout-mobile-footer'
 import theme from 'src/styles/themes.module.scss'
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet";
-import Missing from 'src/images/missing_image_2.png'
-import Stars from 'src/images/stars.svg'
-import kebabCase from "lodash/kebabCase"
 //import AniLink from "gatsby-plugin-transition-link/AniLink"
-import LazyLoad from "react-lazyload"
 import 'src/styles/theme-featured.css'
 import Headroom from 'react-headroom';
 import 'src/styles/tooltips.css'
+import Card from 'src/components/themes-card'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -59,86 +56,19 @@ const FeaturedThemes = (props) => {
           <div className={theme.wrapper}
           >
           {featuredList.edges.map(({ node }, i) => (
-            <div 
-            className={theme.cardWrapper}
+            <Card
+            title={node.frontmatter.title} 
+            thumbnail={node.frontmatter.thumbnail}
+            slug={node.fields.slug}
+            status={node.frontmatter.status}
+            tags={node.frontmatter.tags}
+            author={node.frontmatter.author}
+            excerpt={node.excerpt}
+            demo={node.frontmatter.demo}
+            style={node.frontmatter.style}
             key={node.id}
-            >
-              { node.frontmatter.thumbnail ?
-              <Link to={"themes" + node.fields.slug} className={theme.imgContainer} alt={node.frontmatter.featured && "featured"}
-              >
-                <LazyLoad once={true} height="100%"
-                  placeholder={<img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
-                <img className={theme.img} alt={`The featured theme "` + node.frontmatter.title + `"`} src={node.frontmatter.thumbnail}/>
-                </LazyLoad>
-                { node.frontmatter.featured &&
-                  <Link 
-                    to="/themes/featured/"
-                   className={theme.icon}
-                   data-balloon="Featured" data-balloon-pos="left">
-                    <img src={Stars} alt="Featured Theme icon"></img>
-                  </Link>
-                }
-                <div className={theme.options}>
-                  <div className={theme.optionsWrapper}>
-                    <a 
-                    className={theme.btn}
-                    href={node.frontmatter.thumbnail}
-                    target="blank"
-                    >Full Thumbnail</a>
-                    {node.frontmatter.demo &&
-                    <div
-                    href={'http://betterdocs.netlify.com/demo/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo}
-                    className={theme.btn}
-                    target="blank">Quick Demo</div>
-                    }
-                  </div>
-                </div>
-              </Link>
-              :
-              <div 
-              className={theme.imgContainer}
-              >
-                <img className={theme.img} alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}/>
-              </div>
-              }
-                <div>
-                  <Link 
-                  className={theme.author}
-                  to={"/profile/" + node.frontmatter.author}
-                  target="blank"
-                  >{node.frontmatter.author} /</Link>
-                </div>
-                <div className={theme.title}
-                >
-                <Link 
-                to={"themes" + node.fields.slug}
-                className={theme.titleLink}>
-                {node.frontmatter.title}
-                </Link>
-                </div>
-              {node.frontmatter.tags ?
-                <div>
-                <div className={theme.description}
-                >
-                  <p className={theme.p}
-                  >{node.excerpt}</p>
-                </div>
-                <div className={theme.tagContainer}>
-                  {node.frontmatter.tags.map(tag => (
-                    <Link to={`/themes/tags/${kebabCase(tag)}/`} key={tag} className={theme.tag}>
-                      #{tag}
-                    </Link>
-                  ))}
-                </div>
-                </div>
-                :
-                <div className={theme.descriptionAlt}
-                >
-                  <p className={theme.p}
-                  >{node.excerpt}</p>
-                </div>
-              }
-            </div>
+            featured= {node.frontmatter.featured}
+            />
           ))}
         </div>
       </div>
