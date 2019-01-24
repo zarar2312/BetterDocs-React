@@ -1,12 +1,12 @@
 import React from 'react'
 //import { Link } from 'gatsby'
 
-import style from '../styles/index.module.scss'
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import Features from '../components/features'
-import Reasons from '../components/reasons'
-import FeaturedThemes from '../components/index-featured-themes'
+import style from 'src/styles/index.module.scss'
+import Layout from 'src/components/layout'
+import Hero from 'src/components/index/hero'
+import Features from 'src/components/index/features'
+import Reasons from 'src/components/index/reasons'
+import FeaturedThemes from 'src/components/index/featured-themes'
 
 const IndexPage = () => (
   <Layout>
