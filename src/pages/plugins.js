@@ -12,14 +12,17 @@ import Mobile from "../images/mobile_missing.png"
 import '../styles/tooltips.css'
 //import Headroom from 'react-headroom';
 import kebabCase from "lodash/kebabCase"
-import Software from '../components/plugins-software-bar'
+import SoftwareBar from '../components/plugins-software-bar'
 
 const Plugins = (props) => {
   const pluginList = props.data.all;
   //const featuredList = props.data.featured
-  //const { totalCount } = props.data.all;
+  const { totalCount } = props.data.all;
   //const listCount = `${totalCount}`
-
+  const tagHeader = `${totalCount} Result${
+    totalCount === 1 ? "" : "s"
+  }`
+  
   return (
   <Layout>
     <Helmet>
@@ -178,8 +181,9 @@ const Plugins = (props) => {
       </div>
       <div className={plugin.content}
         >
-        <div className={plugin.softwareBar}>
-            <Software/>
+        <SoftwareBar/>
+        <div className={plugin.contentDetails}>
+            <div className={plugin.contentHeader}>{tagHeader}</div>
         </div>
         <div className={plugin.cardsContainer}
         >

@@ -17,10 +17,10 @@ import { Helmet } from "react-helmet";
 const Software = ({ pageContext, data }) => {
   const { softwares } = pageContext
   const { edges, totalCount } = data.all
-  /*const tagHeader = `${totalCount} Plugin${
+  const tagHeader = `${totalCount} Plugin${
     totalCount === 1 ? "" : "s"
   } compatible with "${softwares}"`
-  */
+  
   return (
     <Layout>
       <Helmet>
@@ -36,9 +36,7 @@ const Software = ({ pageContext, data }) => {
   
       <section className={plugin.contentWrapper}
       >
-        <div className={plugin.softwareBar}>
-          <SoftwareBar/>
-        </div>
+        <SoftwareBar/>
         <div className={plugin.hero}>
             <div className={plugin.heroTitle}>Plugin marketplace for {softwares}</div>
             <div className={plugin.inputContainer}>
@@ -49,6 +47,9 @@ const Software = ({ pageContext, data }) => {
         
         <div className={plugin.content}
           >
+          <div className={plugin.contentDetails}>
+              <div className={plugin.contentHeader}>{tagHeader}</div>
+          </div>
           <div className={plugin.cardsContainer}
           >
           {edges.map(({ node }) => (

@@ -24,23 +24,25 @@ const pluginSoftware = ({ siteTitle }) => (
       }      
   `}
     render={data => (
-        <div className={style.tagsContainer}>
-            <Link 
-            className={style.tag}
-            activeClassName={style.active}
-            to="/plugins/"
-            >All</Link>
-            {data.allMarkdownRemark.group.map(software => (
-            <Link 
-            className={style.tag}
-            activeClassName={style.active}
-            to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`}
-            key={software.fieldValue}
-            alt={software.fieldValue}
-            title={"List of plugins compatible with " + software.fieldValue}>   
-                <p>{software.fieldValue}</p> <div>{software.totalCount}</div>
-            </Link>
-            ))}
+        <div className={style.softwareBar}>
+            <div className={style.tagsContainer}>
+                <Link 
+                className={style.tag}
+                activeClassName={style.active}
+                to="/plugins/"
+                >All</Link>
+                {data.allMarkdownRemark.group.map(software => (
+                <Link 
+                className={style.tag}
+                activeClassName={style.active}
+                to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`}
+                key={software.fieldValue}
+                alt={software.fieldValue}
+                title={"List of plugins compatible with " + software.fieldValue}>   
+                    <p>{software.fieldValue}</p> <div>{software.totalCount}</div>
+                </Link>
+                ))}
+            </div>
         </div>
         )}
     />

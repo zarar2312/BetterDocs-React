@@ -87,6 +87,16 @@
                 }
             }
         }
+        .contentDetails {
+            background-color: #f1f1f1;
+            display: flex;
+            padding: 0 55px;
+            padding-top: 30px;
+            .contentHeader {
+                font-size: 0.9rem;
+                color: rgba(#000, 0.8);
+            }
+        }
         .content {
             display: flex;
             order: 1;
@@ -598,6 +608,12 @@ html[class*="dark"], html[id*="dark"] {
                     &:active, &:focus {
                         background: rgba(255, 255, 255, 0.05);
                     }
+                }
+            }
+            .contentDetails {
+                background-color: transparent;
+                .contentHeader {
+                    color: rgba(#fff, 0.9);
                 }
             }
             .content {
