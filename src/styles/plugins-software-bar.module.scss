@@ -138,6 +138,36 @@
                     &:hover {
                         background-color: $siteColor; 
                     }
+                    &[alt*="BetterDiscord"] {
+                        background-color: $betterdiscord;
+                        div {
+                            background-color: darken($betterdiscord, 7%);
+                        }
+                    }
+                    &[alt*="PowerCord"] {
+                        background-color: $powercord;
+                        div {
+                            background-color: darken($powercord, 7%);
+                        }
+                    }
+                    &[alt*="BandagedBD"] {
+                        background-color: $bandagedbd;
+                        div {
+                            background-color: darken($bandagedbd, 7%);
+                        }
+                    }
+                    &[alt*="EnhancedDiscord"] {
+                        background-color: $enhanceddiscord;
+                        div {
+                            background-color: darken($enhanceddiscord, 7%);
+                        }
+                    }
+                    &[alt*="DiscordInjections"] {
+                        background-color: $discordinjections;
+                        div {
+                            background-color: darken($discordinjections, 7%);
+                        }
+                    }
                 }
             }
         }
