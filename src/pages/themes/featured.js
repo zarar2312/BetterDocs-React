@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 import 'src/styles/theme-featured.css'
 import Headroom from 'react-headroom';
 import 'src/styles/tooltips.css'
-import Card from 'src/components/themes-card'
+import Card from 'src/components/themes/card'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import style from '../styles/plugin-sidebar.module.scss'
+import style from 'src/styles/plugin-sidebar.module.scss'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import Tags from '../components/pluginTags'
+import Tags from 'src/components/plugins/sidebar-software'
 import Headroom from 'react-headroom';
 
 const Sidebar = () => (

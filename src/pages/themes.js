@@ -12,7 +12,7 @@ import LazyLoad from "react-lazyload"
 import Headroom from 'react-headroom';
 import '../styles/theme.css'
 import '../styles/tooltips.css'
-import Card from '../components/themes-card'
+import Card from '../components/themes/card'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 

@@ -1,11 +1,11 @@
 import React from 'react'
-import style from '../styles/theme-sidebar.module.scss'
+import style from 'src/styles/theme-sidebar.module.scss'
 import { StaticQuery, graphql, Link } from 'gatsby'
 //import Stars from "../images/stars.svg"
 import LazyLoad from "react-lazyload"
-import Missing from "../images/missing_image_2.png"
-import Headroom from 'react-headroom';
-import '../styles/theme-sidebar.css'
+import Missing from "src/images/missing_image_2.png"
+import Headroom from 'react-headroom'
+import 'src/styles/theme-sidebar.css'
 
 const Sidebar = () => (
   <StaticQuery

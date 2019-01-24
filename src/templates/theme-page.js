@@ -3,7 +3,6 @@ import Layout from '../components/layout-mobile-footer'
 import hero from '../styles/theme-page-hero.module.scss'
 import style from '../styles/theme-page.module.scss'
 import { graphql, Link } from "gatsby"
-//import Sidebar from '../components/theme-sidebar'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import kebabCase from "lodash/kebabCase"
 import Helmet from 'react-helmet'

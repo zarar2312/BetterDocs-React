@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 import Layout from '../components/layout-mobile-footer'
 import plugin from '../styles/plugin-tags.module.scss'
 import { graphql, Link } from "gatsby"
-import SoftwareBar from '../components/plugins-software-bar'
+import SoftwareBar from '../components/plugins/software-bar'
 import { Helmet } from "react-helmet";
-import Card from '../components/plugins-card'
+import Card from '../components/plugins/card'
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext

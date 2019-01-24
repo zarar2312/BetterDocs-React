@@ -4,11 +4,10 @@ import Layout from '../components/layout-mobile-footer'
 //import Info from '../components/plugin-info'
 import plugin from '../styles/plugin-software.module.scss'
 //import hero from '../styles/hero.module.scss'
-//import Tags from '../components/pluginTags'
 import { graphql, Link } from "gatsby"
-import SoftwareBar from '../components/plugins-software-bar'
+import SoftwareBar from '../components/plugins/software-bar' 
 import { Helmet } from "react-helmet";
-import Card from '../components/plugins-card'
+import Card from '../components/plugins/card'
 
 const Software = ({ pageContext, data }) => {
   const { softwares } = pageContext

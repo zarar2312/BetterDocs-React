@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby"
 import '../styles/theme-tags.css'
 import Headroom from 'react-headroom';
 import '../styles/tooltips.css'
-import Card from '../components/themes-tags-card'
+import Card from '../components/themes/tags-card'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 

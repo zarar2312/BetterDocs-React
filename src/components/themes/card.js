@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import style from '../styles/themes-tags.module.scss'
-import Missing from "../images/missing_image_2.png"
+import style from 'src/styles/themes.module.scss'
+import Missing from "src/images/missing_image_2.png"
 import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
-import Stars from "../images/stars.svg"
+import Stars from "src/images/stars.svg"
 
 const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featured, demo, mode}) => (
     <div 

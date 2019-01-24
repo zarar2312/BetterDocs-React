@@ -6,8 +6,8 @@ import { Helmet } from "react-helmet";
 //import Sidebar from '../components/plugin-sidebar'
 import { graphql, Link } from 'gatsby'
 import '../styles/tooltips.css'
-import SoftwareBar from '../components/plugins-software-bar'
-import Card from '../components/plugins-card'
+import SoftwareBar from '../components/plugins/software-bar'
+import Card from '../components/plugins/card'
 
 const Plugins = (props) => {
   const pluginList = props.data.all;
