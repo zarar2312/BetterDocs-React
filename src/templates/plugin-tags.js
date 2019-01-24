@@ -1,12 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Layout from '../components/layout-mobile-footer'
-import Info from '../components/plugin-info'
 import plugin from '../styles/plugin-tags.module.scss'
-import hero from '../styles/hero.module.scss'
-import Tags from '../components/pluginTags'
 import { graphql, Link } from "gatsby"
-import Headroom from 'react-headroom';
+import kebabCase from "lodash/kebabCase"
+import SoftwareBar from '../components/plugins-software-bar'
+import LazyLoad from "react-lazyload"
+import Missing from "../images/missing_image_2.png"
+import Mobile from "../images/mobile_missing.png"
+import { Helmet } from "react-helmet";
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -17,90 +19,85 @@ const Tagss = ({ pageContext, data }) => {
 
   return (
     <Layout>
-    <div className={plugin.pluginsContainer}
-    >
-
-    <section className={plugin.contentWrapper}
-    >
-
-      <div className={hero.heroPlugins}
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>BetterDocs | #1 Discord Plugins</title>
+        <meta property="og:site_name" content="BetterDocs"/>
+          <meta property="og:title" content="BetterDocs | #1 Discord Plugins"/>
+          <meta property="og:description" content="List of free high quality Discord plugins by the community! Modify your Discord to your own liking with advanced plugins!"/>
+          <meta property="og:url" content="https://betterdocs.us/plugins/" />
+      </Helmet>
+      <div className={plugin.pluginsContainer}
       >
-        <div className={hero.container}
-        >
-          <h2 className={hero.h2}
-          >
-          #1 Source for Discord Plugins!
-          </h2> 
-          <p className={hero.p}
-          >
-          Custom JS plugins made by the commuity!
-          </p> 
-        </div>
-      </div>
-
-      <div className={plugin.content}
-        >
-        <div className={plugin.wrapper}
-        >
-        <Info />
-        </div>
-      </div>
-
-    </section>
-    <Headroom downTolerance={5}>
-      <section className={plugin.sidebarSearch}>
-        <div className={plugin.searchContainer}>
-          <input 
-          className={plugin.input}
-          placeholder='Search Plugins library (WIP)'
-          >
-          </input>
-          <div className={plugin.searchOutput}>
-            {tagHeader}
-          </div>
-          <Tags />
-        </div>
-
-            <div className={plugin.Results}>
-            {edges.map(({ node }) => {
-          return (
-              <Link 
-              className={plugin.resultCard}
-              activeClassName={plugin.active}
-              to={'plugins' + node.fields.slug}
-              key={node.id}
-              >
-                <div className={plugin.header}
-                >
-                  <span className={plugin.title}
-                  >
-                  {node.frontmatter.title}
-                  </span>
-                  <span className={plugin.author}
-                  >
-                  {node.frontmatter.author}
-                  </span>
-                </div>
-                <div className={plugin.description}
-                >
-                  <p className={plugin.p}
-                  >
-                    {node.excerpt}
-                  </p>
-                </div>
-                {node.frontmatter.status ?
-                  <div className={plugin.status} alt={node.frontmatter.status}>{node.frontmatter.status}</div>
-                :
-                  <div className={plugin.status} alt="Unknown">Unknown</div>
-                }
-              </Link>
-              )
-            })}
+  
+      <section className={plugin.contentWrapper}
+      >
+        <SoftwareBar/>
+        <div className={plugin.hero}>
+            <div className={plugin.heroTitle}>{tagHeader}</div>
+            <div className={plugin.inputContainer}>
+              <input placeholder="Search the marketplace" className={plugin.input} />
+              <button className={plugin.btn}>Search</button>
             </div>
-
+        </div>
+        
+        <div className={plugin.content}
+          >
+          <div className={plugin.cardsContainer}
+          >
+          {edges.map(({ node }) => (
+            <div className={plugin.pluginCard} key={node.id} title={node.frontmatter.title}>
+            {node.frontmatter.status ?
+              <div className={plugin.topStatus} title={"Status of " + node.frontmatter.title + ": " + node.frontmatter.status}>{node.frontmatter.status}</div>
+            :
+              <div className={plugin.topStatus} title={"Status of " + node.frontmatter.title + ": Unknown"}>Unknown</div>
+            }
+              {node.frontmatter.thumbnail ?
+                <Link to={"plugins/" + node.fields.slug}  className={plugin.imgContainer}>
+                  <LazyLoad once={true} height="100%"
+                  placeholder={<img className={plugin.img} alt={node.frontmatter.title} src={Mobile} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                    <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "'s thumbnail"} title={node.frontmatter.title + "'s thumbnail"} />
+                  </LazyLoad>
+                </Link>
+                :
+                <Link to={"plugins/" + node.fields.slug} className={plugin.missingImgContainer}>
+                  <img className={plugin.missingImg} src={Mobile} alt="Missing Plugin Thumbnail" title="Missing Plugin Thumbnail" />
+                </Link>
+                }
+                <div className={plugin.titleContainer}>
+                  <Link to={"plugins/" + node.fields.slug} className={plugin.title}>{node.frontmatter.title}</Link>
+                </div>
+                <div className={plugin.authorDetails}>
+                  <Link title={"Made by " + node.frontmatter.author} to={"/profile/" + node.frontmatter.author} className={plugin.author}>{node.frontmatter.author + " /"}</Link>
+                </div>
+                <div className={plugin.description}>
+                  <p className={plugin.p}>{node.excerpt}</p>
+                </div>
+                {node.frontmatter.tags &&
+                  <div className={plugin.tagsContainer}>
+                    {node.frontmatter.tags.map(tag => (
+                      <Link to={`/plugins/tags/${kebabCase(tag)}/`} key={tag} className={plugin.tag}>
+                        #{tag}
+                      </Link>
+                    ))}
+                  </div>
+                }
+            </div>
+          ))}
+          </div>
+        </div>
+  
       </section>
-    </Headroom>
-    </div>
+  
+      </div>
+      <div className={plugin.uploadContainer}>
+          <Link title="Want to publish your plugin?" to="/plugins/upload-a-plugin/" className={plugin.uploadBtn}>
+          +
+          </Link>
+      </div>
+      <div className={plugin.helpContainer}>
+          <Link data-balloon="Want to publish your plugin?" data-balloon-pos="left" to="/plugins/upload-a-plugin" className={plugin.btn} target="blank">?</Link>
+      </div>
     </Layout>
   )
 }

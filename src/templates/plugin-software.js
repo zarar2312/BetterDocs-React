@@ -107,7 +107,7 @@ const Software = ({ pageContext, data }) => {
       </div>
     </Layout>
   )
-  }
+}
 
 Software.propTypes = {
     pageContext: PropTypes.shape({
