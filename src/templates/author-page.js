@@ -208,13 +208,13 @@ export const authorQuery = graphql`
     },
     limit:allMarkdownRemark( filter: { frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC} limit: 1) {
       ...fields
-    }
+    },
     themes:allMarkdownRemark( filter: { collection: { eq: "themes" } frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...fields
-    }
+    },
     plugins:allMarkdownRemark( filter: { collection: { eq: "plugins" } frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...fields
-    }
+    },
   }
 
   fragment fields on MarkdownRemarkConnection {
@@ -245,5 +245,5 @@ export const authorQuery = graphql`
         }
       }
     }
-  }  
+  }
 `

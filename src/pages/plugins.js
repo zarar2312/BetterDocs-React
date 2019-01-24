@@ -4,15 +4,10 @@ import hero from '../styles/hero.module.scss'
 import plugin from '../styles/plugins.module.scss'
 import { Helmet } from "react-helmet";
 //import Sidebar from '../components/plugin-sidebar'
-//import Info from '../components/plugin-info'
 import { graphql, Link } from 'gatsby'
-import LazyLoad from "react-lazyload"
-import Missing from "../images/missing_image_2.png"
-import Mobile from "../images/mobile_missing.png"
 import '../styles/tooltips.css'
-//import Headroom from 'react-headroom';
-import kebabCase from "lodash/kebabCase"
 import SoftwareBar from '../components/plugins-software-bar'
+import Card from '../components/plugins-card'
 
 const Plugins = (props) => {
   const pluginList = props.data.all;
@@ -38,7 +33,6 @@ const Plugins = (props) => {
 
     <section className={plugin.contentWrapper}
     >
-
       <div className={hero.heroPlugins}
       >
         <div className={hero.container}
@@ -188,43 +182,15 @@ const Plugins = (props) => {
         <div className={plugin.cardsContainer}
         >
         {pluginList.edges.map(({ node }) => (
-          <div className={plugin.pluginCard} key={node.id} title={node.frontmatter.title}>
-          {node.frontmatter.status ?
-            <div className={plugin.topStatus} title={"Status of " + node.frontmatter.title + ": " + node.frontmatter.status}>{node.frontmatter.status}</div>
-          :
-            <div className={plugin.topStatus} title={"Status of " + node.frontmatter.title + ": Unknown"}>Unknown</div>
-          }
-            {node.frontmatter.thumbnail ?
-              <Link to={"plugins/" + node.fields.slug}  className={plugin.imgContainer}>
-                <LazyLoad once={true} height="100%"
-                placeholder={<img className={plugin.img} alt={node.frontmatter.title} src={Mobile} style={{backgroundImage :  `url(${Missing})` }}/>}>
-                  <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "'s thumbnail"} title={node.frontmatter.title + "'s thumbnail"} />
-                </LazyLoad>
-              </Link>
-              :
-              <Link to={"plugins/" + node.fields.slug} className={plugin.missingImgContainer}>
-                <img className={plugin.missingImg} src={Mobile} alt="Missing Plugin Thumbnail" title="Missing Plugin Thumbnail" />
-              </Link>
-              }
-              <div className={plugin.titleContainer}>
-                <Link to={"plugins/" + node.fields.slug} className={plugin.title}>{node.frontmatter.title}</Link>
-              </div>
-              <div className={plugin.authorDetails}>
-                <Link title={"Made by " + node.frontmatter.author} to={"/profile/" + node.frontmatter.author} className={plugin.author}>{node.frontmatter.author + " /"}</Link>
-              </div>
-              <div className={plugin.description}>
-                <p className={plugin.p}>{node.excerpt}</p>
-              </div>
-              {node.frontmatter.tags &&
-                <div className={plugin.tagsContainer}>
-                  {node.frontmatter.tags.map(tag => (
-                    <Link to={`/plugins/tags/${kebabCase(tag)}/`} key={tag} className={plugin.tag}>
-                      #{tag}
-                    </Link>
-                  ))}
-                </div>
-              }
-          </div>
+          <Card 
+          title={node.frontmatter.title} 
+          thumbnail={node.frontmatter.thumbnail}
+          slug={node.fields.slug}
+          status={node.frontmatter.status}
+          tags={node.frontmatter.tags}
+          author={node.frontmatter.author}
+          excerpt={node.excerpt}
+          key={node.id}/>
         ))}
         </div>
       </div>
