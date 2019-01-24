@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
 import hero from '../styles/altHero.module.scss'
-import style from '../styles/plugin-page.module.scss'
+import style from '../styles/plugins/index.module.scss'
 import { graphql, Link } from 'gatsby'
 import Sidebar from '../components/plugins/sidebar'
 import AniLink from "gatsby-plugin-transition-link/AniLink"

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import style from '../styles/featured-themes.module.scss'
+import style from 'src/styles/featured-themes.module.scss'
 
 class Features extends React.Component {
 

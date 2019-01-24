@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import style from '../styles/reasons.module.scss'
-import discord from '../images/discordcog.svg'
+import style from 'src/styles/reasons.module.scss'
+import discord from 'src/images/discordcog.svg'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Reasons = () => (

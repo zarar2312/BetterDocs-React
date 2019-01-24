@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import style from '../styles/featured.module.scss'
+import style from 'src/styles/featured.module.scss'
 
 const Features = () => (
         <section className={style.featured}>

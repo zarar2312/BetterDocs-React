@@ -112,7 +112,7 @@ return graphql(`{
     .then(res => {
     if(res.errors) {
         return Promise.reject(res.errors);
-    }
+    } 
 
     const themes = res.data.themes.edges
     const plugins = res.data.plugins.edges

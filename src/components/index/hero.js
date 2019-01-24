@@ -1,7 +1,7 @@
 import React from 'react'
-import style from '../styles/hero.module.scss'
-import preview from '../images/discord-comparison.png'
-import '../styles/hero.css'
+import style from 'src/styles/hero.module.scss'
+import preview from 'src/images/discord-comparison.png'
+import 'src/styles/hero.css'
 import { Link } from 'gatsby'
 
 const Hero = ({ siteTitle }) => (

@@ -4,9 +4,9 @@ import Helmet from 'react-helmet'
 
 import style from '../styles/index.module.scss'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
-import Features from '../components/features'
-import Reasons from '../components/reasons'
+import Hero from '../components/index/hero'
+import Features from '../components/index/features'
+import Reasons from '../components/index/reasons'
 
 const ServerPage = () => (
   <Layout>
