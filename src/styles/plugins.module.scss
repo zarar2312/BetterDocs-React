@@ -262,7 +262,7 @@
                         flex-wrap: wrap;
                         .tag {
                             font-size: 0.5rem;
-                            color: rgba(0, 0, 0, 0.4);
+                            color: rgba(0, 0, 0, 0.4) !important;
                             display: inline-block;
                             transition: color 250ms, text-shadow 250ms;
                             text-decoration: none;
@@ -272,16 +272,7 @@
                             line-height: 0.8rem;
 
                             &:after {
-                            position: absolute;
-                            z-index: -1;
-                            bottom: -1px;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            content: '';
-                            width: 100%;
-                            height: 0;
-                            background-color: $siteColor;
-                            transition: all 250ms;
+                            height: 0 !important;
                             }
 
                             &:hover {
@@ -289,7 +280,7 @@
                                 opacity: 1;
                                 background-color: transparent;
                                 &::after {
-                                    height: 110%;
+                                    height: 110% !important;
                                     width: 110%;
                                 }
                             }
@@ -440,6 +431,15 @@ html[class*="dark"], html[id*="dark"] {
                                 color: #b9bbbe;
                                 font-size: 0.6rem;
                                 margin: unset;
+                            }
+                        }
+                        .tagsContainer {
+                            .tag {
+                                color: rgba(255, 255, 255, 0.4) !important;
+                                &:hover {
+                                    color: #fff !important;
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
