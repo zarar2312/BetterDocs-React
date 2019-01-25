@@ -238,7 +238,13 @@
                 }
                 &[alt="BandagedBD"] {
                     &::before {
-                        content: "BBD"
+                        background-image: url("https://i.imgur.com/u4TrqXF.png");
+                        height: 0.53rem;
+                        width: 0.53rem;
+                        background-size: 100%;
+                        background-position: center;
+                        -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.4) -1px 1px 1px);
+                        filter: drop-shadow(rgba(0, 0, 0, 0.4) -1px 1px 1px);
                     }
                 }
                 &[alt="DiscordInjections"] {
