@@ -7,6 +7,7 @@ import MissingSecond from 'src/images/missing_image.png'
 import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
 import 'src/styles/tooltips.css'
+import Loading from 'src/images/Loading.gif'
 
 const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, softwares}) => (
     <div className={style.pluginCard} title={title}>
@@ -18,7 +19,7 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, soft
         {thumbnail ?
             <Link to={"plugins/" + slug}  className={style.imgContainer}>
                 <LazyLoad once={true} height="100%" placeholder={
-                    <img className={style.img} alt={title} src={MissingSecond} style={{backgroundImage :  `url(${Missing})` }}/>
+                    <img className={style.img} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>
                     }>
                     <img src={thumbnail} alt={title + "'s thumbnail"} title={title + "'s thumbnail"} />
                 </LazyLoad>

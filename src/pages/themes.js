@@ -13,6 +13,7 @@ import Headroom from 'react-headroom';
 import '../styles/theme.css'
 import '../styles/tooltips.css'
 import Card from '../components/themes/card'
+import Loading from 'src/images/Loading.gif'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -68,7 +69,7 @@ const Themes = (props) => {
           <div className={featured.imgWrapper}>
             {node.frontmatter.thumbnail ?
             <LazyLoad once={true} height="100%"
-              placeholder={<img className={theme.img} alt={node.frontmatter.title} title="Missing Thumbnail" src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
+              placeholder={<img className={theme.img} alt={node.frontmatter.title} title="Loading Thumbnail" src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
             <img className={theme.img} alt={node.frontmatter.title + " Preview by " + node.frontmatter.author} src={node.frontmatter.thumbnail}/>
             </LazyLoad>
             :

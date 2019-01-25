@@ -5,6 +5,7 @@ import style from '../styles/author-page.module.scss'
 import { graphql, Link } from "gatsby"
 import Helmet from 'react-helmet'
 //import Missing from '../images/mobile.png'
+//import Loading from 'src/images/Loading.gif'
 
 const Author = ({ pageContext, data }) => {
   const { authors } = pageContext

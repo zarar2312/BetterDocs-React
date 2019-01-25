@@ -5,6 +5,7 @@ import Missing from "src/images/missing_image_2.png"
 import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
 import Stars from "src/images/stars.svg"
+import Loading from 'src/images/Loading.gif'
 
 const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featured, demo, mode}) => (
     <div 
@@ -13,7 +14,7 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
         <Link to={"themes" + slug} className={style.imgContainer} alt={featured && "featured"}
         >
         <LazyLoad once={true} height="100%"
-            placeholder={<img className={style.img} alt={title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>}>
+            placeholder={<img className={style.img} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
         <img className={style.img} alt={title} src={thumbnail}/>
         </LazyLoad>
         
