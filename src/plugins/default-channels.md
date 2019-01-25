@@ -6,6 +6,7 @@ download: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Defaul
 github_profile_url: 'https://github.com/planetarian/'
 github_souce_url: https://github.com/planetarian/BetterDiscordPlugins/blob/master/DefaultChannels.plugin.js
 support: 'https://github.com/planetarian/BetterDiscordPlugins/issues'
+thumbnail: https://i.imgur.com/nRwIaU7.gif
 software: [BandagedBD, BetterDiscord]
 status: Updated
 images:
