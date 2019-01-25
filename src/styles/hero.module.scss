@@ -40,7 +40,6 @@
         margin: 0 auto;
         position: relative;
         animation-name: slide;
-        -webkit-animation-name: slide;
         animation-duration: 1s;
         -webkit-animation-duration: 1s;
         visibility: visible;
@@ -292,6 +291,12 @@
             flex-basis: 12rem;
             margin-left: 14px;
             margin-bottom: 20px;
+            opacity: 0;
+            transition-duration: 800ms;
+            //transform: translateY(0em);
+            animation-name: slideDown;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
             @media (min-width: 850px) {
                 margin-left: 14px;
                 margin-bottom: unset;
@@ -453,5 +458,16 @@
     100% {
       opacity: 1;
       transform: translateX(0%);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+        transform: translateY(-0.5em);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0em);
+        opacity: 1;
     }
   }
