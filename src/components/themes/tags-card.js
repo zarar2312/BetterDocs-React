@@ -27,7 +27,6 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
             </Link>
         }
         <div className={style.options}>
-            <div className={style.optionsWrapper}>
             <a 
             className={style.btn}
             href={thumbnail}
@@ -39,7 +38,6 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
             className={style.btn}
             target="blank">Quick Demo</div>
             }
-            </div>
         </div>
         </Link>
         :
