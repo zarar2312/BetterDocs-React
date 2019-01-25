@@ -47,10 +47,12 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
         </div>
         }
         <div>
-            <Link 
-            className={style.author}
-            to={"/profile/" + author}
-            >{author} /</Link>
+            {author &&
+                <Link 
+                className={style.author}
+                to={"/profile/" + author}
+                >{author} /</Link>
+            }
         </div>
         <div className={style.title}
         >

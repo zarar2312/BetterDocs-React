@@ -198,10 +198,21 @@ return graphql(`{
     // Eliminate duplicate tags
     authors = _.uniq(authors)
 
-    // Make tag pages
+    // Make profile pages
     authors.forEach(authors => {
       createPage({
         path: `/profile/${authors}/`,
+        component: authorTemplate,
+        context: {
+          authors,
+        },
+      })
+    })
+
+    // Make profile pages
+    authors.forEach(authors => {
+      createPage({
+        path: `/profile/${authors.toString().toLowerCase()}/`,
         component: authorTemplate,
         context: {
           authors,

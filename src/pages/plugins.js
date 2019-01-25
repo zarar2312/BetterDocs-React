@@ -8,7 +8,7 @@ import { graphql, Link } from 'gatsby'
 import '../styles/tooltips.css'
 import SoftwareBar from '../components/plugins/software-bar'
 import Card from '../components/plugins/card'
-import Folder from '../images/Folder.png'
+//import Folder from '../images/Folder.png'
 
 const Plugins = (props) => {
   const pluginList = props.data.all;
