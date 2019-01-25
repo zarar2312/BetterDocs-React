@@ -291,7 +291,11 @@
         .featuredCard {
             flex-basis: 12rem;
             margin-left: 14px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            @media (min-width: 850px) {
+                margin-left: 14px;
+                margin-bottom: unset;
+            }
             .imgContainer {
                 height: 7rem;
                 background-image: url("https://i.imgur.com/ubQusr5.png");
