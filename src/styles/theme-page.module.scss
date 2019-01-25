@@ -310,6 +310,18 @@ html[class*="dark"], html[id*="dark"] {
         .contentWrapper {
             .content {
                 color: #cfcfcf;
+                pre {
+                    padding: 1rem;
+                    line-height: 0.8rem;
+                    background-color: rgba(#000, 0.2);
+                    code {
+                        line-height: 0.8rem;
+                        background-color: transparent;
+                    }
+                }
+                code {
+                    background-color: rgba(#000, 0.2);
+                }
                 a {
                     color: #fff !important;
                 }
