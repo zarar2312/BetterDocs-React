@@ -1,10 +1,10 @@
 ---
-title: Discord Dark Anime
+title: Discord Dark Koi
 author: Venipa
 description: A dark theme with a transparent background featuring a hot anime girl
-download: https://github.com/Venipa/discord-dark-anime/tree/0.1.1-pre
+download: https://github.com/Venipa/discord-dark-anime/blob/master/releases/import/discord-dark-anime.theme.css
 github_profile_url: https://github.com/Venipa/
-github_source_url: https://github.com/Venipa/discord-dark-anime/tree/0.1.1-pre
+github_source_url: https://github.com/Venipa/discord-dark-anime/
 support: https://github.com/Venipa/discord-dark-anime/issues
 discord_server:
 demo:
