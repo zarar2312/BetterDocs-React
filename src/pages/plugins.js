@@ -8,6 +8,7 @@ import { graphql, Link } from 'gatsby'
 import '../styles/tooltips.css'
 import SoftwareBar from '../components/plugins/software-bar'
 import Card from '../components/plugins/card'
+import Folder from '../images/Folder.png'
 
 const Plugins = (props) => {
   const pluginList = props.data.all;
@@ -134,6 +135,15 @@ const Plugins = (props) => {
               </Link>
             </div>
             <div className={hero.descriptionContainer}>Displays activity notifications based on the voice channel you're in.</div>
+          </div>
+          <div className={hero.featuredCard} >
+            <div className={hero.imgContainer}>
+              <Link to="/plugins/server-folders/" className={hero.svgContainer}>
+                <div className={hero.img}></div>
+                <div className={hero.title}>Server Folders</div>
+              </Link>
+            </div>
+            <div className={hero.descriptionContainer}>Organize your Discord servers into categorized folders for simple navigation!</div>
           </div>
           <div className={hero.featuredCard} >
             <div className={hero.imgContainer}>

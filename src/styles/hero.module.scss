@@ -294,7 +294,7 @@
             margin-bottom: 10px;
             .imgContainer {
                 height: 7rem;
-                background-image: url("https://i.imgur.com/rWgKhaC.png");
+                background-image: url("https://i.imgur.com/ubQusr5.png");
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -303,6 +303,9 @@
                 &:hover {
                     .svgContainer {
                         svg {
+                            transform: translateY(-5px);
+                        }
+                        .img {
                             transform: translateY(-5px);
                         }
                     }
@@ -324,10 +327,25 @@
                         transition: all ease-in-out 250ms;
                     }
                     .title {
-                        color: #fff;
+                        color: #000;
                         font-weight: bold;
                         margin-top: 9px;
                         font-size: 0.8rem;
+                    }
+                    .img {
+                        display: block;
+                        margin: 0 auto;
+                        border-radius: 50%;
+                        transition: all ease-in-out 250ms;
+                        height: 3rem;
+                        width: 3rem;
+                        background-size: cover;
+                        background-position: center;
+                        background-color: #e6e6e6;
+                        background-size: 110%;
+                        border: 3px solid #e6e6e6;
+                        padding: 3px;
+                        background-image: url("src/images/Folder.png");
                     }
                 }
             }
@@ -340,6 +358,9 @@
                 .imgContainer {
                     .svgContainer {
                         background-image: url("https://i.imgur.com/BtC4dMB.png");
+                        .title {
+                            color: #fff;
+                        }
                     }
                 }
             }
@@ -349,6 +370,16 @@
                         background-image: url("https://i.imgur.com/r0WLnjv.png");
                         .title {
                             color: #000;
+                        }
+                    }
+                }
+            }
+            &:nth-child(4) {
+                .imgContainer {
+                    .svgContainer {
+                        background-image: url("https://i.imgur.com/rWgKhaC.png");
+                        .title {
+                            color: #fff;
                         }
                     }
                 }
