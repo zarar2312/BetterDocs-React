@@ -287,6 +287,9 @@
         z-index: 1;
         padding: 40px 0px;
         flex-wrap: wrap;
+        @media (min-width: 850px) {
+            padding-bottom: 20px;
+        }
         .featuredCard {
             flex-basis: 12rem;
             margin-left: 14px;
@@ -299,7 +302,6 @@
             animation-fill-mode: forwards;
             @media (min-width: 850px) {
                 margin-left: 14px;
-                margin-bottom: unset;
             }
             .imgContainer {
                 height: 7rem;
