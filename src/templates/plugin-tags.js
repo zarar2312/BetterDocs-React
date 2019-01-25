@@ -51,6 +51,7 @@ const Tagss = ({ pageContext, data }) => {
             tags={node.frontmatter.tags}
             author={node.frontmatter.author}
             excerpt={node.excerpt}
+            softwares={node.frontmatter.software}
             key={node.id}/>
           ))}
           </div>
@@ -113,6 +114,7 @@ export const pageQuery = graphql`
             author
             github_profile_url
             download
+            software
             status
             support
             layout

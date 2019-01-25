@@ -56,6 +56,7 @@ const Software = ({ pageContext, data }) => {
             tags={node.frontmatter.tags}
             author={node.frontmatter.author}
             excerpt={node.excerpt}
+            softwares={node.frontmatter.software}
             key={node.id}/>
           ))}
           </div>
@@ -123,6 +124,7 @@ export const pluginSoftware = graphql`
             download
             support
             layout
+            software
             status
             description
             date
@@ -154,6 +156,7 @@ export const pluginSoftware = graphql`
             download
             support
             layout
+            software
             description
             date
             tags

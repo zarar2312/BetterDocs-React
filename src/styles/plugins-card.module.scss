@@ -187,20 +187,91 @@
         padding: 0 15px;
         padding-top: 7px;
         display: flex;
-        .author {
-            color: #000;
-            font-size: 0.45rem;
-            line-height: unset !important;
-            &::after {
-                height: 0 !important;
-            }
-            &:hover {
-                color: #fff !important;
-                opacity: 1;
-                background-color: transparent;
+        .authorWrapper {
+            flex: 3;
+            display: flex;
+            .author {
+                color: #000;
+                font-size: 0.45rem;
+                line-height: unset !important;
                 &::after {
-                    height: 110% !important;
-                    width: 110%;
+                    height: 0 !important;
+                }
+                &:hover {
+                    color: #fff !important;
+                    opacity: 1;
+                    background-color: transparent;
+                    &::after {
+                        height: 110% !important;
+                        width: 110%;
+                    }
+                }
+            }
+        }
+        .softwaresWrapper {
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+            align-self: center;
+            .softwareIcon {
+                line-height: 1 !important;
+                align-self: center;
+                opacity: 0.5;
+                &::after {
+                    height: 0 !important;
+                }
+                &:hover {
+                    opacity: 1;
+                    &::before {
+                        color: #000 !important;
+                    }
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    //height: 0.6rem;
+                    //width: 0.6rem;
+                    //background-color: #000;
+                    font-size: 0.4rem;
+                    color: #000 !important;
+                }
+                &[alt="BandagedBD"] {
+                    &::before {
+                        content: "BBD"
+                    }
+                }
+                &[alt="DiscordInjections"] {
+                    &::before {
+                        content: "DI"
+                    }
+                }
+                &[alt="EnhancedDiscord"] {
+                    &::before {
+                        background-image: url("https://i.imgur.com/0n7cFQq.png");
+                        height: 0.6rem;
+                        width: 0.7rem;
+                        background-size: 140%;
+                        background-position: center;
+                    }
+                }
+                &[alt="BetterDiscord"] {
+                    &::before {
+                        background-image: url("src/images/betterdiscord.png");
+                        height: 0.5rem;
+                        width: 0.5rem;
+                        background-size: 100%;
+                        background-position: center;
+                    }
+                }
+                &[alt="PowerCord"] {
+                    &::before {
+                        //content: "PC";
+                        background-image: url("https://i.imgur.com/N77LRlL.png");
+                        height: 0.5rem;
+                        width: 0.5rem;
+                        background-size: 100%;
+                        background-position: center;
+                    }
                 }
             }
         }
@@ -299,18 +370,48 @@ html[class*="dark"], html[id*="dark"] {
             }
         }
         .authorDetails {
-            .author {
-                color: rgba(255, 255, 255, 0.4) !important;
-                &::after {
-                    height: 0 !important;
-                }
-                &:hover {
-                    color: #fff !important;
-                    opacity: 1;
-                    background-color: transparent;
+            .authorWrapper {
+                .author {
+                    color: rgba(255, 255, 255, 0.4) !important;
                     &::after {
-                        height: 110% !important;
-                        width: 110%;
+                        height: 0 !important;
+                    }
+                    &:hover {
+                        color: #fff !important;
+                        opacity: 1;
+                        background-color: transparent;
+                        &::after {
+                            height: 110% !important;
+                            width: 110%;
+                        }
+                    }
+                }
+            }
+            .softwaresWrapper {
+                .softwareIcon {
+                    &:hover {
+                        opacity: 1;
+                        &::before {
+                            color: #fff !important;
+                        }
+                    }
+                    &::before {
+                        color: #fff !important;
+                    }
+                    &[alt="BandagedBD"] {
+                        &::before {
+                            content: "BBD"
+                        }
+                    }
+                    &[alt="BetterDiscord"] {
+                        &::before {
+                            background-image: url("src/images/betterdiscord-white.png");
+                        }
+                    }
+                    &[alt="PowerCord"] {
+                        &::before {
+                            
+                        }
                     }
                 }
             }

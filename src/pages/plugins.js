@@ -190,6 +190,7 @@ const Plugins = (props) => {
           tags={node.frontmatter.tags}
           author={node.frontmatter.author}
           excerpt={node.excerpt}
+          softwares={node.frontmatter.software}
           key={node.id}/>
         ))}
         </div>
@@ -234,6 +235,7 @@ export const allPluginsQuery = graphql`
             download
             support
             layout
+            software
             status
             description
             date
@@ -261,6 +263,7 @@ export const allPluginsQuery = graphql`
             sub
             author
             thumbnail
+            software
             github_profile_url
             download
             support

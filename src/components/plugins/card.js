@@ -5,8 +5,9 @@ import Missing from "src/images/missing_image_2.png"
 import Mobile from "src/images/mobile_missing.png"
 import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
+import 'src/styles/tooltips.css'
 
-const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author}) => (
+const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, softwares}) => (
     <div className={style.pluginCard} title={title}>
         {status ?
             <div className={style.topStatus} title={"Status of " + title + ": " + status}>{status}</div>
@@ -31,7 +32,18 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author}) => 
         </div>
         {author &&
             <div className={style.authorDetails}>
-                <Link title={"Made by " + author} to={"/profile/" + author} className={style.author}>{author + " /"}</Link>
+                <div className={style.authorWrapper}>
+                    <Link title={"Made by " + author} to={"/profile/" + author} className={style.author}>{author + " /"}</Link>
+                </div>
+                {softwares &&
+                <div className={style.softwaresWrapper}>
+                    {softwares.map(softwaree => (
+                        <Link title={"This plugin supports " + softwaree} to={`/plugins/softwares/${kebabCase(softwaree)}/`} alt={softwaree} key={softwaree} className={style.softwareIcon}>
+                            
+                        </Link>
+                    ))}
+                </div>
+                }
             </div>
         }
         <div className={style.description}>
