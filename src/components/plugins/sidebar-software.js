@@ -12,14 +12,7 @@ const sidebarSoftware = () => (
             fieldValue
             totalCount
         }
-          edges {
-            node {
-              frontmatter {
-                title
-                software
-              }
-            }
-          }
+          ...pluginFragment
         }
       }      
   `}

@@ -9,6 +9,7 @@ import '../styles/tooltips.css'
 import SoftwareBar from '../components/plugins/software-bar'
 import Card from '../components/plugins/card'
 //import Folder from '../images/Folder.png'
+//import '../components/queries'
 
 const Plugins = (props) => {
   const pluginList = props.data.all;
@@ -230,63 +231,14 @@ export const allPluginsQuery = graphql`
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-          excerpt(pruneLength: 65)
-          html
-          id
-          frontmatter {
-            title
-            sub
-            author
-            thumbnail
-            github_profile_url
-            download
-            support
-            layout
-            software
-            status
-            description
-            date
-            tags
-          }
-          fields {
-            slug
-          }
-        }
-      }
+      ...pluginExcerptLimit
     },
     featured:allMarkdownRemark(filter: { collection: { eq: "plugins" } frontmatter: { featured: { eq: true } } }) {
       group(field: collection) {
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-          excerpt(pruneLength: 65)
-          html
-          id
-          frontmatter {
-            title
-            sub
-            author
-            thumbnail
-            software
-            github_profile_url
-            download
-            support
-            layout
-            description
-            date
-            tags
-          }
-          fields {
-            slug
-          }
-        }
-      }
+      ...pluginExcerptLimit
     }
   }
 `

@@ -13,27 +13,7 @@ const Sidebar = () => (
           fieldValue
           totalCount
         }
-        totalCount
-        edges {
-          node {
-              excerpt
-              html
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                  title
-                  author
-                  github_profile_url
-                  download
-                  support
-                  status
-                  layout
-                  tags
-                  }
-              }
-          }
+        ...pluginFragment
       }
   }
   `}

@@ -316,37 +316,7 @@ export const themesQuery = graphql`
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-          excerpt
-          html
-          id
-          frontmatter {
-            title
-            sub
-            author
-            description
-            github_profile_url
-            github_source_url
-            gitlab_source_url
-            download
-            support
-            thumbnail
-            auto
-            previews
-            tags
-            discord_server
-            demo
-            style
-            status
-            date(formatString: "DD/MM/YYYY")
-          }
-          fields {
-            slug
-          }
-        }
-      }
+      ...themeDateFormatFragment
     },
     previewsList:allMarkdownRemark(
       filter: { 
@@ -364,45 +334,10 @@ export const themesQuery = graphql`
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-          excerpt
-          html
-          id
-          frontmatter {
-            previews
-            thumbnail
-            title
-            date
-          }
-          fields {
-            slug
-          }
-        }
-      }
+      ...themeFragment
     },
     currentThemes:markdownRemark(collection: { eq: "themes" }) {
-    excerpt
-    html
-    id
-    frontmatter {
-      title
-      author
-      github_profile_url
-      gitlab_source_url
-      download
-      sub
-      support
-      previews
-      tags
-      layout
-      ghcommentid
-      date(formatString: "DD/MM/YYYY")
-    }
-    fields {
-      slug
-    }
+    ...themeDateSingleFragment
   }
 }
 `

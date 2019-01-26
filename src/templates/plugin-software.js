@@ -109,63 +109,14 @@ export const pluginSoftware = graphql`
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-          excerpt(pruneLength: 65)
-          html
-          id
-          frontmatter {
-            title
-            sub
-            author
-            thumbnail
-            github_profile_url
-            download
-            support
-            layout
-            software
-            status
-            description
-            date
-            tags
-          }
-          fields {
-            slug
-          }
-        }
-      }
+      ...pluginExcerptLimit
     },
     featured:allMarkdownRemark(filter: { collection: { eq: "plugins" } frontmatter: { featured: { eq: true } } }) {
       group(field: collection) {
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-          excerpt(pruneLength: 65)
-          html
-          id
-          frontmatter {
-            title
-            sub
-            author
-            thumbnail
-            github_profile_url
-            download
-            support
-            layout
-            software
-            description
-            date
-            tags
-          }
-          fields {
-            slug
-          }
-        }
-      }
+      ...pluginExcerptLimit
     }
-  }
+  }  
 `

@@ -16,27 +16,7 @@ const Sidebar = () => (
           fieldValue
           totalCount
         }
-        totalCount
-        edges {
-          node {
-              excerpt(pruneLength: 70)
-              html
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                  title
-                  author
-                  github_profile_url
-                  download
-                  thumbnail
-                  support
-                  featured
-                  layout
-                  }
-              }
-          }
+        ...themeFragment
       }
   }
   `}

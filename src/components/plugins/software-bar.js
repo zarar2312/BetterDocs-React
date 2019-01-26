@@ -12,14 +12,7 @@ const pluginSoftware = ({ siteTitle }) => (
             fieldValue
             totalCount
         }
-          edges {
-            node {
-              frontmatter {
-                title
-                software
-              }
-            }
-          }
+          ...pluginFragment
         }
       }      
   `}

@@ -100,28 +100,7 @@ export default Tagss
 export const pageQuery = graphql`
   query($tag: String) {
     allMarkdownRemark( filter: { frontmatter: { tags: { in: [$tag] } } collection: { eq: "plugins" } } sort: { fields: [frontmatter___title], order: ASC} ) {
-      totalCount
-      edges {
-        node {
-          excerpt
-          html
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            author
-            github_profile_url
-            download
-            software
-            status
-            support
-            layout
-            tags
-          }
-        }
-      }
+      ...pluginFragment
     }
   }
 `

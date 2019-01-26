@@ -97,65 +97,14 @@ query allFeaturedThemesQuery {
       fieldValue
       totalCount
     }
-    totalCount
-    edges {
-      node {
-        excerpt
-        html
-        id
-        frontmatter {
-          title
-          sub
-          author
-          thumbnail
-          github_profile_url
-          download
-          support
-          style
-          demo
-          layout
-          description
-          date
-          featured
-          tags
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  }
+    ...themeFragment
+  },
   featured: allMarkdownRemark(filter: {collection: {eq: "themes"} frontmatter: { featured: { eq: true } } } sort: { fields: [frontmatter___title], order: ASC} ) {
     group(field: collection) {
       fieldValue
       totalCount
     }
-    totalCount
-    edges {
-      node {
-        excerpt
-        html
-        id
-        frontmatter {
-          title
-          sub
-          author
-          thumbnail
-          demo
-          github_profile_url
-          download
-          support
-          layout
-          description
-          date
-          featured
-          tags
-        }
-        fields {
-          slug
-        }
-      }
-    }
+    ...themeFragment
   }
 }
 `

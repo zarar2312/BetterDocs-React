@@ -205,46 +205,16 @@ export default Author
 export const authorQuery = graphql`
   query($authors: String) {
     all:allMarkdownRemark( filter: { frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
-      ...fields
+      ...themeFragment
     },
     limit:allMarkdownRemark( filter: { frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC} limit: 1) {
-      ...fields
+      ...themeFragment
     },
     themes:allMarkdownRemark( filter: { collection: { eq: "themes" } frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
-      ...fields
+      ...themeFragment
     },
     plugins:allMarkdownRemark( filter: { collection: { eq: "plugins" } frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
-      ...fields
+      ...pluginFragment
     },
-  }
-
-  fragment fields on MarkdownRemarkConnection {
-    totalCount
-    edges {
-      node {
-        excerpt
-        html
-        id
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          author
-          github_profile_url
-          gitlab_profile_url
-          npm_profile_url
-          thumbnail
-          description
-          download
-          support
-          layout
-          status
-          demo
-          discord_server
-          tags
-        }
-      }
-    }
   }
 `

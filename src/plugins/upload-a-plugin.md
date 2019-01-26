@@ -27,6 +27,7 @@ I promise it doesn't take long :)
   discord_server: https://discord.gg/INVITE
   tags: []
   software: [BandagedBD,EnhancedDiscord,DiscordInjections,BetterDiscord]
+  thumbnail:
   previews: [Direct link to image, Direct link to image]
   dependency: [URL, URL]
   status:
@@ -52,6 +53,7 @@ Here's is some helpful information to inform you what each field does.
   - **discord_server** - A Discord server invite to allow people to get support or give feedback for the theme. `[OPTIONAL]`
   - **tags** - Tags are in an array and can be seperated with commas "," like so `[tag1,tag2]`. `[OPTIONAL]`
   - **software** - The list of softwares your plugin supports. They are sorted in an array and seperated by commas "," like so `[BandagedBD,BeautifulDiscord,DiscordInjections,EnhancedDiscord,BetterDiscord]`. `[REQUIRED]`
+  - **thumbnail** - A direct link to an image that will be the thumbnail and shown on the [plugins page](https://betterdocs.us/plugins/). (16:9) `[REQUIRED]`
   - **previews** - A list of images that show a preview of your plugn. [Imgur](https://imgur.com) is highly recommended for compressed images and reliability. Multiple images can be added and seperated by commas ',' `[OPTIONAL]`
   - **dependency** - Direct link(s) to the required dependencies for the plugin to function properly.
   - **status** - Values: `Updated/Oudated`. The current status of your plugin.

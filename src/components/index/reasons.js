@@ -10,32 +10,10 @@ const Reasons = () => (
     query reasonsQuery {
         allMarkdownRemark(filter: { collection: { eq: "plugins" } } limit: 3) {
             group(field: collection) {
-            fieldValue
-            totalCount
+                fieldValue
+                totalCount
             }
-        totalCount
-          edges {
-            node {
-              excerpt
-              html
-              id
-              frontmatter {
-                title
-                sub
-                author
-                thumbnail
-                github_profile_url
-                download
-                support
-                layout
-                description
-                date
-              }
-              fields {
-                slug
-              }
-            }
-          }
+            ...pluginFragment
         }
       }
   `}

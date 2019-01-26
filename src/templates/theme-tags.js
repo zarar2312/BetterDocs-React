@@ -111,29 +111,7 @@ export default Tagss
 export const pageQuery = graphql`
   query($tag: String) {
     list: allMarkdownRemark( filter: { frontmatter: { tags: { in: [$tag] } } collection: { eq: "themes" } } sort: { fields: [frontmatter___title], order: ASC} ) {
-      totalCount
-      edges {
-        node {
-          excerpt
-          html
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            author
-            style
-            demo
-            download
-            support
-            thumbnail
-            featured
-            layout
-            tags
-          }
-        }
-      }
+      ...themeFragment
     }
   }
 `

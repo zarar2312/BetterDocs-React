@@ -327,40 +327,7 @@ export const pluginsQuery = graphql`
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-            excerpt
-            html
-            id
-            frontmatter {
-                title
-                description
-                author
-                github_profile_url
-                github_source_url
-                gitlab_profile_url
-                gitlab_source_url
-                npm_source_url
-                npm_profile_url
-                npm_i
-                download
-                thumbnail
-                dependency
-                discord_server
-                support
-                status
-                auto
-                software
-                tags
-                ghcommentid
-                date(formatString: "DD/MM/YYYY")
-                }
-            fields {
-                slug
-              }
-            }
-        }
+      ...pluginFragment
     },
     previewsList:allMarkdownRemark(
       filter: { 
@@ -378,23 +345,7 @@ export const pluginsQuery = graphql`
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-          excerpt
-          html
-          id
-          frontmatter {
-            previews
-            thumbnail
-            title
-            date
-          }
-          fields {
-            slug
-          }
-        }
-      }
+      ...pluginFragment
     },
     softwareList:allMarkdownRemark(
       filter: {
@@ -411,17 +362,7 @@ export const pluginsQuery = graphql`
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-            excerpt
-            html
-            id
-            frontmatter {
-              software
-            }
-          }
-        }
+      ...pluginFragment
     },
     dependencyList:allMarkdownRemark(
       filter: {
@@ -438,17 +379,7 @@ export const pluginsQuery = graphql`
         fieldValue
         totalCount
       }
-      totalCount
-      edges {
-        node {
-            excerpt
-            html
-            id
-            frontmatter {
-              dependency
-            }
-          }
-        }
+      ...pluginFragment
     }
   }
 `

@@ -32,72 +32,14 @@ class Features extends React.Component {
             fieldValue
             totalCount
           }
-          totalCount
-          edges {
-            node {
-              excerpt
-              html
-              id
-              frontmatter {
-                featured
-                title
-                sub
-                author
-                thumbnail
-                github_profile_url
-                download
-                support
-                layout
-                description
-                date
-              }
-              fields {
-                slug
-              }
-            }
-          }
+          ...themeFragment
         },
-        second:allMarkdownRemark(
-            filter: {
-              collection: {
-                eq: "themes"
-              } 
-              frontmatter: {
-                featured: {
-                  eq: true
-                }
-              }
-            }, 
-            limit: 5
-            skip: 5) {
+        second:allMarkdownRemark(filter: { collection: { eq: "themes" } frontmatter: { featured: { eq: true } } }, limit: 5 skip: 5) {
             group(field: collection) {
               fieldValue
               totalCount
             }
-            totalCount
-            edges {
-              node {
-                excerpt
-                html
-                id
-                frontmatter {
-                  featured
-                  title
-                  sub
-                  author
-                  thumbnail
-                  github_profile_url
-                  download
-                  support
-                  layout
-                  description
-                  date
-                }
-                fields {
-                  slug
-                }
-              }
-            }
+            ...themeFragment
           }
       }    
   `}//<div className={style.header}>Why it is Special</div>

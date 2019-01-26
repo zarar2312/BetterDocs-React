@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import style from 'src/styles/plugins-card.module.scss'
 import Missing from "src/images/missing_image_2.png"
 import Mobile from "src/images/mobile_missing.png"
-import MissingSecond from 'src/images/missing_image.png'
+//import MissingSecond from 'src/images/missing_image.png'
 import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
 import 'src/styles/tooltips.css'
