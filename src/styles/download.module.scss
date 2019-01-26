@@ -247,7 +247,7 @@
                             background-color: $siteColor;
                         }
                     }
-                    &[alt="null"] {
+                    &[disabled] {
                         color: rgba(#000,0.3);
                     }
                     &:last-child {
@@ -301,7 +301,7 @@
             .body {
                 .features {
                     .feature {
-                        &[alt*="null"] {
+                        &[disabled] {
                             color: rgba( #b6b6b6, 0.4);
                         }
                     }

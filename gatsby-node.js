@@ -28,20 +28,10 @@ return graphql(`{
               slug
             }
             frontmatter {
-              title
-              sub
-              description
               author
-              github_profile_url
-              download
-              status
-              support
-              discord_server
-              layout
-              ghcommentid
-              date
               tags
               software
+              featured
             }
           }
         }
@@ -61,22 +51,10 @@ return graphql(`{
               slug
             }
             frontmatter {
-              title
-              sub
-              description
               author
-              thumbnail
-              github_profile_url
-              status
-              download
-              discord_server
-              support
-              layout
-              ghcommentid
-              date
               tags
-              featured
               software
+              featured
             }
           }
         }
@@ -91,19 +69,7 @@ return graphql(`{
               slug
             }
             frontmatter {
-              title
-              sub
-              description
               author
-              thumbnail
-              github_profile_url
-              download
-              support
-              layout
-              ghcommentid
-              date
-              tags
-              software
             }
           }
         }
