@@ -146,6 +146,7 @@ class Features extends React.Component {
                 thumbnail
                 previews
                 dependency
+                software
                 status
                 auto
                 featured
@@ -180,6 +181,7 @@ class Features extends React.Component {
                 npm_profile_url
                 npm_source_url
                 support
+                software
                 discord_server
                 thumbnail
                 previews
