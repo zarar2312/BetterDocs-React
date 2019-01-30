@@ -11,7 +11,8 @@ const DownloadPage = () => (
     <div className={style.wrapper}
     >
       <Card
-      title="BandagedBD">
+      title="BandagedBD"
+      download="https://github.com/rauenzi/BetterDiscordApp/releases">
         <Feature
         name="Themes"
         disabled="false"
@@ -57,7 +58,8 @@ const DownloadPage = () => (
       </Card>
 
       <Card
-      title="EnhancedDiscord">
+      title="EnhancedDiscord"
+      download="https://enhanceddiscord.com/">
         <Feature
         name="Themes"
         disabled="false"
@@ -103,7 +105,8 @@ const DownloadPage = () => (
       </Card>
 
       <Card
-      title="PowerCord">
+      title="PowerCord"
+      download="https://powercord.xyz">
         <Feature
         name="Themes"
         disabled="false"
@@ -149,7 +152,8 @@ const DownloadPage = () => (
       </Card>
       <Card
 
-      title="DiscordInjections">
+      title="DiscordInjections"
+      download="https://github.com/DiscordInjections/DiscordInjections">
         <Feature
         name="Themes"
         disabled="false"
@@ -195,7 +199,8 @@ const DownloadPage = () => (
       </Card>
 
       <Card
-      title="BeautifulDiscord">
+      title="BeautifulDiscord"
+      download="https://github.com/leovoel/BeautifulDiscord">
         <Feature
         name="Themes"
         disabled="false"
@@ -241,7 +246,8 @@ const DownloadPage = () => (
       </Card>
 
       <Card
-      title="BetterDiscord">
+      title="BetterDiscord"
+      download="https://github.com/jiiks/BetterDiscordApp/releases">
         <Feature
         name="Themes"
         disabled="false"
