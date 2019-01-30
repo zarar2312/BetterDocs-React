@@ -92,13 +92,6 @@ module.exports = {
         path: `${__dirname}/src/plugins/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
     //{
     //  resolve: `gatsby-source-filesystem`,
     //  options: {
@@ -155,6 +148,12 @@ module.exports = {
         sourceMap: true,
         outFile: `./src/styles/main.css`,
         includePaths: [`src/styles`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
       },
     },
     {
