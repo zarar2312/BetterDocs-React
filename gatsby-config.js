@@ -71,13 +71,13 @@ module.exports = {
         // Any additional create only fields (optional)
       },
     },
-    {
+    /*{
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `media`,
         path: `${__dirname}/static/media`,
       },
-    },
+    },*/
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -91,14 +91,21 @@ module.exports = {
         name: `plugins`,
         path: `${__dirname}/src/plugins/`,
       },
+    },/*
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
     },
-    //{
-    //  resolve: `gatsby-source-filesystem`,
-    //  options: {
-    //    name: `profiles`,
-    //    path: `${__dirname}/src/profiles/`,
-    //  },
-    //},
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `profiles`,
+        path: `${__dirname}/src/profiles/`,
+      },
+    },*/
     {
       resolve: `gatsby-transformer-remark`,
       options: {
