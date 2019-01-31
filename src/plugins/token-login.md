@@ -9,7 +9,7 @@ support: https://github.com/Cr3atable/EDPlugins/issues
 discord_server:
 tags: 
 software: [EnhancedDiscord]
-thumbnail:
+thumbnail: https://i.imgur.com/O0pRT6O.png
 previews:
 dependency:
 status: Updated
