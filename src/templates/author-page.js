@@ -138,6 +138,7 @@ const Author = ({ pageContext, data }) => {
                 <Link 
                 to={"/themes" + node.fields.slug}
                 className={style.themeCard} 
+                title={node.frontmatter.status ? "This theme is currently " + node.frontmatter.status : "This theme might or might not work" }
                 >
                   <div className={style.imgContainer}>
                     <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + " preview by " + node.frontmatter.author} />
@@ -156,6 +157,7 @@ const Author = ({ pageContext, data }) => {
                 <Link 
                 to={"/plugins" + node.fields.slug}
                 className={style.pluginCard}
+                title={node.frontmatter.status ? "This plugin is currently " + node.frontmatter.status : "This plugin might or might not work" }
                 alt={node.frontmatter.status ?
                   `${node.frontmatter.status}`
                 :
