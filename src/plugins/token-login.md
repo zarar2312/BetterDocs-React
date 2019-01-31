@@ -1,0 +1,20 @@
+---
+title: Token Login
+author: Cr3atable
+description: Adds an option for logging in with a token.
+download: https://github.com/Cr3atable/EDPlugins/blob/master/token_login.js
+github_profile_url: https://github.com/Cr3atable/
+github_source_url: https://github.com/Cr3atable/EDPlugins/blob/master/token_login.js
+support: https://github.com/Cr3atable/EDPlugins/issues
+discord_server:
+tags: 
+software: [EnhancedDiscord]
+thumbnail:
+previews:
+dependency:
+status: Updated
+auto: true
+ghcommentid: # DON'T CHANGE
+layout: product # DON'T CHANGE
+---
+Adds an option for logging in with a token.
