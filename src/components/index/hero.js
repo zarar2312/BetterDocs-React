@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Bg from 'src/images/header-bg.svg'
 import * as variable from 'src/styles/variables'
+import Loading from 'src/images/Loading.gif'
+import LazyLoad from "react-lazyload"
 
 const Hero = () => (
   <Container>
@@ -23,7 +25,11 @@ const Hero = () => (
         </ActionBtn>
     </TextContainer>
     <ImageContainer>
-      <img src={preview} alt="Discord Themes Preview"></img>
+        <LazyLoad once={true} height="100%"
+                placeholder={<img src={Loading} alt="Loading"
+            />}>
+            <img src={preview} alt="Discord Themes Preview"/>
+        </LazyLoad>
     </ImageContainer>
   </Container>
 )

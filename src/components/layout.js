@@ -56,15 +56,6 @@ const Layout = ({ children }) => (
           </Helmet>
           <Header siteTitle={data.site.siteMetadata.title} />
           <Announcement />
-          <Ad>
-            <AdSense.Google
-              client='ca-pub-1998206533560539'
-              slot='6545618600'
-              style={{ display: 'block' }}
-              format='auto'
-              responsive='true'
-            />
-          </Ad>
           <div
             style={{
               margin: '0 auto',

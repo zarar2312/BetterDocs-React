@@ -5,17 +5,22 @@ import 'src/styles/tooltips.css'
 import styled from 'styled-components';
 //import * as variable from 'src/styles/variables'
 import { Link } from 'gatsby'
+import LazyLoad from "react-lazyload"
+import Loading from 'src/images/Loading.gif'
 
 const FeaturedThemeCard = ({title, slug, author, thumbnail}) => (
     <Card to={"themes" + slug}>
         <ImageContainer>
-            <img src={thumbnail} alt=
-            {author ? 
-            title + " Preview made by " + author
-            :
-            title
-            }
-            />
+            <LazyLoad once={true} height="100%"
+                placeholder={<img src={Loading} alt="Loading"
+            />}>
+                <img src={thumbnail} alt=
+                {author ? 
+                title + " Preview made by " + author
+                :
+                title
+                }/>
+            </LazyLoad>
         </ImageContainer>
     </Card>
 )

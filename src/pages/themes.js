@@ -12,6 +12,7 @@ import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { rgba, darken } from "polished"
 import FeaturedCard from '../components/themes/featured-card'
+import AdSense from 'react-adsense';
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -109,6 +110,13 @@ const Themes = (props) => {
             featured= {node.frontmatter.featured}
             />
           ))}
+          <AdSense.Google
+            client='ca-pub-1998206533560539'
+            slot='6545618600'
+            style={{ display: 'block' }}
+            format='auto'
+            responsive='true'
+          />
         </Wrapper>
       </Content>
 
