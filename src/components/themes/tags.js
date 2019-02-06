@@ -4,7 +4,7 @@ import Helmet from "react-helmet"
 import { Link } from "gatsby"
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
-import { rgba, darken } from "polished"
+import { rgba } from "polished"
 
 const TagsPage = ({tagsArray}) => {
   return (
@@ -48,7 +48,7 @@ const Container = styled.div`
             border-radius: 25px;
             padding: 6px 11px;
             display: flex;
-            margin-left: 3px;
+            margin-left: 4px;
             margin-bottom: 7px;
             transition: 350ms ease-in-out;
             &:hover {

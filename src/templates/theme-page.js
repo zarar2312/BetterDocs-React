@@ -414,6 +414,20 @@ const Container = styled.div`
                   width: calc(100% - 300px);
                   display: flex;
               }
+              code {
+                font-size: 0.67rem;
+                /*line-height: unset;*/
+              }
+              pre {
+                line-height: unset;
+                padding: 0.95rem;
+                padding-top: 0.6rem;
+                code {
+                  font-size: 0.67rem;
+                  padding: unset;
+                  line-height: unset;
+                }
+              }
             ${HtmlContent} {
               display: block;
               word-break: break-word;

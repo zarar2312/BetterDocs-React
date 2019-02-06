@@ -45,6 +45,7 @@ class Features extends React.Component {
               date
               ghcommentid
               layout
+              sub
             }
           }
         }
@@ -83,6 +84,7 @@ class Features extends React.Component {
               date(formatString: "DD/MM/YYYY")
               ghcommentid
               layout
+              sub
             }
           }
         }
@@ -118,6 +120,7 @@ class Features extends React.Component {
             date(formatString: "DD/MM/YYYY")
             ghcommentid
             layout
+            sub
         }
       },
     fragment pluginFragment on MarkdownRemarkConnection {

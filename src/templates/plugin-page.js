@@ -450,8 +450,22 @@ const Container = styled.div`
               flex-direction: column;
               font-size: 0.67rem;
               @media (min-width: 850px) {
-                  width: calc(100% - 300px);
-                  display: flex;
+                width: calc(100% - 300px);
+                display: flex;
+              }
+              code {
+                font-size: 0.67rem;
+                /*line-height: unset;*/
+              }
+              pre {
+                line-height: unset;
+                padding: 0.95rem;
+                padding-top: 0.6rem;
+                code {
+                  font-size: 0.67rem;
+                  padding: unset;
+                  line-height: unset;
+                }
               }
             ${HtmlContent} {
               display: block;
