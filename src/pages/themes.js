@@ -54,28 +54,25 @@ const Themes = (props) => {
           </Publish>
         </Second>
       </FeaturedBar>
-      
       <FeaturedContainer>
-      {featuredList.edges.map(({ node }, i) => (
+        {featuredList.edges.map(({ node }, i) => (
         <FeaturedCard 
-        key={node.id}
-        title={node.frontmatter.title}
-        thumbnail={node.frontmatter.thumbnail}
-        slug={node.fields.slug}
-        author={node.frontmatter.author}
-        />
+          key={node.id}
+          title={node.frontmatter.title}
+          thumbnail={node.frontmatter.thumbnail}
+          slug={node.fields.slug}
+          author={node.frontmatter.author}/>
         ))}
-        <LastCard
-        to="/themes/featured/">
-          <ThumbnailContainer>
-            <Thumbnail src={Star} alt="View All Featured Themes"></Thumbnail>
-            <Text>View all featured themes</Text>
-          </ThumbnailContainer>
-        </LastCard>
-      </FeaturedContainer>
-    </FeaturedSection>
+        <LastCard to="/themes/featured/">
+        <ThumbnailContainer>
+          <Thumbnail src={Star} alt="View All Featured Themes"></Thumbnail>
+          <Text>View all featured themes</Text>
+        </ThumbnailContainer>
+      </LastCard>
+    </FeaturedContainer>
+  </FeaturedSection>
     
-    <ContainerSection>
+  <ContainerSection>
     <TitleBarHeadroom disableInlineStyles>
       <TitleBar>
         <Count>#Themes <span>({listCount})</span></Count>
@@ -150,6 +147,60 @@ query allThemesQuery {
   }
 }
 `
+const ContainerSection = styled.section`
+`
+const FeaturedBar = styled.div`
+`
+const First = styled.div`
+`
+const HeaderContainer = styled.div`
+`
+const HeaderTitle = styled.div`
+`
+const ViewAll = styled(Link)`
+`
+const AllContainer = styled.div`
+`
+const Second = styled.div`
+`
+const Paragraph = styled.div`
+`
+const Publish = styled.div`
+`
+const PublishBtn = styled(Link)`
+`
+const FeaturedContainer = styled.div`
+`
+const FeaturedSection = styled.section`
+`
+const LastCard = styled(Link)` 
+`
+const TitleBarHeadroom = styled(Headroom)`
+`
+const ThumbnailContainer = styled.div`
+`
+const Thumbnail = styled.img`
+`
+const Text = styled.div`
+`
+const TitleBar = styled.div`
+`
+const Count = styled.div`
+`
+const Search = styled.input`
+`
+const Help = styled.a`
+`
+const Upload = styled(Link)`
+`
+const Content = styled.div`
+`
+const Wrapper = styled.div`
+`
+const UploadBtn = styled(Link)`
+`
+const HelpBtn = styled(Link)`
+`
 
 const Container = styled.div`
   display: block;
@@ -159,226 +210,371 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
   }
-`
-
-const ContainerSection = styled.section`
-  order: 1;
-  display: flex;
-  flex-direction: column;
-  @media (min-width: 850px) {
-      flex: 3;
-  }
-`
-
-const TitleBar = styled.div`
-  background-color: #fff;
-  border-bottom: 1px solid #f5f3f7;
-  display: flex;
-  flex-direction: row;
-  padding: 0.42rem 0.62rem;
-  position: sticky;
-  z-index: 3;
-`
-
-const TitleBarHeadroom = styled(Headroom)`
-  display: contents;
-  width: 100%;
-  .headroom {
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-  }
-  .headroom--unfixed {
-      position: relative;
-      transform: translateY(0);
-  }
-  .headroom--scrolled {
-      transition: transform 200ms ease-in-out;
-      position: sticky;
-      top: 3rem;
-  }
-  .headroom--unpinned {
-      position: sticky;
-      top: 0;
-  }
-  .headroom--pinned {
-      position: sticky;
-      top: 3rem;
-      transform: translateY(0%);
-  }
-  @media (min-width: 850px) {
-    .headroom {
-    }
-    .headroom--unfixed {
-    }
-    .headroom--scrolled {
-        top: 1.8rem;
-    }
-    .headroom--unpinned {
-        top: 0;
-    }
-    .headroom--pinned {
-        top: 1.8rem;
-    }
-  }
-`
-
-const Count = styled.div`
-  flex: 10;
-  font-weight: bold;
-  color: ${variable.SiteColor};
-  font-size: 0.85rem;
-  align-self: center;
-  span {
-    font-weight: 500;
-    font-size: 0.6em;
-  }
-`
-
-const Search = styled.input`
-  border: unset;
-  transition: .2s ease-in-out opacity;
-  border-radius: 2px;
-  flex: 2;
-  font-size: 0.7rem;
-  align-self: center;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 0.3rem 0.6rem;
-  color: #262626;
-  transition: 250ms linear background-color;
-  &::placeholder {
-    color: rgba(0, 0, 0, 0.6);
-  }
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.07);
-  }
-  &:active,
-  &:focus {
-    opacity: 1;
-    outline: unset;
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-`
-
-const Help = styled.a`
-  margin-left: 13px;
-  color: rgba( 0,0,0, 0.5);
-  align-self: center;
-  transition: 200ms ease-in-out;
-  display: none;
-  font-weight: bold;
-  &:hover {
-    color: #000;
-  }
-  @media (min-width: 850px) {
-    display: initial;
-  }
-`
-
-const Upload = styled(Link)`
-  margin-left: 13px;
-  align-self: center;
-  display: none;
-  svg {
-    height: 0.6rem;
-    width: 0.6rem;
-    opacity: 0.5;
-    transition: 250ms ease-in-out;
-  }
-  &:hover {
-    svg {
-        opacity: 1;
-    }
-  }
-  @media (min-width: 850px) {
-    display: initial;
-  }
-`
-
-const Content = styled.div`
-  display: flex;
-  order: 1;
-  flex-direction: column; //max-height: 26em;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  max-height: unset;
-  background-color: #fff;
-  @media (min-width: 850px) {
-    max-height: unset;
-    background: #fff;
-  }
-  &::-webkit-scrollbar-button {
+  ${FeaturedSection} {
+    flex-direction: column;
     display: none;
-    height: 13px;
-    border-radius: 0px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: ${rgba(variable.SiteColor, 0.3)};
-    transition: background-color .2s ease-in-out;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: ${variable.SiteColor};
-  }
-  &::-webkit-scrollbar-track {
-    background-color: ${rgba(variable.SiteColor, 0.06)};
-  }
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
-    display: inline-block;
-    transition: color 250ms, text-shadow 250ms;
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    line-height: 1rem;
-
-    &:after {
-    position: absolute;
-    z-index: -1;
-    bottom: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    content: '';
-    width: 100%;
-    height: 3px;
-    background-color: ${variable.SiteColor};
-    transition: all 250ms;
+    overflow: hidden;
+    background-color: #fff;
+    @media (min-width: 850px) {
+        display: flex;
     }
-
-    &:hover {
-        color: #fff !important;
-        opacity: 1;
-        background-color: transparent;
-        &::after {
-            height: 110% !important;
-            width: 110% !important;
+    ${FeaturedBar} {
+      display: block;
+      padding: 0.62rem 0.82rem;
+      @media (min-width: 850px) {
+          display: flex;
+      }
+      ${First} {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        ${HeaderContainer} {
+          flex-direction: column;
+          justify-content: center;
+          display: flex;
+          ${HeaderTitle} {
+            margin-left: 15px;
+            font-size: 0.85rem;
+            color: ${variable.SiteColor};
+            font-weight: bold;
+          }
         }
+        ${AllContainer} {
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            ${ViewAll} {
+              margin-left: 25px;
+              font-size: 0.55rem;
+              position: relative;
+              top: 2px;
+              color: ${rgba(variable.SiteColor, 0.6)};
+              transition: 400ms linear;
+            &:hover {
+                color: ${variable.SiteColor};
+            }
+          }
+        }
+      }
+      ${Second} {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        ${Paragraph} {
+            margin-right: 15px;
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            p {
+                margin: unset;
+                font-size: 0.55rem;
+                color: #7c7c7c;
+            }
+        }
+        ${Publish} {
+            margin-right: 15px;
+            ${PublishBtn} {
+              padding: 0.4rem 0.6rem;
+              background-color: ${variable.SiteColor};
+              color: #fff;
+              border-radius: 3px;
+              display: -webkit-inline-box;
+              font-size: 0.69rem;
+          }
+        }
+      }
+    }
+    ${FeaturedContainer} {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      padding: 25px;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+      &::after {
+          content: "";
+          display: block;
+          height: 11.5em;
+          width: 50px;
+          pointer-events: none;
+          background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #fff 100%);
+          position: absolute;
+          right: 0px;
+      }
+      &::-webkit-scrollbar-button {
+          display: none;
+          border-radius: 0px;
+      }
+      &::-webkit-scrollbar-thumb {
+          background-color: ${rgba(variable.SiteColor, 0.3)};
+          transition: background-color .2s ease-in-out;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+          background-color: ${variable.SiteColor};
+      }
+      &::-webkit-scrollbar-track {
+          background-color: ${rgba(variable.SiteColor, 0.06)};
+      }
+      &::-webkit-scrollbar {
+          width: 5px;
+          height: 8px;
+      }
+      ${LastCard} {
+        margin-left: 50px;
+        ${ThumbnailContainer} {
+          box-shadow: none;
+          border: 1px solid #f5f3f7;
+          background-color: rgba(245,243,247,.25);
+          -o-border-image: initial;
+          border-image: initial;
+          transition: all .25s cubic-bezier(.4,0,.2,1) 0s;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-right: 25px;
+          height: 10rem;
+          padding-bottom: unset;
+          width: 16.7rem;
+          position: relative;
+          ${Thumbnail} {
+            width: 3em;
+            height: 3em;
+            margin: 0 auto;
+            display: block;
+            position: static;
+          }
+          ${Text} {
+            color: ${variable.SiteColor};
+            font-weight: bold;
+            font-weight: 700;
+            border-bottom: 3px solid transparent;
+            transition: all .25s cubic-bezier(.4,0,.2,1) 0s;
+            display: -webkit-inline-box;
+            font-size: .65rem;
+            margin: 1rem auto;
+          }
+        }
+        &:hover {
+          ${ThumbnailContainer} {
+            transform: translateY(-3px);
+            box-shadow: ${rgba(variable.SiteColor, 0.5)} 0px 8px 20px;
+          }
+          ${Text} {
+            border-bottom: 3px solid transparent;
+          }
+        }
+      }
     }
   }
-`
-
-const Wrapper = styled.div`
-  display: block;
-  width: calc(100% - 75px);
-  margin: 0 auto;
-  padding-top: 1.1rem;
-  padding-bottom: 3.1rem;
-  word-break: break-all;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  @media (min-width: 850px) {
+  ${ContainerSection} {
+    order: 1;
     display: flex;
-    padding: 2.1rem 0;
+    flex-direction: column;
+    @media (min-width: 850px) {
+        flex: 3;
+    }
+    ${TitleBarHeadroom} {
+      display: contents;
+      width: 100%;
+      .headroom {
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 100;
+      }
+      .headroom--unfixed {
+          position: relative;
+          transform: translateY(0);
+      }
+      .headroom--scrolled {
+          transition: transform 200ms ease-in-out;
+          position: sticky;
+          top: 3rem;
+      }
+      .headroom--unpinned {
+          position: sticky;
+          top: 0;
+      }
+      .headroom--pinned {
+          position: sticky;
+          top: 3rem;
+          transform: translateY(0%);
+      }
+      @media (min-width: 850px) {
+        .headroom {
+        }
+        .headroom--unfixed {
+        }
+        .headroom--scrolled {
+            top: 1.8rem;
+        }
+        .headroom--unpinned {
+            top: 0;
+        }
+        .headroom--pinned {
+            top: 1.8rem;
+        }
+      }
+      ${TitleBar} {
+        background-color: #fff;
+        border-bottom: 1px solid #f5f3f7;
+        display: flex;
+        flex-direction: row;
+        padding: 0.42rem 0.62rem;
+        position: sticky;
+        z-index: 3;
+        ${Count} {
+          flex: 10;
+          font-weight: bold;
+          color: ${variable.SiteColor};
+          font-size: 0.85rem;
+          align-self: center;
+          span {
+            font-weight: 500;
+            font-size: 0.6em;
+          }
+        }
+        ${Search} {
+          border: unset;
+          transition: .2s ease-in-out opacity;
+          border-radius: 2px;
+          flex: 2;
+          font-size: 0.7rem;
+          align-self: center;
+          background-color: rgba(0, 0, 0, 0.1);
+          padding: 0.3rem 0.6rem;
+          color: #262626;
+          transition: 250ms linear background-color;
+          &::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+          }
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.07);
+          }
+          &:active,
+          &:focus {
+            opacity: 1;
+            outline: unset;
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+        }
+        ${Help} {
+          margin-left: 13px;
+          color: rgba( 0,0,0, 0.5);
+          align-self: center;
+          transition: 200ms ease-in-out;
+          display: none;
+          font-weight: bold;
+          &:hover {
+            color: #000;
+          }
+          @media (min-width: 850px) {
+            display: initial;
+          }
+        }
+        ${Upload} {
+          margin-left: 13px;
+          align-self: center;
+          display: none;
+          svg {
+            height: 0.6rem;
+            width: 0.6rem;
+            opacity: 0.5;
+            transition: 250ms ease-in-out;
+          }
+          &:hover {
+            svg {
+                opacity: 1;
+            }
+          }
+          @media (min-width: 850px) {
+            display: initial;
+          }
+        }
+      }
+    }
+    ${Content} {
+      display: flex;
+      order: 1;
+      flex-direction: column;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      max-height: unset;
+      background-color: #fff;
+      @media (min-width: 850px) {
+        max-height: unset;
+        background: #fff;
+      }
+      &::-webkit-scrollbar-button {
+        display: none;
+        height: 13px;
+        border-radius: 0px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: ${rgba(variable.SiteColor, 0.3)};
+        transition: background-color .2s ease-in-out;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: ${variable.SiteColor};
+      }
+      &::-webkit-scrollbar-track {
+        background-color: ${rgba(variable.SiteColor, 0.06)};
+      }
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+      a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
+        display: inline-block;
+        transition: color 250ms, text-shadow 250ms;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        line-height: 1rem;
+
+        &:after {
+        position: absolute;
+        z-index: -1;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: ${variable.SiteColor};
+        transition: all 250ms;
+        }
+
+        &:hover {
+          color: #fff !important;
+          opacity: 1;
+          background-color: transparent;
+          &::after {
+              height: 110% !important;
+              width: 110% !important;
+          }
+        }
+      }
+      ${Wrapper} {
+        display: block;
+        width: calc(100% - 75px);
+        margin: 0 auto;
+        padding-top: 1.1rem;
+        padding-bottom: 3.1rem;
+        word-break: break-all;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @media (min-width: 850px) {
+          display: flex;
+          padding: 2.1rem 0;
+        }
+      }
+    }
   }
-`
-
-const UploadBtn = styled(Link)`
-
 `
 
 const UploadContainer = styled.div`
@@ -411,10 +607,6 @@ const UploadContainer = styled.div`
   }
 `
 
-const HelpBtn = styled(Link)`
-
-`
-
 const HelpContainer = styled.div`
   position: fixed;
   right: 1rem;
@@ -441,204 +633,5 @@ const HelpContainer = styled.div`
         box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 3px -2px #ffffff;
         background-color: ${darken(0.1, variable.SiteColor)};
     }
-  }
-`
-
-const FeaturedSection = styled.section`
-  flex-direction: column;
-  display: none;
-  overflow: hidden;
-  background-color: #fff;
-  @media (min-width: 850px) {
-      display: flex;
-  }
-`
-const FeaturedBar = styled.div`
-  display: block;
-  padding: 0.62rem 0.82rem;
-  @media (min-width: 850px) {
-      display: flex;
-  }
-`
-
-const HeaderContainer = styled.div`
-
-`
-
-const HeaderTitle = styled.div`
-
-`
-
-const ViewAll = styled(Link)`
-
-`
-
-const AllContainer = styled.div`
-
-`
-
-const First = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  ${HeaderContainer} {
-      flex-direction: column;
-      justify-content: center;
-      display: flex;
-      ${HeaderTitle} {
-          margin-left: 15px;
-          font-size: 0.85rem;
-          color: ${variable.SiteColor};
-          font-weight: bold;
-      }
-  }
-  ${AllContainer} {
-      flex-direction: column;
-      justify-content: center;
-      display: flex;
-      ${ViewAll} {
-          margin-left: 25px;
-          font-size: 0.55rem;
-          position: relative;
-          top: 2px;
-          color: ${rgba(variable.SiteColor, 0.6)};
-          transition: 400ms linear;
-          &:hover {
-              color: ${variable.SiteColor};
-          }
-      }
-  }
-`
-
-const Paragraph = styled.div`
-
-`
-const Publish = styled.div`
-
-`
-const PublishBtn = styled(Link)`
-
-`
-
-const Second = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  ${Paragraph} {
-      margin-right: 15px;
-      flex-direction: column;
-      justify-content: center;
-      display: flex;
-      p {
-          margin: unset;
-          font-size: 0.55rem;
-          color: #7c7c7c;
-      }
-  }
-  ${Publish} {
-      margin-right: 15px;
-      ${PublishBtn} {
-          padding: 0.4rem 0.6rem;
-          background-color: ${variable.SiteColor};
-          color: #fff;
-          border-radius: 3px;
-          display: -webkit-inline-box;
-          font-size: 0.69rem;
-      }
-  }
-`
-
-const FeaturedContainer = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  padding: 25px;
-  justify-content: space-between;
-  /*width: calc(100% - 75px);*/
-  width: 100%;
-  margin: 0 auto;
-  &::after {
-      content: "";
-      display: block;
-      height: 11.5em;
-      width: 50px;
-      pointer-events: none;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #fff 100%);
-      position: absolute;
-      right: 0px;
-  }
-  &::-webkit-scrollbar-button {
-      display: none;
-      border-radius: 0px;
-  }
-  &::-webkit-scrollbar-thumb {
-      background-color: ${rgba(variable.SiteColor, 0.3)};
-      transition: background-color .2s ease-in-out;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-      background-color: ${variable.SiteColor};
-  }
-  &::-webkit-scrollbar-track {
-      background-color: ${rgba(variable.SiteColor, 0.06)};
-  }
-  &::-webkit-scrollbar {
-      width: 5px;
-      height: 8px;
-  }
-`
-
-const ThumbnailContainer = styled.div`
-
-`
-const Thumbnail = styled.img`
-
-`
-const Text = styled.div`
-
-`
-const LastCard = styled(Link)`
-  margin-left: 50px;
-  ${ThumbnailContainer} {
-    box-shadow: none;
-    border: 1px solid #f5f3f7;
-    background-color: rgba(245,243,247,.25);
-    -o-border-image: initial;
-    border-image: initial;
-    transition: all .25s cubic-bezier(.4,0,.2,1) 0s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 25px;
-    height: 10rem;
-    padding-bottom: unset;
-    width: 16.7rem;
-    position: relative;
-    ${Thumbnail} {
-      width: 3em;
-      height: 3em;
-      margin: 0 auto;
-      display: block;
-      position: static;
-    }
-    ${Text} {
-      color: ${variable.SiteColor};
-      font-weight: bold;
-      font-weight: 700;
-      border-bottom: 3px solid transparent;
-      transition: all .25s cubic-bezier(.4,0,.2,1) 0s;
-      display: -webkit-inline-box;
-      font-size: .65rem;
-      margin: 1rem auto;
-    }
-  }
-  &:hover {
-      ${ThumbnailContainer} {
-          transform: translateY(-3px);
-          box-shadow: ${rgba(variable.SiteColor, 0.5)} 0px 8px 20px;
-      }
-      ${Text} {
-          border-bottom: 3px solid transparent;
-      }
   }
 `
