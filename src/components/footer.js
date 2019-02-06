@@ -149,6 +149,7 @@ const FooterContainer = styled.footer`
     border-top: 1px solid #eee;
     font-size: 0.7rem;
     box-shadow: 0px 0px 40px 15px #fff;
+    background-color: #fff;
     ${Wave} {
         bottom: 0;
         left: 0;

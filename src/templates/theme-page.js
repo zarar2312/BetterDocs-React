@@ -321,6 +321,7 @@ const MobileHeader = styled.div`
 const Container = styled.div`
   display: block;
   flex-direction: column;
+  background-color: #fff;
   @media (min-width: 850px) {
       display: flex;
       flex-direction: row;
