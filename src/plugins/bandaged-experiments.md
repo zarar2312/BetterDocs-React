@@ -5,7 +5,7 @@ description: BandagedBD plugin that enables discord's preview features
 download: https://github.com/Imnibis/BandagedExperiments/blob/master/BandagedExperiments.plugin.js
 github_profile_url: https://github.com/Imnibis/
 github_source_url: https://github.com/Imnibis/BandagedExperiments
-tags: [ developer, experiments, preview]
+tags: [developer, experiments, preview]
 software: [BandagedBD]
 status: Updated
 auto: true

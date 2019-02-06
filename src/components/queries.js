@@ -198,7 +198,7 @@ class Features extends React.Component {
           }
         }
       }               
-  `}//<div className={style.header}>Why it is Special</div>
+  `}
     render={data => (
         <section>
         

@@ -1,15 +1,29 @@
 import React from 'react'
 
-import style from '../styles/download.module.scss'
+//import style from '../styles/download.module.scss'
 import Layout from '../components/layout'
 import '../styles/tooltips.css'
 import Card from '../components/download/card'
 import Feature from '../components/download/feature'
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: block;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 35px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  @media (min-width: 850px) {
+      display: flex;
+      padding: 20px 0px;
+      width: calc(100% - 9em);
+  }
+`
 
 const DownloadPage = () => (
   <Layout>
-    <div className={style.wrapper}
-    >
+    <Wrapper>
       <Card
       title="BandagedBD"
       download="https://github.com/rauenzi/BetterDiscordApp/releases">
@@ -291,7 +305,7 @@ const DownloadPage = () => (
         tooltiptext="Can be achieved with compatible plugins"
         />
       </Card>
-    </div>
+    </Wrapper>
   </Layout>
 )
 

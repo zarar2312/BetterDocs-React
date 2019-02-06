@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
-import hero from '../styles/hero.module.scss'
-import plugin from '../styles/plugins.module.scss'
+//import plugin from '../styles/plugins.module.scss'
 import { Helmet } from "react-helmet";
 //import Sidebar from '../components/plugin-sidebar'
 import { graphql, Link } from 'gatsby'
@@ -10,8 +9,14 @@ import SoftwareBar from '../components/plugins/software-bar'
 import Card from '../components/plugins/card'
 //import Folder from '../images/Folder.png'
 //import '../components/queries'
+import styled from 'styled-components';
+import Bg from '../images/header-bg.svg'
+import Folder from '../images/Folder.png'
+import * as variable from '../styles/variables'
+import { darken } from 'polished'
+//import { ResultList } from '@appbaseio/reactivesearch'
 
-const Plugins = (props) => {
+const Plugins = (props) => { 
   const pluginList = props.data.all;
   //const featuredList = props.data.featured
   const { totalCount } = props.data.all;
@@ -30,28 +35,26 @@ const Plugins = (props) => {
         <meta property="og:description" content="List of free high quality Discord plugins by the community! Modify your Discord to your own liking with advanced plugins!"/>
         <meta property="og:url" content="https://betterdocs.us/plugins/" />
     </Helmet>
-    <div className={plugin.pluginsContainer}
-    >
+    <Container>
 
-    <section className={plugin.contentWrapper}
-    >
-      <div className={hero.heroPlugins}
+    <Content>
+      <Hero
       >
-        <div className={hero.container}
+        <HeroContainer
         >
-          <h2 className={hero.h2}
+          <HeroTitle
           >
           #1 Source for Discord Plugins!
-          </h2> 
-          <p className={hero.p}
+          </HeroTitle> 
+          <HeroSub
           >
           Custom JS plugins made by the commuity!
-          </p> 
-        </div>
-        <div className={hero.featuredContainer}>
-          <div className={hero.featuredCard} >
-            <div className={hero.imgContainer}>
-              <Link to="/plugins/discord-crypt/" className={hero.svgContainer} style={{backgroundImage: `url("https://i.imgur.com/ubQusr5.png")`}}>
+          </HeroSub> 
+        </HeroContainer>
+        <FeaturedCards>
+          <FeaturedCard>
+            <ImageContainer>
+              <Svg to="/plugins/discord-crypt/" style={{backgroundImage: `url("https://i.imgur.com/ubQusr5.png")`}}>
                 <svg height="512px" id="Capa_1" style={{"enableBackground":"new 0 0 512.001 512.001"}} width="512px" version="1.1" viewBox="0 0 512.001 512.001" x="0px" y="0px" xmlSpace="preserve">
                   <g>
                       <path className="active-path" style={{"fill":"#7289DA"}} d="M348.404,139.584H164.826c-13.101,0-23.721,10.62-23.721,23.721v56.885h231.02v-56.885  C372.125,150.204,361.505,139.584,348.404,139.584z"/>
@@ -84,14 +87,14 @@ const Plugins = (props) => {
                       <path d="M256.613,20.004c-0.025,0-0.05,0-0.074,0L256,20.001c-5.522,0-10-4.477-10-10s4.478-10,10-10l0.684,0.003  c5.522,0.04,9.968,4.549,9.928,10.072C266.572,15.574,262.102,20.004,256.613,20.004z"/>
                   </g>
                 </svg>
-                <div className={hero.title}>DiscordCrypt</div>
-              </Link>
-            </div>
-            <div className={hero.descriptionContainer}>Provides end to end message (50mb files supported) encryption for Discord.</div>
-          </div>
-          <div className={hero.featuredCard} >
-            <div className={hero.imgContainer}>
-              <Link to="/plugins/voice-chat-notifications/" className={hero.svgContainer} style={{backgroundImage: `url("https://i.imgur.com/BtC4dMB.png")`}}>
+                <Title>DiscordCrypt</Title>
+              </Svg>
+            </ImageContainer>
+            <Description>Provides end to end message (50mb files supported) encryption for Discord.</Description>
+          </FeaturedCard>
+          <FeaturedCard>
+            <ImageContainer>
+              <Svg to="/plugins/voice-chat-notifications/" style={{backgroundImage: `url("https://i.imgur.com/BtC4dMB.png")`}}>
                 <svg height="512px" id="Layer_1" style={{"enableBackground":"new 0 0 512.001 512.001"}} width="512px" version="1.1" viewBox="0 0 512.001 512.001" x="0px" y="0px" xmlSpace="preserve">
                   <g>
                       <path style={{"fill":"#0a0a0a"}} d="M450.671,156.853H9.013c-4.978,0-9.013-4.036-9.013-9.013V39.678c0-4.978,4.036-9.013,9.013-9.013  h441.658c4.978,0,9.013,4.036,9.013,9.013v108.161C459.685,152.817,455.649,156.853,450.671,156.853z"/>
@@ -132,23 +135,23 @@ const Plugins = (props) => {
                       </g>
                   </g>
                 </svg>
-                <div className={hero.title}>Voice Chat Notifications</div>
-              </Link>
-            </div>
-            <div className={hero.descriptionContainer}>Displays activity notifications based on the voice channel you're in.</div>
-          </div>
-          <div className={hero.featuredCard} >
-            <div className={hero.imgContainer}>
-              <Link to="/plugins/server-folders/" className={hero.svgContainer} style={{backgroundImage: `url("https://i.imgur.com/r0WLnjv.png")`}}>
-                <div className={hero.img}></div>
-                <div className={hero.title}>Server Folders</div>
-              </Link>
-            </div>
-            <div className={hero.descriptionContainer}>Organize your Discord servers into categorized folders for simple navigation!</div>
-          </div>
-          <div className={hero.featuredCard} >
-            <div className={hero.imgContainer}>
-              <Link to="/plugins/do-not-track/" className={hero.svgContainer} style={{backgroundImage: `url("https://i.imgur.com/rWgKhaC.png")`}}>
+                <Title>Voice Chat Notifications</Title>
+              </Svg>
+            </ImageContainer>
+            <Description>Displays activity notifications based on the voice channel you're in.</Description>
+          </FeaturedCard>
+          <FeaturedCard>
+            <ImageContainer>
+              <Svg to="/plugins/server-folders/" style={{backgroundImage: `url("https://i.imgur.com/r0WLnjv.png")`}}>
+                <CardImage></CardImage>
+                <Title>Server Folders</Title>
+              </Svg>
+            </ImageContainer>
+            <Description>Organize your Discord servers into categorized folders for simple navigation!</Description>
+          </FeaturedCard>
+          <FeaturedCard>
+            <ImageContainer>
+              <Svg to="/plugins/do-not-track/" style={{backgroundImage: `url("https://i.imgur.com/rWgKhaC.png")`}}>
                 <svg height="512px" width="512px" viewBox="0 -46 512 512">
                   <g>
                       <path className="active-path" style={{"fill":"#0a0a0a"}} d="m479.859375 10.09375h21.304687v70.796875h-384.285156v-70.796875zm0 0" fill="#5e6e82"/>
@@ -177,20 +180,19 @@ const Plugins = (props) => {
                       <path style={{"fill":"#000000"}} d="m151.15625 126.707031h47.765625c5.574219 0 10.089844-4.519531 10.089844-10.09375s-4.515625-10.09375-10.089844-10.09375h-47.765625c-5.574219 0-10.09375 4.519531-10.09375 10.09375s4.519531 10.09375 10.09375 10.09375zm0 0"/>
                   </g>
                 </svg>
-                <div className={hero.title}>Do Not Track</div>
-              </Link>
-            </div>
-            <div className={hero.descriptionContainer}>Stops Discord from tracking everything you do like Sentry and Analytics.</div>
-          </div>
-        </div>
-      </div>
-      <div className={plugin.content}
-        >
+                <Title>Do Not Track</Title>
+              </Svg>
+            </ImageContainer>
+            <Description>Stops Discord from tracking everything you do like Sentry and Analytics.</Description>
+          </FeaturedCard>
+        </FeaturedCards>
+      </Hero>
+      <Main>
         <SoftwareBar/>
-        <div className={plugin.contentDetails}>
-            <div className={plugin.contentHeader}>{tagHeader}</div>
-        </div>
-        <div className={plugin.cardsContainer}
+        <Details>
+            <DeatilsHeader>{tagHeader}</DeatilsHeader>
+        </Details>
+        <Cards
         >
         {pluginList.edges.map(({ node }) => (
           <Card 
@@ -204,20 +206,20 @@ const Plugins = (props) => {
           softwares={node.frontmatter.software}
           key={node.id}/>
         ))}
-        </div>
-      </div>
+        </Cards>
+      </Main>
 
-    </section>
+    </Content>
 
-    </div>
-    <div className={plugin.uploadContainer}>
-        <Link title="Want to publish your plugin?" to="/plugins/upload-a-plugin/" className={plugin.uploadBtn}>
+    </Container>
+    <UploadBtn>
+        <Link title="Want to publish your plugin?" to="/plugins/upload-a-plugin/">
         +
         </Link>
-    </div>
-    <div className={plugin.helpContainer}>
-        <Link data-balloon="Want to publish your plugin?" data-balloon-pos="left" to="/plugins/upload-a-plugin" className={plugin.btn} target="blank">?</Link>
-    </div>
+    </UploadBtn>
+    <HelpBtn>
+        <Link data-balloon="Want to publish your plugin?" data-balloon-pos="left" to="/plugins/upload-a-plugin" target="blank">?</Link>
+    </HelpBtn>
   </Layout>
 )
 }
@@ -240,5 +242,307 @@ export const allPluginsQuery = graphql`
       }
       ...pluginExcerptLimit
     }
+  }
+`
+
+const Container = styled.div`
+  display: block;
+  flex-direction: row;
+  @media (min-width: 850px) {
+      display: flex;
+      position: initial;
+      top: unset;
+      right: unset;
+      bottom: unset;
+      left: unset;
+      padding-top: unset;
+  }
+`;
+
+const Content = styled.div`
+  order: 1;
+  overflow: hidden;
+  padding-left: unset;
+  @media (min-width: 850px) {
+      display: flex;
+      flex: 3;
+      flex-direction: column;
+  }
+`;
+
+const Details = styled.div`
+  background-color: #f1f1f1;
+  display: flex;
+  padding: 0 55px;
+  padding-top: 30px;
+`;
+
+const DeatilsHeader = styled.div`
+  font-size: 0.9rem;
+  color: rgba(#000, 0.8);
+`;
+
+const Main = styled.div`
+  display: flex;
+  order: 1;
+  flex-direction: column;
+  max-height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 3.1rem;
+  @media (min-width: 850px) {
+      /*max-height: calc(((((100vh - 6.1rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);*/
+      padding-bottom: unset;
+    }
+`;
+
+const Cards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #f1f1f1;
+  padding: 25px 0;
+  overflow: hidden;
+  @media (min-width: 850px) {
+      padding: 35px 55px;
+  }
+`;
+
+const Hero = styled.div`
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  /*z-index: 99;*/
+  padding: 40px 0;
+  background: linear-gradient(135deg, #7289DA 0%, #1868df 100%);
+  &::before {
+      content: "";
+      background-image: url("${Bg}");
+      background-size: 38%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: unset;
+      transform: unset;
+      box-shadow: unset;
+      top: unset;
+      bottom: unset;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+  }
+`
+
+const HeroContainer = styled.div`
+  max-width: calc(100% - 25px);
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  @media (min-width: 450px) {
+      max-width: calc(100% - 75px);
+      padding: 0 10px;
+  }
+  @media (min-width: 850px) {
+      max-width: calc(100% - 125px);
+      padding: 0 20px;
+  }
+`
+
+const HeroTitle = styled.div`
+  font-size: 2rem; /*1.1rem*/
+  line-height: 1.3;
+  font-weight: bold;
+  word-break: break-word;
+  margin: 0;
+`;
+
+const HeroSub = styled.div`
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 0.75rem;
+`
+
+const FeaturedCards = styled.div`
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 40px 0px;
+  flex-wrap: wrap;
+  @media (min-width: 850px) {
+      padding-bottom: 20px;
+  }
+`
+
+const Svg = styled(Link)`
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  flex-direction: column;
+  height: 100%;
+  svg {
+      width: 3.37rem;
+      height: 3.37rem;
+      display: -webkit-box;
+      background-color: #e6e6e6;
+      border-radius: 50%;
+      padding: 3px;
+      margin: 0 auto;
+      transition: all ease-in-out 250ms;
+  }
+  .title {
+      color: #000;
+      font-weight: bold;
+      margin-top: 9px;
+      font-size: 0.8rem;
+  }
+`
+const CardImage = styled.div`
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  transition: all ease-in-out 250ms;
+  height: 3rem;
+  width: 3rem;
+  background-size: cover;
+  background-position: center;
+  background-color: #e6e6e6;
+  background-size: 110%;
+  border: 3px solid #e6e6e6;
+  padding: 3px;
+  background-image: url(${Folder});
+`
+
+const Title = styled.div`
+  color: #000;
+  font-weight: bold;
+  margin-top: 9px;
+  font-size: 0.8rem;
+`
+
+const Description = styled.div`
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 15px;
+`
+const ImageContainer = styled.div`
+  height: 7rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  border-radius: 3px;
+  &:hover {
+    svg {
+        transform: translateY(-5px);
+    }
+    .img {
+        transform: translateY(-5px);
+    }
+  }
+`
+
+const FeaturedCard = styled.div`
+  flex-basis: 12rem;
+  margin-left: 14px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition-duration: 800ms;
+  /*transform: translateY(0em);*/
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  @media (min-width: 850px) {
+      margin-left: 14px;
+  }
+  
+  &:nth-child(2) {
+    ${ImageContainer} {
+      ${Svg} {
+        ${Title} {
+        color: #fff;
+      }
+    }
+  }
+}
+
+  &:nth-child(4) {
+    ${ImageContainer} {
+      ${Svg} {
+        ${Title} {
+        color: #fff;
+      }
+    }
+  }
+}
+  @keyframes slideDown {
+    from {
+        transform: translateY(-0.5em);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0em);
+        opacity: 1;
+    }
+  }
+`
+
+const UploadBtn = styled.div`
+  display: inline;
+  position: fixed;
+  bottom: 52px;
+  z-index: 100;
+  color: #fff;
+  font-size: 10px;
+  width: 100%;
+  pointer-events: none;
+  @media (min-width: 850px) {
+      display: none;
+  }
+  a {
+      background-color: ${variable.SiteColor};
+      color: #ffffff;
+      border-radius: 50%;
+      width: 2em;
+      height: 2em;
+      line-height: 1.75em;
+      text-align: center;
+      font-size: 2.8em;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: 25px;
+      border: 3.5px solid #0a0a0a;
+      pointer-events: all;
+  }
+`
+
+const HelpBtn = styled.div`
+  position: fixed;
+  right: 1rem;
+  bottom: 2.5rem;
+  z-index: 100;
+  display: none;
+  @media (min-width: 850px) {
+      right: 1.5rem;
+      bottom: 1rem;
+      display: initial;
+  }
+  a {
+      display: block;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: ${variable.SiteColor};
+      color: #fff;
+      text-align: center;
+      line-height: 2.5rem;
+      border-radius: 50%;
+      transition: all linear 250ms;
+      box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 3px -2px #ffffff;
+      font-size: 1.3rem;
+      &:hover {
+          box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 3px -2px #ffffff;
+          background-color: ${darken(0.1, variable.SiteColor)};
+      }
   }
 `

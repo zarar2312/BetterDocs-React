@@ -1,6 +1,28 @@
-@import "variables";
+import React from 'react'
+import kebabCase from "lodash/kebabCase"
+import 'src/styles/tooltips.css'
+import * as variable from 'src/styles/variables'
+import { rgba } from 'polished'
+import styled from 'styled-components';
 
-.alert {
+const ThemePageAlerts = ({title, slug, status}) => (
+    <>
+    {status === "Outdated" &&
+        <Alert target="blank" href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins/${kebabCase(slug)}.md`} alt="Warning">
+          <p><b>Warning:</b> This plugin is currently outdated. Only use for development purposes. If this is a mistake please make a PR by clicking me.</p>
+        </Alert>
+    }
+    {status === null &&
+        <Alert target="blank" href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins/${kebabCase(slug)}.md`} alt="Info">
+          <p><b>Info:</b> The plugin "{title}" status is currently <b>Unknown</b>. Please be careful, this may or may not break your discord client. If this is a mistake please make a PR by clicking me.</p>
+        </Alert>
+    }
+    </>
+)
+
+export default ThemePageAlerts
+
+const Alert = styled.a`
     font-size: 0.6em;
     display: flex;
     animation: opacity 1s forwards;
@@ -30,7 +52,7 @@
             }
             &::before {
                 content: "";
-                background: rgba(#a70a0a, 0.04);
+                background: rgba(168, 9, 9, 0.04);
             }
         }
     }
@@ -48,13 +70,13 @@
             right: 0px;
         }
         p {
-            border-left: 2px #0a68a7 solid;
+            border-left: 2px #a70a0a solid;
             b {
-                color: #0a68a7;
+                color: #a70a0a;
             }
             &::before {
                 content: "";
-                background: rgba(#0a68a7, 0.04);
+                background: rgba(168, 9, 9, 0.04);
             }
         }
     }
@@ -89,14 +111,14 @@
             font-size: 1em;
         }
         a {
-            border-bottom: 1px solid rgba($siteColor, 0.3);
-            box-shadow: inset 0 -2px 0px 0px rgba($siteColor, 0.4);
+            border-bottom: 1px solid ${rgba(variable.SiteColor, 0.3)};
+            box-shadow: inset 0 -2px 0px 0px ${rgba(variable.SiteColor, 0.4)};
             color: rgba(0, 0, 0, 0.88);
             font-weight: bold;
             transition: .1s linear background-color, .1s linear box-shadow, .1s linear border-bottom;
         }
         a:hover {
-            background-color: rgba($siteColor, 0.3);
+            background-color: ${rgba(variable.SiteColor, 0.3)};
             border-bottom: 1px solid transparent;
             box-shadow: inset 0 -2px 0px 0px transparent;
         }
@@ -105,7 +127,7 @@
         }
         &::before {
             content: "";
-            background: rgba(#000, 0.04);
+            background: rgba(0,0,0, 0.04);
             display: -webkit-box;
             position: absolute;
             top: 0px;
@@ -116,32 +138,32 @@
             animation: wcollapse 7s forwards linear; 
         }
     }
-}
-@keyframes opacity {
-    0% {
-        opacity: 1;
+    @keyframes opacity {
+        0% {
+            opacity: 1;
+        }
+        99% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+            pointer-events: none;
+        }
     }
-    99% {
-        opacity: 0;
+    @keyframes shadow {
+        from {
+            box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+        }
+        to {
+            box-shadow: 0px 0px transparent;
+        }
     }
-    100% {
-        opacity: 0;
-        pointer-events: none;
+    @keyframes wcollapse {
+        from {
+            width: 100%;
+        }
+        to {
+            width: 0;
+        }
     }
-}
-@keyframes shadow {
-    from {
-        box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-    }
-    to {
-        box-shadow: 0px 0px transparent;
-    }
-}
-@keyframes wcollapse {
-    from {
-        width: 100%;
-    }
-    to {
-        width: 0;
-    }
-}
+`

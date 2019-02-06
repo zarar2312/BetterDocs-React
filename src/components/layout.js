@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import AdSense from 'react-adsense';
-
+import styled from 'styled-components';
 import Header from './header'
 import Footer from './footer'
 import './layout.css'
-import ad from '../styles/ad.module.scss'
+//import ad from '../styles/ad.module.scss'
 import Announcement from './announcement';
 //import Logo from "../images/mobile.png"
 
@@ -56,7 +56,7 @@ const Layout = ({ children }) => (
           </Helmet>
           <Header siteTitle={data.site.siteMetadata.title} />
           <Announcement />
-          <div className={ad.ad}>
+          <Ad>
             <AdSense.Google
               client='ca-pub-1998206533560539'
               slot='6545618600'
@@ -64,7 +64,7 @@ const Layout = ({ children }) => (
               format='auto'
               responsive='true'
             />
-          </div>
+          </Ad>
           <div
             style={{
               margin: '0 auto',
@@ -73,7 +73,7 @@ const Layout = ({ children }) => (
           >
             {children}
           </div>
-          <div className={ad.ad}>
+          <Ad>
             <AdSense.Google
               client='ca-pub-1998206533560539'
               slot='6545618600'
@@ -81,7 +81,7 @@ const Layout = ({ children }) => (
               format='auto'
               responsive='true'
             />
-          </div>
+          </Ad>
           <Footer />
         </div>
     )}
@@ -93,3 +93,8 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const Ad = styled.div`
+  order: 3;
+  display: block;
+`

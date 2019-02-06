@@ -1,8 +1,0 @@
-.previewPanel {
-    width: calc(100% - 75px);
-}
-@media (min-width: 850px) {
-    .previewPanel {
-        width: calc(100% - 300px);
-    }
-}

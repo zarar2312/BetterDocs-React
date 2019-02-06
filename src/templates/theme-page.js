@@ -1,18 +1,20 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
-import hero from '../styles/theme-page-hero.module.scss'
-import style from '../styles/theme-page.module.scss'
-import { graphql, Link } from "gatsby"
+//import style from '../styles/theme-page.module.scss'
+import { graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import kebabCase from "lodash/kebabCase"
 import Helmet from 'react-helmet'
 import AdSense from 'react-adsense';
-import ad from '../styles/ad.module.scss'
-import alert from '../styles/alerts.module.scss'
+//import alert from '../styles/alerts.module.scss'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
+import Hero from '../components/themes/hero'
 import "../styles/tooltips.css"
-//import Missing from '../images/mobile.png'
+import styled from 'styled-components';
+import * as variable from '../styles/variables'
+import { darken } from "polished"
+import Alerts from '../components/themes/theme-page-alerts'
 
 /*
 {node.frontmatter.profile_picture ?
@@ -56,156 +58,33 @@ const Themes = (props) => {
       <html lang="en" />
     </Helmet>
     ))}
-    <div className={style.themesPageContainer}
-    >
+    <Container>
     {themeList.edges.map(({ node }) => (
-      <section className={style.contentWrapper} key={node.id}
-      >
-      {node.frontmatter.status === "Outdated" &&
-        <a target="blank" href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/themes/${kebabCase(node.fields.slug)}.md`} className={alert.alert} alt="Warning" >
-          <p><b>Warning:</b> This theme is currently outdated. Only use for development purposes. If this is a mistake please make a PR by clicking me.</p>
-        </a>
-      }
-      {node.frontmatter.status === null &&
-        <a target="blank" href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/themes/${kebabCase(node.fields.slug)}.md`} className={alert.alert} alt="Info">
-          <p><b>Info:</b> The theme "{node.frontmatter.title}" status is currently <b>Unknown</b>. Please be careful, this may or may not break your discord client. If this is a mistake please make a PR by clicking me.</p>
-        </a>
-      }
-        <div className={hero.heroThemes}
-        alt={node.frontmatter.title}
-        style={{backgroundImage: `url(${node.frontmatter.thumbnail})`}}
-        >
-        <div className={hero.backgroundOverlay}/>
-        <div className={hero.breadcrumbContainer}>
-          <Link to="/" className={hero.breadcrumb}>Home</Link> 
-          <span className={hero.breadcrumbSeperator}>/</span>
-          <Link to="/themes/" className={hero.breadcrumb}>Themes</Link>
-          <span className={hero.breadcrumbSeperator}>/</span>
-        </div>
-        <div className={hero.heroParent}>
-          <div className={hero.container}
-          >
-            {node.frontmatter.title && 
-              <h2 className={hero.h2}>{node.frontmatter.title}</h2>
-            }
-            {node.frontmatter.author &&
-              <div className={hero.statusContainer} alt={node.frontmatter.status}>
-                {node.frontmatter.status ?
-                    <div className={hero.status}>
-                      <div className={node.frontmatter.status}>{node.frontmatter.status}</div>
-                    </div>
-                  :
-                  <div className={hero.status}>
-                    <div className={hero.unknown}>Unknown</div>
-                  </div>
-                }
-              </div>
-            }
-            {node.frontmatter.sub ?
-              null
-            :
-              <div className={hero.detailsWrapper}
-              >
-                <div className={hero.flexDetails}>
-                  {node.frontmatter.author &&
-                    <div className={hero.p}>
-                    <span>Author</span>
-                    <Link to={"/profile/" + node.frontmatter.author} target="blank">{node.frontmatter.author}</Link>
-                    </div>
-                  }
-                  {node.frontmatter.date &&
-                    <div className={hero.p}>
-                    <span>Published</span>
-                    <p>{node.frontmatter.date}</p>
-                    </div>
-                  }
-                  {node.frontmatter.github_source_url &&
-                    <div className={hero.p}>
-                    <span>Source</span>
-                    <a href={node.frontmatter.github_source_url} target="blank">
-                    <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='438.549' height='438.549' viewBox='0 0 438.549 438.549'>
-                      <path d='M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365 c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63 c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996 c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136 c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559 c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559 c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997 c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851 c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136 c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41 c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126 c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817 c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994 c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849 c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24 c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979 c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146 c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995 c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906 C438.536,184.851,428.728,148.168,409.132,114.573z'/>
-                    </svg>
-                    Github</a>
-                    </div>
-                  }
-                  {node.frontmatter.gitlab_source_url &&
-                    <div className={hero.p}>
-                    <span>Source</span>
-                    <a href={node.frontmatter.gitlab_source_url} target="blank">
-                    <svg id='gitlab' data-name='logo art' xmlns='http://www.w3.org/2000/svg' viewBox='120 120 340 300'>
-                      <defs />
-                      <path className='cls-1' d='M461.48,298.35,443.7,243.72a7.72,7.72,0,0,0-.43-1.47L407.6,132.45a14.18,14.18,0,0,0-13.54-9.67,13.94,13.94,0,0,0-13.38,9.75l-34,104.63H239.37L205.32,132.53A13.94,13.94,0,0,0,192,122.78h-.08a14.22,14.22,0,0,0-13.5,9.76L142.72,242.47c0,.1-.08.18-.11.28l-18.1,55.61a20.29,20.29,0,0,0,7.37,22.71L288.26,434.7a8,8,0,0,0,9.45-.05l0,0L454.12,321.07A20.28,20.28,0,0,0,461.48,298.35ZM227.73,253.22l43.59,134.16L166.68,253.22Zm87,134.19,41.8-128.62,1.8-5.57h61.1L324.76,374.5Zm79.47-244.58,30.63,94.33H363.52ZM341.49,253.16l-30.37,93.46L293,402.28,244.58,253.16ZM191.85,142.83l30.69,94.33H161.27Zm-50.56,165.3a4.31,4.31,0,0,1-1.56-4.83L153.17,262l98.57,126.37Zm303.43,0L334.26,388.34l.37-.48L432.83,262l13.44,41.28A4.31,4.31,0,0,1,444.72,308.12Z' />
-                    </svg>
-                    Gitlab</a>
-                    </div>
-                  }
-                  {node.frontmatter.discord_server &&
-                    <div className={hero.p}>
-                    <span>Live Chat</span>
-                    <a href={node.frontmatter.discord_server} target="blank">
-                    <svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' height="30" viewBox="0 0 250 240" width="30">
-                      <path className='st0' d='M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z'
-                      />
-                      <path className='st0' d='M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z'
-                      />
-                  </svg>
-                    Discord</a>
-                    </div>
-                  }
-                </div>
-              </div>
-              }
-              {node.frontmatter.tags &&
-              <div className={hero.detailsContainer}>
-                <div className={hero.tagContainer}>
-                {themeList.group.map(tag => (
-                <Link to={`/themes/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} className={hero.tag}>
-                  {tag.fieldValue}
-                </Link>
-                ))}
-                </div>
-              </div>
-              }
-          </div>
-        {node.frontmatter.download &&
-          <div className={hero.options}>
-            {node.frontmatter.auto ?
-              <a href={'https://minhaskamal.github.io/DownGit/#/home?url=' + node.frontmatter.download} className={hero.downloadBtn} target="blank">
-                {node.frontmatter.download && 
-                  <span>
-                     <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' width='512' height='512'
-                        viewBox='0 0 433.5 433.5'>
-                        <path d='M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z'
-                        fill='#FFF' id='file-download' />
-                      </svg>
-                      Download</span>
-                }
-              </a>
-              :
-              <a href={node.frontmatter.download} className={hero.downloadBtn} target="blank">
-                {node.frontmatter.download && 
-                  <span>
-                     <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' width='512' height='512'
-                        viewBox='0 0 433.5 433.5'>
-                        <path d='M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z'
-                        fill='#FFF' id='file-download' />
-                      </svg>
-                      Download</span>
-                }
-              </a>
-            }
-            {node.frontmatter.demo &&
-            <div alt="disabled" href={'http://betterdocs.netlify.com/demo/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo} className={hero.demoBtn} target="blank" data-balloon="Disabled" data-balloon-pos="left">Demo</div>
-            }
-            {node.frontmatter.support && 
-            <a href={node.frontmatter.support} className={hero.supportBtn} target="blank">Report an issue</a>
-            }
-          </div>
-        }
-        </div>
-        </div>
-        <div className={ad.ad}>
+      <Wrapper key={node.id}>
+        <Alerts
+        status={node.frontmatter.status}
+        slug={node.fields.slug}
+        title={node.frontmatter.title}
+        />
+        <Hero
+        title={node.frontmatter.title}
+        author={node.frontmatter.author}
+        status={node.frontmatter.status}
+        download={node.frontmatter.download}
+        thumbnail={node.frontmatter.thumbnail}
+        sub={node.frontmatter.sub}
+        date={node.frontmatter.date}
+        github_source_url={node.frontmatter.github_source_url}
+        gitlab_source_url={node.frontmatter.gitlab_source_url}
+        discord_server={node.frontmatter.discord_server}
+        tags={themeList.group}
+        auto={node.frontmatter.auto}
+        demo={node.frontmatter.demo}
+        support={node.frontmatter.support}
+        style={node.frontmatter.style}
+        />
+        
+        <Ad>
           <AdSense.Google
               client='ca-pub-1998206533560539'
               slot='6545618600'
@@ -213,83 +92,77 @@ const Themes = (props) => {
               format='auto'
               responsive='true'
             />
-        </div>
+        </Ad>
         {previewList.edges.map(({ node }) => (
-        <Tabs style={{order: "3"}} key={node.id}>
-          <TabList style={{display: "flex", justifyContent: "center", borderBottom: "unset", marginBottom: "unset"}}>
+        <Tabbs style={{order: "3"}} key={node.id}>
+          <TabListt>
             {node.frontmatter.previews ?
-            <Tab style={{ transition: "all 250ms linear", marginBottom: "0.25rem", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
+            <Tabb>Overview</Tabb>
             :
-            <Tab style={{ display: "none", transition: "all 250ms linear", marginBottom: "0.25rem", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Overview</Tab>
+            <Tabb>Overview</Tabb>
             }
             {node.frontmatter.previews &&
-              <Tab style={{ transition: "all 250ms linear", marginBottom: "0.25rem", marginTop: "calc(1.45rem / 2)", padding: ".35rem .75rem", textShadow: "0 1px rgba(255,255,255,0.5)", borderRadius: "100px", border: "unset", fontSize: ".575rem", fontWeight: "bold", color: "#5f6368"}}>Screenshots</Tab>
+              <Tabb>Screenshots</Tabb>
             }
-            </TabList>
+            </TabListt>
 
-          <TabPanel>
-          <div className={style.content}
-          >
-            <div className={style.mdWrapper}
-            >
-              <div
-              className={style.childWrapper}
+          <TabPanell>
+          <ContentContainer>
+            <Content>
+              <HtmlContent
               dangerouslySetInnerHTML={{ __html: node.html }}>
-              </div>
-            </div>
-          </div>
-          </TabPanel>
+              </HtmlContent>
+            </Content>
+          </ContentContainer>
+          </TabPanell>
           {node.frontmatter.previews &&
-          <TabPanel className="previewPanel" style={{margin: "0 auto"}}>
-            <div className={style.tabContentWrapper}>
+          <TabPanell style={{margin: "0 auto"}}>
+            <ScreenshotContainer>
               {previewList.group.map(image => (
-                <div className={style.screenshotWrapper} key={image.id}>
-                  <div className={style.imgWrapper}>
+                <ScreenshotWrapper key={image.fieldValue}>
+                  <ImageContainer>
                     <img src={image.fieldValue} alt={node.frontmatter.title + " made by " + node.frontmatter.author}/>
-                    <div className={style.options}>
-                      <div className={style.optionsWrapper}>
+                    <ImageOptions>
+                      <OptionsWrapper>
                         <a 
-                        className={style.btn}
                         href={image.fieldValue}
                         target="blank"
                         >Full Image</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                      </OptionsWrapper>
+                    </ImageOptions>
+                  </ImageContainer>
+                </ScreenshotWrapper>
               ))}
-            </div>
-          </TabPanel>
+            </ScreenshotContainer>
+          </TabPanell>
           }
-        </Tabs>
+        </Tabbs>
         ))}
-      </section>
+      </Wrapper>
       ))}
 
-    </div>
-    <AniLink 
-    className={style.backButton}
+    </Container>
+    <MobileBackBtn
     to="/themes/"
     cover
-    bg="#0a0a0a"
-    >
+    bg="#0a0a0a">
       <svg xmlns='http://www.w3.org/2000/svg' id='Capa_1' viewBox='0 0 240.823 240.823' width='512' height='512'>
         <path id='Chevron_Right' d='M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179 l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816 C52.942,116.507,52.942,124.327,57.633,129.007z' fill='#FFF' />
       </svg>
-    </AniLink>
+    </MobileBackBtn>
     {themeList.edges.map(({ node }, i) => (
-    <div className={style.helpContainer} key={node.id}>
-        <a data-balloon="Edit this page" data-balloon-pos="left" href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/themes/${kebabCase(node.fields.slug)}.md`} className={style.btn} target="blank">
+    <EditBtn key={node.id}>
+        <a data-balloon="Edit this page" data-balloon-pos="left" href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/themes/${kebabCase(node.fields.slug)}.md`} target="blank">
           <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='459' height='459' viewBox='0 0 459 459'>
               <path d='M0,362.1V459h96.9l280.5-283.05l-96.9-96.9L0,362.1z M451.35,102c10.2-10.2,10.2-25.5,0-35.7L392.7,7.649 c-10.2-10.2-25.5-10.2-35.7,0l-45.9,45.9l96.9,96.9L451.35,102z' id='create' />
           </svg>
         </a>
-    </div>
+    </EditBtn>
     ))}
     {themeList.edges.map(({ node }, i) => (
-    <div className={style.mHeader} key={node.id}>
-      <div className={style.p}>{node.frontmatter.title}</div>
-    </div>
+    <MobileHeader key={node.id}>
+      <Text>{node.frontmatter.title}</Text>
+    </MobileHeader>
     ))}
   </Layout>
 )
@@ -340,4 +213,350 @@ export const themesQuery = graphql`
     ...themeDateSingleFragment
   }
 }
+`
+const Wrapper = styled.section`
+`
+const Tabbs = styled(Tabs)`
+`
+const TabListt = styled(TabList)`
+`
+const Tabb = styled(Tab)`
+`
+const TabPanell = styled(TabPanel)`
+`
+const ContentContainer = styled.div`
+`
+const Content = styled.div`
+`
+const HtmlContent= styled.div`
+`
+const ScreenshotContainer = styled.div`
+`
+const ScreenshotWrapper = styled.div`
+`
+const ImageContainer = styled.div`
+`
+const OptionsWrapper = styled.div`
+`
+const ImageOptions = styled.div`
+`
+const Text = styled.div`
+`
+const Ad = styled.div`
+`
+const MobileBackBtn= styled(AniLink)`
+  position: fixed;
+  top: 22px;
+  left: 17px;
+  z-index: 101;
+  display: block;
+  @media (min-width: 850px) {
+      display: none;
+  }
+  svg {
+      height: 20px;
+      width: 20px;
+  }
+`
+const EditBtn = styled.a`
+  position: fixed;
+  right: 1rem;
+  bottom: 2.5rem;
+  z-index: 100;
+  @media (min-width: 850px) {
+      right: 1.5rem;
+      bottom: 1rem;
+  }
+  a {
+      display: block;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: ${variable.SiteColor};
+      color: #fff;
+      text-align: center;
+      line-height: 2.5rem;
+      border-radius: 50%;
+      transition: all linear 250ms;
+      box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 3px -2px #ffffff;
+      font-size: 1.3rem;
+      &:hover {
+          box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 3px -2px #ffffff;
+          background-color: ${darken(0.1,variable.SiteColor)};
+      }
+      svg {
+          height: 17px;
+          width: 17px;
+          fill: #fff;
+          margin: 0 auto;
+          top: -3px;
+          position: relative;
+      }
+  }
+`
+const MobileHeader = styled.div`
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  display: block;
+  color: #fff;
+  background-color: #0a0a0a;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: -4px 0px 8px 0px black;
+  div {
+      width: calc(100% - 4rem);
+      display: block;
+      margin: 0 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 0.7rem;
+  }
+  @media (min-width: 850px) {
+      display: none;
+  }
+`
+
+const Container = styled.div`
+  display: block;
+  flex-direction: column;
+  @media (min-width: 850px) {
+      display: flex;
+      flex-direction: row;
+  }
+  ${Wrapper} {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: unset;
+    @media (min-width: 850px) {
+        flex: 4;
+        padding-left: 14.8rem;
+        padding-left: unset;
+
+    }
+    ${Tabbs} {
+      order: 3;
+      ${TabListt} {
+        display: flex;
+        justify-content: center;
+        border-bottom: unset;
+        margin-bottom: unset;
+        margin-left: unset;
+        ${Tabb} {
+          transform: all 250ms linear;
+          margin: calc(1.45rem / 2) 0;
+          padding: .35rem .75rem;
+          text-shadow: 0 1px rgba(255,255,255,0.5);
+          border-radius: 100px;
+          border: 1px solid transparent;
+          font-size: .575rem;
+          font-weight: bold;
+          color: #5f6368;
+          list-style: none;
+          cursor: pointer;
+          &:nth-child(2) {
+            margin-left: 10px;
+          }
+          &:only-child {
+            display: none;
+          }
+          &:hover {
+                color: #000;
+                background-color: rgba(0,0,0,0.1);
+            }
+          &:focus {
+              outline: unset;
+              border: 1px solid ${darken(0.1,variable.SiteColor)};
+              box-shadow: unset;
+          }
+          &:focus::after {
+              display: none;
+          }
+          &[class*="selected"] {
+            color: #fff;
+            box-shadow: unset;
+            text-shadow: unset;
+            background-color: ${variable.SiteColor};
+          }
+        }
+      }
+      ${TabPanell} {
+        /*width: calc(100% - 75px);*/
+        margin: 0 auto;
+        @media (min-width: 850px) {
+          /*width: calc(100% - 300px);*/
+        }
+        ${ContentContainer} {
+          display: flex;
+          order: 4;
+          flex-direction: column;
+          max-height: 100%;
+          overflow: auto;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 3.1rem;
+          @media (min-width: 850px) {
+              padding-bottom: unset;
+            }
+            ${Content} {
+              display: block;
+              width: calc(100% - 75px);
+              margin: 0 auto;
+              padding-top: 1.1rem;
+              /*padding-bottom: 2.1rem;*/
+              word-break: break-all;
+              flex-direction: column;
+              font-size: 0.67rem;
+              @media (min-width: 850px) {
+                  width: calc(100% - 300px);
+                  display: flex;
+              }
+            ${HtmlContent} {
+              display: block;
+              word-break: break-word;
+              a:not([class*="anchor"]) {
+                display: inline-block;
+                transition: color 250ms, text-shadow 250ms;
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+                position: relative;
+                z-index: 0;
+                line-height: 1rem;
+                &:after {
+                  position: absolute;
+                  z-index: -1;
+                  bottom: -1px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  content: '';
+                  width: 100%;
+                  height: 3px;
+                  background-color: ${variable.SiteColor};
+                  transition: all 250ms;
+                }
+                &:hover {
+                  color: #fff;
+                  opacity: 1;
+                  background-color: transparent;
+                &::after {
+                    height: 110%;
+                    width: 110%;
+                  }
+                }
+              }
+            }
+          }
+        }
+        ${ScreenshotContainer} {
+          display: flex;
+          padding: 0.7rem 0;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: calc(100% - 75px);
+          margin: 0 auto;
+          @media (min-width: 850px) {
+              justify-content: space-between;
+              width: calc(100% - 300px);
+          }
+          ${ScreenshotWrapper} {
+            display: block;
+            width: 16.7rem;
+            box-shadow: rgba(102, 51, 153, 0.1) 0px 4px 10px;
+            border-radius: 2px;
+            transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+            position: relative;
+            height: 100%;
+            flex-basis: 11rem;
+            margin-bottom: 1rem;
+            &:hover {
+              ${ImageContainer} {
+                &::before {
+                  opacity: 1;
+                  pointer-events: all;
+                }
+                ${ImageOptions} {
+                  opacity: 1;
+                  ${OptionsWrapper} {
+                    pointer-events: all;
+                  }
+                }
+              }
+            }
+            ${ImageContainer} {
+              display: flex;
+              &::before {
+                content: "";
+                display: block;
+                background: rgba(0, 0, 0, 0.6);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+                z-index: 1;
+              }
+              img {
+                height: 100%;
+                width: 100%;
+                border-radius: 2px;
+                margin: unset;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+              }
+            }
+            ${ImageOptions} {
+              position: absolute;
+              top: 0px;
+              width: 100%;
+              height: 100%;
+              z-index: 1;
+              flex-direction: column;
+              justify-content: center;
+              transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+              display: flex;
+              opacity: 0;
+              pointer-events: none;
+              ${OptionsWrapper} {
+                  display: flex;
+                  flex-direction: column;
+                  a {
+                      margin: 0 auto;
+                      text-align: center;
+                      display: -webkit-inline-box;
+                      flex: 1 1;
+                      background-color: ${variable.SiteColor};
+                      border-radius: 25px;
+                      padding: .3rem .6rem;
+                      font-weight: 400;
+                      color: #fff;
+                      font-size: .7rem;
+                      transition: 250ms linear background-color;
+                      &:hover {
+                          background-color: ${darken(0.1,variable.SiteColor)};
+                      }
+                      &:first-child {
+                          margin-bottom: 15px;
+                      }
+                      &:nth-child(2) {
+                          background-color: grey;
+                          cursor: not-allowed;
+                      }
+                  }
+              }
+          }
+          }
+        }
+      }
+    }
+  }
+  ${Ad} {
+    order: 3;
+    display: block;
+  }
 `

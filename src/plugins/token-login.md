@@ -10,7 +10,7 @@ discord_server:
 tags: 
 software: [EnhancedDiscord]
 thumbnail: https://i.imgur.com/O0pRT6O.png
-previews:
+previews: [https://i.imgur.com/O0pRT6O.png]
 dependency:
 status: Updated
 auto: true
