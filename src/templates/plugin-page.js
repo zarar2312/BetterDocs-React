@@ -281,8 +281,6 @@ const Edit = styled.a`
 `
 const Tabbs = styled(Tabs)`
 `
-const BackButton = styled(AniLink)`
-`
 const Ad = styled.div`
 `
 const TopHeader = styled.div`
@@ -520,22 +518,22 @@ const Container = styled.div`
       }
     }
   }
-  ${BackButton} {
-    position: fixed;
-    top: 22px;
-    left: 17px;
-    z-index: 101;
-    display: block;
-    @media (min-width: 850px) {
-        display: none;
-    }
-    svg {
-        height: 20px;
-        width: 20px;
-    }
+`
+const BackButton = styled(AniLink)`
+  position: fixed;
+  top: 22px;
+  left: 17px;
+  z-index: 101;
+  display: block;
+  @media (min-width: 850px) {
+      display: none;
   }
-  ${Ad} {
-    order: 3;
-    display: block;
+  svg {
+      height: 20px;
+      width: 20px;
   }
+}
+${Ad} {
+  order: 3;
+  display: block;
 `

@@ -139,7 +139,7 @@ const Tag = styled(Link)`
       }
   }
   &:active, &:focus {
-      background-color: darken(${variable.SiteColor}, 7%);
+      background-color: ${darken(0.1,variable.SiteColor)};
       color: #fff;
   }
   div {
