@@ -268,7 +268,7 @@ const Content = styled.div`
       flex: 3;
       flex-direction: column;
   }
-  a:not([class*="MissingContainer"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
+  a:not([class*="SoftwareIcon"]):not([class*="MissingContainer"]):not([class*="Svg"]):not([class*="bar__Tag"]):not(.icon):not([class*="Btn"]):not([class*="ImageContainer"]) {
     display: inline-block;
     transition: color 250ms, text-shadow 250ms;
     color: #000;
