@@ -7,7 +7,6 @@ github_profile_url: https://github.com/l0c4lh057/
 github_source_url: https://github.com/l0c4lh057/Minespoiler
 support: https://github.com/l0c4lh057/Minespoiler/issues
 discord_server:
-tags:
 software: [BandagedBD,BetterDiscord]
 thumbnail: 
 previews:

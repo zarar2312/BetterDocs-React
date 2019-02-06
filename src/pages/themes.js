@@ -12,8 +12,8 @@ import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { rgba, darken } from "polished"
 import FeaturedCard from '../components/themes/featured-card'
-import AdSense from 'react-adsense';
 import LazyLoad from "react-lazyload"
+import TagsBar from '../components/themes/tags'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -96,6 +96,9 @@ const Themes = (props) => {
         </Upload>
       </TitleBar>
     </TitleBarHeadroom>
+      <TagsBar
+      tagsArray={themeList.group}
+      />
       <Content>
           <Wrapper>
           {themeList.edges.map(({ node }, i) => (
@@ -137,7 +140,7 @@ export default Themes;
 export const allThemesQuery = graphql`
 query allThemesQuery {
   allMarkdownRemark(filter: {collection: {eq: "themes"} } sort: { fields: [frontmatter___title], order: ASC}) {
-    group(field: collection) {
+    group(field: frontmatter___tags) {
       fieldValue
       totalCount
     }
@@ -567,7 +570,7 @@ const Container = styled.div`
         display: block;
         width: calc(100% - 75px);
         margin: 0 auto;
-        padding-top: 1.1rem;
+        padding-top: 0.1rem;
         padding-bottom: 3.1rem;
         word-break: break-all;
         flex-direction: row;
@@ -576,6 +579,7 @@ const Container = styled.div`
         @media (min-width: 850px) {
           display: flex;
           padding: 2.1rem 0;
+          padding-top: 0.1rem;
         }
       }
     }

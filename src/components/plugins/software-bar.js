@@ -93,10 +93,10 @@ const Tag = styled(Link)`
   color: #000;
   border-right: 1px solid #eee;
   &:first-child {
-      border-left: 1px solid #eee;
+    border-left: 1px solid #eee;
   }
   &:hover {
-      background-color: #eee;
+    background-color: #eee;
   }
   &.active {
       background-color: ${variable.SiteColor};

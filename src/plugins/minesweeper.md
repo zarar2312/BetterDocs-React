@@ -7,7 +7,6 @@ github_profile_url: https://github.com/21Joakim/
 github_source_url: https://github.com/21Joakim/pc-minesweeper
 support: https://github.com/21Joakim/pc-minesweeper/issues
 discord_server:
-tags:
 software: [PowerCord]
 thumbnail: https://i.imgur.com/vayt1UX.gif
 previews: [https://i.imgur.com/vayt1UX.gif]

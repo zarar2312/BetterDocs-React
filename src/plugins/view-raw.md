@@ -7,7 +7,6 @@ github_profile_url: https://github.com/jakuski/
 github_source_url: https://github.com/jakuski/ed_plugins/tree/master/ViewRaw
 support: https://github.com/jakuski/ed_plugins/issues
 discord_server:
-tags:
 software: [EnhancedDiscord]
 thumbnail: https://i.imgur.com/vfHLeyL.gif
 previews: [https://i.imgur.com/vfHLeyL.gif]

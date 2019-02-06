@@ -7,7 +7,6 @@ github_profile_url: https://github.com/Cr3atable/
 github_source_url: https://github.com/Cr3atable/EDPlugins/blob/master/token_login.js
 support: https://github.com/Cr3atable/EDPlugins/issues
 discord_server:
-tags: 
 software: [EnhancedDiscord]
 thumbnail: https://i.imgur.com/O0pRT6O.png
 previews: [https://i.imgur.com/O0pRT6O.png]

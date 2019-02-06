@@ -7,7 +7,6 @@ github_profile_url: https://github.com/Metalloriff/
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/BetterEmoteSizes.plugin.js
 support: 'https://discord.gg/yNqzuJa'
 discord_server: https://discord.gg/INVITE
-tags:
 software: [BandagedBD, BetterDiscord]
 previews: [https://i.imgur.com/AlJppKY.gif, https://i.imgur.com/H7uR6em.gif]
 thumbnail: https://i.imgur.com/AlJppKY.gif
