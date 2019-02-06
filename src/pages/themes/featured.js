@@ -11,6 +11,7 @@ import Card from 'src/components/themes/card'
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
+import LazyLoad from "react-lazyload"
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -55,6 +56,7 @@ const FeaturedThemes = (props) => {
         <Main>
             <Wrapper>
             {featuredList.edges.map(({ node }, i) => (
+            <LazyLoad key={node.id} height="10rem">
               <Card
               title={node.frontmatter.title} 
               thumbnail={node.frontmatter.thumbnail}
@@ -65,9 +67,9 @@ const FeaturedThemes = (props) => {
               excerpt={node.excerpt}
               demo={node.frontmatter.demo}
               style={node.frontmatter.style}
-              key={node.id}
               featured= {node.frontmatter.featured}
               />
+            </LazyLoad>
             ))}
           </Wrapper>
         </Main>

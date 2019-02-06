@@ -9,6 +9,7 @@ import Card from '../components/themes/tags-card'
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
+import LazyLoad from "react-lazyload"
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -48,19 +49,20 @@ const Tagss = ({ pageContext, data }) => {
             <Wrapper>
           {edges.map(({ node }) => {
           return (
-            <Card
-            title={node.frontmatter.title} 
-            thumbnail={node.frontmatter.thumbnail}
-            slug={node.fields.slug}
-            status={node.frontmatter.status}
-            tags={node.frontmatter.tags}
-            author={node.frontmatter.author}
-            excerpt={node.excerpt}
-            demo={node.frontmatter.demo}
-            style={node.frontmatter.style}
-            key={node.id}
-            featured= {node.frontmatter.featured}
-            />
+            <LazyLoad key={node.id} height="10rem">
+              <Card
+              title={node.frontmatter.title} 
+              thumbnail={node.frontmatter.thumbnail}
+              slug={node.fields.slug}
+              status={node.frontmatter.status}
+              tags={node.frontmatter.tags}
+              author={node.frontmatter.author}
+              excerpt={node.excerpt}
+              demo={node.frontmatter.demo}
+              style={node.frontmatter.style}
+              featured= {node.frontmatter.featured}
+              />
+            </LazyLoad>
           )
         })}
         </Wrapper>

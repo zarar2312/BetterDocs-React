@@ -13,6 +13,7 @@ import * as variable from '../styles/variables'
 import { rgba, darken } from "polished"
 import FeaturedCard from '../components/themes/featured-card'
 import AdSense from 'react-adsense';
+import LazyLoad from "react-lazyload"
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -57,12 +58,14 @@ const Themes = (props) => {
       </FeaturedBar>
       <FeaturedContainer>
         {featuredList.edges.map(({ node }, i) => (
-        <FeaturedCard 
+        <LazyLoad key={node.id} height="6rem">
+          <FeaturedCard 
           key={node.id}
           title={node.frontmatter.title}
           thumbnail={node.frontmatter.thumbnail}
           slug={node.fields.slug}
           author={node.frontmatter.author}/>
+        </LazyLoad>
         ))}
         <LastCard to="/themes/featured/">
         <ThumbnailContainer>
@@ -96,19 +99,20 @@ const Themes = (props) => {
       <Content>
           <Wrapper>
           {themeList.edges.map(({ node }, i) => (
-            <Card
-            title={node.frontmatter.title} 
-            thumbnail={node.frontmatter.thumbnail}
-            slug={node.fields.slug}
-            status={node.frontmatter.status}
-            tags={node.frontmatter.tags}
-            author={node.frontmatter.author}
-            excerpt={node.excerpt}
-            demo={node.frontmatter.demo}
-            style={node.frontmatter.style}
-            key={node.id}
-            featured= {node.frontmatter.featured}
-            />
+            <LazyLoad key={node.id} height="10rem">
+              <Card
+              title={node.frontmatter.title} 
+              thumbnail={node.frontmatter.thumbnail}
+              slug={node.fields.slug}
+              status={node.frontmatter.status}
+              tags={node.frontmatter.tags}
+              author={node.frontmatter.author}
+              excerpt={node.excerpt}
+              demo={node.frontmatter.demo}
+              style={node.frontmatter.style}
+              featured= {node.frontmatter.featured}
+              />
+            </LazyLoad>
           ))}
           <AdSense.Google
             client='ca-pub-1998206533560539'
@@ -207,7 +211,7 @@ const Wrapper = styled.div`
 `
 const UploadBtn = styled(Link)`
 `
-const HelpBtn = styled(Link)`
+const HelpBtn = styled.a`
 `
 
 const Container = styled.div`

@@ -14,6 +14,7 @@ import Bg from '../images/header-bg.svg'
 import Folder from '../images/Folder.png'
 import * as variable from '../styles/variables'
 import { darken } from 'polished'
+import LazyLoad from "react-lazyload"
 //import { ResultList } from '@appbaseio/reactivesearch'
 
 const Plugins = (props) => { 
@@ -195,16 +196,18 @@ const Plugins = (props) => {
         <Cards
         >
         {pluginList.edges.map(({ node }) => (
-          <Card 
-          title={node.frontmatter.title} 
-          thumbnail={node.frontmatter.thumbnail}
-          slug={node.fields.slug}
-          status={node.frontmatter.status}
-          tags={node.frontmatter.tags}
-          author={node.frontmatter.author}
-          excerpt={node.excerpt}
-          softwares={node.frontmatter.software}
-          key={node.id}/>
+          <LazyLoad key={node.id} height="11rem">
+            <Card 
+            title={node.frontmatter.title} 
+            thumbnail={node.frontmatter.thumbnail}
+            slug={node.fields.slug}
+            status={node.frontmatter.status}
+            tags={node.frontmatter.tags}
+            author={node.frontmatter.author}
+            excerpt={node.excerpt}
+            softwares={node.frontmatter.software}
+            key={node.id}/>
+          </LazyLoad>
         ))}
         </Cards>
       </Main>

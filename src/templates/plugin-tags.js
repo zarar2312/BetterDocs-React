@@ -9,6 +9,7 @@ import Card from '../components/plugins/card'
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { darken } from 'polished'
+import LazyLoad from "react-lazyload"
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -42,16 +43,18 @@ const Tagss = ({ pageContext, data }) => {
         <Main>
           <Cards>
           {edges.map(({ node }) => (
-            <Card 
-            title={node.frontmatter.title} 
-            thumbnail={node.frontmatter.thumbnail}
-            slug={node.fields.slug}
-            status={node.frontmatter.status}
-            tags={node.frontmatter.tags}
-            author={node.frontmatter.author}
-            excerpt={node.excerpt}
-            softwares={node.frontmatter.software}
-            key={node.id}/>
+            <LazyLoad key={node.id} height="11rem">
+              <Card 
+              title={node.frontmatter.title} 
+              thumbnail={node.frontmatter.thumbnail}
+              slug={node.fields.slug}
+              status={node.frontmatter.status}
+              tags={node.frontmatter.tags}
+              author={node.frontmatter.author}
+              excerpt={node.excerpt}
+              softwares={node.frontmatter.software}
+              key={node.id}/>
+            </LazyLoad>
           ))}
           </Cards>
         </Main>
