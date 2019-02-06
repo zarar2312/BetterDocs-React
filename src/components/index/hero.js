@@ -1,5 +1,6 @@
 import React from 'react'
-import preview from 'src/images/discord-comparison.png'
+import previewJpg from 'src/images/discord-comparison.jpg'
+import previewWebp from 'src/images/discord-comparison.webp'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Bg from 'src/images/header-bg.svg'
@@ -28,7 +29,10 @@ const Hero = () => (
         <LazyLoad once={true} height="100%"
                 placeholder={<img src={Loading} alt="Loading"
             />}>
-            <img src={preview} alt="Discord Themes Preview"/>
+            <picture>
+                <source srcSet={previewWebp} type="image/webp"/>
+                <img src={previewJpg} alt="Discord Themes Preview"/>
+            </picture>
         </LazyLoad>
     </ImageContainer>
   </Container>
