@@ -4,9 +4,11 @@ import { Link } from 'gatsby'
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 //import { darken } from 'polished'
+import { createGlobalStyle } from 'styled-components'
 
 const Footer = () => (
   <FooterContainer>
+    <GlobalStyle />
     <Wave 
     preserveAspectRatio='none' 
     width='1920'
@@ -148,7 +150,6 @@ const FooterContainer = styled.footer`
     position: relative;
     border-top: 1px solid #eee;
     font-size: 0.7rem;
-    box-shadow: 0px 0px 40px 15px #fff;
     background-color: #fff;
     ${Wave} {
         bottom: 0;
@@ -287,4 +288,52 @@ const FooterContainer = styled.footer`
             }
         }
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+  [mode="dark"] {
+    ${FooterContainer} {
+        border-color: #222327;
+        background-color: #222327;
+        ${Wave} {
+          ${Blob} {
+                fill: #fff;
+            }
+        }
+        ${Container} {
+            ${List} {
+                > ${Item} {
+                    ${Paragraph} {
+                    }
+                    ${CategoryHeader} {
+                        color: #eee;
+                    }
+                    ${SubList} {
+                        > ${SubItem} {
+                            ${SubLink}, ${Suba} {
+                                color: #999;
+                                &:hover {
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+                > ${FirstItem}, > ${LastItem} {
+                    ${Paragraph} {
+                        color: #999;
+                    }
+                    ${CategoryHeader} {
+                        color: #eee;
+                    }
+                    ${SubList} {
+                    }
+                    ${Suba} {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
 `

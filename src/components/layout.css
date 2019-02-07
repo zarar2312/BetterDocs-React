@@ -13,7 +13,7 @@ html {
   backface-visibility: hidden;
   /*background-color: #222327;*/
 }
-html[class*="dark"], html[id*="dark"] {
+html[class*="dark"], html[id*="dark"], html[mode="dark"] {
   background-color: #222327;
 }/*
 @media only screen and (min-width: 1600px) {
@@ -86,10 +86,10 @@ a.decorated {
   z-index: 0;
   line-height: 1rem;
 }
-[class*="dark"] a.decorated, [id*="dark"] a.decorated {
+[mode*="dark"] a.decorated {
   display: inline-block;
   transition: color 250ms, text-shadow 250ms;
-  color: #000;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
   position: relative;
@@ -728,4 +728,8 @@ body::-webkit-scrollbar {
 }
 .siteLogo {
   width: 3.75rem;
+}
+
+[mode="dark"] [class*="LightSwitch"] {
+  filter: grayscale();
 }

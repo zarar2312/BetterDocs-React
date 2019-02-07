@@ -12,6 +12,7 @@ import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
 import LazyLoad from "react-lazyload"
+import { createGlobalStyle } from 'styled-components'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -32,6 +33,7 @@ const FeaturedThemes = (props) => {
         <meta property="og:url" content="https://betterdocs.us/themes/" />
     </Helmet>
     <Container>
+    <GlobalStyle />
       <Content>
       <TitleBarHeadroom disableInlineStyles>
         <TitleBar>
@@ -144,10 +146,8 @@ const Container = styled.div`
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     max-height: unset;
-    background-color: #fff;
     @media (min-width: 850px) {
       max-height: unset;
-      background: #fff;
     }
     &::-webkit-scrollbar-button {
       display: none;
@@ -409,4 +409,50 @@ const HelpContainer = styled.div`
         background-color: ${darken(0.1, variable.SiteColor)};
     }
   }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${Container} {
+    background-color: #222327;
+    ${Content} {
+      ${TitleBarHeadroom} {
+        ${TitleBar} {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          background-color: #222327;
+          ${Search} {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #eee;
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.6);
+            }
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.07);
+            }
+            &:active,
+            &:focus {
+              background-color: rgba(255, 255, 255, 0.05);
+            }
+          }
+          ${Help} {
+            color: rgba(255,255,255, 0.5);
+            &:hover {
+              color: #fff;
+            }
+          }
+          ${Upload} {
+            svg {
+              fill: #fff;            
+            }
+          }
+        }
+      }
+      ${Main} {
+        a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 `

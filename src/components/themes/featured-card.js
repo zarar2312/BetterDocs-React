@@ -7,11 +7,13 @@ import Loading from 'src/images/Loading.gif'
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 import { rgba } from 'polished'
+import { createGlobalStyle } from 'styled-components'
 
 const themeFeaturedCard = ({title, thumbnail, author, slug}) => (
     <Card
         to={"/themes" + slug}>
-          <ThumbnailContainer>
+        <GlobalStyle />
+        <ThumbnailContainer>
             {thumbnail ?
             <LazyLoad once={true} height="100%"
               placeholder={<Thumbnail alt={title} title="Loading Thumbnail" src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
@@ -20,7 +22,7 @@ const themeFeaturedCard = ({title, thumbnail, author, slug}) => (
             :
             <Thumbnail alt={title} title="Missing Thumbnail" src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
             }
-          </ThumbnailContainer>
+        </ThumbnailContainer>
         <Title>{title}</Title>
     </Card>
 )
@@ -116,4 +118,14 @@ const Card = styled(Link)`
         display: -webkit-inline-box;
         font-size: 0.65rem;
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${Card} {
+        ${Title} {
+            color: #eee;
+        }
+    }
+}
 `

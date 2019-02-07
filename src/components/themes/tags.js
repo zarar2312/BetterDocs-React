@@ -5,10 +5,12 @@ import { Link } from "gatsby"
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 import { rgba } from "polished"
+import { createGlobalStyle } from 'styled-components'
 
 const TagsPage = ({tagsArray}) => {
   return (
     <Container>
+    <GlobalStyle />
     <Helmet title="Tags Page" />
         <Tags><span>Tags:</span>
           {tagsArray.map(tag => (
@@ -62,4 +64,19 @@ const Container = styled.div`
             }
         }
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+    ${Container} {
+        ${Tags} {
+            color: #fff;
+            ${Tagg} {
+                background-color: #18191c;
+                border-color: #18191c;
+                color: #ccc;
+            }
+        }
+    }
+}
 `

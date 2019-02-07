@@ -14,6 +14,7 @@ import { rgba, darken } from "polished"
 import FeaturedCard from '../components/themes/featured-card'
 import LazyLoad from "react-lazyload"
 import TagsBar from '../components/themes/tags'
+import { createGlobalStyle } from 'styled-components'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -26,6 +27,7 @@ const Themes = (props) => {
   
   return (
   <Layout>
+    <GlobalStyle />
     <Helmet>
         <meta charSet="utf-8" />
         <title>BetterDocs | #1 Discord Themes</title>
@@ -212,7 +214,7 @@ const HelpBtn = styled.a`
 
 const Container = styled.div`
   display: block;
-  background-color: transparent;
+  background-color: #fff;
   flex-direction: row;
   @media (min-width: 850px) {
     display: flex;
@@ -222,7 +224,6 @@ const Container = styled.div`
     flex-direction: column;
     display: none;
     overflow: hidden;
-    background-color: #fff;
     @media (min-width: 850px) {
         display: flex;
     }
@@ -281,14 +282,18 @@ const Container = styled.div`
             }
         }
         ${Publish} {
-            margin-right: 15px;
-            ${PublishBtn} {
-              padding: 0.4rem 0.6rem;
-              background-color: ${variable.SiteColor};
-              color: #fff;
-              border-radius: 3px;
-              display: -webkit-inline-box;
-              font-size: 0.69rem;
+          margin-right: 15px;
+          ${PublishBtn} {
+            padding: 0.4rem 0.6rem;
+            background-color: ${variable.SiteColor};
+            color: #fff;
+            border-radius: 3px;
+            display: -webkit-inline-box;
+            font-size: 0.69rem;
+            transition: 250ms ease-in-out;
+            &:hover {
+              background-color: ${darken(0.1, variable.SiteColor)};
+            }
           }
         }
       }
@@ -426,8 +431,8 @@ const Container = styled.div`
         }
       }
       ${TitleBar} {
-        background-color: #fff;
         border-bottom: 1px solid #f5f3f7;
+        background-color: #fff;
         display: flex;
         flex-direction: row;
         padding: 0.42rem 0.62rem;
@@ -510,10 +515,8 @@ const Container = styled.div`
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
       max-height: unset;
-      background-color: #fff;
       @media (min-width: 850px) {
         max-height: unset;
-        background: #fff;
       }
       &::-webkit-scrollbar-button {
         display: none;
@@ -593,7 +596,6 @@ const UploadContainer = styled.div`
   z-index: 100;
   color: #fff;
   font-size: 10px;
-  width: 100%;
   pointer-events: none;
   @media (min-width: 850px) {
       display: none;
@@ -643,4 +645,65 @@ const HelpContainer = styled.div`
         background-color: ${darken(0.1, variable.SiteColor)};
     }
   }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${Container} {
+    background-color: #222327;
+    ${FeaturedSection} {
+      background-color: #18191c;
+      ${FeaturedContainer} {
+        &::after {
+            content: "";
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #18191c 100%);
+        }
+        ${LastCard} {
+          ${ThumbnailContainer} {
+            border-color: #131318;
+            background-color: #131318;
+          }
+        }
+      }
+    }
+    ${ContainerSection} {
+      ${TitleBarHeadroom} {
+        ${TitleBar} {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          background-color: #222327;
+          ${Search} {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #eee;
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.6);
+            }
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.07);
+            }
+            &:active,
+            &:focus {
+              background-color: rgba(255, 255, 255, 0.05);
+            }
+          }
+          ${Help} {
+            color: rgba(255,255,255, 0.5);
+            &:hover {
+              color: #fff;
+            }
+          }
+          ${Upload} {
+            svg {
+              fill: #fff;            
+            }
+          }
+        }
+      }
+      ${Content} {
+        a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 `

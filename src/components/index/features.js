@@ -3,9 +3,11 @@ import { Link } from 'gatsby'
 //import style from 'src/styles/featured.module.scss'
 import styled from 'styled-components';
 //import * as variable from 'src/styles/variables'
+import { createGlobalStyle } from 'styled-components'
 
 const Features = () => (
         <Container>
+            <GlobalStyle />
             <Cards>
                 <Card to="/plugins/discord-crypt/">
                     <ImageContainer>
@@ -221,4 +223,34 @@ const Container = styled.section`
             }
         }
     }
+`
+const GlobalStyle = createGlobalStyle`
+  [mode="dark"] {
+    ${Container} {
+        background-color: #222327;
+        ${Cards} {
+            ${Card} {
+                background-color: #202225;
+                border-color: #18191c;
+                &:hover {
+                    -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.4);
+                    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.4);
+                }
+                &:active, &:focus {
+                    background-color: #171718;
+                    border-color: #171718;
+                    outline: unset;
+                }
+                ${Title} {
+                    color: #fff;
+                }
+                ${Paragraph} {
+                    p {
+                        color: #b9bbbe;
+                    }
+                }
+            }
+        }
+    }
+}
 `

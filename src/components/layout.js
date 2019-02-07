@@ -10,10 +10,9 @@ import './layout.css'
 //import ad from '../styles/ad.module.scss'
 import Announcement from './announcement';
 //import Logo from "../images/mobile.png"
-
 //<link rel="manifest" href="/site.webmanifest"/>
-var time = new Date().getHours();
-
+//var time = new Date().getHours();
+//<html lang="en" class={0 <= time&&time < 7 && "dark"} id={17 <= time&&time < 24 && "dark"} /> 
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -52,7 +51,7 @@ const Layout = ({ children }) => (
             <meta name="msapplication-TileColor" content="#0a0a0a"/>
             <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
             <meta name="theme-color" content="#0a0a0a"/>
-            <html lang="en" class={0 <= time&&time < 7 && "dark"} id={17 <= time&&time < 24 && "dark"} />
+
           </Helmet>
           <Header siteTitle={data.site.siteMetadata.title} />
           <Announcement />

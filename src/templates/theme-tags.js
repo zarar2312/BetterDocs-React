@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
 import LazyLoad from "react-lazyload"
+import { createGlobalStyle } from 'styled-components'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -24,6 +25,7 @@ const Tagss = ({ pageContext, data }) => {
   return (
     <Layout>
     <Container>
+    <GlobalStyle />
       <Content>
       <TitleBarHeadroom disableInlineStyles>
         <TitleBar>
@@ -46,26 +48,26 @@ const Tagss = ({ pageContext, data }) => {
       </TitleBarHeadroom>
 
         <Main>
-            <Wrapper>
-          {edges.map(({ node }) => {
-          return (
-            <LazyLoad key={node.id} height="10rem">
-              <Card
-              title={node.frontmatter.title} 
-              thumbnail={node.frontmatter.thumbnail}
-              slug={node.fields.slug}
-              status={node.frontmatter.status}
-              tags={node.frontmatter.tags}
-              author={node.frontmatter.author}
-              excerpt={node.excerpt}
-              demo={node.frontmatter.demo}
-              style={node.frontmatter.style}
-              featured= {node.frontmatter.featured}
-              />
-            </LazyLoad>
-          )
-        })}
-        </Wrapper>
+          <Wrapper>
+            {edges.map(({ node }) => {
+              return (
+                <LazyLoad key={node.id} height="10rem">
+                  <Card
+                  title={node.frontmatter.title} 
+                  thumbnail={node.frontmatter.thumbnail}
+                  slug={node.fields.slug}
+                  status={node.frontmatter.status}
+                  tags={node.frontmatter.tags}
+                  author={node.frontmatter.author}
+                  excerpt={node.excerpt}
+                  demo={node.frontmatter.demo}
+                  style={node.frontmatter.style}
+                  featured= {node.frontmatter.featured}
+                  />
+                </LazyLoad>
+              )
+            })}
+          </Wrapper>
         </Main>
       </Content>
 
@@ -116,15 +118,10 @@ export const pageQuery = graphql`
 `
 
 const Content = styled.section`
-
 `
-
 const Wrapper = styled.div`
-
 `
-
 const Main = styled.div`
-
 `
 
 const Container = styled.div`
@@ -146,14 +143,12 @@ const Container = styled.div`
   ${Main} {
     display: flex;
     order: 1;
-    flex-direction: column; //max-height: 26em;
+    flex-direction: column;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     max-height: unset;
-    background-color: #fff;
     @media (min-width: 850px) {
       max-height: unset;
-      background: #fff;
     }
     &::-webkit-scrollbar-button {
       display: none;
@@ -384,7 +379,7 @@ const UploadContainer = styled.div`
   }
 `
 
-const HelpBtn = styled(Link)`
+const HelpBtn = styled.a`
 
 `
 
@@ -415,4 +410,50 @@ const HelpContainer = styled.div`
         background-color: ${darken(0.1, variable.SiteColor)};
     }
   }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${Container} {
+    background-color: #222327;
+    ${Content} {
+      ${TitleBarHeadroom} {
+        ${TitleBar} {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          background-color: #222327;
+          ${Search} {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #eee;
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.6);
+            }
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.07);
+            }
+            &:active,
+            &:focus {
+              background-color: rgba(255, 255, 255, 0.05);
+            }
+          }
+          ${Help} {
+            color: rgba(255,255,255, 0.5);
+            &:hover {
+              color: #fff;
+            }
+          }
+          ${Upload} {
+            svg {
+              fill: #fff;            
+            }
+          }
+        }
+      }
+      ${Main} {
+        a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 `
