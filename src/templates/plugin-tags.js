@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { darken } from 'polished'
 import LazyLoad from "react-lazyload"
+import { createGlobalStyle } from 'styled-components'
 
 const Tagss = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -20,6 +21,7 @@ const Tagss = ({ pageContext, data }) => {
 
   return (
     <Layout>
+      <GlobalStyle />
       <Helmet>
         <meta charSet="utf-8" />
         <title>BetterDocs | #1 Discord Plugins</title>
@@ -110,6 +112,7 @@ export const pageQuery = graphql`
 const Container = styled.div`
   display: block;
   flex-direction: row;
+  background-color: #f1f1f1;
   @media (min-width: 850px) {
       display: flex;
       position: initial;
@@ -134,7 +137,6 @@ const Content = styled.section`
 
 const Hero = styled.div`
   padding: 40px 80px;
-  background-color: #f1f1f1;
 `
 
 const HeroTitle = styled.div`
@@ -163,7 +165,6 @@ const Input = styled.input`
   font-size: 0.8rem;
   border: 1px solid #d4d4d5;
   box-shadow: 2px 2px 5px rgba(0,0,0,.1);
-  //font-weight: 500;
   font-family: sans-serif;
   border-right: 0;
   border-radius: 0;
@@ -229,7 +230,6 @@ const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #f1f1f1;
   padding: 25px 0;
   overflow: hidden;
   @media (min-width: 850px) {
@@ -295,4 +295,32 @@ const HelpBtn = styled.div`
           background-color: ${darken(0.1, variable.SiteColor)};
       }
   }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${Container} {
+    background-color: #36393f;
+    ${Content} {
+      a:not([class*="SoftwareIcon"]):not([class*="MissingContainer"]):not([class*="Svg"]):not([class*="bar__Tag"]):not(.icon):not([class*="Btn"]):not([class*="ImageContainer"]) {
+        color: #fff;
+      }
+      ${Hero} {
+        ${HeroTitle} {
+          color: #eee;
+        }
+        ${SearchContainer} {
+          ${Input} {
+            background-color: #18191c;
+            border-color: #18191c;
+            color: #eee;
+          }
+        }
+      }
+      ${Main} {
+        
+      }
+    }
+  }
+}
 `
