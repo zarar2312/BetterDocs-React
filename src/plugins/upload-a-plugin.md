@@ -26,7 +26,7 @@ I promise it doesn't take long :)
   support:
   discord_server: https://discord.gg/INVITE
   tags: []
-  software: [BandagedBD,EnhancedDiscord,DiscordInjections,BetterDiscord]
+  software: [BandagedBD,EnhancedDiscord,DiscordInjections,PowerCord,BetterDiscord]
   thumbnail:
   previews: [Direct link to image, Direct link to image]
   dependency: [URL, URL]
