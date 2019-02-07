@@ -2,11 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 //import style from '../styles/more.module.scss'
 import styled from 'styled-components';
-
+import { createGlobalStyle } from 'styled-components'
 import Layout from '../components/layout'
+import * as variable from '../styles/variables'
 
 const IndexPage = () => (
   <Layout>
+    <GlobalStyle />
     <Container>
         <Wrapper>
             <Header>
@@ -91,4 +93,31 @@ const Container = styled.div`
             }
         }
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+    ${Container} {
+        background-color: #222327;
+        ${Header} {
+            span {
+                color: #fff;
+            }
+        }
+        ${Wrapper} {
+            background-color: #18191c;
+            ${Tab} {
+                &:hover {
+                    background-color: #141517;
+                }
+                svg {
+                    fill: ${variable.SiteColor};
+                }
+                ${TabName} {
+                    color: #eee;
+                }
+            }
+        }
+    }
+}
 `

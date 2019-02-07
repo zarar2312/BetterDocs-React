@@ -11,6 +11,7 @@ import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { darken } from 'polished'
 import LazyLoad from "react-lazyload"
+import { createGlobalStyle } from 'styled-components'
 
 const Software = ({ pageContext, data }) => {
   const { softwares } = pageContext
@@ -21,6 +22,7 @@ const Software = ({ pageContext, data }) => {
   
   return (
     <Layout>
+      <GlobalStyle />
       <Helmet>
         <meta charSet="utf-8" />
         <title>BetterDocs | #1 Discord Plugins</title>
@@ -124,6 +126,7 @@ export const pluginSoftware = graphql`
 const Container = styled.div`
   display: block;
   flex-direction: row;
+  background-color: #f1f1f1;
   @media (min-width: 850px) {
       display: flex;
       position: initial;
@@ -181,7 +184,7 @@ const Content = styled.section`
 
 const Hero = styled.div`
   padding: 40px 80px;
-  background-color: #f1f1f1;
+  background-color: transparent;
 `
 
 const HeroTitle = styled.div`
@@ -272,7 +275,6 @@ const Main = styled.div`
 `
 
 const Details = styled.div`
-  background-color: #f1f1f1;
   display: flex;
   padding: 0 55px;
 `
@@ -286,7 +288,6 @@ const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #f1f1f1;
   padding: 25px 0;
   overflow: hidden;
   @media (min-width: 850px) {
@@ -352,4 +353,36 @@ const HelpBtn = styled.div`
           background-color: ${darken(0.1, variable.SiteColor)};
       }
   }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${Container} {
+    background-color: #36393f;
+    ${Content} {
+      a:not([class*="SoftwareIcon"]):not([class*="MissingContainer"]):not([class*="Svg"]):not([class*="bar__Tag"]):not(.icon):not([class*="Btn"]):not([class*="ImageContainer"]) {
+        color: #fff;
+      }
+      ${Hero} {
+        ${HeroTitle} {
+          color: #eee;
+        }
+        ${SearchContainer} {
+          ${Input} {
+            background-color: #18191c;
+            border-color: #18191c;
+            color: #eee;
+          }
+        }
+      }
+      ${Main} {
+        ${Details} {
+          ${Header} {
+            color: rgba(255,255,255,0.9);
+          }
+        }
+      }
+    }
+  }
+}
 `

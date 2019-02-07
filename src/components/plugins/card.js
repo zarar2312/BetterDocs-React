@@ -397,6 +397,11 @@ const GlobalStyle = createGlobalStyle`
                 color: #b9bbbe;
             }
         }
+        ${TagsContainer} {
+            ${Tagg} {
+                color: rgba(255, 255, 255, 0.4) !important;
+            }
+        }
     }
 }
 `
