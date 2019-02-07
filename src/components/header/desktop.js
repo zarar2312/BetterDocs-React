@@ -131,19 +131,24 @@ const LightSwitchTab = styled.div`
     position: absolute;
     right: 3.2rem;
     top: 0.35rem;
-    display: flex;
+    display: none;
     ${Switch} {
         height: 1rem;
         width: 1rem;
         background-color: transparent;
         border: unset;
         background-image: url(${Light});
+        background-repeat: no-repeat;
+        background-position: center;
         &:hover {
             cursor: pointer;
         }
         &:active, &:focus {
             outline: unset;
         }
+    }
+    @media (min-width: 850px) {
+        display: flex;
     }
 `
 const LightSwitch = styled.div`
@@ -157,6 +162,8 @@ const LightSwitch = styled.div`
         background-color: transparent;
         border: unset;
         background-image: url(${Light});
+        background-repeat: no-repeat;
+        background-position: center;
         &:hover {
             cursor: pointer;
         }
