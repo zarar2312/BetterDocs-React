@@ -590,11 +590,11 @@ const Container = styled.div`
 `
 
 const UploadContainer = styled.div`
-  display: inline;
   position: fixed;
   bottom: 52px;
   z-index: 100;
   color: #fff;
+  width: 100%;
   font-size: 10px;
   pointer-events: none;
   @media (min-width: 850px) {
