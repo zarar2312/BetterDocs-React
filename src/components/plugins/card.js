@@ -12,9 +12,11 @@ import * as variable from 'src/styles/variables'
 import { rgba } from 'polished'
 import styled from 'styled-components';
 import bd from 'src/images/betterdiscord.png'
+import { createGlobalStyle } from 'styled-components'
 
 const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, softwares}) => (
     <Card title={title}>
+    <GlobalStyle />
         {status ?
             <Status title={"Status of " + title + ": " + status}>{status}</Status>
         :
@@ -266,7 +268,7 @@ const SoftwareIcon = styled(Link)`
     }
     &[alt="BandagedBD"] {
         &::before {
-            background-image: url("https://i.imgur.com/u4TrqXF.png");
+            background-image: url("https://i.imgur.com/VcfsLtZ.png");
             height: 0.53rem;
             width: 0.53rem;
             background-size: 100%;
@@ -360,4 +362,41 @@ const TagsContainer = styled.div`
             }
         }
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+    ${Card} {
+        background-color: #18191c;
+        border-color: #18191c;
+        box-shadow: 2px 2px 5px rgba(0,0,0,.1);
+        &:hover {
+            box-shadow: 2px 2px 5px rgba(0,0,0,.25);
+            ${ImageContainer}, ${MissingContainer} {
+                img {
+                    transform: translateY(-3px);
+                    -webkit-filter: drop-shadow(${rgba(variable.SiteColor, 0.5)} 0px 6px 8px);
+                    filter: drop-shadow(${rgba(variable.SiteColor, 0.5)} 0px 8px 10px);
+                }
+            }
+        }
+        ${TitleContainer} {
+            ${Title} {
+                color: #eee;
+            }
+        }
+        ${Details} {
+            ${AuthorContainer} {
+                ${Author} {
+                    color: rgba(255, 255, 255, 0.4) !important;
+                }
+            }
+        }
+        ${DescriptionContainer} {
+            ${DescriptionText} {
+                color: #b9bbbe;
+            }
+        }
+    }
+}
 `

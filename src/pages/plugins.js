@@ -16,6 +16,7 @@ import * as variable from '../styles/variables'
 import { darken } from 'polished'
 import LazyLoad from "react-lazyload"
 //import { ResultList } from '@appbaseio/reactivesearch'
+import { createGlobalStyle } from 'styled-components'
 
 const Plugins = (props) => { 
   const pluginList = props.data.all;
@@ -28,6 +29,7 @@ const Plugins = (props) => {
   
   return (
   <Layout>
+    <GlobalStyle />
     <Helmet>
       <meta charSet="utf-8" />
       <title>BetterDocs | #1 Discord Plugins</title>
@@ -39,16 +41,12 @@ const Plugins = (props) => {
     <Container>
 
     <Content>
-      <Hero
-      >
-        <HeroContainer
-        >
-          <HeroTitle
-          >
+      <Hero>
+        <HeroContainer>
+          <HeroTitle>
           #1 Source for Discord Plugins!
           </HeroTitle> 
-          <HeroSub
-          >
+          <HeroSub>
           Custom JS plugins made by the commuity!
           </HeroSub> 
         </HeroContainer>
@@ -251,6 +249,7 @@ export const allPluginsQuery = graphql`
 const Container = styled.div`
   display: block;
   flex-direction: row;
+  background-color: #f1f1f1;
   @media (min-width: 850px) {
       display: flex;
       position: initial;
@@ -307,7 +306,6 @@ const Content = styled.div`
 `;
 
 const Details = styled.div`
-  background-color: #f1f1f1;
   display: flex;
   padding: 0 55px;
   padding-top: 30px;
@@ -315,7 +313,7 @@ const Details = styled.div`
 
 const DeatilsHeader = styled.div`
   font-size: 0.9rem;
-  color: rgba(#000, 0.8);
+  color: rgba(0,0,0, 0.8);
 `;
 
 const Main = styled.div`
@@ -336,7 +334,6 @@ const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #f1f1f1;
   padding: 25px 0;
   overflow: hidden;
   @media (min-width: 850px) {
@@ -581,4 +578,24 @@ const HelpBtn = styled.div`
           background-color: ${darken(0.1, variable.SiteColor)};
       }
   }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${Container} {
+    background-color: #36393f;
+    ${Content} {
+      a:not([class*="SoftwareIcon"]):not([class*="MissingContainer"]):not([class*="Svg"]):not([class*="bar__Tag"]):not(.icon):not([class*="Btn"]):not([class*="ImageContainer"]) {
+        color: #fff;
+      }
+      ${Main} {
+        ${Details} {
+          ${DeatilsHeader} {
+            color: rgba(255,255,255,0.9);
+          }
+        }
+      }
+    }
+  }
+}
 `
