@@ -12,6 +12,7 @@ thumbnail: 'https://i.imgur.com/wIjnxPA.jpg'
 previews: [https://i.imgur.com/wIjnxPA.jpg]
 auto: true
 status: Updated
+tags: [transparent]
 featured: true
 style: dark
 layout: product

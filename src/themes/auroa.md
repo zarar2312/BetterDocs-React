@@ -11,6 +11,7 @@ demo: https://rawcdn.githack.com/Tropix126/BetterDiscordStuff/abb32123b00063de87
 thumbnail: https://i.imgur.com/dRaGV4u.jpg
 previews: [https://i.imgur.com/dRaGV4u.jpg]
 status: Updated
+tags: [transparent]
 auto: true
 featured: true
 style: dark

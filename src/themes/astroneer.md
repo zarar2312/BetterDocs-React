@@ -12,6 +12,7 @@ thumbnail: https://i.imgur.com/mEJhar8.png
 previews: [https://i.imgur.com/mEJhar8.png]
 status: Updated
 auto: true
+tags: [transparent]
 featured: 
 style: dark
 ghcommentid: # DON'T CHANGE

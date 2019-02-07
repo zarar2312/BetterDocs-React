@@ -11,6 +11,7 @@ demo: 'https://cdn.rawgit.com/satoru8/CleanDark/master/CleanDarkBG.theme.css'
 thumbnail: https://i.imgur.com/ZEiqNoh.png
 previews: [https://i.imgur.com/ZEiqNoh.png]
 auto: true
+tags: [transparent]
 style: dark
 ghcommentid: 10
 layout: product

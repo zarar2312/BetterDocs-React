@@ -11,6 +11,7 @@ demo: https://rawcdn.githack.com/DevilsLynAvenged/DevilsLynAvenged/a52a7fe6798cc
 thumbnail: https://i.imgur.com/pyYIEzp.jpg
 previews: [https://i.imgur.com/pyYIEzp.jpg]
 status: Updated
+tags: [transparent]
 auto: true
 featured:
 style: dark

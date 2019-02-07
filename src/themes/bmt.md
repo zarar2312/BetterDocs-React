@@ -9,7 +9,7 @@ support: https://github.com/PONYMODZ/Discord-stuff/issues
 demo: https://rawcdn.githack.com/PONYMODZ/Discord-stuff/ef31cfc14b750d24a9726dc55da4fac5e98476c1/themes/bmt/BMT.theme.css
 style: dark
 previews: [https://i.imgur.com/BCjMHRN.jpg, https://i.imgur.com/EuknVvR.jpg, https://i.imgur.com/N0eJtcf.jpg, https://i.imgur.com/evEVunz.jpg]
-tags: [pony ,mlp ,bmt]
+tags: [pony ,mlp ,bmt, transparent]
 auto: true
 status: Updated
 thumbnail: https://i.imgur.com/Q69VQFn.png

@@ -11,6 +11,7 @@ thumbnail: https://i.imgur.com/KMss5XV.jpg
 preview: [https://i.imgur.com/KMss5XV.jpg, https://i.imgur.com/u91Qdrl.jpg, https://i.imgur.com/68uXjJv.jpg, https://i.imgur.com/mk4aeVB.jpg, https://i.imgur.com/wfFdhDG.png, https://i.imgur.com/JfGOewi.jpg]
 auto: true
 status: Updated
+tags: [transparent]
 style: dark
 ghcommentid: 102
 layout: product

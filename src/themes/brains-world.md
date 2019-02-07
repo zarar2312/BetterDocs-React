@@ -10,6 +10,7 @@ demo: http://beta.brains-world.eu/download/510/
 thumbnail: https://i.imgur.com/hHbpYyj.jpg
 previews: [https://i.imgur.com/hHbpYyj.jpg]
 status:
+tags: [transparent]
 style: dark
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE

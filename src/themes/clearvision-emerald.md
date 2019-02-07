@@ -12,6 +12,7 @@ thumbnail: https://i.imgur.com/qDuMNXO.jpg
 previews: [https://i.imgur.com/qDuMNXO.jpg]
 auto: true
 status: Updated
+tags: [transparent]
 style: dark
 ghcommentid: 30
 layout: product
