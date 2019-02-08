@@ -121,7 +121,7 @@ return graphql(`{
     // Make tag pages
     tags.forEach(tag => {
       createPage({
-        path: `/themes/tags/${_.kebabCase(tag)}/`,
+        path: `/themes/tag/${_.kebabCase(tag)}/`,
         component: themeTagTemplate,
         context: {
           tag,
@@ -144,7 +144,7 @@ return graphql(`{
     // Make tag pages
     plugintags.forEach(tag => {
       createPage({
-        path: `/plugins/tags/${_.kebabCase(tag)}/`,
+        path: `/plugins/tag/${_.kebabCase(tag)}/`,
         component: pluginTagTemplate,
         context: {
           tag,

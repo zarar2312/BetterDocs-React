@@ -67,7 +67,7 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
         </Description>
         <Tags>
             {tags.map(tag => (
-            <Tag to={`/themes/tags/${kebabCase(tag)}/`} key={tag}>
+            <Tag to={`/themes/tag/${kebabCase(tag)}/`} key={tag}>
                 #{tag}
             </Tag>
             ))}

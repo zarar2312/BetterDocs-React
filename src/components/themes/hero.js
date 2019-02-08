@@ -102,7 +102,7 @@ const ThemePageHero = ({title, thumbnail, status, tags, author, demo, date, gith
                                 {tag.fieldValue === "undefined" ?
                                     null
                                 :
-                                    <Taggg to={`/themes/tags/${kebabCase(tag.fieldValue)}/`}>
+                                    <Taggg to={`/themes/tag/${kebabCase(tag.fieldValue)}/`}>
                                         <div>{tag.fieldValue}</div>
                                     </Taggg>
                                 }

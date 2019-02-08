@@ -14,7 +14,7 @@ const TagsPage = ({tagsArray}) => {
     <Helmet title="Tags Page" />
         <Tags><span>Tags:</span>
           {tagsArray.map(tag => (
-            <Tagg to={`/themes/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>
+            <Tagg to={`/themes/tag/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>
             {tag.fieldValue}
             </Tagg>
           ))}

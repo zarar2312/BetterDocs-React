@@ -111,6 +111,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-autolink-headers`,
+          },
+          {
             resolve: `gatsby-remark-relative-images`,
             options: {
               name: `media` // Must match the source name ^
@@ -123,9 +126,6 @@ module.exports = {
               backgroundColor: 'transparent',
             },
           },
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-          }
         ],
       },
     },

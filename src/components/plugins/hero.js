@@ -76,7 +76,7 @@ const pluginsHero = ({title,npm_i,download,auto,support,github_source_url,gitlab
             {tags &&
             <TagsContainer>
                 {tagsGrouped.map(tag => (
-                <ATag to={`/plugins/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>
+                <ATag to={`/plugins/tag/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>
                 {tag.fieldValue} <span>{tag.totalCount}</span>
                 </ATag>
                 ))}

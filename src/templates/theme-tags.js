@@ -11,6 +11,7 @@ import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
 import LazyLoad from "react-lazyload"
 import { createGlobalStyle } from 'styled-components'
+import { Helmet } from "react-helmet";
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -24,6 +25,14 @@ const Tagss = ({ pageContext, data }) => {
 
   return (
     <Layout>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Themes tagged with "{tag}" | BetterDocs</title>
+      <meta property="og:site_name" content="BetterDocs"/>
+      <meta property="og:title" content={`Themes tagged with "` + tag + `" | BetterDocs`}/>
+      <meta property="og:description" content={ totalCount + `themes that are tagged with "` + tag + `". `}/>
+      <meta property="og:url" content="https://betterdocs.us/themes/" />
+    </Helmet>
     <Container>
     <GlobalStyle />
       <Content>

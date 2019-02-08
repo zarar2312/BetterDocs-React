@@ -24,11 +24,11 @@ const Tagss = ({ pageContext, data }) => {
       <GlobalStyle />
       <Helmet>
         <meta charSet="utf-8" />
-        <title>BetterDocs | #1 Discord Plugins</title>
+        <title>Plugins tagged with "{tag}" | BetterDocs</title>
         <meta property="og:site_name" content="BetterDocs"/>
-          <meta property="og:title" content="BetterDocs | #1 Discord Plugins"/>
-          <meta property="og:description" content="List of free high quality Discord plugins by the community! Modify your Discord to your own liking with advanced plugins!"/>
-          <meta property="og:url" content="https://betterdocs.us/plugins/" />
+        <meta property="og:title" content={`Plugins tagged with "` + tag + `" | BetterDocs`}/>
+        <meta property="og:description" content={ totalCount + `plugins that are tagged with "` + tag + `". `}/>
+        <meta property="og:url" content="https://betterdocs.us/plugins/" />
       </Helmet>
       <Container>
   
