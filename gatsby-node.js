@@ -206,6 +206,14 @@ return graphql(`{
         })
     })
 
+    createPage({
+      path: "index/amp",
+      component: path.resolve(`src/templates/index.amp.js`),
+      context: {
+        
+      }
+    });
+
     })
 }
 // Adds 'collection' to node

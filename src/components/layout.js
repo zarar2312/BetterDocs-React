@@ -53,7 +53,7 @@ const Layout = ({ children }) => (
             <meta name="msapplication-TileColor" content="#0a0a0a"/>
             <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
             <meta name="theme-color" content="#0a0a0a"/>
-
+            <meta name="viewport" content="minimum-scale=1" />
           </Helmet>
           <Header siteTitle={data.site.siteMetadata.title} />
           <Announcement />
