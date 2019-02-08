@@ -15,6 +15,7 @@ import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { darken } from "polished"
 import Alerts from '../components/themes/theme-page-alerts'
+import { createGlobalStyle } from 'styled-components'
 
 /*
 {node.frontmatter.profile_picture ?
@@ -34,6 +35,7 @@ const Themes = (props) => {
 
   return (
   <Layout>
+    <GlobalStyle />
     {themeList.edges.map(({ node }, i) => (
     <Helmet
       key={node.id}
@@ -358,6 +360,7 @@ const Container = styled.div`
           color: #5f6368;
           list-style: none;
           cursor: pointer;
+          text-shadow: unset;
           &:nth-child(2) {
             margin-left: 10px;
           }
@@ -574,4 +577,36 @@ const Container = styled.div`
     order: 3;
     display: block;
   }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${Container} {
+    background-color: #36393f;
+    ${Wrapper} {
+      ${Tabbs} {
+        ${TabListt} {
+          ${Tabb} {
+            color: #8a8a8a;
+            &:hover {
+                color: #fff;
+            }
+            &[class*="selected"] {
+              color: #fff;
+            }
+          }
+        }
+        ${TabPanell} {
+          ${ContentContainer} {
+            ${Content} {
+              ${HtmlContent} {
+                color: #eee;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 `

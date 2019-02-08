@@ -142,7 +142,7 @@ const Container = styled.div`
   ${Main} {
     display: flex;
     order: 1;
-    flex-direction: column; //max-height: 26em;
+    flex-direction: column;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     max-height: unset;
@@ -414,11 +414,11 @@ const HelpContainer = styled.div`
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
   ${Container} {
-    background-color: #222327;
+    background-color: #36393f;
     ${Content} {
       ${TitleBarHeadroom} {
         ${TitleBar} {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          border-bottom: 1px solid #222327;
           background-color: #222327;
           ${Search} {
             background-color: rgba(255, 255, 255, 0.1);

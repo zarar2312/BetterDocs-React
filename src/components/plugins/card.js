@@ -370,7 +370,9 @@ const GlobalStyle = createGlobalStyle`
         background-color: #18191c;
         border-color: #18191c;
         box-shadow: 2px 2px 5px rgba(0,0,0,.1);
-        &:hover {
+        &:hover, &:focus, &:active {
+            background-color: #131417;
+            border-color: #131417;
             box-shadow: 2px 2px 5px rgba(0,0,0,.25);
             ${ImageContainer}, ${MissingContainer} {
                 img {
