@@ -30,7 +30,7 @@ const Tagss = ({ pageContext, data }) => {
       <title>Themes tagged with "{tag}" | BetterDocs</title>
       <meta property="og:site_name" content="BetterDocs"/>
       <meta property="og:title" content={`Themes tagged with "` + tag + `" | BetterDocs`}/>
-      <meta property="og:description" content={ totalCount + `themes that are tagged with "` + tag + `". `}/>
+      <meta property="og:description" content={ "There are " + totalCount + ` Discordapp themes that are tagged with "` + tag + `". `}/>
       <meta property="og:url" content="https://betterdocs.us/themes/" />
     </Helmet>
     <Container>
