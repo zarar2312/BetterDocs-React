@@ -406,8 +406,8 @@ const Cards = styled.div`
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
     ${Cards} {
-        background-color: #18191c;
-        border-color: #18191c;
+        background-color: #222327;
+        border-color: #222327;
         &:last-child {
         margin-bottom: unset;
         }

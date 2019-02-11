@@ -367,8 +367,8 @@ const TagsContainer = styled.div`
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
     ${Card} {
-        background-color: #18191c;
-        border-color: #18191c;
+        background-color: #222327;
+        border-color: #222327;
         box-shadow: 2px 2px 5px rgba(0,0,0,.1);
         &:hover, &:focus, &:active {
             background-color: #131417;
