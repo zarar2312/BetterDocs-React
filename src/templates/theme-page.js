@@ -600,7 +600,17 @@ const GlobalStyle = createGlobalStyle`
           ${ContentContainer} {
             ${Content} {
               ${HtmlContent} {
-                color: #eee;
+                color: #cacaca;
+                a, h1, h2, h3, h4, h5, strong {
+                  color: #fff;
+                }
+                p {
+                  color: #cacaca;
+                }
+                pre, code {
+                  background-color: #222327;
+                  color: #fff;
+                }
               }
             }
           }
