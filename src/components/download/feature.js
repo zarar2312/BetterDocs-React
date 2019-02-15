@@ -3,13 +3,16 @@ import React from 'react'
 import 'src/styles/tooltips.css'
 import Tooltip from 'src/components/download/tooltip'
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const downloadThemes = ({name, tooltiptext, disabled, tooltip}) => (
-    <Feature disabled={disabled === "true" && true}>{name}
+    <Feature title={disabled === "true" && "This mod doesn't support this feature."} disabled={disabled === "true" && true}>{name}
     {tooltip === "true" &&
         <Tooltip
         text={tooltiptext}/> 
-    }</Feature>
+    }
+    <GlobalStyle />
+    </Feature>
 )
 
 export default downloadThemes
@@ -28,4 +31,14 @@ const Feature = styled.div`
     &:last-child {
         border-bottom: unset;
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+    ${Feature} {
+        &[disabled] {
+            color: rgba(255,255,255,0.3) !important;
+        }
+    }
+}
 `

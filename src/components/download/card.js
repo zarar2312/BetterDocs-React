@@ -5,9 +5,11 @@ import 'src/styles/tooltips.css'
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 import { darken } from "polished"
+import { createGlobalStyle } from 'styled-components'
 
 const downloadCard = ({children, title, download}) => (
 <Card target="blank" alt={title}>
+<GlobalStyle />
     <Header>
         <Title>{title}</Title>
         <Wave height='100' id='Layer_1' preserveAspectRatio='none' viewBox='0 0 300 100' width='300' xmlns='http://www.w3.org/2000/svg'>
@@ -344,4 +346,24 @@ const Card = styled.div`
         }
       }
   }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+    ${Card} {
+      border-color: #151515;
+        &[alt="BandagedBD"] {
+            border: 1px solid ${variable.BandagedBD};
+            order: 1;
+        }
+        ${Footer} {
+            border-color: #151515;
+        }
+        ${Wave} {
+            path {
+                fill: #222327;
+            }
+        }
+    }
+}
 `
