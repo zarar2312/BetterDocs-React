@@ -9,6 +9,7 @@ support: https://github.com/Inve1951/BetterDiscordStuff/issues
 thumbnail: https://i.imgur.com/Dn18CxA.jpg
 previews: [https://i.imgur.com/Dn18CxA.jpg]
 status: Updated
+auto: true
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 36
 layout: product
