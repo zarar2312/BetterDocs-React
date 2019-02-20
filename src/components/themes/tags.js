@@ -1,6 +1,6 @@
 import React from "react"
 import kebabCase from "lodash/kebabCase"
-import Helmet from "react-helmet"
+//import Helmet from "react-helmet"
 import { Link } from "gatsby"
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
@@ -11,7 +11,6 @@ const TagsPage = ({tagsArray}) => {
   return (
     <Container>
     <GlobalStyle />
-    <Helmet title="Tags Page" />
         <Tags><span>Tags:</span>
           {tagsArray.map(tag => (
             <Tagg to={`/themes/tag/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>

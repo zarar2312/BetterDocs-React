@@ -114,7 +114,7 @@ const Themes = (props) => {
               author={node.frontmatter.author}
               excerpt={node.excerpt}
               demo={node.frontmatter.demo}
-              style={node.frontmatter.style}
+              mode={node.frontmatter.style}
               featured= {node.frontmatter.featured}
               />
             </LazyLoad>
