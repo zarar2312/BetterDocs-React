@@ -15,6 +15,8 @@ import FeaturedCard from '../components/themes/featured-card'
 import LazyLoad from "react-lazyload"
 import TagsBar from '../components/themes/tags'
 import { createGlobalStyle } from 'styled-components'
+import ThemesImg from "../images/themes-min.png"
+import Bg from 'src/images/header-bg.svg'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -37,6 +39,19 @@ const Themes = (props) => {
         <meta property="og:url" content="https://betterdocs.us/themes/" />
     </Helmet>
     <Container>
+    <Hero>
+      <HeroHeader>
+        Reinvent Discord your way!
+      </HeroHeader>
+      <HeroBg>
+        
+      </HeroBg>
+    </Hero>
+    <Wave>
+      <svg preserveAspectRatio='none' width='1920'viewBox='0 0 1920 330' >
+        <path d='M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z' />
+      </svg>
+    </Wave>
     <FeaturedSection>
       <FeaturedBar>
         <First>
@@ -211,6 +226,14 @@ const UploadBtn = styled(Link)`
 `
 const HelpBtn = styled.a`
 `
+const Hero = styled.div`
+`
+const HeroHeader = styled.h1`
+`
+const HeroBg = styled.div`
+`
+const Wave = styled.div`
+`
 
 const Container = styled.div`
   display: block;
@@ -219,6 +242,69 @@ const Container = styled.div`
   @media (min-width: 850px) {
     display: flex;
     flex-direction: column;
+  }
+  ${Hero} {
+    display: flex;
+    padding: 20px;
+    padding-bottom: unset;
+    flex-direction: column;
+    background-color: #7289DA;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: "";
+      background-image: url(${Bg});
+      background-size: 38%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: unset;
+      transform: unset;
+      box-shadow: inset 0px -40px 103px -15px ${variable.SiteColor};
+      top: unset;
+      bottom: unset;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+    ${HeroHeader} {
+      text-align: center;
+      margin-bottom: -70px;
+      z-index: 1;
+      @media (min-width: 850px) {
+        margin-bottom: unset;
+      }
+    }
+    ${HeroBg} {
+      background-image: url("${ThemesImg}");
+      height: calc(100vh - 50px);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 1;
+      background-position: center;
+      margin-bottom: -70px;
+      transition: 300ms linear;
+      @media (min-width: 850px) {
+        margin-bottom: unset;
+        height: calc(100vh - 120px);
+      }
+    }
+  }
+  ${Wave} {
+    height: 20vh;
+    position: relative;
+    background-color: #fff;
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: rotate(180deg);
+      path {
+        fill: ${variable.SiteColor};
+        animation-play-state: running;
+        animation: blobAnimation 75s linear infinite alternate;
+      }
+    }
   }
   ${FeaturedSection} {
     flex-direction: column;
@@ -651,6 +737,9 @@ const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
   ${Container} {
     background-color: #36393f;
+    ${Wave} {
+      background-color: #18191c;
+    }
     ${FeaturedSection} {
       background-color: #18191c;
       ${FeaturedContainer} {
@@ -704,6 +793,14 @@ const GlobalStyle = createGlobalStyle`
         }
       }
     }
+  }
+  @keyframes blobAnimation {
+    0% {
+      d: path("M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z"); }
+    50% {
+      d: path("M-60.13579,199.189799 C-33.8674767,-71.7287911 170.194454,11.9640675 274.985105,83.0972992 C379.775756,154.230531 409.072181,161.653171 521.54913,124.460269 C634.026079,87.2673683 645.348165,219.42808 735.152853,199.189799 C824.95754,178.951518 948.262228,46.7601116 1120.26223,87.5101116 C1292.26223,128.260112 1309.89513,321.347957 1414.0631,291.472957 C1518.23106,261.597957 1580.53259,89.5639434 1732.07052,88.5665294 C1892.57296,87.5101116 1897.70372,225.708266 2049.59054,199.189799 C2201.47736,172.671332 2002.94707,336.794682 2002.94707,336.794682 L270.563429,337.025114 L-60.13579,337.025114 C-60.13579,337.025114 -469.886827,134.917309 -282.099858,188.146862 C-190.171235,214.204685 -65.9645849,259.30515 -60.13579,199.189799 Z"); }
+    to {
+      d: path("M-160.553381,263.533987 C-124.4955,243.377988 -18.6139605,181.080724 56.456352,264.385412 C131.526664,347.690099 165.148428,226.409513 223.668826,168.5 C282.189224,110.590487 372.68516,208.331261 462.489847,188.09298 C552.294535,167.854699 723.262827,-40.1656225 847.424394,40.7522734 C971.58596,121.670169 1156.59375,252.295176 1300.40314,228.958726 C1444.21253,205.622277 1478.90991,106.221579 1563.51957,124.699258 C1655.80276,144.85274 1595.69955,250.007434 1832.41793,206.740235 C2069.1363,163.473036 2002.94707,336.794682 2002.94707,336.794682 L270.563429,337.025114 L-60.13579,337.025114 C-60.13579,337.025114 -495.794798,256.512987 -308.007829,309.74254 C-216.079206,335.800362 -208.740043,290.469854 -160.553381,263.533987 Z"); } 
   }
 }
 `
