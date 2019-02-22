@@ -41,8 +41,14 @@ const Themes = (props) => {
     <Container>
     <Hero>
       <HeroHeader>
-        Reinvent Discord your way!
+        Start customizing your Discordapp with our
       </HeroHeader>
+      <Big>
+        best themes
+      </Big>
+      <Small>
+        on Windows / MAC OS / Linux
+      </Small>
       <HeroBg>
         
       </HeroBg>
@@ -234,6 +240,10 @@ const HeroBg = styled.div`
 `
 const Wave = styled.div`
 `
+const Big = styled.h2`
+`
+const Small = styled.h3`
+`
 
 const Container = styled.div`
   display: block;
@@ -248,19 +258,19 @@ const Container = styled.div`
     padding: 20px;
     padding-bottom: unset;
     flex-direction: column;
-    background-color: #7289DA;
+    background-color: #0a0a0a;
     overflow: hidden;
     position: relative;
     &::before {
       content: "";
-      background-image: url(${Bg});
+      /*background-image: url(${Bg});*/
       background-size: 38%;
       position: absolute;
       width: 100%;
       height: 100%;
       border-radius: unset;
       transform: unset;
-      box-shadow: inset 0px -40px 103px -15px ${variable.SiteColor};
+      /*box-shadow: inset 0px -40px 103px -15px ${variable.SiteColor};*/
       top: unset;
       bottom: unset;
       left: 0;
@@ -269,11 +279,25 @@ const Container = styled.div`
     }
     ${HeroHeader} {
       text-align: center;
-      margin-bottom: -70px;
+      color: #fff;
+      font-weight: normal;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
       z-index: 1;
-      @media (min-width: 850px) {
-        margin-bottom: unset;
-      }
+    }
+    ${Big} {
+      color: ${variable.SiteColor};
+      font-weight: bold;
+      text-transform: capitalize;
+      text-align: center;
+      font-size: 3.3rem;
+    }
+    ${Small} {
+      font-size: 0.4rem;
+      font-weight: normal;
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 4px;
     }
     ${HeroBg} {
       background-image: url("${ThemesImg}");
@@ -300,7 +324,7 @@ const Container = styled.div`
       height: 100%;
       transform: rotate(180deg);
       path {
-        fill: ${variable.SiteColor};
+        fill: #0a0a0a;
         animation-play-state: running;
         animation: blobAnimation 75s linear infinite alternate;
       }
