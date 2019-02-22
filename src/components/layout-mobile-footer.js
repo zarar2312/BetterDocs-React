@@ -41,12 +41,12 @@ const Layout = ({ children }) => (
           <meta property="og:description" content="A Discord enhancement project. Free quality Themes, Plugins and Hacks for Discord and easy installation instructions for BetterDiscord and more!"/>
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://betterdocs.us" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0a0a0a"/>
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+          <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
+          <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
+          <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#0a0a0a"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
           <meta name="msapplication-TileColor" content="#0a0a0a"/>
-          <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
+          <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png"/>
           <meta name="theme-color" content="#0a0a0a"/>
           
         </Helmet>
