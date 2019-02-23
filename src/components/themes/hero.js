@@ -139,7 +139,7 @@ const ThemePageHero = ({title, thumbnail, status, tags, author, demo, date, gith
             </DownloadBtn>
         }
         {demo &&
-        <DemoBtn alt="disabled" href={'http://betterdocs.netlify.com/demo/' + style + '.html?theme=' + demo} target="blank" data-balloon="Disabled" data-balloon-pos="left">Demo</DemoBtn>
+        <DemoBtn href={'https://betterdocs.us/preview/' + style + '.html?theme=' + demo + "?no-cache=1"} target="blank" data-balloon={"Quick Preview of " + title } data-balloon-pos="left">Demo</DemoBtn>
         }
         {support && 
         <SupportBtn href={support} target="blank">Report an issue</SupportBtn>

@@ -35,9 +35,9 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
             target="blank"
             >Full Thumbnail</Btn>
             {demo &&
-            <DisabledBtn
-            href={'http://betterdocs.netlify.com/demo/' + mode + '.html?theme=' + demo}
-            target="blank">Quick Demo</DisabledBtn>
+            <Btn
+            href={'https://betterdocs.us/preview/' + mode + '.html?theme=' + demo + "?no-cache=1"}
+            target="blank">Quick Demo</Btn>
             }
         </Options>
         </ImageContainer>
@@ -287,7 +287,7 @@ const Cards = styled.div`
         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
         display: flex;
         opacity: 0;
-        pointer-events: none;
+        /*pointer-events: none;*/
         ${Btn} {
             margin: 0 auto;
             text-align: center;
@@ -303,14 +303,10 @@ const Cards = styled.div`
             &:hover {
                 background-color: ${darken(0.1, variable.SiteColor)};
             }
-            &:first-child {
-            }
-            &:nth-child(2) {
-                background-color: grey;
-                cursor: not-allowed;
-            }
         }
         ${DisabledBtn} {
+            background-color: grey;
+            cursor: not-allowed;
             margin: 0 auto;
             text-align: center;
             display: -webkit-inline-box;
