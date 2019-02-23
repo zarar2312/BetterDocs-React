@@ -62,7 +62,7 @@ const Card = styled(Link)`
     background-color: #202225;
     background-color: transparent;
     border: 1px solid transparent;
-    transition-duration: 800ms;
+    transition: 700ms ease-in-out;
     margin: 0 auto;
     margin-bottom: 1rem;
     width: 100%;
@@ -76,10 +76,27 @@ const Card = styled(Link)`
     &:first-child {
         margin-left: -10rem;
     }
+    ${ImageContainer} {
+            img {
+                transition: 300ms ease-in-out, box-shadow 200ms ease-in-out;
+                box-shadow: 0px 0px 0px 0px transparent;
+            }
+        }
     &:hover {
         ${ImageContainer} {
             img {
-                transform: scale(1);
+                transform: matrix3d(0.94, 0, 0.34, 0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px) scale(1);
+                box-shadow: -15px 17px 30px -3px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+    &:nth-child(odd) {
+        &:hover {
+            ${ImageContainer} {
+                img {
+                    transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px) scale(1);
+                    box-shadow: 15px 17px 30px -3px rgba(0, 0, 0, 0.3);
+                }
             }
         }
     }

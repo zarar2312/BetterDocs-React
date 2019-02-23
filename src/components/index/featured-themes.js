@@ -103,13 +103,14 @@ const Container = styled.section`
 `
 const Overflow = styled.div`
     overflow: hidden;
-    margin-bottom: 1.48rem;
+    padding-bottom: 1.18rem;
+    padding-top: 0.4rem;
     z-index: 4;
 `
 const Cards = styled.div`
     display: flex;
     z-index: 3;
-    overflow: auto;
+    /*overflow: auto;*/
     -webkit-overflow-scrolling: touch;
     margin: 0 auto;
     @media (min-width: 850px) {
