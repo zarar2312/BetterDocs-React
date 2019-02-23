@@ -335,10 +335,12 @@ const Container = styled.div`
         display: flex;
     }
     ${FeaturedBar} {
-      display: block;
+      display: flex;
+      flex-direction: column;
       padding: 0.62rem 0.82rem;
       @media (min-width: 850px) {
           display: flex;
+          flex-direction: row;
       }
       ${First} {
         flex: 1;
@@ -349,10 +351,13 @@ const Container = styled.div`
           justify-content: center;
           display: flex;
           ${HeaderTitle} {
-            margin-left: 15px;
+            margin-left: unset;
             font-size: 0.85rem;
             color: ${variable.SiteColor};
             font-weight: bold;
+            @media (min-width: 850px) {
+              margin-left: 15px;
+            }
           }
         }
         ${AllContainer} {
@@ -376,7 +381,12 @@ const Container = styled.div`
         flex: 1;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: flex-start;
+        margin-top: 20px;
+        @media (min-width: 850px) {
+          justify-content: flex-end;
+          margin-top: unset;
+        }
         ${Paragraph} {
             margin-right: 15px;
             flex-direction: column;

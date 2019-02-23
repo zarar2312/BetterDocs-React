@@ -42,6 +42,14 @@ const ThumbnailContainer = styled.div`
 const Card = styled(Link)`
     margin-left: 50px;
     flex: 0 0 auto;
+    &:first-child {
+        margin-left: unset;
+    }
+    @media (min-width: 850px) {
+        &:first-child {
+            margin-left: 50px;
+        }
+    }
     &:hover {
         ${ThumbnailContainer} {
             transform: translateY(-3px);
