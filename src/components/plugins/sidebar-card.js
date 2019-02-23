@@ -7,12 +7,14 @@ import 'src/styles/tooltips.css'
 import * as variable from 'src/styles/variables'
 import { rgba } from 'polished'
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const pluginCard = ({title, slug, status, excerpt, author}) => (
     <Card
     activeClassName="active"
     to={'plugins' + slug}
     >
+    <GlobalStyle />
         <Header>
             <Title>
                 {title}
@@ -149,4 +151,48 @@ const Card = styled(Link)`
             margin-bottom: unset;
         }
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+    ${Card} {
+        background-color: #2f3136;
+        border-color: #222327;
+        border-left-color: transparent;
+        &:hover {
+            background-color: ${rgba(variable.SiteColor, 0.1)};
+        }
+        &.active {
+            border-left: 4px solid ${variable.SiteColor};
+            background-color: #27292e;
+            ${Header} {
+                ${Title} {
+                    color: ${variable.SiteColor};
+                }
+                ${Author} {
+                    color: ${variable.SiteColor};
+                }
+            }
+            ${Description} {
+                ${Paragraph} {
+                    color: rgba(255, 255, 255, 0.92);
+                }
+            }
+        }
+        ${Header} {
+            ${Title} {
+                color: rgba(255, 255, 255, 0.92);
+            }
+            ${Author} {
+                color: rgba(255, 255, 255, 0.54);
+            }
+        }
+        ${Description} {
+            display: flex;
+            ${Paragraph} {
+                color: rgba(255, 255, 255, 0.54);
+            }
+        }
+    }
+}
 `

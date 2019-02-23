@@ -18,6 +18,7 @@ import Hero from '../components/plugins/hero'
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { darken } from 'polished'
+import { createGlobalStyle } from 'styled-components'
 
 const Plugins = (props) => {
   const pluginList = props.data.listPlugins;
@@ -52,6 +53,7 @@ const Plugins = (props) => {
     </Helmet>
     ))}
     <Container>
+    <GlobalStyle />
     {pluginList.edges.map(({ node }, i) => (
       <Wrapper key={node.id}>
         <Alerts
@@ -282,6 +284,8 @@ const Edit = styled.a`
 const Tabbs = styled(Tabs)`
 `
 const Ad = styled.div`
+  order: 3;
+  display: block;
 `
 const TopHeader = styled.div`
   position: fixed;
@@ -546,8 +550,50 @@ const BackButton = styled(AniLink)`
       height: 20px;
       width: 20px;
   }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${Container} {
+      background-color: #36393f;
+      ${Wrapper} {
+          ${DependencyContainer} {
+              background-color: #2f3136;
+              border-bottom: 2px solid #222327;
+              ${Header} {
+                  color: #fff;
+              }
+          }
+          ${Content} {
+              color: #cfcfcf;
+              pre {
+                  padding: 1rem;
+                  line-height: 0.8rem;
+                  background-color: rgba(#000, 0.2);
+                  code {
+                      line-height: 0.8rem;
+                      background-color: transparent;
+                  }
+              }
+              code {
+                  background-color: rgba(#000, 0.2);
+              }
+              a {
+                  color: #fff !important;
+              }
+              ${Footer} {
+                  border-color: #222327 !important;
+                  ${Edit} {
+                      svg {
+                          fill: #fff;
+                      }
+                  }
+              }
+              [class="anchor"] {
+                  fill: #fff;
+              }
+          }
+      }
+  }
 }
-${Ad} {
-  order: 3;
-  display: block;
 `

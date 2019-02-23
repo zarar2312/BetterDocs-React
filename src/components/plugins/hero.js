@@ -7,9 +7,11 @@ import * as variable from 'src/styles/variables'
 import { rgba } from 'polished'
 import styled from 'styled-components';
 //import stylehero from 'src/styles/altHero.module.scss'
+import { createGlobalStyle } from 'styled-components'
 
 const pluginsHero = ({title,npm_i,download,auto,support,github_source_url,gitlab_source_url,npm_source_url,discord_server,tags,SoftwaresGrouped,tagsGrouped,author,status}) => (
     <Hero alt={title}>
+    <GlobalStyle />
         <Container>
         {title && 
             <Header>{title}</Header>
@@ -762,4 +764,135 @@ const Hero = styled.div`
             }
         }
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+    ${Hero} {
+        border-color: #222327;
+        ${Container} {
+            ${Header} {
+                color: #eee;
+            }
+            ${Paragraph} {
+                p {
+
+                }
+                a {
+                    color: #fff;
+                }
+            }
+            ${DetailsContainer} {
+                ${Github} {
+                    &::after {
+                        content: "|";
+                        color: #222327;
+                        position: relative;
+                        top: 2px;
+                        left: 5px;
+                    }
+                }
+                ${Gitlab} {
+                    &::after {
+                        content: "|";
+                        color: #222327;
+                        position: relative;
+                        top: 2px;
+                        left: 5px;
+                    }
+                }
+                ${Npm} {
+                    &::after {
+                        content: "|";
+                        color: #222327;
+                        position: relative;
+                        top: 2px;
+                        left: 5px;
+                    }
+                }
+                ${Discord} {
+                    &::after {
+                        content: "|";
+                        color: #222327;
+                        position: relative;
+                        top: 2px;
+                        left: 5px;
+                    }
+                }
+                ${TagsContainer} {
+                    ${ATag} {
+                        background-color: #2f3136;
+                        border-color: #2f3136;
+                        color: rgba(255, 255, 255, 0.85);
+                    }
+                }
+            }
+            ${SoftwaresContainer} {
+                ${Softwaree} {
+                    background-color: #2f3136;
+                    border-color: #2f3136;
+                    color: rgba(255, 255, 255, 0.85);
+                }
+            }
+            ${StatusContainer} {
+                ${AStatus} {
+                    div {
+                        background-color: #36393f;
+                        &.unknown {
+                            border-color: #00a2ff;
+                            color: #fff;
+                            background-color: #00a2ff;
+                        }
+                        &[class*="Updated"] {
+                            border-color: #00b167;
+                            color: #fff;
+                            background-color: #00b167;
+                        }
+                        &[class*="Outdated"] {
+                            border-color: #da002f;
+                            color: #fff;
+                            background-color: #da002f;
+                        }
+                    }
+                }
+            }
+        }
+        ${Options} {
+            ${SupportBtn} {
+                background-color: #da002f;
+                color: #fff;
+                &:hover {
+                    background-color: #ad0026;
+                    color: #fff;
+                }
+            }
+            .${DemoBtn} {
+                background-color: #36393f;
+                &:hover {
+                    color: darken($siteColor, 7%);
+                    border: 1px solid $siteColor;
+                }
+                &:active, &:focus {
+                    background-color: $siteColor;
+                    border: 1px solid $siteColor;
+                    color: #fff;
+                    opacity: 1;
+                }
+                &[alt="disabled"] {
+                    border-color: grey;
+                    color: grey;
+                    &:hover {
+                        background-color: grey;
+                        color: #fff;
+                    }
+                    &:active, &:focus {
+                        opacity: 0.8;
+                        background-color: grey;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
 `

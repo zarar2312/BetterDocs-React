@@ -3,8 +3,9 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import kebabCase from "lodash/kebabCase"
 import * as variable from 'src/styles/variables'
-import { rgba } from 'polished'
+import { rgba, darken } from 'polished'
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const sidebarSoftware = () => (
     <StaticQuery
@@ -21,6 +22,7 @@ const sidebarSoftware = () => (
   `}
     render={data => (
         <Container>
+            <GlobalStyle />
             <Tag
             activeClassName="active"
             to="/plugins/"
@@ -126,4 +128,27 @@ const Container = styled.div`
             color: ${variable.SiteColor};
         }
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+    ${Container} {
+        ${Tag} {
+            background-color: #44464b;
+            border-color: #44464b;
+            color: rgba(255, 255, 255, 0.85);
+            div {
+                background-color: ${variable.SiteColor};
+                color: #fff;
+            }
+            &.active {
+                color: #fff;
+                border: 1px solid ${rgba(variable.SiteColor, 0.1)};
+                outline: unset;
+                background-color: ${darken(0.1, variable.SiteColor)};
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 1px 0 0px rgba(0, 0, 0, 0.08);
+            }
+        }
+    }
+}
 `

@@ -7,6 +7,7 @@ import Card from 'src/components/plugins/sidebar-card'
 import * as variable from 'src/styles/variables'
 import { rgba } from 'polished'
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const Sidebar = () => (
   <StaticQuery
@@ -24,6 +25,7 @@ const Sidebar = () => (
     render={data => (
       <>
         <AnimHeader downTolerance={5} disableInlineStyles>
+        <GlobalStyle />
           <SidebarContainer>
           <Header>
             <Search 
@@ -159,4 +161,35 @@ display: none;
           max-height: calc(((((100vh - -1.58rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
         }
     }
+`
+
+const GlobalStyle = createGlobalStyle`
+[mode="dark"] {
+  ${SidebarContainer} {
+    background-color: #2f3136;
+    border-color: #2f3136;
+    ${Header} {
+      border-color: #222327;
+    ${Output} {
+      color: #eee;
+    }
+    ${Search} {
+        background: rgba(255, 255, 255, 0.1);
+        color: #eee;
+        border-color: transparent;
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 0.6;
+        }
+        &:hover {
+          background: rgba(255, 255, 255, 0.07);
+        }
+        &:active, &:focus {
+          background: rgba(255, 255, 255, 0.05);
+          outline: unset;
+        }
+      }
+    }
+  }
+}
 `
