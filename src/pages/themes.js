@@ -710,7 +710,7 @@ const Container = styled.div`
 const UploadContainer = styled.div`
   position: fixed;
   bottom: 52px;
-  z-index: 100;
+  z-index: 101;
   color: #fff;
   width: 100%;
   font-size: 10px;
