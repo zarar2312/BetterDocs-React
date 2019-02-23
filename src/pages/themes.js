@@ -301,17 +301,13 @@ const Container = styled.div`
     }
     ${HeroBg} {
       background-image: url("${ThemesImg}");
-      height: calc(100vh - 50px);
+      height: 10rem;
       background-size: contain;
       background-repeat: no-repeat;
       z-index: 1;
       background-position: center;
-      margin-bottom: -70px;
+      margin-bottom: unset;
       transition: 300ms linear;
-      @media (min-width: 850px) {
-        margin-bottom: unset;
-        height: calc(100vh - 120px);
-      }
     }
   }
   ${Wave} {
@@ -320,6 +316,7 @@ const Container = styled.div`
     background-color: #fff;
     svg {
       position: absolute;
+      margin-top: -5px;
       width: 100%;
       height: 100%;
       transform: rotate(180deg);

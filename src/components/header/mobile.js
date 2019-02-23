@@ -85,7 +85,7 @@ const MobileNavigationBar = styled.nav`
   display: flex;
   width: 100%;
   top: unset;
-  z-index: 100;
+  z-index: 101;
   max-width: 100%;
   transition: .2s linear background-color, .2s linear box-shadow;
   background-color: #0a0a0a;
