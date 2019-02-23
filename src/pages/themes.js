@@ -419,6 +419,7 @@ const Container = styled.div`
       display: flex;
       flex-wrap: nowrap;
       overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
       padding: 25px;
       justify-content: space-between;
       width: 100%;
