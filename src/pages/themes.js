@@ -329,7 +329,7 @@ const Container = styled.div`
   }
   ${FeaturedSection} {
     flex-direction: column;
-    display: none;
+    display: flex; /* none */
     overflow: hidden;
     @media (min-width: 850px) {
         display: flex;
