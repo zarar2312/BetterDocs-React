@@ -654,7 +654,7 @@ const Container = styled.div`
       &::-webkit-scrollbar {
         width: 8px;
       }
-      a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
+      a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
         display: inline-block;
         transition: color 250ms, text-shadow 250ms;
         color: #000;

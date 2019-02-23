@@ -15,12 +15,13 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
     <Cards>
         <GlobalStyle />
         { thumbnail ?
-        <ImageContainer to={"themes" + slug} alt={featured && "featured"}
-        >
-        <LazyLoad once={true} height="100%"
-            placeholder={<Thumbnail to={"themes" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
-        <Thumbnail alt={title} src={thumbnail}/>
-        </LazyLoad>
+        <ImageContainer alt={featured && "featured"}>
+            <ThumbnailLink to={"themes" + slug}>
+                <LazyLoad once={true} height="100%"
+                        placeholder={<Thumbnail to={"themes" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                    <Thumbnail alt={title} src={thumbnail}/>
+                </LazyLoad>
+            </ThumbnailLink>
         
         { featured &&
             <FeaturedIcon 
@@ -36,9 +37,9 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
             target="blank"
             >Full Thumbnail</Btn>
             {demo &&
-            <DisabledBtn
-            href={'http://betterdocs.netlify.com/demo/' + mode + '.html?theme=' + demo}
-            target="blank">Quick Demo</DisabledBtn>
+            <Btn
+            href={'https://betterdocs.us/preview/' + mode + '.html?theme=' + demo + "?no-cache=1"}
+            target="blank">Quick Demo</Btn>
             }
         </Options>
         </ImageContainer>
@@ -83,8 +84,9 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
 
 export default themeCard
 
+const ThumbnailLink = styled(Link)` 
+`
 const Btn = styled.a`
-
 `
 
 const DisabledBtn= styled.div`
@@ -201,7 +203,6 @@ const Options = styled.div`
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
     display: flex;
     opacity: 0;
-    pointer-events: none;
     ${Btn} {
         margin: 0 auto;
         text-align: center;
@@ -217,12 +218,6 @@ const Options = styled.div`
         &:hover {
             background-color: ${darken(0.1, variable.SiteColor)};
         }
-        &:first-child {
-        }
-        &:nth-child(2) {
-            background-color: grey;
-            cursor: not-allowed;
-        }
     }
     ${DisabledBtn} {
         margin: 0 auto;
@@ -236,6 +231,8 @@ const Options = styled.div`
         font-size: .6rem;
         transition: 250ms linear background-color;
         align-self: center;
+        background-color: grey;
+        cursor: not-allowed;
         &:hover {
             background-color: grey;
         }
@@ -270,7 +267,7 @@ const FeaturedIcon = styled(Link)`
     }
 `
 
-const ImageContainer = styled(Link)`
+const ImageContainer = styled.div`
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;

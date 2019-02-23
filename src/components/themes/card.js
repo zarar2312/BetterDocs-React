@@ -15,11 +15,13 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
     <Cards>
         <GlobalStyle />
         { thumbnail ?
-        <ImageContainer to={"themes" + slug} alt={featured && "featured"}>
-        <LazyLoad once={true} height="100%"
-            placeholder={<Thumbnail to={"themes" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
-        <Thumbnail alt={title} src={thumbnail}/>
-        </LazyLoad>
+        <ImageContainer alt={featured && "featured"}>
+        <ThumbnailLink to={"themes" + slug}>
+            <LazyLoad once={true} height="100%"
+                    placeholder={<Thumbnail to={"themes" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                <Thumbnail alt={title} src={thumbnail}/>
+            </LazyLoad>
+        </ThumbnailLink>
         
         { featured &&
             <FeaturedIcon 
@@ -110,7 +112,9 @@ const Options = styled.div`
 `
 const FeaturedIcon = styled(Link)`
 `
-const ImageContainer = styled(Link)`
+const ImageContainer = styled.div`
+`
+const ThumbnailLink = styled(Link)` 
 `
 
 const Cards = styled.div`
