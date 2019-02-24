@@ -730,6 +730,7 @@ const Container = styled.div`
           height: 10rem;
           ${AdContainer} {
             margin: 0 auto;
+            width: 100%;
             z-index: 2;
           }
           ${Notice} {
