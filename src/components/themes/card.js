@@ -44,9 +44,9 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
         </Options>
         </ImageContainer>
         :
-        <ImageContainer to="themes/upload-a-theme">
+        <MissingImageContainer to="themes/upload-a-theme">
         <Thumbnail alt={title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
-        </ImageContainer>
+        </MissingImageContainer>
         }
         <div>
             {author &&
@@ -114,6 +114,8 @@ const FeaturedIcon = styled(Link)`
 `
 const ImageContainer = styled.div`
 `
+const MissingImageContainer = styled(Link)`
+`
 const ThumbnailLink = styled(Link)` 
 `
 
@@ -135,7 +137,7 @@ const Cards = styled.div`
         background-color: rgba(0, 0, 0, 0.07);
         box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.28), 0px 0px 1px 0px #d6d6d6;
         border: 1px solid transparent;
-        ${ImageContainer} {
+        ${ImageContainer}, ${MissingImageContainer} {
             box-shadow: ${rgba(variable.SiteColor, 0.5)} 0px 8px 20px;
             transform: translateY(-3px);
             &::before {
@@ -180,7 +182,7 @@ const Cards = styled.div`
             background-color: transparent;
             box-shadow: unset;
             border: unset;
-            ${ImageContainer} {
+            ${ImageContainer}, ${MissingImageContainer} {
                 &::before {
                     content: "";
                     pointer-events: all;
@@ -197,7 +199,7 @@ const Cards = styled.div`
             border: unset;
         }
     }
-    ${ImageContainer} {
+    ${ImageContainer}, ${MissingImageContainer} {
         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
         position: relative;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
@@ -415,7 +417,7 @@ const GlobalStyle = createGlobalStyle`
             background-color: #131417;
             box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.28), 0px 0px 1px 0px #000000;
             border: 1px solid transparent;
-            ${ImageContainer} {
+            ${ImageContainer}, ${MissingImageContainer} {
                 box-shadow: ${rgba(variable.SiteColor, 0.5)} 0px 8px 20px;
                 transform: translateY(-3px);
                 &::before {
@@ -458,7 +460,7 @@ const GlobalStyle = createGlobalStyle`
                 background-color: unset;
             }
         }
-        ${ImageContainer} {
+        ${ImageContainer}, ${MissingImageContainer} {
             box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
             &::before {
                 content: "";

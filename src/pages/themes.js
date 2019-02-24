@@ -17,6 +17,7 @@ import TagsBar from '../components/themes/tags'
 import { createGlobalStyle } from 'styled-components'
 import ThemesImg from "../images/themes-min.png"
 import Bg from 'src/images/header-bg.svg'
+import AdSense from 'react-adsense';
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -124,6 +125,18 @@ const Themes = (props) => {
       />
       <Content>
           <Wrapper>
+          <AdCard>
+            <AdContainer>
+              <AdSense.Google
+                client='ca-pub-1998206533560539'
+                slot='6545618600'
+                style={{ display: 'block' }}
+                format='auto'
+                responsive='true'
+              />
+            </AdContainer>
+            <Notice>Please Disable your AdBlocker. We need revenue for this site to continue to be free!</Notice>
+          </AdCard>
           {themeList.edges.map(({ node }, i) => (
             <LazyLoad key={node.id} height="10rem">
               <Card
@@ -243,6 +256,12 @@ const Wave = styled.div`
 const Big = styled.h2`
 `
 const Small = styled.h3`
+`
+const AdCard = styled.div`
+`
+const AdContainer = styled.div`
+`
+const Notice = styled.div`
 `
 
 const Container = styled.div`
@@ -701,6 +720,25 @@ const Container = styled.div`
           display: flex;
           padding: 2.1rem 0;
           padding-top: 0.1rem;
+        }
+        ${AdCard} {
+          display: flex;
+          flex-basis: 16rem;
+          background-color: transparent;
+          position: relative;
+          ${AdContainer} {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+          }
+          ${Notice} {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            text-align: center;
+          }
         }
       }
     }

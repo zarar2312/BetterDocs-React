@@ -191,8 +191,7 @@ const Plugins = (props) => {
         <Details>
             <DeatilsHeader>{tagHeader}</DeatilsHeader>
         </Details>
-        <Cards
-        >
+        <Cards>
         {pluginList.edges.map(({ node }) => (
           <LazyLoad key={node.id} height="11rem">
             <Card 
