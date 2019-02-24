@@ -726,10 +726,10 @@ const Container = styled.div`
           flex-basis: 16rem;
           background-color: transparent;
           position: relative;
+          max-height: 10rem;
+          height: 10rem;
           ${AdContainer} {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            margin: 0 auto;
             z-index: 2;
           }
           ${Notice} {
