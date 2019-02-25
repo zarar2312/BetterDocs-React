@@ -135,7 +135,7 @@ const Themes = (props) => {
                 responsive='true'
               />
             </AdContainer>
-            <Notice>Please Disable your AdBlocker. We need revenue for this site to continue to be free!</Notice>
+            <Notice></Notice>
           </AdCard>
           {themeList.edges.map(({ node }, i) => (
             <LazyLoad key={node.id} height="10rem">
