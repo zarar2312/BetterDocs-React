@@ -101,6 +101,9 @@ const SoftwareBar = styled.div`
             &:hover {
                 background-color: #eee;
             }
+            &[alt*="BetterDiscord"] {
+                display: none;
+            }
             &.active {
                 background-color: ${variable.SiteColor};
                 color: #fff;
@@ -112,6 +115,7 @@ const SoftwareBar = styled.div`
                 }
                 &[alt*="BetterDiscord"] {
                     background-color: ${variable.BetterDiscord};
+                    display: none;
                     div {
                         background-color: ${darken(0.1,variable.BetterDiscord)};
                     }

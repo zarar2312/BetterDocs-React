@@ -1,15 +1,14 @@
 ---
 title: Account Switcher
-author: Bluscream
-description: Lets you switch between multiple Discord accounts.
-download: https://github.com/Bluscream/BetterDiscord-Plugins-and-Themes/blob/indev/src/plugins/AccountSwitcher.plugin.js
-github_profile_url: https://github.com/Bluscream/
-github_source_url: https://github.com/Bluscream/BetterDiscord-Plugins-and-Themes/blob/indev/src/plugins/AccountSwitcher.plugin.js
-support: https://github.com/Bluscream/BetterDiscord-Plugins-and-Themes/issues
-software: [BandagedBD,BetterDiscord]
-status: Outdated
+author: l0c4lh057
+description: Change your account by pressing AltLeft and a number key
+github_profile: https://github.com/l0c4lh057
+software: [BandagedBD, BetterDiscord]
+discord_server: https://discord.gg/e2QKeAr
+github_source: https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/AccountSwitcher/AccountSwitcher.plugin.js
+download: https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/AccountSwitcher/AccountSwitcher.plugin.js
+support: https://github.com/l0c4lh057/BetterDiscordStuff/issues
+status: Updated
 auto: true
-ghcommentid: # DON'T CHANGE
-layout: product # DON'T CHANGE
 ---
-Lets you switch between multiple Discord accounts.
+Change your account by pressing AltLeft and a number key
