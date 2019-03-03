@@ -7,9 +7,9 @@ import styled from 'styled-components';
 
 const ThemePageAlerts = ({title, slug, status}) => (
     <>
-    {status === "Outdated" &&
+    {status === "Deprecated" &&
         <Alert target="blank" href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins/${kebabCase(slug)}.md`} alt="Warning">
-          <p><b>Warning:</b> This plugin is currently outdated. Only use for development purposes. If this is a mistake please make a PR by clicking me.</p>
+          <p><b>Warning:</b> This plugin is currently Deprecated. Only use for development purposes. If this is a mistake please make a PR by clicking me.</p>
         </Alert>
     }
     {status === null &&

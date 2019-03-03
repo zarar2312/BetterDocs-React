@@ -10,7 +10,7 @@ demo: https://rawcdn.githack.com/taciturasa/Discord-Prism/32331e840e5abb9b81f00c
 thumbnail: https://i.imgur.com/WBneQQ0.jpg
 previews: [https://i.imgur.com/WBneQQ0.jpg]
 auto: true
-status: Outdated
+status: Deprecated
 style: dark
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE

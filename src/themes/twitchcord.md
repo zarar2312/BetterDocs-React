@@ -11,7 +11,7 @@ demo: https://rawcdn.githack.com/twitchcord/twitchcord/71e23438e9c89b6d1818e047e
 thumbnail: https://i.imgur.com/ZcrO1IJ.jpg
 previews: [https://i.imgur.com/ZcrO1IJ.jpg]
 auto: true
-status: Outdated
+status: Deprecated
 style: dark
 ghcommentid: 183
 layout: product

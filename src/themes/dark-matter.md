@@ -10,7 +10,7 @@ demo: https://cdn.jsdelivr.net/gh/cosmicsalad/Discord-Themes-and-Plugins@master/
 thumbnail: https://i.imgur.com/nknPlVt.jpg
 previews: [https://i.imgur.com/nknPlVt.jpg]
 auto: true
-status: Outdated
+status: Deprecated
 style: dark
 ghcommentid: 14
 layout: product

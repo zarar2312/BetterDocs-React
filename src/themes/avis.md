@@ -10,7 +10,7 @@ demo: 'https://cdn.rawgit.com/YuraBrm/BetterDiscordThemes/master/Avis/Avis.theme
 thumbnail: https://i.imgur.com/Hp4Uqrp.jpg
 previews: [https://i.imgur.com/Hp4Uqrp.jpg, https://i.imgur.com/hXOTjcS.png]
 auto: true
-status: Outdated
+status: Deprecated
 tags: [transparent]
 style: dark
 ghcommentid: 5

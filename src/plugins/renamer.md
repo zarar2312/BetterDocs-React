@@ -7,7 +7,7 @@ github_profile_url: 'https://github.com/megamit/'
 github_source_url: 'https://github.com/megamit/repository/tree/gh-pages/renamer'
 support: 'https://github.com/megamit/repository/issues'
 software: [BandagedBD, BetterDiscord]
-status: Outdated
+status: Deprecated
 auto: true
 layout: product
 date: 2018-12-20T21:12:19.259Z

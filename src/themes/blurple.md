@@ -10,7 +10,7 @@ demo: 'https://cdn.rawgit.com/JimmyHere/Blurple/master/Blurple.theme.css'
 thumbnail: https://i.imgur.com/j7mr9lr.png
 previews: [https://i.imgur.com/j7mr9lr.png]
 auto: true
-status: Outdated
+status: Deprecated
 style: dark
 ghcommentid: 8
 layout: product

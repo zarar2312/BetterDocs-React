@@ -10,7 +10,7 @@ demo: 'https://cdn.rawgit.com/mrmaple240/colorize/master/Colorize.theme.css'
 thumbnail: https://i.imgur.com/CNfb9AH.gif
 previews: [https://i.imgur.com/CNfb9AH.gif]
 auto: true
-status: Outdated
+status: Deprecated
 style: dark
 ghcommentid: 12
 layout: product

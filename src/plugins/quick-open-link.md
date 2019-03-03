@@ -6,7 +6,7 @@ download: https://github.com/XFoxPrower/Quick-Open-Link
 github_profile_url: https://github.com/XFoxPrower/
 github_source_url: https://github.com/XFoxPrower/Quick-Open-Link
 support: https://github.com/XFoxPrower/Quick-Open-Link/issues
-status: Outdated
+status: Deprecated
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 53
 layout: product

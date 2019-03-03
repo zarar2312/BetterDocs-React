@@ -17,7 +17,6 @@ auto: True
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---
-***
 Intercepts outgoing requests. (WebSocket & HTTP Requests)
 
 [Wiki](https://github.com/SnazzahDI/Interceptor/wiki)

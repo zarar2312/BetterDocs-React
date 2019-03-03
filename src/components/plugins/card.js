@@ -206,7 +206,7 @@ const Status = styled.div`
         padding: 3px 0;
         font-size: 0.4rem;
     }
-    &[title$="Outdated"] {
+    &[title$="Deprecated"] {
         background-color: #a70a0a;
     }
     &[title$="Updated"] {

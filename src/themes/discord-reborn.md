@@ -11,7 +11,7 @@ demo: https://cdn.jsdelivr.net/gh/0mniscient/Discord-Themes@master/Themes/Discor
 thumbnail: https://i.imgur.com/gnINgso.jpg
 previews: [https://i.imgur.com/gnINgso.jpg]
 style: dark
-status: Outdated
+status: Deprecated
 ghcommentid: 4
 layout: product
 ---

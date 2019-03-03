@@ -11,7 +11,7 @@ import { darken } from 'polished'
 //import Loading from 'src/images/Loading.gif'
 
 const Updated = "#00b167";
-const Outdated = "#eb0505";
+const Deprecated = "#eb0505";
 const Unknownn = "#00a2ff";
 
 const Author = ({ pageContext, data }) => {
@@ -530,7 +530,7 @@ const Container = styled.div`
                           &[class^="Updated-"] {
                               background-color: #00b167;
                           }
-                          &[class^="Outdated-"] {
+                          &[class^="Deprecated-"] {
                               background-color: #eb0505;
                           }
                       }
@@ -570,9 +570,9 @@ const Container = styled.div`
                               background-color: ${darken(0.1,Updated)};
                           }
                       }
-                      &[alt="Outdated"] {
+                      &[alt="Deprecated"] {
                         ${Title} {
-                              background-color: ${darken(0.1,Outdated)}; /*"#eb0505"*/
+                              background-color: ${darken(0.1,Deprecated)}; /*"#eb0505"*/
                           }
                       }
                       &[alt="Unknown"] {
@@ -605,7 +605,7 @@ const Container = styled.div`
                           &[class^="Updated-"] {
                               background-color: #00b167;
                           }
-                          &[class^="Outdated-"] {
+                          &[class^="Deprecated-"] {
                               background-color: #eb0505;
                           }
                       }

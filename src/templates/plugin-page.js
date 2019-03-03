@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout-mobile-footer'
 //import hero from '../styles/altHero.module.scss'
 //import style from '../styles/plugin-page.module.scss'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Sidebar from '../components/plugins/sidebar'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import kebabCase from "lodash/kebabCase"
@@ -10,15 +10,15 @@ import Helmet from 'react-helmet'
 import AdSense from 'react-adsense';
 //import ad from '../styles/ad.module.scss'
 //import alert from '../styles/alerts.module.scss'
-import Alerts from '../components/plugins/plugin-page-alerts'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 //import "../styles/plugin-page.css"
 import Hero from '../components/plugins/hero'
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
-import { darken } from 'polished'
+import { darken, rgba } from 'polished'
 import { createGlobalStyle } from 'styled-components'
+import Modal from '../components/plugins/modal'
 
 const Plugins = (props) => {
   const pluginList = props.data.listPlugins;
@@ -56,11 +56,6 @@ const Plugins = (props) => {
     <GlobalStyle />
     {pluginList.edges.map(({ node }, i) => (
       <Wrapper key={node.id}>
-        <Alerts
-        status={node.frontmatter.status}
-        slug={node.fields.slug}
-        title={node.frontmatter.title}
-        />
         <Hero
         title={node.frontmatter.title}
         author={node.frontmatter.author}
@@ -77,18 +72,6 @@ const Plugins = (props) => {
         SoftwaresGrouped={softList.group}
         tagsGrouped={pluginList.group}
         />
-        {node.frontmatter.dependency &&
-          <DependencyContainer>
-            <Header><b>Required</b> Dependency(ies)</Header>
-            <Dependencies>
-              {dependenciesList.group.map(dependency => (
-                <Button href={dependency.fieldValue} target="blank" key={dependency.fieldValue}>
-                  <Text>Download</Text>
-                </Button>
-              ))}
-            </Dependencies>
-          </DependencyContainer>
-        }
         <Ad>
           <AdSense.Google
               client='ca-pub-1998206533560539'
@@ -112,26 +95,199 @@ const Plugins = (props) => {
           </TabListt>
           <TabPanell>
             <ContentContainer>
-                <Content>
-                  <HtmlContent
-                  dangerouslySetInnerHTML={{ __html: node.html }}>
-                  </HtmlContent>
-                  <Footer>
-                    {node.frontmatter.date && 
-                    <Date>
-                    Last edit: {node.frontmatter.date}
-                    </Date>
+              {node.frontmatter.status ?
+              <StatusContainer alt ={node.frontmatter.status}>
+                {node.frontmatter.status === "Updated" &&
+                  <Status>This plugin is compatible with the latest version of Discord</Status>
+                }
+                {node.frontmatter.status === "Updated" &&
+                  <StatusDescription>This plugin is currently marked as <b>Updated</b> by the community which means this <i>should</i> work. If this is broken for the latest version of please make a report <a target="_blank" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]" + "&labels=report" }>here</a>.</StatusDescription>
+                }
+                {node.frontmatter.status === "Deprecated" &&
+                  <Status>This plugin is not compatible with the latest version of Discord</Status>
+                }
+                {node.frontmatter.status === "Deprecated" &&
+                  <StatusDescription>This plugin is currently marked as <b>Deprecated</b> by the community which means this will break your Discord. If you think this is a mistake please make a report <a target="_blank" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]" + "&labels=report" }>here</a>.</StatusDescription>
+                }
+                <Modal/>
+              </StatusContainer>
+              :
+              <StatusContainer alt="Unknown">
+                <Status>This plugin may or may not be compatible with Discord</Status>
+                <StatusDescription>This plugin is currently marked as <b>Unknown</b> which means that this plugin may or may not work. If you would like to report an update for the rest of the community, you can do so <a target="_blank" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]" + "&labels=report" }>here</a>.</StatusDescription>
+              </StatusContainer>
+              }
+              {node.frontmatter.dependency &&
+              <Area>
+                <CardHeader>Dependency Requirements</CardHeader>
+                <AreaCard>
+                    {dependenciesList.group.map(dependency => (
+                      <Dependencies>
+                        <Button href={dependency.fieldValue} target="blank" key={dependency.fieldValue}>
+                          <Text>Download</Text>
+                        </Button>
+                      </Dependencies>
+                    ))}
+                </AreaCard>
+              </Area>
+              }
+              <Area>
+                <CardHeader>Description</CardHeader>
+                <AreaDescriptionCard
+                dangerouslySetInnerHTML={{ __html: node.html }}>
+                </AreaDescriptionCard>
+              </Area>
+              <Area>
+                <CardHeader>Contribution</CardHeader>
+                <AreaCard>
+                  <SubText>A list of people that have contributed to this plugin in one way or another. If you think there is a mistake with this list please make a report here.</SubText>
+                  <TableInfo>
+                    <Row>
+                      <Data>
+                        Author
+                      </Data>
+                      <Data>
+                        <Link to={"profile/" + node.frontmatter.author }>{node.frontmatter.author}</Link>
+                      </Data>
+                    </Row>
+                    {node.frontmatter.current_maintainer &&
+                    <Row>
+                      <Data>Current Maintainer</Data>
+                      <Data>node.frontmatter.current_maintainer</Data>
+                    </Row>
                     }
-                    <Edit
-                    target="blank" 
-                    href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins/${kebabCase(node.fields.slug)}.md`}
-                    >
+                  </TableInfo>
+                </AreaCard>
+              </Area>
+              <Area>
+                <CardHeader>Information</CardHeader>
+                <AreaCard>
+                  <TableInfo>
+                    <Row>
+                      {node.frontmatter.date &&
+                        <Data>
+                          Page Last Updated
+                        </Data>
+                      }
+                      {node.frontmatter.date &&
+                        <Data>
+                          {node.frontmatter.date}
+                        </Data>
+                      }
+                    </Row>
+                    <Row>
+                      <Data>
+                        Status
+                      </Data>
+                      {node.frontmatter.status === "Updated" &&
+                      <Data alt="Updated">
+                        {node.frontmatter.status}
+                      </Data>
+                      }
+                      {node.frontmatter.status === "Deprecated" &&
+                      <Data alt="Deprecated">
+                        Deprecated
+                      </Data>
+                      }
+                      {node.frontmatter.status === null &&
+                      <Data alt="Unknown">
+                        Unknown
+                      </Data>
+                      }
+                    </Row>
+
+                    <Row>
+                      <Data>
+                        Supported Discord Mods
+                      </Data>
+                      <Data>
+                      <SoftwaresContainer>
+                        {softList.group.map(software => (
+                        <Softwaree to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`} key={software.fieldValue}>
+                            {software.fieldValue}
+                        </Softwaree>
+                        ))}
+                      </SoftwaresContainer>
+                      </Data>
+                    </Row>
+                    {node.frontmatter.github_source_url &&
+                    <Row>
+                      <Data>
+                        Github
+                      </Data>
+                      <Data>
+                        <a href={node.frontmatter.github_source_url} target="_blank">Source</a>
+                      </Data>
+                    </Row>
+                    }
+                    {node.frontmatter.githlab_source_url &&
+                    <Row>
+                      <Data>
+                        Gitlab
+                      </Data>
+                      <Data>
+                        <a href={node.frontmatter.gitlab_source_url} target="_blank">Source</a>
+                      </Data>
+                    </Row>
+                    }
+                    {node.frontmatter.npm_source_url &&
+                    <Row>
+                      <Data>
+                        NPM
+                      </Data>
+                      <Data>
+                        <a href={node.frontmatter.npm_source_url} target="_blank">Source</a>
+                      </Data>
+                    </Row>
+                    }
+                  </TableInfo>
+                </AreaCard>
+              </Area>
+              {node.frontmatter.tags &&
+              <Area>
+                <CardHeader>Tags</CardHeader>
+                <TagsContainer>
+                    {pluginList.group.map(tag => (
+                    <Tag to={`/plugins/tag/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>
+                    {tag.fieldValue} <span>{tag.totalCount}</span>
+                    </Tag>
+                    ))}
+                </TagsContainer>
+              </Area>
+              }
+              <Options>
+                {node.frontmatter.download &&
+                  <>
+                    {node.frontmatter.auto ?
+                    <Download href={'https://minhaskamal.github.io/DownGit/#/home?url=' + node.frontmatter.download} target="blank">
+                      Download
+                    </Download>
+                    :
+                    <Download href={node.frontmatter.download} target="blank">
+                      Download
+                    </Download>
+                    }
+                  </>
+                }
+                {node.frontmatter.npm_i &&
+                <NpmCopy title="Copy Me!">
+                    <span><svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='451.846' height='451.847' viewBox='0 0 451.846 451.847'> <path d='M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z'/></svg> 
+                    npm i {node.frontmatter.npm_i}</span>
+                </NpmCopy>
+                }
+                {node.frontmatter.support &&
+                <Report href={node.frontmatter.support} target="blank">
+                  Doesn't Work?
+                </Report>
+                }
+              </Options>
+              <EditBtn key={node.id}>
+                  <a href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins/${kebabCase(node.fields.slug)}.md`} target="blank">
                     <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='459' height='459' viewBox='0 0 459 459'>
                         <path d='M0,362.1V459h96.9l280.5-283.05l-96.9-96.9L0,362.1z M451.35,102c10.2-10.2,10.2-25.5,0-35.7L392.7,7.649 c-10.2-10.2-25.5-10.2-35.7,0l-45.9,45.9l96.9,96.9L451.35,102z' id='create' />
-                    </svg> Edit this page
-                    </Edit>
-                  </Footer>
-                </Content>
+                    </svg>
+                  </a>
+              </EditBtn>
             </ContentContainer>
           </TabPanell>
           {node.frontmatter.previews &&
@@ -175,6 +331,57 @@ export default Plugins;
     <img className={style.img} src={node.frontmatter.thumbnail} alt={node.frontmatter.title} />
   </a>
 } 
+
+
+${HtmlContent} {
+  display: block;
+  word-break: break-word;
+  font-size: 0.67rem;
+  code {
+    font-size: 0.67rem;
+  }
+  pre {
+    line-height: unset;
+    padding: 0.95rem;
+    padding-top: 0.6rem;
+    code {
+      font-size: 0.67rem;
+      padding: unset;
+      line-height: unset;
+    }
+  }
+  a:not([class*="anchor"]) {
+    display: inline-block;
+    transition: color 250ms, text-shadow 250ms;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    line-height: 1rem;
+    &:after {
+      position: absolute;
+      z-index: -1;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: ${variable.SiteColor};
+      transition: all 250ms;
+    }
+    &:hover {
+      color: #fff;
+      opacity: 1;
+      background-color: transparent;
+    &::after {
+        height: 110%;
+        width: 110%;
+      }
+    }
+  }
+}
 */
 
 export const pluginsQuery = graphql`
@@ -250,16 +457,51 @@ export const pluginsQuery = graphql`
     }
   }
 `
+/*
+<HtmlContent
+  dangerouslySetInnerHTML={{ __html: node.html }}>
+</HtmlContent>
+*/
 
+const Options = styled.div`
+`
+const Download = styled.a`
+`
+const Report = styled.a`
+`
+const StatusContainer = styled.div`
+`
+const Status = styled.p`
+`
+const StatusDescription = styled.div`
+`
+const CardHeader = styled.h1`
+`
+const Area = styled.div`
+`
 const Wrapper = styled.section`
 `
 const DependencyContainer = styled.div`
+`
+const SoftwaresContainer = styled.div`
+`
+const Softwaree = styled(Link)`
 `
 const Header = styled.div`
 `
 const Dependencies = styled.div`
 `
 const Button = styled.a`
+`
+const TableInfo = styled.table`
+`
+const Row = styled.tr`
+`
+const Data = styled.td`
+`
+const AreaCard = styled.div`
+`
+const SubText = styled.p`
 `
 const Text = styled.div`
 `
@@ -273,13 +515,17 @@ const ContentContainer = styled.div`
 `
 const Content = styled.div`
 `
-const HtmlContent = styled.div`
+const NpmCopy = styled.div`
+`
+const TagsContainer = styled.div`
+`
+const Tag = styled(Link)`
+`
+const AreaDescriptionCard = styled.div`
 `
 const Footer = styled.div`
 `
-const Date = styled.div`
-`
-const Edit = styled.a`
+const EditBtn = styled.div`
 `
 const Tabbs = styled(Tabs)`
 `
@@ -314,7 +560,8 @@ const TopHeader = styled.div`
 const Container = styled.div`
   display: block;
   flex-direction: row;
-  background-color: #fff;
+  background-color: #f1f1f1;
+  /*background-color: #fbfafc;*/
   @media (min-width: 850px) {
     display: flex;
   }
@@ -343,193 +590,596 @@ const Container = styled.div`
         display: flex;
         counter-reset: dependency;  
         ${Button} {
-            margin-left: 10px;
-            &:first-child {
-                margin-left: unset;
+          margin-left: 10px;
+          &:first-child {
+              margin-left: unset;
+          }
+          ${Text} {
+            display: block;
+            background-color: ${variable.SiteColor};
+            color: #fff;
+            border-radius: 2px;
+            padding: 0.3rem 0.6rem;
+            font-size: 0.6rem;
+            border: 1px solid ${darken(0.1,variable.SiteColor)};
+            transition: 250ms all linear;
+            position: relative;
+            &:hover {
+              background: ${darken(0.1,variable.SiteColor)};
             }
-            ${Text} {
-              display: block;
-              background-color: ${variable.SiteColor};
-              color: #fff;
-              border-radius: 2px;
-              padding: 0.3rem 0.6rem;
-              font-size: 0.6rem;
-              border: 1px solid ${darken(0.1,variable.SiteColor)};
-              transition: 250ms all linear;
-              position: relative;
-              &:hover {
-                background: ${darken(0.1,variable.SiteColor)};
-              }
+            &::before {
+              counter-increment: dependency;
+              position: absolute;
+              top: -8px;
+              left: -8px;
+              background-color: ${darken(0.1,variable.SiteColor)};
+              padding: 4px 7px;
+              font-size: 0.5rem;
+              border-radius: 50%;
+              content: counter(dependency);
+              margin-right: 4px;
+            }
+            &:only-child {
               &::before {
-                counter-increment: dependency;
-                position: absolute;
-                top: -8px;
-                left: -8px;
-                background-color: ${darken(0.1,variable.SiteColor)};
-                padding: 4px 7px;
-                font-size: 0.5rem;
-                border-radius: 50%;
-                content: counter(dependency);
-                margin-right: 4px;
-              }
-              &:only-child {
-                &::before {
-                content: unset;
-              }
+              content: unset;
             }
           }
         }
       }
     }
-    ${Tabbs} {
-      order: 3;
-      ${TabListt} {
-        display: flex;
-        justify-content: center;
-        border-bottom: unset;
-        margin-bottom: unset;
-        margin-left: unset;
-        ${Tabb} {
-          transform: all 250ms linear;
-          margin: calc(1.45rem / 2) 0;
-          padding: .35rem .75rem;
-          text-shadow: 0 1px rgba(255,255,255,0.5);
-          border-radius: 100px;
-          border: 1px solid transparent;
-          font-size: .575rem;
-          font-weight: bold;
-          color: #5f6368;
-          list-style: none;
-          cursor: pointer;
-          &:nth-child(2) {
-            margin-left: 10px;
+  }
+  ${Tabbs} {
+    order: 3;
+    ${TabListt} {
+      display: flex;
+      justify-content: center;
+      border-bottom: unset;
+      margin-bottom: unset;
+      margin-left: unset;
+      ${Tabb} {
+        transform: all 250ms linear;
+        margin: calc(1.45rem / 2) 0;
+        padding: .35rem .75rem;
+        text-shadow: 0 1px rgba(255,255,255,0.5);
+        border-radius: 100px;
+        border: 1px solid transparent;
+        font-size: .575rem;
+        font-weight: bold;
+        color: #5f6368;
+        list-style: none;
+        cursor: pointer;
+        &:nth-child(2) {
+          margin-left: 10px;
+        }
+        &:only-child {
+          display: none;
+        }
+        &:hover {
+              color: #000;
+              background-color: rgba(0,0,0,0.1);
           }
-          &:only-child {
-            display: none;
-          }
-          &:hover {
-                color: #000;
-                background-color: rgba(0,0,0,0.1);
-            }
-          &:focus {
-              outline: unset;
-              border: 1px solid ${darken(0.1,variable.SiteColor)};
-              box-shadow: unset;
-          }
-          &:focus::after {
-              display: none;
-          }
-          &[class*="selected"] {
-            color: #fff;
+        &:focus {
+            outline: unset;
+            border: 1px solid ${darken(0.1,variable.SiteColor)};
             box-shadow: unset;
-            text-shadow: unset;
-            background-color: ${variable.SiteColor};
-          }
+        }
+        &:focus::after {
+            display: none;
+        }
+        &[class*="selected"] {
+          color: #fff;
+          box-shadow: unset;
+          text-shadow: unset;
+          background-color: ${variable.SiteColor};
         }
       }
-      ${TabPanell} {
-        /*width: calc(100% - 75px);*/
+    }
+    ${TabPanell} {
+      /*width: calc(100% - 75px);*/
+      margin: 0 auto;
+      @media (min-width: 850px) {
+        /*width: calc(100% - 300px);*/
+      }
+      ${ContentContainer} {
+        display: flex;
+        order: 4;
+        flex-direction: column;
+        max-height: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 3.1rem;
+        /*margin: 0 1rem;*/
         margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 2.1rem;
+        word-break: break-all;
+        font-size: 0.6rem;
         @media (min-width: 850px) {
-          /*width: calc(100% - 300px);*/
+          padding-bottom: unset;
         }
-        ${ContentContainer} {
-          display: flex;
-          order: 4;
-          flex-direction: column;
-          max-height: 100%;
-          overflow: auto;
-          -webkit-overflow-scrolling: touch;
-          padding-bottom: 3.1rem;
-          @media (min-width: 850px) {
-              padding-bottom: unset;
+          /*@media (min-width: 850px) {
+            width: calc(100% - 300px);
+            display: flex;
+          }*/
+        a:not([class*="anchor"]) {
+          display: inline-block;
+          transition: color 250ms, text-shadow 250ms;
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+          position: relative;
+          z-index: 0;
+          line-height: 1rem;
+          &:after {
+            position: absolute;
+            z-index: -1;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: ${variable.SiteColor};
+            transition: all 250ms;
+          }
+          &:hover {
+            color: #fff;
+            opacity: 1;
+            background-color: transparent;
+          &::after {
+              height: 110%;
+              width: 110%;
             }
-            ${Content} {
-              display: block;
-              width: calc(100% - 75px);
-              margin: 0 auto;
-              padding-top: 2.1rem;
-              /*padding-bottom: 2.1rem;*/
-              word-break: break-all;
-              flex-direction: column;
+          }
+        }
+        ${StatusContainer} {
+          display: flex;
+          flex-direction: column;
+          border-radius: 25px;
+          margin-bottom: 1.25rem;
+          box-shadow: 2px 2px 40px -12px #999;
+          background-color: #fff;
+          ${Status} {
+            margin: unset;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            padding: 0.6rem 0.9rem;
+            word-break: keep-all;
+          }
+          ${StatusDescription} {
+            font-size: 0.7rem;
+            padding: 0.7rem 0.9rem;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            background-color: #fff;
+            margin-top: -1px;
+            word-break: keep-all;
+            line-height: 0.98rem;
+          }
+          &[alt="Updated"] {
+            display: none;
+            ${Status} {
+              color: #fff;
+              background-color: #00b167;
+              background: linear-gradient(90deg,#30c381,#089e46);
+            }
+            ${StatusDescription} {
+              background: rgba(0, 177, 103, 0.08);
+              b {
+                color: #089e46;
+              }
+            }
+          }
+          &[alt="Deprecated"] {
+            ${Status} {
+              color: #fff;
+              background-color: #c33030;
+              background: linear-gradient(90deg,#c33030,#9e0808);
+            }
+            ${StatusDescription} {
+              background: rgba(195, 48, 48, 0.08);
+              b {
+                color: #c33030;
+              }
+            }
+          }
+          &[alt="Unknown"] {
+            ${Status} {
+              color: #fff;
+              background-color: #005180;
+              background: linear-gradient(90deg,#30a1c3,#005180);
+            }
+            ${StatusDescription} {
+              background: rgba(48, 161, 195, 0.08);
+              b {
+                color: #005180;
+              }
+            }
+          }
+        }
+        ${AreaDescriptionCard} {
+          display: block;
+          word-break: break-word;
+          background-color: #fff;
+          border-radius: 20px;
+          box-shadow: 2px 2px 40px -12px #999;
+          padding: 0.8rem 1.1rem;
+          border: 1px solid #ececec;
+          code {
+            font-size: 0.67rem;
+            /*line-height: unset;*/
+          }
+          pre {
+            line-height: unset;
+            padding: 0.95rem;
+            padding-top: 0.6rem;
+            code {
               font-size: 0.67rem;
-              @media (min-width: 850px) {
-                width: calc(100% - 300px);
-                display: flex;
-              }
-              code {
-                font-size: 0.67rem;
-                /*line-height: unset;*/
-              }
-              pre {
-                line-height: unset;
-                padding: 0.95rem;
-                padding-top: 0.6rem;
-                code {
-                  font-size: 0.67rem;
-                  padding: unset;
-                  line-height: unset;
+              padding: unset;
+              line-height: unset;
+            }
+          }
+          p {
+            color: #666;
+          }
+          p:only-child {
+            margin: unset;
+          }
+          h1 {
+            font-size: 1.75rem; /*2.25rem*/
+            margin-bottom: 0.7rem; /*1.45*/
+            color: #000;
+          }
+          h2 {
+            font-size: 1.22rem; /*1.62671rem*/
+            margin-bottom: 0.7rem;
+            color: #000;
+          }
+        }
+        ${CardHeader} {
+          font-size: 1.55rem;
+          margin-bottom: 0.8rem;
+        }
+        ${Area} {
+          margin-bottom: 1.25rem;
+          ${CardHeader} {
+            font-size: 1.55rem;
+            margin-bottom: 0.8rem;
+          }
+          ${Dependencies} {
+            display: flex;
+            counter-reset: dependency;  
+            ${Button} {
+              margin-left: 10px;
+                &:first-child {
+                  margin-left: unset;
                 }
-              }
-            ${HtmlContent} {
-              display: block;
-              word-break: break-word;
-              a:not([class*="anchor"]) {
-                display: inline-block;
-                transition: color 250ms, text-shadow 250ms;
-                color: #000;
-                text-decoration: none;
-                cursor: pointer;
-                position: relative;
-                z-index: 0;
-                line-height: 1rem;
-                &:after {
-                  position: absolute;
-                  z-index: -1;
-                  bottom: -1px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  content: '';
-                  width: 100%;
-                  height: 3px;
-                  background-color: ${variable.SiteColor};
-                  transition: all 250ms;
+                &::after {
+                  height: 0;
                 }
                 &:hover {
+                  &::after {
+                    height: 0;
+                  }
+                }
+                ${Text} {
+                  display: block;
+                  background-color: ${variable.SiteColor};
                   color: #fff;
-                  opacity: 1;
-                  background-color: transparent;
-                &::after {
-                    height: 110%;
-                    width: 110%;
+                  border-radius: 2px;
+                  padding: 0.3rem 0.6rem;
+                  font-size: 0.6rem;
+                  border: 1px solid ${darken(0.1,variable.SiteColor)};
+                  transition: 250ms all linear;
+                  position: relative;
+                  &:hover {
+                    background: ${darken(0.1,variable.SiteColor)};
+                  }
+                  &::before {
+                    counter-increment: dependency;
+                    position: absolute;
+                    top: -8px;
+                    left: -8px;
+                    background-color: ${darken(0.1,variable.SiteColor)};
+                    padding: 4px 7px;
+                    font-size: 0.5rem;
+                    border-radius: 50%;
+                    content: counter(dependency);
+                    margin-right: 4px;
+                  }
+                  &:only-child {
+                    &::before {
+                    content: unset;
                   }
                 }
               }
             }
-            ${Footer} {
-              display: flex;
-              border-top: 1px solid #f5f3f7;
-              flex-direction: row;
-              ${Date} {
-                  flex: 1;
-                  margin-top: 25px;
-                  margin-bottom: 25px;
-                  color: #3a3a3a;
+          }
+          ${TagsContainer} {
+            display: -webkit-box;
+            ${Tag} {
+              margin-left: 7px;
+              background-color: #fff;
+              padding: 0.3rem 0.6rem;
+              border-radius: 25px;
+              color: #5f6368;
+              font-size: 0.95em;
+              transition: 300ms ease-in-out all;
+              border: 1px solid #eff2f6;
+              line-height: initial;
+              &:first-child {
+                margin-left: unset;
               }
-              ${Edit} {
-                margin-top: 25px;
-                opacity: 0.7;
+              span {
+                  background-color: #eeeeee;
+                  color: #5f6368;
+                  border-radius: 50%;
+                  width: 16px;
+                  height: 16px;
+                  line-height: 16px;
+                  text-align: center;
+                  font-size: 0.8em;
+                  margin-left: 6px;
+                  display: none;
+              }
+              &:hover {
+                  border-bottom-left-radius: 0px;
+                  -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+                  box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+              }
+              &:active, &:focus {
+                background-color: ${rgba(variable.SiteColor, 0.1)};
+                box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
+                outline: unset;
                 border-color: transparent;
-                box-shadow: 0px 0px transparent;
-                display: -webkit-inline-box;
-                margin-bottom: 25px;
-                color: #000;
-                svg {
-                    height: 15px;
-                    width: 15px;
-                    margin-right: 8px;
+                border-bottom-left-radius: 0px;
+                color: ${variable.SiteColor};
+                &::after {
+                  height: 0;
                 }
               }
+              &::after {
+                height: 0;
+              }
+            }
+          }
+          ${AreaCard} {
+            flex-direction: column;
+            word-break: break-word;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 2px 2px 40px -12px #999;
+            padding: 0.8rem 1.1rem;
+            border: 1px solid #ececec;
+              ${SubText} {
+                font-weight: bold;
+                margin: unset;
+                font-size: 0.58rem;
+                line-height: 0.9rem;
+                color: #969696;
+              }
+              ${TableInfo} {
+                border-collapse: collapse;
+                width: 100%;
+                margin: unset;
+                font-size: 0.7rem;
+                ${Row} {
+                  border-bottom: 1px solid #cacaca;
+                  ${Data} {
+                    text-align: left;
+                    padding: 10px 8px;
+                    margin-bottom: 2px;
+                    &:nth-child(2) {
+                      text-align: right;
+                    }
+                    &:nth-child(1) {
+                      font-weight: bold;
+                    }
+                    &[alt="Updated"] {
+                      color: #00b167;
+                    }
+                    &[alt="Deprecated"] {
+                      color: #c33030;
+                    }
+                    &[alt="Unknown"] {
+                      color: #005180;
+                    }
+                    ${SoftwaresContainer} {
+                      display: flex;
+                      justify-content: flex-end;
+                      flex-wrap: wrap;
+                      ${Softwaree} {
+                        margin-left: 7px;
+                        background-color: #fff;
+                        padding: 0.38rem 0.56rem;
+                        border-radius: 25px;
+                        color: #5f6368;
+                        font-size: 0.54rem;
+                        transition: 300ms ease-in-out all;
+                        border: 1px solid #eff2f6;
+                        position: relative;
+                        line-height: initial;
+                        margin-top: 0.1rem;
+                          &:hover {
+                            background-color: #dddddd;
+                            border-bottom-left-radius: 0px;
+                            box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+                            &::after {
+                              opacity: 1;
+                            }
+                          }
+                          &:active, &:focus {
+                            background-color: ${rgba(variable.SiteColor, 0.1)};
+                            box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px, rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
+                            border-bottom-left-radius: 0px;
+                            color: ${variable.SiteColor};
+                            outline: unset;
+                            border-color: transparent;
+                        }
+                        &::after {
+                          height: 0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          ${Options} {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-bottom: 0.8rem;
+            @media ${variable.MidPoint} {
+              flex-direction: row;
+              justify-content: flex-start;
+              ${Download} {
+                margin-top: 0.5rem;
+                margin-right: 0.4rem;
+              }
+            }
+            ${NpmCopy} {
+              background-color: #fff;
+              border: 1px solid #b3b3b3;
+              border-left: 3px solid #b3b3b3;
+              padding: 0.6em 0.6rem;
+              border-radius: 2px;
+              color: #0a0a0a;
+              margin-top: 0.5rem;
+              transition: 300ms ease-in-out;
+              display: flex;
+              font-size: 0.67rem;
+              flex-direction: column;
+              justify-content: center;
+              &::after {
+                  content: "Copy Me!";
+                  display: block;
+                  background-color: #0a0a0a;
+                  color: #fff;
+                  position: absolute;
+                  top: 2.1rem;
+                  left: 0;
+                  z-index: 150;
+                  margin: 0 auto;
+                  padding: 0.25rem 0.4rem;
+                  border-radius: 2px;
+                  text-align: center;
+                  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4) !important;
+                  transition: .2s linear all;
+                  opacity: 0;
+                  pointer-events: none;
+                  font-size: 0.5rem;
+              }
+              @media (min-width: 850px) {
+                margin-top: 0.5rem;
+                margin-right: 0.4rem;
+                  &::after {
+                      top: 0.28rem;
+                      left: -0.8rem;
+                  }
+              }
+              svg {
+                  height: 0.5rem;
+                  width: 0.4rem;
+                  top: 1px;
+                  right: 4px;
+                  position: relative;
+              }
+              &:hover {
+                  background-color: #f7f7f7;
+                  &::after {
+                      opacity: 1;
+                  }
+              }
+              &:active, &:focus {
+                  background-color: #f0f0f0;
+              }
+            }
+            ${Download} {
+              background-color: ${variable.SiteColor};
+              border-radius: 25px;
+              padding: 0.5rem 1rem;
+              font-size: 0.8rem;
+              color: #fff;
+              box-shadow: 2px 2px 40px -12px #999;
+              transition: 300ms ease-in-out all;
+              background: linear-gradient(90deg,${variable.SiteColor},${darken(0.3, variable.SiteColor)});
+              &::after {
+                height: 0;
+              }
+              &:hover {
+                box-shadow: 2px 10px 40px -12px ${darken(0.3, variable.SiteColor)};
+                &::after {
+                  height: 0;
+                }
+              }
+            }
+            ${Report} {
+              background-color: #da002f;
+              border-radius: 25px;
+              padding: 0.5rem 1rem;
+              font-size: 0.8rem;
+              margin-top: 0.5rem;
+              color: #fff;
+              box-shadow: 2px 2px 40px -12px #999;
+              transition: 300ms ease-in-out all;
+              background: linear-gradient(90deg,#da002f, #9e0022);
+              position: relative;
+              &:after {
+                height: 0;
+              }
+              &:hover {
+                box-shadow: 2px 10px 40px -12px #da002f;
+                &::after {
+                  height: 0;
+                }
+              }
+            }
+          }
+        }
+        ${EditBtn} {
+          position: fixed;
+          right: 1rem;
+          bottom: 2.5rem;
+          z-index: 100;
+          transition: all linear 250ms;
+          @media (min-width: 850px) {
+              right: 1.5rem;
+              bottom: 1rem;
+          }
+          a {
+            display: block;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: ${variable.SiteColor};
+            color: #fff;
+            text-align: center;
+            line-height: 2.5rem;
+            border-radius: 50%;
+            transition: all linear 250ms;
+            box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 3px -2px #ffffff;
+            font-size: 1.3rem;
+            &:hover {
+              box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 3px -2px #ffffff;
+              background-color: ${darken(0.1,variable.SiteColor)} !important;
+              &::after {
+                display: none !important;
+              }
+            }
+            svg {
+              height: 17px;
+              width: 17px;
+              fill: #fff;
+              margin: 0 auto;
+              top: 13px;
+              position: relative;
+            }
+            &::after {
+              display: none !important;
             }
           }
         }
@@ -580,14 +1230,6 @@ const GlobalStyle = createGlobalStyle`
               }
               a {
                   color: #fff !important;
-              }
-              ${Footer} {
-                  border-color: #222327 !important;
-                  ${Edit} {
-                      svg {
-                          fill: #fff;
-                      }
-                  }
               }
               [class="anchor"] {
                   fill: #fff;

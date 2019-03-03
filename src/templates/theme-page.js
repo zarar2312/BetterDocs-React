@@ -260,7 +260,7 @@ const MobileBackBtn= styled(AniLink)`
       width: 20px;
   }
 `
-const EditBtn = styled.a`
+const EditBtn = styled.div`
   position: fixed;
   right: 1rem;
   bottom: 2.5rem;

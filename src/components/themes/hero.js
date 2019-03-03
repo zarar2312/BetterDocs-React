@@ -296,7 +296,7 @@ const Container = styled.div`
                 @media (min-width: 850px) {
                     margin-bottom: 3rem;
                 }
-                &[alt="Outdated"] {
+                &[alt="Deprecated"] {
                     display: initial;
                 }
                 &[alt="Undefined"] {
@@ -332,7 +332,7 @@ const Container = styled.div`
                             color: #fff;
                             background-color: #00b167;
                         }
-                        &[class*="Outdated"] {
+                        &[class*="Deprecated"] {
                             border-color: #eb0505;
                             color: #fff;
                             background-color: #eb0505;

@@ -144,6 +144,7 @@ class Features extends React.Component {
                 gitlab_source_url
                 npm_profile_url
                 npm_source_url
+                npm_i
                 support
                 discord_server
                 thumbnail

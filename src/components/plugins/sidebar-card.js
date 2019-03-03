@@ -56,7 +56,7 @@ const Status = styled.div`
     display: block;
     clip-path: polygon(0% -200%, 100% 115%, 100% 100%, 0% 100%);
     padding: 0.2rem 1rem 0.2rem 0.2rem;            
-    &[alt="Outdated"] {
+    &[alt="Deprecated"] {
         background-color: #a70a0a;
     }
     &[alt="Unknown"] {
