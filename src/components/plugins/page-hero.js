@@ -42,7 +42,6 @@ const SoftwaresContainer = styled.div`
 const Hero = styled.div`
     order: 1;
     background: transparent;
-    border-bottom: 2px solid #f0f0f0;
     display: block;
     color: #ffffff;
     text-align: center;

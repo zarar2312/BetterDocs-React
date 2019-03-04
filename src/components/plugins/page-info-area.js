@@ -120,6 +120,7 @@ const Area = styled.div`
     ${CardHeader} {
         font-size: 1.55rem;
         margin-bottom: 0.8rem;
+        word-break: keep-all;
     }
     ${AreaCard} {
     flex-direction: column;
@@ -182,20 +183,20 @@ const Area = styled.div`
                         background-color: #dddddd;
                         border-bottom-left-radius: 0px;
                         box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-                        &::after {
-                            opacity: 1;
-                        }
+                            &::after {
+                                display: none !important;
+                            }
                         }
                         &:active, &:focus {
-                        background-color: ${rgba(variable.SiteColor, 0.1)};
-                        box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px, rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
-                        border-bottom-left-radius: 0px;
-                        color: ${variable.SiteColor};
-                        outline: unset;
-                        border-color: transparent;
-                    }
+                            background-color: ${rgba(variable.SiteColor, 0.1)};
+                            box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px, rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
+                            border-bottom-left-radius: 0px;
+                            color: ${variable.SiteColor};
+                            outline: unset;
+                            border-color: transparent;
+                        }
                         &::after {
-                            height: 0;
+                            display: none !important;
                         }
                     }
                 }
@@ -207,6 +208,34 @@ const Area = styled.div`
 
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
-  
+    ${Area} {
+        ${SubText} {
+            color: #e4e4e4;
+        }
+        ${CardHeader} {
+            color: #fff;
+        }
+        ${AreaCard} {
+            background-color: rgba(0,0,0,0.2);
+            box-shadow: 2px 2px 40px -12px #000;
+            border-color: rgba(0,0,0,0.25);
+            ${TableInfo} {
+                ${Row} {
+                    border-bottom: 1px solid #cacaca;
+                    ${Data} {
+                        &:nth-child(2) {
+                            color: #e4e4e4;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                        &:nth-child(1) {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 `

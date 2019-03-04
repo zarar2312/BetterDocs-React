@@ -409,8 +409,6 @@ const TabPanell = styled(TabPanel)`
 `
 const ContentContainer = styled.div`
 `
-const Content = styled.div`
-`
 const NpmCopy = styled.div`
 `
 const TagsContainer = styled.div`
@@ -735,6 +733,7 @@ const Container = styled.div`
         }
         ${CardHeader} {
           font-size: 1.55rem;
+          word-break: keep-all;
           margin-bottom: 0.8rem;
         }
         ${Area} {
@@ -1099,37 +1098,33 @@ const BackButton = styled(AniLink)`
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
   ${Container} {
-      background-color: #36393f;
-      ${Wrapper} {
-          ${DependencyContainer} {
-              background-color: #2f3136;
-              border-bottom: 2px solid #222327;
-              ${Header} {
-                  color: #fff;
-              }
+    background-color: #36393f;
+    ${Tabbs} {
+      ${TabPanell} {
+        ${Area} {
+          ${SubText} {
+            color: #e4e4e4;
           }
-          ${Content} {
-              color: #cfcfcf;
-              pre {
-                  padding: 1rem;
-                  line-height: 0.8rem;
-                  background-color: rgba(#000, 0.2);
-                  code {
-                      line-height: 0.8rem;
-                      background-color: transparent;
-                  }
-              }
-              code {
-                  background-color: rgba(#000, 0.2);
-              }
-              a {
-                  color: #fff !important;
-              }
-              [class="anchor"] {
-                  fill: #fff;
-              }
+          ${CardHeader} {
+            color: #fff;
           }
+          ${AreaDescriptionCard} {
+            background-color: rgba(0,0,0,0.2);
+            border-color: rgba(0,0,0,0.25);
+            box-shadow: 2px 2px 40px -12px #000;
+            p {
+              color: #e4e4e4;
+            }
+            h1, h2, h3, h4 {
+              color: #fff;
+            }
+            ul {
+              color: #fff;
+            }
+          }
+        }
       }
+    }
   }
 }
 `

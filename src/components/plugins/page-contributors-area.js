@@ -56,6 +56,7 @@ const Area = styled.div`
     ${CardHeader} {
         font-size: 1.55rem;
         margin-bottom: 0.8rem;
+        word-break: keep-all;
     }
     ${AreaCard} {
     flex-direction: column;
@@ -143,6 +144,37 @@ const Area = styled.div`
 
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
-  
+    ${Area} {
+        a {
+            color: #fff !important;
+        }
+        ${SubText} {
+            color: #e4e4e4;
+        }
+        ${CardHeader} {
+            color: #fff;
+        }
+        ${AreaCard} {
+            background-color: rgba(0,0,0,0.2);
+            border-color: rgba(0,0,0,0.25);
+            box-shadow: 2px 2px 40px -12px #000;
+            ${TableInfo} {
+                ${Row} {
+                    border-bottom: 1px solid #cacaca;
+                    ${Data} {
+                        &:nth-child(2) {
+                            color: #e4e4e4;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                        &:nth-child(1) {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 `

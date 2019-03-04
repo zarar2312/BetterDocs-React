@@ -42,6 +42,7 @@ margin-bottom: 1.25rem;
 ${CardHeader} {
     font-size: 1.55rem;
     margin-bottom: 0.8rem;
+    word-break: keep-all;
 }
 ${AreaCard} {
     flex-direction: column;
@@ -112,6 +113,18 @@ ${AreaCard} {
 
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
-  
+    ${Area} {
+        ${SubText} {
+            color: #e4e4e4;
+        }
+        ${CardHeader} {
+            color: #fff;
+        }
+        ${AreaCard} {
+            background-color: rgba(0,0,0,0.2);
+            border-color: rgba(0,0,0,0.25);
+            box-shadow: 2px 2px 40px -12px #000;
+        }
+    }
 }
 `
