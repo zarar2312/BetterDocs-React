@@ -13,12 +13,15 @@ import AdSense from 'react-adsense';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 //import "../styles/plugin-page.css"
-import Hero from '../components/plugins/hero'
+import Hero from '../components/plugins/page-hero'
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { darken, rgba } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 import Modal from '../components/plugins/modal'
+import InformationArea from '../components/plugins/page-info-area'
+import ContributionArea from '../components/plugins/page-contributors-area'
+import DependencyArea from '../components/plugins/page-dependency-area'
 
 const Plugins = (props) => {
   const pluginList = props.data.listPlugins;
@@ -72,15 +75,6 @@ const Plugins = (props) => {
         SoftwaresGrouped={softList.group}
         tagsGrouped={pluginList.group}
         />
-        <Ad>
-          <AdSense.Google
-              client='ca-pub-1998206533560539'
-              slot='6545618600'
-              style={{ display: 'block' }}
-              format='auto'
-              responsive='true'
-            />
-        </Ad>
         {previewList.edges.map(({ node }, i) => (
         <Tabbs key={node.id}>
           <TabListt>
@@ -101,35 +95,28 @@ const Plugins = (props) => {
                   <Status>This plugin is compatible with the latest version of Discord</Status>
                 }
                 {node.frontmatter.status === "Updated" &&
-                  <StatusDescription>This plugin is currently marked as <b>Updated</b> by the community which means this <i>should</i> work. If this is broken for the latest version of please make a report <a target="_blank" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]" + "&labels=report" }>here</a>.</StatusDescription>
+                  <StatusDescription>This plugin is currently marked as <b>Updated</b> by the community which means this <i>should</i> work. If this is broken for the latest version of please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
                 }
                 {node.frontmatter.status === "Deprecated" &&
                   <Status>This plugin is not compatible with the latest version of Discord</Status>
                 }
                 {node.frontmatter.status === "Deprecated" &&
-                  <StatusDescription>This plugin is currently marked as <b>Deprecated</b> by the community which means this will break your Discord. If you think this is a mistake please make a report <a target="_blank" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]" + "&labels=report" }>here</a>.</StatusDescription>
+                  <StatusDescription>This plugin is currently marked as <b>Deprecated</b> by the community which means this will break your Discord. If you think this is a mistake please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
                 }
                 <Modal/>
               </StatusContainer>
               :
               <StatusContainer alt="Unknown">
                 <Status>This plugin may or may not be compatible with Discord</Status>
-                <StatusDescription>This plugin is currently marked as <b>Unknown</b> which means that this plugin may or may not work. If you would like to report an update for the rest of the community, you can do so <a target="_blank" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]" + "&labels=report" }>here</a>.</StatusDescription>
+                <StatusDescription>This plugin is currently marked as <b>Unknown</b> which means that this plugin may or may not work. If you would like to report an update for the rest of the community, you can do so <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
               </StatusContainer>
               }
               {node.frontmatter.dependency &&
-              <Area>
-                <CardHeader>Dependency Requirements</CardHeader>
-                <AreaCard>
-                    {dependenciesList.group.map(dependency => (
-                      <Dependencies>
-                        <Button href={dependency.fieldValue} target="blank" key={dependency.fieldValue}>
-                          <Text>Download</Text>
-                        </Button>
-                      </Dependencies>
-                    ))}
-                </AreaCard>
-              </Area>
+              <DependencyArea
+              title={node.frontmatter.title}
+              dependenciesList={dependenciesList.group}
+              areaHeader="Dependency Requirements"
+              />
               }
               <Area>
                 <CardHeader>Description</CardHeader>
@@ -137,112 +124,21 @@ const Plugins = (props) => {
                 dangerouslySetInnerHTML={{ __html: node.html }}>
                 </AreaDescriptionCard>
               </Area>
-              <Area>
-                <CardHeader>Contribution</CardHeader>
-                <AreaCard>
-                  <SubText>A list of people that have contributed to this plugin in one way or another. If you think there is a mistake with this list please make a report here.</SubText>
-                  <TableInfo>
-                    <Row>
-                      <Data>
-                        Author
-                      </Data>
-                      <Data>
-                        <Link to={"profile/" + node.frontmatter.author }>{node.frontmatter.author}</Link>
-                      </Data>
-                    </Row>
-                    {node.frontmatter.current_maintainer &&
-                    <Row>
-                      <Data>Current Maintainer</Data>
-                      <Data>node.frontmatter.current_maintainer</Data>
-                    </Row>
-                    }
-                  </TableInfo>
-                </AreaCard>
-              </Area>
-              <Area>
-                <CardHeader>Information</CardHeader>
-                <AreaCard>
-                  <TableInfo>
-                    <Row>
-                      {node.frontmatter.date &&
-                        <Data>
-                          Page Last Updated
-                        </Data>
-                      }
-                      {node.frontmatter.date &&
-                        <Data>
-                          {node.frontmatter.date}
-                        </Data>
-                      }
-                    </Row>
-                    <Row>
-                      <Data>
-                        Status
-                      </Data>
-                      {node.frontmatter.status === "Updated" &&
-                      <Data alt="Updated">
-                        {node.frontmatter.status}
-                      </Data>
-                      }
-                      {node.frontmatter.status === "Deprecated" &&
-                      <Data alt="Deprecated">
-                        Deprecated
-                      </Data>
-                      }
-                      {node.frontmatter.status === null &&
-                      <Data alt="Unknown">
-                        Unknown
-                      </Data>
-                      }
-                    </Row>
-
-                    <Row>
-                      <Data>
-                        Supported Discord Mods
-                      </Data>
-                      <Data>
-                      <SoftwaresContainer>
-                        {softList.group.map(software => (
-                        <Softwaree to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`} key={software.fieldValue}>
-                            {software.fieldValue}
-                        </Softwaree>
-                        ))}
-                      </SoftwaresContainer>
-                      </Data>
-                    </Row>
-                    {node.frontmatter.github_source_url &&
-                    <Row>
-                      <Data>
-                        Github
-                      </Data>
-                      <Data>
-                        <a href={node.frontmatter.github_source_url} target="_blank">Source</a>
-                      </Data>
-                    </Row>
-                    }
-                    {node.frontmatter.githlab_source_url &&
-                    <Row>
-                      <Data>
-                        Gitlab
-                      </Data>
-                      <Data>
-                        <a href={node.frontmatter.gitlab_source_url} target="_blank">Source</a>
-                      </Data>
-                    </Row>
-                    }
-                    {node.frontmatter.npm_source_url &&
-                    <Row>
-                      <Data>
-                        NPM
-                      </Data>
-                      <Data>
-                        <a href={node.frontmatter.npm_source_url} target="_blank">Source</a>
-                      </Data>
-                    </Row>
-                    }
-                  </TableInfo>
-                </AreaCard>
-              </Area>
+              <ContributionArea
+              author={node.frontmatter.author}
+              maintainer={node.frontmatter.current_maintainer}
+              title={node.frontmatter.title}
+              areaHeader="Contributors"
+              />
+              <InformationArea
+              status={node.frontmatter.status}
+              date={node.frontmatter.date}
+              SoftwaresGrouped={softList.group}
+              github={node.frontmatter.github_source_url}
+              gitlab={node.frontmatter.gitlab_source_url}
+              npm={node.frontmatter.npm_source_url}
+              areaHeader="Information"
+              />
               {node.frontmatter.tags &&
               <Area>
                 <CardHeader>Tags</CardHeader>
@@ -522,8 +418,6 @@ const TagsContainer = styled.div`
 const Tag = styled(Link)`
 `
 const AreaDescriptionCard = styled.div`
-`
-const Footer = styled.div`
 `
 const EditBtn = styled.div`
 `
