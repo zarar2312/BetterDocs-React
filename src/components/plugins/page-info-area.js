@@ -168,21 +168,22 @@ const Area = styled.div`
                     justify-content: flex-end;
                     flex-wrap: wrap;
                     ${Softwaree} {
-                    margin-left: 7px;
-                    background-color: #fff;
-                    padding: 0.38rem 0.56rem;
-                    border-radius: 25px;
-                    color: #5f6368;
-                    font-size: 0.54rem;
-                    transition: 300ms ease-in-out all;
-                    border: 1px solid #eff2f6;
-                    position: relative;
-                    line-height: initial;
-                    margin-top: 0.1rem;
+                        margin-left: 7px;
+                        background-color: #fff;
+                        padding: 0.38rem 0.56rem;
+                        border-radius: 25px;
+                        color: #5f6368;
+                        font-size: 0.54rem;
+                        transition: 300ms ease-in-out all;
+                        border: 1px solid #eff2f6;
+                        position: relative;
+                        line-height: initial;
+                        margin-top: 0.1rem;
                         &:hover {
-                        background-color: #dddddd;
-                        border-bottom-left-radius: 0px;
-                        box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+                            background-color: #dddddd;
+                            border-bottom-left-radius: 0px;
+                            box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+                            color: #000;
                             &::after {
                                 display: none !important;
                             }
@@ -227,6 +228,9 @@ const GlobalStyle = createGlobalStyle`
                             ${Softwaree} {
                                 background-color: rgba(0,0,0,0.2);
                                 border-color: rgba(0,0,0,0.25);
+                                &:hover {
+                                    color: #fff;
+                                }
                             }
                         }
                         &:nth-child(2) {

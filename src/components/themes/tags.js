@@ -1,6 +1,4 @@
 import React from "react"
-import kebabCase from "lodash/kebabCase"
-//import Helmet from "react-helmet"
 import { Link } from "gatsby"
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
@@ -13,8 +11,8 @@ const TagsPage = ({tagsArray}) => {
     <GlobalStyle />
         <Tags><span>Tags:</span>
           {tagsArray.map(tag => (
-            <Tagg to={`/themes/tag/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>
-            {tag.fieldValue}
+            <Tagg to={`/themes/tag/${tag.fieldValue.toString().toLowerCase()}/`} key={tag.fieldValue}>
+            {tag.fieldValue.toString().toLowerCase()}
             </Tagg>
           ))}
         </Tags>

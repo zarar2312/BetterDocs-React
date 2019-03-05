@@ -144,7 +144,7 @@ return graphql(`{
     // Make tag pages
     plugintags.forEach(tag => {
       createPage({
-        path: `/plugins/tag/${_.kebabCase(tag)}/`,
+        path: `/plugins/tag/${tag.toString().toLowerCase()}/`,
         component: pluginTagTemplate,
         context: {
           tag,

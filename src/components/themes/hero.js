@@ -1,11 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-//import style from 'src/styles/themes.module.scss'
-//import Missing from "src/images/missing_image_2.png"
-import kebabCase from "lodash/kebabCase"
-//import LazyLoad from "react-lazyload"
-//import Stars from "src/images/stars.svg"
-//import Loading from 'src/images/Loading.gif'
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
@@ -102,8 +96,8 @@ const ThemePageHero = ({title, thumbnail, status, tags, author, demo, date, gith
                                 {tag.fieldValue === "undefined" ?
                                     null
                                 :
-                                    <Taggg to={`/themes/tag/${kebabCase(tag.fieldValue)}/`}>
-                                        <div>{tag.fieldValue}</div>
+                                    <Taggg to={`/themes/tag/${tag.fieldValue.toString().toLowerCase()}/`}>
+                                        <div>{tag.fieldValue.toString().toLowerCase()}</div>
                                     </Taggg>
                                 }
                             </div>

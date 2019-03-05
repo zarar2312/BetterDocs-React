@@ -13,8 +13,8 @@ const pluginTags = ({areaHeader, tagsGrouped}) => (
         <CardHeader>{areaHeader}</CardHeader>
         <TagsContainer>
             {tagsGrouped.map(tag => (
-            <Tag to={`/plugins/tag/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>
-            {tag.fieldValue} <span>{tag.totalCount}</span>
+            <Tag to={`/plugins/tag/${tag.fieldValue.toString().toLowerCase()}}/`} key={tag.fieldValue}>
+            {tag.fieldValue.toString().toLowerCase()}} <span>{tag.totalCount}</span>
             </Tag>
             ))}
         </TagsContainer>
@@ -41,12 +41,12 @@ ${TagsContainer} {
         ${Tag} {
             margin-left: 7px;
             background-color: #fff;
-            padding: 0.3rem 0.6rem;
+            padding: 0.22rem 0.5rem;
             border-radius: 25px;
             color: #5f6368;
             font-size: 0.95em;
             transition: 300ms ease-in-out all !important;
-            border: 1px solid #eff2f6;
+            border: 1px solid #eaeaea;
             line-height: initial;
             &:first-child {
                 margin-left: unset;
@@ -56,8 +56,9 @@ ${TagsContainer} {
             }
             &:hover {
                 border-bottom-left-radius: 0px;
-                -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
                 box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+                color: #000 !important;
+                background-color: #fff !important;
                 &::after {
                     display: none !important;
                 }
@@ -89,7 +90,6 @@ const GlobalStyle = createGlobalStyle`
                 border-color: rgba(0,0,0,0.15);
                 color: #fff !important;
                 &:hover {
-                    color: ${variable.SiteColor};
                     background-color: rgba(0,0,0,0.2) !important;
                 }
             }
