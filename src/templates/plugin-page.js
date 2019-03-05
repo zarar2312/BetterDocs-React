@@ -705,7 +705,7 @@ const Container = styled.div`
               width: 17px;
               fill: #fff;
               margin: 0 auto;
-              top: 13px;
+              top: 15px;
               position: relative;
             }
             &::after {

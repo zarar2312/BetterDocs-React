@@ -174,41 +174,24 @@ const Area = styled.div`
                         border-radius: 25px;
                         font-size: 0.54rem;
                         transition: 300ms ease-in-out all;
-                        border: 1px solid #eff2f6;
                         position: relative;
                         line-height: initial;
                         margin-top: 0.1rem;
-                        &[alt="BandagedBD"] {
-                            background-color: ${variable.BandagedBD};
-                            color: #fff;
+                        word-break: keep-all;
+                        &:first-child, &:only-child {
+                            margin: unset;
                         }
-                        &[alt="BetterDiscord"] {
-                            background-color: ${variable.BetterDiscord};
-                            color: #fff;
-                        }
-                        &[alt="PowerCord"] {
-                            background-color: ${variable.PowerCord};
-                            color: #fff;
-                        }
-                        &[alt="DiscordInjections"] {
-                            background-color: ${variable.DiscordInjections};
-                            color: #fff;
-                        }
-                        &[alt="EnhancedDiscord"] {
-                            background-color: ${variable.EnhancedDiscord};
-                            color: #fff;
-                        }
+                        
                         &:hover {
                             background-color: #dddddd;
                             border-bottom-left-radius: 0px;
                             box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-                            color: #000;
+                            color: #fff;
                             &::after {
                                 display: none !important;
                             }
                         }
                         &:active, &:focus {
-                            background-color: ${rgba(variable.SiteColor, 0.1)};
                             box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px, rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
                             border-bottom-left-radius: 0px;
                             color: ${variable.SiteColor};
@@ -217,6 +200,41 @@ const Area = styled.div`
                         }
                         &::after {
                             display: none !important;
+                        }
+                        &[alt="BandagedBD"] {
+                            background-color: ${variable.BandagedBD};
+                            color: #fff;
+                            &:hover {
+                                background-color: ${darken(0.15, variable.BandagedBD)}
+                            }
+                        }
+                        &[alt="BetterDiscord"] {
+                            background-color: ${variable.BetterDiscord};
+                            color: #fff;
+                            &:hover {
+                                background-color: ${darken(0.15, variable.BetterDiscord)}
+                            }
+                        }
+                        &[alt="PowerCord"] {
+                            background-color: ${variable.PowerCord};
+                            color: #fff;
+                            &:hover {
+                                background-color: ${darken(0.15, variable.PowerCord)}
+                            }
+                        }
+                        &[alt="DiscordInjections"] {
+                            background-color: ${variable.DiscordInjections};
+                            color: #fff;
+                            &:hover {
+                                background-color: ${darken(0.15, variable.DiscordInjections)}
+                            }
+                        }
+                        &[alt="EnhancedDiscord"] {
+                            background-color: ${variable.EnhancedDiscord};
+                            color: #fff;
+                            &:hover {
+                                background-color: ${darken(0.15, variable.EnhancedDiscord)}
+                            }
                         }
                     }
                 }
@@ -243,15 +261,6 @@ const GlobalStyle = createGlobalStyle`
                 ${Row} {
                     border-color: #000;
                     ${Data} {
-                        ${SoftwaresContainer} {
-                            ${Softwaree} {
-                                background-color: rgba(0,0,0,0.2);
-                                border-color: rgba(0,0,0,0.25);
-                                &:hover {
-                                    color: #fff;
-                                }
-                            }
-                        }
                         &:nth-child(2) {
                             color: #e4e4e4;
                             a {
