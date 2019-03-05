@@ -25,7 +25,7 @@ const pluginAlerts = ({status, title}) => (
             </StatusContainer>
             :
             <StatusContainer alt="Unknown">
-                <Status>This plugin may or may not be compatible with Discord</Status>
+                <Status>This plugin <i>should</i> (may not) be compatible with the latest version of Discord</Status>
                 <StatusDescription>This plugin is currently marked as <b>Unknown</b> which means that this plugin may or may not work. If you would like to report an update for the rest of the community, you can do so <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
             </StatusContainer>
         }
@@ -115,6 +115,28 @@ const GlobalStyle = createGlobalStyle`
             color: #d6d6d6;
             a {
                 color: #fff !important;
+            }
+        }
+        &[alt="Updated"] {
+            display: none;
+            ${StatusDescription} {
+                b {
+                    color: #30c381;
+                }
+            }
+        }
+        &[alt="Deprecated"] {
+            ${StatusDescription} {
+                b {
+                    color: #c33030;
+                }
+            }
+        }
+        &[alt="Unknown"] {
+            ${StatusDescription} {
+                b {
+                    color: #30a1c3;
+                }
             }
         }
     }

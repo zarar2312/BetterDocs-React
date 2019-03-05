@@ -887,7 +887,7 @@ const Container = styled.div`
           right: 1rem;
           bottom: 2.5rem;
           z-index: 100;
-          transition: all linear 250ms;
+          transition: all linear 250ms !important;
           @media (min-width: 850px) {
               right: 1.5rem;
               bottom: 1rem;
@@ -901,7 +901,7 @@ const Container = styled.div`
             text-align: center;
             line-height: 2.5rem;
             border-radius: 50%;
-            transition: all linear 250ms;
+            transition: all linear 250ms !important;
             box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 3px -2px #ffffff;
             font-size: 1.3rem;
             &:hover {

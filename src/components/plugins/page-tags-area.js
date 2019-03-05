@@ -45,22 +45,13 @@ ${TagsContainer} {
             border-radius: 25px;
             color: #5f6368;
             font-size: 0.95em;
-            transition: 300ms ease-in-out all;
+            transition: 300ms ease-in-out all !important;
             border: 1px solid #eff2f6;
             line-height: initial;
             &:first-child {
                 margin-left: unset;
             }
             span {
-                background-color: #eeeeee;
-                color: #5f6368;
-                border-radius: 50%;
-                width: 16px;
-                height: 16px;
-                line-height: 16px;
-                text-align: center;
-                font-size: 0.8em;
-                margin-left: 6px;
                 display: none;
             }
             &:hover {
@@ -91,6 +82,17 @@ const GlobalStyle = createGlobalStyle`
     ${Area} {
         ${CardHeader} {
             color: #fff;
+        }
+        ${TagsContainer} {
+            ${Tag} {
+                background-color: rgba(0,0,0,0.1);
+                border-color: rgba(0,0,0,0.15);
+                color: #fff !important;
+                &:hover {
+                    color: ${variable.SiteColor};
+                    background-color: rgba(0,0,0,0.2) !important;
+                }
+            }
         }
     }
 }
