@@ -6,7 +6,7 @@ import { rgba, darken } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 
-const pluginsHero = ({author, maintainer, title, areaHeader}) => (
+const pluginContributors = ({author, maintainer, title, areaHeader}) => (
     <Area>
         <GlobalStyle />
         <CardHeader>{areaHeader}</CardHeader>
@@ -32,7 +32,7 @@ const pluginsHero = ({author, maintainer, title, areaHeader}) => (
     </Area>
 )
 
-export default pluginsHero
+export default pluginContributors
 
 const CardHeader = styled.h1`
 `

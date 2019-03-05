@@ -9,7 +9,7 @@ import { rgba } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 
-const pluginCard = ({title, slug, status, excerpt, author}) => (
+const pluginSidebarCard = ({title, slug, status, excerpt, author}) => (
     <Card
     activeClassName="active"
     to={'plugins' + slug}
@@ -36,13 +36,11 @@ const pluginCard = ({title, slug, status, excerpt, author}) => (
     </Card>
 )
 
-export default pluginCard
+export default pluginSidebarCard
 
 const Title = styled.span`
-
 `
 const Author = styled.span`
-
 `
 const Paragraph = styled.p`
 `

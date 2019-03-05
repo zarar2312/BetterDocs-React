@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 import kebabCase from "lodash/kebabCase"
 
-const pluginsHero = ({areaHeader, tagsGrouped}) => (
+const pluginTags = ({areaHeader, tagsGrouped}) => (
     <Area>
         <GlobalStyle />
         <CardHeader>{areaHeader}</CardHeader>
@@ -21,7 +21,7 @@ const pluginsHero = ({areaHeader, tagsGrouped}) => (
     </Area>
 )
 
-export default pluginsHero
+export default pluginTags
 
 const CardHeader = styled.h1`
 `

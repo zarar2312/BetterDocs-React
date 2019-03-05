@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Sidebar from '../components/plugins/sidebar'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import kebabCase from "lodash/kebabCase"
@@ -11,9 +11,8 @@ import "react-tabs/style/react-tabs.css";
 import Hero from '../components/plugins/page-hero'
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
-import { darken, rgba } from 'polished'
+import { darken } from 'polished'
 import { createGlobalStyle } from 'styled-components'
-import Modal from '../components/plugins/modal'
 import InformationArea from '../components/plugins/page-info-area'
 import ContributionArea from '../components/plugins/page-contributors-area'
 import DependencyArea from '../components/plugins/page-dependency-area'
@@ -91,11 +90,11 @@ const Plugins = (props) => {
               title={node.frontmatter.title}
               />
               {node.frontmatter.dependency &&
-              <DependencyArea
-              title={node.frontmatter.title}
-              dependenciesList={dependenciesList.group}
-              areaHeader="Dependency Requirements"
-              />
+                <DependencyArea
+                title={node.frontmatter.title}
+                dependenciesList={dependenciesList.group}
+                areaHeader="Dependency Requirements"
+                />
               }
               <Area>
                 <CardHeader>Description</CardHeader>
@@ -119,10 +118,10 @@ const Plugins = (props) => {
               areaHeader="Information"
               />
               {node.frontmatter.tags &&
-              <TagsArea
-              tagsGrouped={pluginList.group}
-              areaHeader="Tags"
-              />
+                <TagsArea
+                tagsGrouped={pluginList.group}
+                areaHeader="Tags"
+                />
               }
               <Options>
                 {node.frontmatter.download &&
@@ -184,9 +183,9 @@ const Plugins = (props) => {
       </svg>
     </BackButton>
     {pluginList.edges.map(({ node }, i) => (
-    <TopHeader key={node.id}>
+    <MobileHeader key={node.id}>
       <div>{node.frontmatter.title}</div>
-    </TopHeader>
+    </MobileHeader>
     ))}
   </Layout>
 )
@@ -344,29 +343,7 @@ const Area = styled.div`
 `
 const Wrapper = styled.section`
 `
-const DependencyContainer = styled.div`
-`
-const SoftwaresContainer = styled.div`
-`
-const Softwaree = styled(Link)`
-`
-const Header = styled.div`
-`
-const Dependencies = styled.div`
-`
-const Button = styled.a`
-`
-const TableInfo = styled.table`
-`
-const Row = styled.tr`
-`
-const Data = styled.td`
-`
-const AreaCard = styled.div`
-`
 const SubText = styled.p`
-`
-const Text = styled.div`
 `
 const TabListt = styled(TabList)`
 `
@@ -388,7 +365,7 @@ const Ad = styled.div`
   order: 3;
   display: block;
 `
-const TopHeader = styled.div`
+const MobileHeader = styled.div`
   position: fixed;
   top: 0px;
   z-index: 100;
@@ -430,59 +407,6 @@ const Container = styled.div`
     @media (min-width: 850px) {
       padding-left: 14.8rem;
     }
-    ${DependencyContainer} {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem;
-      order: 2;
-      background-color: #eee;
-      ${Header} {
-        margin-bottom: 17px;
-        margin-top: -10px;
-        font-size: 0.7rem;
-      }
-      ${Dependencies} {
-        display: flex;
-        counter-reset: dependency;  
-        ${Button} {
-          margin-left: 10px;
-          &:first-child {
-              margin-left: unset;
-          }
-          ${Text} {
-            display: block;
-            background-color: ${variable.SiteColor};
-            color: #fff;
-            border-radius: 2px;
-            padding: 0.3rem 0.6rem;
-            font-size: 0.6rem;
-            border: 1px solid ${darken(0.1,variable.SiteColor)};
-            transition: 250ms all linear;
-            position: relative;
-            &:hover {
-              background: ${darken(0.1,variable.SiteColor)};
-            }
-            &::before {
-              counter-increment: dependency;
-              position: absolute;
-              top: -8px;
-              left: -8px;
-              background-color: ${darken(0.1,variable.SiteColor)};
-              padding: 4px 7px;
-              font-size: 0.5rem;
-              border-radius: 50%;
-              content: counter(dependency);
-              margin-right: 4px;
-            }
-            &:only-child {
-              &::before {
-              content: unset;
-            }
-          }
-        }
-      }
-    }
-  }
   ${Tabbs} {
     order: 3;
     ${TabListt} {
@@ -553,10 +477,6 @@ const Container = styled.div`
         @media (min-width: 850px) {
           padding-bottom: unset;
         }
-          /*@media (min-width: 850px) {
-            width: calc(100% - 300px);
-            display: flex;
-          }*/
         a:not([class*="anchor"]) {
           display: inline-block;
           transition: color 250ms, text-shadow 250ms;
@@ -638,249 +558,118 @@ const Container = styled.div`
             font-size: 1.55rem;
             margin-bottom: 0.8rem;
           }
-          ${Dependencies} {
-            display: flex;
-            counter-reset: dependency;  
-            ${Button} {
-              margin-left: 10px;
-                &:first-child {
-                  margin-left: unset;
-                }
-                &::after {
-                  height: 0;
-                }
-                &:hover {
-                  &::after {
-                    height: 0;
-                  }
-                }
-                ${Text} {
-                  display: block;
-                  background-color: ${variable.SiteColor};
-                  color: #fff;
-                  border-radius: 2px;
-                  padding: 0.3rem 0.6rem;
-                  font-size: 0.6rem;
-                  border: 1px solid ${darken(0.1,variable.SiteColor)};
-                  transition: 250ms all linear;
-                  position: relative;
-                  &:hover {
-                    background: ${darken(0.1,variable.SiteColor)};
-                  }
-                  &::before {
-                    counter-increment: dependency;
-                    position: absolute;
-                    top: -8px;
-                    left: -8px;
-                    background-color: ${darken(0.1,variable.SiteColor)};
-                    padding: 4px 7px;
-                    font-size: 0.5rem;
-                    border-radius: 50%;
-                    content: counter(dependency);
-                    margin-right: 4px;
-                  }
-                  &:only-child {
-                    &::before {
-                    content: unset;
-                  }
-                }
-              }
-            }
-          }
-          ${AreaCard} {
-            flex-direction: column;
-            word-break: break-word;
-            background-color: #fff;
-            border-radius: 20px;
-            box-shadow: 2px 2px 40px -12px #999;
-            padding: 0.8rem 1.1rem;
-            border: 1px solid #ececec;
-              ${SubText} {
-                font-weight: bold;
-                margin: unset;
-                font-size: 0.58rem;
-                line-height: 0.9rem;
-                color: #969696;
-              }
-              ${TableInfo} {
-                border-collapse: collapse;
-                width: 100%;
-                margin: unset;
-                font-size: 0.7rem;
-                ${Row} {
-                  border-bottom: 1px solid #cacaca;
-                  ${Data} {
-                    text-align: left;
-                    padding: 10px 8px;
-                    margin-bottom: 2px;
-                    &:nth-child(2) {
-                      text-align: right;
-                    }
-                    &:nth-child(1) {
-                      font-weight: bold;
-                    }
-                    &[alt="Updated"] {
-                      color: #00b167;
-                    }
-                    &[alt="Deprecated"] {
-                      color: #c33030;
-                    }
-                    &[alt="Unknown"] {
-                      color: #005180;
-                    }
-                    ${SoftwaresContainer} {
-                      display: flex;
-                      justify-content: flex-end;
-                      flex-wrap: wrap;
-                      ${Softwaree} {
-                        margin-left: 7px;
-                        background-color: #fff;
-                        padding: 0.38rem 0.56rem;
-                        border-radius: 25px;
-                        color: #5f6368;
-                        font-size: 0.54rem;
-                        transition: 300ms ease-in-out all;
-                        border: 1px solid #eff2f6;
-                        position: relative;
-                        line-height: initial;
-                        margin-top: 0.1rem;
-                          &:hover {
-                            background-color: #dddddd;
-                            border-bottom-left-radius: 0px;
-                            box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-                            &::after {
-                              opacity: 1;
-                            }
-                          }
-                          &:active, &:focus {
-                            background-color: ${rgba(variable.SiteColor, 0.1)};
-                            box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px, rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
-                            border-bottom-left-radius: 0px;
-                            color: ${variable.SiteColor};
-                            outline: unset;
-                            border-color: transparent;
-                        }
-                        &::after {
-                          height: 0;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          ${Options} {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            margin-bottom: 0.8rem;
-            @media ${variable.MidPoint} {
-              flex-direction: row;
-              justify-content: flex-start;
-              ${Download} {
-                margin-top: 0.5rem;
-                margin-right: 0.4rem;
-              }
-            }
-            ${NpmCopy} {
-              background-color: #fff;
-              border: 1px solid #b3b3b3;
-              border-left: 3px solid #b3b3b3;
-              padding: 0.6em 0.6rem;
-              border-radius: 2px;
-              color: #0a0a0a;
-              margin-top: 0.5rem;
-              transition: 300ms ease-in-out;
-              display: flex;
-              font-size: 0.67rem;
-              flex-direction: column;
-              justify-content: center;
-              &::after {
-                  content: "Copy Me!";
-                  display: block;
-                  background-color: #0a0a0a;
-                  color: #fff;
-                  position: absolute;
-                  top: 2.1rem;
-                  left: 0;
-                  z-index: 150;
-                  margin: 0 auto;
-                  padding: 0.25rem 0.4rem;
-                  border-radius: 2px;
-                  text-align: center;
-                  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4) !important;
-                  transition: .2s linear all;
-                  opacity: 0;
-                  pointer-events: none;
-                  font-size: 0.5rem;
-              }
-              @media (min-width: 850px) {
-                margin-top: 0.5rem;
-                margin-right: 0.4rem;
-                  &::after {
-                      top: 0.28rem;
-                      left: -0.8rem;
-                  }
-              }
-              svg {
-                  height: 0.5rem;
-                  width: 0.4rem;
-                  top: 1px;
-                  right: 4px;
-                  position: relative;
-              }
-              &:hover {
-                  background-color: #f7f7f7;
-                  &::after {
-                      opacity: 1;
-                  }
-              }
-              &:active, &:focus {
-                  background-color: #f0f0f0;
-              }
-            }
+        }
+        ${Options} {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          margin-bottom: 0.8rem;
+          @media ${variable.MidPoint} {
+            flex-direction: row;
+            justify-content: flex-start;
             ${Download} {
-              background-color: ${variable.SiteColor};
-              border-radius: 25px;
-              padding: 0.5rem 1rem;
-              font-size: 0.8rem;
-              color: #fff;
-              box-shadow: 2px 2px 40px -12px #000;
-              transition: 300ms ease-in-out all;
-              background: linear-gradient(90deg,${variable.SiteColor},${darken(0.3, variable.SiteColor)});
+              margin-top: 0.5rem;
+              margin-right: 0.4rem;
+            }
+          }
+          ${NpmCopy} {
+            background-color: #fff;
+            border: 1px solid #b3b3b3;
+            border-left: 3px solid #b3b3b3;
+            padding: 0.6em 0.6rem;
+            border-radius: 2px;
+            color: #0a0a0a;
+            margin-top: 0.5rem;
+            transition: 300ms ease-in-out;
+            display: flex;
+            font-size: 0.67rem;
+            flex-direction: column;
+            justify-content: center;
+            &::after {
+                content: "Copy Me!";
+                display: block;
+                background-color: #0a0a0a;
+                color: #fff;
+                position: absolute;
+                top: 2.1rem;
+                left: 0;
+                z-index: 150;
+                margin: 0 auto;
+                padding: 0.25rem 0.4rem;
+                border-radius: 2px;
+                text-align: center;
+                box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4) !important;
+                transition: .2s linear all;
+                opacity: 0;
+                pointer-events: none;
+                font-size: 0.5rem;
+            }
+            @media (min-width: 850px) {
+              margin-top: 0.5rem;
+              margin-right: 0.4rem;
+                &::after {
+                    top: 0.28rem;
+                    left: -0.8rem;
+                }
+            }
+            svg {
+                height: 0.5rem;
+                width: 0.4rem;
+                top: 1px;
+                right: 4px;
+                position: relative;
+            }
+            &:hover {
+                background-color: #f7f7f7;
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &:active, &:focus {
+                background-color: #f0f0f0;
+            }
+          }
+          ${Download} {
+            background-color: ${variable.SiteColor};
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            color: #fff;
+            box-shadow: 2px 2px 40px -12px #000;
+            transition: 300ms ease-in-out all;
+            background: linear-gradient(90deg,${variable.SiteColor},${darken(0.3, variable.SiteColor)});
+            &::after {
+              height: 0;
+            }
+            &:hover {
+              box-shadow: 2px 10px 40px -12px ${darken(0.3, variable.SiteColor)};
               &::after {
                 height: 0;
               }
-              &:hover {
-                box-shadow: 2px 10px 40px -12px ${darken(0.3, variable.SiteColor)};
-                &::after {
-                  height: 0;
-                }
-              }
             }
-            ${Report} {
-              background-color: #da002f;
-              border-radius: 25px;
-              padding: 0.5rem 1rem;
-              font-size: 0.8rem;
-              margin-top: 0.5rem;
-              color: #fff;
-              box-shadow: 2px 2px 40px -12px #000;
-              transition: 300ms ease-in-out all;
-              background: linear-gradient(90deg,#da002f, #9e0022);
-              position: relative;
-              &:after {
+          }
+          ${Report} {
+            background-color: #da002f;
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            color: #fff;
+            box-shadow: 2px 2px 40px -12px #000;
+            transition: 300ms ease-in-out all;
+            background: linear-gradient(90deg,#da002f, #9e0022);
+            position: relative;
+            &:after {
+              height: 0;
+            }
+            &:hover {
+              box-shadow: 2px 10px 40px -12px #da002f;
+              &::after {
                 height: 0;
-              }
-              &:hover {
-                box-shadow: 2px 10px 40px -12px #da002f;
-                &::after {
-                  height: 0;
-                }
               }
             }
           }
+        }
         }
         ${EditBtn} {
           position: fixed;

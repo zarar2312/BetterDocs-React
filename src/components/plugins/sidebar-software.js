@@ -7,7 +7,7 @@ import { rgba, darken } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 
-const sidebarSoftware = () => (
+const pluginSidebarSoftware = () => (
     <StaticQuery
     query={ graphql`
     query pluginSoftwareInfo {
@@ -40,7 +40,7 @@ const sidebarSoftware = () => (
     />
 )
 
-export default sidebarSoftware
+export default pluginSidebarSoftware
 
 const Tag = styled(Link)`
 `
