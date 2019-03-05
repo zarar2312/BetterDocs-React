@@ -11,7 +11,7 @@ const pluginDependency = ({dependenciesList, title,areaHeader}) => (
         <GlobalStyle />
         <CardHeader>{areaHeader}</CardHeader>
         <AreaCard>
-            <SubText>You need this extra Plugin file(s) known as a dependency because the Plugin "{title}" needs this to work properly.</SubText>
+            <SubText>You need this extra Plugin file(s) known as a dependency so the Plugin "{title}"  can work properly.</SubText>
             {dependenciesList.map(dependency => (
             <Dependencies>
                 <Button href={dependency.fieldValue} target="_blank" key={dependency.fieldValue}>
