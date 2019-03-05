@@ -13,8 +13,8 @@ const pluginTags = ({areaHeader, tagsGrouped}) => (
         <CardHeader>{areaHeader}</CardHeader>
         <TagsContainer>
             {tagsGrouped.map(tag => (
-            <Tag to={`/plugins/tag/${tag.fieldValue.toString().toLowerCase()}}/`} key={tag.fieldValue}>
-            {tag.fieldValue.toString().toLowerCase()}} <span>{tag.totalCount}</span>
+            <Tag to={`/plugins/tag/${tag.fieldValue.toString().toLowerCase()}/`} key={tag.fieldValue}>
+            {tag.fieldValue.toString().toLowerCase()} <span>{tag.totalCount}</span>
             </Tag>
             ))}
         </TagsContainer>
