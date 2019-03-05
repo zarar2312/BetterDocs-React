@@ -53,7 +53,7 @@ const pluginInfo = ({status,date,SoftwaresGrouped,github,gitlab,npm,areaHeader})
                 <Data>
                 <SoftwaresContainer>
                     {SoftwaresGrouped.map(software => (
-                        <Softwaree to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`} key={software.fieldValue}>
+                        <Softwaree alt={software.fieldValue} to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`} key={software.fieldValue}>
                             {software.fieldValue}
                         </Softwaree>
                     ))}
@@ -172,13 +172,32 @@ const Area = styled.div`
                         background-color: #fff;
                         padding: 0.38rem 0.56rem;
                         border-radius: 25px;
-                        color: #5f6368;
                         font-size: 0.54rem;
                         transition: 300ms ease-in-out all;
                         border: 1px solid #eff2f6;
                         position: relative;
                         line-height: initial;
                         margin-top: 0.1rem;
+                        &[alt="BandagedBD"] {
+                            background-color: ${variable.BandagedBD};
+                            color: #fff;
+                        }
+                        &[alt="BetterDiscord"] {
+                            background-color: ${variable.BetterDiscord};
+                            color: #fff;
+                        }
+                        &[alt="PowerCord"] {
+                            background-color: ${variable.PowerCord};
+                            color: #fff;
+                        }
+                        &[alt="DiscordInjections"] {
+                            background-color: ${variable.DiscordInjections};
+                            color: #fff;
+                        }
+                        &[alt="EnhancedDiscord"] {
+                            background-color: ${variable.EnhancedDiscord};
+                            color: #fff;
+                        }
                         &:hover {
                             background-color: #dddddd;
                             border-bottom-left-radius: 0px;
