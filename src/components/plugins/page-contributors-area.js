@@ -160,7 +160,7 @@ const GlobalStyle = createGlobalStyle`
             box-shadow: 2px 2px 40px -12px #000;
             ${TableInfo} {
                 ${Row} {
-                    border-bottom: 1px solid #cacaca;
+                    border-color: #000;
                     ${Data} {
                         &:nth-child(2) {
                             color: #e4e4e4;

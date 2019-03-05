@@ -221,8 +221,14 @@ const GlobalStyle = createGlobalStyle`
             border-color: rgba(0,0,0,0.25);
             ${TableInfo} {
                 ${Row} {
-                    border-bottom: 1px solid #cacaca;
+                    border-color: #000;
                     ${Data} {
+                        ${SoftwaresContainer} {
+                            ${Softwaree} {
+                                background-color: rgba(0,0,0,0.2);
+                                border-color: rgba(0,0,0,0.25);
+                            }
+                        }
                         &:nth-child(2) {
                             color: #e4e4e4;
                             a {

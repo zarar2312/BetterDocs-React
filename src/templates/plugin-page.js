@@ -1,18 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
-//import hero from '../styles/altHero.module.scss'
-//import style from '../styles/plugin-page.module.scss'
 import { graphql, Link } from 'gatsby'
 import Sidebar from '../components/plugins/sidebar'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import kebabCase from "lodash/kebabCase"
 import Helmet from 'react-helmet'
 import AdSense from 'react-adsense';
-//import ad from '../styles/ad.module.scss'
-//import alert from '../styles/alerts.module.scss'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
-//import "../styles/plugin-page.css"
 import Hero from '../components/plugins/page-hero'
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
@@ -22,6 +17,8 @@ import Modal from '../components/plugins/modal'
 import InformationArea from '../components/plugins/page-info-area'
 import ContributionArea from '../components/plugins/page-contributors-area'
 import DependencyArea from '../components/plugins/page-dependency-area'
+import TagsArea from '../components/plugins/page-tags-area'
+import Alerts from '../components/plugins/page-alert'
 
 const Plugins = (props) => {
   const pluginList = props.data.listPlugins;
@@ -89,28 +86,10 @@ const Plugins = (props) => {
           </TabListt>
           <TabPanell>
             <ContentContainer>
-              {node.frontmatter.status ?
-              <StatusContainer alt ={node.frontmatter.status}>
-                {node.frontmatter.status === "Updated" &&
-                  <Status>This plugin is compatible with the latest version of Discord</Status>
-                }
-                {node.frontmatter.status === "Updated" &&
-                  <StatusDescription>This plugin is currently marked as <b>Updated</b> by the community which means this <i>should</i> work. If this is broken for the latest version of please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
-                }
-                {node.frontmatter.status === "Deprecated" &&
-                  <Status>This plugin is not compatible with the latest version of Discord</Status>
-                }
-                {node.frontmatter.status === "Deprecated" &&
-                  <StatusDescription>This plugin is currently marked as <b>Deprecated</b> by the community which means this will break your Discord. If you think this is a mistake please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
-                }
-                <Modal/>
-              </StatusContainer>
-              :
-              <StatusContainer alt="Unknown">
-                <Status>This plugin may or may not be compatible with Discord</Status>
-                <StatusDescription>This plugin is currently marked as <b>Unknown</b> which means that this plugin may or may not work. If you would like to report an update for the rest of the community, you can do so <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
-              </StatusContainer>
-              }
+              <Alerts
+              status={node.frontmatter.status}
+              title={node.frontmatter.title}
+              />
               {node.frontmatter.dependency &&
               <DependencyArea
               title={node.frontmatter.title}
@@ -140,16 +119,10 @@ const Plugins = (props) => {
               areaHeader="Information"
               />
               {node.frontmatter.tags &&
-              <Area>
-                <CardHeader>Tags</CardHeader>
-                <TagsContainer>
-                    {pluginList.group.map(tag => (
-                    <Tag to={`/plugins/tag/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>
-                    {tag.fieldValue} <span>{tag.totalCount}</span>
-                    </Tag>
-                    ))}
-                </TagsContainer>
-              </Area>
+              <TagsArea
+              tagsGrouped={pluginList.group}
+              areaHeader="Tags"
+              />
               }
               <Options>
                 {node.frontmatter.download &&
@@ -365,12 +338,6 @@ const Download = styled.a`
 `
 const Report = styled.a`
 `
-const StatusContainer = styled.div`
-`
-const Status = styled.p`
-`
-const StatusDescription = styled.div`
-`
 const CardHeader = styled.h1`
 `
 const Area = styled.div`
@@ -410,10 +377,6 @@ const TabPanell = styled(TabPanel)`
 const ContentContainer = styled.div`
 `
 const NpmCopy = styled.div`
-`
-const TagsContainer = styled.div`
-`
-const Tag = styled(Link)`
 `
 const AreaDescriptionCard = styled.div`
 `
@@ -625,73 +588,6 @@ const Container = styled.div`
             }
           }
         }
-        ${StatusContainer} {
-          display: flex;
-          flex-direction: column;
-          border-radius: 25px;
-          margin-bottom: 1.25rem;
-          box-shadow: 2px 2px 40px -12px #999;
-          background-color: #fff;
-          ${Status} {
-            margin: unset;
-            font-size: 0.9rem;
-            font-weight: bold;
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
-            padding: 0.6rem 0.9rem;
-            word-break: keep-all;
-          }
-          ${StatusDescription} {
-            font-size: 0.7rem;
-            padding: 0.7rem 0.9rem;
-            border-bottom-left-radius: 25px;
-            border-bottom-right-radius: 25px;
-            background-color: #fff;
-            margin-top: -1px;
-            word-break: keep-all;
-            line-height: 0.98rem;
-          }
-          &[alt="Updated"] {
-            display: none;
-            ${Status} {
-              color: #fff;
-              background-color: #00b167;
-              background: linear-gradient(90deg,#30c381,#089e46);
-            }
-            ${StatusDescription} {
-              background: rgba(0, 177, 103, 0.08);
-              b {
-                color: #089e46;
-              }
-            }
-          }
-          &[alt="Deprecated"] {
-            ${Status} {
-              color: #fff;
-              background-color: #c33030;
-              background: linear-gradient(90deg,#c33030,#9e0808);
-            }
-            ${StatusDescription} {
-              background: rgba(195, 48, 48, 0.08);
-              b {
-                color: #c33030;
-              }
-            }
-          }
-          &[alt="Unknown"] {
-            ${Status} {
-              color: #fff;
-              background-color: #005180;
-              background: linear-gradient(90deg,#30a1c3,#005180);
-            }
-            ${StatusDescription} {
-              background: rgba(48, 161, 195, 0.08);
-              b {
-                color: #005180;
-              }
-            }
-          }
-        }
         ${AreaDescriptionCard} {
           display: block;
           word-break: break-word;
@@ -717,8 +613,8 @@ const Container = styled.div`
           p {
             color: #666;
           }
-          p:only-child {
-            margin: unset;
+          p:only-child, ul:last-child {
+            margin-bottom: unset;
           }
           h1 {
             font-size: 1.75rem; /*2.25rem*/
@@ -788,54 +684,6 @@ const Container = styled.div`
                     content: unset;
                   }
                 }
-              }
-            }
-          }
-          ${TagsContainer} {
-            display: -webkit-box;
-            ${Tag} {
-              margin-left: 7px;
-              background-color: #fff;
-              padding: 0.3rem 0.6rem;
-              border-radius: 25px;
-              color: #5f6368;
-              font-size: 0.95em;
-              transition: 300ms ease-in-out all;
-              border: 1px solid #eff2f6;
-              line-height: initial;
-              &:first-child {
-                margin-left: unset;
-              }
-              span {
-                  background-color: #eeeeee;
-                  color: #5f6368;
-                  border-radius: 50%;
-                  width: 16px;
-                  height: 16px;
-                  line-height: 16px;
-                  text-align: center;
-                  font-size: 0.8em;
-                  margin-left: 6px;
-                  display: none;
-              }
-              &:hover {
-                  border-bottom-left-radius: 0px;
-                  -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-                  box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-              }
-              &:active, &:focus {
-                background-color: ${rgba(variable.SiteColor, 0.1)};
-                box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
-                outline: unset;
-                border-color: transparent;
-                border-bottom-left-radius: 0px;
-                color: ${variable.SiteColor};
-                &::after {
-                  height: 0;
-                }
-              }
-              &::after {
-                height: 0;
               }
             }
           }
@@ -998,7 +846,7 @@ const Container = styled.div`
               padding: 0.5rem 1rem;
               font-size: 0.8rem;
               color: #fff;
-              box-shadow: 2px 2px 40px -12px #999;
+              box-shadow: 2px 2px 40px -12px #000;
               transition: 300ms ease-in-out all;
               background: linear-gradient(90deg,${variable.SiteColor},${darken(0.3, variable.SiteColor)});
               &::after {
@@ -1018,7 +866,7 @@ const Container = styled.div`
               font-size: 0.8rem;
               margin-top: 0.5rem;
               color: #fff;
-              box-shadow: 2px 2px 40px -12px #999;
+              box-shadow: 2px 2px 40px -12px #000;
               transition: 300ms ease-in-out all;
               background: linear-gradient(90deg,#da002f, #9e0022);
               position: relative;
