@@ -16,6 +16,9 @@ import * as variable from '../styles/variables'
 import { darken } from "polished"
 import Alerts from '../components/themes/theme-page-alerts'
 import { createGlobalStyle } from 'styled-components'
+import ContributionArea from '../components/themes/page-contributors-area'
+import InformationArea from '../components/themes/page-info-area'
+import TagsArea from '../components/themes/page-tags-area'
 
 /*
 {node.frontmatter.profile_picture ?
@@ -109,13 +112,36 @@ const Themes = (props) => {
             </TabListt>
 
           <TabPanell>
-          <ContentContainer>
-            <Content>
-              <HtmlContent
-              dangerouslySetInnerHTML={{ __html: node.html }}>
-              </HtmlContent>
-            </Content>
-          </ContentContainer>
+            <ContentContainer>
+              <Area>
+                <CardHeader>Description</CardHeader>
+                <AreaDescriptionCard
+                dangerouslySetInnerHTML={{ __html: node.html }}>
+                </AreaDescriptionCard>
+              </Area>
+              <AreaFlex>
+                <ContributionArea
+                author={node.frontmatter.author}
+                maintainer={node.frontmatter.current_maintainer}
+                title={node.frontmatter.title}
+                areaHeader="Contributors"
+                />
+                <InformationArea
+                status={node.frontmatter.status}
+                date={node.frontmatter.date}
+                github={node.frontmatter.github_source_url}
+                gitlab={node.frontmatter.gitlab_source_url}
+                npm={node.frontmatter.npm_source_url}
+                areaHeader="Information"
+                />
+              </AreaFlex>
+              {node.frontmatter.tags &&
+                <TagsArea
+                tagsGrouped={themeList.group}
+                areaHeader="Tags"
+                />
+              }
+            </ContentContainer>
           </TabPanell>
           {node.frontmatter.previews &&
           <TabPanell style={{margin: "0 auto"}}>
@@ -245,6 +271,14 @@ const ImageOptions = styled.div`
 const Text = styled.div`
 `
 const Ad = styled.div`
+`
+const AreaDescriptionCard = styled.div`
+`
+const CardHeader = styled.h1`
+`
+const Area = styled.div`
+`
+const AreaFlex = styled.div`
 `
 const MobileBackBtn= styled(AniLink)`
   position: fixed;
@@ -401,22 +435,61 @@ const Container = styled.div`
           overflow: auto;
           -webkit-overflow-scrolling: touch;
           padding-bottom: 3.1rem;
+          margin: 0 auto;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 1rem;
+          word-break: break-all;
+          font-size: 0.6rem;
           @media (min-width: 850px) {
-              padding-bottom: unset;
+            padding-bottom: unset;
+          }
+          a:not([class*="anchor"]) {
+            display: inline-block;
+            transition: color 250ms, text-shadow 250ms;
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            line-height: 1rem;
+            &:after {
+              position: absolute;
+              z-index: -1;
+              bottom: -1px;
+              left: 50%;
+              transform: translateX(-50%);
+              content: '';
+              width: 100%;
+              height: 3px;
+              background-color: ${variable.SiteColor};
+              transition: all 250ms;
             }
-            ${Content} {
-              display: block;
-              width: calc(100% - 75px);
-              margin: 0 auto;
-              padding-top: 1.1rem;
-              /*padding-bottom: 2.1rem;*/
-              word-break: break-all;
-              flex-direction: column;
-              font-size: 0.67rem;
-              @media (min-width: 850px) {
-                  width: calc(100% - 300px);
-                  display: flex;
+            &:hover {
+              color: #fff;
+              opacity: 1;
+              background-color: transparent;
+            &::after {
+                height: 110%;
+                width: 110%;
               }
+            }
+          }
+          ${AreaFlex} {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+          ${Area} {
+            margin-bottom: 1.25rem;
+            ${AreaDescriptionCard} {
+              display: block;
+              word-break: break-word;
+              background-color: #fff;
+              border-radius: 20px;
+              box-shadow: 2px 2px 40px -12px #999;
+              padding: 0.8rem 1.1rem;
+              border: 1px solid #ececec;
               code {
                 font-size: 0.67rem;
                 /*line-height: unset;*/
@@ -431,40 +504,30 @@ const Container = styled.div`
                   line-height: unset;
                 }
               }
-            ${HtmlContent} {
-              display: block;
-              word-break: break-word;
-              a:not([class*="anchor"]) {
-                display: inline-block;
-                transition: color 250ms, text-shadow 250ms;
-                color: #000;
-                text-decoration: none;
-                cursor: pointer;
-                position: relative;
-                z-index: 0;
-                line-height: 1rem;
-                &:after {
-                  position: absolute;
-                  z-index: -1;
-                  bottom: -1px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  content: '';
-                  width: 100%;
-                  height: 3px;
-                  background-color: ${variable.SiteColor};
-                  transition: all 250ms;
-                }
-                &:hover {
-                  color: #fff;
-                  opacity: 1;
-                  background-color: transparent;
-                &::after {
-                    height: 110%;
-                    width: 110%;
-                  }
-                }
+              p {
+                color: #666;
               }
+              p:only-child, ul:last-child {
+                margin-bottom: unset;
+              }
+              h1 {
+                font-size: 1.75rem; /*2.25rem*/
+                margin-bottom: 0.7rem; /*1.45*/
+                color: #000;
+              }
+              h2 {
+                font-size: 1.22rem; /*1.62671rem*/
+                margin-bottom: 0.7rem;
+                color: #000;
+              }
+              table {
+                font-size: 0.8rem;
+              }
+            }
+            ${CardHeader} {
+              font-size: 1.55rem;
+              word-break: keep-all;
+              margin-bottom: 0.8rem;
             }
           }
         }
