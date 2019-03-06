@@ -183,7 +183,7 @@ const DownloadBtn = styled.a`
 `
 const SupportBtn= styled.a`
 `
-const DemoBtn = styled.div`
+const DemoBtn = styled.a`
 `
 const Container = styled.div`
     order: 1;

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import 'src/styles/tooltips.css'
 import * as variable from 'src/styles/variables'
-import { rgba, darken } from 'polished'
+import { rgba } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 
@@ -13,20 +13,22 @@ const pluginContributors = ({author, maintainer, title, areaHeader}) => (
         <AreaCard>
             <SubText>A list of people that have contributed to this plugin in one way or another. If you think there is a mistake with this list please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report" }>here</a>.</SubText>
             <TableInfo>
-            <Row>
-                <Data>
-                Author
-                </Data>
-                <Data>
-                <Link to={"profile/" + author }>{author}</Link>
-                </Data>
-            </Row>
-            {maintainer &&
-            <Row>
-                <Data>Current Maintainer</Data>
-                <Data>{maintainer}</Data>
-            </Row>
-            }
+                    <RowBody>
+                    <Row>
+                        <Data>
+                        Author
+                        </Data>
+                        <Data>
+                        <Link to={"profile/" + author }>{author}</Link>
+                        </Data>
+                    </Row>
+                    {maintainer &&
+                    <Row>
+                        <Data>Current Maintainer</Data>
+                        <Data>{maintainer}</Data>
+                    </Row>
+                    }
+                </RowBody>
             </TableInfo>
         </AreaCard>
     </Area>
@@ -43,6 +45,8 @@ const SubText = styled.p`
 const TableInfo = styled.table`
 `
 const Row = styled.tr`
+`
+const RowBody = styled.tbody`
 `
 const Data = styled.td`
 `

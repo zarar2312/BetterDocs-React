@@ -1,7 +1,7 @@
 import React from 'react'
 import 'src/styles/tooltips.css'
-import * as variable from 'src/styles/variables'
-import { rgba, darken } from 'polished'
+//import * as variable from 'src/styles/variables'
+//import { rgba, darken } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 

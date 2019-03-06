@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import kebabCase from "lodash/kebabCase"
 import 'src/styles/tooltips.css'
 import * as variable from 'src/styles/variables'
-import { rgba, darken } from 'polished'
+import { darken } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 
@@ -13,84 +13,86 @@ const pluginInfo = ({status,date,SoftwaresGrouped,github,gitlab,npm,areaHeader})
         <CardHeader>{areaHeader}</CardHeader>
         <AreaCard>
             <TableInfo>
-            <Row>
-                {date &&
-                <Data>
-                    Page Last Updated
-                </Data>
-                }
-                {date &&
-                <Data>
-                    {date}
-                </Data>
-                }
-            </Row>
-            <Row>
-                <Data>
-                Status
-                </Data>
-                {status === "Updated" &&
-                <Data alt="Updated">
-                {status}
-                </Data>
-                }
-                {status === "Deprecated" &&
-                <Data alt="Deprecated">
-                Deprecated
-                </Data>
-                }
-                {status === null &&
-                <Data alt="Unknown">
-                Unknown
-                </Data>
-                }
-            </Row>
-            {SoftwaresGrouped &&
-            <Row>
-                <Data>
-                Supported Discord Mods
-                </Data>
-                <Data>
-                <SoftwaresContainer>
-                    {SoftwaresGrouped.map(software => (
-                        <Softwaree alt={software.fieldValue} to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`} key={software.fieldValue}>
-                            {software.fieldValue}
-                        </Softwaree>
-                    ))}
-                </SoftwaresContainer>
-                </Data>
-            </Row>
-            }
-            {github &&
-            <Row>
-                <Data>
-                Github
-                </Data>
-                <Data>
-                <a href={github} target="_blank">Source</a>
-                </Data>
-            </Row>
-            }
-            {gitlab &&
-            <Row>
-                <Data>
-                Gitlab
-                </Data>
-                <Data>
-                <a href={gitlab} target="_blank">Source</a>
-                </Data>
-            </Row>
-            }
-            {npm &&
-            <Row>
-                <Data>
-                NPM
-                </Data>
-                <Data>
-                <a href={npm} target="_blank">Source</a>
-                </Data>
-            </Row>
-            }
+                <RowBody>
+                    <Row>
+                        {date &&
+                        <Data>
+                            Page Last Updated
+                        </Data>
+                        }
+                        {date &&
+                        <Data>
+                            {date}
+                        </Data>
+                        }
+                    </Row>
+                    <Row>
+                        <Data>
+                        Status
+                        </Data>
+                        {status === "Updated" &&
+                        <Data alt="Updated">
+                        {status}
+                        </Data>
+                        }
+                        {status === "Deprecated" &&
+                        <Data alt="Deprecated">
+                        Deprecated
+                        </Data>
+                        }
+                        {status === null &&
+                        <Data alt="Unknown">
+                        Unknown
+                        </Data>
+                        }
+                    </Row>
+                    {SoftwaresGrouped &&
+                    <Row>
+                        <Data>
+                        Supported Discord Mods
+                        </Data>
+                        <Data>
+                        <SoftwaresContainer>
+                            {SoftwaresGrouped.map(software => (
+                                <Softwaree alt={software.fieldValue} to={`/plugins/softwares/${kebabCase(software.fieldValue)}/`} key={software.fieldValue}>
+                                    {software.fieldValue}
+                                </Softwaree>
+                            ))}
+                        </SoftwaresContainer>
+                        </Data>
+                    </Row>
+                    }
+                    {github &&
+                    <Row>
+                        <Data>
+                        Github
+                        </Data>
+                        <Data>
+                        <a href={github} target="_blank" rel="noopener noreferrer">Source</a>
+                        </Data>
+                    </Row>
+                    }
+                    {gitlab &&
+                    <Row>
+                        <Data>
+                        Gitlab
+                        </Data>
+                        <Data>
+                        <a href={gitlab} target="_blank" rel="noopener noreferrer">Source</a>
+                        </Data>
+                    </Row>
+                    }
+                    {npm &&
+                    <Row>
+                        <Data>
+                        NPM
+                        </Data>
+                        <Data>
+                        <a href={npm} target="_blank" rel="noopener noreferrer">Source</a>
+                        </Data>
+                    </Row>
+                    }
+                </RowBody>
             </TableInfo>
         </AreaCard>
     </Area>
@@ -107,6 +109,8 @@ const SubText = styled.p`
 const TableInfo = styled.table`
 `
 const Row = styled.tr`
+`
+const RowBody = styled.tbody`
 `
 const Data = styled.td`
 `

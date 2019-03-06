@@ -2,10 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import 'src/styles/tooltips.css'
 import * as variable from 'src/styles/variables'
-import { rgba, darken } from 'polished'
+import { rgba } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
-import kebabCase from "lodash/kebabCase"
 
 const pluginTags = ({areaHeader, tagsGrouped}) => (
     <Area>

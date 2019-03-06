@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
+//import { Link } from 'gatsby'
 import 'src/styles/tooltips.css'
 import * as variable from 'src/styles/variables'
-import { rgba, darken } from 'polished'
+import { darken } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 

@@ -23,7 +23,7 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, soft
             <Status title={"Status of " + title + ": Unknown"}>Unknown</Status>
         }
         {thumbnail ?
-            <ImageContainer to={"plugins/" + slug}>
+            <ImageContainer to={"plugins" + slug}>
                 <LazyLoad once={true} height="100%" placeholder={
                     <img alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>
                     }>
@@ -31,12 +31,12 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, soft
                 </LazyLoad>
             </ImageContainer>
         :
-            <MissingContainer to={"plugins/" + slug}>
+            <MissingContainer to={"plugins" + slug}>
                 <img src={Mobile} alt="Missing Plugin Thumbnail" title="Missing Plugin Thumbnail" />
             </MissingContainer>
         }
         <TitleContainer>
-            <Title to={"plugins/" + slug}>{title}</Title>
+            <Title to={"plugins" + slug}>{title}</Title>
         </TitleContainer>
         {author &&
             <Details>
