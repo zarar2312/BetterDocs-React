@@ -182,13 +182,14 @@ const Area = styled.div`
                         background-color: #fff;
                         padding: 0.38rem 0.56rem;
                         border-radius: 25px;
-                        font-size: 0.54rem;
+                        font-size: 0.46rem;
                         transition: 300ms ease-in-out all;
                         position: relative;
                         line-height: initial;
                         margin-top: 0.1rem;
+                        margin-bottom: 0.1rem;
                         word-break: keep-all;
-                        &:first-child, &:only-child {
+                        &:only-child {
                             margin: unset;
                         }
                         

@@ -57,19 +57,7 @@ const Plugins = (props) => {
       <Wrapper key={node.id}>
         <Hero
         title={node.frontmatter.title}
-        author={node.frontmatter.author}
-        download={node.frontmatter.download}
-        auto={node.frontmatter.auto}
-        support={node.frontmatter.support}
-        status={node.frontmatter.status}
-        tags={node.frontmatter.tags}
-        npm_source_url={node.frontmatter.npm_source_url}
-        npm_i={node.frontmatter.npm_i}
-        github_source_url={node.frontmatter.github_source_url}
-        gitlab_source_url={node.frontmatter.gitlab_source_url}
         discord_server={node.frontmatter.discord_server}
-        SoftwaresGrouped={softList.group}
-        tagsGrouped={pluginList.group}
         />
         {previewList.edges.map(({ node }, i) => (
         <Tabbs key={node.id}>
@@ -125,6 +113,13 @@ const Plugins = (props) => {
                 areaHeader="Tags"
                 />
               }
+              <AdSense.Google
+                client='ca-pub-1998206533560539'
+                slot='6545618600'
+                style={{ display: 'block' }}
+                format='auto'
+                responsive='true'
+              />
               <Options>
                 {node.frontmatter.download &&
                   <>
@@ -198,65 +193,6 @@ const Plugins = (props) => {
 }
 
 export default Plugins;
-
-/*
-{node.frontmatter.thumbnail &&
-  <a href={node.frontmatter.thumbnail} target="blank" className={style.imgContainer}>
-    <img className={style.img} src={node.frontmatter.thumbnail} alt={node.frontmatter.title} />
-  </a>
-} 
-
-
-${HtmlContent} {
-  display: block;
-  word-break: break-word;
-  font-size: 0.67rem;
-  code {
-    font-size: 0.67rem;
-  }
-  pre {
-    line-height: unset;
-    padding: 0.95rem;
-    padding-top: 0.6rem;
-    code {
-      font-size: 0.67rem;
-      padding: unset;
-      line-height: unset;
-    }
-  }
-  a:not([class*="anchor"]) {
-    display: inline-block;
-    transition: color 250ms, text-shadow 250ms;
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    line-height: 1rem;
-    &:after {
-      position: absolute;
-      z-index: -1;
-      bottom: -1px;
-      left: 50%;
-      transform: translateX(-50%);
-      content: '';
-      width: 100%;
-      height: 3px;
-      background-color: ${variable.SiteColor};
-      transition: all 250ms;
-    }
-    &:hover {
-      color: #fff;
-      opacity: 1;
-      background-color: transparent;
-    &::after {
-        height: 110%;
-        width: 110%;
-      }
-    }
-  }
-}
-*/
 
 export const pluginsQuery = graphql`
   query pluginsQuery($slug: String!) {
@@ -371,10 +307,6 @@ const AreaFlex = styled.div`
 `
 const ScreenshotContainer = styled.div`
 `
-const Ad = styled.div`
-  order: 3;
-  display: block;
-`
 const MobileHeader = styled.div`
   position: fixed;
   top: 0px;
@@ -484,7 +416,7 @@ const Container = styled.div`
         margin: 0 auto;
         padding-left: 1rem;
         padding-right: 1rem;
-        padding-top: 2.1rem;
+        padding-top: 1rem;
         word-break: break-all;
         font-size: 0.6rem;
         @media (min-width: 850px) {

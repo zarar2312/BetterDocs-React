@@ -156,7 +156,7 @@ display: none;
     .headroom--pinned {
         position: fixed;
         transform: translateY(0%);
-        top: 1.8rem;
+        top: 1.82rem;
         ${Results} {
           max-height: calc(((((100vh - -1.58rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem) !important;
         }
