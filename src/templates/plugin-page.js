@@ -512,6 +512,9 @@ const Container = styled.div`
             margin-bottom: 0.7rem;
             color: #000;
           }
+          table {
+            font-size: 0.8rem;
+          }
         }
         ${CardHeader} {
           font-size: 1.55rem;
@@ -721,13 +724,26 @@ const GlobalStyle = createGlobalStyle`
             border-color: rgba(0,0,0,0.25);
             box-shadow: 2px 2px 40px -12px #000;
             p {
-              color: #e4e4e4;
+              color: #cecece;
             }
-            h1, h2, h3, h4 {
+            h1, h2, h3, h4, h5, h6, table {
               color: #fff;
             }
             ul {
+              color: #cecece;
+            }
+            a {
               color: #fff;
+            }
+            code {
+              background-color: rgba(0,0,0,0.2);
+              color: #fff;
+            }
+            pre {
+              background-color: rgba(0,0,0,0.2);
+              code {
+                background-color: transparent;
+              }
             }
           }
         }
