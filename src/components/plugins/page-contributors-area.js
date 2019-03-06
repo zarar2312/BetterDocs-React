@@ -53,6 +53,9 @@ const Softwaree = styled(Link)`
 
 const Area = styled.div`
     margin-bottom: 1.25rem;
+    @media ${variable.MidPoint} {
+        flex: 1;
+    }
     ${CardHeader} {
         font-size: 1.55rem;
         margin-bottom: 0.8rem;

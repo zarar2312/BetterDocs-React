@@ -102,21 +102,23 @@ const Plugins = (props) => {
                 dangerouslySetInnerHTML={{ __html: node.html }}>
                 </AreaDescriptionCard>
               </Area>
-              <ContributionArea
-              author={node.frontmatter.author}
-              maintainer={node.frontmatter.current_maintainer}
-              title={node.frontmatter.title}
-              areaHeader="Contributors"
-              />
-              <InformationArea
-              status={node.frontmatter.status}
-              date={node.frontmatter.date}
-              SoftwaresGrouped={softList.group}
-              github={node.frontmatter.github_source_url}
-              gitlab={node.frontmatter.gitlab_source_url}
-              npm={node.frontmatter.npm_source_url}
-              areaHeader="Information"
-              />
+              <AreaFlex>
+                <ContributionArea
+                author={node.frontmatter.author}
+                maintainer={node.frontmatter.current_maintainer}
+                title={node.frontmatter.title}
+                areaHeader="Contributors"
+                />
+                <InformationArea
+                status={node.frontmatter.status}
+                date={node.frontmatter.date}
+                SoftwaresGrouped={softList.group}
+                github={node.frontmatter.github_source_url}
+                gitlab={node.frontmatter.gitlab_source_url}
+                npm={node.frontmatter.npm_source_url}
+                areaHeader="Information"
+                />
+              </AreaFlex>
               {node.frontmatter.tags &&
                 <TagsArea
                 tagsGrouped={pluginList.group}
@@ -361,6 +363,8 @@ const EditBtn = styled.div`
 `
 const Tabbs = styled(Tabs)`
 `
+const AreaFlex = styled.div`
+`
 const Ad = styled.div`
   order: 3;
   display: block;
@@ -558,6 +562,11 @@ const Container = styled.div`
             font-size: 1.55rem;
             margin-bottom: 0.8rem;
           }
+        }
+        ${AreaFlex} {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
         }
         ${Options} {
           display: flex;

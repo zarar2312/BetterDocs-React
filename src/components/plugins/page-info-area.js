@@ -117,6 +117,11 @@ const Softwaree = styled(Link)`
 
 const Area = styled.div`
     margin-bottom: 1.25rem;
+    flex-grow: 1;
+    @media ${variable.MidPoint} {
+        flex: 1;
+        margin-left: 0.4rem;
+    }
     ${CardHeader} {
         font-size: 1.55rem;
         margin-bottom: 0.8rem;
@@ -148,6 +153,7 @@ const Area = styled.div`
             text-align: left;
             padding: 10px 8px;
             margin-bottom: 2px;
+            word-break: keep-all;
             &:nth-child(2) {
                 text-align: right;
             }
