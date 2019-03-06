@@ -17,6 +17,7 @@ import { darken } from 'polished'
 import LazyLoad from "react-lazyload"
 //import { ResultList } from '@appbaseio/reactivesearch'
 import { createGlobalStyle } from 'styled-components'
+import AdSense from 'react-adsense';
 
 const Plugins = (props) => { 
   const pluginList = props.data.all;
@@ -192,20 +193,32 @@ const Plugins = (props) => {
             <DeatilsHeader>{tagHeader}</DeatilsHeader>
         </Details>
         <Cards>
-        {pluginList.edges.map(({ node }) => (
-          <LazyLoad key={node.id} height="11rem">
-            <Card 
-            title={node.frontmatter.title} 
-            thumbnail={node.frontmatter.thumbnail}
-            slug={node.fields.slug}
-            status={node.frontmatter.status}
-            tags={node.frontmatter.tags}
-            author={node.frontmatter.author}
-            excerpt={node.excerpt}
-            softwares={node.frontmatter.software}
-            key={node.id}/>
-          </LazyLoad>
-        ))}
+          <AdCard>
+            <AdContainer>
+              <AdSense.Google
+                client='ca-pub-1998206533560539'
+                slot='6545618600'
+                style={{ display: 'block' }}
+                format='auto'
+                responsive='true'
+              />
+            </AdContainer>
+            <Notice></Notice>
+          </AdCard>
+          {pluginList.edges.map(({ node }) => (
+            <LazyLoad key={node.id} height="11rem">
+              <Card 
+              title={node.frontmatter.title} 
+              thumbnail={node.frontmatter.thumbnail}
+              slug={node.fields.slug}
+              status={node.frontmatter.status}
+              tags={node.frontmatter.tags}
+              author={node.frontmatter.author}
+              excerpt={node.excerpt}
+              softwares={node.frontmatter.software}
+              key={node.id}/>
+            </LazyLoad>
+          ))}
         </Cards>
       </Main>
 
@@ -243,6 +256,12 @@ export const allPluginsQuery = graphql`
       ...pluginExcerptLimit
     }
   }
+`
+const AdCard = styled.div`
+`
+const AdContainer = styled.div`
+`
+const Notice = styled.div`
 `
 
 const Container = styled.div`
@@ -337,6 +356,26 @@ const Cards = styled.div`
   overflow: hidden;
   @media (min-width: 850px) {
       padding: 35px 55px;
+  }
+  ${AdCard} {
+    display: flex;
+    flex-basis: 10rem;
+    background-color: transparent;
+    position: relative;
+    max-height: 10rem;
+    height: 10rem;
+    ${AdContainer} {
+      margin: 0 auto;
+      width: 100%;
+      z-index: 2;
+    }
+    ${Notice} {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      text-align: center;
+    }
   }
 `;
 

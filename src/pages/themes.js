@@ -124,7 +124,7 @@ const Themes = (props) => {
       tagsArray={themeList.group}
       />
       <Content>
-          <Wrapper>
+        <Wrapper>
           <AdCard>
             <AdContainer>
               <AdSense.Google
@@ -152,7 +152,7 @@ const Themes = (props) => {
               featured= {node.frontmatter.featured}
               />
             </LazyLoad>
-          ))}
+            ))}
         </Wrapper>
       </Content>
 
