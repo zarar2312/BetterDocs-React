@@ -162,10 +162,14 @@ const Plugins = (props) => {
           </TabPanell>
           {node.frontmatter.previews &&
             <TabPanell>
-              <h2>Previews (wip)</h2>
-              {previewList.group.map(image => (
-                <img src={image.fieldValue} alt={image.fieldValue} key={node.id}/>
-              ))}
+              <ContentContainer>
+                <CardHeader>Screenshots</CardHeader>
+                <ScreenshotContainer>
+                  {previewList.group.map(image => (
+                    <img src={image.fieldValue} alt={image.fieldValue} key={node.id}/>
+                  ))}
+                </ScreenshotContainer>
+              </ContentContainer>
             </TabPanell>
           }
         </Tabbs>
@@ -365,6 +369,8 @@ const Tabbs = styled(Tabs)`
 `
 const AreaFlex = styled.div`
 `
+const ScreenshotContainer = styled.div`
+`
 const Ad = styled.div`
   order: 3;
   display: block;
@@ -423,6 +429,7 @@ const Container = styled.div`
         transform: all 250ms linear;
         margin: calc(1.45rem / 2) 0;
         padding: .35rem .75rem;
+        padding: 6px 18px;
         text-shadow: 0 1px rgba(255,255,255,0.5);
         border-radius: 100px;
         border: 1px solid transparent;
@@ -430,7 +437,9 @@ const Container = styled.div`
         font-weight: bold;
         color: #5f6368;
         list-style: none;
+        line-height: initial;
         cursor: pointer;
+        text-shadow: unset;
         &:nth-child(2) {
           margin-left: 10px;
         }
@@ -438,8 +447,7 @@ const Container = styled.div`
           display: none;
         }
         &:hover {
-              color: #000;
-              background-color: rgba(0,0,0,0.1);
+              color: ${variable.SiteColor};
           }
         &:focus {
             outline: unset;
@@ -450,10 +458,11 @@ const Container = styled.div`
             display: none;
         }
         &[class*="selected"] {
-          color: #fff;
+          color: ${variable.SiteColor};
           box-shadow: unset;
           text-shadow: unset;
-          background-color: ${variable.SiteColor};
+          background-color: #fff;
+          box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
         }
       }
     }
@@ -480,6 +489,27 @@ const Container = styled.div`
         font-size: 0.6rem;
         @media (min-width: 850px) {
           padding-bottom: unset;
+        }
+        ${ScreenshotContainer} {
+          background-color: #fff;
+          border-radius: 20px;
+          box-shadow: 2px 2px 40px -12px #999;
+          padding: 0.8rem 1.1rem;
+          border: 1px solid #ececec;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-content: center;
+          margin-bottom: 1rem;
+          img {
+            max-width: 10rem;
+            flex-basis: auto; /* default value */
+            flex-grow: 1;
+            height: 100%;
+            width: 100%;
+            max-height: 13rem;
+            margin-bottom: 0.3rem;
+          }
         }
         a:not([class*="anchor"]) {
           display: inline-block;
