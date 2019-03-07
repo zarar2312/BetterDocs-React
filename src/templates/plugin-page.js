@@ -380,7 +380,7 @@ const Container = styled.div`
         }
         &:hover {
               color: ${variable.SiteColor};
-          }
+        }
         &:focus {
             outline: unset;
             border: 1px solid ${darken(0.1,variable.SiteColor)};
@@ -711,6 +711,23 @@ const GlobalStyle = createGlobalStyle`
   ${Container} {
     background-color: #36393f;
     ${Tabbs} {
+      ${TabListt} {
+        ${Tabb} {
+          color: #5f6368;
+          &:hover {
+                color: ${variable.SiteColor};
+          }
+          &:focus {
+              outline: unset;
+              border: 1px solid ${darken(0.1,variable.SiteColor)};
+              box-shadow: unset;
+          }
+          &[class*="selected"] {
+            background-color: rgba(0,0,0,0.2);
+            color: ${variable.SiteColor};
+          }
+        }
+      }
       ${TabPanell} {
         ${Area} {
           ${SubText} {

@@ -59,11 +59,11 @@ export default Sidebar
 const Results = styled.div`
   display: flex;
   flex-direction: column;
-  max-height: calc(((((100vh - 1.4rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem); //28.2
+  max-height: calc(((((100vh - 1.4rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem); /*28.2*/
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   @media (min-width: 850px) {
-      max-height: calc(((((100vh - 1.42rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);
+      max-height: calc(((((100vh - 1.35rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);/*1.42 (1.35)*/
   }
   &::-webkit-scrollbar-button { 
       display: none; 

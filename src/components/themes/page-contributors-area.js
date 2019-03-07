@@ -5,8 +5,9 @@ import * as variable from 'src/styles/variables'
 import { rgba } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
+import kebabCase from "lodash/kebabCase"
 
-const themeContributors = ({author, maintainer, title, areaHeader}) => (
+const themeContributors = ({author, maintainer, title, areaHeader, slug, contributor}) => (
     <Area>
         <GlobalStyle />
         <CardHeader>{areaHeader}</CardHeader>
@@ -28,6 +29,16 @@ const themeContributors = ({author, maintainer, title, areaHeader}) => (
                         <Data>{maintainer}</Data>
                     </Row>
                     }
+                    {contributor &&
+                    <Row>
+                        <Data>Contributor</Data>
+                        <Data>{contributor}</Data>
+                    </Row>
+                    }
+                    <Row>
+                        <Data>Contributor</Data>
+                        <Data><a href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/themes/${kebabCase(slug)}.md`}>Add</a></Data>
+                    </Row>
                 </RowBody>
             </TableInfo>
         </AreaCard>

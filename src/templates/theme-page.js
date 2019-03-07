@@ -125,6 +125,7 @@ const Themes = (props) => {
                 maintainer={node.frontmatter.current_maintainer}
                 title={node.frontmatter.title}
                 areaHeader="Contributors"
+                slug={node.fields.slug}
                 />
                 <InformationArea
                 status={node.frontmatter.status}
@@ -141,6 +142,29 @@ const Themes = (props) => {
                 areaHeader="Tags"
                 />
               }
+              <Options>
+                {node.frontmatter.download &&
+                  <>
+                    {node.frontmatter.auto ?
+                    <Download href={'https://minhaskamal.github.io/DownGit/#/home?url=' + node.frontmatter.download} target="blank">
+                      Download
+                    </Download>
+                    :
+                    <Download href={node.frontmatter.download} target="blank">
+                      Download
+                    </Download>
+                    }
+                  </>
+                }
+                {node.frontmatter.demo && 
+                  <DemoBtn href={'https://betterdocs.us/preview/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"} target="blank" title={"Quick Preview of " + node.frontmatter.title }>Demo</DemoBtn>
+                }
+                {node.frontmatter.support &&
+                <Report href={node.frontmatter.support} target="blank">
+                  Doesn't Work?
+                </Report>
+                }
+              </Options>
             </ContentContainer>
           </TabPanell>
           {node.frontmatter.previews &&
@@ -254,9 +278,13 @@ const TabPanell = styled(TabPanel)`
 `
 const ContentContainer = styled.div`
 `
-const Content = styled.div`
+const Options = styled.div`
 `
-const HtmlContent= styled.div`
+const Download = styled.a`
+`
+const Report = styled.a`
+`
+const DemoBtn = styled.a`
 `
 const ScreenshotContainer = styled.div`
 `
@@ -357,7 +385,7 @@ const MobileHeader = styled.div`
 const Container = styled.div`
   display: block;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #f1f1f1;
   @media (min-width: 850px) {
       display: flex;
       flex-direction: row;
@@ -402,9 +430,8 @@ const Container = styled.div`
             display: none;
           }
           &:hover {
-                color: #000;
-                background-color: rgba(0,0,0,0.1);
-            }
+              color: ${variable.SiteColor};
+          }
           &:focus {
               outline: unset;
               border: 1px solid ${darken(0.1,variable.SiteColor)};
@@ -414,10 +441,11 @@ const Container = styled.div`
               display: none;
           }
           &[class*="selected"] {
-            color: #fff;
+            color: ${variable.SiteColor};
             box-shadow: unset;
             text-shadow: unset;
-            background-color: ${variable.SiteColor};
+            background-color: #fff;
+            box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
           }
         }
       }
@@ -528,6 +556,80 @@ const Container = styled.div`
               font-size: 1.55rem;
               word-break: keep-all;
               margin-bottom: 0.8rem;
+            }
+          }
+          ${Options} {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-bottom: 0.8rem;
+            @media ${variable.MidPoint} {
+              flex-direction: row;
+              justify-content: flex-start;
+              ${Download}, ${DemoBtn} {
+                margin-top: 0.5rem;
+                margin-right: 0.4rem;
+              }
+            }
+            ${DemoBtn} {
+              background-color: ${variable.SiteColor};
+              border-radius: 25px;
+              padding: 0.5rem 1rem;
+              font-size: 0.8rem;
+              color: #fff;
+              box-shadow: 2px 2px 40px -12px #000;
+              transition: 300ms ease-in-out all;
+              /*background: linear-gradient(90deg,${variable.SiteColor},${darken(0.3, variable.SiteColor)});*/
+              &::after {
+                height: 0;
+              }
+              &:hover {
+                box-shadow: 2px 10px 40px -12px ${darken(0.3, variable.SiteColor)};
+                background-color: ${darken(0.3, variable.SiteColor)};
+                &::after {
+                  height: 0;
+                }
+              }
+            }
+            ${Download} {
+              background-color: ${variable.SiteColor};
+              border-radius: 25px;
+              padding: 0.5rem 1rem;
+              font-size: 0.8rem;
+              color: #fff;
+              box-shadow: 2px 2px 40px -12px #000;
+              transition: 300ms ease-in-out all;
+              background: linear-gradient(90deg,${variable.SiteColor},${darken(0.3, variable.SiteColor)});
+              &::after {
+                height: 0;
+              }
+              &:hover {
+                box-shadow: 2px 10px 40px -12px ${darken(0.3, variable.SiteColor)};
+                &::after {
+                  height: 0;
+                }
+              }
+            }
+            ${Report} {
+              background-color: #da002f;
+              border-radius: 25px;
+              padding: 0.5rem 1rem;
+              font-size: 0.8rem;
+              margin-top: 0.5rem;
+              color: #fff;
+              box-shadow: 2px 2px 40px -12px #000;
+              transition: 300ms ease-in-out all;
+              background: linear-gradient(90deg,#da002f, #9e0022);
+              position: relative;
+              &:after {
+                height: 0;
+              }
+              &:hover {
+                box-shadow: 2px 10px 40px -12px #da002f;
+                &::after {
+                  height: 0;
+                }
+              }
             }
           }
         }
@@ -650,29 +752,50 @@ const GlobalStyle = createGlobalStyle`
       ${Tabbs} {
         ${TabListt} {
           ${Tabb} {
-            color: #8a8a8a;
+            color: #5f6368;
             &:hover {
-                color: #fff;
+                  color: ${variable.SiteColor};
+            }
+            &:focus {
+                outline: unset;
+                border: 1px solid ${darken(0.1,variable.SiteColor)};
+                box-shadow: unset;
             }
             &[class*="selected"] {
-              color: #fff;
+              background-color: rgba(0,0,0,0.2);
+              color: ${variable.SiteColor};
             }
           }
         }
         ${TabPanell} {
           ${ContentContainer} {
-            ${Content} {
-              ${HtmlContent} {
-                color: #cacaca;
-                a, h1, h2, h3, h4, h5, strong {
-                  color: #fff;
-                }
-                p {
-                  color: #cacaca;
-                }
-                pre, code {
-                  background-color: #222327;
-                  color: #fff;
+            ${CardHeader} {
+              color: #fff;
+            }
+            ${AreaDescriptionCard} {
+              background-color: rgba(0,0,0,0.2);
+              border-color: rgba(0,0,0,0.25);
+              box-shadow: 2px 2px 40px -12px #000;
+              p {
+                color: #cecece;
+              }
+              h1, h2, h3, h4, h5, h6, table {
+                color: #fff;
+              }
+              ul {
+                color: #cecece;
+              }
+              a {
+                color: #fff;
+              }
+              code {
+                background-color: rgba(0,0,0,0.2);
+                color: #fff;
+              }
+              pre {
+                background-color: rgba(0,0,0,0.2);
+                code {
+                  background-color: transparent;
                 }
               }
             }

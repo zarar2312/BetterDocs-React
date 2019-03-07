@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import kebabCase from "lodash/kebabCase"
 import 'src/styles/tooltips.css'
 import * as variable from 'src/styles/variables'
 import { darken } from 'polished'
