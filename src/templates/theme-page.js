@@ -88,16 +88,6 @@ const Themes = (props) => {
         support={node.frontmatter.support}
         style={node.frontmatter.style}
         />
-        
-        <Ad>
-          <AdSense.Google
-              client='ca-pub-1998206533560539'
-              slot='6545618600'
-              style={{ display: 'block' }}
-              format='auto'
-              responsive='true'
-            />
-        </Ad>
         {previewList.edges.map(({ node }) => (
         <Tabbs style={{order: "3"}} key={node.id}>
           <TabListt>
@@ -142,6 +132,15 @@ const Themes = (props) => {
                 areaHeader="Tags"
                 />
               }
+              <Ad>
+                <AdSense.Google
+                    client='ca-pub-1998206533560539'
+                    slot='6545618600'
+                    style={{ display: 'block' }}
+                    format='auto'
+                    responsive='true'
+                  />
+              </Ad>
               <Options>
                 {node.frontmatter.download &&
                   <>
