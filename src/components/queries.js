@@ -42,7 +42,7 @@ class Features extends React.Component {
               featured
               style
               tags
-              date
+              date(formatString: "DD/MM/YYYY")
               ghcommentid
               layout
               sub
