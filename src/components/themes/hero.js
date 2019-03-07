@@ -71,7 +71,7 @@ const Container = styled.div`
     height: calc(100vh - 50vh);
     background-size: cover;
     background-position: center;
-    transition: 350ms linear all;
+    transition: 300ms linear height 500ms;
     @media (min-width: 850px) {
         padding: 4rem 0rem 5rem 0rem;
         background-position: unset;
