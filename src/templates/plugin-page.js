@@ -729,12 +729,19 @@ const GlobalStyle = createGlobalStyle`
         }
       }
       ${TabPanell} {
+        ${CardHeader} {
+          color: #fff;
+        }
+        ${ContentContainer} {
+          ${ScreenshotContainer} {
+            background-color: rgba(0,0,0,0.2);
+            box-shadow: 2px 2px 40px -12px #000;
+            border-color: rgba(0,0,0,0.25);
+          }
+        }
         ${Area} {
           ${SubText} {
             color: #e4e4e4;
-          }
-          ${CardHeader} {
-            color: #fff;
           }
           ${AreaDescriptionCard} {
             background-color: rgba(0,0,0,0.2);

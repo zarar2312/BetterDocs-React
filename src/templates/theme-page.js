@@ -168,6 +168,8 @@ const Themes = (props) => {
           </TabPanell>
           {node.frontmatter.previews &&
           <TabPanell style={{margin: "0 auto"}}>
+          <ContentContainer>
+            <CardHeader>Screenshots</CardHeader>
             <ScreenshotContainer>
               {previewList.group.map(image => (
                 <ScreenshotWrapper key={image.fieldValue}>
@@ -185,6 +187,7 @@ const Themes = (props) => {
                 </ScreenshotWrapper>
               ))}
             </ScreenshotContainer>
+            </ContentContainer>
           </TabPanell>
           }
         </Tabbs>
@@ -633,15 +636,18 @@ const Container = styled.div`
           }
         }
         ${ScreenshotContainer} {
+          background-color: #fff;
+          border-radius: 20px;
+          box-shadow: 2px 2px 40px -12px #999;
+          padding: 0.8rem 1.1rem;
+          border: 1px solid #ececec;
           display: flex;
-          padding: 0.7rem 0;
           flex-wrap: wrap;
-          justify-content: center;
-          width: calc(100% - 75px);
-          margin: 0 auto;
+          justify-content: space-around;
+          align-content: center;
+          margin-bottom: 1rem;
           @media (min-width: 850px) {
               justify-content: space-between;
-              width: calc(100% - 300px);
           }
           ${ScreenshotWrapper} {
             display: block;
@@ -770,6 +776,11 @@ const GlobalStyle = createGlobalStyle`
           ${ContentContainer} {
             ${CardHeader} {
               color: #fff;
+            }
+            ${ScreenshotContainer} {
+              background-color: rgba(0,0,0,0.2);
+              box-shadow: 2px 2px 40px -12px #000;
+              border-color: rgba(0,0,0,0.25);
             }
             ${AreaDescriptionCard} {
               background-color: rgba(0,0,0,0.2);
