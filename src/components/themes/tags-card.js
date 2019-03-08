@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 //import style from 'src/styles/themes-tags.module.scss'
 import Missing from "src/images/missing_image_2.png"
-import kebabCase from "lodash/kebabCase"
 import LazyLoad from "react-lazyload"
 import Stars from "src/images/stars.svg"
 import Loading from 'src/images/Loading.gif'
@@ -68,8 +67,8 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
         </Description>
         <Tags>
             {tags.map(tag => (
-            <Tag to={`/themes/tag/${kebabCase(tag)}/`} key={tag}>
-                #{tag}
+            <Tag to={`/themes/tag/${tag.toString().toLowerCase()}/`} key={tag}>
+                #{tag.toString().toLowerCase()}
             </Tag>
             ))}
         </Tags>

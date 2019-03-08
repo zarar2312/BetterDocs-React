@@ -59,8 +59,8 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, soft
         {tags &&
             <TagsContainer>
                 {tags.map(tag => (
-                    <Tagg to={`/plugins/tag/${kebabCase(tag)}/`} key={tag}>
-                        #{tag}
+                    <Tagg to={`/plugins/tag/${tag.toString().toLowerCase()}/`} key={tag}>
+                        #{tag.toString().toLowerCase()}
                     </Tagg>
                 ))}
             </TagsContainer>

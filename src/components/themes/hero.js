@@ -100,7 +100,7 @@ const Container = styled.div`
         width: 100%;
         overflow: hidden;
         height: 100%;
-        box-shadow: inset 20px 0px 180px 85px rgba(10, 10, 10, 0.85);
+        box-shadow: inset 0px -35px 100px 25px rgba(10,10,10,0.85);
     }
     ${Breadcrumbs} {
         display: flex;
