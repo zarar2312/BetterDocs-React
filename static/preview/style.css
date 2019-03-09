@@ -4743,7 +4743,16 @@
     word-wrap: break-word
 }
 
-.markup-2BOw-j a {
+.messagesWrapper-3lZDfY .markup-2BOw-j::after, .messagesWrapper-3lZDfY .markup-2BOw-j a::after, .message-group .message .markup-2BOw-j a[href*="betterdocs."]:after, .markup-2BOw-j>a[href*="betterdocs."]:after {
+    display: none !important;
+    content: initial !important;
+}
+
+.message-group .message .markup-2BOw-j a[href*="betterdocs."], .markup-2BOw-j>a[href*="betterdocs."] {
+    font-size: initial !important;
+}
+
+..markup-2BOw-j a {
     -webkit-transition: .05s;
     cursor: pointer;
     direction: ltr;
