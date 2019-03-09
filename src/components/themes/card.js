@@ -358,8 +358,8 @@ const Cards = styled.div`
                 display: flex;
                 justify-content: flex-end;
                 ${Status} {
-                    font-size: 0.45rem;
-                    padding: 0.2rem 0.4rem;
+                    font-size: 0.4rem;
+                    padding: 0.15rem 0.3rem;
                     position: relative;
                     top: 5px;
                     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
@@ -367,19 +367,22 @@ const Cards = styled.div`
                     border: 1px solid;
                     border-radius: 25px;
                     text-align: center;
-                    display: table;
+                    display: none;
                     color: #fff;
                     &[alt="Updated"] {
                         background-color: #00b167;
                         border-color: #00b167;
+                        display: table;
                     }
                     &[alt="Deprecated"] {
                         background-color: #c33030;
                         border-color: #c33030;
+                        display: table;
                     }
                     &[alt="Unknown"] {
                         background-color: #005180;
                         border-color: #005180;
+                        display: table;
                     }
                 }
             }
