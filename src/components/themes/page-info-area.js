@@ -148,13 +148,13 @@ const Area = styled.div`
                 font-weight: bold;
             }
             &[alt="Updated"] {
-                color: #00b167 !important;;
+                color: #00b167 !important;
             }
             &[alt="Deprecated"] {
-                color: #c33030 !important;;
+                color: #c33030 !important;
             }
             &[alt="Unknown"] {
-                color: #005180 !important;;
+                color: #005180 !important;
             }
                 ${SoftwaresContainer} {
                     display: flex;
