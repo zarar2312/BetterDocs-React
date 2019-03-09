@@ -14,7 +14,7 @@ import "../styles/tooltips.css"
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { darken } from "polished"
-import Alerts from '../components/themes/theme-page-alerts'
+import Alerts from '../components/themes/page-alert'
 import { createGlobalStyle } from 'styled-components'
 import ContributionArea from '../components/themes/page-contributors-area'
 import InformationArea from '../components/themes/page-info-area'
@@ -66,11 +66,6 @@ const Themes = (props) => {
     <Container>
     {themeList.edges.map(({ node }) => (
       <Wrapper key={node.id}>
-        <Alerts
-        status={node.frontmatter.status}
-        slug={node.fields.slug}
-        title={node.frontmatter.title}
-        />
         <Hero
         title={node.frontmatter.title}
         author={node.frontmatter.author}
@@ -103,6 +98,10 @@ const Themes = (props) => {
 
           <TabPanell>
             <ContentContainer>
+            <Alerts
+            status={node.frontmatter.status}
+            title={node.frontmatter.title}
+            />
               <Area>
                 <CardHeader>Description</CardHeader>
                 <AreaDescriptionCard
