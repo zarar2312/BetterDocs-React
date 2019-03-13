@@ -96,6 +96,7 @@ const Plugins = (props) => {
                 maintainer={node.frontmatter.current_maintainer}
                 title={node.frontmatter.title}
                 areaHeader="Contributors"
+                slug={node.fields.slug}
                 />
                 <InformationArea
                 status={node.frontmatter.status}

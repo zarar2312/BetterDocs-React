@@ -37,7 +37,7 @@ const themeContributors = ({author, maintainer, title, areaHeader, slug, contrib
                     }
                     <Row>
                         <Data>Contributor</Data>
-                        <Data><a href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/themes/${kebabCase(slug)}.md`}>Add</a></Data>
+                        <Data><a href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/themes/${kebabCase(slug)}.md`} target="_blank" rel="noopener noreferrer">Add</a></Data>
                     </Row>
                 </RowBody>
             </TableInfo>
