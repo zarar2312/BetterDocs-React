@@ -13,7 +13,7 @@ const pluginAlerts = ({status, title}) => (
                 {status === "Updated" &&
                 <>
                     <Status>This plugin is compatible with the latest version of Discord</Status>
-                    <StatusDescription>This plugin is currently marked as <b>Updated</b> by the community which means this <i>should</i> work. If this is broken for the latest version of please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
+                    <StatusDescription>This plugin is currently marked as <b>Updated</b> by the community which means this <i>should</i> work. If this is broken for the latest version of Discord please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
                 </>
                 }
                 {status === "Deprecated" &&
@@ -65,7 +65,7 @@ const StatusContainer = styled.div`
         line-height: 0.98rem;
     }
     &[alt="Updated"] {
-        display: none;
+        /*display: none;*/
         ${Status} {
             color: #fff;
             background-color: #00b167;
@@ -118,7 +118,7 @@ const GlobalStyle = createGlobalStyle`
             }
         }
         &[alt="Updated"] {
-            display: none;
+            /*display: none;*/
             ${StatusDescription} {
                 b {
                     color: #30c381;

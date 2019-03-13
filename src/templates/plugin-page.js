@@ -486,6 +486,9 @@ const Container = styled.div`
           code {
             font-size: 0.67rem;
             /*line-height: unset;*/
+            &~ code {
+              margin-left: 0.18rem;
+            }
           }
           pre {
             line-height: unset;
@@ -751,8 +754,11 @@ const GlobalStyle = createGlobalStyle`
             p {
               color: #cecece;
             }
-            h1, h2, h3, h4, h5, h6, table {
+            h1, h2, h3, h4, h5, h6, table, ol {
               color: #fff;
+            }
+            strong {
+              color: #ececec;
             }
             ul {
               color: #cecece;
