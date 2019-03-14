@@ -17,3 +17,11 @@ style: dark
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---
+**Discord+** is a theme that is both sleek and customizable, without getting in your way. Its top priority is balancing between looks and performance.
+
+## User customization
+This theme is **fully customizable**.
+The variables at the top of the file allow you to change things like the background image, the accent color, and the roundness of the UI. You can also change the fonts to any fonts installed on your device.
+
+## Complete theme
+Discord+ aims to style everything on Discord. If there’s anything that is not styled, be it an official feature, a plugin, or a third-party feature, open an issue along with some information and I'll see what I can do.
