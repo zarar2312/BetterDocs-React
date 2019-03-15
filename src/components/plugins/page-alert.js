@@ -5,7 +5,7 @@ import 'src/styles/tooltips.css'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 
-const pluginAlerts = ({status, title}) => (
+const pluginAlerts = ({status, title, issue}) => (
     <>
     <GlobalStyle/>
         {status ?
@@ -13,20 +13,20 @@ const pluginAlerts = ({status, title}) => (
                 {status === "Updated" &&
                 <>
                     <Status>This plugin is compatible with the latest version of Discord</Status>
-                    <StatusDescription>This plugin is currently marked as <b>Updated</b> by the community which means this <i>should</i> work. If this is broken for the latest version of Discord please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
+                    <StatusDescription>This plugin is currently marked as <b>Updated</b> by the community which means this plugin <i>should</i> work. If this plugin is broken for the latest version of Discord please make a report <a target="_blank" rel="noopener noreferrer" href={ issue + "/new?title=" + title + " - BetterDocs - [Issue Report]&labels=report" }>here</a>.</StatusDescription>
                 </>
                 }
                 {status === "Deprecated" &&
                 <>
                     <Status>This plugin is not compatible with the latest version of Discord</Status>
-                    <StatusDescription>This plugin is currently marked as <b>Deprecated</b> by the community which means this will break your Discord. If you think this is a mistake please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
+                    <StatusDescription>This plugin is currently marked as <b>Deprecated</b> by the community which means this plugin will break your Discord. If this plugin is working again please let us know <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report&body=This%20is%20ONLY%20to%20report%20that%20this%20plugin%20has%20been%20updated%20and%20working!" }>here</a> for the rest of the community!</StatusDescription>
                 </>
                 }
             </StatusContainer>
             :
             <StatusContainer alt="Unknown">
                 <Status>This plugin <i>should</i> (may not) be compatible with the latest version of Discord</Status>
-                <StatusDescription>This plugin is currently marked as <b>Unknown</b> which means that this plugin may or may not work. If you would like to report an update for the rest of the community, you can do so <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report" }>here</a>.</StatusDescription>
+                <StatusDescription>This plugin is currently marked as <b>Unknown</b> which means that this plugin may or may not work. If you would like to report an update for the rest of the community, you can do so <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report&body=This%20is%20ONLY%20to%20report%20that%20this%20plugin%20is%20OR%20is%20not%20working!" }>here</a>.</StatusDescription>
             </StatusContainer>
         }
     </>

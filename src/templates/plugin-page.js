@@ -76,6 +76,7 @@ const Plugins = (props) => {
               <Alerts
               status={node.frontmatter.status}
               title={node.frontmatter.title}
+              issue={node.frontmatter.support}
               />
               {node.frontmatter.dependency &&
                 <DependencyArea
@@ -93,7 +94,7 @@ const Plugins = (props) => {
               <AreaFlex>
                 <ContributionArea
                 author={node.frontmatter.author}
-                maintainer={node.frontmatter.current_maintainer}
+                maintainer={node.frontmatter.maintainer_name}
                 title={node.frontmatter.title}
                 areaHeader="Contributors"
                 slug={node.fields.slug}

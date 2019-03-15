@@ -101,6 +101,7 @@ const Themes = (props) => {
             <Alerts
             status={node.frontmatter.status}
             title={node.frontmatter.title}
+            issue={node.frontmatter.support}
             />
               <Area>
                 <CardHeader>Description</CardHeader>
