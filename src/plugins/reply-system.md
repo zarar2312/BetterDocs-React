@@ -2,7 +2,7 @@
 title: Reply System
 author: rauenzi
 description: Adds a native-esque reply button with preview. (Similar idea to Replyer/BetterReplyer but with a fancy UI, component injection, and additional features to be added)
-download: 'https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/ReplySystem'
+download: 'https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/ReplySystem/ReplySystem.plugin.js'
 github_profile_url: 'https://github.com/rauenzi'
 github_source_url: 'https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/ReplySystem'
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/

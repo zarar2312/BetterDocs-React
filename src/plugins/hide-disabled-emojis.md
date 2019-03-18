@@ -2,7 +2,7 @@
 title: Hide Disabled Emojis
 author: rauenzi
 description: Hides disabled emojis from the emoji picker. Useful for non-nitro users.
-download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/HideDisabledEmojis
+download: https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/HideDisabledEmojis/HideDisabledEmojis.plugin.js
 github_profile_url: 'https://github.com/rauenzi/'
 github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/HideDisabledEmojis
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/

@@ -2,7 +2,7 @@
 title: Image to Clipboard
 author: rauenzi
 description: Allows you to copy images (png/jpg) directly to your system clipboard. You can do this through the modal or through the context menu.
-download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/ImageToClipboard
+download: https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/ImageToClipboard/ImageToClipboard.plugin.js
 github_profile_url: https://github.com/rauenzi/
 github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/ImageToClipboard
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/

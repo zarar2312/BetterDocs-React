@@ -2,7 +2,7 @@
 title: Role Members
 author: rauenzi
 description: Allows you to see the members of each role on a server. Can also see members from a mention.
-download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/RoleMembers
+download: https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/RoleMembers/RoleMembers.plugin.js
 github_profile_url: https://github.com/rauenzi/
 github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/RoleMembers
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/
