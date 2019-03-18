@@ -98,7 +98,7 @@ const themeCard = ({title, author}) => (
                 {node.frontmatter.tags ?
                 <div>
                 <Description>
-                    <Text>{node.frontmatter.excerpt}</Text>
+                    <Text>{node.excerpt}</Text>
                 </Description>
                 <Tags>
                     {node.frontmatter.tags.map(tag => (
@@ -110,7 +110,7 @@ const themeCard = ({title, author}) => (
                 </div>
                 :
                 <AltDescription>
-                    <Text>{node.frontmatter.excerpt}</Text>
+                    <Text>{node.excerpt}</Text>
                 </AltDescription>
                 }
             </Cards>
@@ -185,6 +185,7 @@ const Container = styled.div`
     justify-content: space-around;
     overflow-x: auto;
     display: -webkit-box;
+    -webkit-overflow-scrolling: touch;
     &::-webkit-scrollbar-button { 
         display: none; 
         height: 10px; 
@@ -251,6 +252,7 @@ ${Cards} {
     background-color: #fff;
     border: 1px solid #ede7f3;
     margin-left: 1rem;
+    width: 16rem;
     &:last-child {
         margin-bottom: unset;
         padding-right: 1rem;
@@ -330,7 +332,6 @@ ${Cards} {
         box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
         padding-bottom: 56.25%;
         overflow: hidden;
-        width: 16rem;
         &::before {
             content: "";
             display: block;
