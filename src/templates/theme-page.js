@@ -224,7 +224,7 @@ const Themes = (props) => {
           }
         </Tabbs>
         ))}
-        <MoreHeader>More from <Link to={"profile/" + node.frontmatter.author}>{node.frontmatter.author}</Link></MoreHeader>
+        <MoreHeader><Link to={"profile/" + node.frontmatter.author}>{node.frontmatter.author}'s</Link> Themes</MoreHeader>
           <Authorcard 
           title={node.frontmatter.title} 
           thumbnail={node.frontmatter.thumbnail}

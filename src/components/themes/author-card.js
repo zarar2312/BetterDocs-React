@@ -30,8 +30,6 @@ const themeCard = ({title, author}) => (
         {data.allMarkdownRemark.edges.map(({ node }, i) => (
             <>
             {node.frontmatter.author === author &&
-            <>
-            {node.frontmatter.title !== title &&
             <Cards>
                 { node.frontmatter.thumbnail ?
                 <ImageContainer alt={node.frontmatter.featured && "featured"}>
@@ -114,8 +112,6 @@ const themeCard = ({title, author}) => (
                 </AltDescription>
                 }
             </Cards>
-            }
-            </>
             }
             </>
             ))}
