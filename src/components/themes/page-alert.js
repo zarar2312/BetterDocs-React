@@ -26,7 +26,7 @@ const themeAlerts = ({status, title, issue}) => (
             :
             <StatusContainer alt="Unknown">
                 <Status>This theme <i>should</i> (may not) be compatible with the latest version of Discord</Status>
-                <StatusDescription>This theme is currently marked as <b>Unknown</b> which means that this theme may or may not work. If this theme is not working please let us know for the rest of the community!</StatusDescription>
+                <StatusDescription>This theme is currently marked as <b>Unknown</b> which means that this theme may or may not work. If this theme is not or is working please let us know for the rest of the community!</StatusDescription>
             </StatusContainer>
         }
     </>

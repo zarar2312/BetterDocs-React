@@ -108,7 +108,7 @@ const Themes = (props) => {
               />
               <SubHeader>Does this still work?</SubHeader>
               <ReportButtons>
-                <WorkingBtn target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status: Working]&labels=report&body=This%20is%20ONLY%20to%20report%20that%20this%20theme%20(as%20of%20" + Mydate + ")%20IS%20working!" }>
+                <WorkingBtn target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - Theme - [Status: Working]&labels=theme,working&body=This%20is%20ONLY%20to%20report%20that%20this%20theme%20(as%20of%20" + Mydate + ")%20IS%20working!" }>
                 <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M481,332c0-16.5-13.5-30-30-30c16.5,0,30-13.5,30-30s-13.5-30-30-30H328.001C346.3,187.099,346,169.6,346,136 c0-24.961-20.466-45-45-45h-9c-5.7,0-12.9,4.501-14.401,11.4C262.758,160.181,239.555,226.484,181,239.914v217.062l51.899,17.223 c15.3,5.099,31.201,7.8,47.401,7.8H421C437.569,482,451,468.567,451,452c0-16.569-13.431-30-30-30h30c16.5,0,30-13.5,30-30 s-13.5-30-30-30C467.5,362,481,348.5,481,332z"
                     />
@@ -123,7 +123,7 @@ const Themes = (props) => {
                 </svg>
                 <AlertLink>It Works</AlertLink>
                 </WorkingBtn>
-                <DeprecatedBtn target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status: Broken]&labels=report&body=This%20is%20ONLY%20to%20report%20that%20this%20theme%20(as%20of%20" + Mydate + ")%20IS%20NOT%20working!" }>
+                <DeprecatedBtn target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - Theme - [Status: Broken]&labels=theme,broken&body=This%20is%20ONLY%20to%20report%20that%20this%20theme%20(as%20of%20" + Mydate + ")%20IS%20NOT%20working!" }>
                 <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="456.824" height="456.824"
                 viewBox="0 0 456.824 456.824">
                     <path d="M100.5,45.683H18.276c-4.949,0-9.231,1.809-12.851,5.426C1.809,54.724,0,59.007,0,63.954v182.729 c0,4.948,1.809,9.233,5.426,12.847c3.616,3.614,7.898,5.425,12.851,5.425H100.5c4.948,0,9.229-1.811,12.847-5.425 c3.616-3.613,5.424-7.898,5.424-12.847V63.954c0-4.947-1.809-9.229-5.424-12.845C109.73,47.491,105.449,45.683,100.5,45.683z M67.665,113.351c-3.616,3.617-7.898,5.424-12.847,5.424c-5.14,0-9.471-1.807-12.99-5.424c-3.521-3.617-5.281-7.898-5.281-12.85 c0-5.137,1.759-9.469,5.281-12.991c3.52-3.521,7.85-5.28,12.99-5.28c4.949,0,9.231,1.759,12.847,5.28 c3.621,3.521,5.426,7.854,5.426,12.991C73.091,105.449,71.282,109.73,67.665,113.351z"
@@ -190,7 +190,7 @@ const Themes = (props) => {
                   <DemoBtn href={'https://betterdocs.us/preview/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"} target="blank" title={"Quick Preview of " + node.frontmatter.title }>Demo</DemoBtn>
                 }
                 {node.frontmatter.support &&
-                <Report href={node.frontmatter.support + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} target="blank">
+                <Report href={node.frontmatter.support + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} rel="noopener noreferrer" target="_blank">
                   Report an issue
                 </Report>
                 }
@@ -957,10 +957,38 @@ const GlobalStyle = createGlobalStyle`
               ${WorkingBtn} {
                 background-color: rgba(0,0,0,0.2);
                 border-color: rgba(0,0,0,0.25);
+                &:hover {
+                  background-color: ${variable.UpdatedColor};
+                  box-shadow: 2px 2px 40px -12px #000;
+                  ${AlertLink} {
+                  }
+                  svg {
+                    path {
+                    }
+                  }
+                }
+                &:focus, &:active {
+                  box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
+                  background-color: ${darken(0.1,variable.UpdatedColor)};
+                }
               }
               ${DeprecatedBtn} {
                 background-color: rgba(0,0,0,0.2);
                 border-color: rgba(0,0,0,0.25);
+                &:hover {
+                  background-color: ${variable.DeprecatedColor};
+                  box-shadow: 2px 2px 40px -12px #000;
+                  ${AlertLink} {
+                  }
+                  svg {
+                    path {
+                    }
+                  }
+                }
+                &:focus, &:active {
+                  box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
+                  background-color: ${darken(0.1,variable.DeprecatedColor)};
+                }
               }
             }
             ${CardHeader} {
