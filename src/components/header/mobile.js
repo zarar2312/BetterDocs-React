@@ -1,7 +1,7 @@
 import React from 'react'
-//import style from 'src/styles/download.module.scss'
 import styled from 'styled-components';
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import * as variable from 'src/styles/variables'
 
 const mobileHeader = () => (
     <MobileNavigationBar>
@@ -93,7 +93,7 @@ const MobileNavigationBar = styled.nav`
   margin-left: unset;
   left: 0px;
   display: flex;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     vertical-align: top;
     width: auto;
     padding: 0;
@@ -138,7 +138,7 @@ const Tab = styled(AniLink)`
     ${Title} {
         color: #fff;
     }
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         border-bottom: 2px solid #fff;
     }
   }

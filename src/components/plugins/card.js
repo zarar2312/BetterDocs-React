@@ -178,7 +178,7 @@ const Card = styled.div`
         border-color: ${variable.SiteColor};
     }
 
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         &:hover {
             background-color: #fff;
             border-color: #fff;

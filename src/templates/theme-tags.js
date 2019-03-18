@@ -137,7 +137,7 @@ const Container = styled.div`
   display: block;
   background-color: transparent;
   flex-direction: row;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     display: flex;
     flex-direction: column;
   }
@@ -145,7 +145,7 @@ const Container = styled.div`
     order: 1;
     display: flex;
     flex-direction: column;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         flex: 3;
     }
   }
@@ -156,7 +156,7 @@ const Container = styled.div`
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     max-height: unset;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
       max-height: unset;
     }
     &::-webkit-scrollbar-button {
@@ -220,7 +220,7 @@ const Container = styled.div`
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
-      @media (min-width: 850px) {
+      @media ${variable.MidPoint} {
         display: flex;
         padding: 2.1rem 0;
       }
@@ -265,7 +265,7 @@ const TitleBarHeadroom = styled(Headroom)`
       top: 3rem;
       transform: translateY(0%);
   }
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     .headroom {
     }
     .headroom--unfixed {
@@ -329,7 +329,7 @@ const Help = styled.a`
   &:hover {
     color: #000;
   }
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     display: initial;
   }
 `
@@ -349,7 +349,7 @@ const Upload = styled.a`
         opacity: 1;
     }
   }
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     display: initial;
   }
 `
@@ -367,7 +367,7 @@ const UploadContainer = styled.div`
   font-size: 10px;
   width: 100%;
   pointer-events: none;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: none;
   }
   ${UploadBtn} {
@@ -397,7 +397,7 @@ const HelpContainer = styled.div`
   right: 1rem;
   bottom: 2.5rem;
   z-index: 100;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       right: 1.5rem;
       bottom: 1rem;
       display: none;

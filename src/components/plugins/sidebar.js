@@ -62,7 +62,7 @@ const Results = styled.div`
   max-height: calc(((((100vh - 1.4rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem); /*28.2*/
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       max-height: calc(((((100vh - 1.35rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);/*1.42 (1.35)*/
   }
   &::-webkit-scrollbar-button { 
@@ -121,7 +121,7 @@ const SidebarContainer = styled.section`
   order: 0;
   display: none;
   flex: 1;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       position: fixed;
       display: block;
       width: 14.8rem;
@@ -130,7 +130,7 @@ const SidebarContainer = styled.section`
 
 const AnimHeader = styled(Headroom)`
 display: none;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
         display: block;
     }
     .headroom {

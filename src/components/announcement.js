@@ -50,7 +50,7 @@ const Banner = styled(CookieBanner)`
   flex-direction: column;
   padding: 15px 55px;
   padding-top: 20px;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     flex-direction: row;
     padding: 10px 30px;
   }
@@ -75,7 +75,7 @@ const Banner = styled(CookieBanner)`
     font-weight: bold;
     align-self: flex-end;
     border: 1px solid rgba( 255,255,255, 0.55);
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         margin-top: unset;
     }
     &:hover {

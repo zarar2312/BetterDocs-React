@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-//import style from 'src/styles/featured.module.scss'
 import styled from 'styled-components';
-//import * as variable from 'src/styles/variables'
 import { createGlobalStyle } from 'styled-components'
+import * as variable from 'src/styles/variables'
 
 const Features = () => (
         <Container>
@@ -165,7 +164,7 @@ const Container = styled.section`
         display: block;
         justify-content: space-around;
         z-index: 4;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
             display: flex;
         }
         ${Card} {
@@ -179,7 +178,7 @@ const Container = styled.section`
             border-radius: 40px;
             margin: 0 auto;
             margin-bottom: 35px;
-            @media (min-width: 850px) {
+            @media ${variable.MidPoint} {
                 display: inline;
                 flex-basis: 24%;
                 margin: unset

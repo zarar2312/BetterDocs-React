@@ -269,7 +269,7 @@ const Container = styled.div`
   display: block;
   height: 100%;
   background-color: #f4f4f4;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: flex;
       flex-direction: column;
   }
@@ -301,7 +301,7 @@ const Container = styled.div`
   }
   ${Flex} {
       display: block;
-      @media (min-width: 850px) {
+      @media ${variable.MidPoint} {
           display: flex;
       }
       ${ProfileContainer} {
@@ -313,7 +313,7 @@ const Container = styled.div`
               flex-direction: row;
               justify-content: center;
               padding: 0px 1rem;
-              @media (min-width: 850px) {
+              @media ${variable.MidPoint} {
                   display: flex;
                   padding: unset;
               }
@@ -436,7 +436,7 @@ const Container = styled.div`
           flex: 2;
           flex-direction: column;
           padding: 0px 1rem;
-          @media (min-width: 850px) {
+          @media ${variable.MidPoint} {
               padding: 20px 40px 0px 0px;
           }
           ${ShowcaseContainer} {
@@ -444,7 +444,7 @@ const Container = styled.div`
               display: block;
               justify-content: space-between;
               flex-wrap: wrap;
-              @media (min-width: 850px) {
+              @media ${variable.MidPoint} {
                   display: flex;
               }
               ${Card} {
@@ -501,7 +501,7 @@ const Container = styled.div`
                           font-size: 1rem;
                           top: 0;
                           width: 100%;
-                          @media (min-width: 850px) {
+                          @media ${variable.MidPoint} {
                               font-size: 0.6rem;
                           }
                       }

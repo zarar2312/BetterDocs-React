@@ -177,7 +177,7 @@ const FooterContainer = styled.footer`
             flex-flow: wrap;
             list-style: none;
             padding: 0;
-            @media (min-width: 850px) {
+            @media ${variable.MidPoint} {
                 margin: -10px -60px 10px -60px;
                 display: flex;
             }
@@ -194,7 +194,7 @@ const FooterContainer = styled.footer`
                     margin-inline-start: 0px;
                     margin-inline-end: 0px;
                 }
-                @media (min-width: 850px) {
+                @media ${variable.MidPoint} {
                     flex: 0;
                     padding: 0 60px;
                 }
@@ -281,7 +281,7 @@ const FooterContainer = styled.footer`
                         transition: all 250ms;
                     }
                 }
-                @media (min-width: 850px) {
+                @media ${variable.MidPoint} {
                     flex: 1;
                     padding: 0 60px;
                 }

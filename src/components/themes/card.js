@@ -193,7 +193,7 @@ const Cards = styled.div`
             }
         }
     }
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         padding: unset;
         margin-bottom: unset;
         border-radius: unset;
@@ -262,7 +262,7 @@ const Cards = styled.div`
             left: 0;
             right: 0;
         }
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
             /*box-shadow: unset;*/
             padding-bottom: unset;
             ${Thumbnail} {
@@ -439,14 +439,14 @@ const Cards = styled.div`
             line-height: 0.8rem;
             font-size: 0.6rem;
             color: rgba(0, 0, 0, 0.6);
-            @media (min-width: 850px) {
+            @media ${variable.MidPoint} {
                 margin-bottom: 1.3rem;
             }
         }
     }
     ${Tags} {
         margin-bottom: unset;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
             margin-bottom: 25px;
         }
         ${Tag} {
@@ -512,7 +512,7 @@ const GlobalStyle = createGlobalStyle`
                 }
             }
         }
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
             background-color: unset;
             border: unset;
             &:hover {
@@ -558,7 +558,7 @@ const GlobalStyle = createGlobalStyle`
                 left: 0;
                 right: 0;
             }
-            @media (min-width: 850px) {
+            @media ${variable.MidPoint} {
                 /*box-shadow: unset;*/
                 padding-bottom: unset;
                 ${Thumbnail} {
@@ -625,7 +625,7 @@ const GlobalStyle = createGlobalStyle`
         }
         ${Tags} {
             margin-bottom: unset;
-            @media (min-width: 850px) {
+            @media ${variable.MidPoint} {
                 margin-bottom: 25px;
             }
             ${Tag} {

@@ -1,12 +1,10 @@
 import React from 'react'
-//import style from 'src/styles/download.module.scss'
 import 'src/styles/tooltips.css'
-//import Tooltip from 'src/components/download/tooltip'
 import styled from 'styled-components';
-//import * as variable from 'src/styles/variables'
 import { Link } from 'gatsby'
 import LazyLoad from "react-lazyload"
 import Loading from 'src/images/Loading.gif'
+import * as variable from 'src/styles/variables'
 
 const FeaturedThemeCard = ({title, slug, author, thumbnail}) => (
     <Card to={"themes" + slug}>
@@ -37,7 +35,7 @@ const ImageContainer = styled.div`
     @media (min-width: 500px) {
         width: 10.7rem;
     }
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         width: 18.7rem;
         padding-bottom: unset;
         height: 10.5rem;
@@ -66,7 +64,7 @@ const Card = styled(Link)`
     margin: 0 auto;
     margin-bottom: 1rem;
     width: 100%;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         display: inline;
         flex-basis: 24%;
         margin: unset;

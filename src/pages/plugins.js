@@ -268,7 +268,7 @@ const Container = styled.div`
   display: block;
   flex-direction: row;
   background-color: #f1f1f1;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: flex;
       position: initial;
       top: unset;
@@ -283,7 +283,7 @@ const Content = styled.div`
   order: 1;
   overflow: hidden;
   padding-left: unset;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: flex;
       flex: 3;
       flex-direction: column;
@@ -342,7 +342,7 @@ const Main = styled.div`
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 3.1rem;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       /*max-height: calc(((((100vh - 6.1rem) - 2.5rem) - 2.45rem) - 1.05rem) - 2.8rem);*/
       padding-bottom: unset;
     }
@@ -354,7 +354,7 @@ const Cards = styled.div`
   justify-content: space-around;
   padding: 25px 0;
   overflow: hidden;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       padding: 35px 55px;
   }
   ${AdCard} {
@@ -413,7 +413,7 @@ const HeroContainer = styled.div`
       max-width: calc(100% - 75px);
       padding: 0 10px;
   }
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       max-width: calc(100% - 125px);
       padding: 0 20px;
   }
@@ -440,7 +440,7 @@ const FeaturedCards = styled.div`
   z-index: 1;
   padding: 40px 0px;
   flex-wrap: wrap;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       padding-bottom: 20px;
   }
 `
@@ -523,7 +523,7 @@ const FeaturedCard = styled.div`
   animation-name: slideDown;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       margin-left: 14px;
   }
   
@@ -567,7 +567,7 @@ const UploadBtn = styled.div`
   font-size: 10px;
   width: 100%;
   pointer-events: none;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: none;
   }
   a {
@@ -594,7 +594,7 @@ const HelpBtn = styled.div`
   bottom: 2.5rem;
   z-index: 100;
   display: none;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       right: 1.5rem;
       bottom: 1rem;
       display: initial;

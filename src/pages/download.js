@@ -1,6 +1,5 @@
 import React from 'react'
-
-//import style from '../styles/download.module.scss'
+import * as variable from 'src/styles/variables'
 import Layout from '../components/layout'
 import '../styles/tooltips.css'
 import Card from '../components/download/card'
@@ -14,7 +13,7 @@ const Wrapper = styled.div`
   padding: 20px 35px;
   margin: 0 auto;
   flex-wrap: wrap;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: flex;
       padding: 20px 0px;
       width: calc(100% - 9em);

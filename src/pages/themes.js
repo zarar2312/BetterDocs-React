@@ -267,7 +267,7 @@ const Container = styled.div`
   display: block;
   background-color: #fff;
   flex-direction: row;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     display: flex;
     flex-direction: column;
   }
@@ -349,14 +349,14 @@ const Container = styled.div`
     flex-direction: column;
     display: flex; /* none */
     overflow: hidden;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         display: flex;
     }
     ${FeaturedBar} {
       display: flex;
       flex-direction: column;
       padding: 0.62rem 0.82rem;
-      @media (min-width: 850px) {
+      @media ${variable.MidPoint} {
           display: flex;
           flex-direction: row;
       }
@@ -373,7 +373,7 @@ const Container = styled.div`
             font-size: 0.85rem;
             color: ${variable.SiteColor};
             font-weight: bold;
-            @media (min-width: 850px) {
+            @media ${variable.MidPoint} {
               margin-left: 15px;
             }
           }
@@ -401,7 +401,7 @@ const Container = styled.div`
         flex-direction: row;
         justify-content: flex-start;
         margin-top: 20px;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
           justify-content: flex-end;
           margin-top: unset;
         }
@@ -521,7 +521,7 @@ const Container = styled.div`
     order: 1;
     display: flex;
     flex-direction: column;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         flex: 3;
     }
     ${TitleBarHeadroom} {
@@ -551,7 +551,7 @@ const Container = styled.div`
           top: 3rem;
           transform: translateY(0%);
       }
-      @media (min-width: 850px) {
+      @media ${variable.MidPoint} {
         .headroom {
         }
         .headroom--unfixed {
@@ -619,7 +619,7 @@ const Container = styled.div`
           &:hover {
             color: #000;
           }
-          @media (min-width: 850px) {
+          @media ${variable.MidPoint} {
             display: initial;
           }
         }
@@ -638,7 +638,7 @@ const Container = styled.div`
                 opacity: 1;
             }
           }
-          @media (min-width: 850px) {
+          @media ${variable.MidPoint} {
             display: initial;
           }
         }
@@ -651,7 +651,7 @@ const Container = styled.div`
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
       max-height: unset;
-      @media (min-width: 850px) {
+      @media ${variable.MidPoint} {
         max-height: unset;
       }
       &::-webkit-scrollbar-button {
@@ -715,7 +715,7 @@ const Container = styled.div`
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
           display: flex;
           padding: 2.1rem 0;
           padding-top: 0.1rem;
@@ -753,7 +753,7 @@ const UploadContainer = styled.div`
   width: 100%;
   font-size: 10px;
   pointer-events: none;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: none;
   }
   ${UploadBtn} {
@@ -779,7 +779,7 @@ const HelpContainer = styled.div`
   right: 1rem;
   bottom: 2.5rem;
   z-index: 100;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       right: 1.5rem;
       bottom: 1rem;
       display: none;

@@ -1,12 +1,11 @@
 import React from 'react'
-//import style from 'src/styles/download.module.scss'
 import styled from 'styled-components';
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-//import mystyles from 'src/styles/header.module.scss'
 import { Link } from 'gatsby'
 import Headroom from 'react-headroom';
 import Helmet from 'react-helmet'
 import Light from 'src/images/light-bulb.svg'
+import * as variable from 'src/styles/variables'
 
 class desktopHeader extends React.Component {
     constructor(props) {
@@ -147,7 +146,7 @@ const LightSwitchTab = styled.div`
             outline: unset;
         }
     }
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         display: flex;
     }
 `
@@ -171,7 +170,7 @@ const LightSwitch = styled.div`
             outline: unset;
         }
     }
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         display: none;
     }
 `
@@ -183,7 +182,7 @@ const LogoContainer = styled.div`
   padding: 0.4rem 0.7rem 0.4rem 0.7rem;
   background-color: #0a0a0a;
   box-shadow: -4px 0px 8px 0px black;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       justify-content: flex-start;
       padding: 0.4rem 0.7rem 0.1rem 0.7rem;
       box-shadow: unset;
@@ -194,7 +193,7 @@ const LogoContainer = styled.div`
 `
 
 const AnimHeader = styled(Headroom)`
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         height: 109px !important;
         .headroom--scrolled {
             transition: transform 200ms ease-in-out;
@@ -240,7 +239,7 @@ const NavigationBar = styled.nav`
   padding: 0;
   position: relative;
   bottom: unset;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: flex;
       height: unset;
   }
@@ -270,7 +269,7 @@ const Title = styled.span`
   &:hover {
       color: #fff;
   }
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: inline-block;
       padding: 0.5rem 0.7rem;
       font-family: Roboto, sans-serif;
@@ -297,7 +296,7 @@ const Tab = styled(Link)`
     ${Title} {
         color: #fff;
     }
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
       ${Title} {
             border-bottom: 2px solid #fff;
         }

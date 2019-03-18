@@ -58,7 +58,7 @@ const SoftwareBar = styled.div`
     position: sticky;
     z-index: 3;
     box-shadow: 2px 2px 5px rgba(0,0,0,.25);
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         box-shadow: 2px 2px 5px rgba(0,0,0,.15);
     }
     ${TagsContainer} {
@@ -67,7 +67,7 @@ const SoftwareBar = styled.div`
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         width: 100%;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
         }
         &::-webkit-scrollbar-button { 
             display: none; 

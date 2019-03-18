@@ -60,7 +60,7 @@ const Status = styled.div`
     &[alt="Unknown"] {
         background-color: #005180;
     }
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         left: -0.2rem;
     }
 `
@@ -131,7 +131,7 @@ const Card = styled(Link)`
             }
         }
     }
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         width: 100%;
         margin: unset;
         border-radius: unset;

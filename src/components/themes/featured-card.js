@@ -45,7 +45,7 @@ const Card = styled(Link)`
     &:first-child {
         margin-left: unset;
     }
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         &:first-child {
             margin-left: 50px;
         }

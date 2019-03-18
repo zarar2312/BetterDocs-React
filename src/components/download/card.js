@@ -113,7 +113,7 @@ const Header = styled.div`
   padding: 0.5rem 0rem 1.6rem 0rem;
   justify-content: center;
   flex-basis: 10%;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       padding: 0.5rem 0rem 0.85rem 0rem;
   }
   ${Title} {
@@ -132,7 +132,7 @@ const Header = styled.div`
       bottom: -25px;
       bottom: -1rem;
       width: 100%;
-      @media (min-width: 850px) {
+      @media ${variable.MidPoint} {
           bottom: -40px;
           bottom: -1.5rem;
       }
@@ -161,7 +161,7 @@ const Card = styled.div`
   margin-bottom: 15px;
   animation-name: slideTop;
   animation-duration: 1s;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     margin-top: unset;
     display: flex;
     flex-direction: column;

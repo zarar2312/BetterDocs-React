@@ -113,7 +113,7 @@ const Cards = styled.div`
     /*overflow: auto;*/
     -webkit-overflow-scrolling: touch;
     margin: 0 auto;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -148,7 +148,7 @@ const SubText = styled.div`
     font-weight: normal;
     z-index: 4;
     text-indent: 1rem;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         font-size: 1.1rem;
     }
 `
@@ -161,7 +161,7 @@ const Header = styled.div`
     font-weight: bold;
     z-index: 99;
     margin-left: 1rem;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         font-size: 1.4rem;
         margin-top: -2rem;
     }
@@ -174,7 +174,7 @@ const BtnContainer = styled.div`
     z-index: 4;
     margin-top: -2rem;
     margin-bottom: 0.8rem;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         margin-top: unset;
     }
     ${Btn} {

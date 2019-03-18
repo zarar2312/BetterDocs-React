@@ -370,7 +370,7 @@ const MobileHeader = styled.div`
       white-space: nowrap;
       font-size: 0.7rem;
   }
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: none;
   }
 `
@@ -379,7 +379,7 @@ const Container = styled.div`
   flex-direction: row;
   background-color: #f1f1f1;
   /*background-color: #fbfafc;*/
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     display: flex;
   }
   ${Wrapper} {
@@ -389,7 +389,7 @@ const Container = styled.div`
     flex-direction: column;
     overflow: hidden;
     padding-left: unset;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
       padding-left: 14.8rem;
     }
   ${Tabbs} {
@@ -444,7 +444,7 @@ const Container = styled.div`
     ${TabPanell} {
       /*width: calc(100% - 75px);*/
       margin: 0 auto;
-      @media (min-width: 850px) {
+      @media ${variable.MidPoint} {
         /*width: calc(100% - 300px);*/
       }
       ${ContentContainer} {
@@ -462,7 +462,7 @@ const Container = styled.div`
         padding-top: 1rem;
         word-break: break-all;
         font-size: 0.6rem;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
           padding-bottom: unset;
         }
         ${ScreenshotContainer} {
@@ -755,7 +755,7 @@ const Container = styled.div`
                 pointer-events: none;
                 font-size: 0.5rem;
             }
-            @media (min-width: 850px) {
+            @media ${variable.MidPoint} {
               margin-top: 0.5rem;
               margin-right: 0.4rem;
                 &::after {
@@ -828,7 +828,7 @@ const Container = styled.div`
           bottom: 2.5rem;
           z-index: 100;
           transition: all linear 250ms !important;
-          @media (min-width: 850px) {
+          @media ${variable.MidPoint} {
               right: 1.5rem;
               bottom: 1rem;
           }
@@ -874,7 +874,7 @@ const BackButton = styled(AniLink)`
   left: 17px;
   z-index: 101;
   display: block;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: none;
   }
   svg {

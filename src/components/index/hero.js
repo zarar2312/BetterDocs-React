@@ -81,7 +81,7 @@ const Container = styled.section`
     top: 0;
     pointer-events: none;
   }
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     display: flex;
     padding: 4.25rem 0;
     padding-bottom: 4.8rem;
@@ -97,7 +97,7 @@ const Container = styled.section`
     -webkit-animation-duration: 1s;
     visibility: visible;
     transition: 300ms linear;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         max-width: calc(100% - 125px);
     }
     ${Header} {
@@ -124,7 +124,7 @@ const Container = styled.section`
         margin-bottom: 50px;
         text-align: left;
         margin-top: 20px;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
             margin-bottom: 0;
             margin-top: 15px;
         }
@@ -158,7 +158,7 @@ const Container = styled.section`
     animation-iteration-count: infinite;
     display: flex;
     z-index: 1;
-    /*@media (min-width: 850px) {
+    /*@media ${variable.MidPoint} {
         padding-bottom: unset;
         height: 19.25rem;
     }*/

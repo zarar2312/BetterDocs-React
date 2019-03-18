@@ -85,7 +85,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         align-self: center;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
             padding: .25rem .5rem;
         }
         &[href="/plugins/softwares/null/"] {

@@ -127,7 +127,7 @@ const Container = styled.div`
   display: block;
   flex-direction: row;
   background-color: #f1f1f1;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: flex;
       position: initial;
       top: unset;
@@ -142,7 +142,7 @@ const Content = styled.section`
   order: 1;
   overflow: hidden;
   padding-left: unset;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
     display: flex;
     flex: 3;
     flex-direction: column;
@@ -193,7 +193,7 @@ const HeroTitle = styled.div`
   font-family: sans-serif;
   word-wrap: normal;
   margin: 10px 0;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       font-size: 1.7rem;
   }
 `
@@ -251,7 +251,7 @@ const Main = styled.div`
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 3.1rem;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       padding-bottom: unset;
     }
   &::-webkit-scrollbar-button { 
@@ -290,7 +290,7 @@ const Cards = styled.div`
   justify-content: space-around;
   padding: 25px 0;
   overflow: hidden;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       padding: 35px 55px;
   }
 `
@@ -304,7 +304,7 @@ const UploadBtn = styled.div`
   font-size: 10px;
   width: 100%;
   pointer-events: none;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: none;
   }
   a {
@@ -331,7 +331,7 @@ const HelpBtn = styled.div`
   bottom: 2.5rem;
   z-index: 100;
   display: none;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       right: 1.5rem;
       bottom: 1rem;
       display: initial;

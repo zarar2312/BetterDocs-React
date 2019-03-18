@@ -72,7 +72,7 @@ const Container = styled.div`
     background-size: cover;
     background-position: center;
     transition: 300ms linear height 500ms;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         padding: 4rem 0rem 5rem 0rem;
         background-position: unset;
     }
@@ -133,7 +133,7 @@ const Container = styled.div`
         z-index: 1;
         flex: 1;
         padding: 0 1rem 0 2rem;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
             flex-direction: row; 
         }
         ${TitleContainer} {
@@ -151,7 +151,7 @@ const Container = styled.div`
             ${StatusContainer} {
                 margin-top: 5px;
                 margin-bottom: 1rem;
-                @media (min-width: 850px) {
+                @media ${variable.MidPoint} {
                     margin-bottom: 3rem;
                 }
                 &[alt="Deprecated"] {
@@ -201,7 +201,7 @@ const Container = styled.div`
             ${SubDetails} {
                 display: flex;
                 margin-bottom: 1rem;
-                @media (min-width: 850px) {
+                @media ${variable.MidPoint} {
                     margin-bottom: 3rem;
                 }
                 ${SubContainer} {
@@ -209,7 +209,7 @@ const Container = styled.div`
                     flex-wrap: wrap;
                     flex: 1;
                     margin-left: -35px;
-                    @media (min-width: 850px) {
+                    @media ${variable.MidPoint} {
                         margin-left: unset;
                         ${Text}:first-child {
                             margin-left: unset;
@@ -344,7 +344,7 @@ const Container = styled.div`
             @media (min-width: 450px) {
                 max-width: calc(100% - 75px);
             }
-            @media (min-width: 850px) {
+            @media ${variable.MidPoint} {
                 flex-direction: column;
                 margin-top: unset;
                 text-align: unset;
@@ -367,7 +367,7 @@ const Container = styled.div`
                 font-size: 0.67rem;
                 margin: 5px;
                 padding-left: 12px;
-                @media (min-width: 850px) {
+                @media ${variable.MidPoint} {
                     margin: 0 auto;
                     margin-top: unset;
                 }
@@ -395,7 +395,7 @@ const Container = styled.div`
                 display: -webkit-inline-box;
                 font-size: 0.67rem;
                 margin: 5px;
-                @media (min-width: 850px) {
+                @media ${variable.MidPoint} {
                     margin: 0 auto;
                     margin-top: 10px;
                 }
@@ -421,7 +421,7 @@ const Container = styled.div`
                 display: -webkit-inline-box;
                 font-size: 0.67rem;
                 margin: 5px;
-                @media (min-width: 850px) {
+                @media ${variable.MidPoint} {
                     margin: 0 auto;
                     margin-top: 10px;
                 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
 //import style from '../styles/theme-page.module.scss'
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import kebabCase from "lodash/kebabCase"
 import Helmet from 'react-helmet'
@@ -20,6 +20,7 @@ import ContributionArea from '../components/themes/page-contributors-area'
 import InformationArea from '../components/themes/page-info-area'
 import TagsArea from '../components/themes/page-tags-area'
 import mydate from 'current-date'
+import Authorcard from '../components/themes/author-card'
 
 const Mydate = mydate('date');
 
@@ -223,6 +224,19 @@ const Themes = (props) => {
           }
         </Tabbs>
         ))}
+        <MoreHeader>More from <Link to={"profile/" + node.frontmatter.author}>{node.frontmatter.author}</Link></MoreHeader>
+          <Authorcard 
+          title={node.frontmatter.title} 
+          thumbnail={node.frontmatter.thumbnail}
+          slug={node.fields.slug}
+          status={node.frontmatter.status}
+          tags={node.frontmatter.tags}
+          author={node.frontmatter.author}
+          excerpt={node.excerpt}
+          demo={node.frontmatter.demo}
+          mode={node.frontmatter.style}
+          featured= {node.frontmatter.featured}
+          />
       </Wrapper>
       ))}
 
@@ -351,13 +365,15 @@ const AlertLink = styled.div`
 `
 const DeprecatedBtn = styled.a`
 `
+const MoreHeader = styled.h2`
+`
 const MobileBackBtn= styled(AniLink)`
   position: fixed;
   top: 22px;
   left: 17px;
   z-index: 101;
   display: block;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: none;
   }
   svg {
@@ -370,7 +386,7 @@ const EditBtn = styled.div`
   right: 1rem;
   bottom: 2.5rem;
   z-index: 100;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       right: 1.5rem;
       bottom: 1rem;
   }
@@ -420,7 +436,7 @@ const MobileHeader = styled.div`
       white-space: nowrap;
       font-size: 0.7rem;
   }
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: none;
   }
 `
@@ -429,7 +445,7 @@ const Container = styled.div`
   display: block;
   flex-direction: column;
   background-color: #f1f1f1;
-  @media (min-width: 850px) {
+  @media ${variable.MidPoint} {
       display: flex;
       flex-direction: row;
   }
@@ -439,11 +455,51 @@ const Container = styled.div`
     flex-direction: column;
     overflow: hidden;
     padding-left: unset;
-    @media (min-width: 850px) {
+    @media ${variable.MidPoint} {
         flex: 4;
         padding-left: 14.8rem;
         padding-left: unset;
 
+    }
+    ${MoreHeader} {
+      order: 3;
+      font-size: 1.55rem;
+      word-break: keep-all;
+      margin-bottom: 0;
+      background-color: #e6e6e6;
+      padding: 0.7rem 2rem;
+      padding-bottom: 1.2rem;
+      a:not([class*="anchor"]) {
+        display: inline-block;
+        transition: color 250ms, text-shadow 250ms;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        line-height: 1rem;
+        &:after {
+          position: absolute;
+          z-index: -1;
+          bottom: -9px;
+          left: 50%;
+          transform: translateX(-50%);
+          content: '';
+          width: 100%;
+          height: 3px;
+          background-color: ${variable.SiteColor};
+          transition: all 250ms;
+        }
+        &:hover {
+          color: #fff;
+          opacity: 1;
+          background-color: transparent;
+        &::after {
+            height: 160%;
+            width: 110%;
+          }
+        }
+      }
     }
     ${Tabbs} {
       order: 3;
@@ -495,7 +551,7 @@ const Container = styled.div`
       ${TabPanell} {
         /*width: calc(100% - 75px);*/
         margin: 0 auto;
-        @media (min-width: 850px) {
+        @media ${variable.MidPoint} {
           /*width: calc(100% - 300px);*/
         }
         ${ContentContainer} {
@@ -512,7 +568,7 @@ const Container = styled.div`
           padding-top: 1rem;
           word-break: break-all;
           font-size: 0.6rem;
-          @media (min-width: 850px) {
+          @media ${variable.MidPoint} {
             padding-bottom: unset;
           }
           a:not([class*="anchor"]) {
@@ -822,7 +878,7 @@ const Container = styled.div`
           justify-content: space-around;
           align-content: center;
           margin-bottom: 1rem;
-          @media (min-width: 850px) {
+          @media ${variable.MidPoint} {
               justify-content: space-between;
           }
           ${ScreenshotWrapper} {
@@ -930,6 +986,13 @@ const GlobalStyle = createGlobalStyle`
   ${Container} {
     background-color: #36393f;
     ${Wrapper} {
+      ${MoreHeader} {
+        background-color: #2f3238;
+        color: #eee;
+        a {
+          color: #fff;
+        }
+      }
       ${Tabbs} {
         ${TabListt} {
           ${Tabb} {
