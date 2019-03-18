@@ -40,7 +40,7 @@ class desktopHeader extends React.Component {
         return (
             <AnimHeader disableInlineStyles>
                 <Helmet>
-                    <html lang="en" mode={this.state.class} />
+                    <html lang="en" mode={this.state.class} id="#app"/>
                 </Helmet>
                 <LogoContainer>
                     <AniLink  

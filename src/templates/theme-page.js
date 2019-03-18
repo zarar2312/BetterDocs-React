@@ -13,12 +13,15 @@ import Hero from '../components/themes/hero'
 import "../styles/tooltips.css"
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
-import { darken } from "polished"
+import { darken, rgba } from "polished"
 import Alerts from '../components/themes/page-alert'
 import { createGlobalStyle } from 'styled-components'
 import ContributionArea from '../components/themes/page-contributors-area'
 import InformationArea from '../components/themes/page-info-area'
 import TagsArea from '../components/themes/page-tags-area'
+import mydate from 'current-date'
+
+const Mydate = mydate('date');
 
 /*
 {node.frontmatter.profile_picture ?
@@ -98,11 +101,39 @@ const Themes = (props) => {
 
           <TabPanell>
             <ContentContainer>
-            <Alerts
-            status={node.frontmatter.status}
-            title={node.frontmatter.title}
-            issue={node.frontmatter.support}
-            />
+              <Alerts
+              status={node.frontmatter.status}
+              title={node.frontmatter.title}
+              issue={node.frontmatter.support}
+              />
+              <SubHeader>Does this still work?</SubHeader>
+              <ReportButtons>
+                <WorkingBtn target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status: Working]&labels=report&body=This%20is%20ONLY%20to%20report%20that%20this%20theme%20(as%20of%20" + Mydate + ")%20IS%20working!" }>
+                <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M481,332c0-16.5-13.5-30-30-30c16.5,0,30-13.5,30-30s-13.5-30-30-30H328.001C346.3,187.099,346,169.6,346,136 c0-24.961-20.466-45-45-45h-9c-5.7,0-12.9,4.501-14.401,11.4C262.758,160.181,239.555,226.484,181,239.914v217.062l51.899,17.223 c15.3,5.099,31.201,7.8,47.401,7.8H421C437.569,482,451,468.567,451,452c0-16.569-13.431-30-30-30h30c16.5,0,30-13.5,30-30 s-13.5-30-30-30C467.5,362,481,348.5,481,332z"
+                    />
+                    <path d="M106,212H46c-8.291,0-15,6.709-15,15v270c0,8.291,6.709,15,15,15h60c24.814,0,45-20.186,45-45V257 C151,232.186,130.814,212,106,212z M106,452c-8.284,0-15-6.716-15-15c0-8.286,6.716-15,15-15s15,6.714,15,15 C121,445.284,114.284,452,106,452z"
+                    />
+                    <path d="M237.353,66.142l-21.211-21.211c-5.859-5.859-15.352-5.859-21.211,0c-5.859,5.859-5.859,15.352,0,21.211l21.211,21.211 c5.859,5.859,15.351,5.859,21.211,0C243.212,81.494,243.212,72.001,237.353,66.142z"
+                    />
+                    <path d="M407.069,44.931c-5.859-5.859-15.352-5.859-21.211,0l-21.211,21.211c-5.859,5.859-5.859,15.352,0,21.211 c5.859,5.859,15.352,5.859,21.211,0l21.211-21.211C412.928,60.283,412.928,50.79,407.069,44.931z"
+                    />
+                    <path d="M301,0c-8.401,0-15,6.599-15,15v31c0,8.401,6.599,15,15,15s15-6.599,15-15V15C316,6.599,309.401,0,301,0z"
+                    />
+                </svg>
+                <AlertLink>It Works</AlertLink>
+                </WorkingBtn>
+                <DeprecatedBtn target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - [Status: Broken]&labels=report&body=This%20is%20ONLY%20to%20report%20that%20this%20theme%20(as%20of%20" + Mydate + ")%20IS%20NOT%20working!" }>
+                <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="456.824" height="456.824"
+                viewBox="0 0 456.824 456.824">
+                    <path d="M100.5,45.683H18.276c-4.949,0-9.231,1.809-12.851,5.426C1.809,54.724,0,59.007,0,63.954v182.729 c0,4.948,1.809,9.233,5.426,12.847c3.616,3.614,7.898,5.425,12.851,5.425H100.5c4.948,0,9.229-1.811,12.847-5.425 c3.616-3.613,5.424-7.898,5.424-12.847V63.954c0-4.947-1.809-9.229-5.424-12.845C109.73,47.491,105.449,45.683,100.5,45.683z M67.665,113.351c-3.616,3.617-7.898,5.424-12.847,5.424c-5.14,0-9.471-1.807-12.99-5.424c-3.521-3.617-5.281-7.898-5.281-12.85 c0-5.137,1.759-9.469,5.281-12.991c3.52-3.521,7.85-5.28,12.99-5.28c4.949,0,9.231,1.759,12.847,5.28 c3.621,3.521,5.426,7.854,5.426,12.991C73.091,105.449,71.282,109.73,67.665,113.351z"
+                    />
+                    <path d="M441.106,204.141c2.861-8.376,4.281-15.608,4.261-21.693c0.575-14.466-3.519-27.504-12.279-39.114 c3.237-10.66,3.237-21.797,0-33.407c-2.847-10.85-7.994-19.792-15.413-26.835c1.711-21.32-2.95-38.543-13.99-51.678 c-12.183-14.465-30.929-21.892-56.246-22.27h-10.28h-21.696h-4.853c-12.56,0-26.269,1.475-41.114,4.425 c-14.838,2.952-26.405,5.713-34.68,8.282c-8.28,2.568-19.75,6.328-34.403,11.276c-23.413,8.183-38.45,12.371-45.111,12.56 c-4.949,0.193-9.231,2.046-12.847,5.569c-3.617,3.518-5.426,7.755-5.426,12.703V246.97c0,4.757,1.718,8.898,5.142,12.416 c3.424,3.524,7.517,5.476,12.275,5.858c4.565,0.384,11.799,5.996,21.698,16.844c9.9,10.849,19.511,22.368,28.836,34.551 c12.944,16.553,22.558,27.973,28.837,34.256c3.424,3.422,6.37,7.99,8.848,13.702c2.472,5.708,4.142,10.324,5.004,13.846 c0.855,3.519,2.135,9.274,3.856,17.275c1.328,7.419,2.519,13.227,3.569,17.412c1.047,4.188,2.898,9.137,5.564,14.845 c2.67,5.716,5.903,10.469,9.712,14.274c3.614,3.62,7.898,5.431,12.847,5.431c8.761,0,16.604-0.999,23.559-2.998 c6.947-1.998,12.655-4.469,17.131-7.419c4.477-2.957,8.282-6.803,11.424-11.566c3.142-4.757,5.424-9.042,6.851-12.848 c1.431-3.812,2.574-8.562,3.426-14.27c0.855-5.716,1.338-10,1.431-12.854c0.093-2.854,0.144-6.563,0.144-11.136 c0-7.228-0.948-14.51-2.851-21.84c-1.909-7.323-3.72-12.895-5.428-16.707c-1.711-3.806-4.281-9.227-7.706-16.269 c-0.575-1.144-1.523-2.861-2.854-5.144c-1.328-2.283-2.382-4.381-3.142-6.283c-0.763-1.902-1.522-4.186-2.279-6.852h79.086 c14.843,0,27.645-5.428,38.397-16.279c10.756-10.848,16.228-23.694,16.419-38.54C456.811,229.931,451.575,215.75,441.106,204.141z"
+                    />
+                </svg>
+                  <AlertLink>It's Broken</AlertLink>
+                </DeprecatedBtn>
+              </ReportButtons>
               <Area>
                 <CardHeader>Description</CardHeader>
                 <AreaDescriptionCard
@@ -159,8 +190,8 @@ const Themes = (props) => {
                   <DemoBtn href={'https://betterdocs.us/preview/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"} target="blank" title={"Quick Preview of " + node.frontmatter.title }>Demo</DemoBtn>
                 }
                 {node.frontmatter.support &&
-                <Report href={node.frontmatter.support} target="blank">
-                  Doesn't Work?
+                <Report href={node.frontmatter.support + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} target="blank">
+                  Report an issue
                 </Report>
                 }
               </Options>
@@ -306,9 +337,19 @@ const AreaDescriptionCard = styled.div`
 `
 const CardHeader = styled.h1`
 `
+const SubHeader = styled.h1`
+`
 const Area = styled.div`
 `
 const AreaFlex = styled.div`
+`
+const ReportButtons = styled.div`
+`
+const WorkingBtn = styled.a`
+`
+const AlertLink = styled.div`
+`
+const DeprecatedBtn = styled.a`
 `
 const MobileBackBtn= styled(AniLink)`
   position: fixed;
@@ -502,6 +543,137 @@ const Container = styled.div`
             &::after {
                 height: 110%;
                 width: 110%;
+              }
+            }
+          }
+          ${SubHeader} {
+            font-size: 1.05rem;
+            word-break: keep-all;
+            margin-bottom: 0.3rem;
+          }
+          ${ReportButtons} {
+            display: flex;
+            margin-bottom: 1.25rem;
+            ${DeprecatedBtn} {
+              border-radius: 25px;
+              background-color: #fff;
+              position: relative;
+              margin-left: 0.2rem;
+              transition: 300ms ease-in-out;
+              display: flex;
+              &:hover {
+                background-color: ${variable.DeprecatedColor};
+                box-shadow: 2px 2px 40px -12px #999;
+                &::after {
+                  height: 100%;
+                  width: 100%;
+                }
+                ${AlertLink} {
+                  color: #fff;
+                }
+                svg {
+                  path {
+                    fill: #fff;
+                  }
+                }
+              }
+              &:focus, &:active {
+                box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
+                background-color: ${darken(0.1,variable.DeprecatedColor)};
+              }
+              ${AlertLink} {
+                height: 100%;
+                text-align: center;
+                padding: 0.22rem 0.6rem;
+                padding-left: 0.22rem;
+                width: 100%;
+                border-radius: 25px;
+                color: ${variable.DeprecatedColor};
+                z-index: 1;
+                &::after {
+                  display: none;
+                }
+              }
+              svg {
+                width: 0.8rem;
+                height: 0.8rem;
+                align-self: center;
+                margin-left: 0.55rem;
+                path {
+                  fill: ${variable.DeprecatedColor};
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: ${rgba(variable.DeprecatedColor, 0.1)};
+                top: 0;
+                border-radius: 25px;
+                border: 1px solid ${rgba(variable.DeprecatedColor, 0.15)};
+              }
+            }
+            ${WorkingBtn} {
+              border-radius: 25px;
+              background-color: #fff;
+              position: relative;
+              transition: 300ms ease-in-out;
+              display: flex;
+              &:hover {
+                background-color: ${variable.UpdatedColor};
+                box-shadow: 2px 2px 40px -12px #999;
+                &::after {
+                  height: 100%;
+                  width: 100%;
+                }
+                ${AlertLink} {
+                  color: #fff;
+                }
+                svg {
+                  path {
+                    fill: #fff;
+                  }
+                }
+              }
+              &:focus, &:active {
+                box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
+                background-color: ${darken(0.1,variable.UpdatedColor)};
+              }
+              ${AlertLink} {
+                height: 100%;
+                text-align: center;
+                padding: 0.22rem 0.6rem;
+                padding-left: 0.22rem;
+                width: 100%;
+                border-radius: 25px;
+                color: ${variable.UpdatedColor};
+                z-index: 1;
+                &::after {
+                  display: none;
+                }
+              }
+              svg {
+                width: 0.9rem;
+                height: 0.9rem;
+                align-self: center;
+                margin-left: 0.55rem;
+                position: relative;
+                top: -1px;
+                left: 1px;
+                path {
+                  fill: ${variable.UpdatedColor};
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: ${rgba(variable.UpdatedColor, 0.1)};
+                border: 1px solid ${rgba(variable.UpdatedColor, 0.15)};
+                top: 0;
+                border-radius: 25px;
               }
             }
           }
@@ -778,6 +950,19 @@ const GlobalStyle = createGlobalStyle`
         }
         ${TabPanell} {
           ${ContentContainer} {
+            ${SubHeader} {
+              color: #fff;
+            }
+            ${ReportButtons} {
+              ${WorkingBtn} {
+                background-color: rgba(0,0,0,0.2);
+                border-color: rgba(0,0,0,0.25);
+              }
+              ${DeprecatedBtn} {
+                background-color: rgba(0,0,0,0.2);
+                border-color: rgba(0,0,0,0.25);
+              }
+            }
             ${CardHeader} {
               color: #fff;
             }

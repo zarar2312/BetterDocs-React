@@ -13,20 +13,20 @@ const themeAlerts = ({status, title, issue}) => (
                 {status === "Updated" &&
                 <>
                     <Status>This theme is compatible with the latest version of Discord</Status>
-                    <StatusDescription>This theme is currently marked as <b>Updated</b> by the community which means this <i>should</i> work. If this theme is broken for the latest version of Discord please make a report <a target="_blank" rel="noopener noreferrer" href={ issue + "/new?title=" + title + " - BetterDocs - [Issue Report]&labels=report" }>here</a>.</StatusDescription>
+                    <StatusDescription>This theme is currently marked as <b>Updated</b> by the community which means this theme <i>should</i> work. If this theme is not working please let us know for the rest of the community!</StatusDescription>
                 </>
                 }
                 {status === "Deprecated" &&
                 <>
                     <Status>This theme is not compatible with the latest version of Discord</Status>
-                    <StatusDescription>This theme is currently marked as <b>Deprecated</b> by the community which means this will break your Discord. If this theme is working again please let us know <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report&body=This%20is%20ONLY%20to%20report%20that%20this%20plugin%20has%20been%20updated%20and%20working!" }>here</a> for the rest of the community!</StatusDescription>
+                    <StatusDescription>This theme is currently marked as <b>Deprecated</b> by the community which means this will break your Discord. If this theme is working again please let us know for the rest of the community!</StatusDescription>
                 </>
                 }
             </StatusContainer>
             :
             <StatusContainer alt="Unknown">
                 <Status>This theme <i>should</i> (may not) be compatible with the latest version of Discord</Status>
-                <StatusDescription>This theme is currently marked as <b>Unknown</b> which means that this theme may or may not work. If you would like to report an update for the rest of the community, you can do so <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - [Status Report]&labels=report&body=This%20is%20ONLY%20to%20report%20that%20this%20plugin%20is%20OR%20is%20not%20working!" }>here</a>.</StatusDescription>
+                <StatusDescription>This theme is currently marked as <b>Unknown</b> which means that this theme may or may not work. If this theme is not working please let us know for the rest of the community!</StatusDescription>
             </StatusContainer>
         }
     </>
@@ -42,7 +42,7 @@ const StatusContainer = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 25px;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
     box-shadow: 2px 2px 40px -12px #999;
     background-color: #fff;
     ${Status} {

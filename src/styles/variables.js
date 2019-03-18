@@ -3,6 +3,12 @@ export const SiteColor = '#7289DA';
 
 export const SiteColorAccent = '#1868df';
 
+export const UpdatedColor = `#00b167`;
+
+export const DeprecatedColor = `#c33030`;
+
+export const UnknownColor = `#005180`;
+
 //Client Mod Colors
 export const BandagedBD = '#7289DA';
 

@@ -55,7 +55,7 @@ ${TagsContainer} {
             }
             &:hover {
                 border-bottom-left-radius: 0px;
-                box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+                box-shadow: 2px 2px 40px -12px #999;
                 color: #000 !important;
                 background-color: #fff !important;
                 &::after {

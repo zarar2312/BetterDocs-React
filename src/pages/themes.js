@@ -18,6 +18,7 @@ import { createGlobalStyle } from 'styled-components'
 import ThemesImg from "../images/themes-min.png"
 import Bg from 'src/images/header-bg.svg'
 import AdSense from 'react-adsense';
+//import Modal from '../components/themes/modal'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -155,9 +156,7 @@ const Themes = (props) => {
             ))}
         </Wrapper>
       </Content>
-
     </ContainerSection>
-
     </Container>
     <UploadContainer>
         <UploadBtn to="/themes/upload-a-theme/">
