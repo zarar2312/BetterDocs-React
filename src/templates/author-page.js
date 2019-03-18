@@ -7,8 +7,8 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { darken } from 'polished'
-//import Missing from '../images/mobile.png'
-//import Loading from 'src/images/Loading.gif'
+import Plugincard from '../components/plugins/card'
+import Themecard from '../components/themes/card'
 
 const Updated = "#00b167";
 const Deprecated = "#eb0505";
@@ -137,38 +137,31 @@ const Author = ({ pageContext, data }) => {
       <Showcase>
         <ShowcaseContainer>
             {data.all.edges.map(({ node }, i) => (
-              <Card key={node.id}>
+              <Card key={node.id} alt={node.frontmatter.demo ? "theme" : "plugin" }>
                 {node.frontmatter.demo ?
-                <ThemeCard 
-                to={"/themes" + node.fields.slug}
-                title={node.frontmatter.status ? "This theme is currently " + node.frontmatter.status : "This theme might or might not work" }
-                >
-                  <ImageContainer>
-                    <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + " preview by " + node.frontmatter.author} />
-                    <Excerpt>{node.frontmatter.description}</Excerpt>
-                  </ImageContainer>
-                  <Title>
-                    <p>{node.frontmatter.title}</p>
-                  </Title>
-                  {node.frontmatter.status ?
-                    <div class={ node.frontmatter.status + "-themeStatus"}>{node.frontmatter.status}</div>
-                  :
-                    <Unknown>Unknown</Unknown>
-                  }
-                </ThemeCard>
+                <Themecard 
+                title={node.frontmatter.title} 
+                thumbnail={node.frontmatter.thumbnail}
+                slug={node.fields.slug}
+                status={node.frontmatter.status}
+                tags={node.frontmatter.tags}
+                author={node.frontmatter.author}
+                excerpt={node.excerpt}
+                demo={node.frontmatter.demo}
+                mode={node.frontmatter.style}
+                featured= {node.frontmatter.featured}/>
                 :
-                <PluginCard 
-                to={"/plugins" + node.fields.slug}
-                title={node.frontmatter.status ? "This plugin is currently " + node.frontmatter.status : "This plugin might or might not work" }
-                alt={node.frontmatter.status ?
-                  `${node.frontmatter.status}`
-                :
-                  `Unknown`
-                }
-                >
-                  <Title>{node.frontmatter.title}</Title>
-                  <Excerpt>{node.frontmatter.description}</Excerpt>
-                </PluginCard>
+                <Plugincard
+                title={node.frontmatter.title} 
+                thumbnail={node.frontmatter.thumbnail}
+                slug={node.fields.slug}
+                status={node.frontmatter.status}
+                tags={node.frontmatter.tags}
+                author={node.frontmatter.author}
+                excerpt={node.excerpt}
+                softwares={node.frontmatter.software}
+                key={node.id}
+                />
                 }
               </Card>
             ))}
@@ -458,6 +451,9 @@ const Container = styled.div`
                   flex-basis: 12rem;
                   margin-bottom: 20px;
                   position: relative;
+                  &[alt="theme"] {
+                      flex-basis: 16rem;
+                  }
                   &:hover {
                       ${ThemeCard} {
                           ${Title} {
