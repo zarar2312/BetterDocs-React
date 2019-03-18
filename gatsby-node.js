@@ -32,10 +32,6 @@ return graphql(`{
               tags
               software
               featured
-              maintainer_name
-              maintainer_url
-              contributor_name
-              contributor_url
             }
           }
         }
