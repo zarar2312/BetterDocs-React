@@ -2,7 +2,7 @@
 title: Auto Play Gifs
 author: rauenzi
 description: Automatically plays avatars, GIFs and GIFVs. (Can be individually turned off in settings)
-download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/AutoPlayGifs
+download: https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/AutoPlayGifs/AutoPlayGifs.plugin.js
 github_profile_url: 'https://github.com/rauenzi/'
 github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/AutoPlayGifs
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/

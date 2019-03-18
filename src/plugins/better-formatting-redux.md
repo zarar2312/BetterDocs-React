@@ -2,7 +2,7 @@
 title: Better Formatting Redux
 author: rauenzi
 description: Lets you view popout, nickname and more from your account panel at the bottom.
-download: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/BetterFormattingRedux
+download: https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/BetterFormattingRedux/BetterFormattingRedux.plugin.js
 github_profile_url: https://github.com/rauenzi/
 github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/BetterFormattingRedux
 support: https://github.com/rauenzi/BetterDiscordAddons/issues/
