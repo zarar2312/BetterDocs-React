@@ -175,8 +175,9 @@ const Container = styled.div`
     order: 4;
     /*display: flex;*/
     padding: 2rem;
-    padding-bottom: 1.8rem;
-    padding-top: 0rem;
+    margin-bottom: 2.1rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
     background-color: #e6e6e6;
     word-break: break-all;
     flex-direction: row;
@@ -235,7 +236,8 @@ const Container = styled.div`
     }
 }
 @media ${variable.MidPoint} {
-    padding-bottom: 0.4rem;
+    margin-bottom: 0;
+    padding-bottom: 0.2rem;
 }
 ${Cards} {
     display: flex;
