@@ -5,7 +5,7 @@ description: Give anyone a nickname that only you can see simply by right clicki
 download: 'https://github.com/megamit/repository/tree/gh-pages/renamer'
 github_profile_url: 'https://github.com/megamit/'
 github_source_url: 'https://github.com/megamit/repository/tree/gh-pages/renamer'
-support: 'https://github.com/megamit/repository/issues'
+github_issue_url: 'https://github.com/megamit/repository/issues'
 software: [BandagedBD, BetterDiscord]
 status: Deprecated
 auto: true

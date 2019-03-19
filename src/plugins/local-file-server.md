@@ -5,7 +5,7 @@ description: Hosts a selected folder so you can use local files in your theme. H
 download: https://github.com/Inve1951/BetterDiscordStuff/blob/master/coffee/localFileServer.plugin.coffee
 github_profile_url: https://github.com/Inve1951/
 github_source_url: https://github.com/Inve1951/BetterDiscordStuff/blob/master/coffee/localFileServer.plugin.coffee
-support: https://github.com/Inve1951/BetterDiscordStuff/issues
+github_issue_url: https://github.com/Inve1951/BetterDiscordStuff/issues
 status: Updated
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 39

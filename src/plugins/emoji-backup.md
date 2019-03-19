@@ -8,7 +8,7 @@ github_source_url: https://github.com/Ratismal/emoji-backup
 npm_profile_url: https://www.npmjs.com/~ratismal
 npm_source_url: https://www.npmjs.com/package/di-emoji-backup
 npm_i: di-emoji-backup
-support: https://github.com/Ratismal/emoji-backup/issues
+github_issue_url: https://github.com/Ratismal/emoji-backup/issues
 software: [DiscordInjections]
 status:
 ghcommentid: # DON'T CHANGE

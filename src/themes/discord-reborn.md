@@ -5,7 +5,7 @@ description:
   A nice sleek transparent theme.
 download: https://github.com/MrRobotjs/Discord-Reborn
 github_profile_url: https://github.com/MrRobotjs/
-support: https://github.com/MrRobotjs/Discord-Reborn/issues/
+github_issue_url: https://github.com/MrRobotjs/Discord-Reborn/issues/
 discord_server: https://discord.gg/D4cAkXX
 demo: https://cdn.jsdelivr.net/gh/0mniscient/Discord-Themes@master/Themes/Discord%20Reborn.theme.css
 thumbnail: https://i.imgur.com/gnINgso.jpg

@@ -5,7 +5,7 @@ description: Adds an extra section to the friends list where you can add your mo
 download: https://github.com/Curtis-D/VIPs
 github_profile_url: https://github.com/Curtis-D
 github_source_url: https://github.com/Curtis-D/VIPs
-support: https://github.com/Curtis-D/VIPs/issues
+github_issue_url: https://github.com/Curtis-D/VIPs/issues
 software: [BandagedBD, BetterDiscord]
 images:
   - name: VIPs Preview

@@ -5,7 +5,7 @@ description: Records all sent messages, message edits and message deletions in t
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/MessageLogger.plugin.js
 github_profile_url: https://github.com/Metalloriff/
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/MessageLogger.plugin.js
-support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+github_issue_url: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discord.gg/yNqzuJa
 status: Updated
 software: [BandagedBD,BetterDiscord]

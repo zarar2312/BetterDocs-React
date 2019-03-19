@@ -5,7 +5,7 @@ description: Changes the Server List to a gridlike container to allow servers to
 download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Themes/ServerColumns/ServerColumns.theme.css
 github_profile_url: https://github.com/mwittrien/
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Themes/ServerColumns
-support: https://github.com/mwittrien/BetterDiscordAddons/issues/
+github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: https://discordapp.com/invite/Z7PBux5
 demo: https://rawcdn.githack.com/mwittrien/BetterDiscordAddons/0fe60032a18094193b6e9a6e90e9744293c57f3f/Themes/ServerColumns/ServerColumns.theme.css
 style: dark

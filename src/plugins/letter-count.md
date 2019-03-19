@@ -5,7 +5,7 @@ description: A simple character counter plugin made for Powercord that displays 
 download: https://github.com/Nevvulo/lettercount
 github_profile_url: https://github.com/Nevvulo/
 github_source_url: https://github.com/Nevvulo/lettercount
-support: https://github.com/Nevvulo/lettercount/issues
+github_issue_url: https://github.com/Nevvulo/lettercount/issues
 discord_server:
 software: [PowerCord]
 thumbnail:

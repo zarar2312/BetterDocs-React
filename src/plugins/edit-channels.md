@@ -5,7 +5,7 @@ description: Adds two options on your channel context menu.
 download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/EditChannels/EditChannels.plugin.js
 github_profile_url: https://github.com/mwittrien/
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/EditChannels
-support: https://github.com/mwittrien/BetterDiscordAddons/issues/
+github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: https://discordapp.com/invite/Z7PBux5
 software: [BandagedBD,BetterDiscord]
 status: Updated

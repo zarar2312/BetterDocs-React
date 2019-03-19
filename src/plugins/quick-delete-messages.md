@@ -5,7 +5,7 @@ description: Hold Delete and click a message to delete it.
 download: https://github.com/Inve1951/BetterDiscordStuff/blob/master/coffee/QuickDeleteMessages.plugin.coffee
 github_profile_url: https://github.com/Inve1951/
 github_source_url: https://github.com/Inve1951/BetterDiscordStuff/blob/master/coffee/QuickDeleteMessages.plugin.coffee
-support: https://github.com/Inve1951/BetterDiscordStuff/issues
+github_issue_url: https://github.com/Inve1951/BetterDiscordStuff/issues
 status: Updated
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 39

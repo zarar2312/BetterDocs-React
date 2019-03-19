@@ -5,7 +5,7 @@ description: So, this theme adds more animations. It's changed font... and backr
 download: 'https://github.com/IpyZ/discord-theme-space-eye-/blob/master/space-eye.theme.css'
 github_profile_url: 'https://github.com/IpyZ'
 github_source_url: 'https://github.com/IpyZ/discord-theme-space-eye-/blob/master/space-eye.theme.css'
-support: 'https://github.com/IpyZ/discord-theme-space-eye-/issues/'
+github_issue_url: 'https://github.com/IpyZ/discord-theme-space-eye-/issues/'
 discord_server: 'http://discord.gg/fjvwb95'
 demo: 'https://rawcdn.githack.com/IpyZ/discord-theme-space-eye-/d81fb4be122def770a4e8fbfc3975055e0686088/space-eye.theme.css'
 style: dark

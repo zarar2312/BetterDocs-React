@@ -5,7 +5,7 @@ description: A variabled theme that lets you edit what color the background is a
 download: 'https://github.com/Mixter213/Discord-Themes/blob/master/ChilledCyan.theme.css'
 github_profile_url: 'https://github.com/Mixter213/'
 github_source_url: 'https://github.com/Mixter213/Discord-Themes/blob/master/ChilledCyan.theme.css'
-support: 'https://github.com/Mixter213/Discord-Themes/issues'
+github_issue_url: 'https://github.com/Mixter213/Discord-Themes/issues'
 demo: 'https://cdn.rawgit.com/Mixter213/Discord-Themes/master/ChilledCyan.theme.css'
 thumbnail: https://i.imgur.com/ufitvYu.png
 previews: [https://i.imgur.com/ufitvYu.png]

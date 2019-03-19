@@ -5,7 +5,7 @@ description: Automatically plays avatars, GIFs and GIFVs. (Can be individually t
 download: https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/AutoPlayGifs/AutoPlayGifs.plugin.js
 github_profile_url: 'https://github.com/rauenzi/'
 github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/AutoPlayGifs
-support: https://github.com/rauenzi/BetterDiscordAddons/issues/
+github_issue_url: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: 'https://discordapp.com/invite/cdzD9wF'
 software: [BandagedBD, BetterDiscord]
 dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]

@@ -5,7 +5,7 @@ description: A transparent theme with the background image being based on Boku N
 download: https://github.com/DevilsLynAvenged/DevilsLynAvenged/blob/master/Theme_Group_2/BokuNoHeroAcademia.theme.css
 github_profile_url: https://github.com/DevilsLynAvenged/
 github_source_url: https://github.com/DevilsLynAvenged/DevilsLynAvenged/blob/master/Theme_Group_2/BokuNoHeroAcademia.theme.css
-support: https://github.com/DevilsLynAvenged/DevilsLynAvenged/issues
+github_issue_url: https://github.com/DevilsLynAvenged/DevilsLynAvenged/issues
 discord_server: https://discord.gg/CZCbtRq
 demo: https://rawcdn.githack.com/DevilsLynAvenged/DevilsLynAvenged/a52a7fe6798ccccf2c496e8cb67194fae22a093b/Theme_Group_2/BokuNoHeroAcademia.theme.css
 thumbnail: https://i.imgur.com/2QBtU4e.jpg

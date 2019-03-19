@@ -5,7 +5,7 @@ description: Does what it says on the tin. Removes the blocked messages button.
 download: 'https://github.com/jakuski/ed_plugins/blob/master/HideBlockedMessages/HideBlockedMessages.js'
 github_profile_url: 'https://github.com/jakuski/'
 github_source_url: https://github.com/jakuski/ed_plugins/tree/master/HideBlockedMessages
-support: 'https://github.com/jakuski/ed_plugins/issues'
+github_issue_url: 'https://github.com/jakuski/ed_plugins/issues'
 discord_server: 'https://discord.gg/na4WZpY'
 auto: true
 software: [EnhancedDiscord]

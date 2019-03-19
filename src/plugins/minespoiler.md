@@ -5,7 +5,7 @@ description: "Send a game of minesweeper using spoilers. Write a message in the 
 download: https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/Minespoiler/Minespoiler.plugin.js
 github_profile_url: https://github.com/l0c4lh057/
 github_source_url: https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/Minespoiler/Minespoiler.plugin.js
-support: https://github.com/l0c4lh057/Minespoiler/issues
+github_issue_url: https://github.com/l0c4lh057/Minespoiler/issues
 discord_server: https://l0c4lh057.github.io/discord.html
 software: [BandagedBD,BetterDiscord]
 thumbnail: 

@@ -20,9 +20,11 @@ I promise it doesn't take long :)
   author: {Author Name}
   description: A SHORT Description
   download:
+  maintainer_name:
+  contributor_name:
   github_profile_url: https://github.com/{Author Name}/
   github_source_url:
-  support:
+  github_issue_url:
   discord_server:
   demo: https://raw.githack.com
   thumbnail:
@@ -43,12 +45,14 @@ I promise it doesn't take long :)
 Here's is some helpful information to inform you what each field does.
   - **title** - The name of your theme. `[REQUIRED]`
   - **author** - The name of the author of the theme. `[REQUIRED]`
+  - **maintainer_name** - The name of the current maintainer. **only use if it's different from the original developer**. `[OPTIONAL]`
+  - **contributor_name** - The name of the person that contributed to this project in any way, shape or form. You can have multiple contributors by using an array. Ex. `[name,name]` `[OPTIONAL]`
   - **description** - Short paragraph describing the content and/or purpose of the theme that will appear in the permalink of your page and other places on the site. `[REQUIRED]`
   - **download** - The direct link to the file to be downloaded. This can be the direct link to the file on a open-source website like [Github](https://github.com/). `[REQUIRED]`
   - **github\_profile\_url** - The link to your [Github](https://github.com/) profile.`[OPTIONAL]`
   >You can use **gitlab\_profile\_url** or **npm\_profile\_url** instead (or all) and same goes for the source url
   - **github\_source\_url** - For open-source themes, this URL points to the repo that powers the theme `[OPTIONAL]`
-  - **support** - A link to allow people to get support. (In most cases it should be the [Github issue](https://guides.github.com/features/issues/) url) `[OPTIONAL]`
+  - **github\_issue\_url** - A link to allow people to get support. (In most cases it should be the [Github issue](https://guides.github.com/features/issues/) url) `[OPTIONAL]`
   - **discord\_server** - A Discord server invite to allow people to get support or give feedback for the theme. `[OPTIONAL]`
   - **demo** - This is a direct url to the file so the [demo](https://betterdocs.netlify.com/demo/dark.html?theme=INSERT-URL-HERE) can work. For Github it need's to be the **raw** url but to fix the MIME type issue you will need to use [githack](https://raw.githack.com) for the url instead (or https://www.jsdelivr.com/?docs=gh). `[OPTIONAL]`
   - **thumbnail** - A direct link to an image that will be the thumbnail and shown on the [themes page](https://betterdocs.us/themes/). (16:9) `[REQUIRED]`

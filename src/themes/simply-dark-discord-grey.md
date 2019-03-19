@@ -5,7 +5,7 @@ description: Makes Discord sharp and simple. A very grey theme.
 download: https://github.com/Gibbu/BetterDiscord-Themes/blob/master/SimplyDarkDiscord/SimplyDarkDiscord-Grey.theme.css
 github_profile_url: 'https://github.com/Gibbu/'
 github_source_url: https://github.com/Gibbu/BetterDiscord-Themes/blob/master/SimplyDarkDiscord/SimplyDarkDiscord-Grey.theme.css
-support: 'https://github.com/Gibbu/BetterDiscord-Themes/issues'
+github_issue_url: 'https://github.com/Gibbu/BetterDiscord-Themes/issues'
 demo: https://rawcdn.githack.com/Gibbu/BetterDiscord-Themes/782c9216ce31b6f65767adc9cfbc6bb0200cc372/SimplyDarkDiscord/SimplyDarkDiscord-Grey.theme.css
 thumbnail: 'https://i.imgur.com/xl2s4Oo.png'
 previews: [https://i.imgur.com/xl2s4Oo.png]

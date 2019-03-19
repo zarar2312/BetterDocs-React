@@ -5,7 +5,7 @@ description: Completely (or partially) remove BD from your system.
 download: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/BDBGone.plugin.js
 github_profile_url: https://github.com/qwerasd205/
 github_source_url: https://github.com/qwerasd205/qwerasd205.github.io/blob/master/BDBGone.plugin.js
-support: https://github.com/qwerasd205/qwerasd205.github.io/issues
+github_issue_url: https://github.com/qwerasd205/qwerasd205.github.io/issues
 thumbnail: https://i.imgur.com/FYIiYMg.png
 status: Updated
 software: [BandagedBD, BetterDiscord]

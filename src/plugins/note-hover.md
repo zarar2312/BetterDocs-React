@@ -10,7 +10,7 @@ gitlab_source_url:
 npm_profile_url: 'https://www.npmjs.com/~ratismal'
 npm_source_url: 'https://www.npmjs.com/package/di-note-hover'
 npm_i: di-note-hover
-support: 'https://www.npmjs.com/advisories/report?package=di-note-hover'
+github_issue_url: 'https://www.npmjs.com/advisories/report?package=di-note-hover'
 discord_server:
 software: [DiscordInjections]
 status:

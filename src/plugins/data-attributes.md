@@ -5,7 +5,7 @@ description: Powercord plugin that adds data attributes to various components
 download: https://github.com/intrnl/pc-dataAttributes
 github_profile_url: https://github.com/intrnl/
 github_source_url: https://github.com/intrnl/pc-dataAttributes
-support: https://github.com/intrnl/pc-dataAttributes/issues
+github_issue_url: https://github.com/intrnl/pc-dataAttributes/issues
 discord_server:
 tags: [developer, themes, css]
 software: [PowerCord]

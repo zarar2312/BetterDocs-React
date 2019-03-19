@@ -6,7 +6,7 @@ description: Let's you change the default sounds with your own sounds. You can a
 download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/NotificationSounds/NotificationSounds.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/NotificationSounds
-support: 'https://discord.gg/Z7PBux5'
+github_issue_url: 'https://discord.gg/Z7PBux5'
 discord_server: https://github.com/mwittrien/BetterDiscordAddons/issues/
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 49

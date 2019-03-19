@@ -5,7 +5,7 @@ description: Plugin for Powercord that solves the issue of ghost pings by saving
 download: https://github.com/Nevvulo/ghostBuster
 github_profile_url: https://github.com/Nevvulo/
 github_source_url: https://github.com/Nevvulo/ghostBuster
-support: https://github.com/Nevvulo/ghostBuster/issues
+github_issue_url: https://github.com/Nevvulo/ghostBuster/issues
 discord_server:
 software: [PowerCord]
 thumbnail:

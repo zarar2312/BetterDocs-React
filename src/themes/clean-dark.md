@@ -5,7 +5,7 @@ description: Simple & clean dark theme. Basic enhancements. User settings for va
 download: 'https://github.com/satoru8/CleanDark'
 github_profile_url: 'https://github.com/satoru8/'
 github_source_url: 'https://github.com/satoru8/CleanDark'
-support: https://github.com/satoru8/CleanDark/issues/
+github_issue_url: https://github.com/satoru8/CleanDark/issues/
 discord_server: http://discord.gg/fjvwb95
 demo: 'https://cdn.rawgit.com/satoru8/CleanDark/master/CleanDark.theme.css'
 thumbnail: https://i.imgur.com/nzwGICE.png

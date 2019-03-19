@@ -5,7 +5,7 @@ description: A cozy dark theme with blurred elements and gradients.
 download: https://github.com/rauenzi/Nox/blob/master/release/Nox.theme.css
 github_profile_url: https://github.com/rauenzi/
 github_source_url: https://github.com/rauenzi/Nox
-support: https://github.com/rauenzi/Nox/issues
+github_issue_url: https://github.com/rauenzi/Nox/issues
 discord_server: https://discordapp.com/invite/cdzD9wF
 demo: https://rawcdn.githack.com/rauenzi/Nox/374ec0b7fac93792c71ba1069584daaeb9311862/release/Nox.theme.css
 thumbnail: https://i.imgur.com/MllZoff.png

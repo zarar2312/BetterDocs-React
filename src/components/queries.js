@@ -36,7 +36,7 @@ class Features extends React.Component {
               maintainer_url
               contributor_name
               contributor_url
-              support
+              github_issue_url
               discord_server
               demo
               thumbnail
@@ -75,7 +75,7 @@ class Features extends React.Component {
               gitlab_source_url
               npm_profile_url
               npm_source_url
-              support
+              github_issue_url
               discord_server
               demo
               thumbnail
@@ -111,7 +111,7 @@ class Features extends React.Component {
             gitlab_source_url
             npm_profile_url
             npm_source_url
-            support
+            github_issue_url
             discord_server
             demo
             thumbnail
@@ -153,7 +153,7 @@ class Features extends React.Component {
                 maintainer_url
                 contributor_name
                 contributor_url
-                support
+                github_issue_url
                 discord_server
                 thumbnail
                 previews
@@ -197,7 +197,7 @@ class Features extends React.Component {
                 maintainer_url
                 contributor_name
                 contributor_url
-                support
+                github_issue_url
                 software
                 discord_server
                 thumbnail

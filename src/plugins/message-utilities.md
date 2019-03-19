@@ -5,7 +5,7 @@ description: Offers a number of useful message options. Remap the keybindings in
 download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/MessageUtilities/MessageUtilities.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_Source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/MessageUtilities
-support: https://github.com/mwittrien/BetterDiscordAddons/issues/
+github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
 auto: true

@@ -79,7 +79,7 @@ const Plugins = (props) => {
               <Alerts
               status={node.frontmatter.status}
               title={node.frontmatter.title}
-              issue={node.frontmatter.support}
+              issue={node.frontmatter.github_issue_url}
               />
               <SubHeader>Does this still work?</SubHeader>
               <ReportButtons>
@@ -173,8 +173,8 @@ const Plugins = (props) => {
                     npm i {node.frontmatter.npm_i}</span>
                 </NpmCopy>
                 }
-                {node.frontmatter.support &&
-                <Report href={node.frontmatter.support + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} rel="noopener noreferrer" target="_blank">
+                {node.frontmatter.github_issue_url &&
+                <Report href={node.frontmatter.github_issue_url + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} rel="noopener noreferrer" target="_blank">
                   Report an issue
                 </Report>
                 }

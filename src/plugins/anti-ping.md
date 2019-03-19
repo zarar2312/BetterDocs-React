@@ -5,7 +5,7 @@ description: Hides ping icon for servers which you have muted & suppressed @ever
 download: 'https://github.com/joe27g/EnhancedDiscord-Plugins/blob/master/anti_ping.js'
 github_profile_url: 'https://github.com/joe27g/'
 github_source_url: https://github.com/joe27g/EnhancedDiscord-Plugins/blob/master/anti_ping.js
-support: 'https://github.com/joe27g/EnhancedDiscord-Plugins/issues'
+github_issue_url: 'https://github.com/joe27g/EnhancedDiscord-Plugins/issues'
 discord_server: 'https://discord.gg/XAvh9tq'
 auto: true
 status: Updated

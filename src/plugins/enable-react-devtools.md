@@ -5,7 +5,7 @@ description: Automatically loads the React Devtools for you. Big thanks to Natsu
 download: https://github.com/Inve1951/BetterDiscordStuff/blob/master/plugins/enableReactDevtools.plugin.js
 github_profile_url: https://github.com/Inve1951/
 github_source_url: https://github.com/Inve1951/BetterDiscordStuff/blob/master/plugins/enableReactDevtools.plugin.js
-support: https://github.com/Inve1951/BetterDiscordStuff/issues
+github_issue_url: https://github.com/Inve1951/BetterDiscordStuff/issues
 status: Updated
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 39

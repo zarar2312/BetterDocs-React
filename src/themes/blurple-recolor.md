@@ -5,7 +5,7 @@ description: Replaces discords native blurple with your own color, change color 
 download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Themes/BlurpleRecolor/BlurpleRecolor.theme.css
 github_profile_url: https://github.com/mwittrien/
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Themes/BlurpleRecolor/BlurpleRecolor.theme.css
-support: https://github.com/mwittrien/BetterDiscordAddons/issues
+github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/issues
 discord_server: https://discordapp.com/invite/Z7PBux5
 demo: https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/master/Themes/BlurpleRecolor/BlurpleRecolor.theme.css
 thumbnail:

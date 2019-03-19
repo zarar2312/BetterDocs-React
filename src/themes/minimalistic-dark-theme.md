@@ -5,7 +5,7 @@ description: This is a theme for people who like dark easy to the eye versions o
 download: https://github.com/Ruben7173/Ruben7173.github.io/blob/master/BetterDiscord-Themes/minimalistic-dark-theme/minimalist-dark.theme.css
 github_profile_url: 'https://github.com/Ruben7173/'
 github_source_url: https://github.com/Ruben7173/Ruben7173.github.io/blob/master/BetterDiscord-Themes/minimalistic-dark-theme/minimalist-dark.theme.css
-support: 'https://github.com/Ruben7173/Ruben7173.github.io/issues'
+github_issue_url: 'https://github.com/Ruben7173/Ruben7173.github.io/issues'
 demo: https://rawcdn.githack.com/Ruben7173/Ruben7173.github.io/master/BetterDiscord-Themes/minimalistic-dark-theme/code.css
 thumbnail: https://i.imgur.com/jwx3qYH.png
 previews: [https://i.imgur.com/jwx3qYH.png]

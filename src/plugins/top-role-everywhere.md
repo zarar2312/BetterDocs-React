@@ -5,7 +5,7 @@ description: Adds the highest role of a user as a tag.
 download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/TopRoleEverywhere/TopRoleEverywhere.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/TopRoleEverywhere
-support: https://github.com/mwittrien/BetterDiscordAddons/issues/
+github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 63

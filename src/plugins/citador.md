@@ -5,7 +5,7 @@ author: nirewen
 download: 'https://github.com/nirewen/Citador'
 github_profile_url: 'https://github.com/nirewen/'
 github_source_url: 'https://github.com/nirewen/Citador'
-support: https://github.com/nirewen/Citador/issues/
+github_issue_url: https://github.com/nirewen/Citador/issues/
 discord_server: 'https://discord.gg/tQrdqKG'
 status: Updated
 software: [BandagedBD, BetterDiscord]

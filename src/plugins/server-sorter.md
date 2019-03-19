@@ -5,7 +5,7 @@ description: Adds the ability to do some basic sorting of your servers.
 download: https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/ServerSorter/ServerSorter.plugin.js
 github_profile_url: https://github.com/rauenzi/
 github_source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/ServerSorter
-support: https://github.com/rauenzi/BetterDiscordAddons/issues/
+github_issue_url: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: https://discordapp.com/invite/cdzD9wF
 thumbnail:
 

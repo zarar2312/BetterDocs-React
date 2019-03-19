@@ -5,7 +5,7 @@ description: View raw contents of a message and easily copy it.
 download: https://github.com/jakuski/ed_plugins/blob/master/ViewRaw/ViewRaw.js
 github_profile_url: https://github.com/jakuski/
 github_source_url: https://github.com/jakuski/ed_plugins/tree/master/ViewRaw
-support: https://github.com/jakuski/ed_plugins/issues
+github_issue_url: https://github.com/jakuski/ed_plugins/issues
 discord_server:
 software: [EnhancedDiscord]
 thumbnail: https://i.imgur.com/vfHLeyL.gif

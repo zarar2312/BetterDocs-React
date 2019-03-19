@@ -5,7 +5,7 @@ description: Allows you to view server icons, user avatars, and emotes in fullsc
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AvatarIconViewer.plugin.js
 github_profile_url: https://github.com/Metalloriff/
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AvatarIconViewer.plugin.js
-support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+github_issue_url: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discord.gg/yNqzuJa
 software: [BandagedBD, BetterDiscord]
 images:

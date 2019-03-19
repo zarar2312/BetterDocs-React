@@ -5,7 +5,7 @@ description: Allows you to popout DMs/Servers into a new window to view more tha
 download: 'https://github.com/Curtis-D/ChannelPopouts'
 github_profile_url: 'https://github.com/Curtis-D/'
 github_source_url: https://github.com/Curtis-D/ChannelPopouts
-support: 'https://github.com/Curtis-D/ChannelPopouts/issues'
+github_issue_url: 'https://github.com/Curtis-D/ChannelPopouts/issues'
 software: [BandagedBD, BetterDiscord]
 thumbnail: 'https://i.imgur.com/UlPwOJl.png'
 status: Updated

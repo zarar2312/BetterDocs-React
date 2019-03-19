@@ -76,7 +76,7 @@ collections:
         required: false
 
       - label: "Support URL"
-        name: "support"
+        name: "github_issue_url"
         widget: "string"
 
       - label: "Discord Server Invite URL"
@@ -210,7 +210,7 @@ collections:
         required: false
 
       - label: "Support URL"
-        name: "support"
+        name: "github_issue_url"
         widget: "string"
 
       - label: "Discord Server Invite URL"

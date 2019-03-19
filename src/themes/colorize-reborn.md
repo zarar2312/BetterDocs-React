@@ -5,7 +5,7 @@ description: A highly customizable theme that let's you change it's background o
 download: https://github.com/codedotspectra/themes/blob/master/colorize/colorize_reborn.theme.css
 github_profile_url: 'https://github.com/codedotspectra/'
 github_source_url: 'https://github.com/codedotspectra/themes/tree/master/colorize'
-support: 'https://github.com/codedotspectra/themes/issues'
+github_issue_url: 'https://github.com/codedotspectra/themes/issues'
 discord_server: 'http://discord.gg/nfggDZz'
 demo: https://rawcdn.githack.com/codedotspectra/themes/93a610f5a7969cd33c286a68816ab428f2e2b1a3/colorize/colorize_reborn.theme.css
 thumbnail: 'https://i.imgur.com/wIjnxPA.jpg'

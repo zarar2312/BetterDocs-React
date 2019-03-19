@@ -5,7 +5,7 @@ description: Allows you to push Custom RPC to your profile without additional pr
 download: 'https://github.com/jakuski/ed_plugins/blob/master/CustomRPC/CustomRPC.js'
 github_profile_url: 'https://github.com/jakuski/'
 github_source_url: https://github.com/jakuski/ed_plugins/tree/master/CustomRPC
-support: 'https://github.com/jakuski/ed_plugins/issues'
+github_issue_url: 'https://github.com/jakuski/ed_plugins/issues'
 discord_server: 'https://discord.gg/na4WZpY'
 auto: true
 status: Updated

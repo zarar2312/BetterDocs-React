@@ -5,7 +5,7 @@ description: Quick Open Link is a BetterDiscord plugin that allows you to open i
 download: https://github.com/XFoxPrower/Quick-Open-Link
 github_profile_url: https://github.com/XFoxPrower/
 github_source_url: https://github.com/XFoxPrower/Quick-Open-Link
-support: https://github.com/XFoxPrower/Quick-Open-Link/issues
+github_issue_url: https://github.com/XFoxPrower/Quick-Open-Link/issues
 status: Deprecated
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 53

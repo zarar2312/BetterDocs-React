@@ -5,7 +5,7 @@ description: Allows you to blacklist and favorite emojis through the context men
 download: https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/EmojiUtilities/EmojiUtilities.plugin.js
 github_profile_url: https://github.com/rauenzi/
 github_Source_url: https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/EmojiUtilities
-support: https://github.com/rauenzi/BetterDiscordAddons/issues/
+github_issue_url: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: https://discordapp.com/invite/cdzD9wF
 software: [BandagedBD,BetterDiscord]
 dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]

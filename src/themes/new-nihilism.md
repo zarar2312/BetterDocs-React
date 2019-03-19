@@ -5,7 +5,7 @@ description: A dark and compact theme, designed for use with Discord's dark them
 download: https://github.com/ObserverOfTime/DiscordThemes/tree/master/NewNihilism
 github_profile_url: https://github.com/NewNihilism/
 github_source_url: https://github.com/ObserverOfTime/DiscordThemes/tree/master/NewNihilism
-support: https://github.com/ObserverOfTime/DiscordThemes/issues
+github_issue_url: https://github.com/ObserverOfTime/DiscordThemes/issues
 demo: https://cdn.jsdelivr.net/gh/ObserverOfTime/DiscordThemes@master/NewNihilism/dist/NewNihilism.theme.css
 thumbnail: https://i.imgur.com/fWoXCXm.png
 previews: [https://i.imgur.com/fWoXCXm.png]

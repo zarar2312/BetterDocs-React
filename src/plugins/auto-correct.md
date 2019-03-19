@@ -5,7 +5,7 @@ description: Automatically replaces misspelled words with the first correction, 
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AutoCorrect.plugin.js
 github_profile_url: 'https://github.com/Metalloriff'
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AutoCorrect.plugin.js
-support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+github_issue_url: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: 'https://discord.gg/yNqzuJa'
 auto: true
 status: Deprecated

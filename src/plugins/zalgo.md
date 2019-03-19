@@ -5,7 +5,7 @@ description: Lets you apply a sort of visual 'corruption' to your text, like a m
 download: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Zalgo.plugin.js
 github_profile_url: 'https://github.com/planetarian/'
 github_source_url: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Zalgo.plugin.js
-support: 'https://github.com/planetarian/BetterDiscordPlugins/issues'
+github_issue_url: 'https://github.com/planetarian/BetterDiscordPlugins/issues'
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 90
 layout: product

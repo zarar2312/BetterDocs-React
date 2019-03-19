@@ -5,7 +5,7 @@ description: This adds an `Activate on Steam` option to the context menu wheneve
 download: 'https://github.com/jakuski/ed_plugins/blob/master/ActivateOnSteam/ActivateOnSteam.js'
 github_profile_url: 'https://github.com/jakuski/'
 github_source_url: https://github.com/jakuski/ed_plugins/tree/master/ActivateOnSteam
-support: 'https://github.com/jakuski/ed_plugins/issues'
+github_issue_url: 'https://github.com/jakuski/ed_plugins/issues'
 discord_server: 'https://discord.gg/na4WZpY'
 auto: true
 status: Updated

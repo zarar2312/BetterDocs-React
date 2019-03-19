@@ -5,7 +5,7 @@ description: Allows you to view any users permissions (roles) through the contex
 download: https://github.com/21Joakim/pc-permissionViewer/tree/master/jockie-permissionViewer
 github_profile_url: https://github.com/21Joakim/
 github_source_url:
-support: https://github.com/21Joakim/pc-permissionViewer/issues
+github_issue_url: https://github.com/21Joakim/pc-permissionViewer/issues
 discord_server: https://discord.gg/INVITE
 tags:
 software: [PowerCord]

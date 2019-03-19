@@ -6,7 +6,7 @@ description:
 download: https://github.com/CapnKitten/Spotify-Discord
 github_profile_url: https://github.com/CapnKitten/
 github_source_url: https://github.com/CapnKitten/Spotify-Discord
-support: https://github.com/CapnKitten/Spotify-Discord/issues
+github_issue_url: https://github.com/CapnKitten/Spotify-Discord/issues
 demo: https://cdn.jsdelivr.net/gh/CapnKitten/Spotify-Discord@master/Spotify-Discord.theme.css
 thumbnail: https://i.imgur.com/rGmmodi.png
 previews: [https://i.imgur.com/rGmmodi.png]

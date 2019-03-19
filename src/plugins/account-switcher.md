@@ -7,7 +7,7 @@ software: [BandagedBD, BetterDiscord]
 discord_server: https://l0c4lh057.github.io/discord.html
 github_source: https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/AccountSwitcher/AccountSwitcher.plugin.js
 download: https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/AccountSwitcher/AccountSwitcher.plugin.js
-support: https://github.com/l0c4lh057/BetterDiscordStuff/issues
+github_issue_url: https://github.com/l0c4lh057/BetterDiscordStuff/issues
 status: Updated
 auto: true
 ---

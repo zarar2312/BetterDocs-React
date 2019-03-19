@@ -6,7 +6,7 @@ description:
 download: https://github.com/archnemeziz/Discord
 github_profile_url: https://github.com/archnemeziz
 github_source_url: https://github.com/archnemeziz/Discord
-support: https://github.com/archnemeziz/Discord/issues
+github_issue_url: https://github.com/archnemeziz/Discord/issues
 demo: https://cdn.jsdelivr.net/gh/archnemeziz/Discord@master/ElegantBlue.theme.css
 thumbnail: https://i.imgur.com/IAdfuzb.png
 previews: [https://i.imgur.com/IAdfuzb.png]

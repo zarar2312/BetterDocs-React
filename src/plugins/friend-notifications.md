@@ -5,7 +5,7 @@ description: Notifies you when a friend either logs in or out. Click the Online 
 download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/FriendNotifications/FriendNotifications.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/FriendNotifications
-support: https://github.com/mwittrien/BetterDiscordAddons/issues/
+github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: https://discord.gg/Z7PBux5
 status: Updated
 software: [BandagedBD, BetterDiscord]

@@ -8,7 +8,7 @@ github_source_url: https://github.com/SnazzahDI/FakeConnections
 npm_profile_url: https://www.npmjs.com/~snazzah
 npm_source_url: https://www.npmjs.com/package/fakeconnections
 npm_i: fakeconnections
-support: https://github.com/SnazzahDI/FakeConnections/issues
+github_issue_url: https://github.com/SnazzahDI/FakeConnections/issues
 discord_server:
 software: [DiscordInjections]
 status:

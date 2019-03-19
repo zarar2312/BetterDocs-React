@@ -5,7 +5,7 @@ description: Adds a 'View Relationships' button to the guild dropdown menu that 
 download: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/ViewGuildRelationships.plugin.js
 github_profile_url: 'https://github.com/Metalloriff'
 github_source_url: https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/ViewGuildRelationships.plugin.js
-support: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
+github_issue_url: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: 'https://discord.gg/yNqzuJa'
 auto: true
 status:

@@ -5,7 +5,7 @@ description: Display the name, size and dimensions of uploaded images (does not 
 download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/ShowImageDetails/ShowImageDetails.plugin.js
 github_profile_url: https://github.com/mwittrien/
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ShowImageDetails
-support: https://github.com/mwittrien/BetterDiscordAddons/issues
+github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/issues
 discord_server: https://discord.gg/Z7PBux5
 software: [BandagedBD,BetterDiscord]
 thumbnail:

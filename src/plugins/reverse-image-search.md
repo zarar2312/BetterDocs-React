@@ -9,7 +9,7 @@ description:
 download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/ReverseImageSearch/ReverseImageSearch.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ReverseImageSearch
-support: https://github.com/mwittrien/BetterDiscordAddons/
+github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/
 discord_server: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
 ghcommentid: 57

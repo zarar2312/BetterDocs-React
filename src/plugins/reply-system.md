@@ -5,7 +5,7 @@ description: Adds a native-esque reply button with preview. (Similar idea to Rep
 download: 'https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/ReplySystem/ReplySystem.plugin.js'
 github_profile_url: 'https://github.com/rauenzi'
 github_source_url: 'https://github.com/rauenzi/BetterDiscordAddons/tree/master/Plugins/ReplySystem'
-support: https://github.com/rauenzi/BetterDiscordAddons/issues/
+github_issue_url: https://github.com/rauenzi/BetterDiscordAddons/issues/
 discord_server: 'https://discordapp.com/invite/cdzD9wF'
 status: Updated
 software: [BandagedBD, BetterDiscord]

@@ -8,7 +8,7 @@ github_source_url: https://github.com/Ratismal/custom-favorite-gif
 npm_profile_url: https://www.npmjs.com/~ratismal
 npm_source_url: https://www.npmjs.com/package/di-custom-favorite-gif
 npm_i: di-custom-favorite-gif
-support: https://github.com/Ratismal/custom-favorite-gif/issues
+github_issue_url: https://github.com/Ratismal/custom-favorite-gif/issues
 software: [DiscordInjections]
 status:
 ghcommentid: # DON'T CHANGE

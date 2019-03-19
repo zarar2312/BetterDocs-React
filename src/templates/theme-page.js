@@ -85,7 +85,7 @@ const Themes = (props) => {
         tags={themeList.group}
         auto={node.frontmatter.auto}
         demo={node.frontmatter.demo}
-        support={node.frontmatter.support}
+        github_issue_url={node.frontmatter.github_issue_url}
         style={node.frontmatter.style}
         />
         {previewList.edges.map(({ node }) => (
@@ -106,7 +106,7 @@ const Themes = (props) => {
               <Alerts
               status={node.frontmatter.status}
               title={node.frontmatter.title}
-              issue={node.frontmatter.support}
+              issue={node.frontmatter.github_issue_url}
               />
               <SubHeader>Does this still work?</SubHeader>
               <ReportButtons>
@@ -194,8 +194,8 @@ const Themes = (props) => {
                 {node.frontmatter.demo && 
                   <DemoBtn href={'https://betterdocs.us/preview/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"} target="blank" title={"Quick Preview of " + node.frontmatter.title }>Demo</DemoBtn>
                 }
-                {node.frontmatter.support &&
-                <Report href={node.frontmatter.support + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} rel="noopener noreferrer" target="_blank">
+                {node.frontmatter.github_issue_url &&
+                <Report href={node.frontmatter.github_issue_url + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} rel="noopener noreferrer" target="_blank">
                   Report an issue
                 </Report>
                 }
