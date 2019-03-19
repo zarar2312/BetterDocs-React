@@ -2,7 +2,7 @@
 title: Char Counter
 author: mwittrien
 description: Adds a character counter to your textarea.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/CharCounter
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/CharCounter/CharCounter.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_Source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/CharCounter
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

@@ -4,7 +4,7 @@ author: mwittrien
 description:
   Adds a spellcheck to all textareas. Select a word inside the textarea and
   rightclick it to add it to your dictionary.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/SpellCheck
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/SpellCheck/SpellCheck.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/SpellCheck
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

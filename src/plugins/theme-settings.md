@@ -2,7 +2,7 @@
 title: Theme Settings
 author: mwittrien
 description: Allows you to change Theme Variables within BetterDiscord.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ThemeSettings
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/ThemeSettings/ThemeSettings.plugin.js
 github_profile_url: https://github.com/mwittrien/
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ThemeSettings
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

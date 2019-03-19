@@ -1,10 +1,9 @@
 ---
 title: Notification Sounds
 author: mwittrien
-description:
-  Let's you change the default sounds with your own sounds. You can add your own
+description: Let's you change the default sounds with your own sounds. You can add your own
   sounds in the plugin settkngs either via file or url.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/NotificationSounds
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/NotificationSounds/NotificationSounds.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/NotificationSounds
 support: 'https://discord.gg/Z7PBux5'

@@ -2,7 +2,7 @@
 title: Show Hidden Channels
 author: mwittrien
 description: Displays all hidden channels that can't be accessed due to role restrictions in a new category.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ShowHiddenChannels
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/ShowHiddenChannels/ShowHiddenChannels.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ShowHiddenChannels
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

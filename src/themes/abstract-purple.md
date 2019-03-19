@@ -10,6 +10,10 @@ discord_server: https://discord.gg/5BtB3Tc
 demo: https://rawcdn.githack.com/xNightWulf/ThemesForBetterDiscord/da3ef0a4f798f28eb9fa8c8f1c236f46b5e8bddf/AbstractPurple.theme.css
 thumbnail: https://i.imgur.com/PRFXij4.jpg
 previews: [https://i.imgur.com/PRFXij4.jpg]
+maintainer_name: Maintainer Name
+maintainer_url: Placeholder
+contributor_name: [Contributor Name]
+contributor_url: Placeholder
 status: Updated
 auto: true
 tags: [transparent]

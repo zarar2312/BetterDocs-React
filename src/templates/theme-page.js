@@ -39,6 +39,7 @@ const Mydate = mydate('date');
 const Themes = (props) => {
   const themeList = props.data.listThemes;
   const previewList = props.data.previewsList;
+  const contributorList = props.data.contributorlist;
 
   return (
   <Layout>
@@ -144,7 +145,10 @@ const Themes = (props) => {
               <AreaFlex>
                 <ContributionArea
                 author={node.frontmatter.author}
-                maintainer={node.frontmatter.current_maintainer}
+                maintainer={node.frontmatter.maintainer_url}
+                maintainer_url={node.frontmatter.maintainer_url}
+                contributor={contributorList.group}
+                contributor_name={node.frontmatter.contributor_name}
                 title={node.frontmatter.title}
                 areaHeader="Contributors"
                 slug={node.fields.slug}
@@ -289,6 +293,13 @@ export const themesQuery = graphql`
         totalCount
       }
       ...themeDateFormatFragment
+    },
+    contributorlist: allMarkdownRemark(filter: {collection: {eq: "themes"} } sort: { fields: [frontmatter___title], order: ASC}) {
+      group(field: frontmatter___contributor_name) {
+        fieldValue
+        totalCount
+      }
+      ...themeFragment
     },
     previewsList:allMarkdownRemark(
       filter: { 

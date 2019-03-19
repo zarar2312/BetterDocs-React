@@ -32,6 +32,10 @@ class Features extends React.Component {
               gitlab_source_url
               npm_profile_url
               npm_source_url
+              maintainer_name
+              maintainer_url
+              contributor_name
+              contributor_url
               support
               discord_server
               demo

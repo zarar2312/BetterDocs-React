@@ -2,7 +2,7 @@
 title: Server Folders
 author: mwittrien
 description: Adds the feature to create folders to organize your servers.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ServerFolders
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/ServerFolders/ServerFolders.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ServerFolders
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

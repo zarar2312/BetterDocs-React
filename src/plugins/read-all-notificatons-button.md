@@ -2,7 +2,7 @@
 title: Read All Notificatons Button
 author: mwittrien
 description: Adds two options on your channel context menu.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/EditChannels
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/EditChannels/EditChannels.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_Source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/EditChannels
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

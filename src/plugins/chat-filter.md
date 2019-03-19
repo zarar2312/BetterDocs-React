@@ -2,7 +2,7 @@
 title: Chat Filter
 author: mwittrien
 description: Allows the user to censor words or block complete messages based on words in the chatwindow.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ChatFilter
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/ChatFilter/ChatFilter.plugin.js
 github_profile_url: https://github.com/mwittrien/
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ChatFilter
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

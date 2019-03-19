@@ -2,7 +2,7 @@
 title: Better Search Page
 author: mwittrien
 description: Adds some extra controls to the search results page.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/BetterSearchPage
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/BetterSearchPage/BetterSearchPage.plugin.js
 github_profile_url: https://github.com/mwittrien
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/BetterSearchPage
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

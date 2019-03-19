@@ -4,10 +4,6 @@ sub: Uploading a plugin is as easy as 1, 2, 3...uhh and maybe more.
 software: [BandagedBD,EnhancedDiscord,PowerCord,DiscordInjections,BetterDiscord]
 description: Want to publish your plugin to our Showcase? Follow these instructions slow & carefully to get your plugin featured for free!
 status: none
-maintainer_name: Placeholder
-maintainer_url: Placeholder
-contributor_name: Placeholder
-contributor_url: Placeholder
 ---
 # Publish your work
 Want to publish your plugin to our [Showcase](https://betterdocs.us/plugins/)? Follow these instructions slow & carefully.

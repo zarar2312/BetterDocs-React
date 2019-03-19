@@ -2,7 +2,7 @@
 title: Message Utilities
 author: mwittrien
 description: Offers a number of useful message options. Remap the keybindings in the settings.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/MessageUtilities
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/MessageUtilities/MessageUtilities.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_Source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/MessageUtilities
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

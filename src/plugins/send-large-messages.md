@@ -2,7 +2,7 @@
 title: Send Large Messages
 author: mwittrien
 description: Opens a popout when your message is too large, which allows you to automatically send the message in several smaller messages.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/SendLargeMessages
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/SendLargeMessages/SendLargeMessages.plugin.js
 github_profile_url: https://github.com/mwittrien
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/SendLargeMessages
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

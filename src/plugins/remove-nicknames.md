@@ -2,7 +2,7 @@
 title: Remove Nicknames
 author: mwittrien
 description: Replace all nicknames with the actual account names.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/RemoveNicknames
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/RemoveNicknames/RemoveNicknames.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/RemoveNicknames
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

@@ -2,7 +2,7 @@
 title: Image Gallery
 author: mwittrien
 description: Allows the user to browse through images sent inside the same message.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ImageGallery
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/ImageGallery/ImageGallery.plugin.js
 github_profile_url: https://github.com/mwittrien
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ImageGallery
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

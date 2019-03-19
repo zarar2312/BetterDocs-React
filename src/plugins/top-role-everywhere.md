@@ -2,7 +2,7 @@
 title: Top Role Everywhere
 author: mwittrien
 description: Adds the highest role of a user as a tag.
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/TopRoleEverywhere
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/TopRoleEverywhere/TopRoleEverywhere.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/TopRoleEverywhere
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/

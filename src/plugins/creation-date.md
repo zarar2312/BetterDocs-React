@@ -2,7 +2,7 @@
 title: Creation Date
 description: Displays the Creation Date of an Account in the UserPopout and UserModal.
 author: mwittrien
-download: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/CreationDate
+download: https://github.com/mwittrien/BetterDiscordAddons/blob/master/Plugins/CreationDate/CreationDate.plugin.js
 github_profile_url: 'https://github.com/mwittrien/'
 github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/CreationDate
 support: https://github.com/mwittrien/BetterDiscordAddons/issues/
