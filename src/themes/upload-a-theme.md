@@ -3,6 +3,8 @@ title: Upload a Theme
 sub: Uploading a theme is as easy as 1, 2, 3...uhh and maybe more.
 description: Want to publish your theme to our Showcase? Follow these instructions slow & carefully to get your theme featured for free!
 status: none
+maintainer_name: Placeholder
+contributor_name: Placeholder
 ---
 # Publish your work
 Want to publish your theme to our [Showcase](https://betterdocs.us/themes/)? Follow these instructions slow & carefully.
