@@ -13,7 +13,8 @@ npm_profile_url: ''
 npm_source_url: ''
 github_issue_url: 'https://github.com/codedotspectra/themes/issues'
 discord_server: 'http://discord.gg/nfggDZz'
-demo: 'https://rawcdn.githack.com/{Author}/{Repo}/master/'
+demo: >-
+  https://rawcdn.githack.com/codedotspectra/themes/229a4e7b89ad5f78dc068f49268b6396cfe67e64/discorddark/discorddark.theme.css
 tags:
   - dark
   - solid
@@ -25,6 +26,6 @@ auto: true
 status: Updated
 style: dark
 layout: product
-date: 2019-03-20T17:22:46.947Z
+date: 2019-03-20T17:28:00.000Z
 ---
 
