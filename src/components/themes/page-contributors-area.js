@@ -29,7 +29,7 @@ const themeContributors = ({author, maintainer, title, areaHeader, slug, contrib
                         <Data>{maintainer}</Data>
                     </Row>
                     }
-                    {contributor &&
+                    {contributor == !null &&
                     <>
                     {contributor.map(contributor_name => (
                     <Row>
