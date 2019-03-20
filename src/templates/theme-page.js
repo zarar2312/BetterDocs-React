@@ -294,7 +294,18 @@ export const themesQuery = graphql`
       }
       ...themeDateFormatFragment
     },
-    contributorlist: allMarkdownRemark(filter: {collection: {eq: "themes"} } sort: { fields: [frontmatter___title], order: ASC}) {
+    contributorlist:allMarkdownRemark(
+      filter: { 
+        collection: { 
+          eq: "themes" 
+        } 
+        fields: {
+          slug: {
+            eq: $slug
+          }
+        }
+      }
+      ) {
       group(field: frontmatter___contributor_name) {
         fieldValue
         totalCount
