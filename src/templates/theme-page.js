@@ -145,10 +145,8 @@ const Themes = (props) => {
               <AreaFlex>
                 <ContributionArea
                 author={node.frontmatter.author}
-                maintainer={node.frontmatter.maintainer_url}
-                maintainer_url={node.frontmatter.maintainer_url}
+                maintainer={node.frontmatter.maintainer_name}
                 contributor={contributorList.group}
-                contributor_name={node.frontmatter.contributor_name}
                 title={node.frontmatter.title}
                 areaHeader="Contributors"
                 slug={node.fields.slug}
