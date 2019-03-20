@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 import kebabCase from "lodash/kebabCase"
 
-const themeContributors = ({author, maintainer, title, areaHeader, slug, contributor, maintainer_url, contributor_url}) => (
+const themeContributors = ({author, maintainer, title, areaHeader, slug, contributor}) => (
     <Area>
         <GlobalStyle />
         <CardHeader>{areaHeader}</CardHeader>
@@ -34,11 +34,7 @@ const themeContributors = ({author, maintainer, title, areaHeader, slug, contrib
                     {contributor.map(contributor_name => (
                     <Row>
                         <Data>Contributor</Data>
-                                {contributor_url ?
-                                    <Data><a href={contributor_url} target="blank">{contributor_name.fieldValue}</a></Data>
-                                :
-                                    <Data>{contributor_name.fieldValue}</Data>
-                                }
+                        <Data>{contributor_name.fieldValue}</Data>
                     </Row>
                     ))}
                     </>
