@@ -76,7 +76,7 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
             </Title>
         </TitleContainer>
         {tags ?
-        <div>
+        <>
         <Description>
             <Text>{excerpt}</Text>
         </Description>
@@ -87,7 +87,7 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
             </Tag>
             ))}
         </Tags>
-        </div>
+        </>
         :
         <AltDescription>
             <Text>{excerpt}</Text>
