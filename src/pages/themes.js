@@ -571,6 +571,7 @@ const Container = styled.div`
         background-color: #fff;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         padding: 0.42rem 0.62rem;
         position: sticky;
         z-index: 3;
