@@ -88,7 +88,7 @@ const Footer = () => (
                     </SubLink>
                 </SubItem>
                 <SubItem>
-                    <Suba href="https://christopher-portfolio.netlify.com" target="blank">
+                    <Suba href="https://christopher-ramos.netlify.com" target="blank">
                         About
                     </Suba>
                 </SubItem>
