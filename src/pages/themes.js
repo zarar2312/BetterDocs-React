@@ -164,7 +164,7 @@ const Themes = (props) => {
         </UploadBtn>
     </UploadContainer>
     <HelpContainer>
-        <HelpBtn data-balloon="Need help with theme installation?" data-balloon-pos="left" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" target="blank">?</HelpBtn>
+        <HelpBtn data-balloon="Need help with theme installation?" data-balloon-pos="left" href="https://youtu.be/MlRSS6ikKh0" target="blank">?</HelpBtn>
     </HelpContainer>
   </Layout>
 )
