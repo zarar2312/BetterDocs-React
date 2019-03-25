@@ -33,9 +33,9 @@ const themeCard = ({title, author}) => (
             <Cards>
                 { node.frontmatter.thumbnail ?
                 <ImageContainer alt={node.frontmatter.featured && "featured"}>
-                <ThumbnailLink to={"themes" + node.frontmatter.slug}>
+                <ThumbnailLink to={"themes" + node.fields.slug}>
                     <LazyLoad once={true} height="100%"
-                            placeholder={<Thumbnail to={"themes" + node.frontmatter.slug} alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                            placeholder={<Thumbnail to={"themes" + node.fields.slug} alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
                         <Thumbnail alt={node.frontmatter.title} src={node.frontmatter.thumbnail}/>
                     </LazyLoad>
                 </ThumbnailLink>
@@ -52,11 +52,12 @@ const themeCard = ({title, author}) => (
                     <Btn
                     href={node.frontmatter.thumbnail}
                     target="blank"
-                    >Full Thumbnail</Btn>
+                    >Image Source</Btn>
                     {node.frontmatter.demo &&
-                    <Btn
+                    <DisabledBtn
                     href={'https://betterdocs.us/preview/' + node.frontmatter.mode + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"}
-                    target="blank">Quick Demo</Btn>
+                    target="blank"
+                    title="Demo Temporarily Disabled">Quick Demo</DisabledBtn>
                     }
                 </Options>
                 </ImageContainer>
@@ -89,7 +90,7 @@ const themeCard = ({title, author}) => (
                 </SmallDetails>
                 <TitleContainer>
                     <Title 
-                    to={"themes" + node.frontmatter.slug}>
+                    to={"themes" + node.fields.slug}>
                     {node.frontmatter.title}
                     </Title>
                 </TitleContainer>

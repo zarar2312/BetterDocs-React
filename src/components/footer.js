@@ -46,7 +46,7 @@ const Footer = () => (
                     </svg>
                 </Logo>
             <Paragraph>
-            A Discord enhancement project. Free quality Themes and Plugins for Discord and easy installation instructions for BetterDiscord and more!
+            A Discord enhancement project. Free quality Themes and Plugins for Discord and easy installation instructions for BetterDiscord and more! Logo originally made by BeardDesign.
             </Paragraph>
             </FirstItem>
             <Item>

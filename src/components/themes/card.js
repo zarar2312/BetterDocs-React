@@ -34,11 +34,12 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
             <Btn
             href={thumbnail}
             target="blank"
-            >Full Thumbnail</Btn>
+            >Image Source</Btn>
             {demo &&
-            <Btn
+            <DisabledBtn
             href={'https://betterdocs.us/preview/' + mode + '.html?theme=' + demo + "?no-cache=1"}
-            target="blank">Quick Demo</Btn>
+            target="blank"
+            title="Demo Temporarily Disabled">Quick Demo</DisabledBtn>
             }
         </Options>
         </ImageContainer>

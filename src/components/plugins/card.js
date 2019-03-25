@@ -9,7 +9,7 @@ import LazyLoad from "react-lazyload"
 import 'src/styles/tooltips.css'
 import Loading from 'src/images/Loading.gif'
 import * as variable from 'src/styles/variables'
-import { rgba } from 'polished'
+import { rgba, darken } from 'polished'
 import styled from 'styled-components';
 import bd from 'src/images/betterdiscord.png'
 import { createGlobalStyle } from 'styled-components'
@@ -23,6 +23,7 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, soft
             <Status title={"Status of " + title + ": Unknown"}>Unknown</Status>
         }
         {thumbnail ?
+        <>
             <ImageContainer to={"plugins" + slug}>
                 <LazyLoad once={true} height="100%" placeholder={
                     <img alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>
@@ -30,6 +31,10 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, soft
                     <img src={thumbnail} alt={title + "'s thumbnail"} title={title + "'s thumbnail"} />
                 </LazyLoad>
             </ImageContainer>
+            <Options>
+                <span>Image </span><Btn href={thumbnail} target="blank">Source</Btn>
+            </Options>
+        </>
         :
             <MissingContainer to={"plugins" + slug}>
                 <img src={Mobile} alt="Missing Plugin Thumbnail" title="Missing Plugin Thumbnail" />
@@ -70,6 +75,70 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, soft
 
 export default pluginCard
 
+const Btn = styled.a`
+`
+const DisabledBtn = styled.div`
+`
+
+const Options = styled.div`
+    position: absolute;
+    top: 0.3rem;
+    left: 0.2rem;
+    width: 100%;
+    z-index: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    display: flex;
+    opacity: 0;
+    box-shadow: 5px 0px 0px 0px #000;
+    /*pointer-events: none;*/
+    span {
+        display: -webkit-inline-box;
+        color: #fff;
+        font-weight: 400;
+        font-size: .5rem;
+        -webkit-transition: 250ms linear background-color;
+        transition: 250ms linear background-color;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        margin-right: 0.1rem;
+        text-shadow: #000 1px 1px 3px;
+    }
+    ${Btn} {
+        display: -webkit-inline-box;
+        color: ${variable.SiteColor};
+        font-weight: bold;
+        font-size: .5rem;
+        transition: 250ms linear background-color;
+        align-self: center;
+        text-shadow: ${variable.SiteColor} 1px 1px 3px;
+        &:hover {
+            text-shadow: #000 1px 1px 4px;
+            background-color: ${variable.SiteColor};
+            color: #fff;
+        }
+    }
+    ${DisabledBtn} {
+        background-color: grey;
+        cursor: not-allowed;
+        margin: 0 auto;
+        text-align: center;
+        display: -webkit-inline-box;
+        background-color: grey;
+        border-radius: 25px;
+        padding: .3rem .6rem;
+        font-weight: 400;
+        color: #fff;
+        font-size: .6rem;
+        transition: 250ms linear background-color;
+        align-self: center;
+        &:hover {
+            background-color: grey;
+        }
+    }
+`
 const ImageContainer = styled(Link)`
     padding: 10px;
     position: relative;
@@ -171,6 +240,12 @@ const Card = styled.div`
                 -webkit-filter: drop-shadow(${rgba(variable.SiteColor, 0.4)} 0px 6px 8px);
                 filter: drop-shadow(${rgba(variable.SiteColor, 0.4)} 0px 8px 10px);
             }
+        }
+    }
+    &:hover, &:focus, &:active {
+        ${Options} {
+            opacity: 1;
+            pointer-events: all;
         }
     }
 

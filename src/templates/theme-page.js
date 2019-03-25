@@ -190,7 +190,7 @@ const Themes = (props) => {
                   </>
                 }
                 {node.frontmatter.demo && 
-                  <DemoBtn href={'https://betterdocs.us/preview/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"} target="blank" title={"Quick Preview of " + node.frontmatter.title }>Demo</DemoBtn>
+                  <DemoBtn href={'https://betterdocs.us/preview/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"} target="blank" title="Demo Temporarily Disabled">Demo</DemoBtn>
                 }
                 {node.frontmatter.github_issue_url &&
                 <Report href={node.frontmatter.github_issue_url + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} rel="noopener noreferrer" target="_blank">
@@ -214,7 +214,7 @@ const Themes = (props) => {
                         <a 
                         href={image.fieldValue}
                         target="blank"
-                        >Full Image</a>
+                        >Image Source</a>
                       </OptionsWrapper>
                     </ImageOptions>
                   </ImageContainer>
@@ -351,7 +351,7 @@ const Download = styled.a`
 `
 const Report = styled.a`
 `
-const DemoBtn = styled.a`
+const DemoBtn = styled.div`
 `
 const ScreenshotContainer = styled.div`
 `
@@ -825,7 +825,7 @@ const Container = styled.div`
               }
             }
             ${DemoBtn} {
-              background-color: ${variable.SiteColor};
+              background-color: grey;
               border-radius: 25px;
               padding: 0.5rem 1rem;
               font-size: 0.8rem;
@@ -838,8 +838,8 @@ const Container = styled.div`
                 height: 0;
               }
               &:hover {
-                box-shadow: 2px 10px 40px -12px ${darken(0.3, variable.SiteColor)};
-                background-color: ${darken(0.3, variable.SiteColor)};
+                box-shadow: 2px 10px 40px -12px ${darken(0.2, "grey")};
+                background-color: ${darken(0.1, "grey")};
                 &::after {
                   height: 0;
                 }
@@ -1028,6 +1028,7 @@ const GlobalStyle = createGlobalStyle`
             &[class*="selected"] {
               background-color: rgba(0,0,0,0.2);
               color: ${variable.SiteColor};
+              box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
             }
           }
         }

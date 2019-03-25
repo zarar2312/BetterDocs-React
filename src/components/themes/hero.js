@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
 
-const ThemePageHero = ({title, thumbnail, status, tags, author, demo, date, github_source_url, gitlab_source_url, discord_server, download, auto, support, sub, style}) => (
+const ThemePageHero = ({title, thumbnail}) => (
     <Container
     alt={title}
     style={{backgroundImage: `url(${thumbnail})`}}>
@@ -15,6 +15,11 @@ const ThemePageHero = ({title, thumbnail, status, tags, author, demo, date, gith
                 <Title>{title}</Title>
             }
         </TitleContainer>
+        {thumbnail &&
+            <ImageDetails>
+                <span>Image</span> <a href={thumbnail} target="blank">Source</a>
+            </ImageDetails>
+        }
     </DetailsContainer>
     </Container>
 )
@@ -57,6 +62,8 @@ const DownloadBtn = styled.a`
 const SupportBtn= styled.a`
 `
 const DemoBtn = styled.a`
+`
+const ImageDetails = styled.div`
 `
 const Container = styled.div`
     order: 1;
@@ -132,21 +139,33 @@ const Container = styled.div`
         flex-direction: column;
         z-index: 1;
         flex: 1;
-        padding: 0 1rem 0 2rem;
-        @media ${variable.MidPoint} {
-            flex-direction: row; 
+        position: absolute;
+        bottom: 0.4rem;
+        left: 0.5rem;
+        ${ImageDetails} {
+            display: -webkit-box;
+            margin-top: -0.2rem;
+            span {
+                color: #fff;
+                opacity: 0.6;
+                font-size: 0.5rem;
+            }
+            a {
+                color: ${variable.SiteColor};
+                opacity: 0.6;
+                font-size: 0.5rem;
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
         ${TitleContainer} {
-            text-align: left;
-            display: contents;
             ${Title} {
                 font-size: 1.4rem;
                 color: #fff;
                 font-weight: bold;
                 margin: unset;
-                position: absolute;
-                bottom: 0.4rem;
-                left: 0.5rem;
+                text-align: left;
             }
             ${StatusContainer} {
                 margin-top: 5px;
