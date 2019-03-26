@@ -6,8 +6,6 @@ description: Want to publish your plugin to our Showcase? Follow these instructi
 status: none
 maintainer_name: Placeholder
 contributor_name: Placeholder
-dependency: [placeholder, placeholder]
-npm_i: placeholder
 ---
 # Publish your work
 Want to publish your plugin to our [Showcase](https://betterdocs.us/plugins/)? Follow these instructions slow & carefully.
