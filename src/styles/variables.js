@@ -9,6 +9,9 @@ export const DeprecatedColor = `#c33030`;
 
 export const UnknownColor = `#005180`;
 
+//Site Ads
+export const Ads = false;
+
 //Client Mod Colors
 export const BandagedBD = '#7289DA';
 

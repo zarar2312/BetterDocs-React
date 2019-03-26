@@ -166,15 +166,17 @@ const Themes = (props) => {
                 areaHeader="Tags"
                 />
               }
-              <Ad>
-                <AdSense.Google
-                    client='ca-pub-1998206533560539'
-                    slot='6545618600'
-                    style={{ display: 'block' }}
-                    format='auto'
-                    responsive='true'
-                  />
-              </Ad>
+              {variable.Ads === true &&
+                <Ad>
+                  <AdSense.Google
+                      client='ca-pub-1998206533560539'
+                      slot='6545618600'
+                      style={{ display: 'block' }}
+                      format='auto'
+                      responsive='true'
+                    />
+                </Ad>
+              }
               <Options>
                 {node.frontmatter.download &&
                   <>
@@ -211,10 +213,10 @@ const Themes = (props) => {
                     <img src={image.fieldValue} alt={node.frontmatter.title + " made by " + node.frontmatter.author}/>
                     <ImageOptions>
                       <OptionsWrapper>
-                        <a 
+                        <Linkka
                         href={image.fieldValue}
                         target="blank"
-                        >Image Source</a>
+                        >Image Source</Linkka>
                       </OptionsWrapper>
                     </ImageOptions>
                   </ImageContainer>
@@ -386,6 +388,8 @@ const AlertLink = styled.div`
 const DeprecatedBtn = styled.a`
 `
 const MoreHeader = styled.h2`
+`
+const Linkka = styled.a`
 `
 const MobileBackBtn= styled(AniLink)`
   position: fixed;
@@ -619,6 +623,18 @@ const Container = styled.div`
             &::after {
                 height: 110%;
                 width: 110%;
+              }
+            }
+          }
+          ${Linkka} {
+            &::after {
+              height: 0% !important;
+              width: 0% !important;
+            }
+            &:hover {
+              &::after {
+                height: 0% !important;
+                width: 0% !important;
               }
             }
           }

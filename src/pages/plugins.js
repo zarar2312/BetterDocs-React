@@ -1,21 +1,16 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
-//import plugin from '../styles/plugins.module.scss'
 import { Helmet } from "react-helmet";
-//import Sidebar from '../components/plugin-sidebar'
 import { graphql, Link } from 'gatsby'
 import '../styles/tooltips.css'
 import SoftwareBar from '../components/plugins/software-bar'
 import Card from '../components/plugins/card'
-//import Folder from '../images/Folder.png'
-//import '../components/queries'
 import styled from 'styled-components';
 import Bg from '../images/header-bg.svg'
 import Folder from '../images/Folder.png'
 import * as variable from '../styles/variables'
 import { darken } from 'polished'
 import LazyLoad from "react-lazyload"
-//import { ResultList } from '@appbaseio/reactivesearch'
 import { createGlobalStyle } from 'styled-components'
 import AdSense from 'react-adsense';
 
@@ -193,6 +188,7 @@ const Plugins = (props) => {
             <DeatilsHeader>{tagHeader}</DeatilsHeader>
         </Details>
         <Cards>
+        {variable.Ads === true &&
           <AdCard>
             <AdContainer>
               <AdSense.Google
@@ -205,6 +201,7 @@ const Plugins = (props) => {
             </AdContainer>
             <Notice></Notice>
           </AdCard>
+        }
           {pluginList.edges.map(({ node }) => (
             <LazyLoad key={node.id} height="11rem">
               <Card 

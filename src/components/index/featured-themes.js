@@ -56,7 +56,7 @@ class Features extends React.Component {
                 />
             </svg>
         </TopWave>
-        <Header>Get access to our best high quality themes.</Header>
+        <Header>Get access to the best high quality themes.</Header>
         <SubText>Check it out:</SubText>
             <Overflow>
                 <Cards>

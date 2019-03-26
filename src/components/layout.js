@@ -6,10 +6,8 @@ import AdSense from 'react-adsense';
 import styled from 'styled-components';
 import Header from './header'
 import Footer from './footer'
-//import './layout.css'
-//import ad from '../styles/ad.module.scss'
 import Announcement from './announcement';
-//import Logo from "../images/mobile.png"
+import * as variable from '../styles/variables'
 //<link rel="manifest" href="/site.webmanifest"/>
 //var time = new Date().getHours();
 //<html lang="en" class={0 <= time&&time < 7 && "dark"} id={17 <= time&&time < 24 && "dark"} /> 
@@ -65,6 +63,7 @@ const Layout = ({ children }) => (
           >
             {children}
           </div>
+          {variable.Ads === true &&
           <Ad>
             <AdSense.Google
               client='ca-pub-1998206533560539'
@@ -74,6 +73,7 @@ const Layout = ({ children }) => (
               responsive='true'
             />
           </Ad>
+          }
           <Footer />
         </div>
     )}

@@ -12,7 +12,7 @@ const themeContributors = ({author, maintainer, title, areaHeader, slug, contrib
         <GlobalStyle />
         <CardHeader>{areaHeader}</CardHeader>
         <AreaCard>
-            <SubText>A list of people that have contributed to this plugin in one way or another. If you think there is a mistake with this list please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - Theme - [Contributor Report]&labels=report" }>here</a>.</SubText>
+            <SubText>A list of people that have contributed to this theme in one way or another. If you think there is a mistake with this list please make a report <a target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + title + " - Theme - [Contributor Report]&labels=report" }>here</a>.</SubText>
             <TableInfo>
                     <RowBody>
                     <Row>

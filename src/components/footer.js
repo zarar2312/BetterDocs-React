@@ -313,7 +313,7 @@ const GlobalStyle = createGlobalStyle`
                             ${SubLink}, ${Suba} {
                                 color: #999;
                                 &:hover {
-                                    color: #000;
+                                    color: #fff;
                                 }
                             }
                         }

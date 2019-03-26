@@ -126,6 +126,7 @@ const Themes = (props) => {
       />
       <Content>
         <Wrapper>
+        {variable.Ads === true &&
           <AdCard>
             <AdContainer>
               <AdSense.Google
@@ -138,6 +139,7 @@ const Themes = (props) => {
             </AdContainer>
             <Notice></Notice>
           </AdCard>
+        }
           {themeList.edges.map(({ node }, i) => (
             <LazyLoad key={node.id} height="10rem">
               <Card

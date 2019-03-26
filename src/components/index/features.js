@@ -158,6 +158,7 @@ const Container = styled.section`
     display: flex;
     flex-direction: column;
     padding: 1.85rem 1.5625rem;
+    padding-top: 3rem;
     background-color: #fff;
     position: relative;
     ${Cards} {
