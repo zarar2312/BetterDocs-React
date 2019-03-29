@@ -6,7 +6,7 @@ import { rgba } from 'polished'
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 import kebabCase from "lodash/kebabCase"
-
+/* eslint-disable */
 const themeContributors = ({author, maintainer, title, areaHeader, slug, contributor}) => (
     <Area>
         <GlobalStyle />

@@ -9,7 +9,7 @@ import LazyLoad from "react-lazyload"
 import 'src/styles/tooltips.css'
 import Loading from 'src/images/Loading.gif'
 import * as variable from 'src/styles/variables'
-import { rgba, darken } from 'polished'
+import { rgba } from 'polished'
 import styled from 'styled-components';
 import bd from 'src/images/betterdiscord.png'
 import { createGlobalStyle } from 'styled-components'
@@ -375,7 +375,7 @@ const SoftwareIcon = styled(Link)`
             background-position: center;
         }
     }
-    &[alt="PowerCord"] {
+    &[alt="Powercord"] {
         &::before {
             background-image: url("https://i.imgur.com/N77LRlL.png");
             height: 0.5rem;

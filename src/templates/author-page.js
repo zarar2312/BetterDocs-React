@@ -51,15 +51,23 @@ const Author = ({ pageContext, data }) => {
         }
       </Titlebar>
       <Flex>
+    {data.authors ?
       <ProfileContainer>
-      {data.limit.edges.map(({ node }) => (
+      {data.authors.edges.map(({ node }) => (
         <ProfileColumn key={node.id}>
           <ProfileRow>
             <ProfileSection>
               <Details>
-                <Name>
-                {authors}
-                </Name>
+                {node.frontmatter.avatar_url &&
+                    <ProfileWrapper>
+                        <Avatar src={node.frontmatter.avatar_url} title={node.frontmatter.name + "'s Profile Avatar"} />
+                    </ProfileWrapper>
+                }
+                {node.frontmatter.name &&
+                    <Name>
+                        {node.frontmatter.name}
+                    </Name>
+                }
                 <Roles>
                   {data.themes &&
                   <Role>Theme Developer</Role>
@@ -68,21 +76,6 @@ const Author = ({ pageContext, data }) => {
                   <Role>Plugin Developer</Role>
                   }
                 </Roles>
-                {node.frontmatter.github_profile_url &&
-                <Follow>
-                  <a target="blank" href={node.frontmatter.github_profile_url}>Follow</a>
-                </Follow>
-                }
-                {node.frontmatter.gitlab_profile_url &&
-                <Follow>
-                  <a target="blank" href={node.frontmatter.gitlab_profile_url}>Follow</a>
-                </Follow>
-                }
-                {node.frontmatter.npm_profile_url &&
-                <Follow>
-                  <a target="blank" href={node.frontmatter.npm_profile_url}>Follow</a>
-                </Follow>
-                }
               </Details>
             </ProfileSection>
             <ProfileSection>
@@ -133,35 +126,79 @@ const Author = ({ pageContext, data }) => {
         </ProfileColumn>
       ))}
       </ProfileContainer>
+      :
+      <ProfileContainer>
+        <ProfileColumn>
+          <ProfileRow>
+            <ProfileSection>
+              <Details>
+                {authors &&
+                    <Name>
+                        {authors}
+                    </Name>
+                }
+                <Roles>
+                  {data.themes &&
+                  <Role>Theme Developer</Role>
+                  }
+                  {data.plugins &&
+                  <Role>Plugin Developer</Role>
+                  }
+                </Roles>
+              </Details>
+            </ProfileSection>
+            <ProfileSection>
+              <LinksContainer>
+                <Header>Links</Header> 
+                <Links>
+                </Links> 
+              </LinksContainer>
+            </ProfileSection>
+          </ProfileRow>
+        </ProfileColumn>
+      </ProfileContainer>
+    }
 
       <Showcase>
         <ShowcaseContainer>
             {data.all.edges.map(({ node }, i) => (
               <Card key={node.id} alt={node.frontmatter.demo ? "theme" : "plugin" }>
                 {node.frontmatter.demo ?
-                <Themecard 
-                title={node.frontmatter.title} 
-                thumbnail={node.frontmatter.thumbnail}
-                slug={node.fields.slug}
-                status={node.frontmatter.status}
-                tags={node.frontmatter.tags}
-                author={node.frontmatter.author}
-                excerpt={node.excerpt}
-                demo={node.frontmatter.demo}
-                mode={node.frontmatter.style}
-                featured= {node.frontmatter.featured}/>
+                <>
+                {node.frontmatter.profile ?
+                    null
+                    :
+                    <Themecard 
+                    title={node.frontmatter.title} 
+                    thumbnail={node.frontmatter.thumbnail}
+                    slug={node.fields.slug}
+                    status={node.frontmatter.status}
+                    tags={node.frontmatter.tags}
+                    author={node.frontmatter.author}
+                    excerpt={node.excerpt}
+                    demo={node.frontmatter.demo}
+                    mode={node.frontmatter.style}
+                    featured= {node.frontmatter.featured}/>
+                }
+                </>
                 :
-                <Plugincard
-                title={node.frontmatter.title} 
-                thumbnail={node.frontmatter.thumbnail}
-                slug={node.fields.slug}
-                status={node.frontmatter.status}
-                tags={node.frontmatter.tags}
-                author={node.frontmatter.author}
-                excerpt={node.excerpt}
-                softwares={node.frontmatter.software}
-                key={node.id}
-                />
+                <>
+                {node.frontmatter.profile ?
+                    null
+                    :
+                    <Plugincard
+                    title={node.frontmatter.title} 
+                    thumbnail={node.frontmatter.thumbnail}
+                    slug={node.fields.slug}
+                    status={node.frontmatter.status}
+                    tags={node.frontmatter.tags}
+                    author={node.frontmatter.author}
+                    excerpt={node.excerpt}
+                    softwares={node.frontmatter.software}
+                    key={node.id}
+                    />
+                }
+                </>
                 }
               </Card>
             ))}
@@ -213,6 +250,9 @@ export const authorQuery = graphql`
     plugins:allMarkdownRemark( filter: { collection: { eq: "plugins" } frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...pluginFragment
     },
+    authors:allMarkdownRemark( filter: { collection: { eq: "profiles" } frontmatter: { name: { in: [$authors] } } } limit: 1 ) {
+      ...profileFragment
+    },
   }
 `
 const Titlebar = styled.div`
@@ -262,6 +302,10 @@ const Excerpt = styled.div`
 const Unknown = styled.div`
 `
 const ImageContainer = styled.div`
+`
+const ProfileWrapper = styled.div`
+`
+const Avatar = styled.img`
 `
 const PluginCard = styled(Link)`
 `
@@ -329,12 +373,12 @@ const Container = styled.div`
                       ${Details} {
                           display: flex;
                           flex-direction: column;
-                          .profileWrapper {
+                          ${ProfileWrapper} {
                               width: 3rem;
                               height: 3rem;
                               border-radius: 3px;
                               margin: 0 auto;
-                              margin-bottom: 3px;
+                              margin-bottom: 0.5rem;
                               img {
                                   border-radius: 3px;
                                   height: 100%;
@@ -348,10 +392,12 @@ const Container = styled.div`
                               letter-spacing: -.01em;
                               color: #444;
                               text-align: center;
+                              margin-bottom: 0;
                           }
                           ${Roles} {
                               display: flex;
-                              margin: 0.5rem auto;
+                              margin: 0.3rem auto;
+                              margin-bottom: unset;
                               ${Role} {
                                   margin: unset;
                                   font-size: 0.45rem;

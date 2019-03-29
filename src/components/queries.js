@@ -208,7 +208,29 @@ class Features extends React.Component {
             }
           }
         }
-      }               
+      }
+      fragment profileFragment on MarkdownRemarkConnection {
+        totalCount
+        edges {
+          node {
+            excerpt
+            html
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              name
+              avatar_url
+              github_profile_url
+              gitlab_profile_url
+              npm_profile_url
+              discord_server
+              profile
+            }
+          }
+        }
+      }         
   `}
     render={data => (
         <section>

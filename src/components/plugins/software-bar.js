@@ -120,10 +120,10 @@ const SoftwareBar = styled.div`
                         background-color: ${darken(0.1,variable.BetterDiscord)};
                     }
                 }
-                &[alt*="PowerCord"] {
-                    background-color: ${variable.PowerCord};
+                &[alt*="Powercord"] {
+                    background-color: ${variable.Powercord};
                     div {
-                        background-color: ${darken(0.1,variable.PowerCord)};
+                        background-color: ${darken(0.1,variable.Powercord)};
                     }
                 }
                 &[alt*="BandagedBD"] {

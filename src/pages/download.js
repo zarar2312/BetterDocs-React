@@ -118,8 +118,8 @@ const DownloadPage = () => (
       </Card>
 
       <Card
-      title="PowerCord"
-      download="https://powercord.xyz">
+      title="Powercord"
+      download="https://Powercord.xyz">
         <Feature
         name="Themes"
         disabled="false"

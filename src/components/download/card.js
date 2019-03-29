@@ -270,17 +270,17 @@ const Card = styled.div`
         }
       }
   }
-  &[alt="PowerCord"] {
+  &[alt="Powercord"] {
       order: 3;
       ${Header} {
-          background: ${variable.PowerCord};
+          background: ${variable.Powercord};
       }
       [class^="feature__Feature"] {
-          color: ${variable.PowerCord};
+          color: ${variable.Powercord};
       }
       ${Footer} {
         ${DownloadBtn} {
-          background-color: ${variable.PowerCord};
+          background-color: ${variable.Powercord};
         }
       }
   }

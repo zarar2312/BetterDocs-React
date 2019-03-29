@@ -19,7 +19,7 @@ export const EnhancedDiscord = '#cc3200';
 
 export const BeautifulDiscord = '#7289DA';
 
-export const PowerCord = '#d18118';
+export const Powercord = '#d18118';
 
 export const DiscordInjections = '#e271b7';
 

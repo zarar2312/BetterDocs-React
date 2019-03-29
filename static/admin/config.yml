@@ -34,12 +34,6 @@ collections:
         name: "download"
         widget: "string"
 
-      - label: "Github Profile Url" 
-        name: "github_profile_url"
-        widget: "string"
-        default: "https://github.com/{Author}/"
-        required: false
-
       - label: "Github Source Url" 
         name: "github_source_url"
         widget: "string"
@@ -166,12 +160,6 @@ collections:
       - label: "Download URL"
         name: "download"
         widget: "string"
-        required: false
-
-      - label: "Github Profile Url" 
-        name: "github_profile_url"
-        widget: "string"
-        default: "https://github.com/{Author}/"
         required: false
 
       - label: "Github Source Url" 

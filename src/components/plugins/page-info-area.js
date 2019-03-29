@@ -226,11 +226,11 @@ const Area = styled.div`
                                 background-color: ${darken(0.15, variable.BetterDiscord)}
                             }
                         }
-                        &[alt="PowerCord"] {
-                            background-color: ${variable.PowerCord};
+                        &[alt="Powercord"] {
+                            background-color: ${variable.Powercord};
                             color: #fff;
                             &:hover {
-                                background-color: ${darken(0.15, variable.PowerCord)}
+                                background-color: ${darken(0.15, variable.Powercord)}
                             }
                         }
                         &[alt="DiscordInjections"] {
