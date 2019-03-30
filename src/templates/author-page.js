@@ -493,6 +493,37 @@ const Container = styled.div`
               @media ${variable.MidPoint} {
                   display: flex;
               }
+              a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+                display: inline-block;
+                transition: color 250ms, text-shadow 250ms;
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+                position: relative;
+                z-index: 0;
+                line-height: 1rem;
+                    &:after {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -1px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    content: '';
+                        width: 100%;
+                        height: 3px;
+                        background-color: ${variable.SiteColor};
+                        transition: all 250ms;
+                    }
+                    &:hover {
+                    color: #fff !important;
+                    opacity: 1;
+                    background-color: transparent;
+                        &::after {
+                            height: 110% !important;
+                            width: 110% !important;
+                        }
+                    }
+                }
               ${Card} {
                   flex-basis: 12rem;
                   margin-bottom: 20px;

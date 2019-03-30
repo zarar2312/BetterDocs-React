@@ -105,20 +105,22 @@ const Themes = (props) => {
     <TitleBarHeadroom disableInlineStyles>
       <TitleBar>
         <Count>#Themes <span>({listCount})</span></Count>
-        <Search placeholder="Search Themes library (WIP)" ></Search>
-        <Help target="blank" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" data-balloon="Need help with theme installation?" data-balloon-pos="left">?</Help>
-        <Upload
-        data-balloon="Want to publish your theme?" data-balloon-pos="left"
-        to="/themes/upload-a-theme/">
-          <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='433.5' height='433.5'
-          viewBox='0 0 433.5 433.5'>
-              <g id='file-upload'>
-                  <polygon points='140.25,331.5 293.25,331.5 293.25,178.5 395.25,178.5 216.75,0 38.25,178.5 140.25,178.5'
-                  />
-                  <rect x='38.25' y='382.5' width='357' height='51' />
-              </g>
-          </svg>
-        </Upload>
+        <RightSide>
+          <Search placeholder="Search Themes library (WIP)" ></Search>
+          <Help target="blank" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" data-balloon="Need help with theme installation?" data-balloon-pos="left">?</Help>
+          <Upload
+          data-balloon="Want to publish your theme?" data-balloon-pos="left"
+          to="/themes/upload-a-theme/">
+            <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='433.5' height='433.5'
+            viewBox='0 0 433.5 433.5'>
+                <g id='file-upload'>
+                    <polygon points='140.25,331.5 293.25,331.5 293.25,178.5 395.25,178.5 216.75,0 38.25,178.5 140.25,178.5'
+                    />
+                    <rect x='38.25' y='382.5' width='357' height='51' />
+                </g>
+            </svg>
+          </Upload>
+        </RightSide>
       </TitleBar>
     </TitleBarHeadroom>
       <TagsBar
@@ -263,6 +265,8 @@ const AdCard = styled.div`
 const AdContainer = styled.div`
 `
 const Notice = styled.div`
+`
+const RightSide = styled.div`
 `
 
 const Container = styled.div`
@@ -575,74 +579,79 @@ const Container = styled.div`
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0.42rem 0.62rem;
+        padding-bottom: unset;
         position: sticky;
         z-index: 3;
+        flex-wrap: wrap;
+        justify-content: space-between;
         ${Count} {
-          flex: 10;
           font-weight: bold;
           color: ${variable.SiteColor};
           font-size: 0.85rem;
           align-self: center;
+          margin-bottom: 0.32rem;
           span {
             font-weight: 500;
             font-size: 0.6em;
           }
         }
-        ${Search} {
-          border: unset;
-          transition: .2s ease-in-out opacity;
-          border-radius: 2px;
-          flex: 2;
-          font-size: 0.7rem;
+        ${RightSide} {
           align-self: center;
-          background-color: rgba(0, 0, 0, 0.1);
-          padding: 0.3rem 0.6rem;
-          color: #262626;
-          transition: 250ms linear background-color;
-          &::placeholder {
-            color: rgba(0, 0, 0, 0.6);
-          }
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.07);
-          }
-          &:active,
-          &:focus {
-            opacity: 1;
-            outline: unset;
-            background-color: rgba(0, 0, 0, 0.05);
-          }
-        }
-        ${Help} {
-          margin-left: 13px;
-          color: rgba( 0,0,0, 0.5);
-          align-self: center;
-          transition: 200ms ease-in-out;
-          display: none;
-          font-weight: bold;
-          &:hover {
-            color: #000;
-          }
-          @media ${variable.MidPoint} {
-            display: initial;
-          }
-        }
-        ${Upload} {
-          margin-left: 13px;
-          align-self: center;
-          display: none;
-          svg {
-            height: 0.6rem;
-            width: 0.6rem;
-            opacity: 0.5;
-            transition: 250ms ease-in-out;
-          }
-          &:hover {
-            svg {
-                opacity: 1;
+          margin-bottom: 0.42rem;
+          ${Search} {
+            border: unset;
+            transition: .2s ease-in-out opacity;
+            border-radius: 2px;
+            font-size: 0.7rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 0.3rem 0.6rem;
+            color: #262626;
+            transition: 250ms linear background-color;
+            &::placeholder {
+              color: rgba(0, 0, 0, 0.6);
+            }
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.07);
+            }
+            &:active,
+            &:focus {
+              opacity: 1;
+              outline: unset;
+              background-color: rgba(0, 0, 0, 0.05);
             }
           }
-          @media ${variable.MidPoint} {
-            display: initial;
+          ${Help} {
+            margin-left: 13px;
+            color: rgba( 0,0,0, 0.5);
+            align-self: center;
+            transition: 200ms ease-in-out;
+            display: none;
+            font-weight: bold;
+            &:hover {
+              color: #000;
+            }
+            @media ${variable.MidPoint} {
+              display: initial;
+            }
+          }
+          ${Upload} {
+            margin-left: 13px;
+            align-self: center;
+            display: none;
+            svg {
+              height: 0.6rem;
+              width: 0.6rem;
+              opacity: 0.5;
+              transition: 250ms ease-in-out;
+            }
+            &:hover {
+              svg {
+                  opacity: 1;
+              }
+            }
+            @media ${variable.MidPoint} {
+              display: initial;
+            }
           }
         }
       }
@@ -833,29 +842,31 @@ const GlobalStyle = createGlobalStyle`
         ${TitleBar} {
           border-bottom: 1px solid #222327;
           background-color: #222327;
-          ${Search} {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #eee;
-            &::placeholder {
-              color: rgba(255, 255, 255, 0.6);
+          ${RightSide} {
+            ${Search} {
+              background-color: rgba(255, 255, 255, 0.1);
+              color: #eee;
+              &::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+              }
+              &:hover {
+                background-color: rgba(255, 255, 255, 0.07);
+              }
+              &:active,
+              &:focus {
+                background-color: rgba(255, 255, 255, 0.05);
+              }
             }
-            &:hover {
-              background-color: rgba(255, 255, 255, 0.07);
+            ${Help} {
+              color: rgba(255,255,255, 0.5);
+              &:hover {
+                color: #fff;
+              }
             }
-            &:active,
-            &:focus {
-              background-color: rgba(255, 255, 255, 0.05);
-            }
-          }
-          ${Help} {
-            color: rgba(255,255,255, 0.5);
-            &:hover {
-              color: #fff;
-            }
-          }
-          ${Upload} {
-            svg {
-              fill: #fff;            
+            ${Upload} {
+              svg {
+                fill: #fff;            
+              }
             }
           }
         }

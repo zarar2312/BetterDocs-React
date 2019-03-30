@@ -146,7 +146,8 @@ const Cards = styled.div`
     display: flex;
     flex-direction: column;
     flex-basis: 16rem;
-    padding: 10px;
+    /*padding: 10px;*/
+    padding-bottom: 10px;
     margin-bottom: 30px;
     border-radius: 2px;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
@@ -194,40 +195,18 @@ const Cards = styled.div`
             }
         }
     }
-    @media ${variable.MidPoint} {
-        padding: unset;
-        margin-bottom: unset;
-        border-radius: unset;
-        background-color: unset;
-        box-shadow: unset;
-        border: unset;
-        &:hover, &:focus, &:active {
-            background-color: transparent;
-            box-shadow: unset;
-            border: unset;
-            ${ImageContainer}, ${MissingImageContainer} {
-                &::before {
-                    content: "";
-                    pointer-events: all;
-                    opacity: 1;
-                }
-                ${Options} {
-                    opacity: 1;
-                    pointer-events: all;
-                }
-            }
-        }
-        &:focus, &:active {
-            outline: unset;
-            border: unset;
-        }
-    }
     ${ImageContainer}, ${MissingImageContainer} {
         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
         position: relative;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
         padding-bottom: 56.25%;
         overflow: hidden;
+        margin-left: -1px;
+        margin-right: -1px;
+        margin-top: -1px;
+        border-radius: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
         &::before {
             content: "";
             display: block;
@@ -255,7 +234,6 @@ const Cards = styled.div`
             margin: 0 auto;
             display: -webkit-box;
             box-shadow: 0 4px 10px rgba(102,51,153,0.1);
-            border-radius: 2px;
             background-size: cover;
             position: absolute;
             top: 0;
@@ -266,6 +244,7 @@ const Cards = styled.div`
         @media ${variable.MidPoint} {
             /*box-shadow: unset;*/
             padding-bottom: unset;
+            border-radius: 4px;
             ${Thumbnail} {
                 height: 9rem;
                 width: 100%;
@@ -353,61 +332,63 @@ const Cards = styled.div`
         }
     }
     ${SmallDetails} {
+        display: flex;
+        padding: 0 10px;
+        ${StatusContainer} {
+            flex: 1;
             display: flex;
-            ${StatusContainer} {
-                flex: 1;
-                display: flex;
-                justify-content: flex-end;
-                ${Status} {
-                    font-size: 0.4rem;
-                    padding: 0.15rem 0.3rem;
-                    position: relative;
-                    top: 5px;
-                    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-                    line-height: unset !important;
-                    border: 1px solid;
-                    border-radius: 25px;
-                    text-align: center;
-                    display: none;
-                    color: #fff;
-                    &[alt="Updated"] {
-                        background-color: #00b167;
-                        border-color: #00b167;
-                        display: table;
-                    }
-                    &[alt="Deprecated"] {
-                        background-color: #c33030;
-                        border-color: #c33030;
-                        display: table;
-                    }
-                    &[alt="Unknown"] {
-                        background-color: #005180;
-                        border-color: #005180;
-                        display: table;
-                    }
+            justify-content: flex-end;
+            ${Status} {
+                font-size: 0.4rem;
+                padding: 0.15rem 0.3rem;
+                position: relative;
+                top: 5px;
+                transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+                line-height: unset !important;
+                border: 1px solid;
+                border-radius: 25px;
+                text-align: center;
+                display: none;
+                color: #fff;
+                &[alt="Updated"] {
+                    background-color: #00b167;
+                    border-color: #00b167;
+                    display: table;
                 }
-            }
-            ${AuthorContainer} {
-                flex: 3;
-                ${Author} {
-                    color: rgba(0, 0, 0, 0.8) !important;
-                    font-size: 0.45rem;
-                    position: relative;
-                    top: -3px;
-                    border-bottom: 1px solid transparent;
-                    display: -webkit-inline-box;
-                    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-                    line-height: unset !important;
-                    z-index: 0;
-                    &::after {
-                        height: 0 !important;
-                    }
+                &[alt="Deprecated"] {
+                    background-color: #c33030;
+                    border-color: #c33030;
+                    display: table;
+                }
+                &[alt="Unknown"] {
+                    background-color: #005180;
+                    border-color: #005180;
+                    display: table;
                 }
             }
         }
+        ${AuthorContainer} {
+            flex: 3;
+            ${Author} {
+                color: rgba(0, 0, 0, 0.8) !important;
+                font-size: 0.45rem;
+                position: relative;
+                top: -3px;
+                border-bottom: 1px solid transparent;
+                display: -webkit-inline-box;
+                transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+                line-height: unset !important;
+                z-index: 0;
+                &::after {
+                    height: 0 !important;
+                }
+            }
+        }
+    }
     ${TitleContainer} {
         margin-top: -0.2rem;
         margin-bottom: 0.1rem;
+        padding: 0 10px;
         ${Title} {
             font-weight: bold;
             color: rgba(0, 0, 0, 0.88);
@@ -428,6 +409,7 @@ const Cards = styled.div`
         }
     }
     ${Description} {
+        padding: 0 10px;
         ${Text} {
             margin-bottom: unset;
             font-size: 0.6rem;
@@ -435,6 +417,7 @@ const Cards = styled.div`
         }
     }
     ${AltDescription} {
+        padding: 0 10px;
         ${Text} {
             margin-bottom: unset;
             line-height: 0.8rem;
@@ -446,6 +429,7 @@ const Cards = styled.div`
         }
     }
     ${Tags} {
+        padding: 0 10px;
         margin-bottom: unset;
         @media ${variable.MidPoint} {
             margin-bottom: 25px;
@@ -463,6 +447,52 @@ const Cards = styled.div`
             &::after {
                 height: 0 !important;
             }
+        }
+    }
+    @media ${variable.MidPoint} {
+        padding: unset;
+        margin-bottom: unset;
+        border-radius: unset;
+        background-color: unset;
+        box-shadow: unset;
+        border: unset;
+        &:hover, &:focus, &:active {
+            background-color: transparent;
+            box-shadow: unset;
+            border: unset;
+            ${ImageContainer}, ${MissingImageContainer} {
+                &::before {
+                    content: "";
+                    pointer-events: all;
+                    opacity: 1;
+                }
+                ${Options} {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
+        &:focus, &:active {
+            outline: unset;
+            border: unset;
+        }
+        ${SmallDetails} {
+            padding: unset;
+        }
+        ${AuthorContainer} {
+            padding: unset;
+        }
+        ${Tags} {
+            padding: unset;
+        }
+        ${TitleContainer} {
+            padding: unset;
+        }
+        ${Description} {
+            padding: unset; 
+        }
+        ${AltDescription} {
+            padding: unset;    
         }
     }
 `

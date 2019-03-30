@@ -39,20 +39,22 @@ const Tagss = ({ pageContext, data }) => {
       <TitleBarHeadroom disableInlineStyles>
         <TitleBar>
           <Count>#Themes <span>{tagHeader}</span></Count>
-          <Search placeholder="Search Themes library (WIP)" ></Search>
-          <Help target="blank" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" data-balloon="Need help with theme installation?" data-balloon-pos="left">?</Help>
-          <Upload
-          data-balloon="Want to publish your theme?" data-balloon-pos="left"
-          to="/themes/upload-a-theme/">
-            <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='433.5' height='433.5'
-            viewBox='0 0 433.5 433.5'>
-                <g id='file-upload'>
-                    <polygon points='140.25,331.5 293.25,331.5 293.25,178.5 395.25,178.5 216.75,0 38.25,178.5 140.25,178.5'
-                    />
-                    <rect x='38.25' y='382.5' width='357' height='51' />
-                </g>
-            </svg>
-          </Upload>
+          <RightSide>
+            <Search placeholder="Search Themes library (WIP)" ></Search>
+            <Help target="blank" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" data-balloon="Need help with theme installation?" data-balloon-pos="left">?</Help>
+            <Upload
+            data-balloon="Want to publish your theme?" data-balloon-pos="left"
+            to="/themes/upload-a-theme/">
+              <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='433.5' height='433.5'
+              viewBox='0 0 433.5 433.5'>
+                  <g id='file-upload'>
+                      <polygon points='140.25,331.5 293.25,331.5 293.25,178.5 395.25,178.5 216.75,0 38.25,178.5 140.25,178.5'
+                      />
+                      <rect x='38.25' y='382.5' width='357' height='51' />
+                  </g>
+              </svg>
+            </Upload>
+          </RightSide>
         </TitleBar>
       </TitleBarHeadroom>
 
@@ -234,8 +236,11 @@ const TitleBar = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0.42rem 0.62rem;
+  padding-bottom: unset;
   position: sticky;
   z-index: 3;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
 
 const TitleBarHeadroom = styled(Headroom)`
@@ -283,22 +288,26 @@ const TitleBarHeadroom = styled(Headroom)`
 `
 
 const Count = styled.div`
-  flex: 10;
   font-weight: bold;
   color: ${variable.SiteColor};
   font-size: 0.85rem;
   align-self: center;
+  margin-bottom: 0.32rem;
   span {
     font-weight: 500;
     font-size: 0.6em;
   }
 `
 
+const RightSide = styled.div`
+  align-self: center;
+  margin-bottom: 0.42rem;
+`
+
 const Search = styled.input`
   border: unset;
   transition: .2s ease-in-out opacity;
   border-radius: 2px;
-  flex: 2;
   font-size: 0.7rem;
   align-self: center;
   background-color: rgba(0, 0, 0, 0.1);
