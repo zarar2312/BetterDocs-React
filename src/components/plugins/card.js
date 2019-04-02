@@ -24,7 +24,7 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, soft
         }
         {thumbnail ?
         <>
-            <ImageContainer to={"plugins" + slug}>
+            <ImageContainer to={"plugin" + slug}>
                 <LazyLoad once={true} height="100%" placeholder={
                     <img alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>
                     }>
@@ -36,12 +36,12 @@ const pluginCard = ({title, thumbnail, slug, status, tags, excerpt, author, soft
             </Options>
         </>
         :
-            <MissingContainer to={"plugins" + slug}>
+            <MissingContainer to={"plugin" + slug}>
                 <img src={Mobile} alt="Missing Plugin Thumbnail" title="Missing Plugin Thumbnail" />
             </MissingContainer>
         }
         <TitleContainer>
-            <Title to={"plugins" + slug}>{title}</Title>
+            <Title to={"plugin" + slug}>{title}</Title>
         </TitleContainer>
         {author &&
             <Details>
@@ -402,6 +402,7 @@ const DescriptionText = styled.p`
     color: #767676;
     font-size: 0.6rem;
     margin: unset;
+    word-break: keep-all;
 `
 
 const Tagg = styled(Link)`
@@ -459,7 +460,7 @@ const GlobalStyle = createGlobalStyle`
         }
         ${TitleContainer} {
             ${Title} {
-                color: #eee;
+                color: #eee !important;
             }
         }
         ${Details} {

@@ -10,7 +10,7 @@ import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 
-const themeCard = ({title, author}) => (
+const themeCard = ({author}) => (
     <StaticQuery
     query={ graphql`
     query {
@@ -33,9 +33,9 @@ const themeCard = ({title, author}) => (
             <Cards>
                 { node.frontmatter.thumbnail ?
                 <ImageContainer alt={node.frontmatter.featured && "featured"}>
-                <ThumbnailLink to={"themes" + node.fields.slug}>
+                <ThumbnailLink to={"theme" + node.fields.slug}>
                     <LazyLoad once={true} height="100%"
-                            placeholder={<Thumbnail to={"themes" + node.fields.slug} alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                            placeholder={<Thumbnail to={"theme" + node.fields.slug} alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
                         <Thumbnail alt={node.frontmatter.title} src={node.frontmatter.thumbnail}/>
                     </LazyLoad>
                 </ThumbnailLink>
@@ -90,7 +90,7 @@ const themeCard = ({title, author}) => (
                 </SmallDetails>
                 <TitleContainer>
                     <Title 
-                    to={"themes" + node.fields.slug}>
+                    to={"theme" + node.fields.slug}>
                     {node.frontmatter.title}
                     </Title>
                 </TitleContainer>
@@ -533,6 +533,7 @@ ${Cards} {
             margin-bottom: unset;
             font-size: 0.6rem;
             color: rgba(0, 0, 0, 0.6);
+            word-break: keep-all;
         }
     }
     ${AltDescription} {
@@ -541,6 +542,7 @@ ${Cards} {
             line-height: 0.8rem;
             font-size: 0.6rem;
             color: rgba(0, 0, 0, 0.6);
+            word-break: keep-all;
             @media ${variable.MidPoint} {
                 margin-bottom: 1.3rem;
             }

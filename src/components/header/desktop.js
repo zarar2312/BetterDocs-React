@@ -92,6 +92,11 @@ class desktopHeader extends React.Component {
                         <Title>Plugins</Title>
                     </Tab>
                     <Tab 
+                    to="/profiles/" 
+                    activeClassName="active">
+                        <Title>Profiles</Title>
+                    </Tab>
+                    <Tab 
                     to="/download/"
                     activeClassName="active">
                         <Title>Download</Title>

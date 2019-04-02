@@ -141,8 +141,8 @@ const DownloadPage = () => (
         <Feature
         name="Twitch.tv Emotes"
         disabled="true"
-        tooltip="false"
-        tooltiptext={null}
+        tooltip="true"
+        tooltiptext="Can be achieved with compatible plugins"
         />
         <Feature
         name="BetterTTV Emotes"

@@ -527,6 +527,11 @@ const Container = styled.div`
           box-shadow: 2px 2px 40px -12px #999;
           padding: 0.8rem 1.1rem;
           border: 1px solid #ececec;
+          a[href*="imgur.com"] {
+            &::after {
+              display: none !important;
+            }
+          }
           code {
             font-size: 0.67rem;
             /*line-height: unset;*/

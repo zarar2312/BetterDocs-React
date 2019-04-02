@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 
 const downloadThemes = ({name, tooltiptext, disabled, tooltip}) => (
-    <Feature title={disabled === "true" && "This mod doesn't support this feature."} disabled={disabled === "true" && true}>{name}
+    <Feature title={disabled === "true" ? "This mod doesn't support this feature." : "This mod supports this feature."} disabled={disabled === "true" && true}>{name}
     {tooltip === "true" &&
         <Tooltip
         text={tooltiptext}/> 

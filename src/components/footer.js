@@ -151,6 +151,10 @@ const FooterContainer = styled.footer`
     border-top: 1px solid #eee;
     font-size: 0.7rem;
     background-color: #fff;
+    margin-bottom: 0.2rem;
+    @media ${variable.MidPoint} {
+        margin-bottom: unset;
+    }
     ${Wave} {
         bottom: 0;
         left: 0;

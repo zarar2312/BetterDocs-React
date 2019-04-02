@@ -105,7 +105,7 @@ return graphql(`{
         },
       })
     })
-    
+
     //Next set
     // Theme Tag pages:
     let tags = []
@@ -188,7 +188,7 @@ return graphql(`{
 
     res.data.plugins.edges.forEach(({ node }) => {
             createPage({
-            path: '/plugins' + node.fields.slug,
+            path: '/plugin' + node.fields.slug,
             component: pluginTemplate,
             context: {
               slug: node.fields.slug,
@@ -198,7 +198,7 @@ return graphql(`{
 
     res.data.themes.edges.forEach(({ node }) => {
         createPage({
-        path: '/themes' + node.fields.slug,
+        path: '/theme' + node.fields.slug,
         component: themeTemplate,
         context: {
           slug: node.fields.slug,

@@ -56,7 +56,7 @@ const mobileHeader = () => (
             <Title>Plugins</Title>
         </Tab>
         <Tab 
-            to="/more/" 
+            to="/menu/" 
             activeClassName="active"
             cover
             bg="#0a0a0a"

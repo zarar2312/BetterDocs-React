@@ -37,10 +37,10 @@ const FeaturedThemes = (props) => {
       <Content>
       <TitleBarHeadroom disableInlineStyles>
         <TitleBar>
-          <Count>#Themes <span>{listCount} featured themes</span></Count>
+          <Count>#Featured Themes <span>({listCount})</span></Count>
           <RightSide>
             <Search placeholder="Search Themes library (WIP)" ></Search>
-            <Help target="blank" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" data-balloon="Need help with theme installation?" data-balloon-pos="left">?</Help>
+            <Help target="blank" href="https://www.youtube.com/watch?v=MlRSS6ikKh0" data-balloon="Need help with theme installation?" data-balloon-pos="left">?</Help>
             <Upload
             data-balloon="Want to publish your theme?" data-balloon-pos="left"
             to="/themes/upload-a-theme/">
@@ -86,7 +86,7 @@ const FeaturedThemes = (props) => {
         </UploadBtn>
     </UploadContainer>
     <HelpContainer>
-        <HelpBtn data-balloon="Need help with theme installation?" data-balloon-pos="left" href="https://www.youtube.com/watch?v=j_Uc0wZPJSY" target="blank">?</HelpBtn>
+        <HelpBtn data-balloon="Need help with theme installation?" data-balloon-pos="left" href="https://www.youtube.com/watch?v=MlRSS6ikKh0" target="blank">?</HelpBtn>
     </HelpContainer>
   </Layout>
 )

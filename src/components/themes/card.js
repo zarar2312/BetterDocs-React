@@ -15,9 +15,9 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
         <GlobalStyle />
         { thumbnail ?
         <ImageContainer alt={featured && "featured"}>
-        <ThumbnailLink to={"themes" + slug}>
+        <ThumbnailLink to={"theme" + slug}>
             <LazyLoad once={true} height="100%"
-                    placeholder={<Thumbnail to={"themes" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                    placeholder={<Thumbnail to={"theme" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
                 <Thumbnail alt={title} src={thumbnail}/>
             </LazyLoad>
         </ThumbnailLink>
@@ -72,7 +72,7 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
         </SmallDetails>
         <TitleContainer>
             <Title 
-            to={"themes" + slug}>
+            to={"theme" + slug}>
             {title}
             </Title>
         </TitleContainer>
@@ -414,6 +414,7 @@ const Cards = styled.div`
             margin-bottom: unset;
             font-size: 0.6rem;
             color: rgba(0, 0, 0, 0.6);
+            word-break: keep-all;
         }
     }
     ${AltDescription} {
@@ -423,6 +424,7 @@ const Cards = styled.div`
             line-height: 0.8rem;
             font-size: 0.6rem;
             color: rgba(0, 0, 0, 0.6);
+            word-break: keep-all;
             @media ${variable.MidPoint} {
                 margin-bottom: 1.3rem;
             }

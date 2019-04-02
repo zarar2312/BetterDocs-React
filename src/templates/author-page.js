@@ -374,8 +374,8 @@ const Container = styled.div`
                           display: flex;
                           flex-direction: column;
                           ${ProfileWrapper} {
-                              width: 3rem;
-                              height: 3rem;
+                              width: 5rem;
+                              height: 5rem;
                               border-radius: 3px;
                               margin: 0 auto;
                               margin-bottom: 0.5rem;
@@ -493,7 +493,7 @@ const Container = styled.div`
               @media ${variable.MidPoint} {
                   display: flex;
               }
-              a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+              a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]):not([class*="MissingContainer"]) {
                 display: inline-block;
                 transition: color 250ms, text-shadow 250ms;
                 color: #000;
@@ -509,10 +509,10 @@ const Container = styled.div`
                     left: 50%;
                     transform: translateX(-50%);
                     content: '';
-                        width: 100%;
-                        height: 3px;
-                        background-color: ${variable.SiteColor};
-                        transition: all 250ms;
+                    width: 100%;
+                    height: 3px;
+                    background-color: ${variable.SiteColor};
+                    transition: all 250ms;
                     }
                     &:hover {
                     color: #fff !important;
