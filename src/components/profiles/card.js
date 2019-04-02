@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 //import style from 'src/styles/themes.module.scss'
 import Missing from "src/images/missing_image_2.png"
 import LazyLoad from "react-lazyload"
-import Stars from "src/images/stars.svg"
 import Loading from 'src/images/Loading.gif'
 import styled from 'styled-components';
 import * as variable from 'src/styles/variables'
