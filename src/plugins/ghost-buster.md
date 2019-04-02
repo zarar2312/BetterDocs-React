@@ -12,7 +12,7 @@ thumbnail:
 previews:
 dependency:
 status: Updated
-auto: true
+auto: false
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---

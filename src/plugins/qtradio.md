@@ -12,7 +12,7 @@ thumbnail: https://raw.githubusercontent.com/LiquidBlast/qtradio-branding/master
 previews:
 dependency:
 status: Updated
-auto:
+auto: false
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---

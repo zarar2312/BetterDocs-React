@@ -12,7 +12,7 @@ thumbnail: https://i.imgur.com/vayt1UX.gif
 previews: [https://i.imgur.com/vayt1UX.gif]
 dependency:
 status: Updated
-auto: true
+auto: false
 ghcommentid: # DON'T CHANGE
 layout: product # DON'T CHANGE
 ---
