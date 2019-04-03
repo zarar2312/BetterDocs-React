@@ -10,11 +10,14 @@ const TagsPage = ({tagsArray}) => {
     <Container>
     <GlobalStyle />
         <Tags><span>Tags:</span>
-          {tagsArray.map(tag => (
-            <Tagg to={`/themes/tag/${tag.fieldValue.toString().toLowerCase()}/`} key={tag.fieldValue}>
-            {tag.fieldValue.toString().toLowerCase()}
+            <Tagg to="/themes/snippets/">
+                snippets
             </Tagg>
-          ))}
+            {tagsArray.map(tag => (
+                <Tagg to={`/themes/tag/${tag.fieldValue.toString().toLowerCase()}/`} key={tag.fieldValue}>
+                    {tag.fieldValue.toString().toLowerCase()}
+                </Tagg>
+            ))}
         </Tags>
     </Container>
   )

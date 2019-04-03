@@ -28,7 +28,7 @@ const FeaturedThemes = (props) => {
         <meta charSet="utf-8" />
         <title>Featured Discord Themes | BetterDocs</title>
         <meta property="og:site_name" content="BetterDocs"/>
-        <meta property="og:title" content="Featured Discord Themes | BetterDocs"/>
+        <meta property="og:title" content="Featured Discord Themes"/>
         <meta property="og:description" content="List of the best Discord themes you can find on the market! Boost your gaming experience along with your hardcore Discord chatting skills today."/>
         <meta property="og:url" content="https://betterdocs.us/themes/featured/" />
     </Helmet>
@@ -71,7 +71,8 @@ const FeaturedThemes = (props) => {
               excerpt={node.excerpt}
               demo={node.frontmatter.demo}
               style={node.frontmatter.style}
-              featured= {node.frontmatter.featured}
+              featured={node.frontmatter.featured}
+              snippet={node.frontmatter.snippet}
               />
             </LazyLoad>
             ))}
@@ -169,7 +170,7 @@ const Container = styled.div`
     &::-webkit-scrollbar {
       width: 8px;
     }
-    a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+    a:not([class*="LinkStatus"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
       display: inline-block;
       transition: color 250ms, text-shadow 250ms;
       color: #000;
@@ -456,7 +457,7 @@ const GlobalStyle = createGlobalStyle`
         }
       }
       ${Main} {
-        a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
+        a:not([class*="LinkStatus"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
           color: #fff;
         }
       }

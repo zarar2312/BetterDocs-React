@@ -36,7 +36,7 @@ const Themes = (props) => {
         <meta charSet="utf-8" />
         <title>BetterDocs | #1 Discord Themes</title>
         <meta property="og:site_name" content="BetterDocs"/>
-        <meta property="og:title" content="BetterDocs | #1 Discord Themes"/>
+        <meta property="og:title" content="#1 Discord Themes"/>
         <meta property="og:description" content="List of free high quality Discord themes by the community! Customize Discord to your own liking with transparent themes and modern themes!"/>
         <meta property="og:url" content="https://betterdocs.us/themes/" />
     </Helmet>
@@ -154,7 +154,8 @@ const Themes = (props) => {
               excerpt={node.excerpt}
               demo={node.frontmatter.demo}
               mode={node.frontmatter.style}
-              featured= {node.frontmatter.featured}
+              featured={node.frontmatter.featured}
+              snippet={node.frontmatter.snippet}
               />
             </LazyLoad>
             ))}
@@ -684,7 +685,7 @@ const Container = styled.div`
       &::-webkit-scrollbar {
         width: 8px;
       }
-      a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+      a:not([class*="LinkStatus"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
         display: inline-block;
         transition: color 250ms, text-shadow 250ms;
         color: #000;
@@ -872,7 +873,7 @@ const GlobalStyle = createGlobalStyle`
         }
       }
       ${Content} {
-        a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
+        a:not([class*="LinkStatus"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]) {
           color: #fff;
         }
       }

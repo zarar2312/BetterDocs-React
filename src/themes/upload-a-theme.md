@@ -33,6 +33,7 @@ I promise it doesn't take long :)
   previews: [Direct link to image, Direct link to image]
   status:
   auto:
+  snippet:
   featured: 
   style: dark
   tags: []
@@ -60,6 +61,7 @@ Here's is some helpful information to inform you what each field does.
   - **thumbnail** - A direct link to an image that will be the thumbnail and shown on the [themes page](https://betterdocs.us/themes/). (16:9) `[REQUIRED]`
   - **previews** - A list of images that show a preview of your theme. [Imgur](https://imgur.com) is highly recommended for compressed images and reliability. Multiple images can be added and seperated by commas ',' `[OPTIONAL]`
   - **status** - Values: `Updated/Oudated`. The current status of your theme.
+  - **snippet** - Values: `true/false`. If your content isn't a full theme you can showcase it as a snippet instead. `[OPTIONAL]`
   - **featured** - Values `True/False`. Remove entirely or leave as false. Only used for featured themes that are chosen.
   - **auto** - If your theme is hosted on [Github](https://github.com) then add `true` to allow users to automatically down the file (or even the entire repo) instead of just' visiting the site, if hosted elsewhere leave blank or remove it entirely. `[REQUIRED]`
   - **style** - Values: `dark/light`. This specifies the setting for the [demo](https://betterdocs.us). `[REQUIRED (if using demo)]`

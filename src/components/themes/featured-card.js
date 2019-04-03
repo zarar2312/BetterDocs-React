@@ -11,7 +11,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const themeFeaturedCard = ({title, thumbnail, author, slug}) => (
     <Card
-        to={"/themes" + slug}>
+        to={"/theme" + slug}>
         <GlobalStyle />
         <ThumbnailContainer>
             {thumbnail ?

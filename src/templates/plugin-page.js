@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout-mobile-footer'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Sidebar from '../components/plugins/sidebar'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import kebabCase from "lodash/kebabCase"
@@ -19,6 +19,7 @@ import DependencyArea from '../components/plugins/page-dependency-area'
 import TagsArea from '../components/plugins/page-tags-area'
 import Alerts from '../components/plugins/page-alert'
 import mydate from 'current-date'
+import Authorcard from '../components/plugins/author-card'
 
 const Mydate = mydate('date');
 
@@ -204,6 +205,19 @@ const Plugins = (props) => {
           }
         </Tabbs>
         ))}
+        <MoreHeader><Link to={"profile/" + node.frontmatter.author}>{node.frontmatter.author}'s</Link> Plugins</MoreHeader>
+          <Authorcard 
+          title={node.frontmatter.title} 
+          thumbnail={node.frontmatter.thumbnail}
+          slug={node.fields.slug}
+          status={node.frontmatter.status}
+          tags={node.frontmatter.tags}
+          author={node.frontmatter.author}
+          excerpt={node.excerpt}
+          demo={node.frontmatter.demo}
+          mode={node.frontmatter.style}
+          featured= {node.frontmatter.featured}
+          />
       </Wrapper>
       ))}
       <Sidebar />
@@ -352,6 +366,8 @@ const AlertLink = styled.div`
 `
 const DeprecatedBtn = styled.a`
 `
+const MoreHeader = styled.h2`
+`
 const MobileHeader = styled.div`
   position: fixed;
   top: 0px;
@@ -393,6 +409,46 @@ const Container = styled.div`
     padding-left: unset;
     @media ${variable.MidPoint} {
       padding-left: 14.8rem;
+    }
+    ${MoreHeader} {
+      order: 3;
+      font-size: 1.55rem;
+      word-break: keep-all;
+      margin-bottom: 0;
+      background-color: #e6e6e6;
+      padding: 0.7rem 2rem;
+      padding-bottom: 1.2rem;
+      a:not([class*="anchor"]) {
+        display: inline-block;
+        transition: color 250ms, text-shadow 250ms;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        line-height: 1rem;
+        &:after {
+          position: absolute;
+          z-index: -1;
+          bottom: -9px;
+          left: 50%;
+          transform: translateX(-50%);
+          content: '';
+          width: 100%;
+          height: 3px;
+          background-color: ${variable.SiteColor};
+          transition: all 250ms;
+        }
+        &:hover {
+          color: #fff;
+          opacity: 1;
+          background-color: transparent;
+        &::after {
+            height: 160%;
+            width: 110%;
+          }
+        }
+      }
     }
   ${Tabbs} {
     order: 3;
@@ -894,6 +950,13 @@ const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
   ${Container} {
     background-color: #36393f;
+    ${MoreHeader} {
+        background-color: #2f3238;
+        color: #eee;
+        a {
+          color: #fff !important;
+        }
+      }
     ${Tabbs} {
       ${TabListt} {
         ${Tabb} {

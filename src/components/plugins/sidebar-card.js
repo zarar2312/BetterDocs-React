@@ -12,7 +12,7 @@ import { createGlobalStyle } from 'styled-components'
 const pluginSidebarCard = ({title, slug, status, excerpt, author}) => (
     <Card
     activeClassName="active"
-    to={'plugins' + slug}
+    to={'plugin' + slug}
     >
     <GlobalStyle />
         <Header>

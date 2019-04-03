@@ -10,7 +10,7 @@ import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 
-const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featured, demo, mode}) => (
+const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featured, demo, mode, snippet}) => (
     <Cards>
         <GlobalStyle />
         { thumbnail ?
@@ -58,12 +58,26 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
             }
             {status ?
             <StatusContainer>
+                {snippet === true &&
+                <LinkStatus to="/themes/snippets">
+                    <Status alt="Snippet">
+                        Snippet
+                    </Status>
+                </LinkStatus>
+                }
                 <Status alt={status}>
                     {status}
                 </Status>
             </StatusContainer>
             :
             <StatusContainer>
+                {snippet === true &&
+                <LinkStatus to="/themes/snippets">
+                    <Status alt="Snippet">
+                        Snippet
+                    </Status>
+                </LinkStatus>
+                }
                 <Status alt="Unknown">
                     Unknown
                 </Status>
@@ -132,6 +146,8 @@ const ImageContainer = styled.div`
 const MissingImageContainer = styled(Link)`
 `
 const ThumbnailLink = styled(Link)` 
+`
+const LinkStatus = styled(Link)`
 `
 const SmallDetails = styled.div`
 `
@@ -350,6 +366,17 @@ const Cards = styled.div`
                 text-align: center;
                 display: none;
                 color: #fff;
+                word-break: keep-all;
+                &[alt="Snippet"] {
+                    background-color: #f4f4f4;
+                    border-color: #e4e4e4;
+                    display: table;
+                    margin-right: 0.2rem;
+                    color: hsla(0,0%,0%,0.8);
+                    &:hover {
+                        background-color: #e4e4e4;
+                    }
+                }
                 &[alt="Updated"] {
                     background-color: #00b167;
                     border-color: #00b167;
@@ -609,7 +636,15 @@ const GlobalStyle = createGlobalStyle`
         ${SmallDetails} {
             ${StatusContainer} {
                 ${Status} {
-                    
+                    &[alt="Snippet"] {
+                        background-color: #33363c;
+                        border-color: #2a2b2f;
+                        color: rgba(255,255,255,0.8);
+                        &:hover {
+                            background-color: #2a2b2f;
+                            color: #fff;
+                        }
+                    }
                 }
             }
             ${AuthorContainer} {
@@ -631,7 +666,7 @@ const GlobalStyle = createGlobalStyle`
         }
         ${TitleContainer} {
             ${Title} {
-                color: rgba(255, 255, 255, 0.88);
+                color: rgba(255, 255, 255, 0.88) !important;
                 &::after {
                     height: 0 !important;
                 }

@@ -9,6 +9,7 @@ import * as variable from '../styles/variables'
 import { darken } from 'polished'
 import Plugincard from '../components/plugins/card'
 import Themecard from '../components/themes/card'
+import { createGlobalStyle } from 'styled-components'
 
 const Updated = "#00b167";
 const Deprecated = "#eb0505";
@@ -23,6 +24,7 @@ const Author = ({ pageContext, data }) => {
 
   return (
     <Layout>
+    <GlobalStyle />
       {data.limit.edges.map(({ node }) => (
       <Helmet
         key={node.id}
@@ -404,7 +406,7 @@ const Container = styled.div`
                                   margin-left: 0.2rem;
                                   background-color: #f4f4f4;
                                   border: 1px solid #e4e4e4;
-                                  padding: 0.1rem 0.5rem;
+                                  padding: 0.18rem 0.5rem;
                                   border-radius: 25px;
                                   text-align: center;
                                   &:only-child {
@@ -701,5 +703,61 @@ const Container = styled.div`
               }
           }
       }
+  }
+`
+
+const GlobalStyle = createGlobalStyle`
+  [mode="dark"] {
+    ${Container} {
+        background-color: #36393f;
+        ${Titlebar} {
+            border-bottom: 1px solid #111215;
+            background-color: rgba(0, 0, 0, 0.6);
+            ${Counter} {
+                color: #c7c7c7;
+            }
+        }
+        ${Flex} {
+            ${ProfileContainer} {
+                ${ProfileColumn} {
+                    ${ProfileRow} {
+                        ${ProfileSection} {
+                            background-color: #222327;
+                            border-color: #19191b;
+                            ${Details} {
+                                ${ProfileWrapper} {
+                                }
+                                ${Name} {
+                                    color: #fff;
+                                }
+                                ${Roles} {
+                                    ${Role} {
+                                        background-color: #161719;
+                                        border: 1px solid #36393f;
+                                        color: #c7c7c7;
+                                    }
+                                }
+                            }
+                            ${LinksContainer} {
+                                ${Header} {
+                                    color: #fff;
+                                }
+                                ${Links} {
+                                    a {
+                                        p {
+                                            color: #c7c7c7;
+                                        }
+                                        svg {
+                                            fill: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
   }
 `

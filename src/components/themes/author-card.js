@@ -252,7 +252,7 @@ ${Cards} {
     width: 16rem;
     &:last-child {
         margin-bottom: unset;
-        padding-right: 1rem;
+        margin-right: 1rem;
     }
     &:first-child, &:only-child {
         margin-left: unset;

@@ -42,6 +42,7 @@ class Features extends React.Component {
               status
               auto
               featured
+              snippet
               style
               tags
               date(formatString: "DD/MM/YYYY")
@@ -81,6 +82,7 @@ class Features extends React.Component {
               status
               auto
               featured
+              snippet
               style
               tags
               date(formatString: "DD/MM/YYYY")
@@ -113,6 +115,7 @@ class Features extends React.Component {
             discord_server
             demo
             thumbnail
+            snippet
             previews
             status
             auto
