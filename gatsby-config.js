@@ -8,8 +8,7 @@ const {
 } = process.env;
 const isNetlifyProduction = NETLIFY_ENV === 'production';
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
-
-const { GITHUB_TOKEN } = process.env;
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
@@ -68,7 +67,7 @@ module.exports = {
         // HTTP headers
         headers: {
           // Learn about environment variables: https://gatsby.dev/env-vars
-          Authorization: `bearer ${GITHUB_TOKEN}`,
+          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
         },
         // Additional options to pass to node-fetch
         fetchOptions: {},
