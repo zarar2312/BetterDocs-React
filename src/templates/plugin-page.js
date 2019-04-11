@@ -20,6 +20,7 @@ import TagsArea from '../components/plugins/page-tags-area'
 import Alerts from '../components/plugins/page-alert'
 import mydate from 'current-date'
 import Authorcard from '../components/plugins/author-card'
+import Comments from '../components/themes/comments'
 
 const Mydate = mydate('date');
 
@@ -28,20 +29,21 @@ const Plugins = (props) => {
   const previewList = props.data.previewsList;
   const dependenciesList = props.data.dependencyList;
   const softList = props.data.softwareList;
+  const git = props.data.github;
 
   return (
   <Layout>
     {pluginList.edges.map(({ node }, i) => (
     <Helmet
       key={node.id}
-      title={ node.frontmatter.title + ' by ' + node.frontmatter.author + ' | BetterDocs' }
+      title={ node.frontmatter.title + ' by ' + node.frontmatter.author.frontmatter.author_id + ' | BetterDocs' }
       meta={[
         { name: 'description', content: node.frontmatter.description },
         { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
       ]}>
       <meta property="og:site_name" content="BetterDocs"/>
-      {node.frontmatter.author ?
-      <meta property="og:title" content={node.frontmatter.title + ' by ' + node.frontmatter.author}/>
+      {node.frontmatter.author.frontmatter.author_id ?
+      <meta property="og:title" content={node.frontmatter.title + ' by ' + node.frontmatter.author.frontmatter.author_id}/>
       :
       <meta property="og:title" content={node.frontmatter.title}/>
       }
@@ -125,7 +127,7 @@ const Plugins = (props) => {
               </Area>
               <AreaFlex>
                 <ContributionArea
-                author={node.frontmatter.author}
+                author={node.frontmatter.author.frontmatter.author_id}
                 maintainer={node.frontmatter.maintainer_name}
                 title={node.frontmatter.title}
                 areaHeader="Contributors"
@@ -205,14 +207,34 @@ const Plugins = (props) => {
           }
         </Tabbs>
         ))}
-        <MoreHeader><Link to={"profile/" + node.frontmatter.author}>{node.frontmatter.author}'s</Link> Plugins</MoreHeader>
+        <CommentsArea>
+          <Top>
+            <CommentsHeader>Feedback</CommentsHeader>
+            <a href={git.repository.issue.url} target="blank">Post a comment</a>
+          </Top>
+          <CommentsContainer>
+            {git.repository.issue.comments.edges.map(({ node }) => (
+              <Comments
+              username={node.author.login}
+              body={node.body}
+              key={node.id}
+              avatar={node.author.avatarUrl}
+              userUrl={node.author.url}
+              reactions={node.reactionGroups}
+              lastEditDate={node.lastEditedAt}
+              commentLink={node.url}
+              />
+            ))}
+          </CommentsContainer>
+        </CommentsArea>
+        <MoreHeader><Link to={"profile/" + node.frontmatter.author.frontmatter.author_id}>{node.frontmatter.author.frontmatter.author_id}'s</Link> Plugins</MoreHeader>
           <Authorcard 
           title={node.frontmatter.title} 
           thumbnail={node.frontmatter.thumbnail}
           slug={node.fields.slug}
           status={node.frontmatter.status}
           tags={node.frontmatter.tags}
-          author={node.frontmatter.author}
+          author={node.frontmatter.author.frontmatter.author_id}
           excerpt={node.excerpt}
           demo={node.frontmatter.demo}
           mode={node.frontmatter.style}
@@ -244,7 +266,11 @@ const Plugins = (props) => {
 export default Plugins;
 
 export const pluginsQuery = graphql`
-  query pluginsQuery($slug: String!) {
+  query pluginsQuery(
+    $slug: String!
+    $ghcommentid: Int!
+    ) {
+
     listPlugins:allMarkdownRemark(
       filter: {
         collection: { 
@@ -262,6 +288,7 @@ export const pluginsQuery = graphql`
       }
       ...pluginFragment
     },
+
     previewsList:allMarkdownRemark(
       filter: { 
         collection: { 
@@ -280,6 +307,7 @@ export const pluginsQuery = graphql`
       }
       ...pluginFragment
     },
+
     softwareList:allMarkdownRemark(
       filter: {
         collection: { 
@@ -297,6 +325,7 @@ export const pluginsQuery = graphql`
       }
       ...pluginFragment
     },
+
     dependencyList:allMarkdownRemark(
       filter: {
         collection: { 
@@ -313,6 +342,43 @@ export const pluginsQuery = graphql`
         totalCount
       }
       ...pluginFragment
+    },
+
+    github: github {
+      repository(owner: "MrRobotjs", name: "BetterDocs-React") {
+        id
+        createdAt
+        description
+        issue(number: $ghcommentid) {
+          title
+          url
+          author {
+            login
+            url
+            avatarUrl
+          }
+          comments(first:20) {
+            edges {
+              node {
+                author {
+                  login
+                  url
+                  avatarUrl
+                }
+                url
+                lastEditedAt
+                body
+                reactionGroups {
+                  content
+                  users {
+                    totalCount
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 `
@@ -368,6 +434,14 @@ const DeprecatedBtn = styled.a`
 `
 const MoreHeader = styled.h2`
 `
+const CommentsHeader = styled.div`
+`
+const CommentsArea = styled.div`
+`
+const CommentsContainer = styled.div`
+`
+const Top = styled.div`
+`
 const MobileHeader = styled.div`
   position: fixed;
   top: 0px;
@@ -410,8 +484,46 @@ const Container = styled.div`
     @media ${variable.MidPoint} {
       padding-left: 14.8rem;
     }
+    ${CommentsHeader} {
+      font-size: 1.55rem;
+      word-break: keep-all;
+      margin-bottom: 0;
+      padding: 0 2rem;
+      background-color: transparent;
+      a:not([class*="anchor"]) {
+        display: inline-block;
+        transition: color 250ms, text-shadow 250ms;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        line-height: 1rem;
+        &:after {
+          position: absolute;
+          z-index: -1;
+          bottom: -9px;
+          left: 50%;
+          transform: translateX(-50%);
+          content: '';
+          width: 100%;
+          height: 3px;
+          background-color: ${variable.SiteColor};
+          transition: all 250ms;
+        }
+        &:hover {
+          color: #fff;
+          opacity: 1;
+          background-color: transparent;
+        &::after {
+            height: 160%;
+            width: 110%;
+          }
+        }
+      }
+    }
     ${MoreHeader} {
-      order: 3;
+      order: 5;
       font-size: 1.55rem;
       word-break: keep-all;
       margin-bottom: 0;
@@ -448,6 +560,67 @@ const Container = styled.div`
             width: 110%;
           }
         }
+      }
+    }
+    ${CommentsArea} {
+      order: 4;
+      ${Top} {
+        display: flex;
+        a {
+          align-self: center;
+          background-color: ${variable.SiteColor};
+          padding: 0.4rem 0.7rem;
+          font-size: 0.8rem;
+          color: #fff;
+          transition: 210ms all linear;
+          border-radius: 5px;
+          &:hover {
+            box-shadow: 2px 2px 40px -12px #000;
+          }
+        }
+      }
+      ${MoreHeader} {
+        font-size: 1.55rem;
+        word-break: keep-all;
+        margin-bottom: 0;
+        background-color: #e6e6e6;
+        padding: 0.7rem 2rem;
+        padding-bottom: 1.2rem;
+        a:not([class*="anchor"]) {
+          display: inline-block;
+          transition: color 250ms, text-shadow 250ms;
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+          position: relative;
+          z-index: 0;
+          line-height: 1rem;
+          &:after {
+            position: absolute;
+            z-index: -1;
+            bottom: -9px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: ${variable.SiteColor};
+            transition: all 250ms;
+          }
+          &:hover {
+            color: #fff;
+            opacity: 1;
+            background-color: transparent;
+          &::after {
+              height: 160%;
+              width: 110%;
+            }
+          }
+        }
+      }
+      ${CommentsContainer} {
+        margin: 0 2rem;
+        margin-top: 1rem;
       }
     }
   ${Tabbs} {
@@ -777,7 +950,7 @@ const Container = styled.div`
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          margin-bottom: 0.8rem;
+          margin-bottom: 1.6rem;
           @media ${variable.MidPoint} {
             flex-direction: row;
             justify-content: flex-start;
@@ -955,6 +1128,13 @@ const GlobalStyle = createGlobalStyle`
         color: #eee;
         a {
           color: #fff !important;
+        }
+      }
+      ${CommentsHeader} {
+        background-color: transparent;
+        color: #eee;
+        a {
+          color: #fff;
         }
       }
     ${Tabbs} {

@@ -6,6 +6,9 @@ description: Want to publish your plugin to our Showcase? Follow these instructi
 status: none
 maintainer_name: Placeholder
 contributor_name: [Placeholder]
+author: placeholder
+ghcommentid: 441
+date: 2018-10-26T15:27:19.930Z
 ---
 # Publish your work
 Want to publish your plugin to our [Showcase](https://betterdocs.us/plugins/)? Follow these instructions slow & carefully.
@@ -36,7 +39,7 @@ I promise it doesn't take long :)
   dependency:
   status:
   auto:
-  ghcommentid: # DON'T CHANGE
+  ghcommentid: 441
   layout: product # DON'T CHANGE
 ---
   # A full description of your plugin. All Markdown is allowed.

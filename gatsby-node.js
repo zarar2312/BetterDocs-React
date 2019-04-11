@@ -2,6 +2,8 @@ const path = require('path')
 const _ = require("lodash")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+let gatsbyNodeModules = require('fs').realpathSync('node_modules/gatsby')
+gatsbyNodeModules = require('path').resolve(gatsbyNodeModules, '..')
 
 exports.createPages = ({actions, graphql}) => {
 const { createPage } = actions;
@@ -28,10 +30,19 @@ return graphql(`{
               slug
             }
             frontmatter {
-              author
+              author {
+                frontmatter {
+                  avatar_url
+                  github_profile_url
+                  discord_server
+                  theme_developer
+                  author_id
+                }
+              }
               tags
               software
               featured
+              ghcommentid
             }
           }
         }
@@ -51,10 +62,19 @@ return graphql(`{
               slug
             }
             frontmatter {
-              author
+              author {
+                frontmatter {
+                  avatar_url
+                  github_profile_url
+                  discord_server
+                  theme_developer
+                  author_id
+                }
+              }
               tags
               software
               featured
+              ghcommentid
             }
           }
         }
@@ -69,7 +89,16 @@ return graphql(`{
               slug
             }
             frontmatter {
-              author
+              author {
+                frontmatter {
+                  avatar_url
+                  github_profile_url
+                  discord_server
+                  theme_developer
+                  author_id
+                }
+              }
+              ghcommentid
             }
           }
         }
@@ -157,8 +186,8 @@ return graphql(`{
     let authors = []
     // Iterate through each post, putting all found tags into `tags`
     _.each(all, edge => {
-      if (_.get(edge, "node.frontmatter.author")) {
-        authors = authors.concat(edge.node.frontmatter.author)
+      if (_.get(edge, "node.frontmatter.author.frontmatter.author_id")) {
+        authors = authors.concat(edge.node.frontmatter.author.frontmatter.author_id)
       }
     })
     // Eliminate duplicate tags
@@ -192,6 +221,7 @@ return graphql(`{
             component: pluginTemplate,
             context: {
               slug: node.fields.slug,
+              ghcommentid: node.frontmatter.ghcommentid,
             }, // additional data can be passed via context
             })
         })
@@ -202,6 +232,8 @@ return graphql(`{
         component: themeTemplate,
         context: {
           slug: node.fields.slug,
+          ghcommentid: node.frontmatter.ghcommentid,
+          authorid: node.frontmatter.author.frontmatter.author_id,
         }, // additional data can be passed via context
         })
     })
@@ -217,9 +249,6 @@ exports.onCreateNode =({ node, getNode, actions }) => {
     if (node.internal.type === `MarkdownRemark`) {
         node.collection = getNode(node.parent).sourceInstanceName;
 
-        const relativeFilePath = createFilePath({ node, getNode, basePath: "pages",
-        })
-
         const slug = createFilePath({ node, getNode, basePath: `pages` })
         // Creates new query'able field with name of 'slug'
         createNodeField({
@@ -228,4 +257,14 @@ exports.onCreateNode =({ node, getNode, actions }) => {
           value: slug,
         })
     }
+}
+
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [gatsbyNodeModules, 'node_modules'],
+    },
+  })
+  
 }

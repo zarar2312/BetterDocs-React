@@ -4,10 +4,12 @@ const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://betterdocs-react.netlify.com',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env;
 const isNetlifyProduction = NETLIFY_ENV === 'production';
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
+const { GITHUB_TOKEN } = process.env;
 
 module.exports = {
   siteMetadata: {
@@ -54,6 +56,22 @@ module.exports = {
       options: {
         color: `#7289DA`, // Setting a color is optional.
         showSpinner: false, // Disable the loading spinner.
+      },
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "GitHub",
+        fieldName: "github",
+        // Url to query from
+        url: "https://api.github.com/graphql",
+        // HTTP headers
+        headers: {
+          // Learn about environment variables: https://gatsby.dev/env-vars
+          Authorization: `bearer a6c7540fdc3f6907e4fdcb4c292b87c0471e556e`,
+        },
+        // Additional options to pass to node-fetch
+        fetchOptions: {},
       },
     },
     {
@@ -181,4 +199,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
+  mapping: {
+    'MarkdownRemark.frontmatter.author': `MarkdownRemark.frontmatter.author_id`,
+  },
 }

@@ -5,6 +5,8 @@ description: Want to publish your theme to our Showcase? Follow these instructio
 status: none
 maintainer_name: Placeholder
 contributor_name: [Placeholder]
+ghcommentid: 441
+author: placeholder
 ---
 # Publish your work
 Want to publish your theme to our [Showcase](https://betterdocs.us/themes/)? Follow these instructions slow & carefully.
@@ -37,7 +39,7 @@ I promise it doesn't take long :)
   featured: 
   style: dark
   tags: []
-  ghcommentid: # DON'T CHANGE
+  ghcommentid: 441
   layout: product # DON'T CHANGE
 ---
   # A full description of your theme. All Markdown is allowed.

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 //import style from 'src/styles/themes.module.scss'
 import Missing from "src/images/missing_image_2.png"
 import LazyLoad from "react-lazyload"
@@ -10,116 +10,107 @@ import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 
-const themeCard = ({author}) => (
-    <StaticQuery
-    query={ graphql`
-    query {
-        allMarkdownRemark(filter: {collection: {eq: "themes"} } sort: { fields: [frontmatter___title], order: ASC}) {
-          group(field: frontmatter___tags) {
-            fieldValue
-            totalCount
-          }
-          ...themeFragment
-        }
-      }
-  `}
-    render={data => (
+const themeCard = ({slug, featured, thumbnail, title, demo, mode, tags, author, status, excerpt, snippet}) => (
     <>
     <GlobalStyle />
-        <Container>
-        {data.allMarkdownRemark.edges.map(({ node }, i) => (
-            <>
-            {node.frontmatter.author === author &&
-            <Cards>
-                { node.frontmatter.thumbnail ?
-                <ImageContainer alt={node.frontmatter.featured && "featured"}>
-                <ThumbnailLink to={"theme" + node.fields.slug}>
-                    <LazyLoad once={true} height="100%"
-                            placeholder={<Thumbnail to={"theme" + node.fields.slug} alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
-                        <Thumbnail alt={node.frontmatter.title} src={node.frontmatter.thumbnail}/>
-                    </LazyLoad>
-                </ThumbnailLink>
-                
-                { node.frontmatter.featured &&
-                    <FeaturedIcon 
-                    to="/themes/featured/"
-                    data-balloon="Featured" data-balloon-pos="left"
-                    >
-                        <Star src={Stars} alt="Featured Theme icon"></Star>
-                    </FeaturedIcon>
-                }
-                <Options>
-                    <Btn
-                    href={node.frontmatter.thumbnail}
-                    target="blank"
-                    >Image Source</Btn>
-                    {node.frontmatter.demo &&
-                    <DisabledBtn
-                    href={'https://betterdocs.us/preview/' + node.frontmatter.mode + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"}
-                    target="blank"
-                    title="Demo Temporarily Disabled">Quick Demo</DisabledBtn>
-                    }
-                </Options>
-                </ImageContainer>
-                :
-                <MissingImageContainer to="themes/upload-a-theme">
-                <Thumbnail alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
-                </MissingImageContainer>
-                }
-                <SmallDetails>
-                    {node.frontmatter.author &&
-                        <AuthorContainer>
-                            <Author
-                            to={"/profile/" + node.frontmatter.author}
-                            >{node.frontmatter.author} /</Author>
-                        </AuthorContainer>
-                    }
-                    {node.frontmatter.status ?
-                    <StatusContainer>
-                        <Status alt={node.frontmatter.status}>
-                            {node.frontmatter.status}
-                        </Status>
-                    </StatusContainer>
-                    :
-                    <StatusContainer>
-                        <Status alt="Unknown">
-                            Unknown
-                        </Status>
-                    </StatusContainer>
-                    }
-                </SmallDetails>
-                <TitleContainer>
-                    <Title 
-                    to={"theme" + node.fields.slug}>
-                    {node.frontmatter.title}
-                    </Title>
-                </TitleContainer>
-                {node.frontmatter.tags ?
-                <div>
-                <Description>
-                    <Text>{node.excerpt}</Text>
-                </Description>
-                <Tags>
-                    {node.frontmatter.tags.map(tag => (
-                    <Tag to={`/themes/tag/${tag.toString().toLowerCase()}/`} key={tag}>
-                        #{tag.toString().toLowerCase()}
-                    </Tag>
-                    ))}
-                </Tags>
-                </div>
-                :
-                <AltDescription>
-                    <Text>{node.excerpt}</Text>
-                </AltDescription>
-                }
-            </Cards>
+        <Cards>
+            { thumbnail ?
+            <ImageContainer alt={featured && "featured"}>
+            <ThumbnailLink to={"theme" + slug}>
+                <LazyLoad once={true} height="100%"
+                        placeholder={<Thumbnail to={"theme" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                    <Thumbnail alt={title} src={thumbnail}/>
+                </LazyLoad>
+            </ThumbnailLink>
+            
+            { featured &&
+                <FeaturedIcon 
+                to="/themes/featured/"
+                data-balloon="Featured" data-balloon-pos="left"
+                >
+                    <Star src={Stars} alt="Featured Theme icon"></Star>
+                </FeaturedIcon>
             }
-            </>
-            ))}
-        </Container>
+            <Options>
+                <Btn
+                href={thumbnail}
+                target="blank"
+                >Image Source</Btn>
+                {demo &&
+                <DisabledBtn
+                href={'https://betterdocs.us/preview/' + mode + '.html?theme=' + demo + "?no-cache=1"}
+                target="blank"
+                title="Demo Temporarily Disabled">Quick Demo</DisabledBtn>
+                }
+            </Options>
+            </ImageContainer>
+            :
+            <MissingImageContainer to="themes/upload-a-theme">
+            <Thumbnail alt={title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
+            </MissingImageContainer>
+            }
+            <SmallDetails>
+                {author &&
+                    <AuthorContainer>
+                        <Author
+                        to={"/profile/" + author}
+                        >{author} /</Author>
+                    </AuthorContainer>
+                }
+                {status ?
+                <StatusContainer>
+                    {snippet === true &&
+                    <LinkStatus to="/themes/snippets">
+                        <Status alt="Snippet">
+                            Snippet
+                        </Status>
+                    </LinkStatus>
+                    }
+                    <Status alt={status}>
+                        {status}
+                    </Status>
+                </StatusContainer>
+                :
+                <StatusContainer>
+                    {snippet === true &&
+                    <LinkStatus to="/themes/snippets">
+                        <Status alt="Snippet">
+                            Snippet
+                        </Status>
+                    </LinkStatus>
+                    }
+                    <Status alt="Unknown">
+                        Unknown
+                    </Status>
+                </StatusContainer>
+                }
+            </SmallDetails>
+            <TitleContainer>
+                <Title 
+                to={"theme" + slug}>
+                {title}
+                </Title>
+            </TitleContainer>
+            {tags ?
+            <div>
+            <Description>
+                <Text>{excerpt}</Text>
+            </Description>
+            <Tags>
+                {tags.map(tag => (
+                <Tag to={`/themes/tag/${tag.toString().toLowerCase()}/`} key={tag}>
+                    #{tag.toString().toLowerCase()}
+                </Tag>
+                ))}
+            </Tags>
+            </div>
+            :
+            <AltDescription>
+                <Text>{excerpt}</Text>
+            </AltDescription>
+            }
+        </Cards>
     </>
-)}
-/>
 )
 
 export default themeCard
@@ -166,78 +157,10 @@ const AuthorContainer = styled.div`
 `
 const StatusContainer = styled.div`
 `
-const Cards = styled.div`
+const LinkStatus = styled(Link)`
 `
-const Container = styled.div`
-    order: 4;
-    /*display: flex;*/
-    padding: 2rem;
-    margin-bottom: 2.1rem;
-    padding-top: 0;
-    padding-bottom: 1rem;
-    background-color: #e6e6e6;
-    word-break: break-all;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    overflow-x: auto;
-    display: -webkit-box;
-    -webkit-overflow-scrolling: touch;
-    &::-webkit-scrollbar-button { 
-        display: none; 
-        height: 10px; 
-        border-radius: 0px; 
-    } 
-    &::-webkit-scrollbar-thumb { 
-        background-color: ${rgba(variable.SiteColor, 0.3)};
-        transition: background-color .2s ease-in-out;
-    } 
-    &::-webkit-scrollbar-thumb:hover { 
-        background-color: ${variable.SiteColor}; 
-    } 
-    &::-webkit-scrollbar-track { 
-        background-color: ${rgba(variable.SiteColor, 0.06)};
-    }
-    &::-webkit-scrollbar { 
-        width: 8px;
-        height: 10px;
-    }
-    a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
-        display: inline-block;
-        transition: color 250ms, text-shadow 250ms;
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-        position: relative;
-        z-index: 0;
-        line-height: 1rem;
-    &:after {
-        position: absolute;
-        z-index: -1;
-        bottom: -1px;
-        left: 50%;
-        transform: translateX(-50%);
-        content: '';
-        width: 100%;
-        height: 3px;
-        background-color: ${variable.SiteColor};
-        transition: all 250ms;
-    }
-    &:hover {
-        color: #fff !important;
-        opacity: 1;
-        background-color: transparent;
-        &::after {
-            height: 110% !important;
-            width: 110% !important;
-        }
-    }
-}
-@media ${variable.MidPoint} {
-    margin-bottom: 0;
-    padding-bottom: 0.2rem;
-}
-${Cards} {
+
+const Cards = styled.div`
     display: flex;
     flex-direction: column;
     /*flex-basis: 16rem;*/
@@ -471,6 +394,16 @@ ${Cards} {
                     text-align: center;
                     display: none;
                     color: #fff;
+                    &[alt="Snippet"] {
+                        background-color: #f4f4f4;
+                        border-color: #e4e4e4;
+                        display: table;
+                        margin-right: 0.2rem;
+                        color: hsla(0,0%,0%,0.8);
+                        &:hover {
+                            background-color: #e4e4e4;
+                        }
+                    }
                     &[alt="Updated"] {
                         background-color: #00b167;
                         border-color: #00b167;
@@ -568,44 +501,10 @@ ${Cards} {
             }
         }
     }
-}
 `
 
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
-    ${Container} {
-        background-color: #2f3238;
-        a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
-            display: inline-block;
-            transition: color 250ms, text-shadow 250ms;
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-            position: relative;
-            z-index: 0;
-            line-height: 1rem;
-            &:after {
-                position: absolute;
-                z-index: -1;
-                bottom: -1px;
-                left: 50%;
-                transform: translateX(-50%);
-                content: '';
-                width: 100%;
-                height: 3px;
-                background-color: ${variable.SiteColor};
-                transition: all 250ms;
-            }
-            &:hover {
-                color: #fff !important;
-                opacity: 1;
-                background-color: transparent;
-                &::after {
-                    height: 110% !important;
-                    width: 110% !important;
-                }
-            }
-        }
         ${Cards} {
             background-color: #222327;
             border-color: #222327;
@@ -714,7 +613,15 @@ const GlobalStyle = createGlobalStyle`
             ${SmallDetails} {
                 ${StatusContainer} {
                     ${Status} {
-                        
+                        &[alt="Snippet"] {
+                            background-color: #33363c;
+                            border-color: #2a2b2f;
+                            color: rgba(255,255,255,0.8);
+                            &:hover {
+                                background-color: #2a2b2f;
+                                color: #fff;
+                            }
+                        }
                     }
                 }
                 ${AuthorContainer} {
@@ -782,6 +689,5 @@ const GlobalStyle = createGlobalStyle`
                 }
             }
         }
-    }
 }
 `

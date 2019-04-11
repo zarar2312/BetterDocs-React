@@ -40,7 +40,7 @@ const Sidebar = () => (
             <Card 
             key={node.id}
             title={node.frontmatter.title}
-            author={node.frontmatter.author}
+            author={node.frontmatter.author.frontmatter.author_id}
             slug={node.fields.slug}
             status={node.frontmatter.status}
             excerpt={node.excerpt}

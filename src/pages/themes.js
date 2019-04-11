@@ -89,7 +89,7 @@ const Themes = (props) => {
           title={node.frontmatter.title}
           thumbnail={node.frontmatter.thumbnail}
           slug={node.fields.slug}
-          author={node.frontmatter.author}/>
+          author={node.frontmatter.author.frontmatter.author_id}/>
         </LazyLoad>
         ))}
         <LastCard to="/themes/featured/">
@@ -150,7 +150,7 @@ const Themes = (props) => {
               slug={node.fields.slug}
               status={node.frontmatter.status}
               tags={node.frontmatter.tags}
-              author={node.frontmatter.author}
+              author={node.frontmatter.author.frontmatter.author_id}
               excerpt={node.excerpt}
               demo={node.frontmatter.demo}
               mode={node.frontmatter.style}

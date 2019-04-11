@@ -28,15 +28,15 @@ const Author = ({ pageContext, data }) => {
       {data.limit.edges.map(({ node }) => (
       <Helmet
         key={node.id}
-        title={ node.frontmatter.author + `'s Profile | BetterDocs` }
+        title={ node.frontmatter.author.frontmatter.author_id + `'s Profile | BetterDocs` }
         meta={[
           { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
         ]}>
         <meta property="og:site_name" content="BetterDocs"/>
-        <meta property="og:title" content={node.frontmatter.author + `'s Profile`}/>
-        <meta property="og:description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
-        <meta property="description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
-        <meta property="og:url" content={"https://betterdocs.us/profile/" + node.frontmatter.author} />
+        <meta property="og:title" content={node.frontmatter.author.frontmatter.author_id + `'s Profile`}/>
+        <meta property="og:description" content={"Find all of " + node.frontmatter.author.frontmatter.author_id + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
+        <meta property="description" content={"Find all of " + node.frontmatter.author.frontmatter.author_id + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
+        <meta property="og:url" content={"https://betterdocs.us/profile/" + node.frontmatter.author.frontmatter.author_id} />
         <html lang="en" />
       </Helmet>
       ))}
@@ -62,12 +62,12 @@ const Author = ({ pageContext, data }) => {
               <Details>
                 {node.frontmatter.avatar_url &&
                     <ProfileWrapper>
-                        <Avatar src={node.frontmatter.avatar_url} title={node.frontmatter.name + "'s Profile Avatar"} />
+                        <Avatar src={node.frontmatter.avatar_url} title={node.frontmatter.author_id + "'s Profile Avatar"} />
                     </ProfileWrapper>
                 }
-                {node.frontmatter.name &&
+                {node.frontmatter.author_id &&
                     <Name>
-                        {node.frontmatter.name}
+                        {node.frontmatter.author_id}
                     </Name>
                 }
                 <Roles>
@@ -176,7 +176,7 @@ const Author = ({ pageContext, data }) => {
                     slug={node.fields.slug}
                     status={node.frontmatter.status}
                     tags={node.frontmatter.tags}
-                    author={node.frontmatter.author}
+                    author={node.frontmatter.author.frontmatter.author_id}
                     excerpt={node.excerpt}
                     demo={node.frontmatter.demo}
                     mode={node.frontmatter.style}
@@ -194,7 +194,7 @@ const Author = ({ pageContext, data }) => {
                     slug={node.fields.slug}
                     status={node.frontmatter.status}
                     tags={node.frontmatter.tags}
-                    author={node.frontmatter.author}
+                    author={node.frontmatter.author.frontmatter.author_id}
                     excerpt={node.excerpt}
                     softwares={node.frontmatter.software}
                     key={node.id}
@@ -240,19 +240,19 @@ export default Author
 
 export const authorQuery = graphql`
   query($authors: String) {
-    all:allMarkdownRemark( filter: { frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
+    all:allMarkdownRemark( filter: { frontmatter: { author: { frontmatter: { author_id: { in: [$authors] } } } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...themeFragment
     },
-    limit:allMarkdownRemark( filter: { frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC} limit: 1) {
+    limit:allMarkdownRemark( filter: { frontmatter: { author: { frontmatter: { author_id: { in: [$authors] } } } } } sort: { fields: [frontmatter___title], order: ASC} limit: 1) {
       ...themeFragment
     },
-    themes:allMarkdownRemark( filter: { collection: { eq: "themes" } frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
+    themes:allMarkdownRemark( filter: { collection: { eq: "themes" } frontmatter: { author: { frontmatter: { author_id: { in: [$authors] } } } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...themeFragment
     },
-    plugins:allMarkdownRemark( filter: { collection: { eq: "plugins" } frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
+    plugins:allMarkdownRemark( filter: { collection: { eq: "plugins" } frontmatter: {author: { frontmatter: { author_id: { in: [$authors] } } } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...pluginFragment
     },
-    authors:allMarkdownRemark( filter: { collection: { eq: "profiles" } frontmatter: { name: { in: [$authors] } } } limit: 1 ) {
+    authors:allMarkdownRemark( filter: { collection: { eq: "profiles" } frontmatter: { author_id: { in: [$authors] } } } limit: 1 ) {
       ...profileFragment
     },
   }

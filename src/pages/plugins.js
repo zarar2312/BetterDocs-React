@@ -49,7 +49,7 @@ const Plugins = (props) => {
         <FeaturedCards>
           <FeaturedCard>
             <ImageContainer>
-              <Svg to="/plugins/discord-crypt/" style={{backgroundImage: `url("https://i.imgur.com/ubQusr5.png")`}}>
+              <Svg to="/plugin/discord-crypt/" style={{backgroundImage: `url("https://i.imgur.com/ubQusr5.png")`}}>
                 <svg height="512px" id="Capa_1" style={{"enableBackground":"new 0 0 512.001 512.001"}} width="512px" version="1.1" viewBox="0 0 512.001 512.001" x="0px" y="0px" xmlSpace="preserve">
                   <g>
                       <path className="active-path" style={{"fill":"#7289DA"}} d="M348.404,139.584H164.826c-13.101,0-23.721,10.62-23.721,23.721v56.885h231.02v-56.885  C372.125,150.204,361.505,139.584,348.404,139.584z"/>
@@ -89,7 +89,7 @@ const Plugins = (props) => {
           </FeaturedCard>
           <FeaturedCard>
             <ImageContainer>
-              <Svg to="/plugins/voice-chat-notifications/" style={{backgroundImage: `url("https://i.imgur.com/BtC4dMB.png")`}}>
+              <Svg to="/plugin/voice-chat-notifications/" style={{backgroundImage: `url("https://i.imgur.com/BtC4dMB.png")`}}>
                 <svg height="512px" id="Layer_1" style={{"enableBackground":"new 0 0 512.001 512.001"}} width="512px" version="1.1" viewBox="0 0 512.001 512.001" x="0px" y="0px" xmlSpace="preserve">
                   <g>
                       <path style={{"fill":"#0a0a0a"}} d="M450.671,156.853H9.013c-4.978,0-9.013-4.036-9.013-9.013V39.678c0-4.978,4.036-9.013,9.013-9.013  h441.658c4.978,0,9.013,4.036,9.013,9.013v108.161C459.685,152.817,455.649,156.853,450.671,156.853z"/>
@@ -137,7 +137,7 @@ const Plugins = (props) => {
           </FeaturedCard>
           <FeaturedCard>
             <ImageContainer>
-              <Svg to="/plugins/server-folders/" style={{backgroundImage: `url("https://i.imgur.com/r0WLnjv.png")`}}>
+              <Svg to="/plugin/server-folders/" style={{backgroundImage: `url("https://i.imgur.com/r0WLnjv.png")`}}>
                 <CardImage></CardImage>
                 <Title>Server Folders</Title>
               </Svg>
@@ -146,7 +146,7 @@ const Plugins = (props) => {
           </FeaturedCard>
           <FeaturedCard>
             <ImageContainer>
-              <Svg to="/plugins/do-not-track/" style={{backgroundImage: `url("https://i.imgur.com/rWgKhaC.png")`}}>
+              <Svg to="/plugin/do-not-track/" style={{backgroundImage: `url("https://i.imgur.com/rWgKhaC.png")`}}>
                 <svg height="512px" width="512px" viewBox="0 -46 512 512">
                   <g>
                       <path className="active-path" style={{"fill":"#0a0a0a"}} d="m479.859375 10.09375h21.304687v70.796875h-384.285156v-70.796875zm0 0" fill="#5e6e82"/>
@@ -210,7 +210,7 @@ const Plugins = (props) => {
               slug={node.fields.slug}
               status={node.frontmatter.status}
               tags={node.frontmatter.tags}
-              author={node.frontmatter.author}
+              author={node.frontmatter.author.frontmatter.author_id}
               excerpt={node.excerpt}
               softwares={node.frontmatter.software}
               key={node.id}/>

@@ -31,7 +31,7 @@ const pluginCard = ({author}) => (
         <Container>
         {data.allMarkdownRemark.edges.map(({ node }, i) => (
             <>
-            {node.frontmatter.author === author &&
+            {node.frontmatter.author.frontmatter.author_id === author &&
             <Card>
                 {node.frontmatter.status ?
                     <Status title={"Status of " + node.frontmatter.title + ": " + node.frontmatter.status}>{node.frontmatter.status}</Status>
@@ -103,7 +103,7 @@ const Btn = styled.a`
 const DisabledBtn= styled.div`
 `
 const Container = styled.div`
-    order: 4;
+    order: 6;
     /*display: flex;*/
     padding: 2rem;
     margin-bottom: 2.1rem;

@@ -20,7 +20,8 @@ import ContributionArea from '../components/themes/page-contributors-area'
 import InformationArea from '../components/themes/page-info-area'
 import TagsArea from '../components/themes/page-tags-area'
 import mydate from 'current-date'
-import Authorcard from '../components/themes/author-card'
+import MoreCard from '../components/themes/more-card'
+import Comments from '../components/themes/comments'
 
 const Mydate = mydate('date');
 
@@ -36,10 +37,13 @@ const Mydate = mydate('date');
 }
 */
 
-const Themes = (props) => {
-  const themeList = props.data.listThemes;
-  const previewList = props.data.previewsList;
-  const contributorList = props.data.contributorlist;
+const Themes = ({ pageContext, data }) => {
+  const themeList = data.listThemes;
+  const previewList = data.previewsList;
+  const contributorList = data.contributorlist;
+  const git = data.github;
+  const authorThemeList = data.authorThemeList;
+  /*const { authorid } = pageContext*/
 
   return (
   <Layout>
@@ -47,14 +51,14 @@ const Themes = (props) => {
     {themeList.edges.map(({ node }, i) => (
     <Helmet
       key={node.id}
-      title={ node.frontmatter.title + ' by ' + node.frontmatter.author + ' | BetterDocs '}
+      title={ node.frontmatter.title + ' by ' + node.frontmatter.author.frontmatter.author_id + ' | BetterDocs '}
       meta={[
         { name: 'description', content: node.frontmatter.description },
         { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
       ]}>
       <meta property="og:site_name" content="BetterDocs"/>
-      {node.frontmatter.author ?
-      <meta property="og:title" content={node.frontmatter.title + ' by ' + node.frontmatter.author}/>
+      {node.frontmatter.author.frontmatter.author_id ?
+      <meta property="og:title" content={node.frontmatter.title + ' by ' + node.frontmatter.author.frontmatter.author_id}/>
       :
       <meta property="og:title" content={node.frontmatter.title}/>
       }
@@ -73,7 +77,7 @@ const Themes = (props) => {
       <Wrapper key={node.id}>
         <Hero
         title={node.frontmatter.title}
-        author={node.frontmatter.author}
+        author={node.frontmatter.author.frontmatter.author_id}
         status={node.frontmatter.status}
         download={node.frontmatter.download}
         thumbnail={node.frontmatter.thumbnail}
@@ -108,7 +112,7 @@ const Themes = (props) => {
               title={node.frontmatter.title}
               issue={node.frontmatter.github_issue_url}
               />
-              <SubHeader>Does this still work?</SubHeader>
+              <SubHeader>Does this still work? {node.frontmatter.author.frontmatter.author_id} </SubHeader>
               <ReportButtons>
                 <WorkingBtn target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - Theme - [Status: Working]&labels=theme,working&body=This%20is%20ONLY%20to%20report%20that%20this%20theme%20(as%20of%20" + Mydate + ")%20IS%20working!" }>
                 <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -144,7 +148,7 @@ const Themes = (props) => {
               </Area>
               <AreaFlex>
                 <ContributionArea
-                author={node.frontmatter.author}
+                author={node.frontmatter.author.frontmatter.author_id}
                 maintainer={node.frontmatter.maintainer_name}
                 contributor={contributorList.group}
                 title={node.frontmatter.title}
@@ -228,19 +232,41 @@ const Themes = (props) => {
           }
         </Tabbs>
         ))}
-        <MoreHeader><Link to={"profile/" + node.frontmatter.author}>{node.frontmatter.author}'s</Link> Themes</MoreHeader>
-          <Authorcard 
-          title={node.frontmatter.title} 
-          thumbnail={node.frontmatter.thumbnail}
-          slug={node.fields.slug}
-          status={node.frontmatter.status}
-          tags={node.frontmatter.tags}
-          author={node.frontmatter.author}
-          excerpt={node.excerpt}
-          demo={node.frontmatter.demo}
-          mode={node.frontmatter.style}
-          featured= {node.frontmatter.featured}
-          />
+        <CommentsArea>
+          <CommentsHeader>Feedback</CommentsHeader>
+          <CommentsContainer>
+            {git.repository.issue.comments.edges.map(({ node }) => (
+              <Comments
+              username={node.author.login}
+              body={node.body}
+              key={node.id}
+              avatar={node.author.avatarUrl}
+              userUrl={node.author.url}
+              reactions={node.reactionGroups}
+              lastEditDate={node.lastEditedAt}
+              commentLink={node.url}
+              />
+            ))}
+          </CommentsContainer>
+        </CommentsArea>
+        <MoreHeader><Link to={"profile/" + node.frontmatter.author.frontmatter.author_id}>{node.frontmatter.author.frontmatter.author_id}'s</Link> Themes</MoreHeader>
+          <MoreArea>
+          {authorThemeList.edges.map(({ node }) => (
+            <MoreCard
+            key={node.id}
+            author={node.frontmatter.author.frontmatter.author_id}
+            title={node.frontmatter.title}
+            snippet={node.frontmatter.snippet}
+            excerpt={node.excerpt}
+            thumbnail={node.frontmatter.thumbnail}
+            status={node.frontmatter.status}
+            slug={node.fields.slug}
+            demo={node.frontmatter.demo}
+            featured={node.frontmatter.featured}
+            mode={node.frontmatter.mode}
+            />
+          ))}
+          </MoreArea>
       </Wrapper>
       ))}
 
@@ -275,7 +301,11 @@ const Themes = (props) => {
 export default Themes;
 
 export const themesQuery = graphql`
-  query themesQuery($slug: String!) {
+  query themesQuery(
+    $slug: String!
+    $ghcommentid: Int!
+    $authorid: String!
+    ) {
     listThemes:allMarkdownRemark(
       filter: { 
         collection: { 
@@ -286,6 +316,28 @@ export const themesQuery = graphql`
             eq: $slug
           }
         }
+      }
+      ) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
+      ...themeDateFormatFragment
+    },
+    authorThemeList:allMarkdownRemark(
+      filter: { 
+        collection: { 
+          eq: "themes" 
+        },
+        frontmatter: {
+          author: {
+            frontmatter: {
+              author_id: {
+                eq: $authorid
+              }
+            }
+          }
+        },
       }
       ) {
       group(field: frontmatter___tags) {
@@ -332,6 +384,41 @@ export const themesQuery = graphql`
     },
     currentThemes:markdownRemark(collection: { eq: "themes" }) {
     ...themeDateSingleFragment
+  },
+  github: github {
+    repository(owner: "MrRobotjs", name: "BetterDocs-React") {
+      id
+      createdAt
+      description
+      issue(number: $ghcommentid) {
+        title
+        author {
+          login
+          url
+          avatarUrl
+        }
+        comments(first:20) {
+          edges {
+            node {
+              author {
+                login
+                url
+                avatarUrl
+              }
+              url
+              lastEditedAt
+              body
+              reactionGroups {
+                content
+                users {
+                  totalCount
+                }
+            	}
+            }
+          }
+        }
+      }
+    },
   }
 }
 `
@@ -390,6 +477,14 @@ const DeprecatedBtn = styled.a`
 const MoreHeader = styled.h2`
 `
 const Linkka = styled.a`
+`
+const CommentsArea = styled.div`
+`
+const CommentsContainer = styled.div`
+`
+const MoreArea = styled.div`
+`
+const CommentsHeader = styled.div`
 `
 const MobileBackBtn= styled(AniLink)`
   position: fixed;
@@ -485,8 +580,47 @@ const Container = styled.div`
         padding-left: unset;
 
     }
+    ${CommentsHeader} {
+      order: 5;
+      font-size: 1.55rem;
+      word-break: keep-all;
+      margin-bottom: 0;
+      padding: 0 2rem;
+      background-color: transparent;
+      a:not([class*="anchor"]) {
+        display: inline-block;
+        transition: color 250ms, text-shadow 250ms;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        line-height: 1rem;
+        &:after {
+          position: absolute;
+          z-index: -1;
+          bottom: -9px;
+          left: 50%;
+          transform: translateX(-50%);
+          content: '';
+          width: 100%;
+          height: 3px;
+          background-color: ${variable.SiteColor};
+          transition: all 250ms;
+        }
+        &:hover {
+          color: #fff;
+          opacity: 1;
+          background-color: transparent;
+        &::after {
+            height: 160%;
+            width: 110%;
+          }
+        }
+      }
+    }
     ${MoreHeader} {
-      order: 3;
+      order: 5;
       font-size: 1.55rem;
       word-break: keep-all;
       margin-bottom: 0;
@@ -523,6 +657,122 @@ const Container = styled.div`
             width: 110%;
           }
         }
+      }
+    }
+    ${MoreArea} {
+      order: 6;
+      /*display: flex;*/
+      padding: 2rem;
+      margin-bottom: 2.1rem;
+      padding-top: 0;
+      padding-bottom: 1rem;
+      background-color: #e6e6e6;
+      word-break: break-all;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      overflow-x: auto;
+      display: -webkit-box;
+      -webkit-overflow-scrolling: touch;
+      &::-webkit-scrollbar-button { 
+          display: none; 
+          height: 10px; 
+          border-radius: 0px; 
+      } 
+      &::-webkit-scrollbar-thumb { 
+          background-color: ${rgba(variable.SiteColor, 0.3)};
+          transition: background-color .2s ease-in-out;
+      } 
+      &::-webkit-scrollbar-thumb:hover { 
+          background-color: ${variable.SiteColor}; 
+      } 
+      &::-webkit-scrollbar-track { 
+          background-color: ${rgba(variable.SiteColor, 0.06)};
+      }
+      &::-webkit-scrollbar { 
+          width: 8px;
+          height: 10px;
+      }
+      a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+        display: inline-block;
+        transition: color 250ms, text-shadow 250ms;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        line-height: 1rem;
+        &:after {
+          position: absolute;
+          z-index: -1;
+          bottom: -1px;
+          left: 50%;
+          transform: translateX(-50%);
+          content: '';
+          width: 100%;
+          height: 3px;
+          background-color: ${variable.SiteColor};
+          transition: all 250ms;
+        }
+        &:hover {
+          color: #fff !important;
+          opacity: 1;
+          background-color: transparent;
+          &::after {
+            height: 110% !important;
+            width: 110% !important;
+          }
+        }
+        @media ${variable.MidPoint} {
+          margin-bottom: 0;
+          padding-bottom: 0.2rem;
+        }
+      }
+    }
+    ${CommentsArea} {
+      order: 4;
+      ${MoreHeader} {
+        font-size: 1.55rem;
+        word-break: keep-all;
+        margin-bottom: 0;
+        background-color: #e6e6e6;
+        padding: 0.7rem 2rem;
+        padding-bottom: 1.2rem;
+        a:not([class*="anchor"]) {
+          display: inline-block;
+          transition: color 250ms, text-shadow 250ms;
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+          position: relative;
+          z-index: 0;
+          line-height: 1rem;
+          &:after {
+            position: absolute;
+            z-index: -1;
+            bottom: -9px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: ${variable.SiteColor};
+            transition: all 250ms;
+          }
+          &:hover {
+            color: #fff;
+            opacity: 1;
+            background-color: transparent;
+          &::after {
+              height: 160%;
+              width: 110%;
+            }
+          }
+        }
+      }
+      ${CommentsContainer} {
+        margin: 0 2rem;
+        margin-top: 1rem;
       }
     }
     ${Tabbs} {
@@ -836,7 +1086,7 @@ const Container = styled.div`
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1.6rem;
             @media ${variable.MidPoint} {
               flex-direction: row;
               justify-content: flex-start;
@@ -1029,6 +1279,16 @@ const GlobalStyle = createGlobalStyle`
     ${Wrapper} {
       ${MoreHeader} {
         background-color: #2f3238;
+        color: #eee;
+        a {
+          color: #fff;
+        }
+      }
+      ${MoreArea} {
+        background-color: #2f3238;
+      }
+      ${CommentsHeader} {
+        background-color: transparent;
         color: #eee;
         a {
           color: #fff;

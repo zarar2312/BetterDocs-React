@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet";
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
-const ProfilesPage = ({ data }) => {
+const ProfilesPage = ({data}) => {
   const { edges, totalCount } = data.authors
   //const tags = data.tags;
 
@@ -31,6 +31,11 @@ const ProfilesPage = ({ data }) => {
     <Container>
     <GlobalStyle />
       <Content>
+        <Hero>
+          <MainText>Browse Themes/Plugins</MainText>
+          <h2 style={{textAlign: "center", color: "#fff"}}>by Author</h2>
+          <SubTextt href="https://developer.github.com/v3/users/">Powered by Github</SubTextt>
+        </Hero>
       <TitleBarHeadroom disableInlineStyles>
         <TitleBar>
           <Count>#Profiles <span>({totalCount})</span></Count>
@@ -47,13 +52,13 @@ const ProfilesPage = ({ data }) => {
               return (
                 <LazyLoad key={node.id} height="10rem">
                   <Card
-                  title={node.frontmatter.name} 
+                  title={node.frontmatter.author_id} 
                   thumbnail={node.frontmatter.avatar_url}
                   slug={node.fields.slug}
                   theme={node.frontmatter.theme_developer}
                   plugin={node.frontmatter.plugin_developer}
                   tags={node.frontmatter.tags}
-                  author={node.frontmatter.name}
+                  author={node.frontmatter.author_id}
                   excerpt={node.excerpt}
                   demo={node.frontmatter.demo}
                   mode={node.frontmatter.style}
@@ -96,6 +101,12 @@ const Wrapper = styled.div`
 `
 const Main = styled.div`
 `
+const Hero = styled.div`
+`
+const MainText = styled.h1`
+`
+const SubTextt = styled.a`
+`
 
 const Container = styled.div`
   display: block;
@@ -104,6 +115,25 @@ const Container = styled.div`
   @media ${variable.MidPoint} {
     display: flex;
     flex-direction: column;
+  }
+  ${Hero} {
+    background-color: ${variable.SiteColor};
+    padding: 0.4rem 0;
+    position: relative;
+    ${MainText} {
+      color: #fff;
+      margin: unset;
+      text-align: center;
+    }
+    ${SubTextt} {
+      color: #fff;
+      margin: unset;
+      text-align: center;
+      font-size: 0.4rem;
+      position: absolute;
+      bottom: 0.2rem;
+      left: 0.2rem;
+    }
   }
   ${Content} {
     order: 1;
