@@ -18,6 +18,9 @@ module.exports = {
     siteUrl: `https://betterdocs.us`,
     announcement: `Keep in mind if any client mod breaks then just reinstall to repair!`,
   },
+  mapping: {
+    'MarkdownRemark.frontmatter.author': `MarkdownRemark.frontmatter.author_id`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
@@ -200,7 +203,4 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
-  mapping: {
-    'MarkdownRemark.frontmatter.author': `MarkdownRemark.frontmatter.author_id`,
-  },
 }
