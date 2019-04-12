@@ -330,12 +330,8 @@ export const themesQuery = graphql`
           eq: "themes" 
         },
         frontmatter: {
-          author: {
-            frontmatter: {
-              author_id: {
-                eq: $authorid
-              }
-            }
+            author_id: {
+              eq: $authorid
           }
         },
       }

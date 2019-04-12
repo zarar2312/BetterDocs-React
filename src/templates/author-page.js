@@ -240,16 +240,16 @@ export default Author
 
 export const authorQuery = graphql`
   query($authors: String) {
-    all:allMarkdownRemark( filter: { frontmatter: { author: { frontmatter: { author_id: { in: [$authors] } } } } } sort: { fields: [frontmatter___title], order: ASC}) {
+    all:allMarkdownRemark( filter: { frontmatter: { author_id: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...themeFragment
     },
-    limit:allMarkdownRemark( filter: { frontmatter: { author: { frontmatter: { author_id: { in: [$authors] } } } } } sort: { fields: [frontmatter___title], order: ASC} limit: 1) {
+    limit:allMarkdownRemark( filter: { frontmatter: { author_id: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC} limit: 1) {
       ...themeFragment
     },
-    themes:allMarkdownRemark( filter: { collection: { eq: "themes" } frontmatter: { author: { frontmatter: { author_id: { in: [$authors] } } } } } sort: { fields: [frontmatter___title], order: ASC}) {
+    themes:allMarkdownRemark( filter: { collection: { eq: "themes" } frontmatter: { author_id: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...themeFragment
     },
-    plugins:allMarkdownRemark( filter: { collection: { eq: "plugins" } frontmatter: {author: { frontmatter: { author_id: { in: [$authors] } } } } } sort: { fields: [frontmatter___title], order: ASC}) {
+    plugins:allMarkdownRemark( filter: { collection: { eq: "plugins" } frontmatter: { author_id: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...pluginFragment
     },
     authors:allMarkdownRemark( filter: { collection: { eq: "profiles" } frontmatter: { author_id: { in: [$authors] } } } limit: 1 ) {
