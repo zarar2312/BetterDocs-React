@@ -18,9 +18,6 @@ module.exports = {
     siteUrl: `https://betterdocs.us`,
     announcement: `Keep in mind if any client mod breaks then just reinstall to repair!`,
   },
-  mapping: {
-    'MarkdownRemark.frontmatter.author': `MarkdownRemark.frontmatter.author_id`,
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
@@ -72,7 +69,7 @@ module.exports = {
         // HTTP headers
         headers: {
           // Learn about environment variables: https://gatsby.dev/env-vars
-          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+          Authorization: `bearer e6b0ccb41a377954a5d5ab2555412c0d64d69fd1`,
         },
         // Additional options to pass to node-fetch
         fetchOptions: {},
@@ -203,4 +200,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
+  mapping: {
+    'MarkdownRemark.frontmatter.author': `MarkdownRemark.frontmatter.author_id`,
+  },
 }
