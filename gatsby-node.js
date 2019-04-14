@@ -186,8 +186,8 @@ return graphql(`{
     let authors = []
     // Iterate through each post, putting all found tags into `tags`
     _.each(all, edge => {
-      if (_.get(edge, "node.frontmatter.author")) {
-        authors = authors.concat(edge.node.frontmatter.author)
+      if (_.get(edge, "node.frontmatter.author.frontmatter.author_id")) {
+        authors = authors.concat(edge.node.frontmatter.author.frontmatter.author_id)
       }
     })
     // Eliminate duplicate tags
