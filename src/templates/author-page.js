@@ -28,15 +28,15 @@ const Author = ({ pageContext, data }) => {
       {data.limit.edges.map(({ node }) => (
       <Helmet
         key={node.id}
-        title={ node.frontmatter.author.frontmatter.author_id + `'s Profile | BetterDocs` }
+        title={ node.frontmatter.author + `'s Profile | BetterDocs` }
         meta={[
           { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
         ]}>
         <meta property="og:site_name" content="BetterDocs"/>
-        <meta property="og:title" content={node.frontmatter.author.frontmatter.author_id + `'s Profile`}/>
-        <meta property="og:description" content={"Find all of " + node.frontmatter.author.frontmatter.author_id + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
-        <meta property="description" content={"Find all of " + node.frontmatter.author.frontmatter.author_id + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
-        <meta property="og:url" content={"https://betterdocs.us/profile/" + node.frontmatter.author.frontmatter.author_id} />
+        <meta property="og:title" content={node.frontmatter.author + `'s Profile`}/>
+        <meta property="og:description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
+        <meta property="description" content={"Find all of " + node.frontmatter.author + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
+        <meta property="og:url" content={"https://betterdocs.us/profile/" + node.frontmatter.author} />
         <html lang="en" />
       </Helmet>
       ))}
