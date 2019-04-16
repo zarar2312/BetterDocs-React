@@ -18,6 +18,7 @@ class Features extends React.Component {
           excerpt
           html
           id
+          collection
           fields {
             slug
           }

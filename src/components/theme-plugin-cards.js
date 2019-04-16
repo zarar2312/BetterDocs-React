@@ -16,22 +16,80 @@ const pluginCard = ({author}) => (
     <StaticQuery
     query={ graphql`
     query {
-        allMarkdownRemark(filter: {collection: {eq: "plugins"} } sort: { fields: [frontmatter___title], order: ASC}) {
+        allMarkdownRemark(filter: {collection: {ne: "profiles"} } sort: { fields: [frontmatter___title], order: ASC}) {
           group(field: frontmatter___tags) {
             fieldValue
             totalCount
           }
-          ...pluginFragment
+          ...themeFragment
         }
       }
   `}
     render={data => (
     <>
     <GlobalStyle />
-        <Container>
         {data.allMarkdownRemark.edges.map(({ node }, i) => (
             <>
             {node.frontmatter.author.frontmatter.author_id === author &&
+            <>
+            {node.collection === "themes" &&
+            <Card>
+                {node.frontmatter.status ?
+                    <Status title={"Status of " + node.frontmatter.title + ": " + node.frontmatter.status}>{node.frontmatter.status}</Status>
+                :
+                    <Status title={"Status of " + node.frontmatter.title + ": Unknown"}>Unknown</Status>
+                }
+                {node.frontmatter.thumbnail ?
+                <>
+                    <ImageContainer to={"plugin" + node.fields.slug}>
+                        <LazyLoad once={true} height="100%" placeholder={
+                            <img alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>
+                            }>
+                            <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "'s thumbnail"} title={node.frontmatter.title + "'s thumbnail"} />
+                        </LazyLoad>
+                    </ImageContainer>
+                    <Options>
+                        <span>Image </span><Btn href={node.frontmatter.thumbnail} target="blank">Source</Btn>
+                    </Options>
+                </>
+                :
+                    <MissingContainer to={"plugin" + node.fields.slug}>
+                        <img src={Mobile} alt="Missing Plugin Thumbnail" title="Missing Plugin Thumbnail" />
+                    </MissingContainer>
+                }
+                <TitleContainer>
+                    <Title to={"plugin" + node.fields.slug}>{node.frontmatter.title}</Title>
+                </TitleContainer>
+                {author &&
+                    <Details>
+                        <AuthorContainer>
+                            <Author title={"Made by " + author} to={"/profile/" + author}>{author + " /"}</Author>
+                        </AuthorContainer>
+                        {node.frontmatter.softwares &&
+                        <SoftwareList>
+                            {node.frontmatter.softwares.map(softwaree => (
+                                <SoftwareIcon title={"This plugin supports " + softwaree} to={`/plugins/softwares/${kebabCase(softwaree)}/`} alt={softwaree} key={softwaree}>
+                                </SoftwareIcon>
+                            ))}
+                        </SoftwareList>
+                        }
+                    </Details>
+                }
+                <DescriptionContainer>
+                    <DescriptionText>{node.excerpt}</DescriptionText>
+                </DescriptionContainer>
+                {node.frontmatter.tags &&
+                    <TagsContainer>
+                        {node.frontmatter.tags.map(tag => (
+                            <Tagg to={`/plugins/tag/${tag.toString().toLowerCase()}/`} key={tag}>
+                                #{tag.toString().toLowerCase()}
+                            </Tagg>
+                        ))}
+                    </TagsContainer>
+                }
+            </Card>
+            }
+            {node.collection === "plugins" &&
             <Card>
                 {node.frontmatter.status ?
                     <Status title={"Status of " + node.frontmatter.title + ": " + node.frontmatter.status}>{node.frontmatter.status}</Status>
@@ -89,8 +147,9 @@ const pluginCard = ({author}) => (
             </Card>
             }
             </>
+            }
+            </>
             ))}
-        </Container>
     </>
 )}
 />
@@ -101,76 +160,6 @@ export default pluginCard
 const Btn = styled.a`
 `
 const DisabledBtn= styled.div`
-`
-const Container = styled.div`
-    order: 6;
-    /*display: flex;*/
-    padding: 2rem;
-    margin-bottom: 2.1rem;
-    padding-top: 0;
-    padding-bottom: 1rem;
-    background-color: #e6e6e6;
-    word-break: break-all;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    overflow-x: auto;
-    display: -webkit-box;
-    -webkit-overflow-scrolling: touch;
-    &::-webkit-scrollbar-button { 
-        display: none; 
-        height: 10px; 
-        border-radius: 0px; 
-    } 
-    &::-webkit-scrollbar-thumb { 
-        background-color: ${rgba(variable.SiteColor, 0.3)};
-        transition: background-color .2s ease-in-out;
-    } 
-    &::-webkit-scrollbar-thumb:hover { 
-        background-color: ${variable.SiteColor}; 
-    } 
-    &::-webkit-scrollbar-track { 
-        background-color: ${rgba(variable.SiteColor, 0.06)};
-    }
-    &::-webkit-scrollbar { 
-        width: 8px;
-        height: 10px;
-    }
-    a:not([class*="MissingContainer"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
-        display: inline-block;
-        transition: color 250ms, text-shadow 250ms;
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-        position: relative;
-        z-index: 0;
-        line-height: 1rem;
-    &:after {
-        position: absolute;
-        z-index: -1;
-        bottom: -1px;
-        left: 50%;
-        transform: translateX(-50%);
-        content: '';
-        width: 100%;
-        height: 3px;
-        background-color: ${variable.SiteColor};
-        transition: all 250ms;
-    }
-    &:hover {
-        color: #fff !important;
-        opacity: 1;
-        background-color: transparent;
-        &::after {
-            height: 110% !important;
-            width: 110% !important;
-        }
-    }
-}
-@media ${variable.MidPoint} {
-    margin-bottom: 0;
-    padding-bottom: 0.2rem;
-}
 `
 
 const Options = styled.div`
@@ -312,6 +301,7 @@ const Title = styled(Link)`
 const TitleContainer = styled.div`
     display: block;
     justify-content: center;
+    text-align: center;
 `
 
 const Card = styled.div`
@@ -326,7 +316,6 @@ const Card = styled.div`
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    margin-left: 1rem;
     &:last-child {
         margin-right: 1rem;
     }
@@ -354,6 +343,38 @@ const Card = styled.div`
 
     &:focus, &:active {
         border-color: ${variable.SiteColor};
+    }
+
+    a:not([class*="MissingContainer"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+        display: inline-block;
+        transition: color 250ms, text-shadow 250ms;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        line-height: 1rem;
+        &:after {
+            position: absolute;
+            z-index: -1;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: ${variable.SiteColor};
+            transition: all 250ms;
+        }
+        &:hover {
+            color: #fff !important;
+            opacity: 1;
+            background-color: transparent;
+            &::after {
+                height: 110% !important;
+                width: 110% !important;
+            }
+        }
     }
 
     @media ${variable.MidPoint} {
@@ -545,43 +566,41 @@ const TagsContainer = styled.div`
 
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
-    ${Container} {
-        background-color: #2f3238;
-        a:not([class*="MissingContainer"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
-            display: inline-block;
-            transition: color 250ms, text-shadow 250ms;
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-            position: relative;
-            z-index: 0;
-            line-height: 1rem;
-            &:after {
-                position: absolute;
-                z-index: -1;
-                bottom: -1px;
-                left: 50%;
-                transform: translateX(-50%);
-                content: '';
-                width: 100%;
-                height: 3px;
-                background-color: ${variable.SiteColor};
-                transition: all 250ms;
-            }
-            &:hover {
-                color: #fff !important;
-                opacity: 1;
-                background-color: transparent;
-                &::after {
-                    height: 110% !important;
-                    width: 110% !important;
-                }
-            }
-        }
         ${Card} {
             background-color: #222327;
             border-color: #222327;
             box-shadow: 2px 2px 5px rgba(0,0,0,.1);
+            a:not([class*="MissingContainer"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+                display: inline-block;
+                transition: color 250ms, text-shadow 250ms;
+                color: #fff;
+                text-decoration: none;
+                cursor: pointer;
+                position: relative;
+                z-index: 0;
+                line-height: 1rem;
+                &:after {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -1px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    background-color: ${variable.SiteColor};
+                    transition: all 250ms;
+                }
+                &:hover {
+                    color: #fff !important;
+                    opacity: 1;
+                    background-color: transparent;
+                    &::after {
+                        height: 110% !important;
+                        width: 110% !important;
+                    }
+                }
+            }
             &:hover, &:focus, &:active {
                 background-color: #131417;
                 border-color: #131417;
@@ -617,6 +636,5 @@ const GlobalStyle = createGlobalStyle`
                 }
             }
         }
-    }
 }
 `

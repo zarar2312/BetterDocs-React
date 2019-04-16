@@ -15,7 +15,7 @@ import { Helmet } from "react-helmet";
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
 const ProfilesPage = ({data}) => {
-  const { edges, totalCount } = data.authors
+  const { edges, totalCount } = data.allMarkdownRemark
   //const tags = data.tags;
 
   return (
@@ -89,7 +89,7 @@ export default ProfilesPage
 
 export const pageQuery = graphql`
   query AllProfiles {
-    authors:allMarkdownRemark( filter: { collection: { eq: "profiles" } } ) {
+    allMarkdownRemark( filter: { collection: { eq: "profiles" } } ) {
         ...profileFragment
     }
   }

@@ -242,7 +242,7 @@ return graphql(`{
 }
 // Adds 'collection' to node
 exports.onCreateNode =({ node, getNode, actions }) => {
-    const { createNodeField } = actions;
+    const { createNodeField, createNode } = actions;
 
     fmImagesToRelative(node);
 

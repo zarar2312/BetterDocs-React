@@ -19,7 +19,7 @@ import DependencyArea from '../components/plugins/page-dependency-area'
 import TagsArea from '../components/plugins/page-tags-area'
 import Alerts from '../components/plugins/page-alert'
 import mydate from 'current-date'
-import Authorcard from '../components/plugins/author-card'
+import Authorcard from '../components/plugins/more-card'
 import Comments from '../components/themes/comments'
 
 const Mydate = mydate('date');
@@ -228,18 +228,11 @@ const Plugins = (props) => {
           </CommentsContainer>
         </CommentsArea>
         <MoreHeader><Link to={"profile/" + node.frontmatter.author.frontmatter.author_id}>{node.frontmatter.author.frontmatter.author_id}'s</Link> Plugins</MoreHeader>
-          <Authorcard 
-          title={node.frontmatter.title} 
-          thumbnail={node.frontmatter.thumbnail}
-          slug={node.fields.slug}
-          status={node.frontmatter.status}
-          tags={node.frontmatter.tags}
-          author={node.frontmatter.author.frontmatter.author_id}
-          excerpt={node.excerpt}
-          demo={node.frontmatter.demo}
-          mode={node.frontmatter.style}
-          featured= {node.frontmatter.featured}
-          />
+          <MoreContainer>
+            <Authorcard 
+              author={node.frontmatter.author.frontmatter.author_id}
+            />
+          </MoreContainer>
       </Wrapper>
       ))}
       <Sidebar />
@@ -270,7 +263,6 @@ export const pluginsQuery = graphql`
     $slug: String!
     $ghcommentid: Int!
     ) {
-
     listPlugins:allMarkdownRemark(
       filter: {
         collection: { 
@@ -288,7 +280,7 @@ export const pluginsQuery = graphql`
       }
       ...pluginFragment
     },
-
+    
     previewsList:allMarkdownRemark(
       filter: { 
         collection: { 
@@ -393,6 +385,8 @@ const Options = styled.div`
 const Download = styled.a`
 `
 const Report = styled.a`
+`
+const MoreContainer = styled.div`
 `
 const CardHeader = styled.h1`
 `
@@ -559,6 +553,76 @@ const Container = styled.div`
             height: 160%;
             width: 110%;
           }
+        }
+      }
+    }
+    ${MoreContainer} {
+      order: 6;
+      /*display: flex;*/
+      padding: 2rem;
+      margin-bottom: 2.1rem;
+      padding-top: 0;
+      padding-bottom: 1rem;
+      background-color: #e6e6e6;
+      word-break: break-all;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      overflow-x: auto;
+      display: -webkit-box;
+      -webkit-overflow-scrolling: touch;
+      &::-webkit-scrollbar-button { 
+          display: none; 
+          height: 10px; 
+          border-radius: 0px; 
+      } 
+      &::-webkit-scrollbar-thumb { 
+          background-color: ${rgba(variable.SiteColor, 0.3)};
+          transition: background-color .2s ease-in-out;
+      } 
+      &::-webkit-scrollbar-thumb:hover { 
+          background-color: ${variable.SiteColor}; 
+      } 
+      &::-webkit-scrollbar-track { 
+          background-color: ${rgba(variable.SiteColor, 0.06)};
+      }
+      &::-webkit-scrollbar { 
+          width: 8px;
+          height: 10px;
+      }
+      a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+        display: inline-block;
+        transition: color 250ms, text-shadow 250ms;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        line-height: 1rem;
+        &:after {
+          position: absolute;
+          z-index: -1;
+          bottom: -1px;
+          left: 50%;
+          transform: translateX(-50%);
+          content: '';
+          width: 100%;
+          height: 3px;
+          background-color: ${variable.SiteColor};
+          transition: all 250ms;
+        }
+        &:hover {
+          color: #fff !important;
+          opacity: 1;
+          background-color: transparent;
+          &::after {
+            height: 110% !important;
+            width: 110% !important;
+          }
+        }
+        @media ${variable.MidPoint} {
+          margin-bottom: 0;
+          padding-bottom: 0.2rem;
         }
       }
     }

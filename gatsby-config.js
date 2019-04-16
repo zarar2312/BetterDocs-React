@@ -62,6 +62,7 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
+        refetchInterval: 60,
         typeName: "GitHub",
         fieldName: "github",
         // Url to query from

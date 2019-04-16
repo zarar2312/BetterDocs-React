@@ -42,7 +42,6 @@ const Themes = ({ pageContext, data }) => {
   const previewList = data.previewsList;
   const contributorList = data.contributorlist;
   const git = data.github;
-  const authorThemeList = data.authorThemeList;
   /*const { authorid } = pageContext*/
 
   return (
@@ -51,14 +50,14 @@ const Themes = ({ pageContext, data }) => {
     {themeList.edges.map(({ node }, i) => (
     <Helmet
       key={node.id}
-      title={ node.frontmatter.title + ' by ' + node.frontmatter.author.frontmatter.author_id + ' | BetterDocs '}
+      title={ node.frontmatter.title + ' by ' + node.frontmatter.author_id + ' | BetterDocs '}
       meta={[
         { name: 'description', content: node.frontmatter.description },
         { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
       ]}>
       <meta property="og:site_name" content="BetterDocs"/>
-      {node.frontmatter.author.frontmatter.author_id ?
-      <meta property="og:title" content={node.frontmatter.title + ' by ' + node.frontmatter.author.frontmatter.author_id}/>
+      {node.frontmatter.author_id ?
+      <meta property="og:title" content={node.frontmatter.title + ' by ' + node.frontmatter.author_id}/>
       :
       <meta property="og:title" content={node.frontmatter.title}/>
       }
@@ -77,7 +76,7 @@ const Themes = ({ pageContext, data }) => {
       <Wrapper key={node.id}>
         <Hero
         title={node.frontmatter.title}
-        author={node.frontmatter.author.frontmatter.author_id}
+        author={node.frontmatter.author_id}
         status={node.frontmatter.status}
         download={node.frontmatter.download}
         thumbnail={node.frontmatter.thumbnail}
@@ -112,7 +111,7 @@ const Themes = ({ pageContext, data }) => {
               title={node.frontmatter.title}
               issue={node.frontmatter.github_issue_url}
               />
-              <SubHeader>Does this still work? {node.frontmatter.author.frontmatter.author_id} </SubHeader>
+              <SubHeader>Does this still work? {node.frontmatter.author_id} </SubHeader>
               <ReportButtons>
                 <WorkingBtn target="_blank" rel="noopener noreferrer" href={"https://github.com/MrRobotjs/BetterDocs-React/issues/new?title=" + node.frontmatter.title + " - Theme - [Status: Working]&labels=theme,working&body=This%20is%20ONLY%20to%20report%20that%20this%20theme%20(as%20of%20" + Mydate + ")%20IS%20working!" }>
                 <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -148,7 +147,7 @@ const Themes = ({ pageContext, data }) => {
               </Area>
               <AreaFlex>
                 <ContributionArea
-                author={node.frontmatter.author.frontmatter.author_id}
+                author={node.frontmatter.author_id}
                 maintainer={node.frontmatter.maintainer_name}
                 contributor={contributorList.group}
                 title={node.frontmatter.title}
@@ -251,21 +250,9 @@ const Themes = ({ pageContext, data }) => {
         </CommentsArea>
         <MoreHeader><Link to={"profile/" + node.frontmatter.author.frontmatter.author_id}>{node.frontmatter.author.frontmatter.author_id}'s</Link> Themes</MoreHeader>
           <MoreArea>
-          {authorThemeList.edges.map(({ node }) => (
             <MoreCard
-            key={node.id}
             author={node.frontmatter.author.frontmatter.author_id}
-            title={node.frontmatter.title}
-            snippet={node.frontmatter.snippet}
-            excerpt={node.excerpt}
-            thumbnail={node.frontmatter.thumbnail}
-            status={node.frontmatter.status}
-            slug={node.fields.slug}
-            demo={node.frontmatter.demo}
-            featured={node.frontmatter.featured}
-            mode={node.frontmatter.mode}
             />
-          ))}
           </MoreArea>
       </Wrapper>
       ))}
@@ -304,7 +291,6 @@ export const themesQuery = graphql`
   query themesQuery(
     $slug: String!
     $ghcommentid: Int!
-    $authorid: String!
     ) {
     listThemes:allMarkdownRemark(
       filter: { 
@@ -316,24 +302,6 @@ export const themesQuery = graphql`
             eq: $slug
           }
         }
-      }
-      ) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-      ...themeDateFormatFragment
-    },
-    authorThemeList:allMarkdownRemark(
-      filter: { 
-        collection: { 
-          eq: "themes" 
-        },
-        frontmatter: {
-            author_id: {
-              eq: $authorid
-          }
-        },
       }
       ) {
       group(field: frontmatter___tags) {

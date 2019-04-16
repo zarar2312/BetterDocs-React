@@ -7,9 +7,8 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components';
 import * as variable from '../styles/variables'
 import { darken } from 'polished'
-import Plugincard from '../components/plugins/card'
-import Themecard from '../components/themes/card'
 import { createGlobalStyle } from 'styled-components'
+import Contentcard from '../components/theme-plugin-cards'
 
 const Updated = "#00b167";
 const Deprecated = "#eb0505";
@@ -25,24 +24,24 @@ const Author = ({ pageContext, data }) => {
   return (
     <Layout>
     <GlobalStyle />
-      {data.limit.edges.map(({ node }) => (
-      <Helmet
-        key={node.id}
-        title={ node.frontmatter.author_id + `'s Profile | BetterDocs` }
-        meta={[
-          { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
-        ]}>
-        <meta property="og:site_name" content="BetterDocs"/>
-        <meta property="og:title" content={node.frontmatter.author_id + `'s Profile`}/>
-        <meta property="og:description" content={"Find all of " + node.frontmatter.author_id + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
-        <meta property="description" content={"Find all of " + node.frontmatter.author_id + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
-        <meta property="og:url" content={"https://betterdocs.us/profile/" + node.frontmatter.author_id} />
-        <html lang="en" />
-      </Helmet>
-      ))}
+        {data.authors.edges.map(({ node }) => (
+            <Helmet
+                key={node.id}
+                title={ node.frontmatter.author_id + `'s Profile | BetterDocs` }
+                meta={[
+                { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
+                ]}>
+                <meta property="og:site_name" content="BetterDocs"/>
+                <meta property="og:title" content={node.frontmatter.author_id + `'s Profile`}/>
+                <meta property="og:description" content={"Find all of " + node.frontmatter.author_id + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
+                <meta property="description" content={"Find all of " + node.frontmatter.author_id + `'s themes and plugins here. Follow on Github and even join the Discord server!`}/>
+                <meta property="og:url" content={"https://betterdocs.us/profile/" + node.frontmatter.author_id} />
+                <html lang="en" />
+            </Helmet>
+        ))}
     <Container>
       <Titlebar>
-        {data.all &&
+        {data.themes &&
           <Counter>Total <span>{data.all.totalCount}</span></Counter>
         }
         {data.themes &&
@@ -71,10 +70,10 @@ const Author = ({ pageContext, data }) => {
                     </Name>
                 }
                 <Roles>
-                  {data.themes &&
+                  {node.frontmatter.theme_developer &&
                   <Role>Theme Developer</Role>
                   }
-                  {data.plugins &&
+                  {node.frontmatter.plugin_developer &&
                   <Role>Plugin Developer</Role>
                   }
                 </Roles>
@@ -163,47 +162,13 @@ const Author = ({ pageContext, data }) => {
 
       <Showcase>
         <ShowcaseContainer>
-            {data.all.edges.map(({ node }, i) => (
-              <Card key={node.id} alt={node.frontmatter.demo ? "theme" : "plugin" }>
-                {node.frontmatter.demo ?
-                <>
-                {node.frontmatter.profile ?
-                    null
-                    :
-                    <Themecard 
-                    title={node.frontmatter.title} 
-                    thumbnail={node.frontmatter.thumbnail}
-                    slug={node.fields.slug}
-                    status={node.frontmatter.status}
-                    tags={node.frontmatter.tags}
-                    author={node.frontmatter.author_id}
-                    excerpt={node.excerpt}
-                    demo={node.frontmatter.demo}
-                    mode={node.frontmatter.style}
-                    featured= {node.frontmatter.featured}/>
-                }
-                </>
-                :
-                <>
-                {node.frontmatter.profile ?
-                    null
-                    :
-                    <Plugincard
-                    title={node.frontmatter.title} 
-                    thumbnail={node.frontmatter.thumbnail}
-                    slug={node.fields.slug}
-                    status={node.frontmatter.status}
-                    tags={node.frontmatter.tags}
-                    author={node.frontmatter.author_id}
-                    excerpt={node.excerpt}
-                    softwares={node.frontmatter.software}
-                    key={node.id}
-                    />
-                }
-                </>
-                }
-              </Card>
-            ))}
+        {data.authors.edges.map(({ node }) => (
+            <>
+                <Contentcard
+                author={node.frontmatter.author_id}
+                />
+            </>
+        ))}
           </ShowcaseContainer>
       </Showcase>
       </Flex>
@@ -243,13 +208,10 @@ export const authorQuery = graphql`
     all:allMarkdownRemark( filter: { frontmatter: { author_id: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...themeFragment
     },
-    limit:allMarkdownRemark( filter: { frontmatter: { author_id: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC} limit: 1) {
+    themes:allMarkdownRemark( filter: { collection: { eq: "themes" } frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...themeFragment
     },
-    themes:allMarkdownRemark( filter: { collection: { eq: "themes" } frontmatter: { author_id: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
-      ...themeFragment
-    },
-    plugins:allMarkdownRemark( filter: { collection: { eq: "plugins" } frontmatter: { author_id: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
+    plugins:allMarkdownRemark( filter: { collection: { eq: "plugins" } frontmatter: { author: { in: [$authors] } } } sort: { fields: [frontmatter___title], order: ASC}) {
       ...pluginFragment
     },
     authors:allMarkdownRemark( filter: { collection: { eq: "profiles" } frontmatter: { author_id: { in: [$authors] } } } limit: 1 ) {

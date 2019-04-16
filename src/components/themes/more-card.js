@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 //import style from 'src/styles/themes.module.scss'
 import Missing from "src/images/missing_image_2.png"
 import LazyLoad from "react-lazyload"
@@ -10,20 +10,36 @@ import * as variable from 'src/styles/variables'
 import { rgba, darken } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 
-const themeCard = ({slug, featured, thumbnail, title, demo, mode, tags, author, status, excerpt, snippet}) => (
+const themeCard = ({author}) => (
+    <StaticQuery
+    query={ graphql`
+    query {
+        allMarkdownRemark(filter: {collection: {eq: "themes"} } sort: { fields: [frontmatter___title], order: ASC}) {
+          group(field: frontmatter___tags) {
+            fieldValue
+            totalCount
+          }
+          ...themeFragment
+        }
+      }
+  `}
+    render={data => (
     <>
     <GlobalStyle />
+    {data.allMarkdownRemark.edges.map(({ node }, i) => (
+        <>
+        {node.frontmatter.author.frontmatter.author_id === author &&
         <Cards>
-            { thumbnail ?
-            <ImageContainer alt={featured && "featured"}>
-            <ThumbnailLink to={"theme" + slug}>
+            { node.frontmatter.thumbnail ?
+            <ImageContainer alt={node.frontmatter.featured && "featured"}>
+            <ThumbnailLink to={"theme" + node.frontmatter.slug}>
                 <LazyLoad once={true} height="100%"
-                        placeholder={<Thumbnail to={"theme" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
-                    <Thumbnail alt={title} src={thumbnail}/>
+                        placeholder={<Thumbnail to={"theme" + node.frontmatter.slug} alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                    <Thumbnail alt={node.frontmatter.title} src={node.frontmatter.thumbnail}/>
                 </LazyLoad>
             </ThumbnailLink>
             
-            { featured &&
+            { node.frontmatter.featured &&
                 <FeaturedIcon 
                 to="/themes/featured/"
                 data-balloon="Featured" data-balloon-pos="left"
@@ -33,12 +49,12 @@ const themeCard = ({slug, featured, thumbnail, title, demo, mode, tags, author, 
             }
             <Options>
                 <Btn
-                href={thumbnail}
+                href={node.frontmatter.thumbnail}
                 target="blank"
                 >Image Source</Btn>
-                {demo &&
+                {node.frontmatter.demo &&
                 <DisabledBtn
-                href={'https://betterdocs.us/preview/' + mode + '.html?theme=' + demo + "?no-cache=1"}
+                href={'https://betterdocs.us/preview/' + node.frontmatter.mode + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"}
                 target="blank"
                 title="Demo Temporarily Disabled">Quick Demo</DisabledBtn>
                 }
@@ -46,7 +62,7 @@ const themeCard = ({slug, featured, thumbnail, title, demo, mode, tags, author, 
             </ImageContainer>
             :
             <MissingImageContainer to="themes/upload-a-theme">
-            <Thumbnail alt={title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
+            <Thumbnail alt={node.frontmatter.title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
             </MissingImageContainer>
             }
             <SmallDetails>
@@ -57,22 +73,22 @@ const themeCard = ({slug, featured, thumbnail, title, demo, mode, tags, author, 
                         >{author} /</Author>
                     </AuthorContainer>
                 }
-                {status ?
+                {node.frontmatter.status ?
                 <StatusContainer>
-                    {snippet === true &&
+                    {node.frontmatter.snippet === true &&
                     <LinkStatus to="/themes/snippets">
                         <Status alt="Snippet">
                             Snippet
                         </Status>
                     </LinkStatus>
                     }
-                    <Status alt={status}>
-                        {status}
+                    <Status alt={node.frontmatter.status}>
+                        {node.frontmatter.status}
                     </Status>
                 </StatusContainer>
                 :
                 <StatusContainer>
-                    {snippet === true &&
+                    {node.frontmatter.snippet === true &&
                     <LinkStatus to="/themes/snippets">
                         <Status alt="Snippet">
                             Snippet
@@ -87,17 +103,17 @@ const themeCard = ({slug, featured, thumbnail, title, demo, mode, tags, author, 
             </SmallDetails>
             <TitleContainer>
                 <Title 
-                to={"theme" + slug}>
-                {title}
+                to={"theme" + node.frontmatter.slug}>
+                {node.frontmatter.title}
                 </Title>
             </TitleContainer>
-            {tags ?
+            {node.frontmatter.tags ?
             <div>
             <Description>
-                <Text>{excerpt}</Text>
+                <Text>{node.excerpt}</Text>
             </Description>
             <Tags>
-                {tags.map(tag => (
+                {node.frontmatter.tags.map(tag => (
                 <Tag to={`/themes/tag/${tag.toString().toLowerCase()}/`} key={tag}>
                     #{tag.toString().toLowerCase()}
                 </Tag>
@@ -106,11 +122,16 @@ const themeCard = ({slug, featured, thumbnail, title, demo, mode, tags, author, 
             </div>
             :
             <AltDescription>
-                <Text>{excerpt}</Text>
+                <Text>{node.excerpt}</Text>
             </AltDescription>
             }
         </Cards>
+        }
+        </>
+        ))}
     </>
+)}
+/>
 )
 
 export default themeCard
