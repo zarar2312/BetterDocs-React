@@ -451,12 +451,9 @@ const Container = styled.div`
           }
           ${ShowcaseContainer} {
               padding: 20px 0px;
-              display: block;
+              display: flex;
               justify-content: space-between;
               flex-wrap: wrap;
-              @media ${variable.MidPoint} {
-                  display: flex;
-              }
               a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]):not([class*="MissingContainer"]) {
                 display: inline-block;
                 transition: color 250ms, text-shadow 250ms;
