@@ -16,7 +16,7 @@ const themeCard = ({title, thumbnail, slug, theme, plugin, featured, demo, mode,
         <ImageContainer alt={featured && "featured"}>
         <ThumbnailLink to={"profile" + slug}>
             <LazyLoad once={true} height="100%"
-                    placeholder={<Thumbnail to={"themes" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                    placeholder={<Thumbnail to={"profile" + slug} alt={title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
                 <Thumbnail alt={title} src={thumbnail}/>
             </LazyLoad>
         </ThumbnailLink>
@@ -34,7 +34,7 @@ const themeCard = ({title, thumbnail, slug, theme, plugin, featured, demo, mode,
         </Options>
         </ImageContainer>
         :
-        <MissingImageContainer to="themes/upload-a-theme">
+        <MissingImageContainer to={"profile" + slug}>
         <Thumbnail alt={title} src={Missing} style={{backgroundImage :  `url(${Missing})` }}/>
         </MissingImageContainer>
         }
