@@ -44,7 +44,7 @@ const Tagss = ({ pageContext, data }) => {
             <Help target="blank" href="https://www.youtube.com/watch?v=MlRSS6ikKh0" data-balloon="Need help with theme installation?" data-balloon-pos="left">?</Help>
             <Upload
             data-balloon="Want to publish your theme?" data-balloon-pos="left"
-            to="/themes/upload-a-theme/">
+            to="/theme/upload-a-theme/">
               <svg id='Capa_1' xmlns='http://www.w3.org/2000/svg' width='433.5' height='433.5'
               viewBox='0 0 433.5 433.5'>
                   <g id='file-upload'>
@@ -84,7 +84,7 @@ const Tagss = ({ pageContext, data }) => {
 
     </Container>
     <UploadContainer>
-        <UploadBtn to="/themes/upload-a-theme/">
+        <UploadBtn to="/theme/upload-a-theme/">
         +
         </UploadBtn>
     </UploadContainer>

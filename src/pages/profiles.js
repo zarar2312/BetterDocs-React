@@ -74,7 +74,7 @@ const ProfilesPage = ({data}) => {
 
     </Container>
     <UploadContainer>
-        <UploadBtn to="/themes/upload-a-theme/">
+        <UploadBtn to="/theme/upload-a-theme/">
         +
         </UploadBtn>
     </UploadContainer>

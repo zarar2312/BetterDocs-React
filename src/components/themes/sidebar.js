@@ -36,7 +36,7 @@ const Sidebar = () => (
             Want your theme featured?
           </div>
           <Link 
-          to="/themes/upload-a-theme/"
+          to="/theme/upload-a-theme/"
           className={style.submitBtn}
           >
           Submit a Theme

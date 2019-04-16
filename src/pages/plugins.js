@@ -223,7 +223,7 @@ const Plugins = (props) => {
 
     </Container>
     <UploadBtn>
-        <Link title="Want to publish your plugin?" to="/plugins/upload-a-plugin/">
+        <Link title="Want to publish your plugin?" to="/plugin/upload-a-plugin/">
         +
         </Link>
     </UploadBtn>
