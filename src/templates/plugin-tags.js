@@ -271,13 +271,12 @@ const Cards = styled.div`
 `
 
 const UploadBtn = styled.div`
-  display: inline;
   position: fixed;
   bottom: 52px;
   z-index: 101;
   color: #fff;
   font-size: 10px;
-  /*width: 100%;*/
+  width: 100%;
   pointer-events: none;
   @media ${variable.MidPoint} {
       display: none;
