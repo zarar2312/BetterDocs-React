@@ -32,9 +32,9 @@ const themeCard = ({author}) => (
         <Cards>
             { node.frontmatter.thumbnail ?
             <ImageContainer alt={node.frontmatter.featured && "featured"}>
-            <ThumbnailLink to={"theme" + node.frontmatter.slug}>
+            <ThumbnailLink to={"theme" + node.fields.slug}>
                 <LazyLoad once={true} height="100%"
-                        placeholder={<Thumbnail to={"theme" + node.frontmatter.slug} alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
+                        placeholder={<Thumbnail to={"theme" + node.fields.slug} alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>}>
                     <Thumbnail alt={node.frontmatter.title} src={node.frontmatter.thumbnail}/>
                 </LazyLoad>
             </ThumbnailLink>
