@@ -411,7 +411,6 @@ const TagsContainer = styled.div`
     display: flex;
     padding: 15px;
     padding-top: unset;
-    justify-content: space-between;
     flex-wrap: wrap;
     ${Tagg} {
         font-size: 0.5rem;
@@ -423,11 +422,13 @@ const TagsContainer = styled.div`
         position: relative;
         z-index: 0;
         line-height: 0.8rem;
-
+        margin-right: 5px;
         &:after {
-        height: 0 !important;
+          height: 0 !important;
         }
-
+        &:last-child {
+          margin-right: unset;
+        }
         &:hover {
             color: #fff !important;
             opacity: 1;
