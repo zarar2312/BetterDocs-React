@@ -1127,7 +1127,7 @@ const Container = styled.div`
           position: fixed;
           right: 1rem;
           bottom: 2.5rem;
-          z-index: 100;
+          z-index: 150;
           transition: all linear 250ms !important;
           @media ${variable.MidPoint} {
               right: 1.5rem;
