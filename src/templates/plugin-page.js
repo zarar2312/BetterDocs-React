@@ -1202,6 +1202,9 @@ const GlobalStyle = createGlobalStyle`
           color: #fff;
         }
       }
+      ${MoreContainer} {
+        background-color: transparent:
+      }
     ${Tabbs} {
       ${TabListt} {
         ${Tabb} {
