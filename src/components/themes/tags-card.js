@@ -467,10 +467,10 @@ const Cards = styled.div`
         color: rgba(0, 0, 0, 0.4) !important;
         box-shadow: unset;
         border: unset;
-        margin-left: 5px;
+        margin-right: 5px;
         font-size: 0.5rem;
-            &:first-child {
-                margin-left: unset;
+            &:last-child {
+                margin-right: unset;
             }
             &::after {
                 height: 0 !important;
