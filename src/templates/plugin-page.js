@@ -630,6 +630,7 @@ const Container = styled.div`
       order: 4;
       ${Top} {
         display: flex;
+        flex-wrap: wrap;
         a {
           align-self: center;
           background-color: ${variable.SiteColor};
