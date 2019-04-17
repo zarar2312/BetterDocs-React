@@ -1187,6 +1187,7 @@ const BackButton = styled(AniLink)`
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
   ${Container} {
+${Wrapper} {
     background-color: #36393f;
     ${MoreHeader} {
       background-color: #2f3238;
@@ -1313,5 +1314,6 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
+}
 }
 `
