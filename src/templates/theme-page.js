@@ -468,7 +468,7 @@ const EditBtn = styled.div`
   position: fixed;
   right: 1rem;
   bottom: 2.5rem;
-  z-index: 100;
+  z-index: 150;
   @media ${variable.MidPoint} {
       right: 1.5rem;
       bottom: 1rem;
