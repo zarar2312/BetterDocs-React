@@ -41,7 +41,7 @@ const pluginCard = ({author}) => (
                 }
                 {node.frontmatter.thumbnail ?
                 <>
-                    <ImageContainer to={"plugin" + node.fields.slug}>
+                    <ImageContainer to={"theme" + node.fields.slug}>
                         <LazyLoad once={true} height="100%" placeholder={
                             <img alt={node.frontmatter.title} src={Loading} style={{backgroundImage :  `url(${Missing})` }}/>
                             }>
@@ -53,12 +53,12 @@ const pluginCard = ({author}) => (
                     </Options>
                 </>
                 :
-                    <MissingContainer to={"plugin" + node.fields.slug}>
+                    <MissingContainer to={"theme" + node.fields.slug}>
                         <img src={Mobile} alt="Missing Plugin Thumbnail" title="Missing Plugin Thumbnail" />
                     </MissingContainer>
                 }
                 <TitleContainer>
-                    <Title to={"plugin" + node.fields.slug}>{node.frontmatter.title}</Title>
+                    <Title to={"theme" + node.fields.slug}>{node.frontmatter.title}</Title>
                 </TitleContainer>
                 {author &&
                     <Details>
