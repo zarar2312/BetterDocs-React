@@ -1189,22 +1189,22 @@ const GlobalStyle = createGlobalStyle`
   ${Container} {
     background-color: #36393f;
     ${MoreHeader} {
-        background-color: #2f3238;
-        color: #eee;
-        a {
-          color: #fff !important;
-        }
+      background-color: #2f3238;
+      color: #eee;
+      a {
+        color: #fff !important;
       }
-      ${CommentsHeader} {
-        background-color: transparent;
-        color: #eee;
-        a {
-          color: #fff;
-        }
+    }
+    ${CommentsHeader} {
+      background-color: transparent;
+      color: #eee;
+      a {
+        color: #fff;
       }
-      ${MoreContainer} {
-        background-color: transparent:
-      }
+    }
+    ${MoreContainer} {
+      background-color: #2f3238:
+    }
     ${Tabbs} {
       ${TabListt} {
         ${Tabb} {
