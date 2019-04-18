@@ -223,6 +223,7 @@ const Title = styled(Link)`
     font-weight: 700;
     text-align: center;
     line-height: unset !important;
+    margin-bottom: unset;
     &::after {
         height: 0 !important;
     }
@@ -371,6 +372,7 @@ const Author = styled(Link)`
     color: #000;
     font-size: 0.45rem;
     line-height: unset !important;
+    margin-bottom: unset;
     &::after {
         height: 0 !important;
     }
@@ -487,6 +489,7 @@ const TagsContainer = styled.div`
         z-index: 0;
         line-height: 0.8rem;
         margin-right: 5px;
+        margin-bottom: unset;
         &:after {
           height: 0 !important;
         }
@@ -557,14 +560,12 @@ const GlobalStyle = createGlobalStyle`
             ${TitleContainer} {
                 ${Title} {
                     color: #eee !important;
-                    margin-bottom: unset;
                 }
             }
             ${Details} {
                 ${AuthorContainer} {
                     ${Author} {
                         color: rgba(255, 255, 255, 0.4) !important;
-                        margin-bottom: unset;
                     }
                 }
             }
@@ -576,7 +577,6 @@ const GlobalStyle = createGlobalStyle`
             ${TagsContainer} {
                 ${Tagg} {
                     color: rgba(255, 255, 255, 0.4) !important;
-                    margin-bottom: unset;
                 }
             }
         }
