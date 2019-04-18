@@ -664,7 +664,7 @@ const GlobalStyle = createGlobalStyle`
             }
             ${TitleContainer} {
                 ${Title} {
-                    color: rgba(255, 255, 255, 0.88);
+                    color: rgba(255, 255, 255, 0.88) !important;
                     &::after {
                         height: 0 !important;
                     }
