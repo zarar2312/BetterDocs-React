@@ -557,12 +557,14 @@ const GlobalStyle = createGlobalStyle`
             ${TitleContainer} {
                 ${Title} {
                     color: #eee !important;
+                    margin-bottom: unset;
                 }
             }
             ${Details} {
                 ${AuthorContainer} {
                     ${Author} {
                         color: rgba(255, 255, 255, 0.4) !important;
+                        margin-bottom: unset;
                     }
                 }
             }
@@ -574,6 +576,7 @@ const GlobalStyle = createGlobalStyle`
             ${TagsContainer} {
                 ${Tagg} {
                     color: rgba(255, 255, 255, 0.4) !important;
+                    margin-bottom: unset;
                 }
             }
         }
