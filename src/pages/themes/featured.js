@@ -67,7 +67,7 @@ const FeaturedThemes = (props) => {
               slug={node.fields.slug}
               status={node.frontmatter.status}
               tags={node.frontmatter.tags}
-              author={node.frontmatter.author}
+              author={node.frontmatter.author.frontmatter.author_id}
               excerpt={node.excerpt}
               demo={node.frontmatter.demo}
               style={node.frontmatter.style}
