@@ -560,7 +560,7 @@ const Container = styled.div`
       order: 6;
       /*display: flex;*/
       padding: 2rem;
-      margin-bottom: 2.1rem;
+      margin-bottom: unset;
       padding-top: 0;
       padding-bottom: 1rem;
       background-color: #e6e6e6;
@@ -621,7 +621,7 @@ const Container = styled.div`
           }
         }
         @media ${variable.MidPoint} {
-          margin-bottom: 0;
+          margin-bottom: 2.1rem;
           padding-bottom: 0.2rem;
         }
       }
