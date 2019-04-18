@@ -622,6 +622,7 @@ const Container = styled.div`
         }
         @media ${variable.MidPoint} {
           padding-bottom: 0.2rem;
+          margin-bottom: unset;
         }
       }
     }
