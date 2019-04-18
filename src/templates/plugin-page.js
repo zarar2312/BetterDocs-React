@@ -590,7 +590,7 @@ const Container = styled.div`
           width: 8px;
           height: 10px;
       }
-      a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+      a:not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]):not([class*="MissingContainer"]) {
         display: inline-block;
         transition: color 250ms, text-shadow 250ms;
         color: #000;
@@ -1204,7 +1204,7 @@ ${Wrapper} {
       }
     }
     ${MoreContainer} {
-      background-color: #2f3238:
+      background-color: #2f3238;
     }
     ${Tabbs} {
       ${TabListt} {

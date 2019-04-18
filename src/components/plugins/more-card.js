@@ -240,6 +240,7 @@ const Title = styled(Link)`
 const TitleContainer = styled.div`
     display: block;
     justify-content: center;
+    text-align: center;
 `
 
 const Card = styled.div`
