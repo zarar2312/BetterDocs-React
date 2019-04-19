@@ -43,7 +43,7 @@ const Themes = (props) => {
     <Container>
     <Hero>
       <HeroHeader>
-        Start customizing your Discordapp with our
+        Start customizing your Discordapp with the
       </HeroHeader>
       <Big>
         best themes
