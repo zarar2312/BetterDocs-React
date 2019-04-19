@@ -8,7 +8,7 @@ github_source_url: https://github.com/Bowser65/powercord-star
 github_issue_url: https://github.com/Bowser65/powercord-star/issues
 discord_server:
 software: [Powercord]
-thumbnail:
+thumbnail: http://breaking-discord.is-my-k.ink/395499a6d9.png
 previews: [http://breaking-discord.is-my-k.ink/395499a6d9.png]
 dependency:
 status: Updated
