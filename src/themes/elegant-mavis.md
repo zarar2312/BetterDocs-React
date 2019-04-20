@@ -11,11 +11,10 @@ demo:
 thumbnail: https://i.mavis.moe/f/joe9YpGB5I/discord-2019-04-20-13-21-37.png
 previews: [https://i.mavis.moe/f/joe9YpGB5I/discord-2019-04-20-13-21-37.png,https://i.mavis.moe/f/5Ewe4T07D2/discord-2019-04-20-13-23-53.png,https://i.mavis.moe/f/InpJwAJ5Rk/discord-2019-04-20-13-16-46.png]
 status: Updated
-tags: [transparent]
 auto: true
 featured: true
 style: dark
-tags: [bdv2,BetterDiscord2,dynamic,custom,invdividualColors]
+tags: [bdv2,BetterDiscord2,dynamic,custom,invdividualColors,transparent]
 ghcommentid: 441
 layout: product # DON'T CHANGE
 ---
