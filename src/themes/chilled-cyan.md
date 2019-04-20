@@ -11,6 +11,7 @@ thumbnail: https://i.imgur.com/ufitvYu.png
 previews: [https://i.imgur.com/ufitvYu.png]
 auto: true
 style: dark
+status: Deprecated
 ghcommentid: 441
 layout: product
 date: 2018-10-25T17:05:29.641Z
