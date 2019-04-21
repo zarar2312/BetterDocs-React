@@ -183,6 +183,11 @@ const Plugins = (props) => {
                   Report an issue
                 </Report>
                 }
+                {node.frontmatter.gitlab_issue_url &&
+                <Report href={node.frontmatter.gitlab_issue_url + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} rel="noopener noreferrer" target="_blank">
+                  Report an issue
+                </Report>
+                }
               </Options>
               <EditBtn key={node.id}>
                   <a href={`https://github.com/MrRobotjs/BetterDocs-React/edit/master/src/plugins/${kebabCase(node.fields.slug)}.md`} target="blank">
