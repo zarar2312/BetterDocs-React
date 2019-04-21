@@ -7,7 +7,9 @@ gitlab_profile_url: https://gitlab.com/Customa/
 gitlab_source_url: https://gitlab.com/Customa/pc-customa-dev-injector
 gitlab_issue_url: https://gitlab.com/Customa/pc-customa-dev-injector/issues/
 discord_server:
-thumbnail:
+thumbnail: https://i.imgur.com/11zo2NG.png
+previews: [https://i.imgur.com/11zo2NG.png]
+contributor_name: [ghostlydot]
 software: [Powercord]
 dependency:
 status: Updated
