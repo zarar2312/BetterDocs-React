@@ -232,7 +232,10 @@ const Themes = ({ pageContext, data }) => {
         </Tabbs>
         ))}
         <CommentsArea>
-          <CommentsHeader>Feedback</CommentsHeader>
+          <Top>
+            <CommentsHeader>Reviews</CommentsHeader>
+            <a href={git.repository.issue.url} target="blank">Post a review</a>
+          </Top>
           <CommentsContainer>
             {git.repository.issue.comments.edges.map(({ node }) => (
               <Comments
@@ -449,6 +452,8 @@ const CommentsContainer = styled.div`
 const MoreArea = styled.div`
 `
 const CommentsHeader = styled.div`
+`
+const Top = styled.div`
 `
 const MobileBackBtn= styled(AniLink)`
   position: fixed;
@@ -695,6 +700,23 @@ const Container = styled.div`
     }
     ${CommentsArea} {
       order: 4;
+      ${Top} {
+        display: flex;
+        flex-wrap: wrap;
+        a {
+          align-self: center;
+          background-color: ${variable.SiteColor};
+          padding: 0.4rem 0.7rem;
+          font-size: 0.8rem;
+          color: #fff;
+          transition: 210ms all linear;
+          border-radius: 5px;
+          margin: 0 2rem;
+          &:hover {
+            box-shadow: 2px 2px 40px -12px #000;
+          }
+        }
+      }
       ${MoreHeader} {
         font-size: 1.55rem;
         word-break: keep-all;

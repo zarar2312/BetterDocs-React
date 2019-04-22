@@ -214,8 +214,8 @@ const Plugins = (props) => {
         ))}
         <CommentsArea>
           <Top>
-            <CommentsHeader>Feedback</CommentsHeader>
-            <a href={git.repository.issue.url} target="blank">Post a comment</a>
+            <CommentsHeader>Reviews</CommentsHeader>
+            <a href={git.repository.issue.url} target="blank">Post a review</a>
           </Top>
           <CommentsContainer>
             {git.repository.issue.comments.edges.map(({ node }) => (
