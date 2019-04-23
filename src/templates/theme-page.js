@@ -236,6 +236,7 @@ const Themes = ({ pageContext, data }) => {
             <CommentsHeader>Reviews</CommentsHeader>
             <a href={git.repository.issue.url} target="blank">Post a review</a>
           </Top>
+          {git.repository.issue.comments ?
           <CommentsContainer>
             {git.repository.issue.comments.edges.map(({ node }) => (
               <Comments
@@ -250,6 +251,11 @@ const Themes = ({ pageContext, data }) => {
               />
             ))}
           </CommentsContainer>
+          :
+          <CommentsContainer>
+            <p>There seems to be no reviews at the moment. Be the first to submit a review!</p>
+          </CommentsContainer>
+          }
         </CommentsArea>
         <MoreHeader><Link to={"profile/" + node.frontmatter.author.frontmatter.author_id}>{node.frontmatter.author.frontmatter.author_id}'s</Link> Themes</MoreHeader>
           <MoreArea>
