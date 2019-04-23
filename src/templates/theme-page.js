@@ -698,6 +698,9 @@ const Container = styled.div`
     }
     ${CommentsArea} {
       order: 4;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
       ${Top} {
         display: flex;
         flex-wrap: wrap;
@@ -755,9 +758,15 @@ const Container = styled.div`
         }
       }
       ${CommentsContainer} {
-        margin: 1rem 2rem 0.5rem;
+        margin: 1rem 0rem 0.5rem;
         background: #fff;
         padding: 0.8rem 1.1rem;
+        box-shadow: rgb(153, 153, 153) 2px 2px 40px -12px;
+        border-radius: 20px;
+        padding: 0.8rem 1.1rem;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(236, 236, 236);
       }
     }
     ${Tabbs} {
