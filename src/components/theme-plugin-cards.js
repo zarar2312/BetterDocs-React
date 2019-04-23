@@ -54,7 +54,7 @@ const pluginCard = ({author}) => (
                 </>
                 :
                     <MissingContainer to={"theme" + node.fields.slug}>
-                        <img src={Mobile} alt="Missing Plugin Thumbnail" title="Missing Plugin Thumbnail" />
+                        <img src={Mobile} alt="Missing Theme Thumbnail" title="Missing Theme Thumbnail" />
                     </MissingContainer>
                 }
                 <TitleContainer>
@@ -68,7 +68,7 @@ const pluginCard = ({author}) => (
                         {node.frontmatter.softwares &&
                         <SoftwareList>
                             {node.frontmatter.softwares.map(softwaree => (
-                                <SoftwareIcon title={"This plugin supports " + softwaree} to={`/plugins/softwares/${kebabCase(softwaree)}/`} alt={softwaree} key={softwaree}>
+                                <SoftwareIcon title={"This theme supports " + softwaree} to={`/themes/softwares/${kebabCase(softwaree)}/`} alt={softwaree} key={softwaree}>
                                 </SoftwareIcon>
                             ))}
                         </SoftwareList>
@@ -81,7 +81,7 @@ const pluginCard = ({author}) => (
                 {node.frontmatter.tags &&
                     <TagsContainer>
                         {node.frontmatter.tags.map(tag => (
-                            <Tagg to={`/plugins/tag/${tag.toString().toLowerCase()}/`} key={tag}>
+                            <Tagg to={`/themes/tag/${tag.toString().toLowerCase()}/`} key={tag}>
                                 #{tag.toString().toLowerCase()}
                             </Tagg>
                         ))}
