@@ -1,11 +1,11 @@
 ---
 title: Lyrics
 author: ohlookitsderpy
-description: Lyrics plugin for Powercord, supports the pc-spotify plugin!
-download: https://github.com/ohlookitsderpy/lyrics
-github_profile_url: https://github.com/ohlookitsderpy/
-github_source_url: https://github.com/ohlookitsderpy/lyrics
-github_issue_url: https://github.com/ohlookitsderpy/lyrics/issues
+description: Lyrics plugin for Powercord, supports searching and the pc-spotify plugin!
+download: https://github.com/powercord-community/lyrics
+github_profile_url: https://github.com/ohlookitsderpy
+github_source_url: https://github.com/powercord-community/lyrics
+github_issue_url: https://github.com/powercord-community/lyrics/issues
 discord_server:
 software: [Powercord]
 thumbnail:
@@ -16,10 +16,11 @@ auto: false
 ghcommentid: 441
 layout: product # DON'T CHANGE
 ---
-Lyrics plugin for Powercord, supports the pc-spotify plugin!
+# lyrics
+Lyrics plugin for Powercord, supports searching and the pc-spotify plugin!
 
 Currently contains a ``lyrics`` command which works like this: (replace ``/`` with your Powercord prefix)
-* ``/lyrics`` - Returns lyrics of currently playing song
+* ``/lyrics`` - Returns lyrics of currently playing song on Spotify.
 * ``/lyrics imagine dragons warriors`` - Searches for lyrics of args and returns them in chat.
 
 The lyrics will be sent as a message in your current channel. If the message is too large it will send it to you as Clyde instead.
