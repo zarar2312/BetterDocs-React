@@ -15,7 +15,7 @@ auto: true
 featured: 
 style: dark
 tags: [transparent]
-ghcommentid: 441
+ghcommentid: 510
 layout: product # DON'T CHANGE
 ---
 A beautiful transpareny discord theme with a gorgeous anime girl as that background.

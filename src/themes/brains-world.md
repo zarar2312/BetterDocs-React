@@ -12,7 +12,7 @@ previews: [https://i.imgur.com/hHbpYyj.jpg]
 status:
 tags: [transparent]
 style: dark
-ghcommentid: 441
+ghcommentid: 507
 layout: product # DON'T CHANGE
 ---
 A dark and transparent theme with a blue brains background.

@@ -12,7 +12,7 @@ previews: [https://i.imgur.com/WBneQQ0.jpg]
 auto: true
 status: Deprecated
 style: dark
-ghcommentid: 441
+ghcommentid: 529
 layout: product # DON'T CHANGE
 ---
 A transparent glass-like theme for Discord with support for your own background.

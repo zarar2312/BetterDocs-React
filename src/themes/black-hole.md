@@ -13,7 +13,7 @@ previews: [https://i.imgur.com/sLnMnBp.png]
 status: Updated
 auto: true
 style: dark
-ghcommentid: 441
+ghcommentid: 498
 layout: product # DON'T CHANGE
 ---
 Jump into space with this theme. It's just a bedazzled base Discord theme

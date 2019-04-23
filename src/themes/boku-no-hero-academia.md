@@ -15,7 +15,7 @@ auto: true
 tags: [transparent]
 featured:
 style: dark
-ghcommentid: 441
+ghcommentid: 506
 layout: product # DON'T CHANGE
 ---
 A transparent theme with the background image being based on Boku No Hero Academia.

@@ -13,7 +13,7 @@ status: Updated
 auto: true
 style: dark
 tags: [dark, solid]
-ghcommentid: 441
+ghcommentid: 504
 layout: product # DON'T CHANGE
 ---
 Adds even more blurple to your Discordapp client.

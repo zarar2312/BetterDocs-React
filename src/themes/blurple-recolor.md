@@ -13,7 +13,7 @@ previews:
 status: Updated
 auto: true
 style: dark
-ghcommentid: 441
+ghcommentid: 501
 layout: product # DON'T CHANGE
 ---
 Replaces discords native blurple with your own color, change color in themefile.

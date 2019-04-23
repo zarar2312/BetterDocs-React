@@ -14,7 +14,7 @@ status: Updated
 auto: true
 featured: true
 style: dark
-ghcommentid: 441
+ghcommentid: 524
 layout: product # DON'T CHANGE
 ---
 **Discord+** is a theme that is both sleek and customizable, without getting in your way. Its top priority is balancing between looks and performance.

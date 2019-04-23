@@ -15,7 +15,7 @@ tags: [transparent]
 auto: true
 featured: true
 style: dark
-ghcommentid: 441
+ghcommentid: 495
 layout: product # DON'T CHANGE
 ---
 A cozy dark theme with blurred elements and gradients.

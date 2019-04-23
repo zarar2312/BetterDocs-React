@@ -15,7 +15,7 @@ status: Updated
 featured: true
 style: dark
 layout: product
-ghcommentid: 441
+ghcommentid: 528
 date: 2018-12-29T20:15:35.454Z
 ---
 Discord Electro is compact, squared & minimalist. It adds new icons & animations

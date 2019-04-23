@@ -15,7 +15,7 @@ auto:
 featured: true
 style: dark
 tags: [anime, dark, discord, material]
-ghcommentid: 441
+ghcommentid: 525
 layout: product #DON'T CHANGE
 ---
 A dark theme with a transparent background featuring a hot anime girl

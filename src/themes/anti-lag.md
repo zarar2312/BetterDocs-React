@@ -15,7 +15,7 @@ auto: true
 featured: 
 style: dark
 tags: [Lag, Fast]
-ghcommentid: 441
+ghcommentid: 492
 layout: product # DON'T CHANGE
 ---
 A theme that makes Discord lag as less as possible. Making your Discord fast white giving it a makeover.

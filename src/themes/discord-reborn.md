@@ -12,7 +12,7 @@ thumbnail: https://i.imgur.com/gnINgso.jpg
 previews: [https://i.imgur.com/gnINgso.jpg]
 style: dark
 status: Deprecated
-ghcommentid: 441
+ghcommentid: 530
 layout: product
 ---
 A nice sleek transparent theme.

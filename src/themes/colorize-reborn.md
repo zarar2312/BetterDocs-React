@@ -16,7 +16,7 @@ tags: [transparent]
 featured: true
 style: dark
 layout: product
-ghcommentid: 441
+ghcommentid: 518
 date: 2018-12-29T20:13:19.640Z
 ---
 A highly customizable theme that let's you change it's background or if you want a solid color instead of your choice then this is the theme for you!
