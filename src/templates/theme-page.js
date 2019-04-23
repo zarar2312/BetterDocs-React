@@ -451,7 +451,7 @@ const CommentsContainer = styled.div`
 `
 const MoreArea = styled.div`
 `
-const CommentsHeader = styled.div`
+const CommentsHeader = styled.h1`
 `
 const Top = styled.div`
 `
@@ -550,11 +550,9 @@ const Container = styled.div`
 
     }
     ${CommentsHeader} {
-      order: 5;
       font-size: 1.55rem;
       word-break: keep-all;
       margin-bottom: 0;
-      padding: 0 2rem;
       background-color: transparent;
       a:not([class*="anchor"]) {
         display: inline-block;
@@ -757,8 +755,9 @@ const Container = styled.div`
         }
       }
       ${CommentsContainer} {
-        margin: 0 2rem;
-        margin-top: 1rem;
+        margin: 1rem 2rem 0.5rem;
+        background: #fff;
+        padding: 0.8rem 1.1rem;
       }
     }
     ${Tabbs} {

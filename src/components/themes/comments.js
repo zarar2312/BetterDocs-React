@@ -119,7 +119,7 @@ margin-bottom: 0.5rem;
         flex-direction: column;
         display: flex;
         ${BodyContainer} {
-            background-color: #fff;
+            background-color: rgba(0, 0, 0, 0.06);
             padding: 0.3rem 0.5rem;
             border-radius: 12px;
             display: flex;
