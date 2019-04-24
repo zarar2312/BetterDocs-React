@@ -46,7 +46,7 @@ class desktopHeader extends React.Component {
                     to="/"
                     cover
                     bg="#0a0a0a" >
-                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000.2603 578.46808'
+                        <Svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000.2603 578.46808'
                         width='6.8rem'>
                             <g id='Layer_2' className='st0'>
                                 <rect className='st1' width='1940' height='640' />
@@ -94,7 +94,7 @@ class desktopHeader extends React.Component {
                                 <path className='st3' d='M834.7,274.7H938v199.6c0,19.8-3.1,38.5-9.3,56.1c-6.2,17.6-15.8,33-29,46.1c-13.2,13.2-27,22.4-41.5,27.7 c-20.1,7.5-44.3,11.2-72.4,11.2c-16.3,0-34.1-1.1-53.4-3.4c-19.3-2.3-35.4-6.8-48.3-13.6c-13-6.8-24.8-16.4-35.5-28.9 s-18.1-25.3-22.1-38.6c-6.4-21.3-9.6-40.2-9.6-56.6V274.7h103.3V479c0,18.3,5.1,32.5,15.2,42.8c10.1,10.3,24.2,15.4,42.2,15.4 c17.8,0,31.8-5.1,41.9-15.2c10.1-10.1,15.2-24.5,15.2-43V274.7z'
                                 />
                             </g>
-                        </svg>
+                        </Svg>
                     </AniLink>
                 </LogoContainer>
                 <LightSwitch>
@@ -219,6 +219,16 @@ const LogoContainer = styled.div`
   }
   ${Svg} {
     width: 6.8rem;
+    #Better {
+        .st3 {
+            fill: transparent !important;
+        }
+    }
+    #Layer_2 {
+        rect.st1 {
+            fill: transparent;
+        }
+    }
   }
 `
 

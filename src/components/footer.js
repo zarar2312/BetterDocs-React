@@ -255,8 +255,15 @@ const FooterContainer = styled.footer`
                     display: initial;
                     position: relative;
                     top: 4px;
-                    path, polygon, rect {
-                        fill: ${variable.SiteColor};
+                    svg {
+                        path, polygon, rect {
+                            fill: ${variable.SiteColor};
+                        }
+                        #Layer_2 {
+                            rect.st1 {
+                                fill: transparent;
+                            }
+                        }
                     }
                 }
                 ${Paragraph} {
