@@ -26,11 +26,11 @@ const FeaturedThemes = (props) => {
   <Layout>
     <Helmet>
         <meta charSet="utf-8" />
-        <title>Featured Discord Themes | BetterDocs</title>
-        <meta property="og:site_name" content="BetterDocs"/>
+        <title>Featured Discord Themes | Discord Source</title>
+        <meta property="og:site_name" content="Discord Source"/>
         <meta property="og:title" content="Featured Discord Themes"/>
         <meta property="og:description" content="List of the best Discord themes you can find on the market! Boost your gaming experience along with your hardcore Discord chatting skills today."/>
-        <meta property="og:url" content="https://betterdocs.us/themes/featured/" />
+        <meta property="og:url" content="https://discordsource.com/themes/featured/" />
     </Helmet>
     <Container>
     <GlobalStyle />

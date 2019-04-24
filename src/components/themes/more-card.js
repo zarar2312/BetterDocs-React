@@ -54,7 +54,7 @@ const themeCard = ({author}) => (
                 >Image Source</Btn>
                 {node.frontmatter.demo &&
                 <DisabledBtn
-                href={'https://betterdocs.us/preview/' + node.frontmatter.mode + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"}
+                href={'https://discordsource.com/preview/' + node.frontmatter.mode + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"}
                 target="blank"
                 title="Demo Temporarily Disabled">Quick Demo</DisabledBtn>
                 }

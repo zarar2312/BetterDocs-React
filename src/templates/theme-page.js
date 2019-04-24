@@ -50,12 +50,12 @@ const Themes = ({ pageContext, data }) => {
     {themeList.edges.map(({ node }, i) => (
     <Helmet
       key={node.id}
-      title={ node.frontmatter.title + ' by ' + node.frontmatter.author_id + ' | BetterDocs '}
+      title={ node.frontmatter.title + ' by ' + node.frontmatter.author_id + ' | Discord Source '}
       meta={[
         { name: 'description', content: node.frontmatter.description },
         { name: 'keywords', content: 'Discord, BetterDiscord, EnhancedDiscord, TwitchCord, Discord Hacks, Hacks, Mods, Discord Themes, Themes, Discord Plugins, Plugins, Discord Bots, Bots, Discord Servers, Discord Style, Styles' },
       ]}>
-      <meta property="og:site_name" content="BetterDocs"/>
+      <meta property="og:site_name" content="Discord Source"/>
       {node.frontmatter.author_id ?
       <meta property="og:title" content={node.frontmatter.title + ' by ' + node.frontmatter.author_id}/>
       :
@@ -67,7 +67,7 @@ const Themes = ({ pageContext, data }) => {
       :
       null
       }
-      <meta property="og:url" content={"https://betterdocs.us/themes" + node.fields.slug} />
+      <meta property="og:url" content={"https://discordsource.com/themes" + node.fields.slug} />
       <html lang="en" />
     </Helmet>
     ))}
@@ -195,10 +195,10 @@ const Themes = ({ pageContext, data }) => {
                   </>
                 }
                 {node.frontmatter.demo && 
-                  <DemoBtn href={'https://betterdocs.us/preview/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"} target="blank" title="Demo Temporarily Disabled">Demo</DemoBtn>
+                  <DemoBtn href={'https://discordsource.com/preview/' + node.frontmatter.style + '.html?theme=' + node.frontmatter.demo + "?no-cache=1"} target="blank" title="Demo Temporarily Disabled">Demo</DemoBtn>
                 }
                 {node.frontmatter.github_issue_url &&
-                <Report href={node.frontmatter.github_issue_url + "/new?title=" + node.frontmatter.title + " - BetterDocs - [Issue Report]&labels=report"} rel="noopener noreferrer" target="_blank">
+                <Report href={node.frontmatter.github_issue_url + "/new?title=" + node.frontmatter.title + " - Discord Source - [Issue Report]&labels=report"} rel="noopener noreferrer" target="_blank">
                   Report an issue
                 </Report>
                 }

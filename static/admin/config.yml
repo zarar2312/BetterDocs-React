@@ -4,7 +4,7 @@ backend:
 media_folder: static/media
 public_folder: static/media
 publish_mode: editorial_workflow
-display_url: https://betterdocs.us
+display_url: https://discordsource.com
 
 collections:
   - name: "themes" # Used in routes, e.g., /admin/collections/blog

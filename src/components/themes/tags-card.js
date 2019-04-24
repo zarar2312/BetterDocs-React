@@ -37,7 +37,7 @@ const themeCard = ({title, thumbnail, slug, status, tags, excerpt, author, featu
             >Image Source</Btn>
             {demo &&
             <DisabledBtn
-            href={'https://betterdocs.us/preview/' + mode + '.html?theme=' + demo + "?no-cache=1"}
+            href={'https://discordsource.com/preview/' + mode + '.html?theme=' + demo + "?no-cache=1"}
             target="blank"
             title="Demo Temporarily Disabled">Quick Demo</DisabledBtn>
             }

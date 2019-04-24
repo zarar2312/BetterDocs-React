@@ -9,7 +9,7 @@ ghcommentid: 441
 author: placeholder
 ---
 # Publish your work
-Want to publish your theme to our [Showcase](https://betterdocs.us/themes/)? Follow these instructions slow & carefully.
+Want to publish your theme to our [Showcase](https://discordsource.com/themes/)? Follow these instructions slow & carefully.
 
 ### Steps
 I promise it doesn't take long :)
@@ -60,19 +60,19 @@ Here's is some helpful information to inform you what each field does.
   - **github\_issue\_url** - A link to allow people to get support. (In most cases it should be the [Github issue](https://guides.github.com/features/issues/) url) `[OPTIONAL]`
   - **discord\_server** - A Discord server invite to allow people to get support or give feedback for the theme. `[OPTIONAL]`
   - **demo** - This is a direct url to the file so the [demo](https://betterdocs.netlify.com/demo/dark.html?theme=INSERT-URL-HERE) can work. For Github it need's to be the **raw** url but to fix the MIME type issue you will need to use [githack](https://raw.githack.com) for the url instead (or https://www.jsdelivr.com/?docs=gh). `[OPTIONAL]`
-  - **thumbnail** - A direct link to an image that will be the thumbnail and shown on the [themes page](https://betterdocs.us/themes/). (16:9) `[REQUIRED]`
+  - **thumbnail** - A direct link to an image that will be the thumbnail and shown on the [themes page](https://discordsource.com/themes/). (16:9) `[REQUIRED]`
   - **previews** - A list of images that show a preview of your theme. [Imgur](https://imgur.com) is highly recommended for compressed images and reliability. Multiple images can be added and seperated by commas ',' `[OPTIONAL]`
   - **status** - Values: `Updated/Oudated`. The current status of your theme.
   - **snippet** - Values: `true/false`. If your content isn't a full theme you can showcase it as a snippet instead. `[OPTIONAL]`
   - **featured** - Values `True/False`. Remove entirely or leave as false. Only used for featured themes that are chosen.
   - **auto** - If your theme is hosted on [Github](https://github.com) then add `true` to allow users to automatically down the file (or even the entire repo) instead of just' visiting the site, if hosted elsewhere leave blank or remove it entirely. `[REQUIRED]`
-  - **style** - Values: `dark/light`. This specifies the setting for the [demo](https://betterdocs.us). `[REQUIRED (if using demo)]`
+  - **style** - Values: `dark/light`. This specifies the setting for the [demo](https://discordsource.com). `[REQUIRED (if using demo)]`
   - **tags** - Tags are in an array and can be seperated with commas "," like so `[tag1,tag2]`. `[OPTIONAL]`
   - **ghcommentid** - ~~The ID of the issue related to your theme so it can be used in our comments system~~. `[REQUIRED]` 
   - **layout** - Used by the [Jekyll](https://github.com//MrRobotjs/BetterDocs/) version of this website. `[REQUIRED]` 
 
 ### How to set as Featured
-*Note: the BetterDocs team will choose featured themes, leave as `featured: false` when first posting or remove entirely instead.*
+*Note: the Discord Source team will choose featured themes, leave as `featured: false` when first posting or remove entirely instead.*
 
   1. If your theme is chosen as featured, here’s what to do next:
 

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 const about = () => (
   <Layout>
     <Helmet>
-        <title>BetterDocs | About Me</title>
+        <title>Discord Source | About Me</title>
         <meta http-equiv="refresh" content="0;url=https://mrrobotjs.github.io" />
     </Helmet>
     <h1>Coming Soon...</h1>

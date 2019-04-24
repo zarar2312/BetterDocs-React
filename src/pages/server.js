@@ -12,7 +12,7 @@ import styled from 'styled-components';
 const ServerPage = () => (
   <Layout>
       <Helmet>
-            <title>BetterDocs Discord Server</title>
+            <title>Discord Source Discord Server</title>
             <meta http-equiv="refresh" content="0;url=https://discord.gg/D4cAkXX" />
       </Helmet>
     <Hero />

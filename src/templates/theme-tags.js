@@ -27,11 +27,11 @@ const Tagss = ({ pageContext, data }) => {
     <Layout>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Themes tagged with "{tag}" | BetterDocs</title>
-      <meta property="og:site_name" content="BetterDocs"/>
-      <meta property="og:title" content={`Themes tagged with "` + tag + `" | BetterDocs`}/>
+      <title>Themes tagged with "{tag}" | Discord Source</title>
+      <meta property="og:site_name" content="Discord Source"/>
+      <meta property="og:title" content={`Themes tagged with "` + tag + `" | Discord Source`}/>
       <meta property="og:description" content={ "There are " + totalCount + ` Discordapp themes that are tagged with "` + tag + `". `}/>
-      <meta property="og:url" content="https://betterdocs.us/themes/" />
+      <meta property="og:url" content="https://discordsource.com/themes/" />
     </Helmet>
     <Container>
     <GlobalStyle />

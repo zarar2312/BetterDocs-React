@@ -34,13 +34,13 @@ const Layout = ({ children }) => (
           ]}
         >
           <meta name="msvalidate.01" content="2907AD22A611E606FD26FA8AA6CA2DB4" />
-          <meta property="og:site_name" content="BetterDocs"/>
+          <meta property="og:site_name" content="Discord Source"/>
           <meta property="og:image" content="https://i.imgur.com/B0vcfRw.png"/>
           <meta property="og:title" content={data.site.siteMetadata.title}/>
           <meta name="description" content="A Discord enhancement project. Free quality Themes, Plugins and Hacks for Discord and easy installation instructions for BetterDiscord and more!" />
           <meta property="og:description" content="A Discord enhancement project. Free quality Themes, Plugins and Hacks for Discord and easy installation instructions for BetterDiscord and more!"/>
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://betterdocs.us" />
+          <meta property="og:url" content="https://discordsource.com" />
           <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
           <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#0a0a0a"/>

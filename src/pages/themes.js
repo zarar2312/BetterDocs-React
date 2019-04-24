@@ -34,11 +34,11 @@ const Themes = (props) => {
     <GlobalStyle />
     <Helmet>
         <meta charSet="utf-8" />
-        <title>BetterDocs | #1 Discord Themes</title>
-        <meta property="og:site_name" content="BetterDocs"/>
+        <title>Discord Source | #1 Discord Themes</title>
+        <meta property="og:site_name" content="Discord Source"/>
         <meta property="og:title" content="#1 Discord Themes"/>
         <meta property="og:description" content="List of free high quality Discord themes by the community! Customize Discord to your own liking with transparent themes and modern themes!"/>
-        <meta property="og:url" content="https://betterdocs.us/themes/" />
+        <meta property="og:url" content="https://discordsource.com/themes/" />
     </Helmet>
     <Container>
     <Hero>
