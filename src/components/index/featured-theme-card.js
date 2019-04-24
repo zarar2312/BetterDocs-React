@@ -7,7 +7,7 @@ import Loading from 'src/images/Loading.gif'
 import * as variable from 'src/styles/variables'
 
 const FeaturedThemeCard = ({title, slug, author, thumbnail}) => (
-    <Card to={"themes" + slug}>
+    <Card to={"theme" + slug}>
         <ImageContainer>
             <LazyLoad once={true} height="100%"
                 placeholder={<img src={Loading} alt="Loading"

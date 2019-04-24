@@ -164,5 +164,25 @@ margin-bottom: 0.5rem;
 
 const GlobalStyle = createGlobalStyle`
 [mode="dark"] {
+    ${Card} {
+        ${Container2} {
+            ${BodyContainer} {
+                background-color: rgba(255, 255, 255, 0.05);
+                ${body} {
+                    color: #bfbfbf;
+                    a { 
+                        color: #fff !important;
+                    }
+                }
+            }
+            ${Options} {
+                a {
+                    &:hover {
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
 }
 `
