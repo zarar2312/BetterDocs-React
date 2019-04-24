@@ -646,10 +646,12 @@ const Container = styled.div`
           color: #fff;
           transition: 210ms all linear;
           border-radius: 5px;
-          margin: 0 2rem;
           &:hover {
             box-shadow: 2px 2px 40px -12px #000;
           }
+        }
+        ${CommentsHeader} {
+          margin-right: 0.8rem;
         }
       }
       ${MoreHeader} {
