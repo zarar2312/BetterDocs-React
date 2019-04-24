@@ -21,11 +21,18 @@ padding: 2rem;
 h1 {
   color: ${variable.SiteColor};
   text-align: center;
-  font-size: 6rem;
+  font-size: 5rem;
   word-break: keep-all;
+  @media ${variable.MidPoint} {
+    font-size: 6rem;
+  }
 }
 p {
   text-align: center;
+  font-size: 0.7rem;
+  @media ${variable.MidPoint} {
+    font-size: 1rem;
+  }
 }
 `
 const GlobalStyle = createGlobalStyle`
