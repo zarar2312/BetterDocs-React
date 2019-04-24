@@ -14,7 +14,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `DiscordSource | #1 Discord Themes & Plugins`,
+    title: `Discord Source | #1 Discord Themes & Plugins`,
     siteUrl: `https://discordsource.com`,
     announcement: `Keep in mind if any client mod breaks then just reinstall to repair!`,
   },
