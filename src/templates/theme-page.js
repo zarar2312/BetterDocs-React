@@ -239,6 +239,9 @@ const Themes = ({ pageContext, data }) => {
             ))}
           </Top>
           <CommentsContainer>
+            {themeList.edges.map(({ node }, i) => (
+              <ReviewText>Reviews for the theme <b>{node.frontmatter.title}</b></ReviewText>
+            ))}
             {git.repository.issue.comments.edges.map(({ node }) => (
               <Comments
               username={node.author.login}
@@ -406,6 +409,8 @@ const ContentContainer = styled.div`
 const Options = styled.div`
 `
 const Download = styled.a`
+`
+const ReviewText = styled.p`
 `
 const Report = styled.a`
 `
@@ -771,6 +776,10 @@ const Container = styled.div`
         border-width: 1px;
         border-style: solid;
         border-color: rgb(236, 236, 236);
+        ${ReviewText} {
+          font-size: 0.8rem;
+          margin-bottom: 0.7rem;
+        }
       }
     }
     ${Tabbs} {
@@ -1280,6 +1289,9 @@ const GlobalStyle = createGlobalStyle`
           background: rgba(0, 0, 0, 0.22);
           border-color: rgba(0, 0, 0, 0.08);
           box-shadow: rgb(0, 0, 0) 2px 2px 40px -12px;
+          ${ReviewText} {
+            color: #eee;
+          }
         }
       }
       ${MoreHeader} {
