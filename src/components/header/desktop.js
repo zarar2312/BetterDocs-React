@@ -46,7 +46,7 @@ class desktopHeader extends React.Component {
                     to="/"
                     cover
                     bg="#0a0a0a" >
-                        <Svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000.2603 578.46808'
+                        <Svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000.2603 625.46808'
                         width='6.8rem'>
                             <g id='Layer_2' className='st0'>
                                 <rect className='st1' width='1940' height='640' />
@@ -219,6 +219,9 @@ const LogoContainer = styled.div`
   }
   ${Svg} {
     width: 6.8rem;
+    path,rect {
+        fill: #fff;
+    }
     #Better {
         .st3 {
             fill: transparent !important;
