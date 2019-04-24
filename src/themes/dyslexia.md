@@ -13,7 +13,7 @@ status: Updated
 auto: True
 featured: 
 style: dark
-ghcommentid: 441
+ghcommentid: 549
 layout: product # DON'T CHANGE
 ---
 Makes changes to the font and layout to help dyslexics use Discord.

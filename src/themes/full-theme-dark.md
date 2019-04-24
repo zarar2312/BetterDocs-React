@@ -13,7 +13,7 @@ previews:
 status: Updated
 auto: true
 style: dark
-ghcommentid: 441
+ghcommentid: 547 
 layout: product # DON'T CHANGE
 ---
 Fixes all unthemed sections in the native dark theme of discord.

@@ -14,7 +14,7 @@ status: Updated
 auto: true
 featured: 
 style: dark
-ghcommentid: 441
+ghcommentid: 545 
 layout: product # DON'T CHANGE
 ---
 Easy light theme. Should also work in combination with most dark themes. Relies on discord's dark mode.

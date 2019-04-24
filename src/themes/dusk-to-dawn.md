@@ -15,7 +15,7 @@ auto: true
 featured: 
 style: dark
 tags: [transparent]
-ghcommentid: 441
+ghcommentid: 541 
 layout: product # DON'T CHANGE
 ---
 Simple theme that changes discord's default appearance in subtle ways.

@@ -15,7 +15,7 @@ auto: true
 featured: 
 style: dark
 tags: [transparent]
-ghcommentid: 441
+ghcommentid: 550 
 layout: product # DON'T CHANGE
 ---
 A theme with Kirito and Deathgun fighting in GGO (Gun Gale Online)

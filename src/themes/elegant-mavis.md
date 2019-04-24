@@ -15,7 +15,7 @@ auto: true
 featured: true
 style: dark
 tags: [bdv2,BetterDiscord2,dynamic,custom,invdividualColors,transparent]
-ghcommentid: 441
+ghcommentid: 544 
 layout: product # DON'T CHANGE
 ---
 Website: [venipa.net](https://venipa.net)

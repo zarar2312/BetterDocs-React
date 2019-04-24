@@ -15,7 +15,7 @@ auto: true
 featured: 
 style: dark
 tags: [transparent]
-ghcommentid: 441
+ghcommentid: 548 
 layout: product # DON'T CHANGE
 ---
 Ever wanted to see through your Discordapp client? Now you can! with this theme you are able to see completely through the client, thus allowing you to watch anything on the background.
