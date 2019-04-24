@@ -12,7 +12,7 @@ demo: https://cdn.jsdelivr.net/gh/gco360/thanos-theme@master/thanos.theme.css
 thumbnail: https://i.imgur.com/VZL0VON.jpg
 previews: [https://i.imgur.com/VZL0VON.jpg]
 style: dark
-ghcommentid: 441
+ghcommentid: 590 
 layout: product
 ---
 infinity war set one theme

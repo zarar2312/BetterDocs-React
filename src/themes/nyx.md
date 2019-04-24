@@ -11,7 +11,7 @@ demo: https://cdn.jsdelivr.net/gh/satoru8/Nyx@master/Nyx.theme.css
 thumbnail: https://i.imgur.com/HZNTSDv.png
 previews: [https://i.imgur.com/HZNTSDv.png]
 style: dark
-ghcommentid: 441
+ghcommentid: 572 
 layout: product
 ---
 A simple yet complex theme.

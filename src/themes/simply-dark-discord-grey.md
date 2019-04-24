@@ -13,7 +13,7 @@ auto: true
 status: Updated
 style: dark
 layout: product
-ghcommentid: 441
+ghcommentid: 585 
 date: 2018-12-18T03:32:07.829Z
 ---
 Makes Discord sharp and simple. A very grey theme.

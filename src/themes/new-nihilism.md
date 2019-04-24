@@ -10,7 +10,7 @@ demo: https://cdn.jsdelivr.net/gh/ObserverOfTime/DiscordThemes@master/NewNihilis
 thumbnail: https://i.imgur.com/fWoXCXm.png
 previews: [https://i.imgur.com/fWoXCXm.png]
 style: dark   
-ghcommentid: 441
+ghcommentid: 565 
 layout: product
 ---
 A dark and compact theme, designed for use with Discord's dark theme.

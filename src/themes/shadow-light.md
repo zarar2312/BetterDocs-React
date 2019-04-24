@@ -10,7 +10,7 @@ demo: https://cdn.rawgit.com/AltenGD/Altens-betterdiscord-Themes-Plugins/master/
 thumbnail: https://i.imgur.com/3nf8QEZ.jpg
 previews: [https://i.imgur.com/3nf8QEZ.jpg]
 style: dark
-ghcommentid: 441
+ghcommentid: 584 
 layout: product
 ---
 Ever wanted to have a mac / ios feel in discord? me neither.

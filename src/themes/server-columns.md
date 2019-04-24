@@ -14,7 +14,7 @@ previews: [https://i.imgur.com/kBHaArh.png]
 status: Updated
 auto: true
 snippet: true
-ghcommentid: 441
+ghcommentid: 582 
 layout: product # DON'T CHANGE
 ---
 Changes the Server List to a gridlike container to allow servers to be displayed in columns. Amount of columns can be set in the .theme.css file. Improved Version of Server Grid. 

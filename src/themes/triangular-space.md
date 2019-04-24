@@ -11,7 +11,7 @@ demo: https://rawcdn.githack.com/xNightWulf/ThemesForBetterDiscord/master/Triang
 thumbnail: https://i.imgur.com/LA1spXs.png
 previews: [https://i.imgur.com/LA1spXs.png]
 style: dark
-ghcommentid: 441
+ghcommentid: 592 
 layout: product
 date: 2018-10-22T18:29:07.989Z
 ---

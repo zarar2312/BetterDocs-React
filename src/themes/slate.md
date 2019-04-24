@@ -10,7 +10,7 @@ demo: https://rawcdn.githack.com/Ruben7173/Ruben7173.github.io/master/BetterDisc
 thumbnail: https://i.imgur.com/EFaEne8.png
 previews: [https://i.imgur.com/EFaEne8.png]
 style: dark
-ghcommentid: 441
+ghcommentid: 586 
 layout: product
 date: 2018-10-22T18:01:39.728Z
 ---

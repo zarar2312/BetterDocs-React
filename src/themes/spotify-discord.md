@@ -11,7 +11,7 @@ demo: https://cdn.jsdelivr.net/gh/CapnKitten/Spotify-Discord@master/Spotify-Disc
 thumbnail: https://i.imgur.com/rGmmodi.png
 previews: [https://i.imgur.com/rGmmodi.png]
 style: dark
-ghcommentid: 441
+ghcommentid: 589 
 layout: product
 ---
 Combine Discord and Spotify into one

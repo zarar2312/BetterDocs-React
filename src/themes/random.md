@@ -10,7 +10,7 @@ demo: https://cdn.jsdelivr.net/gh/Modder4869/BdBrokenStuff@9fc16142/Themes/v1/ra
 thumbnail: https://i.imgur.com/Qyf3Q6N.png
 previews: [https://i.imgur.com/Qyf3Q6N.png]
 style: dark   
-ghcommentid: 441
+ghcommentid: 577 
 layout: product
 ---
 Customizable default discord theme `Download it , Copy it to themes folder , Reload Discord (Ctrl +R), Enable it`

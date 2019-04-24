@@ -10,7 +10,7 @@ demo: https://cdn.jsdelivr.net/gh/trueprominency/Shades-of-Red-Theme@master/shad
 thumbnail: https://i.imgur.com/SJlNccM.jpg
 previews: [https://i.imgur.com/SJlNccM.jpg]
 style: dark
-ghcommentid: 441
+ghcommentid: 583 
 layout: product
 ---
 great colors of red collide in my first theme.

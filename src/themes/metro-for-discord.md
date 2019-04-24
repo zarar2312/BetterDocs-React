@@ -10,7 +10,7 @@ demo: https://raw.githubusercontent.com/TakosThings/Metro-for-Discord/master/dis
 thumbnail: https://i.imgur.com/SgNp0TU.png
 previews: [https://i.imgur.com/SgNp0TU.png]
 style: dark
-ghcommentid: 441
+ghcommentid: 560 
 layout: product
 ---
 A theme based off of Microsoft's Modern Design Language, aka 'Metro'.
