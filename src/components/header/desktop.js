@@ -219,7 +219,7 @@ const LogoContainer = styled.div`
   }
   ${Svg} {
     width: 6.8rem;
-    path,rect {
+    path,rect,polygon {
         fill: #fff;
     }
     #Better {
