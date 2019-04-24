@@ -22,6 +22,7 @@ h1 {
   color: ${variable.SiteColor};
   text-align: center;
   font-size: 6rem;
+  word-break: keep-all;
 }
 p {
   text-align: center;

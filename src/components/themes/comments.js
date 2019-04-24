@@ -168,7 +168,7 @@ const GlobalStyle = createGlobalStyle`
         ${Container2} {
             ${BodyContainer} {
                 background-color: rgba(255, 255, 255, 0.05);
-                ${body} {
+                ${Body} {
                     color: #bfbfbf;
                     a { 
                         color: #fff !important;
