@@ -20,7 +20,7 @@ const Footer = () => (
         <List>
             <FirstItem>
                 <Logo>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1950.2603 580.46808'
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1850.2603 580.46808'
                     width='3.75rem' height='2rem'>
                         <g id='Layer_2' className='st0'>
                             <rect className='st1' width='1940' height='640' />

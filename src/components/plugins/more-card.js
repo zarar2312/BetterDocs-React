@@ -568,6 +568,15 @@ const GlobalStyle = createGlobalStyle`
                         color: rgba(255, 255, 255, 0.4) !important;
                     }
                 }
+                ${SoftwareList} {
+                    ${SoftwareIcon} {
+                        &[alt="DiscordInjections"] {
+                            &::before {
+                                color: #eee;
+                            }
+                        }
+                    }
+                }
             }
             ${DescriptionContainer} {
                 ${DescriptionText} {

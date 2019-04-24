@@ -14,8 +14,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `BetterDocs | #1 Discord Themes & Plugins`,
-    siteUrl: `https://betterdocs.us`,
+    title: `DiscordSource | #1 Discord Themes & Plugins`,
+    siteUrl: `https://discordsource.com`,
     announcement: `Keep in mind if any client mod breaks then just reinstall to repair!`,
   },
   plugins: [
@@ -32,8 +32,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: "https://betterdocs.us",
-        sitemap: "https://betterdocs.us/sitemap.xml",
+        host: "https://discordsource.com",
+        sitemap: "https://discordsource.com/sitemap.xml",
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
