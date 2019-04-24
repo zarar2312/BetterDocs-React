@@ -259,6 +259,11 @@ const FooterContainer = styled.footer`
                         path, polygon, rect {
                             fill: ${variable.SiteColor};
                         }
+                        #Better {
+                            .st3 {
+                                fill: transparent !important;
+                            }
+                        }
                         #Layer_2 {
                             rect.st1 {
                                 fill: transparent;
