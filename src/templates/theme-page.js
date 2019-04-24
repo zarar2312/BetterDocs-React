@@ -234,7 +234,9 @@ const Themes = ({ pageContext, data }) => {
         <CommentsArea>
           <Top>
             <CommentsHeader>Reviews</CommentsHeader>
-            <a href={git.repository.issue.url} target="blank">Post a review</a>
+            {themeList.edges.map(({ node }, i) => (
+              <a href={ "https://github.com/MrRobotjs/BetterDocs-React/issues/" + node.frontmatter.ghcommentid} target="blank">Post a review</a>
+            ))}
           </Top>
           <CommentsContainer>
             {git.repository.issue.comments.edges.map(({ node }) => (
