@@ -624,10 +624,10 @@ const Container = styled.div`
             width: 110% !important;
           }
         }
-        @media ${variable.MidPoint} {
-          padding-bottom: 0.2rem;
-          margin-bottom: unset;
-        }
+      }
+      @media ${variable.MidPoint} {
+        padding-bottom: 0.2rem;
+        margin-bottom: unset;
       }
     }
     ${CommentsArea} {
