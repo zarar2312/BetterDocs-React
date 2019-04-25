@@ -147,7 +147,7 @@ const Themes = ({ pageContext, data }) => {
               </Area>
               <AreaFlex>
                 <ContributionArea
-                author={node.frontmatter.author_id}
+                author={node.frontmatter.author.frontmatter.author_id}
                 maintainer={node.frontmatter.maintainer_name}
                 contributor={contributorList.group}
                 title={node.frontmatter.title}
