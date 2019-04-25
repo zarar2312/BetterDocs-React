@@ -213,7 +213,7 @@ const Themes = ({ pageContext, data }) => {
               {previewList.group.map(image => (
                 <ScreenshotWrapper key={image.fieldValue}>
                   <ImageContainer>
-                    <img src={image.fieldValue} alt={node.frontmatter.title + " made by " + node.frontmatter.author}/>
+                    <img src={image.fieldValue} alt={node.frontmatter.title + " made by " + node.frontmatter.author.frontmatter.author_id}/>
                     <ImageOptions>
                       <OptionsWrapper>
                         <Linkka
