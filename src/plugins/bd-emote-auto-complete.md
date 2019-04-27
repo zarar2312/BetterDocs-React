@@ -15,7 +15,7 @@ images:
   - image: 'https://i.imgur.com/phLB9M8.png'
     name: BD Emote Auto Complete Preview - Plugin Settings Page
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 612
 layout: product
 date: 2018-10-26T18:10:05.966Z
 ---
