@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 614
 layout: product # DON'T CHANGE
 ---
 Powercord plugin that aims to improve Discord's friend feature
