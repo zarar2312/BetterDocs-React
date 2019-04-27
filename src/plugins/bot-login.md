@@ -10,7 +10,7 @@ discord_server: 'https://discord.gg/XAvh9tq'
 auto: true
 status: Updated
 software: [EnhancedDiscord]
-ghcommentid: 441
+ghcommentid: 619
 layout: product
 date: 2018-10-26T15:27:19.930Z
 ---
