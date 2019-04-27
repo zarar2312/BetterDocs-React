@@ -8,6 +8,8 @@ github_source_url: https://github.com/KyzaGitHub/Khub/tree/master/v1%20Plugins/C
 github_issue_url: https://github.com/KyzaGitHub/Khub/issues/
 discord_server: ''
 software: [BandagedBD, BetterDiscord]
+previews: [https://github.com/KyzaGitHub/Khub/raw/master/media/custom-icon.png]
+thumbnail: https://github.com/KyzaGitHub/Khub/raw/master/media/custom-icon.png
 dependency: []
 status: Updated
 auto: true
@@ -15,3 +17,4 @@ ghcommentid: 441
 layout: product
 date: 2019-4-26T16:00:00.000Z
 ---
+CustomDiscordIcon allows you to customize the Discord icon on your taskbar.

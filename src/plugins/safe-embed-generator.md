@@ -8,6 +8,8 @@ github_source_url: https://github.com/KyzaGitHub/Khub/tree/master/v1%20Plugins/S
 github_issue_url: https://github.com/KyzaGitHub/Khub/issues/
 discord_server: ''
 software: [BandagedBD, BetterDiscord]
+previews: [https://github.com/KyzaGitHub/Khub/raw/master/media/live.gif]
+thumbnail: https://github.com/KyzaGitHub/Khub/raw/master/media/live.gif
 dependency: []
 status: Updated
 auto: true
@@ -15,3 +17,4 @@ ghcommentid: 441
 layout: product
 date: 2019-4-26T16:00:00.000Z
 ---
+SafeEmbedGenerator adds a button to the right of your text box which allows you to create safe embeds with ease.
