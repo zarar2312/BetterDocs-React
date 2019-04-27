@@ -8,8 +8,8 @@ github_source_url: https://github.com/KyzaGitHub/Khub/tree/master/v1%20Plugins/C
 github_issue_url: https://github.com/KyzaGitHub/Khub/issues/
 discord_server: ''
 software: [BandagedBD, BetterDiscord]
-previews: [https://github.com/KyzaGitHub/Khub/raw/master/media/ghost-message.gif]
-thumbnail: https://github.com/KyzaGitHub/Khub/raw/master/media/ghost-message.gif
+previews: [https://github.com/KyzaGitHub/Khub/raw/master/media/custom-icon.png]
+thumbnail: https://github.com/KyzaGitHub/Khub/raw/master/media/custom-icon.png
 dependency: []
 status: Updated
 auto: true
