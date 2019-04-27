@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 604
 layout: product # DON'T CHANGE
 ---
 Adds a little audio visualizer to the bottom left of the Discord window where the user modal is. Features a large amount of customization and captures audio from your main output device (meaning it works *anywhere* on your computer).
