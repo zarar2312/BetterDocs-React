@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 618
 layout: product # DON'T CHANGE
 ---
 Powercord plugin that allows you to bookmark certain emojis to the top of the emoji picker on Discord
