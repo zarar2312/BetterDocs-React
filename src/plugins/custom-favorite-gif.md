@@ -11,7 +11,7 @@ npm_i: di-custom-favorite-gif
 github_issue_url: https://github.com/Ratismal/custom-favorite-gif/issues
 software: [DiscordInjections]
 status:
-ghcommentid: 441
+ghcommentid: 629
 layout: product # DON'T CHANGE
 ---
 A DiscordInjections plugin add custom images to the Favorite GIFs selector.
