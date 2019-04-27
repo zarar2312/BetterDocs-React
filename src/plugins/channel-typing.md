@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 622
 layout: product # DON'T CHANGE
 ---
 Based on this idea https://www.reddit.com/r/discordapp/comments/bex98j, a plugin to add a typing indicator in channel list where people are actually typing
