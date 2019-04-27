@@ -10,7 +10,6 @@ discord_server: ''
 software: [BandagedBD, BetterDiscord]
 previews: [https://github.com/KyzaGitHub/Khub/raw/master/media/ghost-message.gif]
 thumbnail: https://github.com/KyzaGitHub/Khub/raw/master/media/ghost-message.gif
-dependency: []
 status: Updated
 auto: true
 ghcommentid: 441
