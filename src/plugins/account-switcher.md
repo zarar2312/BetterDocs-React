@@ -9,7 +9,7 @@ github_source: https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugi
 download: https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/AccountSwitcher/AccountSwitcher.plugin.js
 github_issue_url: https://github.com/l0c4lh057/BetterDiscordStuff/issues
 status: Updated
-ghcommentid: 441
+ghcommentid: 602
 auto: true
 ---
 ## Warning
