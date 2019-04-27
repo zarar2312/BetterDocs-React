@@ -9,7 +9,7 @@ tags: [developer, experiments, preview]
 software: [BandagedBD]
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 610
 layout: product # DON'T CHANGE
 ---
 This plugin is a port of joe27g's experiments plugin for BandagedBD. This allows you to access bleeding edge developer features.
