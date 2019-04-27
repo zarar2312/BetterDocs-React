@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 638
 layout: product # DON'T CHANGE
 ---
 Discord RPC directly inside Discord! Controllable via settings menu and commands.
