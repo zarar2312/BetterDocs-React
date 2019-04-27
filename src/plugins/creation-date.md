@@ -10,7 +10,7 @@ discord_server: 'https://discord.gg/Z7PBux5'
 status: Updated
 software: [BandagedBD, BetterDiscord]
 auto: true
-ghcommentid: 441
+ghcommentid: 628
 layout: product
 date: 2018-10-23T21:19:29.328Z
 ---
