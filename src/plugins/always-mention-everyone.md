@@ -10,7 +10,7 @@ discord_server: https://discordapp.com/invite/ZYND2Xd
 software: [BandagedBD, BetterDiscord]
 auto: true
 status: Updated
-ghcommentid: 441
+ghcommentid: 603
 layout: product
 ---
 Removes* the confirmation prompt when mentioning everyone in a large server. Requires "Normalize Classes" to be enabled in Zere's Fork settings.
