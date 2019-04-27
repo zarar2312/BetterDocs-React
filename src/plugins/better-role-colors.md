@@ -11,7 +11,7 @@ software: [BandagedBD,BetterDiscord]
 dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 615
 layout: product # DON'T CHANGE
 ---
 Adds server-based role colors to typing, voice, popouts, modals and more!
