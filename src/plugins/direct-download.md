@@ -8,7 +8,7 @@ github_source_url: https://github.com/Inve1951/BetterDiscordStuff/blob/master/pl
 github_issue_url: https://github.com/Inve1951/BetterDiscordStuff/issues
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 634
 layout: product
 ---
 Download attached files directly within discord. Usage note: Left click a tab to open the file, right click it to show in file manager.
