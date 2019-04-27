@@ -12,7 +12,7 @@ status: Deprecated
 software: [BandagedBD, BetterDiscord]
 thumbnail: https://i.imgur.com/OvDTo6r.gif
 previews: [https://i.imgur.com/OvDTo6r.gif, https://i.imgur.com/9pEw8uj.png]
-ghcommentid: 441
+ghcommentid: 605
 layout: product
 date: 2018-10-26T03:35:45.373Z
 ---
