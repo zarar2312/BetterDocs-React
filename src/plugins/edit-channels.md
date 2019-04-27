@@ -10,7 +10,7 @@ discord_server: https://discordapp.com/invite/Z7PBux5
 software: [BandagedBD,BetterDiscord]
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 645
 layout: product # DON'T CHANGE
 ---
 Adds two options on your channel context menu.
