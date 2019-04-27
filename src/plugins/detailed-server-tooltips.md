@@ -11,7 +11,7 @@ discord_server: https://discordapp.com/invite/yNqzuJa
 software: [BandagedBD, BetterDiscord]
 thumbnail: https://i.imgur.com/ASfjHaw.png
 previews: [https://i.imgur.com/ASfjHaw.png, https://i.imgur.com/UhcM8Ik.png]
-ghcommentid: 441
+ghcommentid: 633
 layout: product
 ---
 Displays a more detailed tooltip for servers similar to user popouts. Contains a larger image, owner's tag, date and time created, date and time joined, how many days ago joined, member count, channel count, role count, region, and whether or not the server is partnered.
