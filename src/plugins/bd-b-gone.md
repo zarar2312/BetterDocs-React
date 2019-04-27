@@ -12,7 +12,7 @@ software: [BandagedBD, BetterDiscord]
 images:
   - name: BD B Gone Preview
     image: https://i.imgur.com/hYAsqSl.png
-ghcommentid: 441
+ghcommentid: 611
 layout: product
 ---
 Completely (or partially) remove BD from your system.
