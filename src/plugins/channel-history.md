@@ -10,7 +10,7 @@ discord_server: 'https://discordapp.com/invite/Z7PBux5'
 status: Updated
 auto: true
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 620
 layout: product
 date: 2018-10-25T04:17:08.879Z
 ---
