@@ -14,7 +14,7 @@ status: Updated
 images:
   - name: Auto Start Rich Presence Preview
     image: https://i.imgur.com/zwUwJuD.png
-ghcommentid: 441
+ghcommentid: 607
 layout: product
 ---
 Allows you to auto start Rich Presence when you start Discord, with configurable text and images.
