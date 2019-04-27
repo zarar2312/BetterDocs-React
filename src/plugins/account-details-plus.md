@@ -13,7 +13,7 @@ software: [BandagedBD,BetterDiscord]
 dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 601
 layout: product # DON'T CHANGE
 ---
 Lets you view popout, nickname and more from your account panel at the bottom.
