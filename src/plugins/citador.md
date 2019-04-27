@@ -9,7 +9,7 @@ github_issue_url: https://github.com/nirewen/Citador/issues/
 discord_server: 'https://discord.gg/tQrdqKG'
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 625
 layout: product
 date: 2018-10-20T05:25:17.890Z
 ---
