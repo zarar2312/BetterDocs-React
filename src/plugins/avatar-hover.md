@@ -11,7 +11,7 @@ previews: [https://i.imgur.com/Dn18CxA.jpg]
 status: Updated
 auto: true
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 608
 layout: product
 ---
 When hovering, resize the avatar. Use Ctrl / Ctrl+Shift.
