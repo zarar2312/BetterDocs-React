@@ -12,7 +12,7 @@ software: [BandagedBD, BetterDiscord]
 images:
   - name: Discord Cake Day Preview
     image: https://i.imgur.com/KmgoZPY.png
-ghcommentid: 441
+ghcommentid: 636
 layout: product
 ---
 Displays a cake next to the username of anyone whose account is having a Discord birthday! (Currently only displays in chat and member list.)
