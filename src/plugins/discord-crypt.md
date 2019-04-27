@@ -9,7 +9,7 @@ discord_server: https://discord.gg/3uakNmM
 gitlab_issue_url: https://gitlab.com/leogx9r/DiscordCrypt/issues
 software: [BandagedBD, BetterDiscord]
 featured: true
-ghcommentid: 441
+ghcommentid: 637
 layout: product
 ---
 Provides end to end message encryption for Discord using various cryptography standards. Supports code blocks, user tagging, encrypted file uploads up to 50 MB, global emotes ( Nitro not required ) and more.
