@@ -11,7 +11,7 @@ status: Updated
 software: [BandagedBD, BetterDiscord]
 dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 auto: true
-ghcommentid: 441
+ghcommentid: 639
 layout: product
 date: 2018-10-24T01:39:42.191Z
 ---
