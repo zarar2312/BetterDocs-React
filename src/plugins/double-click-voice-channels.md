@@ -9,7 +9,7 @@ github_issue_url: https://github.com/Metalloriff/BetterDiscordPlugins/issues/
 discord_server: https://discord.gg/yNqzuJa
 software: [BandagedBD, BetterDiscord]
 tags: [voice]
-ghcommentid: 441
+ghcommentid: 643
 layout: product
 ---
 Requires you to double click voice channels to connect to them.
