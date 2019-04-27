@@ -14,7 +14,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 631
 layout: product # DON'T CHANGE
 ---
 Powercord plugin that adds data attributes to various components
