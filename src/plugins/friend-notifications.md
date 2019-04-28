@@ -9,7 +9,7 @@ github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: https://discord.gg/Z7PBux5
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 660
 layout: product
 date: 2018-10-22T23:23:40.975Z
 ---
