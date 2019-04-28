@@ -1,6 +1,6 @@
 module.exports = {
     name: `Discord Source #1 Themes & Plugins`,
-    short_name: `Discord Source`,
+    short_name: `Discord&#x2007;Source`,
     start_url: `/`,
     background_color: `#262626`,
     theme_color: `#262626`,
