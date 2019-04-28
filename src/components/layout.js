@@ -44,13 +44,13 @@ const Layout = ({ children }) => (
             <meta property="og:description" content="A Discord enhancement project. Free quality Themes, Plugins and Hacks for Discord and easy installation instructions for BetterDiscord and more!"/>
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://discordsource.com" />
-            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=YAmjbajrx8" />
-            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=YAmjbajrx8" />
-            <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png?v=YAmjbajrx8" />
-            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=YAmjbajrx8" />
-            <link rel="shortcut icon" href="/favicon.ico?v=YAmjbajrx8" />
-            <link rel="mask-icon" href="/safari-pinned-tab.svg?v=YAmjbajrx8" color="#5bbad5" />
-            <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=YAmjbajrx8" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=YAmjbajrx8" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=YAmjbajrx8" />
+            <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png?v=YAmjbajrx8" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png?v=YAmjbajrx8" />
+            <link rel="shortcut icon" href="/icons/favicon.ico?v=YAmjbajrx8" />
+            <link rel="mask-icon" href="/icons/safari-pinned-tab.svg?v=YAmjbajrx8" color="#5bbad5" />
+            <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png?v=YAmjbajrx8" />
             <meta name="msapplication-TileColor" content="#262626" />
             <meta name="theme-color" content="#262626"/>
 
