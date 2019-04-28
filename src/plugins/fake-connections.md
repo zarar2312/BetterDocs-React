@@ -13,7 +13,7 @@ discord_server:
 software: [DiscordInjections]
 status:
 auto: True
-ghcommentid: 441
+ghcommentid: 658
 layout: product # DON'T CHANGE
 ---
 This plugin gives you the ability to add custom connections to your profile
