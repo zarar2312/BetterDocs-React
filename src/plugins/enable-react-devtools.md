@@ -8,7 +8,7 @@ github_source_url: https://github.com/Inve1951/BetterDiscordStuff/blob/master/pl
 github_issue_url: https://github.com/Inve1951/BetterDiscordStuff/issues
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 654
 layout: product
 ---
 Automatically loads the React Devtools for you. Big thanks to Natsulus who helped figure this out!
