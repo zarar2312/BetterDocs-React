@@ -15,7 +15,7 @@ import confused from 'src/images/confused.svg'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
-const Comments = ({ username, body, avatar, key, userUrl, reactions, commentLink, lastEditDate }) => {
+const Comments = ({ username, body, avatar, key, userUrl, reactions, commentLink, lastEditDate, createdAt }) => {
 
   return (
     <>
@@ -412,14 +412,14 @@ margin-bottom: 0.5rem;
                                 content: "";
                                 background-image: url(${eyes});
                                 background-position: center;
-                                background-size: 0.4rem;
+                                background-size: 0.47rem;
                                 background-repeat: no-repeat;
                                 display: block;
                                 width: 0.7rem;
                                 height: 0.7rem;
                                 border-radius: 50%;
                                 z-index: 1;
-                                top: 3px;
+                                top: 3.5px;
                                 position: relative;
                             }
                         }

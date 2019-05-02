@@ -819,7 +819,7 @@ const Container = styled.div`
             margin-bottom: 0.3rem;
           }
         }
-        a:not([class*="anchor"]):not([class*="PostBtn"]):not([class*="View"]):not([class*="Reaction-"]):not([class*="AlertLink"]) {
+        a:not([class*="anchor"]):not([class*="PostBtn"]):not([class*="View"]):not([class*="Reaction-"]):not([class*="DeprecatedBtn"]):not([class*="WorkingBtn"]) {
           display: inline-block;
           transition: color 250ms, text-shadow 250ms;
           color: #000;
