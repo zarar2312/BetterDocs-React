@@ -158,6 +158,7 @@ margin-bottom: 0.5rem;
                 position: absolute;
                 bottom: -17px;
                 right: 0;
+                flex-wrap: wrap;
                 ${Reaction} {
                     background-color: #fff;
                     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
