@@ -146,6 +146,7 @@ margin-bottom: 0.5rem;
             border-radius: 12px;
             display: flex;
             position: relative;
+            flex-direction: column;
             ${Author} {
                 margin-right: 0.17rem;
             }
@@ -155,18 +156,16 @@ margin-bottom: 0.5rem;
             }
             ${Reactions} {
                 display: flex;
-                position: absolute;
-                bottom: -17px;
-                right: 0;
                 flex-wrap: wrap;
                 ${Reaction} {
                     background-color: #fff;
+                    margin-top: 0.16rem;
                     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
                     border-radius: 40%;
                     width: 1.4rem;
                     height: 0.9rem;
                     font-size: 0.5rem;
-                    margin-right: 0.3rem;
+                    margin-right: 0.24rem;
                     line-height: 1rem;
                     text-align: center;
                     color: #8d949e;
@@ -449,6 +448,7 @@ margin-bottom: 0.5rem;
                 margin-right: 0.2rem;
                 word-break: keep-all;
                 transition: 210ms all linear;
+                margin-bottom: unset;
                 &:hover {
                     color: #000;
                 }
@@ -457,11 +457,13 @@ margin-bottom: 0.5rem;
                 margin-right: 0.2rem;
                 color: #868686;
                 font-weight: bold;
+                margin-bottom: unset;
             }
             ${TimeAgo} {
                 font-size: 0.55rem;
                 color: #868686;
                 word-break: keep-all;
+                margin-bottom: unset;
             }
         }
     }
