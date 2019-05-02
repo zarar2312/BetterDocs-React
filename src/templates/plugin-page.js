@@ -820,7 +820,7 @@ const Container = styled.div`
             margin-bottom: 0.3rem;
           }
         }
-        a:not([class*="anchor"]):not([class*="PostBtn"]):not([class*="View"]):not([class*="Reaction-"]):not([class*="DeprecatedBtn"]):not([class*="WorkingBtn"]) {
+        a:not([class*="anchor"]):not([class*="PostBtn"]):not([class*="View"]):not([class*="Reaction-"]):not([class*="DeprecatedBtn"]):not([class*="WorkingBtn"]):not([class*=“Softwaree”]):not([class*=“Download”]):not([class*=“Report”]) {
           display: inline-block;
           transition: color 250ms, text-shadow 250ms;
           color: #000;
