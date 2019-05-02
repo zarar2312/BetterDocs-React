@@ -12,6 +12,7 @@ import rocket from 'src/images/rocket.svg'
 import eyes from 'src/images/eyes.svg'
 import laughing from 'src/images/laughing.svg'
 import confused from 'src/images/confused.svg'
+import ta from 'time-ago'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -46,6 +47,8 @@ const Comments = ({ username, body, avatar, key, userUrl, reactions, commentLink
                 </BodyContainer>
                 <Options>
                     <View title="See comment at Github" href={commentLink} target="blank">Jump to Comment</View>
+                    <Seperator>∙</Seperator>
+                    <TimeAgo>{ta.ago(createdAt)}</TimeAgo>
                 </Options>
             </Container2>
         </Card>
@@ -77,7 +80,11 @@ const BodyContainer = styled.div`
 `
 const Options = styled.div`
 `
+const Seperator = styled.p`
+`
 const View = styled.a`
+`
+const TimeAgo = styled.p`
 `
 const ReactImage = styled.div`
 `
@@ -435,12 +442,22 @@ margin-bottom: 0.5rem;
             display: flex;
             margin-top: 0.2rem;
             ${View} {
-                font-size: 0.6rem;
+                font-size: 0.55rem;
                 color: #868686;
+                margin-right: 0.2rem;
                 transition: 210ms all linear;
                 &:hover {
                     color: #000;
                 }
+            }
+            ${Seperator} {
+                margin-right: 0.2rem;
+                color: #868686;
+                font-weight: bold;
+            }
+            ${TimeAgo} {
+                font-size: 0.55rem;
+                color: #868686;
             }
         }
     }

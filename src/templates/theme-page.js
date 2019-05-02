@@ -251,6 +251,7 @@ const Themes = ({ pageContext, data }) => {
               userUrl={node.author.url}
               reactions={node.reactionGroups}
               lastEditDate={node.lastEditedAt}
+              createdAt={node.createdAt}
               commentLink={node.url}
               />
             ))}
@@ -379,6 +380,7 @@ export const themesQuery = graphql`
               }
               url
               lastEditedAt
+              createdAt
               body
               reactionGroups {
                 content

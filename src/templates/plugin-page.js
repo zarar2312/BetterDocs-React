@@ -377,6 +377,7 @@ export const pluginsQuery = graphql`
                 }
                 url
                 lastEditedAt
+                createdAt
                 body
                 reactionGroups {
                   content
