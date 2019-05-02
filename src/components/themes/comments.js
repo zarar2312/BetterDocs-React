@@ -158,6 +158,7 @@ margin-bottom: 0.5rem;
                 position: absolute;
                 bottom: -17px;
                 right: 0;
+                flex-wrap: wrap;
                 ${Reaction} {
                     background-color: #fff;
                     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
@@ -441,10 +442,12 @@ margin-bottom: 0.5rem;
         ${Options} {
             display: flex;
             margin-top: 0.2rem;
+            flex-wrap: wrap;
             ${View} {
                 font-size: 0.55rem;
                 color: #868686;
                 margin-right: 0.2rem;
+                word-break: keep-all;
                 transition: 210ms all linear;
                 &:hover {
                     color: #000;
@@ -458,6 +461,7 @@ margin-bottom: 0.5rem;
             ${TimeAgo} {
                 font-size: 0.55rem;
                 color: #868686;
+                word-break: keep-all;
             }
         }
     }
