@@ -5,6 +5,13 @@ import * as variable from 'src/styles/variables'
 //import { rgba, darken } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 import 'src/styles/tooltips.css'
+import thumbsUp from 'src/images/thumbs-up.svg'
+import clapping from 'src/images/clapping-hands.svg'
+import heart from 'src/images/heart.svg'
+import rocket from 'src/images/rocket.svg'
+import eyes from 'src/images/eyes.svg'
+import laughing from 'src/images/laughing.svg'
+import confused from 'src/images/confused.svg'
 
 // Pass image as css instead of a dom element (img) style={{backgroundImage :  `url(${node.frontmatter.thumbnail})` }}
 
@@ -25,9 +32,16 @@ const Comments = ({ username, body, avatar, key, userUrl, reactions, commentLink
                         <Author href={userUrl} target="blank" title="See profile at Github">{username}</Author> {body} <Edited data-balloon={lastEditDate} data-balloon-pos="left">{lastEditDate && "(edited)" }</Edited>
                     </Body>
                     <Reactions>
-                        <Reaction>
-                            
-                        </Reaction>
+                    {reactions.map(react => (
+                        <>
+                        {react.users.totalCount > 0 &&
+                            <Reaction href={commentLink} target="blank" key={react.content} className={react.content} title={react.users.totelCount > 1 ? react.users.totelCount + " Users's have reacted with " + react.content : "1 User has reacted with " + react.content}>
+                                <ReactImage></ReactImage>
+                                {react.users.totalCount}
+                            </Reaction>
+                        }
+                        </>
+                    ))}
                     </Reactions>
                 </BodyContainer>
                 <Options>
@@ -57,7 +71,7 @@ const Author = styled.a`
 `
 const Reactions = styled.div`
 `
-const Reaction = styled.div`
+const Reaction = styled.a`
 `
 const BodyContainer = styled.div`
 `
@@ -65,11 +79,12 @@ const Options = styled.div`
 `
 const View = styled.a`
 `
-
+const ReactImage = styled.div`
+`
 const Card = styled.div`
 display: flex;
 margin-bottom: 0.5rem;
-    a:not([class*="View"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
+    a:not([class*="Reaction-"]):not([class*="View"]):not(.icon):not(.anchor):not([class*="Btn"]):not(.imgContainer):not([class*="FeaturedIcon"]):not([class*="ImageContainer"]):not([class*="ThumbnailLink"]) {
         display: inline-block;
         transition: color 250ms, text-shadow 250ms;
         color: #000;
@@ -134,12 +149,281 @@ margin-bottom: 0.5rem;
             ${Reactions} {
                 display: flex;
                 position: absolute;
-                bottom: -25px;
+                bottom: -17px;
                 right: 0;
                 ${Reaction} {
-                    background-color: #eee;
-                    border-radius: 50%;
-                    padding: 0.5rem;
+                    background-color: #fff;
+                    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+                    border-radius: 40%;
+                    width: 1.4rem;
+                    height: 0.9rem;
+                    font-size: 0.5rem;
+                    margin-right: 0.3rem;
+                    line-height: 1rem;
+                    text-align: center;
+                    color: #8d949e;
+                    display: -webkit-box;
+                    text-indent: 10px;
+                    transition: 250ms ease-in-out all;
+                    &:last-child {
+                        margin-right: unset;
+                    }
+                    &:hover {
+                        box-shadow: 0 3px 4px 0 rgba(0,0,0,.2);
+                    }
+                    &:active, &:focus {
+                        box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
+                    }
+                    &[class*="THUMBS_UP"] {
+                        ${ReactImage} {
+                            width: 0.7rem;
+                            position: relative;
+                            left: 2px;
+                            &::after {
+                                content: "";
+                                background: linear-gradient(360deg,rgba(20,87,236,1) 35%,rgba(51,165,252,1) 100%);
+                                display: block;
+                                height: 0.7rem;
+                                width: 0.7rem;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 3px;
+                            }
+                            &::before {
+                                content: "";
+                                background-image: url(${thumbsUp});
+                                background-position: center;
+                                background-size: 0.4rem;
+                                background-repeat: no-repeat;
+                                display: block;
+                                width: 0.7rem;
+                                height: 0.7rem;
+                                border-radius: 50%;
+                                z-index: 1;
+                                top: 3px;
+                                position: relative;
+                            }
+                        }
+                    }
+                    &[class*="THUMBS_DOWN"] {
+                        ${ReactImage} {
+                            width: 0.7rem;
+                            position: relative;
+                            left: 2px;
+                            &::after {
+                                content: "";
+                                background: linear-gradient(360deg,rgb(156, 156, 156) 35%,rgb(239, 239, 239) 100%);
+                                display: block;
+                                height: 0.7rem;
+                                width: 0.7rem;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 3px;
+                            }
+                            &::before {
+                                content: "";
+                                background-image: url(${thumbsUp});
+                                background-position: center;
+                                background-size: 0.4rem;
+                                background-repeat: no-repeat;
+                                display: block;
+                                width: 0.7rem;
+                                height: 0.7rem;
+                                border-radius: 50%;
+                                z-index: 1;
+                                top: 4px;
+                                position: relative;
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    &[class*="LAUGH"] {
+                        ${ReactImage} {
+                            width: 0.7rem;
+                            position: relative;
+                            left: 2px;
+                            &::after {
+                                content: "";
+                                background: linear-gradient(360deg,rgba(20,87,236,1) 35%,rgba(51,165,252,1) 100%);
+                                display: block;
+                                height: 0.7rem;
+                                width: 0.7rem;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 3px;
+                            }
+                            &::before {
+                                content: "";
+                                background-image: url(${laughing});
+                                background-position: center;
+                                background-size: 0.4rem;
+                                background-repeat: no-repeat;
+                                display: block;
+                                width: 0.7rem;
+                                height: 0.7rem;
+                                border-radius: 50%;
+                                z-index: 1;
+                                top: 3px;
+                                position: relative;
+                            }
+                        }
+                    }
+                    &[class*="HOORAY"] {
+                        ${ReactImage} {
+                            width: 0.7rem;
+                            position: relative;
+                            left: 2px;
+                            &::after {
+                                content: "";
+                                background: linear-gradient(360deg,rgba(20,87,236,1) 35%,rgba(51,165,252,1) 100%);
+                                display: block;
+                                height: 0.7rem;
+                                width: 0.7rem;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 3px;
+                            }
+                            &::before {
+                                content: "";
+                                background-image: url(${clapping});
+                                background-position: center;
+                                background-size: 0.47rem;
+                                background-repeat: no-repeat;
+                                display: block;
+                                width: 0.7rem;
+                                height: 0.7rem;
+                                border-radius: 50%;
+                                z-index: 1;
+                                top: 3.7px;
+                                position: relative;
+                            }
+                        }
+                    }
+                    &[class*="CONFUSED"] {
+                        ${ReactImage} {
+                            width: 0.7rem;
+                            position: relative;
+                            left: 2px;
+                            &::after {
+                                content: "";
+                                background: linear-gradient(360deg,rgba(20,87,236,1) 35%,rgba(51,165,252,1) 100%);
+                                display: block;
+                                height: 0.7rem;
+                                width: 0.7rem;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 3px;
+                            }
+                            &::before {
+                                content: "";
+                                background-image: url(${confused});
+                                background-position: center;
+                                background-size: 0.4rem;
+                                background-repeat: no-repeat;
+                                display: block;
+                                width: 0.7rem;
+                                height: 0.7rem;
+                                border-radius: 50%;
+                                z-index: 1;
+                                top: 3px;
+                                position: relative;
+                            }
+                        }
+                    }
+                    &[class*="HEART"] {
+                        ${ReactImage} {
+                            width: 0.7rem;
+                            position: relative;
+                            left: 2px;
+                            &::after {
+                                content: "";
+                                background: linear-gradient(360deg,#e11731 35%,#fb627e 100%);
+                                display: block;
+                                height: 0.7rem;
+                                width: 0.7rem;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 3px;
+                            }
+                            &::before {
+                                content: "";
+                                background-image: url(${heart});
+                                background-position: center;
+                                background-size: 0.37rem;
+                                background-repeat: no-repeat;
+                                display: block;
+                                width: 0.7rem;
+                                height: 0.7rem;
+                                border-radius: 50%;
+                                z-index: 1;
+                                top: 3.7px;
+                                position: relative;
+                            }
+                        }
+                    }
+                    &[class*="ROCKET"] {
+                        ${ReactImage} {
+                            width: 0.7rem;
+                            position: relative;
+                            left: 2px;
+                            &::after {
+                                content: "";
+                                background: linear-gradient(360deg,rgba(20,87,236,1) 35%,rgba(51,165,252,1) 100%);
+                                display: block;
+                                height: 0.7rem;
+                                width: 0.7rem;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 3px;
+                            }
+                            &::before {
+                                content: "";
+                                background-image: url(${rocket});
+                                background-position: center;
+                                background-size: 0.4rem;
+                                background-repeat: no-repeat;
+                                transform: rotate(100deg);
+                                display: block;
+                                width: 0.7rem;
+                                height: 0.7rem;
+                                border-radius: 50%;
+                                z-index: 1;
+                                top: 3px;
+                                position: relative;
+                            }
+                        }
+                    }
+                    &[class*="EYES"] {
+                        ${ReactImage} {
+                            width: 0.7rem;
+                            position: relative;
+                            left: 2px;
+                            &::after {
+                                content: "";
+                                background: linear-gradient(360deg,rgba(20,87,236,1) 35%,rgba(51,165,252,1) 100%);
+                                display: block;
+                                height: 0.7rem;
+                                width: 0.7rem;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 3px;
+                            }
+                            &::before {
+                                content: "";
+                                background-image: url(${eyes});
+                                background-position: center;
+                                background-size: 0.4rem;
+                                background-repeat: no-repeat;
+                                display: block;
+                                width: 0.7rem;
+                                height: 0.7rem;
+                                border-radius: 50%;
+                                z-index: 1;
+                                top: 3px;
+                                position: relative;
+                            }
+                        }
+                    }
                 }
             }
         }
