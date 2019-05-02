@@ -229,6 +229,7 @@ const Plugins = (props) => {
                   userUrl={node.author.url}
                   reactions={node.reactionGroups}
                   lastEditDate={node.lastEditedAt}
+                  createdAt={node.createdAt}
                   commentLink={node.url}
                   />
                 ))}
