@@ -441,10 +441,12 @@ margin-bottom: 0.5rem;
         ${Options} {
             display: flex;
             margin-top: 0.2rem;
+            flex-wrap: wrap;
             ${View} {
                 font-size: 0.55rem;
                 color: #868686;
                 margin-right: 0.2rem;
+                word-break: keep-all;
                 transition: 210ms all linear;
                 &:hover {
                     color: #000;
@@ -458,6 +460,7 @@ margin-bottom: 0.5rem;
             ${TimeAgo} {
                 font-size: 0.55rem;
                 color: #868686;
+                word-break: keep-all;
             }
         }
     }
