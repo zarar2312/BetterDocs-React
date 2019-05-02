@@ -705,8 +705,6 @@ const Container = styled.div`
       }
       ${CommentsArea} {
         order: 4;
-        padding-left: 1rem;
-        padding-right: 1rem;
         ${Top} {
           display: flex;
           flex-wrap: wrap;
