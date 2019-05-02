@@ -7,7 +7,7 @@ github_profile_url: https://github.com/Arashiryuu/
 github_source_url: https://github.com/Arashiryuu/crap/tree/master/ToastIntegrated/HashTagsReborn
 github_issue_url: https://github.com/Arashiryuu/crap/issues
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 663
 layout: product
 ---
 Revives hashtags on Discord.

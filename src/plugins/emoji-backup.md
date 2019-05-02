@@ -11,7 +11,7 @@ npm_i: di-emoji-backup
 github_issue_url: https://github.com/Ratismal/emoji-backup/issues
 software: [DiscordInjections]
 status:
-ghcommentid: 441
+ghcommentid: 648
 layout: product # DON'T CHANGE
 ---
 A DiscordInjections plugin to back up emoji history.

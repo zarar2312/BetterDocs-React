@@ -9,7 +9,7 @@ github_issue_url: 'https://github.com/jakuski/ed_plugins/issues'
 discord_server: 'https://discord.gg/na4WZpY'
 auto: true
 software: [EnhancedDiscord]
-ghcommentid: 441
+ghcommentid: 665
 layout: product
 date: 2018-10-26T15:27:19.930Z
 ---

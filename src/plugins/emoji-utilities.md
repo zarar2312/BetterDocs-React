@@ -11,7 +11,7 @@ software: [BandagedBD,BetterDiscord]
 dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 652
 layout: product # DON'T CHANGE
 ---
 Allows you to blacklist and favorite emojis through the context menu. Favorites show up as a section in the emoji picker and all emojis in the picker get a context menu to blacklist or favorite them.

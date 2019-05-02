@@ -8,7 +8,7 @@ github_source_url: https://github.com/Mega-Mewthree/BetterDiscordPlugins/tree/ma
 github_issue_url: https://github.com/Mega-Mewthree/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/ZYND2Xd
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 659
 layout: product
 ---
 Fixes channels not getting marked as read upon scrolling to the bottom of the chat when using custom themes.

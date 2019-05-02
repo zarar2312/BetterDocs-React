@@ -12,7 +12,7 @@ software: [DiscordInjections]
 status:
 auto: false
 layout: product
-ghcommentid: 441
+ghcommentid: 656
 date: 2019-01-01T09:08:57.969Z
 ---
 Exposes the DI object to global.DI

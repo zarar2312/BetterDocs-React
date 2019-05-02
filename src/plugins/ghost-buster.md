@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 661
 layout: product # DON'T CHANGE
 ---
 Plugin for Powercord that solves the issue of ghost pings by saving messages that mention you in the "Recent Mentions" menu, even if they're deleted.

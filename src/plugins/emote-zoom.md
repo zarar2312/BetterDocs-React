@@ -13,7 +13,7 @@ thumbnail: https://i.imgur.com/AlJppKY.gif
 dependency:
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 653
 layout: product # DON'T CHANGE
 ---
 Increases the size of emotes upon hovering over them.
