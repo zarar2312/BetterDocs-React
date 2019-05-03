@@ -12,7 +12,7 @@ github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/
 github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/
 discord_server: 'https://discord.gg/Z7PBux5'
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 705
 layout: product
 date: 2018-10-22T23:26:07.733Z
 ---

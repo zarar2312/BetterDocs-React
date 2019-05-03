@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 677
 layout: product # DON'T CHANGE
 ---
 A simple character counter plugin made for Powercord that displays above the channel chat area.

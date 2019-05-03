@@ -13,7 +13,7 @@ previews: [https://i.imgur.com/vayt1UX.gif]
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 685
 layout: product # DON'T CHANGE
 ---
 A minesweeper game for Discord.

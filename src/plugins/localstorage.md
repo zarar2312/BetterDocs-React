@@ -11,7 +11,7 @@ npm_i: di-localstorage
 github_issue_url: https://www.npmjs.com/advisories/report?package=di-localstorage
 software: [DiscordInjections]
 status:
-ghcommentid: 441
+ghcommentid: 679
 layout: product # DON'T CHANGE
 ---
 Puts your token back into localStorage

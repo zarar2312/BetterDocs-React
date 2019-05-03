@@ -13,7 +13,7 @@ previews: [https://i.imgur.com/xadgfno.png,https://i.imgur.com/XwpBznc.png]
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 691
 layout: product # DON'T CHANGE
 ---
 A Powercord plugin that introduces Zen mode for Discord.

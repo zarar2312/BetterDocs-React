@@ -1,7 +1,7 @@
 ---
 title: No Emote Colon
-author: Bowser65
-description: Allows you to use emotes like on Twitch, without colons (typing LUL will send <:LUL:437585639287029785>)
+author: Bowser6
+description: Allows you to use emotes like on Twitch, without colons (typing LUL will send :LUL:>)
 download: https://github.com/Bowser65/powercord-powercord-noEmoteColon
 github_profile_url: https://github.com/Bowser65/
 github_source_url: https://github.com/Bowser65/powercord-powercord-noEmoteColon
@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 686
 layout: product # DON'T CHANGE
 ---
 Allows you to use emotes like on Twitch, without colons (typing LUL will send <:LUL:437585639287029785>)

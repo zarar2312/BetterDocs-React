@@ -14,7 +14,7 @@ previews: [https://i.imgur.com/q5FBmbZ.gif]
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 692
 layout: product # DON'T CHANGE
 ---
 Allows you to view any users permissions (roles) through the context menu by right clicking their name.

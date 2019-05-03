@@ -11,7 +11,7 @@ software: [BandagedBD, BetterDiscord]
 images:
   - name: Reaction Images Preview
     image: https://i.imgur.com/ZOb6wCF.png
-ghcommentid: 441
+ghcommentid: 700
 layout: product
 ---
 Allows you to set reaction image folders and send reaction images with 'Folder Name/reaction image name'.

@@ -9,7 +9,7 @@ github_issue_url: 'https://github.com/megamit/repository/issues'
 software: [BandagedBD, BetterDiscord]
 status: Deprecated
 auto: true
-ghcommentid: 441
+ghcommentid: 703
 layout: product
 date: 2018-12-20T21:12:19.259Z
 ---

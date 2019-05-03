@@ -10,7 +10,7 @@ discord_server: https://discord.gg/yNqzuJa
 status: Updated
 software: [BandagedBD,BetterDiscord]
 auto: true
-ghcommentid: 441
+ghcommentid: 681
 layout: product # DON'T CHANGE
 ---
 Records all sent messages, message edits and message deletions in the specified servers, all unmuted servers or all servers, and in direct messages.

@@ -8,7 +8,7 @@ github_source_url: https://github.com/Inve1951/BetterDiscordStuff/blob/master/co
 github_issue_url: https://github.com/Inve1951/BetterDiscordStuff/issues
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 697
 layout: product
 ---
 Hold Delete and click a message to delete it.

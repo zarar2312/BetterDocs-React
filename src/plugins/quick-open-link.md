@@ -8,7 +8,7 @@ github_source_url: https://github.com/XFoxPrower/Quick-Open-Link
 github_issue_url: https://github.com/XFoxPrower/Quick-Open-Link/issues
 status: Deprecated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 698
 layout: product
 ---
 Quick Open Link is a BetterDiscord plugin that allows you to open images with Ctrl+Click as opposed to Right-Click -> Open Link -> Click.

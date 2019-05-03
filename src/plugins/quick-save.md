@@ -9,7 +9,7 @@ github_issue_url: https://github.com/joe27g/EnhancedDiscord-Plugins/issues
 discord_server: 'https://discord.gg/XAvh9tq'
 software: [EnhancedDiscord]
 auto: true
-ghcommentid: 441
+ghcommentid: 699
 layout: product
 date: 2018-10-28T22:23:31.670Z
 ---

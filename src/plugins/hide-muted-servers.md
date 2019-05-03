@@ -13,7 +13,7 @@ previews: [https://i.imgur.com/zjSkKuX.png]
 dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 668
 layout: product # DON'T CHANGE
 ---
 Hides muted servers with a context menu option to show/hide. Acts similar to Discord's Hide Muted Channels option.

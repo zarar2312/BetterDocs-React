@@ -11,7 +11,7 @@ auto: true
 status:
 software: [BandagedBD, BetterDiscord]
 thumbnail:
-ghcommentid: 441
+ghcommentid: 713
 layout: product
 date: 2018-01-15T03:35:45.373Z
 ---

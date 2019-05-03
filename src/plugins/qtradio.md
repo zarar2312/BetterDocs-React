@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 696
 layout: product # DON'T CHANGE
 ---
 Powercord plugin for qtradio.moe

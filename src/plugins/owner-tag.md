@@ -9,7 +9,7 @@ github_issue_url: https://github.com/mwittrien/BetterDiscordAddons/issues/
 discord_server: https://discordapp.com/invite/Z7PBux5
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 690
 layout: product
 ---
 Adds a Tag like Bottags to the Serverowner.

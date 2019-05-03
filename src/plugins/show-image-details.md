@@ -13,7 +13,7 @@ previews:
 dependency:
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 715
 layout: product # DON'T CHANGE
 ---
 Display the name, size and dimensions of uploaded images (does not include embed images) in the chat as an header or as a tooltip.

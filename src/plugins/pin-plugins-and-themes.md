@@ -15,7 +15,7 @@ images:
     image: https://i.imgur.com/a8wGERI.png
   - name: Pin Plugins And Themes Preview - Unpinning
     image: https://i.imgur.com/iYZJ6kh.png
-ghcommentid: 441
+ghcommentid: 695
 layout: product
 ---
 Allows you to pin plugins and themes via the context menu.

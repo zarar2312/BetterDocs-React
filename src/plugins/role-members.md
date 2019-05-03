@@ -13,7 +13,7 @@ software: [BandagedBD,BetterDiscord]
 dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 707
 layout: product # DON'T CHANGE
 ---
 Allows you to see the members of each role on a server. Can also see members from a mention.

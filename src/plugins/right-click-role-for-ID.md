@@ -8,7 +8,7 @@ github_source_url: https://github.com/Mega-Mewthree/BetterDiscordPlugins/tree/ma
 github_issue_url: https://github.com/Mega-Mewthree/BetterDiscordPlugins/issues/
 discord_server: https://discordapp.com/invite/ZYND2Xd
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 706
 layout: product
 ---
 Right click a role in the server settings menu or in the member popout to copy the role ID to your clipboard!

@@ -10,7 +10,7 @@ discord_server: https://discordapp.com/invite/Z7PBux5
 thumbnail:
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 672
 layout: product
 ---
 Allows you to zoom in opened Images by holding left clicking on them in the Image Modal.

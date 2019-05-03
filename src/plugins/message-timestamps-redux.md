@@ -9,7 +9,7 @@ github_issue_url: https://github.com/Arashiryuu/crap/issues
 software: [BandagedBD,BetterDiscord]
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 682
 layout: product # DON'T CHANGE
 ---
 Simply right-click a message and select "Show Timestamp" and it will display the timestamp for that message.

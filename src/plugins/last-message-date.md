@@ -10,7 +10,7 @@ discord_server: https://discordapp.com/invite/Z7PBux5
 thumbnail:
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 676
 layout: product
 ---
 Displays the Date of the last sent Message of a Member for the current Server/DM in the UserPopout and UserModal.

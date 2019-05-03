@@ -14,7 +14,7 @@ thumbnail: https://i.imgur.com/yADpMpg.png
 software: [DiscordInjections]
 status:
 auto: True
-ghcommentid: 441
+ghcommentid: 673
 layout: product # DON'T CHANGE
 ---
 Intercepts outgoing requests. (WebSocket & HTTP Requests)

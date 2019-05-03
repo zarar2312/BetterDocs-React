@@ -12,7 +12,7 @@ software: [BandagedBD,BetterDiscord]
 dependency: [https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js]
 status: Updated
 auto: true
-ghcommentid: 441
+ghcommentid: 712
 layout: product # DON'T CHANGE
 ---
 Adds the ability to do some basic sorting of your servers.
