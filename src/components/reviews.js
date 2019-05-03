@@ -158,14 +158,14 @@ margin-bottom: 0.5rem;
                 display: flex;
                 flex-wrap: wrap;
                 ${Reaction} {
-                    background-color: #fff;
-                    margin-top: 0.16rem;
+                    background-color: #f7f7f7;
+                    margin-top: 0.19rem;
                     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
-                    border-radius: 40%;
+                    border-radius: 3px;
                     width: 1.4rem;
                     height: 0.9rem;
                     font-size: 0.5rem;
-                    margin-right: 0.24rem;
+                    margin-right: 0.25rem;
                     line-height: 1rem;
                     text-align: center;
                     color: #8d949e;
@@ -177,9 +177,16 @@ margin-bottom: 0.5rem;
                     }
                     &:hover {
                         box-shadow: 0 3px 4px 0 rgba(0,0,0,.2);
+                        background-color: #fff;
                     }
                     &:active, &:focus {
                         box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
+                        background-color: ${variable.SiteColor};
+                        color: #fff;
+                        outline: unset;
+                    }
+                    ${ReactImage} {
+
                     }
                     &[class*="THUMBS_UP"] {
                         ${ReactImage} {
@@ -188,7 +195,7 @@ margin-bottom: 0.5rem;
                             left: 2px;
                             &::after {
                                 content: "";
-                                background: linear-gradient(360deg,rgba(20,87,236,1) 35%,rgba(51,165,252,1) 100%);
+                                background: linear-gradient(360deg,rgb(4, 185, 127) 35%,rgb(18, 255, 134) 100%);
                                 display: block;
                                 height: 0.7rem;
                                 width: 0.7rem;

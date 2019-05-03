@@ -20,7 +20,7 @@ import TagsArea from '../components/plugins/page-tags-area'
 import Alerts from '../components/plugins/page-alert'
 import mydate from 'current-date'
 import Authorcard from '../components/plugins/more-card'
-import Comments from '../components/themes/comments'
+import Comments from '../components/reviews'
 
 const Mydate = mydate('date');
 
@@ -708,7 +708,7 @@ const Container = styled.div`
         ${Top} {
           display: flex;
           flex-wrap: wrap;
-          a {
+          ${PostBtn} {
             align-self: center;
             background-color: ${variable.SiteColor};
             padding: 0.4rem 0.7rem;
@@ -717,7 +717,11 @@ const Container = styled.div`
             transition: 210ms all linear;
             border-radius: 5px;
             &:hover {
-              box-shadow: 2px 2px 40px -12px #000;
+              box-shadow: 0px 3px 10px 0px rgba(0,0,0,.2);
+              background-color: ${darken(0.14,variable.SiteColor)};
+            }
+            &:active, &:focus {
+              background-color: ${darken(0.2,variable.SiteColor)};
             }
           }
           ${CommentsHeader} {

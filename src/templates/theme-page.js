@@ -21,7 +21,7 @@ import InformationArea from '../components/themes/page-info-area'
 import TagsArea from '../components/themes/page-tags-area'
 import mydate from 'current-date'
 import MoreCard from '../components/themes/more-card'
-import Comments from '../components/themes/comments'
+import Comments from '../components/reviews'
 
 const Mydate = mydate('date');
 
@@ -94,16 +94,12 @@ const Themes = ({ pageContext, data }) => {
         {previewList.edges.map(({ node }) => (
         <Tabbs style={{order: "3"}} key={node.id}>
           <TabListt>
-            {node.frontmatter.previews ?
             <Tabb>Overview</Tabb>
-            :
-            <Tabb>Overview</Tabb>
-            }
             {node.frontmatter.previews &&
               <Tabb>Screenshots</Tabb>
             }
-            </TabListt>
-
+            <Tabb>Reviews</Tabb>
+          </TabListt>
           <TabPanell>
             <ContentContainer>
               <Alerts
@@ -229,34 +225,38 @@ const Themes = ({ pageContext, data }) => {
             </ContentContainer>
           </TabPanell>
           }
+          <TabPanell>
+            <ContentContainer>
+              <CommentsArea>
+              <Top>
+                <CommentsHeader>Reviews</CommentsHeader>
+                  {themeList.edges.map(({ node }, i) => (
+                    <PostBtn href={ "https://github.com/MrRobotjs/BetterDocs-React/issues/" + node.frontmatter.ghcommentid} target="blank">Post a review</PostBtn>
+                  ))}
+                </Top>
+              <CommentsContainer>
+                {themeList.edges.map(({ node }, i) => (
+                  <ReviewText>Reviews for the theme <b>{node.frontmatter.title}</b></ReviewText>
+                ))}
+                {git.repository.issue.comments.edges.map(({ node }) => (
+                  <Comments
+                  username={node.author.login}
+                  body={node.body}
+                  key={node.id}
+                  avatar={node.author.avatarUrl}
+                  userUrl={node.author.url}
+                  reactions={node.reactionGroups}
+                  lastEditDate={node.lastEditedAt}
+                  createdAt={node.createdAt}
+                  commentLink={node.url}
+                  />
+                ))}
+              </CommentsContainer>
+            </CommentsArea>
+          </ContentContainer>
+        </TabPanell>
         </Tabbs>
         ))}
-        <CommentsArea>
-          <Top>
-            <CommentsHeader>Reviews</CommentsHeader>
-            {themeList.edges.map(({ node }, i) => (
-              <a href={ "https://github.com/MrRobotjs/BetterDocs-React/issues/" + node.frontmatter.ghcommentid} target="blank">Post a review</a>
-            ))}
-          </Top>
-          <CommentsContainer>
-            {themeList.edges.map(({ node }, i) => (
-              <ReviewText>Reviews for the theme <b>{node.frontmatter.title}</b></ReviewText>
-            ))}
-            {git.repository.issue.comments.edges.map(({ node }) => (
-              <Comments
-              username={node.author.login}
-              body={node.body}
-              key={node.id}
-              avatar={node.author.avatarUrl}
-              userUrl={node.author.url}
-              reactions={node.reactionGroups}
-              lastEditDate={node.lastEditedAt}
-              createdAt={node.createdAt}
-              commentLink={node.url}
-              />
-            ))}
-          </CommentsContainer>
-        </CommentsArea>
         <MoreHeader><Link to={"profile/" + node.frontmatter.author.frontmatter.author_id}>{node.frontmatter.author.frontmatter.author_id}'s</Link> Themes</MoreHeader>
           <MoreArea>
             <MoreCard
@@ -415,6 +415,8 @@ const Download = styled.a`
 const ReviewText = styled.p`
 `
 const Report = styled.a`
+`
+const PostBtn = styled.a`
 `
 const DemoBtn = styled.div`
 `
@@ -705,85 +707,6 @@ const Container = styled.div`
         padding-bottom: 0.2rem;
       }
     }
-    ${CommentsArea} {
-      order: 4;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      padding-top: 1rem;
-      ${Top} {
-        display: flex;
-        flex-wrap: wrap;
-        a {
-          align-self: center;
-          background-color: ${variable.SiteColor};
-          padding: 0.4rem 0.7rem;
-          font-size: 0.8rem;
-          color: #fff;
-          transition: 210ms all linear;
-          border-radius: 5px;
-          &:hover {
-            box-shadow: 2px 2px 40px -12px #000;
-          }
-        }
-        ${CommentsHeader} {
-          margin-right: 0.8rem;
-        }
-      }
-      ${MoreHeader} {
-        font-size: 1.55rem;
-        word-break: keep-all;
-        margin-bottom: 0;
-        background-color: #e6e6e6;
-        padding: 0.7rem 2rem;
-        padding-bottom: 1.2rem;
-        a:not([class*="anchor"]) {
-          display: inline-block;
-          transition: color 250ms, text-shadow 250ms;
-          color: #000;
-          text-decoration: none;
-          cursor: pointer;
-          position: relative;
-          z-index: 0;
-          line-height: 1rem;
-          &:after {
-            position: absolute;
-            z-index: -1;
-            bottom: -9px;
-            left: 50%;
-            transform: translateX(-50%);
-            content: '';
-            width: 100%;
-            height: 3px;
-            background-color: ${variable.SiteColor};
-            transition: all 250ms;
-          }
-          &:hover {
-            color: #fff;
-            opacity: 1;
-            background-color: transparent;
-          &::after {
-              height: 160%;
-              width: 110%;
-            }
-          }
-        }
-      }
-      ${CommentsContainer} {
-        margin: 1rem 0rem 0.5rem;
-        background: #fff;
-        padding: 0.8rem 1.1rem;
-        box-shadow: rgb(153, 153, 153) 2px 2px 40px -12px;
-        border-radius: 20px;
-        padding: 0.8rem 1.1rem;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgb(236, 236, 236);
-        ${ReviewText} {
-          font-size: 0.8rem;
-          margin-bottom: 0.7rem;
-        }
-      }
-    }
     ${Tabbs} {
       order: 3;
       ${TabListt} {
@@ -837,6 +760,86 @@ const Container = styled.div`
         @media ${variable.MidPoint} {
           /*width: calc(100% - 300px);*/
         }
+        ${CommentsArea} {
+          order: 4;
+          ${Top} {
+            display: flex;
+            flex-wrap: wrap;
+            ${PostBtn} {
+              align-self: center;
+              background-color: ${variable.SiteColor};
+              padding: 0.4rem 0.7rem;
+              font-size: 0.8rem;
+              color: #fff;
+              transition: 210ms all linear;
+              border-radius: 5px;
+              &:hover {
+                box-shadow: 0px 3px 10px 0px rgba(0,0,0,.2);
+                background-color: ${darken(0.14,variable.SiteColor)};
+              }
+              &:active, &:focus {
+                background-color: ${darken(0.2,variable.SiteColor)};
+              }
+            }
+            ${CommentsHeader} {
+              margin-right: 0.8rem;
+            }
+          }
+          ${MoreHeader} {
+            font-size: 1.55rem;
+            word-break: keep-all;
+            margin-bottom: 0;
+            background-color: #e6e6e6;
+            padding: 0.7rem 2rem;
+            padding-bottom: 1.2rem;
+            a:not([class*="anchor"]) {
+              display: inline-block;
+              transition: color 250ms, text-shadow 250ms;
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+              position: relative;
+              z-index: 0;
+              line-height: 1rem;
+              &:after {
+                position: absolute;
+                z-index: -1;
+                bottom: -9px;
+                left: 50%;
+                transform: translateX(-50%);
+                content: '';
+                width: 100%;
+                height: 3px;
+                background-color: ${variable.SiteColor};
+                transition: all 250ms;
+              }
+              &:hover {
+                color: #fff;
+                opacity: 1;
+                background-color: transparent;
+              &::after {
+                  height: 160%;
+                  width: 110%;
+                }
+              }
+            }
+          }
+          ${CommentsContainer} {
+            margin: 1rem 0rem 0.5rem;
+            background: #fff;
+            padding: 0.8rem 1.1rem;
+            box-shadow: rgb(153, 153, 153) 2px 2px 40px -12px;
+            border-radius: 20px;
+            padding: 0.8rem 1.1rem;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(236, 236, 236);
+            ${ReviewText} {
+              font-size: 0.8rem;
+              margin-bottom: 0.7rem;
+            }
+          }
+        }
         ${ContentContainer} {
           display: flex;
           order: 4;
@@ -854,7 +857,7 @@ const Container = styled.div`
           @media ${variable.MidPoint} {
             padding-bottom: unset;
           }
-          a:not([class*="anchor"]) {
+          a:not([class*="anchor"]):not([class*="PostBtn"]):not([class*="View"]):not([class*="Reaction-"]):not([class*="DeprecatedBtn"]):not([class*="WorkingBtn"]):not([class*="Download"]):not([class*="Report"]):not([class*="Tag-"]):not([class*="Softwaree-"]) {
             display: inline-block;
             transition: color 250ms, text-shadow 250ms;
             color: #000;
