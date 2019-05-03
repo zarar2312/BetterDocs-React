@@ -13,7 +13,7 @@ previews: [https://i.imgur.com/pUfaXLf.png]
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 736
 layout: product # DON'T CHANGE
 ---
 Compatibility layer for running BetterDiscord plugins in Powercord

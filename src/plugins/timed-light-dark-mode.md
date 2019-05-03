@@ -10,7 +10,7 @@ discord_server: https://discordapp.com/invite/Z7PBux5
 thumbnail:
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 726
 layout: product
 ---
 Allows you to automatically change light/dark mode depending on the time of date. Slider is added to the 'Appearance' settings.

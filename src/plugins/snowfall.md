@@ -8,7 +8,7 @@ github_source_url: https://github.com/Inve1951/BetterDiscordStuff/blob/master/pl
 github_issue_url: https://github.com/Inve1951/BetterDiscordStuff/issues
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 718
 layout: product
 ---
 Add falling snowflakes to your Discord for the holidays! ... or just for fun.

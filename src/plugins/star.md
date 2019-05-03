@@ -13,7 +13,7 @@ previews: [http://breaking-discord.is-my-k.ink/395499a6d9.png]
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 721
 layout: product # DON'T CHANGE
 ---
 Adds a star button to quickly Star a message!

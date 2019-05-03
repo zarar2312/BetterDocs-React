@@ -13,7 +13,7 @@ previews: [https://i.imgur.com/czMA448.png, https://i.imgur.com/SeW5EuJ.png]
 dependency:
 status: Updated
 auto: false
-ghcommentid: 441
+ghcommentid: 729
 layout: product # DON'T CHANGE
 ---
 Plugin for Powercord that allows you to censor specific words anywhere in Discord

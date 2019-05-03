@@ -13,7 +13,7 @@ contributor_name: [ghostlydot]
 software: [Powercord]
 dependency:
 status: Updated
-ghcommentid: 441
+ghcommentid: 724
 layout: product # DON'T CHANGE
 ---
 Plugin for hot-reloading theme files scattered on your whole PC.

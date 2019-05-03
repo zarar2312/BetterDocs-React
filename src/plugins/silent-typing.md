@@ -9,7 +9,7 @@ github_source_url: https://github.com/noodlebox/betterdiscord-plugins/blob/maste
 software: [BandagedBD, BetterDiscord]
 status: Deprecated
 auto: true
-ghcommentid: 441
+ghcommentid: 716
 layout: product
 ---
 Don't send typing notifications.

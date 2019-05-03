@@ -8,7 +8,7 @@ github_source_url: https://github.com/mwittrien/BetterDiscordAddons/tree/master/
 github_issue_url: 'https://discordapp.com/invite/Z7PBux5'
 discord_server: https://github.com/mwittrien/BetterDiscordAddons/issues/
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 720
 layout: product
 date: 2018-10-22T23:19:32.754Z
 ---

@@ -21,7 +21,7 @@ images:
     image: https://i.imgur.com/kJe78ff.png
   - name: User Avatar And Server Icon Viewer Preview - Emote Icon Full Screen
     image: https://i.imgur.com/EvvXF4e.png
-ghcommentid: 441
+ghcommentid: 734
 layout: product
 ---
 Allows you to view server icons, user avatars, and emotes in fullscreen via the context menu. You may also directly copy the image URL or open the URL externally.

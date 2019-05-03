@@ -10,7 +10,7 @@ discord_server: https://discordapp.com/invite/Z7PBux5
 software: [BandagedBD,BetterDiscord]
 status: Updated
 auto: True
-ghcommentid: 441
+ghcommentid: 725
 layout: product # DON'T CHANGE
 ---
 Allows you to change Theme Variables within BetterDiscord.

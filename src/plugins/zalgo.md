@@ -7,7 +7,7 @@ github_profile_url: 'https://github.com/planetarian/'
 github_source_url: https://github.com/planetarian/BetterDiscordPlugins/blob/master/Zalgo.plugin.js
 github_issue_url: 'https://github.com/planetarian/BetterDiscordPlugins/issues'
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 741
 layout: product
 date: 2018-10-20T05:32:43.000Z
 ---

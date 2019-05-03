@@ -12,7 +12,7 @@ status:
 software: [BandagedBD, BetterDiscord]
 thumbnail: https://i.imgur.com/iO6vBXI.gif
 previews: [https://i.imgur.com/iO6vBXI.gif]
-ghcommentid: 441
+ghcommentid: 730
 layout: product
 date: 2018-01-15T03:35:45.373Z
 ---

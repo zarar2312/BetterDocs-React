@@ -14,7 +14,7 @@ images:
     image: https://i.imgur.com/6A8VsWJ.png
   - name: VIPs Preview - DMs VIP Top Priority
     image: https://i.imgur.com/hxpFbX0.png
-ghcommentid: 441
+ghcommentid: 733
 layout: product
 ---
 Adds an extra section to the friends list where you can add your most important contacts on Discord (Bots included). Add users by right clicking their name, opening their profile and then clicking on the star. 

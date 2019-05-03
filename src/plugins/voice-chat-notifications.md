@@ -15,7 +15,7 @@ images:
     image: https://i.imgur.com/XOVoeyY.png
   - name: Voice Chat Notifications Preview - Plugins Settings Page
     image: https://i.imgur.com/936gHmy.png
-ghcommentid: 441
+ghcommentid: 739
 layout: product
 ---
 Displays notifications when users connect to/disconnect from, mute/unmute themselves, and deafen/undeafen themselves in the voice channel you're in.

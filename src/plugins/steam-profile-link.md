@@ -10,7 +10,7 @@ discord_server: https://discordapp.com/invite/Z7PBux5
 thumbnail:
 status: Updated
 software: [BandagedBD, BetterDiscord]
-ghcommentid: 441
+ghcommentid: 722
 layout: product
 ---
 Opens a steam profile in steam instead of a browser when clicking the steamlink in a userprofile
